@@ -11,7 +11,11 @@
         "test:http": "tsx test-http-routes.ts"
     },
     "dependencies": {
-        "convex": "^1.28.2"
+        "@ai-sdk/google": "^3.0.3",
+        "@ai-sdk/google-vertex": "^4.0.6",
+        "ai": "^6.0.10",
+        "convex": "^1.28.2",
+        "zod": "^4.3.5"
     },
     "devDependencies": {
         "dotenv": "^16.6.1",

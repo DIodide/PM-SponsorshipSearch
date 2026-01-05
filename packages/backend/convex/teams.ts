@@ -1,5 +1,6 @@
 import { v } from "convex/values";
-import { mutation, query } from "./_generated/server";
+import { mutation, query, internalQuery, internalMutation } from "./_generated/server";
+import { Id } from "./_generated/dataModel";
 
 // Get all teams with optional filtering
 export const list = query({
@@ -11,20 +12,33 @@ export const list = query({
     limit: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
-    let teamsQuery = ctx.db.query("teams");
+    const limit = args.limit ?? 100;
     
     if (args.league) {
-      teamsQuery = ctx.db.query("teams").withIndex("by_league", (q) => q.eq("league", args.league!));
-    } else if (args.sport) {
-      teamsQuery = ctx.db.query("teams").withIndex("by_sport", (q) => q.eq("sport", args.sport!));
-    } else if (args.region) {
-      teamsQuery = ctx.db.query("teams").withIndex("by_region", (q) => q.eq("region", args.region!));
-    } else if (args.marketSize) {
-      teamsQuery = ctx.db.query("teams").withIndex("by_marketSize", (q) => q.eq("marketSize", args.marketSize!));
+      return await ctx.db.query("teams")
+        .withIndex("by_league", (q) => q.eq("league", args.league!))
+        .take(limit);
     }
     
-    const limit = args.limit ?? 100;
-    return await teamsQuery.take(limit);
+    if (args.sport) {
+      return await ctx.db.query("teams")
+        .withIndex("by_sport", (q) => q.eq("sport", args.sport!))
+        .take(limit);
+    }
+    
+    if (args.region) {
+      return await ctx.db.query("teams")
+        .withIndex("by_region", (q) => q.eq("region", args.region!))
+        .take(limit);
+    }
+    
+    if (args.marketSize) {
+      return await ctx.db.query("teams")
+        .withIndex("by_marketSize", (q) => q.eq("marketSize", args.marketSize!))
+        .take(limit);
+    }
+    
+    return await ctx.db.query("teams").take(limit);
   },
 });
 
@@ -125,7 +139,7 @@ export const batchCreate = mutation({
     })),
   },
   handler: async (ctx, args) => {
-    const ids = [];
+    const ids: Id<"teams">[] = [];
     for (const team of args.teams) {
       const id = await ctx.db.insert("teams", {
         ...team,
@@ -220,6 +234,132 @@ export const count = query({
   handler: async (ctx) => {
     const teams = await ctx.db.query("teams").collect();
     return teams.length;
+  },
+});
+
+// ============================================
+// Internal functions for AI research system
+// ============================================
+
+// Social media account schema for internal use
+const socialAccountSchema = v.object({
+  handle: v.string(),
+  followers: v.number(),
+  engagement: v.optional(v.number()),
+  lastUpdated: v.number(),
+});
+
+// Find team by name (internal)
+export const findByName = internalQuery({
+  args: { name: v.string() },
+  handler: async (ctx, args) => {
+    const teams = await ctx.db.query("teams").collect();
+    return teams.find(t => t.name.toLowerCase() === args.name.toLowerCase()) || null;
+  },
+});
+
+// Create team from AI discovery (internal)
+export const createTeamInternal = internalMutation({
+  args: {
+    name: v.string(),
+    league: v.string(),
+    sport: v.string(),
+    city: v.string(),
+    state: v.string(),
+    region: v.string(),
+    marketSize: v.string(),
+    demographics: v.object({
+      avgAge: v.optional(v.number()),
+      genderSplit: v.optional(v.object({ 
+        male: v.number(), 
+        female: v.number() 
+      })),
+      incomeLevel: v.optional(v.string()),
+      primaryAudience: v.optional(v.array(v.string())),
+    }),
+    brandValues: v.array(v.string()),
+    estimatedSponsorshipRange: v.optional(v.object({
+      min: v.number(),
+      max: v.number(),
+    })),
+    socialMedia: v.optional(v.object({
+      twitter: v.optional(socialAccountSchema),
+      instagram: v.optional(socialAccountSchema),
+      tiktok: v.optional(socialAccountSchema),
+      facebook: v.optional(socialAccountSchema),
+    })),
+    website: v.optional(v.string()),
+    source: v.optional(v.string()),
+    discoveredAt: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("teams", {
+      ...args,
+      isVerified: false,
+      lastUpdated: Date.now(),
+    });
+  },
+});
+
+// Update team social media (internal)
+export const updateSocialMedia = internalMutation({
+  args: {
+    teamId: v.id("teams"),
+    platform: v.string(),
+    data: socialAccountSchema,
+  },
+  handler: async (ctx, args) => {
+    const team = await ctx.db.get(args.teamId);
+    if (!team) throw new Error("Team not found");
+    
+    const currentSocialMedia = team.socialMedia || {};
+    const updatedSocialMedia = {
+      ...currentSocialMedia,
+      [args.platform]: args.data,
+    };
+    
+    await ctx.db.patch(args.teamId, {
+      socialMedia: updatedSocialMedia,
+      lastUpdated: Date.now(),
+    });
+  },
+});
+
+// Get teams needing social media update (internal)
+export const getTeamsForSocialUpdate = internalQuery({
+  args: {
+    platform: v.string(),
+    maxAge: v.number(), // Max age in milliseconds
+    limit: v.number(),
+  },
+  handler: async (ctx, args) => {
+    const cutoff = Date.now() - args.maxAge;
+    const teams = await ctx.db.query("teams").collect();
+    
+    // Filter teams that need updating for this platform
+    return teams
+      .filter(team => {
+        const socialMedia = team.socialMedia as Record<string, { lastUpdated: number } | undefined> | undefined;
+        const platformData = socialMedia?.[args.platform];
+        return !platformData || platformData.lastUpdated < cutoff;
+      })
+      .slice(0, args.limit);
+  },
+});
+
+// Get all teams (internal)
+export const getAllTeams = internalQuery({
+  args: {},
+  handler: async (ctx) => {
+    return await ctx.db.query("teams").collect();
+  },
+});
+
+// Get single team by ID (internal - for social update queue)
+export const getInternal = internalQuery({
+  args: { id: v.id("teams") },
+  handler: async (ctx, args) => {
+    return await ctx.db.get(args.id);
   },
 });
 

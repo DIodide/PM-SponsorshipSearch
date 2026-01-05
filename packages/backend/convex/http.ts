@@ -1,10 +1,14 @@
 import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
-import { internal } from "./_generated/api";
+import { internal, api } from "./_generated/api";
+import { Id } from "./_generated/dataModel";
 
 const http = httpRouter();
 
-// Streaming search endpoint
+// Minimum teams threshold for triggering AI discovery
+const MIN_TEAMS_THRESHOLD = 3;
+
+// Streaming search endpoint with AI fallback
 http.route({
   path: "/search",
   method: "POST",
@@ -20,7 +24,18 @@ http.route({
           controller.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));
         };
 
+        // Track search session
+        let sessionId: Id<"searchSessions"> | null = null;
+
         try {
+          // Create search session for tracking
+          sessionId = await ctx.runMutation(api.search.createSession, {
+            query: query || "",
+            filters: filters || {},
+          });
+          
+          sendEvent({ type: "session", sessionId });
+
           // Step 1: Analyzing requirements
           sendEvent({ type: "step", step: "analyze", status: "active" });
           await new Promise((r) => setTimeout(r, 500));
@@ -30,13 +45,88 @@ http.route({
           sendEvent({ type: "step", step: "search", status: "active" });
 
           // Get teams from database
-          const teams = await ctx.runQuery(internal.search.searchTeams, {
+          let teams = await ctx.runQuery(internal.search.searchTeams, {
             query: query || "",
             filters: filters || {},
           });
 
+          const hasEnoughResults = teams.length >= MIN_TEAMS_THRESHOLD;
+          let usedAIDiscovery = false;
+
+          // If not enough results, trigger AI discovery
+          if (!hasEnoughResults) {
+            sendEvent({ 
+              type: "info", 
+              message: "Limited database results, searching for additional teams..." 
+            });
+            
+            try {
+              // Call AI discovery action
+              const discoveryResult = await ctx.runAction(api.research.discoverTeams, {
+                query: query || "sports sponsorship opportunities",
+                filters: filters || {},
+                useCache: true,
+              });
+              
+              if (discoveryResult.teams.length > 0) {
+                usedAIDiscovery = true;
+                sendEvent({ 
+                  type: "info", 
+                  message: discoveryResult.fromCache 
+                    ? `Found ${discoveryResult.teams.length} cached recommendations`
+                    : `Discovered ${discoveryResult.teams.length} new team opportunities` 
+                });
+              }
+              
+              // Merge discovered teams with database results
+              // Convert discovered teams to match DB format for scoring
+              const discoveredTeams = discoveryResult.teams.map((dt, idx) => ({
+                _id: `discovered-${idx}` as unknown as typeof teams[0]["_id"],
+                _creationTime: Date.now(),
+                ...dt,
+                demographics: {
+                  avgAge: undefined,
+                  genderSplit: undefined,
+                  incomeLevel: undefined,
+                  primaryAudience: [],
+                },
+                isDiscovered: true,
+                aiReasoning: dt.reasoning,
+                aiPros: dt.pros,
+                aiCons: dt.cons,
+                aiConfidence: dt.confidence,
+              }));
+              
+              // Combine database teams with discovered teams
+              // DB teams first, then discovered teams that aren't duplicates
+              const existingNames = new Set(teams.map(t => t.name.toLowerCase()));
+              const newDiscovered = discoveredTeams.filter(
+                dt => !existingNames.has(dt.name.toLowerCase())
+              );
+              
+              teams = [...teams, ...newDiscovered];
+            } catch (aiError) {
+              console.warn("AI discovery failed, continuing with DB results:", aiError);
+              sendEvent({ 
+                type: "warning", 
+                message: "AI discovery unavailable, showing available results" 
+              });
+            }
+          }
+
           await new Promise((r) => setTimeout(r, 400));
           sendEvent({ type: "step", step: "search", status: "completed" });
+
+          // Handle case where we still have no results
+          if (teams.length === 0) {
+            sendEvent({ 
+              type: "error", 
+              message: "No teams found matching your criteria. Try broadening your search filters." 
+            });
+            sendEvent({ type: "complete", totalResults: 0 });
+            controller.close();
+            return;
+          }
 
           // Step 3: Evaluating alignment
           sendEvent({ type: "step", step: "evaluate", status: "active" });
@@ -47,10 +137,18 @@ http.route({
           sendEvent({ type: "step", step: "rank", status: "active" });
 
           // Score and rank teams
-          const scoredTeams = teams.map((team) => ({
-            team,
-            score: calculateMatchScore(team, filters),
-          }));
+          const scoredTeams = teams.map((team) => {
+            const isDiscovered = (team as { isDiscovered?: boolean }).isDiscovered;
+            const aiConfidence = (team as { aiConfidence?: number }).aiConfidence;
+            
+            // For AI-discovered teams, blend AI confidence with calculated score
+            let score = calculateMatchScore(team, filters);
+            if (isDiscovered && aiConfidence) {
+              score = Math.round((score * 0.6) + (aiConfidence * 0.4));
+            }
+            
+            return { team, score, isDiscovered };
+          });
 
           scoredTeams.sort((a, b) => b.score - a.score);
           const topTeams = scoredTeams.slice(0, 10);
@@ -63,7 +161,13 @@ http.route({
 
           // Stream each team result
           for (let i = 0; i < topTeams.length; i++) {
-            const { team, score } = topTeams[i];
+            const { team, score, isDiscovered } = topTeams[i];
+            const teamData = team as typeof team & {
+              isDiscovered?: boolean;
+              aiReasoning?: string;
+              aiPros?: string[];
+              aiCons?: string[];
+            };
 
             const recommendation = {
               id: team._id,
@@ -73,9 +177,16 @@ http.route({
               state: team.state,
               region: team.region,
               score,
-              reasoning: generateReasoning(team, filters, score),
-              pros: generatePros(team, filters),
-              cons: generateCons(team, filters),
+              // Use AI-generated content for discovered teams, fallback for DB teams
+              reasoning: isDiscovered && teamData.aiReasoning 
+                ? teamData.aiReasoning 
+                : generateReasoning(team, filters, score),
+              pros: isDiscovered && teamData.aiPros 
+                ? teamData.aiPros 
+                : generatePros(team, filters),
+              cons: isDiscovered && teamData.aiCons 
+                ? teamData.aiCons 
+                : generateCons(team, filters),
               demographics: team.demographics,
               estimatedCost: team.estimatedSponsorshipRange,
               brandValues: team.brandValues,
@@ -83,6 +194,7 @@ http.route({
                 suggestedAssets: generateAssets(team),
                 activationIdeas: generateActivations(team),
               },
+              isDiscovered: isDiscovered || false,
             };
 
             sendEvent({ type: "team", team: recommendation });
@@ -90,9 +202,65 @@ http.route({
           }
 
           sendEvent({ type: "step", step: "generate", status: "completed" });
-          sendEvent({ type: "complete", totalResults: topTeams.length });
+          
+          // Update session as completed
+          if (sessionId) {
+            await ctx.runMutation(api.search.updateSessionStatus, {
+              sessionId,
+              status: "completed",
+              resultsCount: topTeams.length,
+            });
+            
+            // Save top results to database for history
+            for (let i = 0; i < Math.min(topTeams.length, 5); i++) {
+              const { team, score, isDiscovered } = topTeams[i];
+              const teamData = team as typeof team & {
+                aiReasoning?: string;
+                aiPros?: string[];
+                aiCons?: string[];
+              };
+              
+              // Only save if it's a real team ID (not discovered)
+              if (!isDiscovered && typeof team._id === "string" && !team._id.startsWith("discovered-")) {
+                try {
+                  await ctx.runMutation(api.search.saveResult, {
+                    sessionId,
+                    teamId: team._id,
+                    score,
+                    rank: i + 1,
+                    reasoning: teamData.aiReasoning || generateReasoning(team, filters, score),
+                    pros: teamData.aiPros || generatePros(team, filters),
+                    cons: teamData.aiCons || generateCons(team, filters),
+                    dealStructure: {
+                      estimatedCost: team.estimatedSponsorshipRange?.min || 0,
+                      suggestedAssets: generateAssets(team),
+                      activationIdeas: generateActivations(team),
+                    },
+                  });
+                } catch (saveError) {
+                  console.warn("Failed to save search result:", saveError);
+                }
+              }
+            }
+          }
+          
+          sendEvent({ 
+            type: "complete", 
+            totalResults: topTeams.length,
+            usedAIDiscovery,
+            sessionId,
+          });
         } catch (error) {
           console.error("Search error:", error);
+          
+          // Update session as failed
+          if (sessionId) {
+            await ctx.runMutation(api.search.updateSessionStatus, {
+              sessionId,
+              status: "failed",
+            });
+          }
+          
           sendEvent({
             type: "error",
             message: error instanceof Error ? error.message : "Search failed",

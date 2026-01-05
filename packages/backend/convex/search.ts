@@ -139,6 +139,210 @@ export const searchTeams = internalQuery({
   },
 });
 
+// Get recent search sessions (for history feature)
+export const getRecentSessions = query({
+  args: { 
+    limit: v.optional(v.number()),
+    status: v.optional(v.string()),
+  },
+  handler: async (ctx, args) => {
+    const limit = args.limit ?? 10;
+    
+    let sessionsQuery = ctx.db
+      .query("searchSessions")
+      .withIndex("by_createdAt")
+      .order("desc");
+    
+    if (args.status) {
+      sessionsQuery = ctx.db
+        .query("searchSessions")
+        .withIndex("by_status", (q) => q.eq("status", args.status!))
+        .order("desc");
+    }
+    
+    return await sessionsQuery.take(limit);
+  },
+});
+
+// Get related searches based on filters similarity
+export const getRelatedSearches = query({
+  args: { 
+    currentFilters: v.object({
+      budgetMin: v.optional(v.number()),
+      budgetMax: v.optional(v.number()),
+      regions: v.optional(v.array(v.string())),
+      demographics: v.optional(v.array(v.string())),
+      brandValues: v.optional(v.array(v.string())),
+      leagues: v.optional(v.array(v.string())),
+      goals: v.optional(v.array(v.string())),
+    }),
+    limit: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    const limit = args.limit ?? 5;
+    
+    // Get recent successful sessions
+    const sessions = await ctx.db
+      .query("searchSessions")
+      .withIndex("by_status", (q) => q.eq("status", "completed"))
+      .order("desc")
+      .take(100);
+    
+    // Score sessions by similarity to current filters
+    const scored = sessions.map(session => {
+      let similarity = 0;
+      
+      // Region overlap
+      if (args.currentFilters.regions?.length && session.filters.regions?.length) {
+        const overlap = args.currentFilters.regions.filter(
+          r => session.filters.regions!.includes(r)
+        ).length;
+        similarity += overlap * 10;
+      }
+      
+      // League overlap
+      if (args.currentFilters.leagues?.length && session.filters.leagues?.length) {
+        const overlap = args.currentFilters.leagues.filter(
+          l => session.filters.leagues!.includes(l)
+        ).length;
+        similarity += overlap * 15;
+      }
+      
+      // Brand values overlap
+      if (args.currentFilters.brandValues?.length && session.filters.brandValues?.length) {
+        const overlap = args.currentFilters.brandValues.filter(
+          v => session.filters.brandValues!.includes(v)
+        ).length;
+        similarity += overlap * 10;
+      }
+      
+      // Budget range overlap
+      const currentMin = args.currentFilters.budgetMin ?? 0;
+      const currentMax = args.currentFilters.budgetMax ?? Infinity;
+      const sessionMin = session.filters.budgetMin ?? 0;
+      const sessionMax = session.filters.budgetMax ?? Infinity;
+      
+      if (sessionMax >= currentMin && sessionMin <= currentMax) {
+        similarity += 20;
+      }
+      
+      return { session, similarity };
+    });
+    
+    // Filter out exact matches and sort by similarity
+    const filtered = scored
+      .filter(s => s.similarity > 0 && s.similarity < 100)
+      .sort((a, b) => b.similarity - a.similarity)
+      .slice(0, limit);
+    
+    return filtered.map(f => ({
+      ...f.session,
+      similarity: f.similarity,
+    }));
+  },
+});
+
+// Get search analytics
+export const getSearchAnalytics = query({
+  args: {
+    days: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    const days = args.days ?? 7;
+    const since = Date.now() - (days * 24 * 60 * 60 * 1000);
+    
+    const sessions = await ctx.db
+      .query("searchSessions")
+      .filter(q => q.gt(q.field("createdAt"), since))
+      .collect();
+    
+    // Aggregate analytics
+    const totalSearches = sessions.length;
+    const completedSearches = sessions.filter(s => s.status === "completed").length;
+    const failedSearches = sessions.filter(s => s.status === "failed").length;
+    const avgResultsCount = sessions
+      .filter(s => s.resultsCount !== undefined)
+      .reduce((sum, s) => sum + (s.resultsCount || 0), 0) / (completedSearches || 1);
+    
+    // Top regions
+    const regionCounts = new Map<string, number>();
+    sessions.forEach(s => {
+      s.filters.regions?.forEach(r => {
+        regionCounts.set(r, (regionCounts.get(r) || 0) + 1);
+      });
+    });
+    
+    // Top leagues
+    const leagueCounts = new Map<string, number>();
+    sessions.forEach(s => {
+      s.filters.leagues?.forEach(l => {
+        leagueCounts.set(l, (leagueCounts.get(l) || 0) + 1);
+      });
+    });
+    
+    // Top brand values
+    const brandValueCounts = new Map<string, number>();
+    sessions.forEach(s => {
+      s.filters.brandValues?.forEach(v => {
+        brandValueCounts.set(v, (brandValueCounts.get(v) || 0) + 1);
+      });
+    });
+    
+    return {
+      period: { days, since: new Date(since).toISOString() },
+      totalSearches,
+      completedSearches,
+      failedSearches,
+      successRate: totalSearches > 0 ? completedSearches / totalSearches : 0,
+      avgResultsCount,
+      topRegions: Array.from(regionCounts.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([region, count]) => ({ region, count })),
+      topLeagues: Array.from(leagueCounts.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([league, count]) => ({ league, count })),
+      topBrandValues: Array.from(brandValueCounts.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([value, count]) => ({ value, count })),
+    };
+  },
+});
+
+// Delete old sessions (cleanup)
+export const deleteOldSessions = mutation({
+  args: {
+    olderThanDays: v.number(),
+  },
+  handler: async (ctx, args) => {
+    const cutoff = Date.now() - (args.olderThanDays * 24 * 60 * 60 * 1000);
+    
+    const oldSessions = await ctx.db
+      .query("searchSessions")
+      .filter(q => q.lt(q.field("createdAt"), cutoff))
+      .collect();
+    
+    // Delete sessions and their results
+    for (const session of oldSessions) {
+      // Delete associated results
+      const results = await ctx.db
+        .query("searchResults")
+        .withIndex("by_session", (q) => q.eq("sessionId", session._id))
+        .collect();
+      
+      for (const result of results) {
+        await ctx.db.delete(result._id);
+      }
+      
+      await ctx.db.delete(session._id);
+    }
+    
+    return { deletedSessions: oldSessions.length };
+  },
+});
+
 // Calculate match score for a team
 export const calculateScore = (
   team: {

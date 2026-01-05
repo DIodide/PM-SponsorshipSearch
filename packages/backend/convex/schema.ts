@@ -1,6 +1,14 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
+// Social media account schema (reusable)
+const socialAccountSchema = v.object({
+  handle: v.string(),
+  followers: v.number(),
+  engagement: v.optional(v.number()), // engagement rate percentage
+  lastUpdated: v.number(),
+});
+
 export default defineSchema({
   // Teams table with demographic and sponsorship data
   teams: defineTable({
@@ -32,17 +40,29 @@ export default defineSchema({
       max: v.number(),
     })),
     
+    // Social media accounts
+    socialMedia: v.optional(v.object({
+      twitter: v.optional(socialAccountSchema),
+      instagram: v.optional(socialAccountSchema),
+      tiktok: v.optional(socialAccountSchema),
+      facebook: v.optional(socialAccountSchema),
+    })),
+    
     // Additional metadata
     founded: v.optional(v.number()),
     venue: v.optional(v.string()),
     avgAttendance: v.optional(v.number()),
-    socialFollowing: v.optional(v.number()),
+    socialFollowing: v.optional(v.number()), // Deprecated: use socialMedia instead
     website: v.optional(v.string()),
     logoUrl: v.optional(v.string()),
     
     // Data quality flags
     isVerified: v.optional(v.boolean()),
     lastUpdated: v.optional(v.number()),
+    
+    // Source tracking for AI-discovered teams
+    source: v.optional(v.string()), // "manual", "ai_discovery", "api_import"
+    discoveredAt: v.optional(v.number()),
   })
     .index("by_league", ["league"])
     .index("by_sport", ["sport"])
@@ -90,4 +110,62 @@ export default defineSchema({
   })
     .index("by_session", ["sessionId"])
     .index("by_session_rank", ["sessionId", "rank"]),
+
+  // Research cache for AI-generated team discoveries
+  researchCache: defineTable({
+    queryHash: v.string(), // SHA-256 hash of query + filters
+    query: v.string(), // Original query for debugging
+    filters: v.object({
+      budgetMin: v.optional(v.number()),
+      budgetMax: v.optional(v.number()),
+      regions: v.optional(v.array(v.string())),
+      demographics: v.optional(v.array(v.string())),
+      brandValues: v.optional(v.array(v.string())),
+      leagues: v.optional(v.array(v.string())),
+      goals: v.optional(v.array(v.string())),
+    }),
+    results: v.array(v.object({
+      name: v.string(),
+      league: v.string(),
+      sport: v.string(),
+      city: v.string(),
+      state: v.string(),
+      region: v.string(),
+      marketSize: v.string(),
+      brandValues: v.array(v.string()),
+      reasoning: v.string(),
+      pros: v.array(v.string()),
+      cons: v.array(v.string()),
+      estimatedSponsorshipRange: v.optional(v.object({
+        min: v.number(),
+        max: v.number(),
+      })),
+      socialHandles: v.optional(v.object({
+        twitter: v.optional(v.string()),
+        instagram: v.optional(v.string()),
+        tiktok: v.optional(v.string()),
+        facebook: v.optional(v.string()),
+      })),
+      website: v.optional(v.string()),
+      confidence: v.number(), // 0-100 confidence score from AI
+    })),
+    createdAt: v.number(),
+    expiresAt: v.number(), // TTL for cache invalidation
+    hitCount: v.number(), // Track cache usage
+  })
+    .index("by_hash", ["queryHash"])
+    .index("by_expiry", ["expiresAt"]),
+
+  // Social media update jobs queue
+  socialUpdateQueue: defineTable({
+    teamId: v.id("teams"),
+    platform: v.string(), // twitter, instagram, tiktok, facebook
+    status: v.string(), // pending, processing, completed, failed
+    lastAttempt: v.optional(v.number()),
+    errorMessage: v.optional(v.string()),
+    retryCount: v.number(),
+    scheduledFor: v.number(),
+  })
+    .index("by_status", ["status"])
+    .index("by_scheduled", ["scheduledFor"]),
 });

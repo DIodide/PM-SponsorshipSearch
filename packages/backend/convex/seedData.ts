@@ -1,4 +1,5 @@
 import { mutation } from "./_generated/server";
+import { Id } from "./_generated/dataModel";
 
 // Sample teams data for seeding the database
 const SAMPLE_TEAMS = [
@@ -396,7 +397,7 @@ export const seedTeams = mutation({
     }
 
     // Insert all teams
-    const ids = [];
+    const ids: Id<"teams">[] = [];
     for (const team of SAMPLE_TEAMS) {
       const id = await ctx.db.insert("teams", {
         ...team,
@@ -421,7 +422,7 @@ export const clearAndReseed = mutation({
     }
 
     // Insert all teams
-    const ids = [];
+    const ids: Id<"teams">[] = [];
     for (const team of SAMPLE_TEAMS) {
       const id = await ctx.db.insert("teams", {
         ...team,
