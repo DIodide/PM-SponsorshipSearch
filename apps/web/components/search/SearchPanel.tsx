@@ -127,12 +127,12 @@ export function SearchPanel({ onSearch }: SearchPanelProps) {
             variant="ghost"
             size="sm"
             onClick={() => setShowAdvanced(!showAdvanced)}
-            className={showAdvanced ? "text-playmaker-blue" : "text-muted-foreground"}
+            className={showAdvanced ? "text-foreground" : "text-muted-foreground"}
           >
             <HugeiconsIcon icon={Settings02Icon} size={18} />
             <span className="ml-2 hidden sm:inline">Filters</span>
             {activeFilterCount > 0 && (
-              <Badge variant="secondary" className="ml-2 bg-playmaker-blue/10 text-playmaker-blue">
+              <Badge variant="secondary" className="ml-2">
                 {activeFilterCount}
               </Badge>
             )}
@@ -247,7 +247,7 @@ export function SearchPanel({ onSearch }: SearchPanelProps) {
       <Button
         type="submit"
         size="lg"
-        className="w-full mt-4 bg-playmaker-blue hover:bg-playmaker-blue/90 text-white font-medium"
+        className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
         disabled={!query.trim() && activeFilterCount === 0}
       >
         <HugeiconsIcon icon={Search01Icon} size={18} className="mr-2" />
@@ -268,7 +268,7 @@ export function SearchPanel({ onSearch }: SearchPanelProps) {
             onClick={() => {
               setQuery(suggestion);
             }}
-            className="text-sm text-playmaker-blue hover:underline"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors underline"
           >
             {suggestion}
           </button>
@@ -299,8 +299,8 @@ function FilterSection({
             variant={selected.includes(option.value) ? "default" : "outline"}
             className={`cursor-pointer transition-colors ${
               selected.includes(option.value)
-                ? "bg-playmaker-blue hover:bg-playmaker-blue/90 text-white border-transparent"
-                : "hover:bg-accent/10 hover:border-playmaker-blue/50"
+                ? "bg-primary hover:bg-primary/90 text-primary-foreground border-transparent"
+                : "hover:bg-muted border-border"
             }`}
             onClick={() => onToggle(option.value)}
           >

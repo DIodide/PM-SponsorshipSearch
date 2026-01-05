@@ -258,6 +258,13 @@ export const findByName = internalQuery({
   },
 });
 
+// Source URL schema for discovered teams
+const sourceUrlSchema = v.object({
+  url: v.string(),
+  title: v.optional(v.string()),
+  domain: v.optional(v.string()),
+});
+
 // Create team from AI discovery (internal)
 export const createTeamInternal = internalMutation({
   args: {
@@ -291,6 +298,7 @@ export const createTeamInternal = internalMutation({
     website: v.optional(v.string()),
     source: v.optional(v.string()),
     discoveredAt: v.optional(v.number()),
+    sourceUrls: v.optional(v.array(sourceUrlSchema)),
   },
   handler: async (ctx, args) => {
     return await ctx.db.insert("teams", {

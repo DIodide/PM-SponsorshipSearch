@@ -63,6 +63,13 @@ export default defineSchema({
     // Source tracking for AI-discovered teams
     source: v.optional(v.string()), // "manual", "ai_discovery", "api_import"
     discoveredAt: v.optional(v.number()),
+    
+    // Source URLs for AI-discovered data
+    sourceUrls: v.optional(v.array(v.object({
+      url: v.string(),
+      title: v.optional(v.string()),
+      domain: v.optional(v.string()),
+    }))),
   })
     .index("by_league", ["league"])
     .index("by_sport", ["sport"])
@@ -148,6 +155,11 @@ export default defineSchema({
       })),
       website: v.optional(v.string()),
       confidence: v.number(), // 0-100 confidence score from AI
+      sourceUrls: v.optional(v.array(v.object({
+        url: v.string(),
+        title: v.optional(v.string()),
+        domain: v.optional(v.string()),
+      }))),
     })),
     createdAt: v.number(),
     expiresAt: v.number(), // TTL for cache invalidation
