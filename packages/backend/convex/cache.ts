@@ -2,6 +2,13 @@ import { v } from "convex/values";
 import { internalQuery, internalMutation, mutation, query } from "./_generated/server";
 import { Id } from "./_generated/dataModel";
 
+// Source URL schema
+const sourceUrlSchema = v.object({
+  url: v.string(),
+  title: v.optional(v.string()),
+  domain: v.optional(v.string()),
+});
+
 // Cache result type for internal use
 const cachedTeamSchema = v.object({
   name: v.string(),
@@ -27,6 +34,7 @@ const cachedTeamSchema = v.object({
   })),
   website: v.optional(v.string()),
   confidence: v.number(),
+  sourceUrls: v.optional(v.array(sourceUrlSchema)),
 });
 
 const filtersSchema = v.object({

@@ -50,7 +50,7 @@ function StepIndicator({ status }: { status: ProgressStep["status"] }) {
       <HugeiconsIcon
         icon={CheckmarkCircle02Icon}
         size={18}
-        className="text-green-500"
+        className="text-muted-foreground"
       />
     );
   }
@@ -61,14 +61,14 @@ function StepIndicator({ status }: { status: ProgressStep["status"] }) {
         <HugeiconsIcon
         icon={Loading02Icon}
         size={18}
-        className="text-playmaker-blue animate-spin"
+        className="text-foreground animate-spin"
         />
       </div>
     );
   }
 
   return (
-    <div className="w-[18px] h-[18px] rounded-full border-2 border-muted-foreground/30" />
+    <div className="w-[18px] h-[18px] rounded-full border-2 border-border" />
   );
 }
 

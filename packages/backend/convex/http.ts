@@ -76,35 +76,103 @@ http.route({
                     ? `Found ${discoveryResult.teams.length} cached recommendations`
                     : `Discovered ${discoveryResult.teams.length} new team opportunities` 
                 });
+                
+                // Send sources for transparency
+                if (discoveryResult.sources && discoveryResult.sources.length > 0) {
+                  sendEvent({
+                    type: "sources",
+                    sources: discoveryResult.sources.slice(0, 5), // Top 5 sources
+                  });
+                }
               }
               
-              // Merge discovered teams with database results
-              // Convert discovered teams to match DB format for scoring
-              const discoveredTeams = discoveryResult.teams.map((dt, idx) => ({
-                _id: `discovered-${idx}` as unknown as typeof teams[0]["_id"],
-                _creationTime: Date.now(),
-                ...dt,
-                demographics: {
-                  avgAge: undefined,
-                  genderSplit: undefined,
-                  incomeLevel: undefined,
-                  primaryAudience: [],
-                },
-                isDiscovered: true,
-                aiReasoning: dt.reasoning,
-                aiPros: dt.pros,
-                aiCons: dt.cons,
-                aiConfidence: dt.confidence,
-              }));
-              
-              // Combine database teams with discovered teams
-              // DB teams first, then discovered teams that aren't duplicates
+              // Save discovered teams to database and get real IDs
               const existingNames = new Set(teams.map(t => t.name.toLowerCase()));
-              const newDiscovered = discoveredTeams.filter(
+              const newTeamsToSave = discoveryResult.teams.filter(
                 dt => !existingNames.has(dt.name.toLowerCase())
               );
               
-              teams = [...teams, ...newDiscovered];
+              // Save each discovered team and build the merged list
+              const savedDiscoveredTeams = [];
+              for (const dt of newTeamsToSave) {
+                try {
+                  // Check if team already exists
+                  const existingTeam = await ctx.runQuery(internal.teams.findByName, { name: dt.name });
+                  
+                  if (existingTeam) {
+                    // Use existing team but mark as discovered for this search
+                    savedDiscoveredTeams.push({
+                      ...existingTeam,
+                      isDiscovered: true,
+                      aiReasoning: dt.reasoning,
+                      aiPros: dt.pros,
+                      aiCons: dt.cons,
+                      aiConfidence: dt.confidence,
+                      sourceUrls: dt.sourceUrls,
+                    });
+                  } else {
+                    // Create new team in database
+                    const newTeamId = await ctx.runMutation(internal.teams.createTeamInternal, {
+                      name: dt.name,
+                      league: dt.league,
+                      sport: dt.sport,
+                      city: dt.city,
+                      state: dt.state,
+                      region: dt.region,
+                      marketSize: dt.marketSize,
+                      brandValues: dt.brandValues,
+                      estimatedSponsorshipRange: dt.estimatedSponsorshipRange,
+                      website: dt.website,
+                      demographics: {
+                        avgAge: undefined,
+                        genderSplit: undefined,
+                        incomeLevel: undefined,
+                        primaryAudience: [],
+                      },
+                      source: "ai_discovery",
+                      discoveredAt: Date.now(),
+                      sourceUrls: dt.sourceUrls,
+                    });
+                    
+                    // Fetch the created team
+                    const newTeam = await ctx.runQuery(internal.teams.getInternal, { id: newTeamId });
+                    if (newTeam) {
+                      savedDiscoveredTeams.push({
+                        ...newTeam,
+                        isDiscovered: true,
+                        aiReasoning: dt.reasoning,
+                        aiPros: dt.pros,
+                        aiCons: dt.cons,
+                        aiConfidence: dt.confidence,
+                        sourceUrls: dt.sourceUrls,
+                      });
+                    }
+                  }
+                } catch (saveError) {
+                  console.warn(`Failed to save discovered team ${dt.name}:`, saveError);
+                  // Still include the team but with a fake ID
+                  savedDiscoveredTeams.push({
+                    _id: `discovered-${savedDiscoveredTeams.length}` as unknown as typeof teams[0]["_id"],
+                    _creationTime: Date.now(),
+                    ...dt,
+                    demographics: {
+                      avgAge: undefined,
+                      genderSplit: undefined,
+                      incomeLevel: undefined,
+                      primaryAudience: [],
+                    },
+                    isDiscovered: true,
+                    aiReasoning: dt.reasoning,
+                    aiPros: dt.pros,
+                    aiCons: dt.cons,
+                    aiConfidence: dt.confidence,
+                    sourceUrls: dt.sourceUrls,
+                  });
+                }
+              }
+              
+              // Combine database teams with saved discovered teams
+              teams = [...teams, ...savedDiscoveredTeams];
             } catch (aiError) {
               console.warn("AI discovery failed, continuing with DB results:", aiError);
               sendEvent({ 
@@ -167,6 +235,7 @@ http.route({
               aiReasoning?: string;
               aiPros?: string[];
               aiCons?: string[];
+              sourceUrls?: Array<{ url: string; title?: string; domain?: string }>;
             };
 
             const recommendation = {
@@ -195,6 +264,8 @@ http.route({
                 activationIdeas: generateActivations(team),
               },
               isDiscovered: isDiscovered || false,
+              // Include source URLs for discovered teams
+              sourceUrls: isDiscovered ? teamData.sourceUrls : undefined,
             };
 
             sendEvent({ type: "team", team: recommendation });
@@ -211,17 +282,18 @@ http.route({
               resultsCount: topTeams.length,
             });
             
-            // Save top results to database for history
+            // Save top results to database for history (including discovered teams)
             for (let i = 0; i < Math.min(topTeams.length, 5); i++) {
-              const { team, score, isDiscovered } = topTeams[i];
+              const { team, score } = topTeams[i];
               const teamData = team as typeof team & {
                 aiReasoning?: string;
                 aiPros?: string[];
                 aiCons?: string[];
               };
               
-              // Only save if it's a real team ID (not discovered)
-              if (!isDiscovered && typeof team._id === "string" && !team._id.startsWith("discovered-")) {
+              // Only save if it's a real Convex ID (not a fake discovered-X ID)
+              const teamIdStr = String(team._id);
+              if (!teamIdStr.startsWith("discovered-")) {
                 try {
                   await ctx.runMutation(api.search.saveResult, {
                     sessionId,

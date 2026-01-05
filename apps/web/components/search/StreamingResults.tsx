@@ -5,8 +5,14 @@ import { ProgressSteps, type ProgressStep } from "./ProgressSteps";
 import { TeamCard, type TeamRecommendation } from "./TeamCard";
 import { Button } from "@/components/ui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01Icon, Search01Icon } from "@hugeicons/core-free-icons";
+import { ArrowLeft01Icon, Search01Icon, AiSearch02Icon, Link01Icon } from "@hugeicons/core-free-icons";
 import type { SearchFilters } from "@/app/page";
+
+interface SourceUrl {
+  url: string;
+  title?: string;
+  domain?: string;
+}
 
 interface StreamingResultsProps {
   query: string;
@@ -17,8 +23,12 @@ interface StreamingResultsProps {
 type StreamEvent =
   | { type: "step"; step: string; status: "active" | "completed" }
   | { type: "team"; team: TeamRecommendation }
-  | { type: "complete"; totalResults: number }
-  | { type: "error"; message: string };
+  | { type: "complete"; totalResults: number; usedAIDiscovery?: boolean }
+  | { type: "error"; message: string }
+  | { type: "info"; message: string }
+  | { type: "warning"; message: string }
+  | { type: "sources"; sources: SourceUrl[] }
+  | { type: "session"; sessionId: string };
 
 const INITIAL_STEPS: ProgressStep[] = [
   { id: "analyze", label: "Analyzing your brand requirements...", status: "pending" },
@@ -34,6 +44,9 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
   const [isComplete, setIsComplete] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [streamingTeamId, setStreamingTeamId] = useState<string | null>(null);
+  const [usedAIDiscovery, setUsedAIDiscovery] = useState(false);
+  const [sources, setSources] = useState<SourceUrl[]>([]);
+  const [infoMessages, setInfoMessages] = useState<string[]>([]);
   const hasStartedRef = useRef(false);
 
   const updateStepStatus = useCallback((stepId: string, status: ProgressStep["status"]) => {
@@ -133,10 +146,23 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
         break;
       case "complete":
         setIsComplete(true);
+        setUsedAIDiscovery(event.usedAIDiscovery || false);
         setSteps((prev) => prev.map((s) => ({ ...s, status: "completed" })));
         break;
       case "error":
         setError(event.message);
+        break;
+      case "info":
+        setInfoMessages((prev) => [...prev, event.message]);
+        break;
+      case "warning":
+        setInfoMessages((prev) => [...prev, `⚠️ ${event.message}`]);
+        break;
+      case "sources":
+        setSources(event.sources);
+        break;
+      case "session":
+        // Session ID received, could store for later use
         break;
     }
   };
@@ -280,7 +306,7 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
       {/* Query Summary */}
       <div className="p-4 rounded-lg bg-muted/30 border border-border">
         <div className="flex items-start gap-3">
-          <HugeiconsIcon icon={Search01Icon} size={20} className="text-playmaker-blue mt-0.5" />
+          <HugeiconsIcon icon={Search01Icon} size={20} className="text-muted-foreground mt-0.5" />
           <div>
             <div className="font-medium">{query || "Filtered Search"}</div>
             {Object.entries(filters).some(([_, v]) => v && (Array.isArray(v) ? v.length > 0 : true)) && (
@@ -302,6 +328,18 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
       {!isComplete && (
         <div className="p-4 rounded-lg bg-card border border-border">
           <ProgressSteps steps={steps} />
+          
+          {/* Info messages during search */}
+          {infoMessages.length > 0 && (
+            <div className="mt-4 space-y-2">
+              {infoMessages.map((msg, i) => (
+                <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground animate-fade-in">
+                  <HugeiconsIcon icon={AiSearch02Icon} size={14} className="text-muted-foreground" />
+                  <span>{msg}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
@@ -309,6 +347,40 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
       {error && (
         <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive">
           {error}
+        </div>
+      )}
+
+      {/* AI Discovery Banner */}
+      {isComplete && usedAIDiscovery && (
+        <div className="p-4 rounded-lg bg-muted/50 border border-border">
+          <div className="flex items-start gap-3">
+            <HugeiconsIcon icon={AiSearch02Icon} size={20} className="text-muted-foreground mt-0.5" />
+            <div>
+              <div className="text-sm font-medium">AI Discovery Mode</div>
+              <div className="text-xs text-muted-foreground mt-1">
+                Extended search was performed using AI to find additional teams beyond the database.
+              </div>
+              
+              {/* Sources */}
+              {sources.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <span className="text-xs text-muted-foreground">Sources:</span>
+                  {sources.map((source, i) => (
+                    <a
+                      key={i}
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors underline"
+                    >
+                      <HugeiconsIcon icon={Link01Icon} size={10} />
+                      <span>{source.domain || source.title || 'Source'}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       )}
 

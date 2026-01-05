@@ -61,8 +61,21 @@ function getGoogleAI() {
   return createGoogleGenerativeAI({ apiKey });
 }
 
+// Source URL type
+interface SourceUrl {
+  url: string;
+  title?: string;
+  domain?: string;
+}
+
+// Web search result with sources
+interface WebSearchResult {
+  content: string;
+  sources: SourceUrl[];
+}
+
 // Web search via Tavily API
-async function searchWeb(query: string): Promise<string> {
+async function searchWeb(query: string): Promise<WebSearchResult> {
   const apiKey = process.env.TAVILY_API_KEY;
   
   if (!apiKey) {
@@ -100,6 +113,16 @@ async function searchWeb(query: string): Promise<string> {
     
     const data = await response.json();
     
+    // Extract source URLs
+    const sources: SourceUrl[] = data.results.map((r: { title: string; url: string }) => {
+      const urlObj = new URL(r.url);
+      return {
+        url: r.url,
+        title: r.title,
+        domain: urlObj.hostname.replace('www.', ''),
+      };
+    });
+    
     // Format results for the AI
     const formattedResults = data.results
       .map((r: { title: string; url: string; content: string }) => 
@@ -107,7 +130,10 @@ async function searchWeb(query: string): Promise<string> {
       )
       .join("\n");
     
-    return formattedResults || mockSearchResults(query);
+    return {
+      content: formattedResults || mockSearchResults(query).content,
+      sources,
+    };
   } catch (error) {
     console.error("Tavily search error:", error);
     return mockSearchResults(query);
@@ -115,8 +141,16 @@ async function searchWeb(query: string): Promise<string> {
 }
 
 // Mock search results for development/fallback
-function mockSearchResults(query: string): string {
-  return `
+function mockSearchResults(query: string): WebSearchResult {
+  const mockSources: SourceUrl[] = [
+    { url: "https://www.milb.com/", title: "Minor League Baseball", domain: "milb.com" },
+    { url: "https://www.uslchampionship.com/", title: "USL Championship", domain: "uslchampionship.com" },
+    { url: "https://www.nwslsoccer.com/", title: "NWSL Soccer", domain: "nwslsoccer.com" },
+    { url: "https://www.espn.com/", title: "ESPN Sports", domain: "espn.com" },
+  ];
+  
+  return {
+    content: `
 Sports Teams Search Results for: "${query}"
 
 1. Minor League Baseball Teams
@@ -140,7 +174,9 @@ and affordable partnership packages.
 5. Indoor Football & Arena Leagues
 Arena football and indoor leagues offer cost-effective sponsorship with high visibility
 and community integration.
-`;
+`,
+    sources: mockSources,
+  };
 }
 
 // Generate hash for cache key
@@ -159,6 +195,31 @@ function generateQueryHash(query: string, filters: Record<string, unknown>): str
   return Math.abs(hash).toString(36);
 }
 
+// Discovered team type with sources
+interface DiscoveredTeam {
+  name: string;
+  league: string;
+  sport: string;
+  city: string;
+  state: string;
+  region: string;
+  marketSize: string;
+  brandValues: string[];
+  reasoning: string;
+  pros: string[];
+  cons: string[];
+  estimatedSponsorshipRange?: { min: number; max: number };
+  socialHandles?: {
+    twitter?: string;
+    instagram?: string;
+    tiktok?: string;
+    facebook?: string;
+  };
+  website?: string;
+  confidence: number;
+  sourceUrls?: SourceUrl[];
+}
+
 // Main AI discovery action
 export const discoverTeams = action({
   args: {
@@ -167,30 +228,10 @@ export const discoverTeams = action({
     useCache: v.optional(v.boolean()),
   },
   handler: async (ctx, args): Promise<{
-    teams: Array<{
-      name: string;
-      league: string;
-      sport: string;
-      city: string;
-      state: string;
-      region: string;
-      marketSize: string;
-      brandValues: string[];
-      reasoning: string;
-      pros: string[];
-      cons: string[];
-      estimatedSponsorshipRange?: { min: number; max: number };
-      socialHandles?: {
-        twitter?: string;
-        instagram?: string;
-        tiktok?: string;
-        facebook?: string;
-      };
-      website?: string;
-      confidence: number;
-    }>;
+    teams: DiscoveredTeam[];
     searchSummary: string;
     fromCache: boolean;
+    sources: SourceUrl[];
   }> => {
     const useCache = args.useCache !== false;
     const queryHash = generateQueryHash(args.query, args.filters);
@@ -202,9 +243,10 @@ export const discoverTeams = action({
         // Update hit count
         await ctx.runMutation(internal.cache.incrementHitCount, { cacheId: cached._id });
         return {
-          teams: cached.results,
+          teams: cached.results as DiscoveredTeam[],
           searchSummary: `Retrieved ${cached.results.length} cached results`,
           fromCache: true,
+          sources: [], // Cache doesn't store sources separately
         };
       }
     }
@@ -212,6 +254,7 @@ export const discoverTeams = action({
     // Perform web search
     const searchPrompt = buildSearchQuery(args.query, args.filters);
     const searchResults = await searchWeb(searchPrompt);
+    const { content: searchContent, sources: searchSources } = searchResults;
     
     // Use AI to extract and structure team information
     
@@ -245,7 +288,7 @@ ${args.filters.leagues?.length ? `- Preferred Leagues: ${args.filters.leagues.jo
 ${args.filters.goals?.length ? `- Sponsorship Goals: ${args.filters.goals.join(", ")}` : ""}
 
 Web Search Results:
-${searchResults}
+${searchContent}
 
 Based on the search results and brand requirements, identify 5-10 specific sports teams that would be excellent sponsorship opportunities. Include a mix of established and emerging teams at various budget levels.`;
 
@@ -259,30 +302,39 @@ Based on the search results and brand requirements, identify 5-10 specific sport
         temperature: 0.7,
       });
       
-      // Cache the results
-      if (useCache && result.teams.length > 0) {
+      // Add source URLs to each team
+      const teamsWithSources: DiscoveredTeam[] = result.teams.map(team => ({
+        ...team,
+        sourceUrls: searchSources,
+      }));
+      
+      // Cache the results (with sources)
+      if (useCache && teamsWithSources.length > 0) {
         await ctx.runMutation(internal.cache.cacheResults, {
           queryHash,
           query: args.query,
           filters: args.filters,
-          results: result.teams,
+          results: teamsWithSources,
           ttlHours: 24, // Cache for 24 hours
         });
       }
       
       return {
-        teams: result.teams,
+        teams: teamsWithSources,
         searchSummary: result.searchSummary,
         fromCache: false,
+        sources: searchSources,
       };
     } catch (error) {
       console.error("AI team discovery error:", error);
       
       // Return fallback results on AI error
+      const fallbackTeams = getFallbackTeams(args.filters);
       return {
-        teams: getFallbackTeams(args.filters),
+        teams: fallbackTeams.map(t => ({ ...t, sourceUrls: searchSources })),
         searchSummary: "AI discovery failed, returning fallback recommendations",
         fromCache: false,
+        sources: searchSources,
       };
     }
   },
@@ -503,7 +555,7 @@ export const enrichTeamData = action({
     additionalInfo: string;
   }> => {
     const searchQuery = `${args.teamName} ${args.league} team demographics fans social media official accounts`;
-    const searchResults = await searchWeb(searchQuery);
+    const { content: searchContent } = await searchWeb(searchQuery);
     
     const google = getGoogleAI();
     
@@ -517,7 +569,7 @@ export const enrichTeamData = action({
 3. Any additional relevant sponsorship information
 
 Search Results:
-${searchResults}
+${searchContent}
 
 Respond in JSON format with keys: demographics, socialHandles, additionalInfo`,
     });

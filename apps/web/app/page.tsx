@@ -57,11 +57,11 @@ export default function Page() {
   return (
     <main className="min-h-screen hero-gradient">
       {/* Header */}
-      <header className="border-b border-border/50 backdrop-blur-sm bg-background/80 sticky top-0 z-50">
+      <header className="border-b border-border backdrop-blur-sm bg-background/80 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-playmaker-blue flex items-center justify-center">
-              <span className="text-white font-bold text-sm">PM</span>
+            <div className="w-8 h-8 rounded-lg bg-foreground flex items-center justify-center">
+              <span className="text-background font-bold text-sm">PM</span>
             </div>
             <span className="font-semibold text-lg tracking-tight">Sponsorship Search</span>
           </div>
@@ -84,7 +84,7 @@ export default function Page() {
             <div className="text-center mb-12 max-w-2xl">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
                 Find Your Perfect
-                <span className="text-playmaker-blue"> Sports Partnership</span>
+                <span className="text-foreground"> Sports Partnership</span>
               </h1>
               <p className="text-lg text-muted-foreground">
                 Discover sponsorship opportunities tailored to your brand&apos;s goals, 
@@ -127,7 +127,7 @@ export default function Page() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 mt-auto">
+      <footer className="border-t border-border mt-auto">
         <div className="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-muted-foreground">
           <p>Powered by PlayMaker — The Operating System for Sports Sponsorships</p>
         </div>
@@ -146,9 +146,9 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm">
-      <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-        <HugeiconsIcon icon={Icon} size={20} className="text-playmaker-blue" />
+    <div className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
+      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-4">
+        <HugeiconsIcon icon={Icon} size={20} className="text-muted-foreground" />
       </div>
       <h3 className="font-semibold mb-2">{title}</h3>
       <p className="text-sm text-muted-foreground">{description}</p>

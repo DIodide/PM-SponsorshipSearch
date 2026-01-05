@@ -9,7 +9,15 @@ import {
   ThumbsUpIcon,
   ThumbsDownIcon,
   Briefcase01Icon,
+  AiSearch02Icon,
+  Link01Icon,
 } from "@hugeicons/core-free-icons";
+
+export type SourceUrl = {
+  url: string;
+  title?: string;
+  domain?: string;
+};
 
 export type TeamRecommendation = {
   id: string;
@@ -36,6 +44,8 @@ export type TeamRecommendation = {
     suggestedAssets: string[];
     activationIdeas: string[];
   };
+  isDiscovered?: boolean;
+  sourceUrls?: SourceUrl[];
 };
 
 interface TeamCardProps {
@@ -56,13 +66,42 @@ export function TeamCard({ team, rank, isStreaming }: TeamCardProps) {
   };
 
   return (
-    <div className="team-card rounded-xl border border-border bg-card p-6 animate-slide-in-up">
+    <div className={`team-card rounded-xl border bg-card p-6 animate-slide-in-up ${
+      team.isDiscovered ? 'border-border' : 'border-border'
+    }`}>
+      {/* AI Discovered Banner */}
+      {team.isDiscovered && (
+        <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3 pb-3 border-b border-border">
+          <HugeiconsIcon icon={AiSearch02Icon} size={12} />
+          <span>AI Discovered</span>
+          {team.sourceUrls && team.sourceUrls.length > 0 && (
+            <>
+              <span className="text-muted-foreground/50">•</span>
+              <div className="flex items-center gap-1.5">
+                {team.sourceUrls.slice(0, 3).map((source, i) => (
+                  <a
+                    key={i}
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-0.5 hover:text-foreground transition-colors underline"
+                  >
+                    <HugeiconsIcon icon={Link01Icon} size={10} />
+                    <span>{source.domain || 'source'}</span>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-4">
           {/* Rank Badge */}
-          <div className="w-10 h-10 rounded-full bg-playmaker-blue/10 flex items-center justify-center">
-            <span className="text-playmaker-blue font-bold">#{rank}</span>
+          <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
+            <span className="text-foreground font-bold">#{rank}</span>
           </div>
 
           <div>
@@ -81,7 +120,7 @@ export function TeamCard({ team, rank, isStreaming }: TeamCardProps) {
 
         {/* Match Score */}
         <div className="text-right">
-          <div className="text-2xl font-bold text-playmaker-blue">
+          <div className="text-2xl font-bold">
             {Math.round(team.score)}%
           </div>
           <div className="text-xs text-muted-foreground">match</div>
@@ -175,7 +214,7 @@ export function TeamCard({ team, rank, isStreaming }: TeamCardProps) {
       {team.dealStructure && (
         <div className="border-t border-border pt-4">
           <div className="flex items-center gap-2 text-sm font-medium mb-3">
-            <HugeiconsIcon icon={Briefcase01Icon} size={16} className="text-playmaker-blue" />
+            <HugeiconsIcon icon={Briefcase01Icon} size={16} className="text-muted-foreground" />
             Potential Deal Structure
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
