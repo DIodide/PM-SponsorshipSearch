@@ -1,0 +1,23 @@
+{
+    "name": "@packages/backend",
+    "version": "1.0.0",
+    "description": "Convex backend for PM-SponsorshipSearch",
+    "private": true,
+    "scripts": {
+        "dev": "convex dev",
+        "setup": "convex dev --until-success",
+        "codegen": "convex codegen",
+        "deploy": "convex deploy",
+        "test:http": "tsx test-http-routes.ts"
+    },
+    "dependencies": {
+        "@convex-dev/better-auth": "^0.9.6",
+        "@packages/shared": "*",
+        "convex": "^1.28.2"
+    },
+    "devDependencies": {
+        "dotenv": "^16.6.1",
+        "tsx": "^4.7.0",
+        "typescript": "^5.8.3"
+    }
+}
