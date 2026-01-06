@@ -1,14 +1,15 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { ProgressSteps, type ProgressStep } from "./ProgressSteps";
+import { type ProgressStep } from "./ProgressSteps";
+import { TimelineFlow } from "./TimelineFlow";
 import { TeamCard, type TeamRecommendation } from "./TeamCard";
 import { Button } from "@/components/ui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowLeft01Icon, Search01Icon, AiSearch02Icon, Link01Icon } from "@hugeicons/core-free-icons";
 import type { SearchFilters } from "@/app/page";
 
-interface SourceUrl {
+export interface SourceUrl {
   url: string;
   title?: string;
   domain?: string;
@@ -18,6 +19,7 @@ interface StreamingResultsProps {
   query: string;
   filters: SearchFilters;
   onReset: () => void;
+  onComplete?: (resultsCount: number) => void;
 }
 
 type StreamEvent =
@@ -38,7 +40,7 @@ const INITIAL_STEPS: ProgressStep[] = [
   { id: "generate", label: "Generating recommendations...", status: "pending" },
 ];
 
-export function StreamingResults({ query, filters, onReset }: StreamingResultsProps) {
+export function StreamingResults({ query, filters, onReset, onComplete }: StreamingResultsProps) {
   const [steps, setSteps] = useState<ProgressStep[]>(INITIAL_STEPS);
   const [teams, setTeams] = useState<TeamRecommendation[]>([]);
   const [isComplete, setIsComplete] = useState(false);
@@ -148,6 +150,8 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
         setIsComplete(true);
         setUsedAIDiscovery(event.usedAIDiscovery || false);
         setSteps((prev) => prev.map((s) => ({ ...s, status: "completed" })));
+        // Notify parent of completion
+        onComplete?.(event.totalResults);
         break;
       case "error":
         setError(event.message);
@@ -286,6 +290,7 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
     }
 
     setIsComplete(true);
+    onComplete?.(mockTeams.length);
   };
 
   useEffect(() => {
@@ -324,22 +329,15 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
         </div>
       </div>
 
-      {/* Progress Steps */}
+      {/* Timeline Progress - Linear Flow */}
       {!isComplete && (
-        <div className="p-4 rounded-lg bg-card border border-border">
-          <ProgressSteps steps={steps} />
-          
-          {/* Info messages during search */}
-          {infoMessages.length > 0 && (
-            <div className="mt-4 space-y-2">
-              {infoMessages.map((msg, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground animate-fade-in">
-                  <HugeiconsIcon icon={AiSearch02Icon} size={14} className="text-muted-foreground" />
-                  <span>{msg}</span>
-                </div>
-              ))}
-            </div>
-          )}
+        <div className="p-5 rounded-lg bg-card border border-border">
+          <TimelineFlow 
+            steps={steps} 
+            sources={sources}
+            infoMessages={infoMessages}
+            isDiscoveryMode={usedAIDiscovery || sources.length > 0}
+          />
         </div>
       )}
 
@@ -350,35 +348,27 @@ export function StreamingResults({ query, filters, onReset }: StreamingResultsPr
         </div>
       )}
 
-      {/* AI Discovery Banner */}
-      {isComplete && usedAIDiscovery && (
-        <div className="p-4 rounded-lg bg-muted/50 border border-border">
+      {/* AI Discovery Summary (shown after completion) */}
+      {isComplete && usedAIDiscovery && sources.length > 0 && (
+        <div className="p-4 rounded-lg bg-muted/30 border border-border">
           <div className="flex items-start gap-3">
-            <HugeiconsIcon icon={AiSearch02Icon} size={20} className="text-muted-foreground mt-0.5" />
-            <div>
-              <div className="text-sm font-medium">AI Discovery Mode</div>
-              <div className="text-xs text-muted-foreground mt-1">
-                Extended search was performed using AI to find additional teams beyond the database.
+            <HugeiconsIcon icon={AiSearch02Icon} size={18} className="text-muted-foreground mt-0.5" />
+            <div className="flex-1">
+              <div className="text-sm font-medium">AI Discovery Used</div>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {sources.map((source, i) => (
+                  <a
+                    key={i}
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-muted text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <HugeiconsIcon icon={Link01Icon} size={10} />
+                    <span>{source.domain || 'source'}</span>
+                  </a>
+                ))}
               </div>
-              
-              {/* Sources */}
-              {sources.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <span className="text-xs text-muted-foreground">Sources:</span>
-                  {sources.map((source, i) => (
-                    <a
-                      key={i}
-                      href={source.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors underline"
-                    >
-                      <HugeiconsIcon icon={Link01Icon} size={10} />
-                      <span>{source.domain || source.title || 'Source'}</span>
-                    </a>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </div>
