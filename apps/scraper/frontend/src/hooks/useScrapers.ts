@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { ScraperInfo, DataResponse } from '@/types';
 import { fetchScrapers, fetchScraperData, runScraper } from '@/lib/api';
 
@@ -6,6 +6,10 @@ export function useScrapers() {
   const [scrapers, setScrapers] = useState<ScraperInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // Use ref to track scrapers for polling check without causing effect re-runs
+  const scrapersRef = useRef<ScraperInfo[]>([]);
+  scrapersRef.current = scrapers;
 
   const refresh = useCallback(async () => {
     try {
@@ -19,16 +23,22 @@ export function useScrapers() {
     }
   }, []);
 
+  // Initial fetch - only runs once
   useEffect(() => {
     refresh();
-    // Poll every 2 seconds when any scraper is running
+  }, [refresh]);
+
+  // Polling interval - separate effect, only runs when a scraper is running
+  useEffect(() => {
     const interval = setInterval(() => {
-      if (scrapers.some(s => s.status === 'running')) {
+      // Use ref to check status without triggering re-renders
+      if (scrapersRef.current.some(s => s.status === 'running')) {
         refresh();
       }
-    }, 2000);
+    }, 3000); // Poll every 3 seconds when running
+    
     return () => clearInterval(interval);
-  }, [refresh, scrapers]);
+  }, [refresh]);
 
   const run = useCallback(async (id: string) => {
     try {
