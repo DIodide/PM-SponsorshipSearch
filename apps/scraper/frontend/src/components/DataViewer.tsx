@@ -49,7 +49,9 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
       editInputRef.current.focus();
       editInputRef.current.select();
     }
-  }, [editingCell]);
+    // Only trigger when the target cell (row or field) changes, 
+    // NOT when the value inside changes.
+  }, [editingCell?.rowIndex, editingCell?.field]);
 
   // Clear cleaned count after 3 seconds
   useEffect(() => {
