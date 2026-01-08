@@ -65,6 +65,7 @@ export function useScraperData(scraperId: string | null) {
     }
 
     setLoading(true);
+    
     try {
       const result = await fetchScraperData(scraperId);
       setData(result);

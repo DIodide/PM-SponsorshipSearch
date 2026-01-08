@@ -205,7 +205,9 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
     );
   };
 
-  if (loading) {
+  // Only show full-page loading if we have no data at all.
+  // Otherwise, keep showing the table while it refreshes in the background.
+  if (loading && !data) {
     return (
       <div className="rounded-xl border bg-card p-8">
         <div className="flex items-center justify-center gap-3 text-muted-foreground">
