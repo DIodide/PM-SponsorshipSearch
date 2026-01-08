@@ -8,6 +8,7 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import httpx
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -20,6 +21,10 @@ from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
 from scrapers import MLBMiLBScraper, NBAGLeagueScraper, NFLScraper, NHLAHLECHLScraper
+
+# Gemini API config
+GEMINI_API_KEY = os.environ.get("GOOGLE_GENERATIVE_AI_API_KEY", "")
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 
 # Configuration
@@ -83,6 +88,7 @@ app.add_middleware(
         "http://localhost:3000",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
+        "https://f6f844967574.ngrok-free.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -162,6 +168,18 @@ class DataResponse(BaseModel):
     teams: List[Dict[str, Any]]
     count: int
     last_updated: Optional[str]
+
+
+class UpdateTeamRequest(BaseModel):
+    index: int
+    field: str
+    value: str
+
+
+class CleanRegionsResponse(BaseModel):
+    success: bool
+    updated_count: int
+    message: str
 
 
 # Scraper instances
@@ -392,6 +410,180 @@ async def list_files():
         )
 
     return sorted(files, key=lambda x: x["modified"], reverse=True)
+
+
+@app.put("/api/scrapers/{scraper_id}/team")
+async def update_team(scraper_id: str, request: UpdateTeamRequest):
+    """Update a specific field of a team in the data file."""
+    if scraper_id not in SCRAPERS:
+        raise HTTPException(status_code=404, detail="Scraper not found")
+
+    state = app_state.scrapers.get(scraper_id, ScraperState())
+    json_path = state.last_json_path
+
+    if not json_path or not Path(json_path).exists():
+        raise HTTPException(
+            status_code=404, detail="No data file found. Run the scraper first."
+        )
+
+    # Load data
+    with open(json_path, "r") as f:
+        teams = json.load(f)
+
+    if request.index < 0 or request.index >= len(teams):
+        raise HTTPException(status_code=400, detail="Invalid team index")
+
+    # Update the field
+    if request.field not in teams[request.index]:
+        raise HTTPException(status_code=400, detail=f"Invalid field: {request.field}")
+
+    old_value = teams[request.index][request.field]
+    teams[request.index][request.field] = request.value
+
+    # Save back to file
+    with open(json_path, "w") as f:
+        json.dump(teams, f, indent=2)
+
+    return {
+        "success": True,
+        "old_value": old_value,
+        "new_value": request.value,
+    }
+
+
+async def clean_regions_with_gemini(
+    teams: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Use Gemini to clean and reconcile region names based on team names."""
+    if not GEMINI_API_KEY:
+        raise HTTPException(
+            status_code=500,
+            detail="GOOGLE_GENERATIVE_AI_API_KEY environment variable not set",
+        )
+
+    # Batch teams for efficiency (50 at a time)
+    BATCH_SIZE = 50
+    updated_teams = teams.copy()
+
+    for batch_start in range(0, len(teams), BATCH_SIZE):
+        batch_end = min(batch_start + BATCH_SIZE, len(teams))
+        batch = teams[batch_start:batch_end]
+
+        # Create prompt for this batch
+        team_list = []
+        for i, team in enumerate(batch):
+            team_list.append(
+                f'{i}. "{team["name"]}" (current region: "{team["region"]}")'
+            )
+
+        prompt = f"""You are a sports data expert. For each team below, verify and correct the "region" field.
+The region should be the city or geographic area where the team is based (e.g., "Boston", "Los Angeles", "San Francisco Bay Area").
+
+Teams to process:
+{chr(10).join(team_list)}
+
+Return a JSON array where each element is an object with:
+- "index": the team's index number
+- "corrected_region": the correct region name
+
+Only include teams where the region needs correction. If a team's region is already correct, exclude it from the response.
+
+Return ONLY the JSON array, no explanation or markdown formatting."""
+
+        # Call Gemini API
+        headers = {"Content-Type": "application/json"}
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": 0.1,
+                "maxOutputTokens": 2048,
+            },
+        }
+
+        try:
+            async with httpx.AsyncClient() as client:
+                response = await client.post(
+                    f"{GEMINI_API_URL}?key={GEMINI_API_KEY}",
+                    json=payload,
+                    headers=headers,
+                    timeout=60.0,
+                )
+                response.raise_for_status()
+
+                result = response.json()
+                text = result["candidates"][0]["content"]["parts"][0]["text"]
+
+                # Parse JSON from response (handle potential markdown code blocks)
+                text = text.strip()
+                if text.startswith("```"):
+                    text = text.split("```")[1]
+                    if text.startswith("json"):
+                        text = text[4:]
+                    text = text.strip()
+
+                corrections = json.loads(text)
+
+                # Apply corrections to the batch
+                for correction in corrections:
+                    idx = correction.get("index")
+                    new_region = correction.get("corrected_region")
+                    if idx is not None and new_region:
+                        actual_idx = batch_start + idx
+                        if 0 <= actual_idx < len(updated_teams):
+                            updated_teams[actual_idx]["region"] = new_region
+
+        except httpx.HTTPStatusError as e:
+            print(f"Gemini API error for batch {batch_start}: {e}")
+            continue
+        except json.JSONDecodeError as e:
+            print(f"Failed to parse Gemini response for batch {batch_start}: {e}")
+            continue
+        except Exception as e:
+            print(f"Unexpected error for batch {batch_start}: {e}")
+            continue
+
+    return updated_teams
+
+
+@app.post(
+    "/api/scrapers/{scraper_id}/clean-regions", response_model=CleanRegionsResponse
+)
+async def clean_regions(scraper_id: str):
+    """Clean and reconcile region names using AI."""
+    if scraper_id not in SCRAPERS:
+        raise HTTPException(status_code=404, detail="Scraper not found")
+
+    state = app_state.scrapers.get(scraper_id, ScraperState())
+    json_path = state.last_json_path
+
+    if not json_path or not Path(json_path).exists():
+        raise HTTPException(
+            status_code=404, detail="No data file found. Run the scraper first."
+        )
+
+    # Load data
+    with open(json_path, "r") as f:
+        original_teams = json.load(f)
+
+    # Clean regions with Gemini
+    cleaned_teams = await clean_regions_with_gemini(original_teams)
+
+    # Count updates
+    updated_count = sum(
+        1
+        for orig, cleaned in zip(original_teams, cleaned_teams)
+        if orig["region"] != cleaned["region"]
+    )
+
+    # Save back to file
+    with open(json_path, "w") as f:
+        json.dump(cleaned_teams, f, indent=2)
+
+    return CleanRegionsResponse(
+        success=True,
+        updated_count=updated_count,
+        message=f"Cleaned {updated_count} region(s) successfully",
+    )
 
 
 @app.get("/health")

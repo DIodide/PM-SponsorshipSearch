@@ -41,3 +41,34 @@ export function getDownloadUrl(scraperId: string, fileType: 'json' | 'xlsx'): st
   return `${API_BASE}/scrapers/${scraperId}/download/${fileType}`;
 }
 
+export async function updateTeam(
+  scraperId: string,
+  index: number,
+  field: string,
+  value: string
+): Promise<{ success: boolean; old_value: string; new_value: string }> {
+  const response = await fetch(`${API_BASE}/scrapers/${scraperId}/team`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ index, field, value }),
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to update team');
+  }
+  return response.json();
+}
+
+export async function cleanRegions(
+  scraperId: string
+): Promise<{ success: boolean; updated_count: number; message: string }> {
+  const response = await fetch(`${API_BASE}/scrapers/${scraperId}/clean-regions`, {
+    method: 'POST',
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to clean regions');
+  }
+  return response.json();
+}
+

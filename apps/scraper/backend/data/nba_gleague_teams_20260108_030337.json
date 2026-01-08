@@ -19,7 +19,7 @@
   },
   {
     "name": "Capital City Go-Go",
-    "region": "Capital City",
+    "region": "Washington, D.C.",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Capital City.",
     "official_url": "https://capitalcity.gleague.nba.com/",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Delaware Blue Coats",
-    "region": "Delaware",
+    "region": "Wilmington",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Delaware.",
     "official_url": "https://bluecoats.gleague.nba.com/",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Iowa Wolves",
-    "region": "Iowa",
+    "region": "Des Moines",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Iowa.",
     "official_url": "https://iowa.gleague.nba.com/",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Maine Celtics",
-    "region": "Maine",
+    "region": "Portland, ME",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Maine.",
     "official_url": "https://maine.gleague.nba.com/",
@@ -118,7 +118,7 @@
   },
   {
     "name": "Motor City Cruise",
-    "region": "Motor City",
+    "region": "Detroit",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Motor City.",
     "official_url": "https://detroit.gleague.nba.com/",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Osceola Magic",
-    "region": "Osceola",
+    "region": "Kissimmee",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Osceola.",
     "official_url": "https://osceola.gleague.nba.com/",
@@ -154,7 +154,7 @@
   },
   {
     "name": "Raptors 905",
-    "region": "Raptors",
+    "region": "Mississauga",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Raptors.",
     "official_url": "https://raptors905.gleague.nba.com/",
@@ -163,7 +163,7 @@
   },
   {
     "name": "Rio Grande Valley Vipers",
-    "region": "Rio Grande Valley",
+    "region": "Edinburg",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Rio Grande Valley.",
     "official_url": "https://riograndevalley.gleague.nba.com/",
@@ -172,7 +172,7 @@
   },
   {
     "name": "Rip City Remix",
-    "region": "Rip City",
+    "region": "Portland, OR",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Rip City.",
     "official_url": "https://ripcity.gleague.nba.com/",
@@ -217,7 +217,7 @@
   },
   {
     "name": "South Bay Lakers",
-    "region": "South Bay",
+    "region": "El Segundo",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around South Bay.",
     "official_url": "https://southbay.gleague.nba.com/",
@@ -226,7 +226,7 @@
   },
   {
     "name": "Stats",
-    "region": "Stats",
+    "region": "Atlanta",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Stats.",
     "official_url": "https://stats.gleague.nba.com/",
@@ -244,7 +244,7 @@
   },
   {
     "name": "Texas Legends",
-    "region": "Texas",
+    "region": "Frisco",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Texas.",
     "official_url": "https://texas.gleague.nba.com/",
@@ -253,9 +253,9 @@
   },
   {
     "name": "Valley Suns",
-    "region": "Valley",
+    "region": "Phoenix",
     "league": "NBA G League",
-    "target_demographic": "Local basketball fans and player-development followers in and around Valley.",
+    "target_demographic": "Local basketball fans and player-development followers in and around P.",
     "official_url": "https://valley.gleague.nba.com/",
     "category": "G League",
     "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709934/primary/L/logo.svg"
@@ -271,7 +271,7 @@
   },
   {
     "name": "Windy City Bulls",
-    "region": "Windy",
+    "region": "White Plains",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Windy.",
     "official_url": "https://windycity.gleague.nba.com/",
@@ -280,7 +280,7 @@
   },
   {
     "name": "Wisconsin Herd",
-    "region": "Wisconsin",
+    "region": "Oshkosh",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Wisconsin.",
     "official_url": "https://wisconsin.gleague.nba.com/",
@@ -370,7 +370,7 @@
   },
   {
     "name": "Golden State Warriors",
-    "region": "Golden State",
+    "region": "San Francisco Bay Area",
     "league": "NBA",
     "target_demographic": "Basketball fans in and around Golden State, plus the broader NBA audience.",
     "official_url": "https://www.nba.com/warriors/",
@@ -388,7 +388,7 @@
   },
   {
     "name": "Indiana Pacers",
-    "region": "Indiana",
+    "region": "Indianapolis",
     "league": "NBA",
     "target_demographic": "Basketball fans in and around Indiana, plus the broader NBA audience.",
     "official_url": "https://www.nba.com/pacers/",
@@ -442,7 +442,7 @@
   },
   {
     "name": "Minnesota Timberwolves",
-    "region": "Minnesota",
+    "region": "Minneapolis",
     "league": "NBA",
     "target_demographic": "Basketball fans in and around Minnesota, plus the broader NBA audience.",
     "official_url": "https://www.nba.com/timberwolves/",

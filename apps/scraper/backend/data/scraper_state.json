@@ -38,15 +38,15 @@
     },
     "nhl_ahl_echl": {
       "status": "success",
-      "last_run": "2026-01-08T03:03:37.681825",
-      "last_success": "2026-01-08T03:03:37.682106",
+      "last_run": "2026-01-08T03:11:34.256408",
+      "last_success": "2026-01-08T03:11:34.256668",
       "last_error": null,
-      "last_duration_ms": 1973,
-      "total_runs": 3,
-      "successful_runs": 3,
+      "last_duration_ms": 1595,
+      "total_runs": 4,
+      "successful_runs": 4,
       "last_teams_count": 97,
-      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260108_030337.json",
-      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260108_030337.xlsx"
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260108_031134.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260108_031134.xlsx"
     }
   }
 }

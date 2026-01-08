@@ -113,6 +113,7 @@ function App() {
                   data={scraperData}
                   loading={dataLoading}
                   onClose={() => setSelectedScraperId(null)}
+                  onDataChange={refreshData}
                 />
               </section>
             )}

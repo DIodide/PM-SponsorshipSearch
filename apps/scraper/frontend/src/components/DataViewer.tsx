@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { cn, formatRelativeTime } from '@/lib/utils';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
@@ -7,20 +7,57 @@ import {
   SortingAZ01Icon,
   Link01Icon,
   Cancel01Icon,
+  SparklesIcon,
+  Loading03Icon,
+  Tick01Icon,
 } from '@hugeicons/core-free-icons';
 import type { DataResponse, TeamData } from '@/types';
+import { updateTeam, cleanRegions } from '@/lib/api';
 
 interface DataViewerProps {
   data: DataResponse | null;
   loading: boolean;
   onClose: () => void;
+  onDataChange?: () => void; // Callback to refresh data after edits
 }
 
-export function DataViewer({ data, loading, onClose }: DataViewerProps) {
+// Editable fields configuration
+const EDITABLE_FIELDS: (keyof TeamData)[] = ['name', 'region', 'league', 'category', 'target_demographic'];
+
+interface EditingCell {
+  rowIndex: number;
+  field: keyof TeamData;
+  value: string;
+}
+
+export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerProps) {
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sortField, setSortField] = useState<keyof TeamData>('name');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
+  
+  // Editing state
+  const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
+  const [isSaving, setIsSaving] = useState(false);
+  const [isCleaningRegions, setIsCleaningRegions] = useState(false);
+  const [cleanedCount, setCleanedCount] = useState<number | null>(null);
+  const editInputRef = useRef<HTMLInputElement>(null);
+
+  // Focus input when editing starts
+  useEffect(() => {
+    if (editingCell && editInputRef.current) {
+      editInputRef.current.focus();
+      editInputRef.current.select();
+    }
+  }, [editingCell]);
+
+  // Clear cleaned count after 3 seconds
+  useEffect(() => {
+    if (cleanedCount !== null) {
+      const timer = setTimeout(() => setCleanedCount(null), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [cleanedCount]);
 
   const categories = useMemo(() => {
     if (!data?.teams) return [];
@@ -28,10 +65,11 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
     return Array.from(cats).sort();
   }, [data?.teams]);
 
-  const filteredTeams = useMemo(() => {
+  // Track original indices for filtered data
+  const filteredTeamsWithIndex = useMemo(() => {
     if (!data?.teams) return [];
     
-    let teams = [...data.teams];
+    let teams = data.teams.map((team, originalIndex) => ({ ...team, _originalIndex: originalIndex }));
     
     // Category filter
     if (categoryFilter !== 'all') {
@@ -66,6 +104,103 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
       setSortField(field);
       setSortDir('asc');
     }
+  };
+
+  // Double-click to edit
+  const handleCellDoubleClick = useCallback((originalIndex: number, field: keyof TeamData, currentValue: string) => {
+    if (!EDITABLE_FIELDS.includes(field)) return;
+    setEditingCell({ rowIndex: originalIndex, field, value: currentValue });
+  }, []);
+
+  // Save edit
+  const handleSaveEdit = useCallback(async () => {
+    if (!editingCell || !data?.scraper_id) return;
+    
+    setIsSaving(true);
+    try {
+      await updateTeam(data.scraper_id, editingCell.rowIndex, editingCell.field, editingCell.value);
+      setEditingCell(null);
+      onDataChange?.(); // Refresh data
+    } catch (err) {
+      console.error('Failed to save:', err);
+      alert(err instanceof Error ? err.message : 'Failed to save changes');
+    } finally {
+      setIsSaving(false);
+    }
+  }, [editingCell, data?.scraper_id, onDataChange]);
+
+  // Cancel edit
+  const handleCancelEdit = useCallback(() => {
+    setEditingCell(null);
+  }, []);
+
+  // Handle key press in edit input
+  const handleEditKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleSaveEdit();
+    } else if (e.key === 'Escape') {
+      handleCancelEdit();
+    }
+  }, [handleSaveEdit, handleCancelEdit]);
+
+  // Clean regions with AI
+  const handleCleanRegions = useCallback(async () => {
+    if (!data?.scraper_id) return;
+    
+    if (!confirm('This will use AI to clean and reconcile all region names based on team names. Continue?')) {
+      return;
+    }
+    
+    setIsCleaningRegions(true);
+    setCleanedCount(null);
+    try {
+      const result = await cleanRegions(data.scraper_id);
+      setCleanedCount(result.updated_count);
+      onDataChange?.(); // Refresh data
+    } catch (err) {
+      console.error('Failed to clean regions:', err);
+      alert(err instanceof Error ? err.message : 'Failed to clean regions');
+    } finally {
+      setIsCleaningRegions(false);
+    }
+  }, [data?.scraper_id, onDataChange]);
+
+  // Render editable cell
+  const renderEditableCell = (
+    originalIndex: number,
+    field: keyof TeamData,
+    value: string,
+    className?: string
+  ) => {
+    const isEditing = editingCell?.rowIndex === originalIndex && editingCell?.field === field;
+    
+    if (isEditing) {
+      return (
+        <input
+          ref={editInputRef}
+          type="text"
+          value={editingCell.value}
+          onChange={(e) => setEditingCell({ ...editingCell, value: e.target.value })}
+          onKeyDown={handleEditKeyDown}
+          onBlur={handleSaveEdit}
+          disabled={isSaving}
+          className={cn(
+            "w-full px-2 py-1 -my-1 rounded border border-primary bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30",
+            isSaving && "opacity-50"
+          )}
+        />
+      );
+    }
+    
+    return (
+      <span
+        className={cn("cursor-pointer hover:bg-muted/50 px-1 -mx-1 rounded transition-colors", className)}
+        onDoubleClick={() => handleCellDoubleClick(originalIndex, field, value)}
+        title="Double-click to edit"
+      >
+        {value}
+      </span>
+    );
   };
 
   if (loading) {
@@ -149,7 +284,8 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
 
         {/* Results Count */}
         <div className="mt-3 text-sm text-muted-foreground">
-          Showing {filteredTeams.length} of {data.count} teams
+          Showing {filteredTeamsWithIndex.length} of {data.count} teams
+          <span className="ml-2 text-xs opacity-70">(double-click cells to edit)</span>
         </div>
       </div>
 
@@ -170,16 +306,38 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
                   )}
                 </span>
               </th>
-              <th 
-                className="cursor-pointer hover:bg-muted/70"
-                onClick={() => handleSort('region')}
-              >
-                <span className="inline-flex items-center gap-1">
-                  Region
-                  {sortField === 'region' && (
-                    <HugeiconsIcon icon={SortingAZ01Icon} size={12} className={sortDir === 'desc' ? 'rotate-180' : ''} />
-                  )}
-                </span>
+              <th className="!pr-2">
+                <div className="flex items-center gap-2">
+                  <span 
+                    className="inline-flex items-center gap-1 cursor-pointer hover:text-foreground"
+                    onClick={() => handleSort('region')}
+                  >
+                    Region
+                    {sortField === 'region' && (
+                      <HugeiconsIcon icon={SortingAZ01Icon} size={12} className={sortDir === 'desc' ? 'rotate-180' : ''} />
+                    )}
+                  </span>
+                  <button
+                    onClick={handleCleanRegions}
+                    disabled={isCleaningRegions}
+                    className={cn(
+                      "p-1 rounded hover:bg-muted transition-colors",
+                      isCleaningRegions && "opacity-50 cursor-not-allowed"
+                    )}
+                    title="Clean regions with AI"
+                  >
+                    {isCleaningRegions ? (
+                      <HugeiconsIcon icon={Loading03Icon} size={14} className="animate-spin" />
+                    ) : cleanedCount !== null ? (
+                      <span className="inline-flex items-center gap-1 text-xs text-green-600">
+                        <HugeiconsIcon icon={Tick01Icon} size={12} />
+                        {cleanedCount}
+                      </span>
+                    ) : (
+                      <HugeiconsIcon icon={SparklesIcon} size={14} className="text-muted-foreground hover:text-foreground" />
+                    )}
+                  </button>
+                </div>
               </th>
               <th 
                 className="cursor-pointer hover:bg-muted/70"
@@ -208,8 +366,8 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
             </tr>
           </thead>
           <tbody>
-            {filteredTeams.map((team, index) => (
-              <tr key={`${team.name}-${index}`}>
+            {filteredTeamsWithIndex.map((team) => (
+              <tr key={`${team.name}-${team._originalIndex}`}>
                 <td className="w-12">
                   {team.logo_url ? (
                     <img 
@@ -228,21 +386,44 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
                     </div>
                   )}
                 </td>
-                <td className="font-medium">{team.name}</td>
-                <td>{team.region}</td>
-                <td className="text-muted-foreground">{team.league}</td>
+                <td className="font-medium">
+                  {renderEditableCell(team._originalIndex, 'name', team.name)}
+                </td>
                 <td>
-                  <span className={cn(
-                    'inline-flex px-2 py-0.5 rounded text-xs font-medium',
-                    team.category === 'MLB' || team.category === 'NBA' || team.category === 'NFL' || team.category === 'Major'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'bg-gray-100 text-gray-700'
-                  )}>
-                    {team.category}
+                  {renderEditableCell(team._originalIndex, 'region', team.region)}
+                </td>
+                <td className="text-muted-foreground">
+                  {renderEditableCell(team._originalIndex, 'league', team.league)}
+                </td>
+                <td>
+                  <span 
+                    className={cn(
+                      'inline-flex px-2 py-0.5 rounded text-xs font-medium cursor-pointer hover:opacity-80',
+                      team.category === 'MLB' || team.category === 'NBA' || team.category === 'NFL' || team.category === 'Major'
+                        ? 'bg-blue-100 text-blue-700'
+                        : 'bg-gray-100 text-gray-700'
+                    )}
+                    onDoubleClick={() => handleCellDoubleClick(team._originalIndex, 'category', team.category)}
+                    title="Double-click to edit"
+                  >
+                    {editingCell?.rowIndex === team._originalIndex && editingCell?.field === 'category' ? (
+                      <input
+                        ref={editInputRef}
+                        type="text"
+                        value={editingCell.value}
+                        onChange={(e) => setEditingCell({ ...editingCell, value: e.target.value })}
+                        onKeyDown={handleEditKeyDown}
+                        onBlur={handleSaveEdit}
+                        disabled={isSaving}
+                        className="w-20 px-1 bg-transparent border-b border-current focus:outline-none"
+                      />
+                    ) : (
+                      team.category
+                    )}
                   </span>
                 </td>
                 <td className="text-sm text-muted-foreground max-w-xs truncate" title={team.target_demographic}>
-                  {team.target_demographic}
+                  {renderEditableCell(team._originalIndex, 'target_demographic', team.target_demographic)}
                 </td>
                 <td>
                   <a
