@@ -1,0 +1,52 @@
+{
+  "scrapers": {
+    "mlb_milb": {
+      "status": "success",
+      "last_run": "2026-01-08T03:03:37.655109",
+      "last_success": "2026-01-08T03:03:37.655401",
+      "last_error": null,
+      "last_duration_ms": 1713,
+      "total_runs": 6,
+      "successful_runs": 4,
+      "last_teams_count": 235,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260108_030337.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260108_030337.xlsx"
+    },
+    "nba_gleague": {
+      "status": "success",
+      "last_run": "2026-01-08T03:03:37.663898",
+      "last_success": "2026-01-08T03:03:37.664291",
+      "last_error": null,
+      "last_duration_ms": 1391,
+      "total_runs": 4,
+      "successful_runs": 4,
+      "last_teams_count": 62,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260108_030337.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260108_030337.xlsx"
+    },
+    "nfl": {
+      "status": "success",
+      "last_run": "2026-01-08T03:03:37.672725",
+      "last_success": "2026-01-08T03:03:37.673015",
+      "last_error": null,
+      "last_duration_ms": 341,
+      "total_runs": 5,
+      "successful_runs": 5,
+      "last_teams_count": 32,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nfl_teams_20260108_030337.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nfl_teams_20260108_030337.xlsx"
+    },
+    "nhl_ahl_echl": {
+      "status": "success",
+      "last_run": "2026-01-08T03:03:37.681825",
+      "last_success": "2026-01-08T03:03:37.682106",
+      "last_error": null,
+      "last_duration_ms": 1973,
+      "total_runs": 3,
+      "successful_runs": 3,
+      "last_teams_count": 97,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260108_030337.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260108_030337.xlsx"
+    }
+  }
+}

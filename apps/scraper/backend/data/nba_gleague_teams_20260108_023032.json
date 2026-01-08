@@ -1,0 +1,498 @@
+[
+  {
+    "name": "Austin Spurs",
+    "region": "Austin",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Austin.",
+    "official_url": "https://austin.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Birmingham Squadron",
+    "region": "Birmingham",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Birmingham.",
+    "official_url": "https://birmingham.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Capital City Go-Go",
+    "region": "Capital City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Capital City.",
+    "official_url": "https://capitalcity.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Cleveland Charge",
+    "region": "Cleveland",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Cleveland.",
+    "official_url": "https://cleveland.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "College Park Skyhawks",
+    "region": "College Park",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around College Park.",
+    "official_url": "https://cpskyhawks.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Delaware Blue Coats",
+    "region": "Delaware",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Delaware.",
+    "official_url": "https://bluecoats.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Grand Rapids Gold",
+    "region": "Grand Rapids",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Grand Rapids.",
+    "official_url": "https://grandrapids.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Greensboro Swarm",
+    "region": "Greensboro",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Greensboro.",
+    "official_url": "https://greensboro.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Iowa Wolves",
+    "region": "Iowa",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Iowa.",
+    "official_url": "https://iowa.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Long Island Nets",
+    "region": "Long Island",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Long Island.",
+    "official_url": "https://longisland.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Maine Celtics",
+    "region": "Maine",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Maine.",
+    "official_url": "https://maine.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Memphis Hustle",
+    "region": "Memphis",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Memphis.",
+    "official_url": "https://memphis.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Mexico City Capitanes",
+    "region": "Mexico City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Mexico City.",
+    "official_url": "https://capitanes.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Motor City Cruise",
+    "region": "Motor City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Motor City.",
+    "official_url": "https://detroit.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Noblesville Boom",
+    "region": "Noblesville",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Noblesville.",
+    "official_url": "https://noblesville.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Oklahoma City Blue",
+    "region": "Oklahoma City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Oklahoma City.",
+    "official_url": "https://oklahomacity.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Osceola Magic",
+    "region": "Osceola",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Osceola.",
+    "official_url": "https://osceola.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Raptors 905",
+    "region": "Raptors",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Raptors.",
+    "official_url": "https://raptors905.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Rio Grande Valley Vipers",
+    "region": "Rio Grande Valley",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Rio Grande Valley.",
+    "official_url": "https://riograndevalley.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Rip City Remix",
+    "region": "Rip City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Rip City.",
+    "official_url": "https://ripcity.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Salt Lake City Stars",
+    "region": "Salt Lake City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Salt Lake City.",
+    "official_url": "https://saltlakecity.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "San Diego Clippers",
+    "region": "San Diego",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around San Diego.",
+    "official_url": "https://sandiego.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Santa Cruz Warriors",
+    "region": "Santa Cruz",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Santa Cruz.",
+    "official_url": "https://santacruz.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Sioux Falls Skyforce",
+    "region": "Sioux Falls",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Sioux Falls.",
+    "official_url": "https://siouxfalls.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "South Bay Lakers",
+    "region": "South Bay",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around South Bay.",
+    "official_url": "https://southbay.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Stats",
+    "region": "Stats",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Stats.",
+    "official_url": "https://stats.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Stockton Kings",
+    "region": "Stockton",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Stockton.",
+    "official_url": "https://stockton.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Texas Legends",
+    "region": "Texas",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Texas.",
+    "official_url": "https://texas.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Valley Suns",
+    "region": "Valley",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Valley.",
+    "official_url": "https://valley.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Westchester Knicks",
+    "region": "Westchester",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Westchester.",
+    "official_url": "https://westchester.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Windy City Bulls",
+    "region": "Windy",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Windy.",
+    "official_url": "https://windycity.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Wisconsin Herd",
+    "region": "Wisconsin",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Wisconsin.",
+    "official_url": "https://wisconsin.gleague.nba.com/",
+    "category": "G League"
+  },
+  {
+    "name": "Atlanta Hawks",
+    "region": "Atlanta",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Atlanta, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/hawks/",
+    "category": "NBA"
+  },
+  {
+    "name": "Boston Celtics",
+    "region": "Boston",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Boston, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/celtics/",
+    "category": "NBA"
+  },
+  {
+    "name": "Brooklyn Nets",
+    "region": "Brooklyn",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Brooklyn, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/nets/",
+    "category": "NBA"
+  },
+  {
+    "name": "Charlotte Hornets",
+    "region": "Charlotte",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Charlotte, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/hornets/",
+    "category": "NBA"
+  },
+  {
+    "name": "Chicago Bulls",
+    "region": "Chicago",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Chicago, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/bulls/",
+    "category": "NBA"
+  },
+  {
+    "name": "Cleveland Cavaliers",
+    "region": "Cleveland",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Cleveland, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/cavaliers/",
+    "category": "NBA"
+  },
+  {
+    "name": "Dallas Mavericks",
+    "region": "Dallas",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Dallas, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/mavericks/",
+    "category": "NBA"
+  },
+  {
+    "name": "Denver Nuggets",
+    "region": "Denver",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Denver, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/nuggets/",
+    "category": "NBA"
+  },
+  {
+    "name": "Detroit Pistons",
+    "region": "Detroit",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Detroit, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pistons/",
+    "category": "NBA"
+  },
+  {
+    "name": "Golden State Warriors",
+    "region": "Golden State",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Golden State, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/warriors/",
+    "category": "NBA"
+  },
+  {
+    "name": "Houston Rockets",
+    "region": "Houston",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Houston, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/rockets/",
+    "category": "NBA"
+  },
+  {
+    "name": "Indiana Pacers",
+    "region": "Indiana",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Indiana, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pacers/",
+    "category": "NBA"
+  },
+  {
+    "name": "LA Clippers",
+    "region": "Los Angeles",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Los Angeles, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/clippers/",
+    "category": "NBA"
+  },
+  {
+    "name": "Los Angeles Lakers",
+    "region": "Los Angeles",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Los Angeles, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/lakers/",
+    "category": "NBA"
+  },
+  {
+    "name": "Memphis Grizzlies",
+    "region": "Memphis",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Memphis, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/grizzlies/",
+    "category": "NBA"
+  },
+  {
+    "name": "Miami Heat",
+    "region": "Miami",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Miami, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/heat/",
+    "category": "NBA"
+  },
+  {
+    "name": "Milwaukee Bucks",
+    "region": "Milwaukee",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Milwaukee, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/bucks/",
+    "category": "NBA"
+  },
+  {
+    "name": "Minnesota Timberwolves",
+    "region": "Minnesota",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Minnesota, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/timberwolves/",
+    "category": "NBA"
+  },
+  {
+    "name": "New Orleans Pelicans",
+    "region": "New Orleans",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around New Orleans, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pelicans/",
+    "category": "NBA"
+  },
+  {
+    "name": "New York Knicks",
+    "region": "New York",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around New York, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/knicks/",
+    "category": "NBA"
+  },
+  {
+    "name": "Oklahoma City Thunder",
+    "region": "Oklahoma City",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Oklahoma City, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/thunder/",
+    "category": "NBA"
+  },
+  {
+    "name": "Orlando Magic",
+    "region": "Orlando",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Orlando, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/magic/",
+    "category": "NBA"
+  },
+  {
+    "name": "Philadelphia 76ers",
+    "region": "Philadelphia",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Philadelphia, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/sixers/",
+    "category": "NBA"
+  },
+  {
+    "name": "Phoenix Suns",
+    "region": "Phoenix",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Phoenix, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/suns/",
+    "category": "NBA"
+  },
+  {
+    "name": "Portland Trail Blazers",
+    "region": "Portland",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Portland, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/blazers/",
+    "category": "NBA"
+  },
+  {
+    "name": "Sacramento Kings",
+    "region": "Sacramento",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Sacramento, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/kings/",
+    "category": "NBA"
+  },
+  {
+    "name": "San Antonio Spurs",
+    "region": "San Antonio",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around San Antonio, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/spurs/",
+    "category": "NBA"
+  },
+  {
+    "name": "Toronto Raptors",
+    "region": "Toronto",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Toronto, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/raptors/",
+    "category": "NBA"
+  },
+  {
+    "name": "Utah Jazz",
+    "region": "Utah",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Utah, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/jazz/",
+    "category": "NBA"
+  },
+  {
+    "name": "Washington Wizards",
+    "region": "Washington",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Washington, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/wizards/",
+    "category": "NBA"
+  }
+]

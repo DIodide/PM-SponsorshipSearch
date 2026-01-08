@@ -1,0 +1,258 @@
+[
+  {
+    "name": "Arizona Cardinals",
+    "region": "Arizona",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Arizona, plus the broader national NFL audience.",
+    "official_url": "https://www.azcardinals.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Atlanta Falcons",
+    "region": "Atlanta",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Atlanta, plus the broader national NFL audience.",
+    "official_url": "https://www.atlantafalcons.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Baltimore Ravens",
+    "region": "Baltimore",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Baltimore, plus the broader national NFL audience.",
+    "official_url": "https://www.baltimoreravens.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Buffalo Bills",
+    "region": "Buffalo",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Buffalo, plus the broader national NFL audience.",
+    "official_url": "https://www.buffalobills.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Carolina Panthers",
+    "region": "Carolina",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Carolina, plus the broader national NFL audience.",
+    "official_url": "https://www.panthers.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Chicago Bears",
+    "region": "Chicago",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Chicago, plus the broader national NFL audience.",
+    "official_url": "https://www.chicagobears.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Cincinnati Bengals",
+    "region": "Cincinnati",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Cincinnati, plus the broader national NFL audience.",
+    "official_url": "https://www.bengals.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Cleveland Browns",
+    "region": "Cleveland",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Cleveland, plus the broader national NFL audience.",
+    "official_url": "https://www.clevelandbrowns.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Dallas Cowboys",
+    "region": "Dallas",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Dallas, plus the broader national NFL audience.",
+    "official_url": "https://www.dallascowboys.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Denver Broncos",
+    "region": "Denver",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Denver, plus the broader national NFL audience.",
+    "official_url": "https://www.denverbroncos.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Detroit Lions",
+    "region": "Detroit",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Detroit, plus the broader national NFL audience.",
+    "official_url": "https://www.detroitlions.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Green Bay Packers",
+    "region": "Green Bay",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Green Bay, plus the broader national NFL audience.",
+    "official_url": "https://www.packers.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Houston Texans",
+    "region": "Houston",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Houston, plus the broader national NFL audience.",
+    "official_url": "https://www.houstontexans.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Indianapolis Colts",
+    "region": "Indianapolis",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Indianapolis, plus the broader national NFL audience.",
+    "official_url": "https://www.colts.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Jacksonville Jaguars",
+    "region": "Jacksonville",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Jacksonville, plus the broader national NFL audience.",
+    "official_url": "https://www.jaguars.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Kansas City Chiefs",
+    "region": "Kansas City",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Kansas City, plus the broader national NFL audience.",
+    "official_url": "https://www.chiefs.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Las Vegas Raiders",
+    "region": "Las Vegas",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Las Vegas, plus the broader national NFL audience.",
+    "official_url": "https://www.raiders.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Los Angeles Chargers",
+    "region": "Los Angeles",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Los Angeles, plus the broader national NFL audience.",
+    "official_url": "https://www.chargers.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Los Angeles Rams",
+    "region": "Los Angeles",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Los Angeles, plus the broader national NFL audience.",
+    "official_url": "https://www.therams.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Miami Dolphins",
+    "region": "Miami",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Miami, plus the broader national NFL audience.",
+    "official_url": "https://www.miamidolphins.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Minnesota Vikings",
+    "region": "Minnesota",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Minnesota, plus the broader national NFL audience.",
+    "official_url": "https://www.vikings.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "New England Patriots",
+    "region": "New England",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New England, plus the broader national NFL audience.",
+    "official_url": "https://www.patriots.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "New Orleans Saints",
+    "region": "New Orleans",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New Orleans, plus the broader national NFL audience.",
+    "official_url": "https://www.neworleanssaints.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "New York Giants",
+    "region": "New York",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New York, plus the broader national NFL audience.",
+    "official_url": "https://www.giants.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "New York Jets",
+    "region": "New York",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New York, plus the broader national NFL audience.",
+    "official_url": "https://www.newyorkjets.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Philadelphia Eagles",
+    "region": "Philadelphia",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Philadelphia, plus the broader national NFL audience.",
+    "official_url": "https://www.philadelphiaeagles.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Pittsburgh Steelers",
+    "region": "Pittsburgh",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Pittsburgh, plus the broader national NFL audience.",
+    "official_url": "https://www.steelers.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "San Francisco 49ers",
+    "region": "San Francisco",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around San Francisco, plus the broader national NFL audience.",
+    "official_url": "https://www.49ers.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Seattle Seahawks",
+    "region": "Seattle",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Seattle, plus the broader national NFL audience.",
+    "official_url": "https://www.seahawks.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Tampa Bay Buccaneers",
+    "region": "Tampa Bay",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Tampa Bay, plus the broader national NFL audience.",
+    "official_url": "https://www.buccaneers.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Tennessee Titans",
+    "region": "Tennessee",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Tennessee, plus the broader national NFL audience.",
+    "official_url": "https://www.tennesseetitans.com/",
+    "category": "NFL"
+  },
+  {
+    "name": "Washington Commanders",
+    "region": "Washington",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Washington, plus the broader national NFL audience.",
+    "official_url": "https://www.commanders.com/",
+    "category": "NFL"
+  }
+]
