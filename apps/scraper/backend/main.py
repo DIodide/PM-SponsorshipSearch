@@ -19,7 +19,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
 
-from scrapers import MLBMiLBScraper, NBAGLeagueScraper
+from scrapers import MLBMiLBScraper, NBAGLeagueScraper, NFLScraper, NHLAHLECHLScraper
 
 
 # Configuration
@@ -31,6 +31,8 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 class ScraperType(str, Enum):
     MLB_MILB = "mlb_milb"
     NBA_GLEAGUE = "nba_gleague"
+    NFL = "nfl"
+    NHL_AHL_ECHL = "nhl_ahl_echl"
 
 
 class TaskStatus(str, Enum):
@@ -54,10 +56,10 @@ class ScraperState:
     last_xlsx_path: Optional[str] = None
 
 
-@dataclass 
+@dataclass
 class AppState:
     scrapers: Dict[str, ScraperState] = field(default_factory=dict)
-    
+
     def __post_init__(self):
         # Initialize all scraper states
         for scraper_type in ScraperType:
@@ -75,7 +77,13 @@ app = FastAPI(
 # CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "http://localhost:3000",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:5174",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -113,11 +121,7 @@ def load_state() -> AppState:
 
 def save_state():
     """Persist state to file."""
-    data = {
-        "scrapers": {
-            key: asdict(val) for key, val in app_state.scrapers.items()
-        }
-    }
+    data = {"scrapers": {key: asdict(val) for key, val in app_state.scrapers.items()}}
     with open(STATE_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -164,6 +168,8 @@ class DataResponse(BaseModel):
 SCRAPERS = {
     ScraperType.MLB_MILB.value: MLBMiLBScraper(output_dir=DATA_DIR),
     ScraperType.NBA_GLEAGUE.value: NBAGLeagueScraper(output_dir=DATA_DIR),
+    ScraperType.NFL.value: NFLScraper(output_dir=DATA_DIR),
+    ScraperType.NHL_AHL_ECHL.value: NHLAHLECHLScraper(output_dir=DATA_DIR),
 }
 
 SCRAPER_INFO = {
@@ -177,26 +183,36 @@ SCRAPER_INFO = {
         "description": "Scrapes team data from NBA.com and G League official directories.",
         "source_url": "https://www.nba.com/teams",
     },
+    ScraperType.NFL.value: {
+        "name": "NFL Teams",
+        "description": "Scrapes team data from NFL.com official directory (32 NFL teams).",
+        "source_url": "https://www.nfl.com/teams/",
+    },
+    ScraperType.NHL_AHL_ECHL.value: {
+        "name": "NHL, AHL & ECHL Teams",
+        "description": "Scrapes team data from NHL.com, TheAHL.com, and ECHL.com official directories.",
+        "source_url": "https://www.nhl.com/info/teams/",
+    },
 }
 
 
 def run_scraper_sync(scraper_id: str):
     """Run a scraper synchronously (called in background)."""
     global app_state
-    
+
     scraper = SCRAPERS.get(scraper_id)
     if not scraper:
         return
-    
+
     state = app_state.scrapers.get(scraper_id, ScraperState())
     state.status = TaskStatus.RUNNING
     state.last_run = datetime.now().isoformat()
     state.total_runs += 1
     save_state()
-    
+
     try:
         result = scraper.run()
-        
+
         if result.success:
             state.status = TaskStatus.SUCCESS
             state.last_success = result.timestamp
@@ -208,13 +224,13 @@ def run_scraper_sync(scraper_id: str):
         else:
             state.status = TaskStatus.FAILED
             state.last_error = result.error
-        
+
         state.last_duration_ms = result.duration_ms
-        
+
     except Exception as e:
         state.status = TaskStatus.FAILED
         state.last_error = str(e)
-    
+
     app_state.scrapers[scraper_id] = state
     save_state()
 
@@ -225,20 +241,22 @@ async def list_scrapers():
     result = []
     for scraper_id, info in SCRAPER_INFO.items():
         state = app_state.scrapers.get(scraper_id, ScraperState())
-        result.append(ScraperInfo(
-            id=scraper_id,
-            name=info["name"],
-            description=info["description"],
-            source_url=info["source_url"],
-            status=state.status.value,
-            last_run=state.last_run,
-            last_success=state.last_success,
-            last_error=state.last_error,
-            last_duration_ms=state.last_duration_ms,
-            total_runs=state.total_runs,
-            successful_runs=state.successful_runs,
-            last_teams_count=state.last_teams_count,
-        ))
+        result.append(
+            ScraperInfo(
+                id=scraper_id,
+                name=info["name"],
+                description=info["description"],
+                source_url=info["source_url"],
+                status=state.status.value,
+                last_run=state.last_run,
+                last_success=state.last_success,
+                last_error=state.last_error,
+                last_duration_ms=state.last_duration_ms,
+                total_runs=state.total_runs,
+                successful_runs=state.successful_runs,
+                last_teams_count=state.last_teams_count,
+            )
+        )
     return result
 
 
@@ -247,10 +265,10 @@ async def get_scraper(scraper_id: str):
     """Get status of a specific scraper."""
     if scraper_id not in SCRAPER_INFO:
         raise HTTPException(status_code=404, detail="Scraper not found")
-    
+
     info = SCRAPER_INFO[scraper_id]
     state = app_state.scrapers.get(scraper_id, ScraperState())
-    
+
     return ScraperInfo(
         id=scraper_id,
         name=info["name"],
@@ -272,14 +290,14 @@ async def run_scraper(scraper_id: str, background_tasks: BackgroundTasks):
     """Trigger a scraper to run."""
     if scraper_id not in SCRAPERS:
         raise HTTPException(status_code=404, detail="Scraper not found")
-    
+
     state = app_state.scrapers.get(scraper_id, ScraperState())
     if state.status == TaskStatus.RUNNING:
         raise HTTPException(status_code=409, detail="Scraper is already running")
-    
+
     # Run in background
     background_tasks.add_task(run_scraper_sync, scraper_id)
-    
+
     return RunTaskResponse(
         success=True,
         message=f"Scraper '{scraper_id}' started successfully",
@@ -291,26 +309,30 @@ async def get_scraper_data(scraper_id: str):
     """Get the latest scraped data for a scraper."""
     if scraper_id not in SCRAPERS:
         raise HTTPException(status_code=404, detail="Scraper not found")
-    
+
     scraper = SCRAPERS[scraper_id]
     data = scraper.get_latest_data()
-    
+
     if data is None:
-        return JSONResponse(content={
-            "scraper_id": scraper_id,
-            "teams": [],
-            "count": 0,
-            "last_updated": None,
-        })
-    
+        return JSONResponse(
+            content={
+                "scraper_id": scraper_id,
+                "teams": [],
+                "count": 0,
+                "last_updated": None,
+            }
+        )
+
     state = app_state.scrapers.get(scraper_id, ScraperState())
-    
-    return JSONResponse(content={
-        "scraper_id": scraper_id,
-        "teams": data,
-        "count": len(data),
-        "last_updated": state.last_success,
-    })
+
+    return JSONResponse(
+        content={
+            "scraper_id": scraper_id,
+            "teams": data,
+            "count": len(data),
+            "last_updated": state.last_success,
+        }
+    )
 
 
 @app.get("/api/scrapers/{scraper_id}/download/{file_type}")
@@ -318,19 +340,23 @@ async def download_file(scraper_id: str, file_type: str):
     """Download the latest output file (json or xlsx)."""
     if scraper_id not in SCRAPERS:
         raise HTTPException(status_code=404, detail="Scraper not found")
-    
+
     state = app_state.scrapers.get(scraper_id, ScraperState())
-    
+
     if file_type == "json":
         file_path = state.last_json_path
     elif file_type == "xlsx":
         file_path = state.last_xlsx_path
     else:
-        raise HTTPException(status_code=400, detail="Invalid file type. Use 'json' or 'xlsx'")
-    
+        raise HTTPException(
+            status_code=400, detail="Invalid file type. Use 'json' or 'xlsx'"
+        )
+
     if not file_path or not Path(file_path).exists():
-        raise HTTPException(status_code=404, detail="File not found. Run the scraper first.")
-    
+        raise HTTPException(
+            status_code=404, detail="File not found. Run the scraper first."
+        )
+
     return FileResponse(
         path=file_path,
         filename=Path(file_path).name,
@@ -346,21 +372,25 @@ async def list_files():
         if file_path.name == "scraper_state.json":
             continue
         stat = file_path.stat()
-        files.append({
-            "name": file_path.name,
-            "type": "json",
-            "size": stat.st_size,
-            "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
-        })
+        files.append(
+            {
+                "name": file_path.name,
+                "type": "json",
+                "size": stat.st_size,
+                "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
+            }
+        )
     for file_path in DATA_DIR.glob("*.xlsx"):
         stat = file_path.stat()
-        files.append({
-            "name": file_path.name,
-            "type": "xlsx",
-            "size": stat.st_size,
-            "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
-        })
-    
+        files.append(
+            {
+                "name": file_path.name,
+                "type": "xlsx",
+                "size": stat.st_size,
+                "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
+            }
+        )
+
     return sorted(files, key=lambda x: x["modified"], reverse=True)
 
 
@@ -372,5 +402,5 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
 
+    uvicorn.run(app, host="0.0.0.0", port=8000)

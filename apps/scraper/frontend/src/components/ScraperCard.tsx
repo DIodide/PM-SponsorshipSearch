@@ -15,6 +15,30 @@ import {
 } from '@hugeicons/core-free-icons';
 import type { ScraperInfo } from '@/types';
 
+// Sport-specific styling
+const SPORT_THEMES: Record<string, { badge: string; accent: string; label: string }> = {
+  mlb_milb: {
+    badge: 'bg-red-100 text-red-700 border-red-200',
+    accent: 'border-l-red-500',
+    label: 'Baseball',
+  },
+  nba_gleague: {
+    badge: 'bg-orange-100 text-orange-700 border-orange-200',
+    accent: 'border-l-orange-500',
+    label: 'Basketball',
+  },
+  nfl: {
+    badge: 'bg-blue-100 text-blue-700 border-blue-200',
+    accent: 'border-l-blue-500',
+    label: 'Football',
+  },
+  nhl_ahl_echl: {
+    badge: 'bg-sky-100 text-sky-700 border-sky-200',
+    accent: 'border-l-sky-500',
+    label: 'Hockey',
+  },
+};
+
 interface ScraperCardProps {
   scraper: ScraperInfo;
   onRun: (id: string) => Promise<void>;
@@ -43,21 +67,31 @@ export function ScraperCard({ scraper, onRun, onViewData, isSelected }: ScraperC
     ? Math.round((scraper.successful_runs / scraper.total_runs) * 100) 
     : 0;
 
+  const theme = SPORT_THEMES[scraper.id] || {
+    badge: 'bg-gray-100 text-gray-700 border-gray-200',
+    accent: 'border-l-gray-500',
+    label: 'Sports',
+  };
+
   return (
     <div
       className={cn(
-        'rounded-xl border bg-card p-6 transition-all duration-200',
+        'rounded-xl border bg-card p-6 transition-all duration-200 border-l-4',
+        theme.accent,
         isSelected ? 'ring-2 ring-primary shadow-lg' : 'hover:shadow-md',
-        isRunning && 'border-blue-300'
+        isRunning && 'border-l-blue-500'
       )}
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-3 mb-1">
-            <h3 className="font-semibold text-lg truncate">{scraper.name}</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <span className={cn('px-2 py-0.5 text-xs font-medium rounded border', theme.badge)}>
+              {theme.label}
+            </span>
             <StatusBadge status={scraper.status} />
           </div>
+          <h3 className="font-semibold text-lg truncate mb-1">{scraper.name}</h3>
           <p className="text-sm text-muted-foreground line-clamp-2">
             {scraper.description}
           </p>
