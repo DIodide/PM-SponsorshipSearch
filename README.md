@@ -15,3 +15,9 @@ turbo dev
 
 This should start two things, the convex dev environment at packages/backend,
 and the web ui at apps/web
+
+
+# For the scraper to work on `turbo dev`
+```
+chmod +x .../PM-SponsorshipSearch/apps/scraper/backend/dev.sh
+```

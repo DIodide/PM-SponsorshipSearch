@@ -19,6 +19,8 @@
   "packageManager": "npm@10.9.3",
   "workspaces": [
     "apps/*",
+    "apps/scraper/frontend",
+    "apps/scraper/backend",
     "packages/*"
   ],
   "dependencies": {
