@@ -2,6 +2,7 @@
 MLB + MiLB Teams Scraper
 - Pulls teams from MLB StatsAPI: https://statsapi.mlb.com/api/v1/teams
 - Outputs JSON and Excel files with team data
+- Enriches with logo URLs from MLB Static CDN
 """
 
 from __future__ import annotations
@@ -14,6 +15,8 @@ from typing import Any, Dict, List, Optional
 
 import pandas as pd
 import requests
+
+from .logo_utils import mlbstatic_logo, fetch_espn_logos, _norm_name
 
 
 MLB_STATSAPI_TEAMS_URL = "https://statsapi.mlb.com/api/v1/teams"
@@ -32,6 +35,7 @@ class TeamRow:
     category: str
     sport_id: int
     team_id: int
+    logo_url: Optional[str] = None
 
 
 @dataclass
@@ -75,7 +79,7 @@ class MLBMiLBScraper:
                 continue
         return all_teams
 
-    def _team_to_row(self, team: Dict[str, Any]) -> TeamRow:
+    def _team_to_row(self, team: Dict[str, Any], logo_url: Optional[str] = None) -> TeamRow:
         """Convert raw API team data to structured TeamRow."""
         name = team.get("name", "")
         region = team.get("locationName") or ""
@@ -110,6 +114,7 @@ class MLBMiLBScraper:
             category=category,
             sport_id=sport_id,
             team_id=team_id,
+            logo_url=logo_url,
         )
 
     def _write_outputs(
@@ -142,6 +147,23 @@ class MLBMiLBScraper:
             df_mlb.to_excel(writer, index=False, sheet_name="MLB")
             df_milb.to_excel(writer, index=False, sheet_name="MiLB")
 
+    def _fetch_logos(self, teams: List[Dict[str, Any]]) -> Dict[int, str]:
+        """Fetch logo URLs for teams using MLB Static CDN."""
+        logos: Dict[int, str] = {}
+        
+        # ESPN fallback for MLB teams
+        espn_logos = fetch_espn_logos("mlb")
+        
+        for team in teams:
+            team_id = team.get("id", 0)
+            name = team.get("name", "")
+            
+            if team_id > 0:
+                # Use MLB Static CDN URL
+                logos[team_id] = mlbstatic_logo(team_id)
+        
+        return logos
+
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
@@ -151,8 +173,14 @@ class MLBMiLBScraper:
             teams = self.fetch_teams()
             active_teams = [t for t in teams if t.get("active") is True]
 
-            # Convert to structured rows
-            rows = [self._team_to_row(t) for t in active_teams]
+            # Fetch logo URLs
+            logo_map = self._fetch_logos(active_teams)
+
+            # Convert to structured rows with logos
+            rows = [
+                self._team_to_row(t, logo_map.get(t.get("id", 0)))
+                for t in active_teams
+            ]
 
             # Count by category
             mlb_count = sum(1 for r in rows if r.category == "MLB")

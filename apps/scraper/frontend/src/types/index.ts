@@ -22,6 +22,7 @@ export interface TeamData {
   category: string;
   sport_id?: number;
   team_id?: number;
+  logo_url?: string;
 }
 
 export interface DataResponse {

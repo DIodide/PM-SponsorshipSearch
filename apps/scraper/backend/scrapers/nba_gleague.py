@@ -2,6 +2,7 @@
 NBA + NBA G League Teams Scraper
 - Scrapes team data from official NBA team directory pages
 - Outputs JSON and Excel files with team data
+- Enriches with logo URLs from NBA CDN and G League directory
 """
 
 from __future__ import annotations
@@ -16,6 +17,14 @@ from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+
+from .logo_utils import (
+    fetch_espn_logos,
+    fetch_gleague_logos,
+    nba_cdn_logo,
+    NBA_TEAM_IDS,
+    _norm_name,
+)
 
 
 NBA_TEAMS_URL = "https://www.nba.com/teams"
@@ -108,6 +117,7 @@ class TeamRow:
     target_demographic: str
     official_url: str
     category: str
+    logo_url: Optional[str] = None
 
 
 @dataclass
@@ -281,6 +291,28 @@ class NBAGLeagueScraper:
             df_nba.to_excel(writer, index=False, sheet_name="NBA")
             df_gl.to_excel(writer, index=False, sheet_name="G League")
     
+    def _enrich_with_logos(self, nba_rows: List[TeamRow], gleague_rows: List[TeamRow]) -> None:
+        """Add logo URLs to team rows."""
+        # NBA logos from CDN or ESPN
+        espn_logos = fetch_espn_logos("nba")
+        
+        for row in nba_rows:
+            norm = _norm_name(row.name)
+            team_id = NBA_TEAM_IDS.get(norm)
+            if team_id:
+                row.logo_url = nba_cdn_logo(team_id)
+            elif espn_logos.get(norm):
+                row.logo_url = espn_logos[norm]
+        
+        # G League logos from directory
+        gleague_team_dicts = [{"name": r.name, "official_url": r.official_url} for r in gleague_rows]
+        gleague_logos = fetch_gleague_logos(gleague_team_dicts)
+        
+        for row in gleague_rows:
+            norm = _norm_name(row.name)
+            if norm in gleague_logos:
+                row.logo_url = gleague_logos[norm]
+
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
@@ -312,6 +344,9 @@ class NBAGLeagueScraper:
             except Exception:
                 gleague_rows = self._get_gleague_teams_static()
                 used_fallback = True
+            
+            # Enrich with logos
+            self._enrich_with_logos(nba_rows, gleague_rows)
             
             rows = nba_rows + gleague_rows
             

@@ -2,6 +2,7 @@
 NFL Teams Scraper
 - Scrapes team data from NFL.com official directory
 - Outputs JSON and Excel files with team data
+- Enriches with logo URLs from ESPN API
 """
 
 from __future__ import annotations
@@ -16,6 +17,8 @@ from typing import Any, Dict, List, Optional
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+
+from .logo_utils import fetch_espn_logos, _norm_name
 
 
 NFL_TEAMS_URL = "https://www.nfl.com/teams/"
@@ -71,6 +74,7 @@ class TeamRow:
     target_demographic: str
     official_url: str
     category: str
+    logo_url: Optional[str] = None
 
 
 @dataclass
@@ -222,6 +226,15 @@ class NFLScraper:
         with pd.ExcelWriter(xlsx_path, engine="openpyxl") as writer:
             df_sorted.to_excel(writer, index=False, sheet_name="NFL Teams")
 
+    def _enrich_with_logos(self, rows: List[TeamRow]) -> None:
+        """Add logo URLs to team rows from ESPN API."""
+        espn_logos = fetch_espn_logos("nfl")
+
+        for row in rows:
+            norm = _norm_name(row.name)
+            if norm in espn_logos:
+                row.logo_url = espn_logos[norm]
+
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
@@ -240,6 +253,9 @@ class NFLScraper:
             except Exception:
                 rows = self._get_nfl_teams_static()
                 used_fallback = True
+
+            # Enrich with logos
+            self._enrich_with_logos(rows)
 
             # Generate output paths with timestamp
             timestamp = start_time.strftime("%Y%m%d_%H%M%S")

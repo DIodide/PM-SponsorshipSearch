@@ -158,6 +158,7 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
         <table className="data-table">
           <thead className="sticky top-0 z-10">
             <tr>
+              <th className="w-12">Logo</th>
               <th 
                 className="cursor-pointer hover:bg-muted/70"
                 onClick={() => handleSort('name')}
@@ -209,13 +210,31 @@ export function DataViewer({ data, loading, onClose }: DataViewerProps) {
           <tbody>
             {filteredTeams.map((team, index) => (
               <tr key={`${team.name}-${index}`}>
+                <td className="w-12">
+                  {team.logo_url ? (
+                    <img 
+                      src={team.logo_url} 
+                      alt={`${team.name} logo`}
+                      className="w-8 h-8 object-contain rounded"
+                      loading="lazy"
+                      onError={(e) => {
+                        // Hide broken images
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-8 h-8 bg-muted rounded flex items-center justify-center text-muted-foreground text-xs">
+                      —
+                    </div>
+                  )}
+                </td>
                 <td className="font-medium">{team.name}</td>
                 <td>{team.region}</td>
                 <td className="text-muted-foreground">{team.league}</td>
                 <td>
                   <span className={cn(
                     'inline-flex px-2 py-0.5 rounded text-xs font-medium',
-                    team.category === 'MLB' || team.category === 'NBA' 
+                    team.category === 'MLB' || team.category === 'NBA' || team.category === 'NFL' || team.category === 'Major'
                       ? 'bg-blue-100 text-blue-700'
                       : 'bg-gray-100 text-gray-700'
                   )}>

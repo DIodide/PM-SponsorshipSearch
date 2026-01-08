@@ -2,6 +2,7 @@
 NHL + AHL + ECHL Teams Scraper
 - Scrapes team data from official hockey league directories
 - Outputs JSON and Excel files with team data
+- Enriches with logo URLs from NHL CDN, AHL directory, and ECHL directory
 """
 
 from __future__ import annotations
@@ -18,6 +19,16 @@ from urllib.parse import urlparse
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+
+from .logo_utils import (
+    fetch_espn_logos,
+    fetch_nhl_logos,
+    fetch_ahl_logos,
+    fetch_echl_logos,
+    nhl_assets_logo,
+    NHL_ABBREVIATIONS,
+    _norm_name,
+)
 
 
 NHL_TEAMS_URL = "https://www.nhl.com/info/teams/"
@@ -169,6 +180,7 @@ class TeamRow:
     target_demographic: str
     official_url: str
     category: str
+    logo_url: Optional[str] = None
 
 
 @dataclass
@@ -458,6 +470,40 @@ class NHLAHLECHLScraper:
             df_ahl.to_excel(writer, index=False, sheet_name="AHL")
             df_echl.to_excel(writer, index=False, sheet_name="ECHL")
 
+    def _enrich_with_logos(
+        self,
+        nhl_rows: List[TeamRow],
+        ahl_rows: List[TeamRow],
+        echl_rows: List[TeamRow],
+    ) -> None:
+        """Add logo URLs to team rows."""
+        # NHL logos from NHL CDN or ESPN
+        espn_logos = fetch_espn_logos("nhl")
+
+        for row in nhl_rows:
+            name_lower = row.name.lower()
+            abbrev = NHL_ABBREVIATIONS.get(name_lower)
+            if abbrev:
+                row.logo_url = nhl_assets_logo(abbrev)
+            else:
+                norm = _norm_name(row.name)
+                if norm in espn_logos:
+                    row.logo_url = espn_logos[norm]
+
+        # AHL logos from directory
+        ahl_logos = fetch_ahl_logos()
+        for row in ahl_rows:
+            norm = _norm_name(row.name)
+            if norm in ahl_logos:
+                row.logo_url = ahl_logos[norm]
+
+        # ECHL logos from directory
+        echl_logos = fetch_echl_logos()
+        for row in echl_rows:
+            norm = _norm_name(row.name)
+            if norm in echl_logos:
+                row.logo_url = echl_logos[norm]
+
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
@@ -496,6 +542,9 @@ class NHLAHLECHLScraper:
             except Exception:
                 echl_rows = self._get_echl_teams_static()
                 used_fallback = True
+
+            # Enrich with logos
+            self._enrich_with_logos(nhl_rows, ahl_rows, echl_rows)
 
             rows = nhl_rows + ahl_rows + echl_rows
 
