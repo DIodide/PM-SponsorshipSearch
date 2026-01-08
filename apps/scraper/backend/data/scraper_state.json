@@ -1,0 +1,28 @@
+{
+  "scrapers": {
+    "mlb_milb": {
+      "status": "success",
+      "last_run": "2026-01-08T02:16:08.027682",
+      "last_success": "2026-01-08T02:16:08.027996",
+      "last_error": null,
+      "last_duration_ms": 1171,
+      "total_runs": 3,
+      "successful_runs": 1,
+      "last_teams_count": 235,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260108_021608.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260108_021608.xlsx"
+    },
+    "nba_gleague": {
+      "status": "success",
+      "last_run": "2026-01-08T02:18:55.201890",
+      "last_success": "2026-01-08T02:18:55.202167",
+      "last_error": null,
+      "last_duration_ms": 1727,
+      "total_runs": 1,
+      "successful_runs": 1,
+      "last_teams_count": 62,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260108_021855.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260108_021855.xlsx"
+    }
+  }
+}
