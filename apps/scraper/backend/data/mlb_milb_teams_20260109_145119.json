@@ -1,7 +1,7 @@
 [
   {
     "name": "Los Angeles Angels",
-    "region": "Anaheim",
+    "region": "Los Angeles",
     "league": "Major League Baseball \u2014 American League",
     "target_demographic": "Local baseball fans and families in/around Anaheim",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/108",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Texas Rangers",
-    "region": "Arlington",
+    "region": "Dallas-Fort Worth",
     "league": "Major League Baseball \u2014 American League",
     "target_demographic": "Local baseball fans and families in/around Arlington",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/140",
@@ -122,7 +122,7 @@
   },
   {
     "name": "Athletics",
-    "region": "Sacramento",
+    "region": "Oakland",
     "league": "Major League Baseball \u2014 American League",
     "target_demographic": "Local baseball fans and families in/around Sacramento",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/133",
@@ -210,7 +210,7 @@
   },
   {
     "name": "New York Mets",
-    "region": "Flushing",
+    "region": "New York",
     "league": "Major League Baseball \u2014 National League",
     "target_demographic": "Local baseball fans and families in/around Flushing",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/121",
@@ -364,7 +364,7 @@
   },
   {
     "name": "Chesapeake Baysox",
-    "region": "Bowie",
+    "region": "Chesapeake Bay Area",
     "league": "Double-A \u2014 Eastern League",
     "target_demographic": "Local baseball fans and families in/around Bowie",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/418",
@@ -540,7 +540,7 @@
   },
   {
     "name": "Mississippi Braves",
-    "region": "Pearl",
+    "region": "Central Mississippi",
     "league": "Double-A \u2014 Southern League",
     "target_demographic": "Local baseball fans and families in/around Pearl",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/430",
@@ -606,7 +606,7 @@
   },
   {
     "name": "Arkansas Travelers",
-    "region": "North Little Rock",
+    "region": "Little Rock",
     "league": "Double-A \u2014 Texas League",
     "target_demographic": "Local baseball fans and families in/around North Little Rock",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/574",
@@ -705,7 +705,7 @@
   },
   {
     "name": "West Michigan Whitecaps",
-    "region": "Comstock Park",
+    "region": "Grand Rapids",
     "league": "High-A \u2014 Midwest League",
     "target_demographic": "Local baseball fans and families in/around Comstock Park",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/582",
@@ -716,7 +716,7 @@
   },
   {
     "name": "Quad Cities River Bandits",
-    "region": "Davenport",
+    "region": "Quad Cities",
     "league": "High-A \u2014 Midwest League",
     "target_demographic": "Local baseball fans and families in/around Davenport",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/565",
@@ -837,7 +837,7 @@
   },
   {
     "name": "Tri-City Dust Devils",
-    "region": "Pasco",
+    "region": "Tri-Cities",
     "league": "High-A \u2014 Northwest League",
     "target_demographic": "Local baseball fans and families in/around Pasco",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/460",
@@ -969,7 +969,7 @@
   },
   {
     "name": "Hudson Valley Renegades",
-    "region": "Wappingers Falls",
+    "region": "Hudson Valley",
     "league": "High-A \u2014 South Atlantic League",
     "target_demographic": "Local baseball fans and families in/around Wappingers Falls",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/537",
@@ -1002,7 +1002,7 @@
   },
   {
     "name": "ACL Dodgers",
-    "region": "Glendale",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Glendale",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5427",
@@ -1013,7 +1013,7 @@
   },
   {
     "name": "ACL White Sox",
-    "region": "Glendale",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Glendale",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1997",
@@ -1024,7 +1024,7 @@
   },
   {
     "name": "ACL Guardians",
-    "region": "Goodyear",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Goodyear",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5374",
@@ -1035,7 +1035,7 @@
   },
   {
     "name": "ACL Reds",
-    "region": "Goodyear",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Goodyear",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/3430",
@@ -1046,7 +1046,7 @@
   },
   {
     "name": "ACL Athletics",
-    "region": "Mesa",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Mesa",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5426",
@@ -1057,7 +1057,7 @@
   },
   {
     "name": "ACL Cubs",
-    "region": "Mesa",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Mesa",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/407",
@@ -1068,7 +1068,7 @@
   },
   {
     "name": "ACL Mariners",
-    "region": "Peoria",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Peoria",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/409",
@@ -1079,7 +1079,7 @@
   },
   {
     "name": "ACL Padres",
-    "region": "Peoria",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Peoria",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/410",
@@ -1101,7 +1101,7 @@
   },
   {
     "name": "ACL Giants",
-    "region": "Phoenix",
+    "region": "Scottsdale",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Phoenix",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/408",
@@ -1112,7 +1112,7 @@
   },
   {
     "name": "ACL D-backs",
-    "region": "Scottsdale",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Scottsdale",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1991",
@@ -1123,7 +1123,7 @@
   },
   {
     "name": "ACL Rockies",
-    "region": "Scottsdale",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Scottsdale",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1994",
@@ -1156,7 +1156,7 @@
   },
   {
     "name": "ACL Angels",
-    "region": "Tempe",
+    "region": "Phoenix",
     "league": "Rookie \u2014 Arizona Complex League",
     "target_demographic": "Local baseball fans and families in/around Tempe",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/404",
@@ -1167,7 +1167,7 @@
   },
   {
     "name": "DSL Rangers Blue",
-    "region": "Arlington",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Arlington",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/625",
@@ -1178,7 +1178,7 @@
   },
   {
     "name": "DSL Rangers Red",
-    "region": "Arlington",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Arlington",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2413",
@@ -1189,7 +1189,7 @@
   },
   {
     "name": "DSL Braves",
-    "region": "Atlanta",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Atlanta",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/605",
@@ -1200,7 +1200,7 @@
   },
   {
     "name": "DSL Orioles Black",
-    "region": "Baltimore",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Baltimore",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/621",
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "DSL Orioles Orange",
-    "region": "Baltimore",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Baltimore",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/3130",
@@ -1233,7 +1233,7 @@
   },
   {
     "name": "DSL Red Sox Blue",
-    "region": "Boston",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Boston",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/626",
@@ -1244,7 +1244,7 @@
   },
   {
     "name": "DSL Red Sox Red",
-    "region": "Boston",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Boston",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/627",
@@ -1255,7 +1255,7 @@
   },
   {
     "name": "DSL White Sox",
-    "region": "Chicago",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Chicago",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/633",
@@ -1266,7 +1266,7 @@
   },
   {
     "name": "DSL Reds",
-    "region": "Cincinnati",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Cincinnati",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/628",
@@ -1277,7 +1277,7 @@
   },
   {
     "name": "DSL Rojos",
-    "region": "Cincinnati",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Cincinnati",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2412",
@@ -1288,7 +1288,7 @@
   },
   {
     "name": "DSL CLE Goryl",
-    "region": "Cleveland",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Cleveland",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5506",
@@ -1299,7 +1299,7 @@
   },
   {
     "name": "DSL CLE Mendoza",
-    "region": "Cleveland",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Cleveland",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/616",
@@ -1310,7 +1310,7 @@
   },
   {
     "name": "DSL Colorado",
-    "region": "Denver",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Denver",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2131",
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "DSL Rockies",
-    "region": "Denver",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Denver",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/629",
@@ -1332,7 +1332,7 @@
   },
   {
     "name": "DSL Tigers 1",
-    "region": "Detroit",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Detroit",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/631",
@@ -1343,7 +1343,7 @@
   },
   {
     "name": "DSL Tigers 2",
-    "region": "Detroit",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Detroit",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2132",
@@ -1354,7 +1354,7 @@
   },
   {
     "name": "DSL Mets Blue",
-    "region": "Jubey, Boca Chica",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Jubey, Boca Chica",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/620",
@@ -1365,7 +1365,7 @@
   },
   {
     "name": "DSL Royals Fortuna",
-    "region": "Kansas City",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Kansas City",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2128",
@@ -1376,7 +1376,7 @@
   },
   {
     "name": "DSL Royals Ventura",
-    "region": "Kansas City",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Kansas City",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/630",
@@ -1387,7 +1387,7 @@
   },
   {
     "name": "DSL Pirates Black",
-    "region": "La Gina",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around La Gina",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/624",
@@ -1398,7 +1398,7 @@
   },
   {
     "name": "DSL Pirates Gold",
-    "region": "La Gina",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around La Gina",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/4404",
@@ -1409,7 +1409,7 @@
   },
   {
     "name": "DSL Angels",
-    "region": "Los Angeles",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Los Angeles",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/600",
@@ -1420,7 +1420,7 @@
   },
   {
     "name": "DSL LAD Bautista",
-    "region": "Los Angeles",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Los Angeles",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/611",
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "DSL LAD Mega",
-    "region": "Los Angeles",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Los Angeles",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/612",
@@ -1442,7 +1442,7 @@
   },
   {
     "name": "DSL Marlins",
-    "region": "Miami",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Miami",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/619",
@@ -1453,7 +1453,7 @@
   },
   {
     "name": "DSL Miami",
-    "region": "Miami",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Miami",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2127",
@@ -1464,7 +1464,7 @@
   },
   {
     "name": "DSL Brewers Blue",
-    "region": "Milwaukee",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Milwaukee",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/607",
@@ -1475,7 +1475,7 @@
   },
   {
     "name": "DSL Brewers Gold",
-    "region": "Milwaukee",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Milwaukee",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2101",
@@ -1486,7 +1486,7 @@
   },
   {
     "name": "DSL Twins",
-    "region": "Minneapolis",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Minneapolis",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/632",
@@ -1497,7 +1497,7 @@
   },
   {
     "name": "DSL Mets Orange",
-    "region": "New York",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around New York",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2117",
@@ -1508,7 +1508,7 @@
   },
   {
     "name": "DSL NYY Bombers",
-    "region": "New York",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around New York",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/634",
@@ -1519,7 +1519,7 @@
   },
   {
     "name": "DSL NYY Yankees",
-    "region": "New York",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around New York",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/635",
@@ -1530,7 +1530,7 @@
   },
   {
     "name": "DSL Arizona Black",
-    "region": "Phoenix",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Phoenix",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/610",
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "DSL Arizona Red",
-    "region": "Phoenix",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Phoenix",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5087",
@@ -1552,7 +1552,7 @@
   },
   {
     "name": "DSL Astros Blue",
-    "region": "San Antonio De Guerra",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around San Antonio De Guerra",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/601",
@@ -1563,7 +1563,7 @@
   },
   {
     "name": "DSL Astros Orange",
-    "region": "San Antonio De Guerra",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around San Antonio De Guerra",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5005",
@@ -1574,7 +1574,7 @@
   },
   {
     "name": "DSL Padres Brown",
-    "region": "San Diego",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around San Diego",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/622",
@@ -1585,7 +1585,7 @@
   },
   {
     "name": "DSL Padres Gold",
-    "region": "San Diego",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around San Diego",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2122",
@@ -1596,7 +1596,7 @@
   },
   {
     "name": "DSL Cubs Blue",
-    "region": "Santo Domingo",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Santo Domingo",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/609",
@@ -1607,7 +1607,7 @@
   },
   {
     "name": "DSL Cubs Red",
-    "region": "Santo Domingo",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Santo Domingo",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2270",
@@ -1618,7 +1618,7 @@
   },
   {
     "name": "DSL Giants Black",
-    "region": "Santo Domingo",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Santo Domingo",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/2134",
@@ -1629,7 +1629,7 @@
   },
   {
     "name": "DSL Giants Orange",
-    "region": "Santo Domingo",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Santo Domingo",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/615",
@@ -1640,7 +1640,7 @@
   },
   {
     "name": "DSL Phillies Red",
-    "region": "Santo Domingo",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Santo Domingo",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/623",
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "DSL Phillies White",
-    "region": "Santo Domingo",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Santo Domingo",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5085",
@@ -1662,7 +1662,7 @@
   },
   {
     "name": "DSL Mariners",
-    "region": "Seattle",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Seattle",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/618",
@@ -1673,7 +1673,7 @@
   },
   {
     "name": "DSL Cardinals",
-    "region": "St. Louis",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around St. Louis",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/608",
@@ -1684,7 +1684,7 @@
   },
   {
     "name": "DSL Rays",
-    "region": "Tampa Bay",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Tampa Bay",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1611",
@@ -1695,7 +1695,7 @@
   },
   {
     "name": "DSL Tampa Bay",
-    "region": "Tampa Bay",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Tampa Bay",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/5086",
@@ -1706,7 +1706,7 @@
   },
   {
     "name": "DSL Blue Jays Blue",
-    "region": "Toronto",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Toronto",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/604",
@@ -1717,7 +1717,7 @@
   },
   {
     "name": "DSL Blue Jays Red",
-    "region": "Toronto",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Toronto",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1610",
@@ -1728,7 +1728,7 @@
   },
   {
     "name": "DSL Nationals",
-    "region": "Washington DC",
+    "region": "Boca Chica",
     "league": "Rookie \u2014 Dominican Summer League",
     "target_demographic": "Local baseball fans and families in/around Washington DC",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1270",
@@ -2102,7 +2102,7 @@
   },
   {
     "name": "Augusta GreenJackets",
-    "region": "North Augusta",
+    "region": "Augusta",
     "league": "Single-A \u2014 Carolina League",
     "target_demographic": "Local baseball fans and families in/around North Augusta",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/478",
@@ -2212,7 +2212,7 @@
   },
   {
     "name": "Palm Beach Cardinals",
-    "region": "Jupiter",
+    "region": "Palm Beach",
     "league": "Single-A \u2014 Florida State League",
     "target_demographic": "Local baseball fans and families in/around Jupiter",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/279",
@@ -2256,7 +2256,7 @@
   },
   {
     "name": "Lehigh Valley IronPigs",
-    "region": "Allentown",
+    "region": "Lehigh Valley",
     "league": "Triple-A \u2014 International League",
     "target_demographic": "Local baseball fans and families in/around Allentown",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/1410",
@@ -2344,7 +2344,7 @@
   },
   {
     "name": "Gwinnett Stripers",
-    "region": "Lawrenceville",
+    "region": "Gwinnett County",
     "league": "Triple-A \u2014 International League",
     "target_demographic": "Local baseball fans and families in/around Lawrenceville",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/431",
@@ -2377,7 +2377,7 @@
   },
   {
     "name": "Scranton/Wilkes-Barre RailRiders",
-    "region": "Moosic",
+    "region": "Scranton/Wilkes-Barre",
     "league": "Triple-A \u2014 International League",
     "target_demographic": "Local baseball fans and families in/around Moosic",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/531",
@@ -2410,7 +2410,7 @@
   },
   {
     "name": "Omaha Storm Chasers",
-    "region": "Papillion",
+    "region": "Omaha",
     "league": "Triple-A \u2014 International League",
     "target_demographic": "Local baseball fans and families in/around Papillion",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/541",
@@ -2553,7 +2553,7 @@
   },
   {
     "name": "Salt Lake Bees",
-    "region": "South Jordan",
+    "region": "Salt Lake City",
     "league": "Triple-A \u2014 Pacific Coast League",
     "target_demographic": "Local baseball fans and families in/around South Jordan",
     "official_url": "https://statsapi.mlb.com/api/v1/teams/561",
