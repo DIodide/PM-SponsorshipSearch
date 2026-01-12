@@ -1,4 +1,4 @@
-import type { ScraperInfo, DataResponse, FileInfo } from '@/types';
+import type { ScraperInfo, DataResponse, FileInfo, EnricherInfo, EnrichmentResult } from '@/types';
 
 const API_BASE = '/api';
 
@@ -72,3 +72,45 @@ export async function cleanRegions(
   return response.json();
 }
 
+// ============ Enrichment API ============
+
+export async function fetchEnrichers(): Promise<EnricherInfo[]> {
+  const response = await fetch(`${API_BASE}/enrichers`);
+  if (!response.ok) throw new Error('Failed to fetch enrichers');
+  return response.json();
+}
+
+export async function fetchEnricher(id: string): Promise<EnricherInfo> {
+  const response = await fetch(`${API_BASE}/enrichers/${id}`);
+  if (!response.ok) throw new Error('Failed to fetch enricher');
+  return response.json();
+}
+
+export async function runEnrichment(
+  scraperId: string,
+  enricherIds?: string[]
+): Promise<EnrichmentResult[]> {
+  const response = await fetch(`${API_BASE}/scrapers/${scraperId}/enrich`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ enricher_ids: enricherIds }),
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to run enrichment');
+  }
+  return response.json();
+}
+
+export interface EnrichmentStatus {
+  has_data: boolean;
+  teams_count: number;
+  enrichments: Record<string, number>;
+  available_enrichers?: string[];
+}
+
+export async function fetchEnrichmentStatus(scraperId: string): Promise<EnrichmentStatus> {
+  const response = await fetch(`${API_BASE}/scrapers/${scraperId}/enrichment-status`);
+  if (!response.ok) throw new Error('Failed to fetch enrichment status');
+  return response.json();
+}
