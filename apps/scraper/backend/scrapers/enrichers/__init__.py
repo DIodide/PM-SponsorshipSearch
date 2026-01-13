@@ -15,8 +15,11 @@ Available Enrichers:
 - BrandEnricher: Adds mission and community program tags
 """
 
-from .base import BaseEnricher
+from .base import BaseEnricher, EnricherRegistry
+from .geo_enricher import GeoEnricher
 
 __all__ = [
     "BaseEnricher",
+    "EnricherRegistry",
+    "GeoEnricher",
 ]
