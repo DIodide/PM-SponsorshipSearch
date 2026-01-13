@@ -102,9 +102,7 @@ export interface EnricherInfo {
   available: boolean;  // Whether the enricher can run (has required API keys, etc.)
   last_run?: string;
   status: 'idle' | 'running' | 'success' | 'failed';
-}
-
-// Metric group definitions for UI display
+}// Metric group definitions for UI display
 export interface MetricGroup {
   id: string;
   label: string;
