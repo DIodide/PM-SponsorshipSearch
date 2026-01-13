@@ -17,9 +17,11 @@ Available Enrichers:
 
 from .base import BaseEnricher, EnricherRegistry
 from .geo_enricher import GeoEnricher
+from .sponsor_enricher import SponsorEnricher
 
 __all__ = [
     "BaseEnricher",
     "EnricherRegistry",
     "GeoEnricher",
+    "SponsorEnricher",
 ]

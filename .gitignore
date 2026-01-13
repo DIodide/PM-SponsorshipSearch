@@ -55,3 +55,8 @@ apps/scraper/backend/data/nhl_ahl_echl_teams_20260113_033428.json
 apps/scraper/backend/data/nhl_ahl_echl_teams_20260113_033428.xlsx
 apps/scraper/backend/data/nhl_ahl_echl_teams_20260113_034317.json
 apps/scraper/backend/data/nhl_ahl_echl_teams_20260113_034317.xlsx
+apps/scraper/backend/data/mlb_milb_teams_20260109_145119.json
+apps/scraper/backend/data/mlb_milb_teams_20260113_041814.json
+apps/scraper/backend/data/mlb_milb_teams_20260113_041814.xlsx
+apps/scraper/backend/data/nba_gleague_teams_20260113_041552.json
+apps/scraper/backend/data/nba_gleague_teams_20260113_041552.xlsx
