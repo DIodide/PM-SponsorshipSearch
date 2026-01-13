@@ -33,6 +33,8 @@ export interface TeamData {
   logo_url?: string;
 
   // Geographic (Phase 2)
+  geo_city?: string;
+  geo_country?: string;
   city_population?: number;
   metro_gdp_millions?: number;
 
@@ -102,7 +104,9 @@ export interface EnricherInfo {
   available: boolean;  // Whether the enricher can run (has required API keys, etc.)
   last_run?: string;
   status: 'idle' | 'running' | 'success' | 'failed';
-}// Metric group definitions for UI display
+}
+
+// Metric group definitions for UI display
 export interface MetricGroup {
   id: string;
   label: string;
@@ -121,7 +125,7 @@ export const METRIC_GROUPS: MetricGroup[] = [
     id: 'geographic',
     label: 'Geographic Data',
     icon: 'map',
-    fields: ['city_population', 'metro_gdp_millions'],
+    fields: ['geo_city', 'geo_country', 'city_population', 'metro_gdp_millions'],
   },
   {
     id: 'social',
@@ -157,6 +161,8 @@ export const METRIC_GROUPS: MetricGroup[] = [
 
 // Field display metadata for formatting
 export const FIELD_METADATA: Record<string, { label: string; format: 'number' | 'currency' | 'boolean' | 'text' | 'list' | 'tags' | 'sponsors' }> = {
+  geo_city: { label: 'City', format: 'text' },
+  geo_country: { label: 'Country', format: 'text' },
   city_population: { label: 'City Population', format: 'number' },
   metro_gdp_millions: { label: 'Metro GDP (M)', format: 'currency' },
   followers_x: { label: 'X Followers', format: 'number' },
