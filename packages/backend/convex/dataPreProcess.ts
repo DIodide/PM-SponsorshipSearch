@@ -129,6 +129,6 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         await ctx.runMutation(api.dataPreProcess.insertCleanRow, { row: cleanRow });
       }
   
-      return "NFL_clean built successfully.";
+      return "NFL_seed_clean built successfully.";
     },
   });
