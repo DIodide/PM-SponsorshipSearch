@@ -165,8 +165,52 @@ export default defineSchema({
     expiresAt: v.number(), // TTL for cache invalidation
     hitCount: v.number(), // Track cache usage
   })
-    .index("by_hash", ["queryHash"])
-    .index("by_expiry", ["expiresAt"]),
+  .index("by_hash", ["queryHash"])
+  .index("by_expiry", ["expiresAt"]),
+
+  NFL_seed: defineTable({
+    name: v.string(),
+    region: v.string(),
+    // YUBI: ASK Ibraheem, how confident are we that we will have the region of every team?
+    league: v.string(),
+    official_url: v.string(),
+    // These fields are marked as optional (v.optional) because 
+    // some rows in your CSV had missing (null) values.
+    game_attendance: v.optional(v.number()),
+    valuation: v.optional(v.number()),
+    instagram_followers: v.optional(v.number()),
+    brand_values: v.optional(v.string()),
+    current_partners: v.optional(v.string()),
+  })
+    // 1. Look up a team by its exact name
+    .index("by_name", ["name"])
+    // 2. Filter teams by region
+    .index("by_region", ["region"])
+    // 3. Filter by league
+    .index("by_league", ["league"]),
+
+  NFL_seed_clean: defineTable({
+    name: v.string(),
+    region: v.string(),
+    league: v.string(),
+    official_url: v.string(),
+
+    // Embeddings
+    name_embedding: v.array(v.number()),
+    region_embedding: v.array(v.number()),
+    league_embedding: v.array(v.number()),
+    brand_values_embedding: v.union(v.array(v.number()), v.null()),
+    current_partners_embedding: v.union(v.array(v.number()), v.null()),
+
+    // Normalized numeric fields
+    game_attendance_norm: v.union(v.number(), v.null()),
+    valuation_norm: v.union(v.number(), v.null()),
+    instagram_followers_norm: v.union(v.number(), v.null()),
+  })
+  .index("by_name", ["name"])
+  .index("by_region", ["region"])
+  .index("by_league", ["league"]),
+    
 
   // Social media update jobs queue
   socialUpdateQueue: defineTable({
