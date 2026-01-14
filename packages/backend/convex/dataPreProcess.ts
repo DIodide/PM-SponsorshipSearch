@@ -94,55 +94,50 @@ export const insertCleanRow = mutation({
  * - Writes into NFL_clean
  */
 
-export const buildCleanTable = action({
+// Define embed outside the action for better readability
+async function embed(txt: string | undefined | null, apiKey: string): Promise<number[] | null> {
+    if (!txt || txt.trim() === "") return null;
+  
+    const body = {
+      model: "models/embedding-001",
+      content: { parts: [{ text: txt }] }
+    };
+  
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      }
+    );
+  
+    const json = await res.json();
+    if (!res.ok) throw new Error(`Gemini Error: ${json.error?.message || res.statusText}`);
+    
+    return json.embedding.values;
+  }
+  
+  export const buildCleanTable = action({
     args: {},
     handler: async (ctx) => {
       const seed = await ctx.runQuery(api.NFL_seed.getAll, {});
       if (seed.length === 0) return "No rows in NFL_seed.";
   
-      // Precompute stats
-      const valuations = seed.map((r: Doc<"NFL_seed">) => r.valuation ?? null);
-      const attendance = seed.map((r: Doc<"NFL_seed">) => r.game_attendance ?? null);
-      const ig = seed.map((r: Doc<"NFL_seed">) => r.instagram_followers ?? null);
+      const valStats = computeStats(seed.map(r => r.valuation ?? null));
+      const attStats = computeStats(seed.map(r => r.game_attendance ?? null));
+      const igStats = computeStats(seed.map(r => r.instagram_followers ?? null));
   
-      const valStats = computeStats(valuations);
-      const attStats = computeStats(attendance);
-      const igStats = computeStats(ig);
-  
-      // YUBI: manually set for now
       const apiKey = "AIzaSyDbIacwlgypDwJlSXzewLprCEdbMuaATkk";
   
       for (const row of seed) {
-        // === Numeric normalization ===
-        const filledVal = fillNull(row.valuation, valStats.mean);
-        const filledAtt = fillNull(row.game_attendance, attStats.mean);
-        const filledIG = fillNull(row.instagram_followers, igStats.mean);
-  
-        const normalizedVal = (filledVal - valStats.mean) / valStats.sd;
-        const normalizedAtt = (filledAtt - attStats.mean) / attStats.sd;
-        const normalizedIG = (filledIG - igStats.mean) / igStats.sd;
-  
-        // === Embeddings (allowed in actions only) ===
-        const embed = async (txt: string) => {
-          const body = {
-            model: "models/gemini-embedding-001",
-            content: { parts: [{ text: txt }] }
-          };
-  
-          const res = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedText?key=${apiKey}`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify(body)
-            }
-          );
-  
-          const json = await res.json();
-          return json.embedding.values;
-        };
+        // Parallelize the 4 embedding calls for THIS row
+        const [regionEmb, leagueEmb, brandEmb, partnerEmb] = await Promise.all([
+          embed(row.region, apiKey),
+          embed(row.league, apiKey),
+          embed(row.brand_values, apiKey),
+          embed(row.current_partners, apiKey),
+        ]);
   
         const cleanRow = {
           name: row.name,
@@ -150,20 +145,22 @@ export const buildCleanTable = action({
           league: row.league,
           official_url: row.official_url,
   
-          region_embedding: await embed(row.region ?? ""),
-          league_embedding: await embed(row.league ?? ""),
-          brand_values_embedding: await embed(row.brand_values ?? ""),
-          current_partners_embedding: await embed(row.current_partners ?? ""),
+          region_embedding: regionEmb,
+          league_embedding: leagueEmb,
+          brand_values_embedding: brandEmb,
+          current_partners_embedding: partnerEmb,
   
-          game_attendance_norm: normalizedAtt,
-          valuation_norm: normalizedVal,
-          instagram_followers_norm: normalizedIG
+          game_attendance_norm: (row.game_attendance != null) 
+            ? (row.game_attendance - attStats.mean) / attStats.sd : null,
+          valuation_norm: (row.valuation != null) 
+            ? (row.valuation - valStats.mean) / valStats.sd : null,
+          instagram_followers_norm: (row.instagram_followers != null) 
+            ? (row.instagram_followers - igStats.mean) / igStats.sd : null,
         };
   
-        // === Store into NFL_clean ===
         await ctx.runMutation(api.dataPreProcess.insertCleanRow, { row: cleanRow });
       }
   
       return "NFL_clean built successfully.";
     },
-});
+  });

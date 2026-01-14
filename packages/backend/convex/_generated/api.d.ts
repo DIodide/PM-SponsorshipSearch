@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as NFL_seed from "../NFL_seed.js";
 import type * as cache from "../cache.js";
 import type * as crons from "../crons.js";
 import type * as dataPreProcess from "../dataPreProcess.js";
@@ -28,6 +29,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  NFL_seed: typeof NFL_seed;
   cache: typeof cache;
   crons: typeof crons;
   dataPreProcess: typeof dataPreProcess;

@@ -195,13 +195,13 @@ export default defineSchema({
     league: v.string(),
     official_url: v.string(),
 
-    // Embeddings
-    region_embedding: v.array(v.number()),
-    league_embedding: v.array(v.number()),
+    // Embeddings: Must be nullable because our script returns null for empty strings
+    region_embedding: v.union(v.array(v.number()), v.null()),
+    league_embedding: v.union(v.array(v.number()), v.null()),
     brand_values_embedding: v.union(v.array(v.number()), v.null()),
     current_partners_embedding: v.union(v.array(v.number()), v.null()),
 
-    // Normalized numeric fields
+    // Normalized numeric fields: These are correctly defined as nullable
     game_attendance_norm: v.union(v.number(), v.null()),
     valuation_norm: v.union(v.number(), v.null()),
     instagram_followers_norm: v.union(v.number(), v.null()),
