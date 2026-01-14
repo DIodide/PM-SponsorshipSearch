@@ -55,7 +55,7 @@ export const computeBrandSimilarity = action({
     }),
   },
 
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<(NFLTeamClean & { similarity_score: number })[]> => {
     const { query, filters } = args;
 
     // ------------------------------------------------------------
@@ -82,7 +82,7 @@ export const computeBrandSimilarity = action({
     // 2. Fetch All Team Objects
     // ------------------------------------------------------------
 
-    const teams = await ctx.runQuery(api.NFL_seed_clean.getAll);
+    const teams: NFLTeamClean[] = await ctx.runQuery(api.NFL_seed_clean.getAll, {});
 
     if (!teams || teams.length === 0) {
       return [];
@@ -92,7 +92,7 @@ export const computeBrandSimilarity = action({
     // 3. Compute Similarities Per Team
     // ------------------------------------------------------------
 
-    const scored = teams.map((team: NFLTeamClean) => {
+    const scored: (NFLTeamClean & { similarity_score: number })[] = teams.map((team: NFLTeamClean) => {
         const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
         const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
         const simValues = cosineSimilarity(brandVector.brand_values_embedding, team.brand_values_embedding);

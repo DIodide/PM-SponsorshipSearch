@@ -9,6 +9,8 @@
  */
 
 import type * as NFL_seed from "../NFL_seed.js";
+import type * as NFL_seed_clean from "../NFL_seed_clean.js";
+import type * as brandSimilarity from "../brandSimilarity.js";
 import type * as cache from "../cache.js";
 import type * as crons from "../crons.js";
 import type * as dataPreProcess from "../dataPreProcess.js";
@@ -30,6 +32,8 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   NFL_seed: typeof NFL_seed;
+  NFL_seed_clean: typeof NFL_seed_clean;
+  brandSimilarity: typeof brandSimilarity;
   cache: typeof cache;
   crons: typeof crons;
   dataPreProcess: typeof dataPreProcess;
