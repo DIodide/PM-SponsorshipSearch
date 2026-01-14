@@ -4,48 +4,6 @@ import { v } from "convex/values";
 import { api } from "./_generated/api";
 import { Doc } from "./_generated/dataModel";
 
-/**
- * Calls Google's Gemini embedding API using the published REST interface.
- * Assumes your environment variables are:
- *   GEMINI_API_KEY
- */
-async function getGeminiEmbedding(text: string): Promise<number[]> {
-    // YUBI ASK: where should I store this api key?
-  // const apiKey = process.env.GEMINI_API_KEY;
-  // YUBI: manually add this api key for now, from my personal account
-  const apiKey = "AIzaSyDbIacwlgypDwJlSXzewLprCEdbMuaATkk";
-  if (!apiKey) {
-    throw new Error("Missing GEMINI_API_KEY in environment.");
-  }
-
-  const payload = {
-    model: "models/gemini-embedding-001",
-    content: {
-      parts: [
-        { text }
-      ]
-    }
-  };
-
-  const res = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedText",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-goog-api-key": apiKey
-      },
-      body: JSON.stringify(payload)
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error(`Gemini embedding API error: ${await res.text()}`);
-  }
-
-  const data = await res.json();
-  return data.embedding.values;
-}
 
 /**
  * Compute mean and sd, ignoring null; returns {mean, sd}
@@ -121,22 +79,32 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
   export const buildCleanTable = action({
     args: {},
     handler: async (ctx) => {
+
+        // 1. Access the environment variable via process.env
+        const apiKey = process.env.GEMINI_API_KEY;
+
+        // 2. Immediate validation: Stop early if the key is missing
+        if (!apiKey) {
+            throw new Error(
+                "GEMINI_API_KEY is not set. Run 'npx convex env set GEMINI_API_KEY <your-key>'."
+            );
+        }
+
       const seed = await ctx.runQuery(api.NFL_seed.getAll, {});
       if (seed.length === 0) return "No rows in NFL_seed.";
   
       const valStats = computeStats(seed.map(r => r.valuation ?? null));
       const attStats = computeStats(seed.map(r => r.game_attendance ?? null));
       const igStats = computeStats(seed.map(r => r.instagram_followers ?? null));
-  
-      const apiKey = "AIzaSyDbIacwlgypDwJlSXzewLprCEdbMuaATkk";
-  
+
       for (const row of seed) {
         // Parallelize the 4 embedding calls for THIS row
+        // We use Promise.all to "await" all of them together
         const [regionEmb, leagueEmb, brandEmb, partnerEmb] = await Promise.all([
-          embed(row.region, apiKey),
-          embed(row.league, apiKey),
-          embed(row.brand_values, apiKey),
-          embed(row.current_partners, apiKey),
+            row.region ? embed(row.region, apiKey) : Promise.resolve(null),
+            row.league ? embed(row.league, apiKey) : Promise.resolve(null),
+            row.brand_values ? embed(row.brand_values, apiKey) : Promise.resolve(null),
+            row.current_partners ? embed(row.current_partners, apiKey) : Promise.resolve(null),
         ]);
   
         const cleanRow = {
