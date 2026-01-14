@@ -196,7 +196,6 @@ export default defineSchema({
     official_url: v.string(),
 
     // Embeddings
-    name_embedding: v.array(v.number()),
     region_embedding: v.array(v.number()),
     league_embedding: v.array(v.number()),
     brand_values_embedding: v.union(v.array(v.number()), v.null()),

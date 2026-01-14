@@ -10,6 +10,7 @@
 
 import type * as cache from "../cache.js";
 import type * as crons from "../crons.js";
+import type * as dataPreProcess from "../dataPreProcess.js";
 import type * as http from "../http.js";
 import type * as jobs from "../jobs.js";
 import type * as jobsHelpers from "../jobsHelpers.js";
@@ -29,6 +30,7 @@ import type {
 declare const fullApi: ApiFromModules<{
   cache: typeof cache;
   crons: typeof crons;
+  dataPreProcess: typeof dataPreProcess;
   http: typeof http;
   jobs: typeof jobs;
   jobsHelpers: typeof jobsHelpers;
