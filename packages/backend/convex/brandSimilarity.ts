@@ -1,6 +1,7 @@
 import { v } from "convex/values";
 import { query, action } from "./_generated/server";
 import { api } from "./_generated/api";
+import { NFLTeamClean } from "./NFL_seed_clean";
 
 
 // ----------------------
@@ -91,7 +92,7 @@ export const computeBrandSimilarity = action({
     // 3. Compute Similarities Per Team
     // ------------------------------------------------------------
 
-    const scored = teams.map((team: NFLTeam) => {
+    const scored = teams.map((team: NFLTeamClean) => {
         const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
         const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
         const simValues = cosineSimilarity(brandVector.brand_values_embedding, team.brand_values_embedding);

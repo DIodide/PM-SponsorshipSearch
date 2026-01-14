@@ -1,15 +1,16 @@
 import { query } from "./_generated/server";
+import { Id } from "./_generated/dataModel";
 
 export const getAll = query({
     args: {},
-    handler: async (ctx): Promise<NFLTeam[]> => {
+    handler: async (ctx): Promise<NFLTeamClean[]> => {
       return await ctx.db.query("NFL_seed_clean").collect();
     },
 });
   
 
 // YUBI: is this what it should be?
-export type NFLTeam = {
+export type NFLTeamClean = {
     _id: Id<"NFL_seed_clean">;
     name: string;
     region: string;

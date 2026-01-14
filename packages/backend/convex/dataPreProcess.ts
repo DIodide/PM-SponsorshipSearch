@@ -93,9 +93,9 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
       const seed = await ctx.runQuery(api.NFL_seed.getAll, {});
       if (seed.length === 0) return "No rows in NFL_seed.";
   
-      const valStats = computeStats(seed.map(r => r.valuation ?? null));
-      const attStats = computeStats(seed.map(r => r.game_attendance ?? null));
-      const igStats = computeStats(seed.map(r => r.instagram_followers ?? null));
+      const valStats = computeStats(seed.map((r: Doc<"NFL_seed">) => r.valuation ?? null));
+      const attStats = computeStats(seed.map((r: Doc<"NFL_seed">) => r.game_attendance ?? null));
+      const igStats = computeStats(seed.map((r: Doc<"NFL_seed">) => r.instagram_followers ?? null));
 
       for (const row of seed) {
         // Parallelize the 4 embedding calls for THIS row
