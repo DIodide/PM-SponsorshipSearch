@@ -9,37 +9,41 @@ import {
 import { Sidebar } from './components/Sidebar';
 import { RecommendationCard } from './components/RecommendationCard';
 import { TeamDetailView } from './components/TeamDetailView';
-import { PromptEditor } from './components/PromptEditor';
-import { fetchAllTeams } from './lib/api';
-import { generateRecommendations, formatCurrency } from './lib/ai';
-import type { Team, TeamRecommendation, RecommendationPrompt } from './types';
+import { PromptEditor, buildSearchSummary } from './components/PromptEditor';
+import { fetchAllTeams, computeSimilarity, fetchAllTeamsClean } from './lib/api';
+import { scoredTeamsToRecommendations } from './lib/ai';
+import type { Team, TeamRecommendation, SearchFilters } from './types';
 
 type ViewMode = 'initial' | 'recommendations' | 'detail';
 
 function App() {
-  const [teams, setTeams] = useState<Team[]>([]);
+  const [fullTeams, setFullTeams] = useState<Team[]>([]);
   const [loading, setLoading] = useState(true);
-  const [generating, setGenerating] = useState(false);
+  const [searching, setSearching] = useState(false);
   const [activeNav, setActiveNav] = useState('partnerships');
   const [viewMode, setViewMode] = useState<ViewMode>('initial');
   const [recommendations, setRecommendations] = useState<TeamRecommendation[]>([]);
-  const [selectedTeam, setSelectedTeam] = useState<Team | null>(null);
+  const [selectedRecommendation, setSelectedRecommendation] = useState<TeamRecommendation | null>(null);
   const [showPromptEditor, setShowPromptEditor] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
-  const [prompt, setPrompt] = useState<RecommendationPrompt>({
-    objective: '',
-    budget: undefined,
-    region: undefined,
+  const [query, setQuery] = useState('');
+  const [filters, setFilters] = useState<SearchFilters>({
+    regions: [],
+    demographics: [],
+    brandValues: [],
+    leagues: [],
+    goals: [],
   });
 
-  // Load teams on mount
+  // Load full team data on mount (for additional info display)
   useEffect(() => {
     async function loadTeams() {
       try {
         const data = await fetchAllTeams();
-        setTeams(data);
-      } catch (error) {
-        console.error('Failed to load teams:', error);
+        setFullTeams(data);
+      } catch (err) {
+        console.error('Failed to load teams:', err);
       } finally {
         setLoading(false);
       }
@@ -47,64 +51,73 @@ function App() {
     loadTeams();
   }, []);
 
-  // Handle prompt submission
-  const handlePromptSubmit = useCallback(async (newPrompt: RecommendationPrompt) => {
-    setPrompt(newPrompt);
+  // Handle search submission
+  const handleSearch = useCallback(async (newQuery: string, newFilters: SearchFilters) => {
+    setQuery(newQuery);
+    setFilters(newFilters);
     setShowPromptEditor(false);
-    setGenerating(true);
+    setSearching(true);
+    setError(null);
     setViewMode('recommendations');
     
     try {
-      const results = await generateRecommendations(teams, newPrompt);
-      setRecommendations(results);
-    } catch (error) {
-      console.error('Failed to generate recommendations:', error);
+      // Call the Convex similarity scoring action
+      const scoredTeams = await computeSimilarity(newQuery, newFilters);
+      
+      // Convert to recommendations format
+      const recs = scoredTeamsToRecommendations(scoredTeams, fullTeams);
+      setRecommendations(recs);
+    } catch (err) {
+      console.error('Search failed:', err);
+      setError('Failed to compute similarity. The All_Teams_Clean table may be empty. Please ensure the preprocessing has been run.');
+      
+      // Fallback: Load from All_Teams_Clean without similarity scoring
+      try {
+        const cleanTeams = await fetchAllTeamsClean();
+        const recs = scoredTeamsToRecommendations(cleanTeams, fullTeams);
+        setRecommendations(recs);
+        setError('Showing all teams (similarity scoring unavailable)');
+      } catch (fallbackErr) {
+        console.error('Fallback also failed:', fallbackErr);
+      }
     } finally {
-      setGenerating(false);
+      setSearching(false);
     }
-  }, [teams]);
+  }, [fullTeams]);
 
   // Refresh recommendations
-  const handleRefresh = useCallback(async () => {
-    if (!prompt.objective) return;
-    setGenerating(true);
-    
-    try {
-      const results = await generateRecommendations(teams, prompt);
-      setRecommendations(results);
-    } catch (error) {
-      console.error('Failed to refresh recommendations:', error);
-    } finally {
-      setGenerating(false);
+  const handleRefresh = useCallback(() => {
+    if (query || Object.values(filters).some(v => Array.isArray(v) ? v.length > 0 : v !== undefined)) {
+      handleSearch(query, filters);
     }
-  }, [teams, prompt]);
+  }, [query, filters, handleSearch]);
 
   // Handle team selection
-  const handleSelectTeam = (team: Team) => {
-    setSelectedTeam(team);
+  const handleSelectTeam = (rec: TeamRecommendation) => {
+    setSelectedRecommendation(rec);
     setViewMode('detail');
   };
 
   // Handle back from detail
   const handleBackToRecommendations = () => {
-    setSelectedTeam(null);
+    setSelectedRecommendation(null);
     setViewMode('recommendations');
   };
 
-  // Build prompt display string
-  const promptDisplayString = prompt.objective
-    ? `${prompt.objective}${prompt.budget ? ` Price: ${formatCurrency(prompt.budget)}.` : ''}${prompt.region ? ` Region: ${prompt.region}.` : ''}`
-    : '';
+  // Build search summary string
+  const searchSummary = buildSearchSummary(query, filters);
 
   // Render detail view
-  if (viewMode === 'detail' && selectedTeam) {
+  if (viewMode === 'detail' && selectedRecommendation) {
     return (
       <div className="flex min-h-screen">
         <Sidebar activeItem={activeNav} onItemClick={setActiveNav} />
         <div className="flex-1">
           <TeamDetailView
-            team={selectedTeam}
-            prompt={prompt}
+            scoredTeam={selectedRecommendation.scoredTeam}
+            fullTeam={selectedRecommendation.fullTeam}
+            filters={filters}
+            query={query}
             onBack={handleBackToRecommendations}
             onEditPrompt={() => setShowPromptEditor(true)}
             onConvertToNegotiation={() => {
@@ -115,8 +128,9 @@ function App() {
         
         {showPromptEditor && (
           <PromptEditor
-            prompt={prompt}
-            onSubmit={handlePromptSubmit}
+            query={query}
+            filters={filters}
+            onSubmit={handleSearch}
             onClose={() => setShowPromptEditor(false)}
             isModal
           />
@@ -151,20 +165,21 @@ function App() {
                   Find Your Perfect Partner
                 </h1>
                 <p className="text-gray-600">
-                  Describe your sponsorship goals and we'll recommend the best sports team partners for your brand.
+                  Use semantic similarity matching to find sports teams that align with your brand values and objectives.
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <PromptEditor
-                  prompt={prompt}
-                  onSubmit={handlePromptSubmit}
+                  query={query}
+                  filters={filters}
+                  onSubmit={handleSearch}
                 />
               </div>
 
               {loading && (
                 <div className="mt-6 text-center text-sm text-gray-500">
-                  Loading {teams.length > 0 ? teams.length : ''} teams...
+                  Loading team data...
                 </div>
               )}
             </div>
@@ -180,42 +195,56 @@ function App() {
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   <HugeiconsIcon icon={ArrowLeft02Icon} size={16} />
-                  All Negotiations
+                  New Search
                 </button>
                 <button
                   onClick={() => setShowPromptEditor(true)}
                   className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <HugeiconsIcon icon={Edit02Icon} size={16} />
-                  Edit Prompt
+                  Edit Criteria
                 </button>
               </div>
 
-              {/* Prompt Display */}
+              {/* Search Summary Display */}
               <div className="mb-8">
-                <div className="text-sm text-gray-500 mb-2">AI-Recommendation Prompt</div>
+                <div className="text-sm text-gray-500 mb-2">Search Criteria</div>
                 <div className="bg-slate-800 text-white rounded-lg px-4 py-3 text-sm">
-                  {promptDisplayString}
+                  {searchSummary}
                 </div>
               </div>
 
+              {/* Error Message */}
+              {error && (
+                <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
+                  {error}
+                </div>
+              )}
+
               {/* Loading State */}
-              {generating && (
+              {searching && (
                 <div className="flex flex-col items-center justify-center py-16">
                   <div className="w-12 h-12 border-4 border-teal-200 border-t-teal-600 rounded-full animate-spin mb-4" />
-                  <p className="text-gray-600">Analyzing {teams.length} teams...</p>
+                  <p className="text-gray-600">Computing similarity scores...</p>
+                  <p className="text-sm text-gray-500 mt-1">Embedding your criteria and matching against teams</p>
                 </div>
               )}
 
               {/* Recommendations Grid */}
-              {!generating && recommendations.length > 0 && (
+              {!searching && recommendations.length > 0 && (
                 <>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-gray-500">
+                      {recommendations.length} teams found, sorted by similarity
+                    </span>
+                  </div>
+                  
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     {recommendations.slice(0, 4).map((rec) => (
                       <RecommendationCard
-                        key={rec.team._id}
+                        key={rec.scoredTeam._id}
                         recommendation={rec}
-                        onClick={() => handleSelectTeam(rec.team)}
+                        onClick={() => handleSelectTeam(rec)}
                       />
                     ))}
                   </div>
@@ -224,17 +253,17 @@ function App() {
                   {recommendations.length > 4 && (
                     <details className="mb-8">
                       <summary className="cursor-pointer text-sm text-teal-600 hover:text-teal-700 font-medium mb-4">
-                        Show {recommendations.length - 4} more recommendations
+                        Show {recommendations.length - 4} more teams
                       </summary>
                       <div className="grid md:grid-cols-2 gap-6">
                         {recommendations.slice(4).map((rec) => (
                           <RecommendationCard
-                            key={rec.team._id}
+                            key={rec.scoredTeam._id}
                             recommendation={rec}
-                            onClick={() => handleSelectTeam(rec.team)}
+                            onClick={() => handleSelectTeam(rec)}
                           />
                         ))}
-                      </div>
+      </div>
                     </details>
                   )}
 
@@ -244,29 +273,31 @@ function App() {
                       onClick={() => setShowPromptEditor(true)}
                       className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      Edit Your Prompt
+                      Edit Criteria
                     </button>
                     <button
                       onClick={handleRefresh}
-                      disabled={generating}
+                      disabled={searching}
                       className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50"
                     >
                       <HugeiconsIcon icon={RefreshIcon} size={16} />
-                      Refresh Recommendations
-                    </button>
+                      Refresh Results
+        </button>
                   </div>
                 </>
               )}
 
               {/* No Results */}
-              {!generating && recommendations.length === 0 && (
+              {!searching && recommendations.length === 0 && (
                 <div className="text-center py-16">
-                  <p className="text-gray-600 mb-4">No recommendations found. Try adjusting your prompt.</p>
+                  <p className="text-gray-600 mb-4">
+                    No matching teams found. Try adjusting your search criteria.
+                  </p>
                   <button
                     onClick={() => setShowPromptEditor(true)}
                     className="px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors"
                   >
-                    Edit Prompt
+                    Edit Criteria
                   </button>
                 </div>
               )}
@@ -278,8 +309,9 @@ function App() {
       {/* Prompt Editor Modal */}
       {showPromptEditor && (
         <PromptEditor
-          prompt={prompt}
-          onSubmit={handlePromptSubmit}
+          query={query}
+          filters={filters}
+          onSubmit={handleSearch}
           onClose={() => setShowPromptEditor(false)}
           isModal
         />

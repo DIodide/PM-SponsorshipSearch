@@ -1,3 +1,89 @@
+// Filter options
+export const REGIONS = [
+  { value: "northeast", label: "Northeast" },
+  { value: "southeast", label: "Southeast" },
+  { value: "midwest", label: "Midwest" },
+  { value: "southwest", label: "Southwest" },
+  { value: "west", label: "West" },
+];
+
+export const DEMOGRAPHICS = [
+  { value: "families", label: "Families" },
+  { value: "young-professionals", label: "Young Professionals" },
+  { value: "millennials", label: "Millennials" },
+  { value: "gen-z", label: "Gen Z" },
+  { value: "affluent", label: "Affluent" },
+  { value: "sports-enthusiasts", label: "Sports Enthusiasts" },
+];
+
+export const BRAND_VALUES = [
+  { value: "community", label: "Community" },
+  { value: "performance", label: "Performance" },
+  { value: "innovation", label: "Innovation" },
+  { value: "tradition", label: "Tradition" },
+  { value: "wellness", label: "Wellness" },
+  { value: "sustainability", label: "Sustainability" },
+  { value: "excellence", label: "Excellence" },
+  { value: "family", label: "Family-Friendly" },
+];
+
+export const LEAGUES = [
+  { value: "NFL", label: "NFL" },
+  { value: "NBA", label: "NBA" },
+  { value: "MLB", label: "MLB" },
+  { value: "NHL", label: "NHL" },
+  { value: "MLS", label: "MLS" },
+  { value: "WNBA", label: "WNBA" },
+  { value: "USL", label: "USL" },
+  { value: "Minor League", label: "Minor League" },
+];
+
+export const GOALS = [
+  { value: "awareness", label: "Brand Awareness" },
+  { value: "trial", label: "Product Trial" },
+  { value: "loyalty", label: "Customer Loyalty" },
+  { value: "b2b", label: "B2B Relationships" },
+  { value: "employer-brand", label: "Employer Brand" },
+  { value: "local-presence", label: "Local Presence" },
+];
+
+// Search filters matching similarityScoring.ts requirements
+export interface SearchFilters {
+  regions: string[];
+  demographics: string[];
+  brandValues: string[];
+  leagues: string[];
+  goals: string[];
+  budgetMin?: number;
+  budgetMax?: number;
+}
+
+// AllTeamsClean type from Convex
+export interface AllTeamsClean {
+  _id: string;
+  name: string;
+  region: string;
+  league: string;
+  official_url: string;
+  region_embedding: number[] | null;
+  league_embedding: number[] | null;
+  values_embedding: number[] | null;
+  sponsors_embedding: number[] | null;
+  family_programs_embedding: number[] | null;
+  community_programs_embedding: number[] | null;
+  partners_embedding: number[] | null;
+  digital_reach: number;
+  local_reach: number;
+  family_friendly: number | null;
+  value_tier: number; // 1 = budget-friendly, 2 = mid-tier, 3 = premium
+}
+
+// Team with similarity score
+export interface ScoredTeam extends AllTeamsClean {
+  similarity_score: number;
+}
+
+// Team data from All_Teams (for additional info display)
 export interface SocialHandle {
   platform: string;
   handle: string;
@@ -63,17 +149,11 @@ export interface Team {
   last_enriched?: string | null;
 }
 
-// AI Recommendation types
-export interface RecommendationPrompt {
-  objective: string;
-  budget?: number;
-  region?: string;
-}
-
+// Combined result for display
 export interface TeamRecommendation {
-  team: Team;
-  matchScore: number;
-  description: string;
+  scoredTeam: ScoredTeam;
+  fullTeam?: Team; // Optional additional data from All_Teams
+  matchPercent: number;
   priceEstimate: number;
   sport: string;
 }
@@ -89,30 +169,6 @@ export interface TeamDetailAnalysis {
   sources: string[];
   priceEstimate: number;
 }
-
-export interface FilterState {
-  search: string;
-  leagues: string[];
-  minValuation?: number;
-  maxValuation?: number;
-  hasSocialData: boolean | null;
-  hasGeoData: boolean | null;
-  sortBy: 'name' | 'valuation' | 'followers' | 'attendance';
-  sortOrder: 'asc' | 'desc';
-}
-
-export const LEAGUES = [
-  'NFL', 'NBA', 'MLB', 'NHL', 'MLS',
-  'G League', 'WNBA', 'Minor League Baseball',
-  'AHL', 'ECHL', 'USL Championship', 'NWSL'
-];
-
-export const SORT_OPTIONS = [
-  { value: 'name', label: 'Name' },
-  { value: 'valuation', label: 'Franchise Value' },
-  { value: 'followers', label: 'Social Following' },
-  { value: 'attendance', label: 'Attendance' },
-] as const;
 
 // Navigation items
 export interface NavItem {
