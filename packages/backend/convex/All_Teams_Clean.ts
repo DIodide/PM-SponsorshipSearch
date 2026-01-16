@@ -19,7 +19,6 @@ export type AllTeamsClean = {
     values_embedding: number[] | null;
     sponsors_embedding: number[] | null;
     family_programs_embedding: number[] | null;
-    mission_embedding: number[] | null;
     community_programs_embedding: number[] | null;
     partners_embedding: number[] | null;
     digital_reach: number;

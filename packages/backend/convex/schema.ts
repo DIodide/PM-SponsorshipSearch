@@ -279,7 +279,6 @@ export default defineSchema({
     values_embedding: v.union(v.array(v.float64()), v.null()),
     sponsors_embedding: v.union(v.array(v.float64()), v.null()),
     family_programs_embedding: v.union(v.array(v.float64()), v.null()),
-    mission_embedding: v.union(v.array(v.float64()), v.null()),
     community_programs_embedding: v.union(v.array(v.float64()), v.null()),
     partners_embedding: v.union(v.array(v.float64()), v.null()),
   

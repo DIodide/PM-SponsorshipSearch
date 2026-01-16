@@ -113,14 +113,13 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
       for (const row of seed) {
         // Parallelize the 48embedding calls for THIS row
         // We use Promise.all to "await" all of them together
-        const [regionEmb, leagueEmb, valuesEmb, sponsorsEmb, familyProgramsEmb, missionEmb, communityProgramsEmb, partnersEmb] = await Promise.all([
+        const [regionEmb, leagueEmb, valuesEmb, sponsorsEmb, familyProgramsEmb, communityProgramsEmb, partnersEmb] = await Promise.all([
             row.region ? embed(row.region, apiKey) : Promise.resolve(null),
             // Should I use league or category?
             row.league ? embed(row.league, apiKey) : Promise.resolve(null),
             row.mission_tags ? embed(row.mission_tags.join(" "), apiKey) : Promise.resolve(null),
             row.sponsors ? embed(typeof row.sponsors === "string" ? row.sponsors : JSON.stringify(row.sponsors), apiKey) : Promise.resolve(null),
             row.family_program_types ? embed(row.family_program_types.join(" "), apiKey) : Promise.resolve(null),
-            row.mission_tags ? embed(row.mission_tags.join(" "), apiKey) : Promise.resolve(null),
             row.community_programs ? embed(row.community_programs.join(" "), apiKey) : Promise.resolve(null),
             row.cause_partnerships ? embed(row.cause_partnerships.join(" "), apiKey) : Promise.resolve(null),
         ]);
@@ -168,7 +167,6 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
           values_embedding: valuesEmb,
           sponsors_embedding: sponsorsEmb,
           family_programs_embedding: familyProgramsEmb,
-          mission_embedding: missionEmb,
           community_programs_embedding: communityProgramsEmb,
           partners_embedding: partnersEmb,
 
