@@ -201,3 +201,78 @@ export async function fetchEnrichmentTaskDiff(taskId: string): Promise<Enrichmen
   }
   return response.json();
 }
+
+// ============ Convex Export API ============
+
+import type { 
+  ConvexStatus, 
+  ConvexExportPreview, 
+  ConvexExportResult, 
+  ConvexExportMode,
+  ConvexExportAllPreview,
+  ConvexExportAllResult,
+} from '@/types';
+
+export async function fetchConvexStatus(): Promise<ConvexStatus> {
+  const response = await fetch(`${API_BASE}/convex/status`);
+  if (!response.ok) throw new Error('Failed to fetch Convex status');
+  return response.json();
+}
+
+export async function fetchConvexExportPreview(scraperId: string): Promise<ConvexExportPreview> {
+  const response = await fetch(`${API_BASE}/convex/preview`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ scraper_id: scraperId }),
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to fetch export preview');
+  }
+  return response.json();
+}
+
+export async function exportToConvex(
+  scraperId: string,
+  mode: ConvexExportMode
+): Promise<ConvexExportResult> {
+  const response = await fetch(`${API_BASE}/convex/export`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ scraper_id: scraperId, mode }),
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to export to Convex');
+  }
+  return response.json();
+}
+
+// ============ Convex Export All API ============
+
+export async function fetchConvexExportAllPreview(): Promise<ConvexExportAllPreview> {
+  const response = await fetch(`${API_BASE}/convex/preview-all`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to fetch export all preview');
+  }
+  return response.json();
+}
+
+export async function exportAllToConvex(
+  mode: ConvexExportMode
+): Promise<ConvexExportAllResult> {
+  const response = await fetch(`${API_BASE}/convex/export-all`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ mode }),
+  });
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.detail || 'Failed to export all to Convex');
+  }
+  return response.json();
+}

@@ -3,6 +3,7 @@ import { useScrapers, useScraperData } from '@/hooks/useScrapers';
 import { ScraperCard } from '@/components/ScraperCard';
 import { DataViewer } from '@/components/DataViewer';
 import { EnrichmentTasksPanel } from '@/components/EnrichmentTasksPanel';
+import { ConvexExportAllModal } from '@/components/ConvexExportAllModal';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   Database01Icon,
@@ -10,6 +11,7 @@ import {
   GridIcon,
   SparklesIcon,
   Layers01Icon,
+  CloudUploadIcon,
 } from '@hugeicons/core-free-icons';
 
 type ViewMode = 'scrapers' | 'enrichment';
@@ -19,6 +21,7 @@ function App() {
   const [selectedScraperId, setSelectedScraperId] = useState<string | null>(null);
   const { data: scraperData, loading: dataLoading, refresh: refreshData } = useScraperData(selectedScraperId);
   const [viewMode, setViewMode] = useState<ViewMode>('scrapers');
+  const [showExportAllModal, setShowExportAllModal] = useState(false);
 
   const handleViewData = (id: string) => {
     if (selectedScraperId === id) {
@@ -87,13 +90,22 @@ function App() {
               </button>
             </div>
             
-            <button
-              onClick={() => refresh()}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border hover:bg-muted transition-colors text-sm font-medium"
-            >
-              <HugeiconsIcon icon={RefreshIcon} size={16} />
-              Refresh
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setShowExportAllModal(true)}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white hover:from-violet-700 hover:to-fuchsia-700 transition-all text-sm font-medium shadow-lg shadow-violet-500/20"
+              >
+                <HugeiconsIcon icon={CloudUploadIcon} size={16} />
+                Export All to Convex
+              </button>
+              <button
+                onClick={() => refresh()}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border hover:bg-muted transition-colors text-sm font-medium"
+              >
+                <HugeiconsIcon icon={RefreshIcon} size={16} />
+                Refresh
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -227,6 +239,11 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {/* Export All Modal */}
+      {showExportAllModal && (
+        <ConvexExportAllModal onClose={() => setShowExportAllModal(false)} />
+      )}
     </div>
   );
 }

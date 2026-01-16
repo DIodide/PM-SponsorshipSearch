@@ -359,14 +359,14 @@ class GeoEnricher(BaseEnricher):
     - geo_city: Resolved city name
     - geo_country: Country code (US, CA, MX, DO)
     - city_population: Population count for the team's city (US only)
-    - metro_gdp_millions: Metro area GDP (future enhancement)
+    - metro_gdp: Metro area GDP in raw dollars (future enhancement)
     """
 
     name = "Geographic Enricher"
     description = (
         "Adds city population and metro GDP data from Data Commons and BEA APIs"
     )
-    fields_added = ["geo_city", "geo_country", "city_population", "metro_gdp_millions"]
+    fields_added = ["geo_city", "geo_country", "city_population", "metro_gdp"]
 
     def __init__(self, config: Optional[EnricherConfig] = None):
         """Initialize with optional configuration."""
