@@ -12,7 +12,7 @@ import { TeamDetailView } from './components/TeamDetailView';
 import { PromptEditor, buildSearchSummary } from './components/PromptEditor';
 import { fetchAllTeams, computeSimilarity, fetchAllTeamsClean } from './lib/api';
 import { scoredTeamsToRecommendations } from './lib/ai';
-import type { Team, ScoredTeam, TeamRecommendation, SearchFilters } from './types';
+import type { Team, TeamRecommendation, SearchFilters } from './types';
 
 type ViewMode = 'initial' | 'recommendations' | 'detail';
 
