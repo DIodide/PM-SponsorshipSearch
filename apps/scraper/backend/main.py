@@ -635,8 +635,10 @@ async def get_enricher(enricher_id: str):
     """Get information about a specific enricher."""
     enricher_class = EnricherRegistry.get(enricher_id)
     if not enricher_class:
-        raise HTTPException(status_code=404, detail=f"Enricher '{enricher_id}' not found")
-    
+        raise HTTPException(
+            status_code=404, detail=f"Enricher '{enricher_id}' not found"
+        )
+
     enricher = enricher_class()
     info = enricher.get_info()
     return EnricherInfoResponse(
@@ -648,85 +650,97 @@ async def get_enricher(enricher_id: str):
     )
 
 
-@app.post("/api/scrapers/{scraper_id}/enrich", response_model=List[EnrichmentResultResponse])
-async def run_enrichment(scraper_id: str, request: Optional[RunEnrichmentRequest] = None):
+@app.post(
+    "/api/scrapers/{scraper_id}/enrich", response_model=List[EnrichmentResultResponse]
+)
+async def run_enrichment(
+    scraper_id: str, request: Optional[RunEnrichmentRequest] = None
+):
     """
     Run enrichment on scraped data.
-    
+
     If enricher_ids is provided, only those enrichers will run.
     If enricher_ids is None or empty, all available enrichers will run.
     """
     if scraper_id not in SCRAPERS:
         raise HTTPException(status_code=404, detail="Scraper not found")
-    
+
     state = app_state.scrapers.get(scraper_id, ScraperState())
     json_path = state.last_json_path
-    
+
     if not json_path or not Path(json_path).exists():
         raise HTTPException(
             status_code=404, detail="No data file found. Run the scraper first."
         )
-    
+
     # Load data
     with open(json_path, "r") as f:
         teams_data = json.load(f)
-    
+
     # Convert to TeamRow objects
     teams = [TeamRow.from_dict(t) for t in teams_data]
-    
+
     # Determine which enrichers to run
     if request and request.enricher_ids:
         enricher_ids = request.enricher_ids
     else:
         # Run all available enrichers
-        enricher_ids = [e["id"] for e in EnricherRegistry.list_all() if e.get("available", False)]
-    
+        enricher_ids = [
+            e["id"] for e in EnricherRegistry.list_all() if e.get("available", False)
+        ]
+
     # Run enrichers
     results: List[EnrichmentResultResponse] = []
-    
+
     for enricher_id in enricher_ids:
         enricher = EnricherRegistry.create(enricher_id)
         if not enricher:
-            results.append(EnrichmentResultResponse(
-                success=False,
-                enricher_name=enricher_id,
-                teams_processed=0,
-                teams_enriched=0,
-                duration_ms=0,
-                timestamp=datetime.now().isoformat(),
-                error=f"Enricher '{enricher_id}' not found",
-            ))
+            results.append(
+                EnrichmentResultResponse(
+                    success=False,
+                    enricher_name=enricher_id,
+                    teams_processed=0,
+                    teams_enriched=0,
+                    duration_ms=0,
+                    timestamp=datetime.now().isoformat(),
+                    error=f"Enricher '{enricher_id}' not found",
+                )
+            )
             continue
-        
+
         if not enricher.is_available():
-            results.append(EnrichmentResultResponse(
-                success=False,
-                enricher_name=enricher.name,
-                teams_processed=0,
-                teams_enriched=0,
-                duration_ms=0,
-                timestamp=datetime.now().isoformat(),
-                error=f"Enricher '{enricher.name}' is not available (missing configuration)",
-            ))
+            results.append(
+                EnrichmentResultResponse(
+                    success=False,
+                    enricher_name=enricher.name,
+                    teams_processed=0,
+                    teams_enriched=0,
+                    duration_ms=0,
+                    timestamp=datetime.now().isoformat(),
+                    error=f"Enricher '{enricher.name}' is not available (missing configuration)",
+                )
+            )
             continue
-        
+
         # Run the enricher
         result = await enricher.enrich(teams)
-        results.append(EnrichmentResultResponse(
-            success=result.success,
-            enricher_name=result.enricher_name,
-            teams_processed=result.teams_processed,
-            teams_enriched=result.teams_enriched,
-            duration_ms=result.duration_ms,
-            timestamp=result.timestamp,
-            error=result.error,
-        ))
-    
+        results.append(
+            EnrichmentResultResponse(
+                success=result.success,
+                enricher_name=result.enricher_name,
+                teams_processed=result.teams_processed,
+                teams_enriched=result.teams_enriched,
+                duration_ms=result.duration_ms,
+                timestamp=result.timestamp,
+                error=result.error,
+            )
+        )
+
     # Save enriched data back to file
     enriched_data = [t.to_dict() for t in teams]
     with open(json_path, "w") as f:
         json.dump(enriched_data, f, indent=2)
-    
+
     return results
 
 
@@ -735,28 +749,28 @@ async def get_enrichment_status(scraper_id: str):
     """Get the enrichment status for a scraper's data."""
     if scraper_id not in SCRAPERS:
         raise HTTPException(status_code=404, detail="Scraper not found")
-    
+
     state = app_state.scrapers.get(scraper_id, ScraperState())
     json_path = state.last_json_path
-    
+
     if not json_path or not Path(json_path).exists():
         return {
             "has_data": False,
             "teams_count": 0,
             "enrichments": {},
         }
-    
+
     # Load data to check enrichment status
     with open(json_path, "r") as f:
         teams_data = json.load(f)
-    
+
     # Count enrichments
     enrichment_counts: Dict[str, int] = {}
     for team in teams_data:
         applied = team.get("enrichments_applied") or []
         for e in applied:
             enrichment_counts[e] = enrichment_counts.get(e, 0) + 1
-    
+
     return {
         "has_data": True,
         "teams_count": len(teams_data),

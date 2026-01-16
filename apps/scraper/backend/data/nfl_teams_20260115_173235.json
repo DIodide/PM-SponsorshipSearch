@@ -1,0 +1,3800 @@
+[
+  {
+    "name": "Arizona Cardinals",
+    "region": "Arizona",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Arizona, plus the broader national NFL audience.",
+    "official_url": "https://www.azcardinals.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+    "geo_city": "Phoenix",
+    "geo_country": "US",
+    "city_population": 1673164,
+    "metro_gdp_millions": null,
+    "followers_x": 1000000,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1000000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 4,
+    "family_program_types": [
+      "Kids Club",
+      "School Programs",
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "State Farm Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 99.0,
+    "franchise_value_millions": 5500.0,
+    "annual_revenue_millions": 571.0,
+    "mission_tags": [
+      "Special Needs",
+      "Youth Development",
+      "Veterans & Military",
+      "Hunger Relief"
+    ],
+    "community_programs": [],
+    "cause_partnerships": [
+      "St. Vincent DePaul",
+      "State Farm",
+      "Special Olympics",
+      "Barrow",
+      "SARCC",
+      "Treasure House",
+      "Dignity Health"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262725"
+  },
+  {
+    "name": "Atlanta Falcons",
+    "region": "Atlanta",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Atlanta, plus the broader national NFL audience.",
+    "official_url": "https://www.atlantafalcons.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+    "geo_city": "Atlanta",
+    "geo_country": "US",
+    "city_population": 520070,
+    "metro_gdp_millions": null,
+    "followers_x": 2200000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Mercedes-Benz Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 112.0,
+    "franchise_value_millions": 6350.0,
+    "annual_revenue_millions": 612.0,
+    "mission_tags": [
+      "Youth Development",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Education",
+      "Community Development",
+      "Health & Wellness",
+      "Diversity & Inclusion",
+      "Cancer Awareness"
+    ],
+    "community_programs": [
+      "Salute to Service",
+      "Youth and High School Football",
+      "Girls Flag Football",
+      "Atlanta Falcons Community Honors Show",
+      "Falcons Feast",
+      "Bijan Reads Book Fair",
+      "Hometown Huddle",
+      "Fishing with the Falcons",
+      "Freddie-Grams",
+      "Rookie Club Tackle Football Camp",
+      "Military Appreciation Week",
+      "Dazzle and Dine",
+      "Falcons Fellows",
+      "NFL FLAG-In-Schools Training",
+      "Youth Flag Football Clinic on Rocky Boy Reservation"
+    ],
+    "cause_partnerships": [
+      "Arthur M. Blank Family Foundation",
+      "Publix",
+      "Georgia Power",
+      "KABOOM!",
+      "Compassion International",
+      "Cigna",
+      "Coca-Cola",
+      "Children's Healthcare of Atlanta",
+      "Norfolk Southern",
+      "P&G",
+      "Zaxby's",
+      "Grady Health System"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262744"
+  },
+  {
+    "name": "Baltimore Ravens",
+    "region": "Baltimore",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Baltimore, plus the broader national NFL audience.",
+    "official_url": "https://www.baltimoreravens.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+    "geo_city": "Baltimore",
+    "geo_country": "US",
+    "city_population": 568271,
+    "metro_gdp_millions": null,
+    "followers_x": 1800000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "M&T Bank Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 120.0,
+    "franchise_value_millions": 6100.0,
+    "annual_revenue_millions": 621.0,
+    "mission_tags": [
+      "Diversity & Inclusion",
+      "Youth Development"
+    ],
+    "community_programs": [
+      "Ravens Fellowship for Diversity in Football"
+    ],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262749"
+  },
+  {
+    "name": "Buffalo Bills",
+    "region": "Buffalo",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Buffalo, plus the broader national NFL audience.",
+    "official_url": "https://www.buffalobills.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+    "geo_city": "Buffalo",
+    "geo_country": "US",
+    "city_population": 276617,
+    "metro_gdp_millions": null,
+    "followers_x": 1800000,
+    "followers_instagram": 3000000,
+    "followers_facebook": null,
+    "followers_tiktok": 2700000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Kids Club",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Highmark Stadium",
+    "sponsors": [
+      {
+        "name": "Arctos",
+        "category": "Financial Services",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Palumbo",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Carter",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Altidore",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Gouw",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "McGrady",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Burger",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "McCollum",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Ward",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      },
+      {
+        "name": "Joo",
+        "category": "Other",
+        "asset_type": "Limited Partner"
+      }
+    ],
+    "avg_ticket_price": 102.0,
+    "franchise_value_millions": 5950.0,
+    "annual_revenue_millions": 585.0,
+    "mission_tags": [
+      "Hunger Relief",
+      "Youth Development",
+      "Health & Wellness",
+      "Diversity & Inclusion",
+      "Education",
+      "Community Development",
+      "Mental Health"
+    ],
+    "community_programs": [
+      "Inspire Change Grants",
+      "LISC Grassroots Field Grant Program",
+      "Community Honors",
+      "Thanksgiving Blitz",
+      "Free Mobile Food Markets at Buffalo Public School Saturday Academies",
+      "Huddle for Hunger",
+      "Give 716 Day",
+      "Play 60 Charged Up by Wegmans",
+      "Buffalo Bills Community Takeover"
+    ],
+    "cause_partnerships": [
+      "NFL Foundation",
+      "Wegmans",
+      "No Kid Hungry",
+      "Buffalo Go Green",
+      "Buffalo Prep",
+      "Massachusetts Avenue Project",
+      "LISC",
+      "Ralph Wilson Park Conservancy",
+      "BestSelf",
+      "American Heart Association",
+      "Project Play",
+      "FeedMoore WNY",
+      "Salvation Army",
+      "EVERFI"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262753"
+  },
+  {
+    "name": "Carolina Panthers",
+    "region": "Carolina",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Carolina, plus the broader national NFL audience.",
+    "official_url": "https://www.panthers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png",
+    "geo_city": "Charlotte",
+    "geo_country": "US",
+    "city_population": 943476,
+    "metro_gdp_millions": null,
+    "followers_x": 2800000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1400000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Bank of America Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 115.0,
+    "franchise_value_millions": 5700.0,
+    "annual_revenue_millions": 588.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262758"
+  },
+  {
+    "name": "Chicago Bears",
+    "region": "Chicago",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Chicago, plus the broader national NFL audience.",
+    "official_url": "https://www.chicagobears.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+    "geo_city": "Chicago",
+    "geo_country": "US",
+    "city_population": 2721308,
+    "metro_gdp_millions": null,
+    "followers_x": 2000000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Kids Club"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Soldier Field",
+    "sponsors": null,
+    "avg_ticket_price": 130.0,
+    "franchise_value_millions": 8200.0,
+    "annual_revenue_millions": 629.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Community Development",
+      "Cancer Awareness"
+    ],
+    "community_programs": [
+      "Bears Care Auction",
+      "Gameday GRRReetings",
+      "Bears Share ticket donation program",
+      "Real Bears Fans Wear Pink campaign",
+      "Back to School Fair",
+      "Bears Care Gala"
+    ],
+    "cause_partnerships": [
+      "Robert R. McCormick Foundation",
+      "Greater Auburn Gresham Development Corporation",
+      "TeamSmile",
+      "Bernie's Book Bank",
+      "PNC Bank",
+      "Good Foods",
+      "Funk's Barbershop",
+      "Advocate Health Care",
+      "Dr Pepper",
+      "Northern Illinois Food Bank",
+      "Shell",
+      "Steinhafels"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262761"
+  },
+  {
+    "name": "Cincinnati Bengals",
+    "region": "Cincinnati",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Cincinnati, plus the broader national NFL audience.",
+    "official_url": "https://www.bengals.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
+    "geo_city": "Cincinnati",
+    "geo_country": "US",
+    "city_population": 314915,
+    "metro_gdp_millions": null,
+    "followers_x": 1600000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": 2400000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Family Experience",
+      "School Programs",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Paycor Stadium",
+    "sponsors": [
+      {
+        "name": "Operation Ramp It Up",
+        "category": "Non-profit",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Salvation Army",
+        "category": "Non-profit",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Nationwide",
+        "category": "Insurance",
+        "asset_type": "Presenting Sponsor"
+      },
+      {
+        "name": "YWCA Greater Cincinnati",
+        "category": "Non-profit",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NFL",
+        "category": "Sports League",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Lindsey Wilson University",
+        "category": "Education",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Gatorade",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Paycor Stadium",
+        "category": "Other",
+        "asset_type": "Stadium Naming Rights"
+      },
+      {
+        "name": "Kettering Health",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 102.0,
+    "franchise_value_millions": 5250.0,
+    "annual_revenue_millions": 573.0,
+    "mission_tags": [
+      "Youth Development",
+      "Veterans & Military"
+    ],
+    "community_programs": [
+      "My Cause My Cleats",
+      "Salute to Service",
+      "Friday Night Stripes"
+    ],
+    "cause_partnerships": [
+      "Operation Ramp It Up",
+      "Salvation Army",
+      "YWCA Greater Cincinnati",
+      "Nationwide"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262765"
+  },
+  {
+    "name": "Cleveland Browns",
+    "region": "Cleveland",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Cleveland, plus the broader national NFL audience.",
+    "official_url": "https://www.clevelandbrowns.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+    "geo_city": "Cleveland",
+    "geo_country": "US",
+    "city_population": 365379,
+    "metro_gdp_millions": null,
+    "followers_x": 1600000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1500000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Kids Club",
+      "School Programs",
+      "Youth Academy"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Huntington Bank Field",
+    "sponsors": [
+      {
+        "name": "Minutemen Workforce Solutions",
+        "category": "Staffing",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Medical Mutual",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "GameTruck",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Huntington Bank",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 168.0,
+    "franchise_value_millions": 6400.0,
+    "annual_revenue_millions": 685.0,
+    "mission_tags": [
+      "Youth Development",
+      "Education",
+      "Diversity & Inclusion",
+      "Veterans & Military",
+      "Community Development"
+    ],
+    "community_programs": [
+      "Marion Motley Scholarship",
+      "Stay in the Game! Keep Learning, Every Day Network",
+      "First and Ten",
+      "HELMETS Program"
+    ],
+    "cause_partnerships": [
+      "College Now Greater Cleveland",
+      "Goodwill",
+      "United Airlines",
+      "Ticketmaster",
+      "Bridgestone",
+      "Meijer",
+      "Folds of Honor"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262769"
+  },
+  {
+    "name": "Dallas Cowboys",
+    "region": "Dallas",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Dallas, plus the broader national NFL audience.",
+    "official_url": "https://www.dallascowboys.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+    "geo_city": "Dallas",
+    "geo_country": "US",
+    "city_population": 1326087,
+    "metro_gdp_millions": null,
+    "followers_x": 4099999,
+    "followers_instagram": 5000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "AT&T Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 117.0,
+    "franchise_value_millions": 13000.0,
+    "annual_revenue_millions": 1200.0,
+    "mission_tags": [
+      "Veterans & Military",
+      "Health & Wellness",
+      "Youth Development",
+      "Cancer Awareness"
+    ],
+    "community_programs": [
+      "Cowboys Annual Children's Hospital Visits",
+      "Cowboys Rookie Angel Tree Loading",
+      "Early Thanksgiving at The Salvation Army",
+      "Everybody Plays Field Day",
+      "Make-A-Wish Day",
+      "Play60 Blockchain Youth Camp",
+      "Girls Flag Football College Combine",
+      "Youth Camps"
+    ],
+    "cause_partnerships": [
+      "USAA",
+      "Novartis",
+      "United Way",
+      "The Salvation Army",
+      "Make-A-Wish",
+      "Arlington Youth Foundation"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262772"
+  },
+  {
+    "name": "Denver Broncos",
+    "region": "Denver",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Denver, plus the broader national NFL audience.",
+    "official_url": "https://www.denverbroncos.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
+    "geo_city": "Denver",
+    "geo_country": "US",
+    "city_population": 729019,
+    "metro_gdp_millions": null,
+    "followers_x": 2500000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Family Experience",
+      "Youth Academy"
+    ],
+    "owns_stadium": null,
+    "stadium_name": "Empower Field at Mile High",
+    "sponsors": null,
+    "avg_ticket_price": 132.0,
+    "franchise_value_millions": 6800.0,
+    "annual_revenue_millions": 645.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Veterans & Military",
+      "Special Needs",
+      "Hunger Relief"
+    ],
+    "community_programs": [
+      "Community Grant Program",
+      "Ticket Turnover",
+      "Fight Like A Bronco",
+      "High School Game of the Week",
+      "Inspiration Room"
+    ],
+    "cause_partnerships": [
+      "Marvin W. Foote Youth Services Center",
+      "ChangeMakers Village",
+      "USAA",
+      "Boys & Girls Clubs of Metro Denver",
+      "Timber Trail Elementary School",
+      "Ent Credit Union",
+      "Denver Broncos Boys & Girls Club",
+      "Washington Commanders",
+      "Urban Peak",
+      "Denver Public Schools",
+      "CommonSpirit",
+      "Children's Hospital Colorado",
+      "CommonSpirit St. Anthony Hospital",
+      "Food For Thought",
+      "King Soopers",
+      "Special Olympics Colorado",
+      "Out Teach"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262775"
+  },
+  {
+    "name": "Detroit Lions",
+    "region": "Detroit",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Detroit, plus the broader national NFL audience.",
+    "official_url": "https://www.detroitlions.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
+    "geo_city": "Detroit",
+    "geo_country": "US",
+    "city_population": 645705,
+    "metro_gdp_millions": null,
+    "followers_x": 1700000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": null,
+    "stadium_name": "Ford Field",
+    "sponsors": null,
+    "avg_ticket_price": 107.0,
+    "franchise_value_millions": 5400.0,
+    "annual_revenue_millions": 567.0,
+    "mission_tags": [
+      "Youth Development",
+      "Hunger Relief",
+      "Education",
+      "Community Development",
+      "Diversity & Inclusion",
+      "Social Justice",
+      "Cancer Awareness"
+    ],
+    "community_programs": [
+      "Touchdown in Your Town",
+      "Touchdowns for Teachers",
+      "Girls Flag Football",
+      "Salute to Service",
+      "Inspire Change Changemaker"
+    ],
+    "cause_partnerships": [
+      "Gleaners Community Food Bank",
+      "Kroger",
+      "Lineage Foundation for Good",
+      "Alternatives for Girls",
+      "Boys and Girls Club",
+      "Comerica",
+      "F.A.R.M.",
+      "Nationwide"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262779"
+  },
+  {
+    "name": "Green Bay Packers",
+    "region": "Green Bay",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Green Bay, plus the broader national NFL audience.",
+    "official_url": "https://www.packers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+    "geo_city": "Green Bay",
+    "geo_country": "US",
+    "city_population": 106311,
+    "metro_gdp_millions": null,
+    "followers_x": 2400000,
+    "followers_instagram": 3000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "School Programs"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Lambeau Field",
+    "sponsors": null,
+    "avg_ticket_price": 141.0,
+    "franchise_value_millions": 6650.0,
+    "annual_revenue_millions": 719.0,
+    "mission_tags": [
+      "Youth Development",
+      "Education",
+      "Health & Wellness",
+      "Veterans & Military",
+      "Special Needs",
+      "Community Development"
+    ],
+    "community_programs": [
+      "Give BIG Green Bay",
+      "Empower",
+      "Letters to Lambeau",
+      "Packers Football Outreach Camp",
+      "NFL Play 60 Program",
+      "Packers NFL FLAG Regional Tournament",
+      "Green Bay Packers Coaching School",
+      "Packers Girls Flag Open",
+      "Packers 11-ON",
+      "Packers Helmet Give Back Program",
+      "Exceptional Abilities Challenge",
+      "Salute to Service Tournament",
+      "High School Plays of the Month",
+      "Green Bay Packers Coach of the Week",
+      "Play Football Month",
+      "NFL Flag Football",
+      "NFL Grassroots"
+    ],
+    "cause_partnerships": [
+      "Cenex",
+      "Salvation Army",
+      "Sargento Foods",
+      "Festival Foods",
+      "Hunger Task Force",
+      "Paul's Pantry",
+      "Xenith",
+      "American Family Insurance",
+      "USA Football",
+      "Nike",
+      "Wisconsin Football Coaches Association"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262783"
+  },
+  {
+    "name": "Houston Texans",
+    "region": "Houston",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Houston, plus the broader national NFL audience.",
+    "official_url": "https://www.houstontexans.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+    "geo_city": "Houston",
+    "geo_country": "US",
+    "city_population": 2390125,
+    "metro_gdp_millions": null,
+    "followers_x": 1900000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Kids Club",
+      "School Programs"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "NRG Stadium",
+    "sponsors": [
+      {
+        "name": "Coca-Cola",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Amegy",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Ashley",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Audacy",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "BMW",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Bud Light",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Caesars",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Chevron",
+        "category": "Energy",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "ConocoPhillips",
+        "category": "Energy",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Fiord",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Gatorade",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "H-E-B",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Methodist",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Hyundai",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Kroger",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Mattress Firm",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Modelo",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Mustang Cat",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Phillips 66",
+        "category": "Energy",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Pizza Hut",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Seaside",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Reliant",
+        "category": "Energy",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Skyy Vodka",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Sire Spirits",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "SLB",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "TDECU",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Texas Lottery",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Telemundo",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Ticketmaster",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "United",
+        "category": "Travel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Verizon",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "WM",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Xfinity",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Aramark",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "BG",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "CDW",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Cigna",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Crown Royal",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Hellas Construction",
+        "category": "Construction",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "ImageNet Consulting",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Microsoft",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "MCE",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "ST Graphics",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "BMB",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Burns & McDonnell",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Coushatta",
+        "category": "Gaming",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "HHCC",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "HCEC",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Heineken",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Houston Landscapes",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "EA Sports",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "FedEx",
+        "category": "Logistics",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Frito-Lay",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Genentech",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Glo Sun Spa",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Krat",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Landmark Hospitality",
+        "category": "Hospitality",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Landry's",
+        "category": "Hospitality",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Republic Boot Company",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "McDonald's",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Metabilia",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "My Plates",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NetJets",
+        "category": "Travel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Nutrl",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NOV",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "RingCentral",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Snickers",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "STR",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Shift4",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tito's",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "TSGS",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Victory Live",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Whataburger",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Wildcat",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 117.0,
+    "franchise_value_millions": 7400.0,
+    "annual_revenue_millions": 687.0,
+    "mission_tags": [
+      "Youth Development",
+      "Education",
+      "Community Development",
+      "Health & Wellness",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Diversity & Inclusion",
+      "First Responders",
+      "Cancer Awareness",
+      "Environmental Sustainability"
+    ],
+    "community_programs": [
+      "My Cause, My Cleats",
+      "Pass the STAAR with TORO",
+      "Senior Showcase",
+      "Inspire Change grant fund",
+      "Texans Care Volunteer Day",
+      "Girls FLAG Football League",
+      "BOLD Award",
+      "Salute to Service Flag Football Game",
+      "Whataburger Hunger Action Month",
+      "Charity Golf Classic",
+      "PLAY 60 Bikes on the Bayou",
+      "Reading with the Pros",
+      "Bedtime Stories with TORO",
+      "Houston Reads Day",
+      "United Airlines and Houston Texans Career Exploration Day",
+      "Black Impact Houston BHM Mixer",
+      "Station 46 Tribute",
+      "Houston Texans Volunteerism"
+    ],
+    "cause_partnerships": [
+      "BookSeats",
+      "Coyote Promotions",
+      "Shariff Injury Lawyers",
+      "Slovacek",
+      "NFL FLAG",
+      "Nike",
+      "Coca-Cola",
+      "American National Insurance",
+      "Whataburger",
+      "Houston Food Bank",
+      "Kroger",
+      "Family Houston",
+      "BMW Centers",
+      "Texas Children's",
+      "Mattress Firm",
+      "United Airlines",
+      "Chevron",
+      "Houston Methodist",
+      "TDECU",
+      "YMCA of Greater Houston",
+      "USAA"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262786"
+  },
+  {
+    "name": "Indianapolis Colts",
+    "region": "Indianapolis",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Indianapolis, plus the broader national NFL audience.",
+    "official_url": "https://www.colts.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png",
+    "geo_city": "Indianapolis",
+    "geo_country": "US",
+    "city_population": 891484,
+    "metro_gdp_millions": null,
+    "followers_x": 1100000,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1300000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Family Experience",
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Lucas Oil Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 180.0,
+    "franchise_value_millions": 5900.0,
+    "annual_revenue_millions": 593.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Diversity & Inclusion",
+      "Education",
+      "Community Development",
+      "Social Justice"
+    ],
+    "community_programs": [
+      "Books for Youth",
+      "Inspire Change",
+      "Kicking the Stigma",
+      "My Cause My Cleats",
+      "Horseshoe Helpings"
+    ],
+    "cause_partnerships": [
+      "The Bloom Project",
+      "CSI Cargo Services",
+      "Peyton Manning Children's Hospital"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262790"
+  },
+  {
+    "name": "Jacksonville Jaguars",
+    "region": "Jacksonville",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Jacksonville, plus the broader national NFL audience.",
+    "official_url": "https://www.jaguars.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
+    "geo_city": "Jacksonville",
+    "geo_country": "US",
+    "city_population": 1009833,
+    "metro_gdp_millions": null,
+    "followers_x": 9,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Kids Club"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "EverBank Field",
+    "sponsors": null,
+    "avg_ticket_price": 102.0,
+    "franchise_value_millions": 5600.0,
+    "annual_revenue_millions": 552.0,
+    "mission_tags": [
+      "Youth Development",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Education",
+      "Diversity & Inclusion",
+      "Health & Wellness"
+    ],
+    "community_programs": [
+      "Jaguars Prep",
+      "Honor Rows",
+      "CRUCIAL CATCH",
+      "HISPANIC HERITAGE MONTH",
+      "MY CAUSE MY CLEATS",
+      "COMMUNITY CHAMPION",
+      "Salute to Service",
+      "Play Football Month",
+      "Literacy Locker Room",
+      "Battle of the Branches",
+      "Turkey Time",
+      "Shop with a Jaguar",
+      "Inspire Change Changemaker Award"
+    ],
+    "cause_partnerships": [
+      "Action Sports Jax",
+      "Florida Blue",
+      "MaliVai Washington Youth Foundation",
+      "Ronald McDonald House",
+      "Northeast Florida Immigrant Resource Alliance",
+      "ScienceSIS Foundation",
+      "CSX",
+      "Veterans Benefit Guide",
+      "Five Star Veterans Center",
+      "JEA",
+      "Peoples Gas",
+      "The Palette Jax",
+      "Feeding Northeast Florida",
+      "American Red Cross",
+      "1928 Cuban Bistro",
+      "I'm A Star Foundation"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262793"
+  },
+  {
+    "name": "Kansas City Chiefs",
+    "region": "Kansas City",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Kansas City, plus the broader national NFL audience.",
+    "official_url": "https://www.chiefs.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+    "geo_city": "Kansas City",
+    "geo_country": "US",
+    "city_population": 516032,
+    "metro_gdp_millions": null,
+    "followers_x": 2600000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Birthday Party",
+      "Kids Club"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Cotton Bowl",
+    "sponsors": [
+      {
+        "name": "All Copy Products",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Amazon Web Services",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Audacy",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Bad Boy Mowers",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Barefoot Wine",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "BetMGM",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Branson",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Anheuser-Busch",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Build-a-Bear",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Burns and McDonnell",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Club Car Wash",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Coca-Cola",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "CommunityAmerica Credit Union",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Crown Royal",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Dayforce",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "DraftKings",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "EA Sports",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Envision",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Evergy",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Fanduel",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Forvis Mazars",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Frito-Lay",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Gatorade",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "G.E.H.A",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Hallmark",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Harrah's Kansas City",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "He Gets Us",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Heinz",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Helzberg Diamonds",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "I Got It!",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "IMA Financial",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Jim Beam",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Kansas Lottery",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "KSHB",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Legends Global",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Little Caesars",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "McDonald's",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Microsoft",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Midwest Ford Dealers",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Missouri Department of Transportation",
+        "category": "Government",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Morton Salt",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Mosaic Life Care",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Nationwide",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Oakley",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Omaha Steaks",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "On Location",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Ororo",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Polsinelli",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Procter and Gamble",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Salvation Army",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Scheels",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Shelter Insurance",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Shift 4",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Snickers",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Sony",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Storage Mart",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Svedka",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "T-Mobile",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "TAMKO",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Technology Group Solutions",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Texas Tech University",
+        "category": "Education",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "The University of Kansas Health System",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Ticketmaster",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tickets For Less",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tico Sports",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Torchy's Tacos",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Transwest RV",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tyson Foods",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "UMKC",
+        "category": "Education",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "United Airlines",
+        "category": "Travel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "University Sports Publications",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Velveeta",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Vena Solutions",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Window World",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "YouTube TV",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 132.0,
+    "franchise_value_millions": 6200.0,
+    "annual_revenue_millions": 610.0,
+    "mission_tags": [
+      "Community Development"
+    ],
+    "community_programs": [],
+    "cause_partnerships": [
+      "Nationwide",
+      "Walter Payton Man of the Year \"Charity Challenge\""
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262796"
+  },
+  {
+    "name": "Las Vegas Raiders",
+    "region": "Las Vegas",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Las Vegas, plus the broader national NFL audience.",
+    "official_url": "https://www.raiders.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
+    "geo_city": "Las Vegas",
+    "geo_country": "US",
+    "city_population": 678922,
+    "metro_gdp_millions": null,
+    "followers_x": 1800000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "School Programs"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Allegiant Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 209.0,
+    "franchise_value_millions": 7700.0,
+    "annual_revenue_millions": 832.0,
+    "mission_tags": [
+      "Veterans & Military",
+      "Health & Wellness",
+      "Youth Development",
+      "Social Justice",
+      "Diversity & Inclusion"
+    ],
+    "community_programs": [
+      "Football Development",
+      "Silver and Black Saturdays",
+      "Inspire Change Changemaker",
+      "NFL Foundation \u2013 LISC Grassroots Field Grant Program"
+    ],
+    "cause_partnerships": [
+      "Intermountain Health",
+      "Goodie Two Shoes",
+      "Boys & Girls Clubs of Southern Nevada",
+      "Wynn Resorts",
+      "Naqvi Injury Law",
+      "Allegiant"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262800"
+  },
+  {
+    "name": "Los Angeles Chargers",
+    "region": "Los Angeles",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Los Angeles, plus the broader national NFL audience.",
+    "official_url": "https://www.chargers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp_millions": null,
+    "followers_x": 1000000,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Kids Club",
+      "School Programs",
+      "Summer Camp"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "SoFi Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 106.0,
+    "franchise_value_millions": 6000.0,
+    "annual_revenue_millions": 593.0,
+    "mission_tags": [
+      "Youth Development",
+      "Education",
+      "Veterans & Military"
+    ],
+    "community_programs": [
+      "Chargers Champions",
+      "Bolts Book Club",
+      "Bolt Academy"
+    ],
+    "cause_partnerships": [
+      "Pechanga Resort Casino",
+      "Bikes for Kids Foundation",
+      "Nike",
+      "Oakley",
+      "UCLA Health",
+      "Toyota",
+      "RIZE Federal Credit Union",
+      "Merging Vets and Players"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262803"
+  },
+  {
+    "name": "Los Angeles Rams",
+    "region": "Los Angeles",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Los Angeles, plus the broader national NFL audience.",
+    "official_url": "https://www.therams.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp_millions": null,
+    "followers_x": 1200000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "SoFi Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 104.0,
+    "franchise_value_millions": 10500.0,
+    "annual_revenue_millions": 764.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Education",
+      "Community Development",
+      "First Responders",
+      "Environmental Sustainability"
+    ],
+    "community_programs": [
+      "Rams Night for Wishes",
+      "Season of Giving",
+      "Recycling Combine",
+      "WalkUnitedLA",
+      "Holidays for Heroes",
+      "My Cause My Cleats",
+      "Taste Of The Rams",
+      "F\u00fatbol x Football"
+    ],
+    "cause_partnerships": [
+      "Make-A-Wish",
+      "PacSun",
+      "United States Coast Guard",
+      "Watts Rams",
+      "Boys and Girls Club of Pasadena",
+      "Ball Corporation",
+      "United Way",
+      "QuidelOrtho",
+      "American Red Cross",
+      "Housing Authority of the City of Los Angeles",
+      "Los Angeles Regional Food Bank",
+      "L.A. Care",
+      "Novartis"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262806"
+  },
+  {
+    "name": "Miami Dolphins",
+    "region": "Miami",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Miami, plus the broader national NFL audience.",
+    "official_url": "https://www.miamidolphins.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png",
+    "geo_city": "Miami",
+    "geo_country": "US",
+    "city_population": 487014,
+    "metro_gdp_millions": null,
+    "followers_x": 1200000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1700000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Hard Rock Stadium",
+    "sponsors": [
+      {
+        "name": "Eleven Sports Media",
+        "category": "Sports Media",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "All Area Roofing & Construction",
+        "category": "Construction",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "American IT Department",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "A1A Franchise Corp",
+        "category": "Franchise",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Binca Imaging",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Daniel Dentistry",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "eNotary On Call",
+        "category": "Legal Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "ERA Carpet and Flooring",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "The Fast Fire Watch Co.",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "KeyStaff Inc",
+        "category": "Staffing",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Metro group Miami",
+        "category": "Real Estate",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NXT Gen Technologies",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Pool Pros Builder",
+        "category": "Construction",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "PIUSI",
+        "category": "Industrial",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Protection Technologies",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "PSI Roofing",
+        "category": "Construction",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tropic Air Charters",
+        "category": "Travel",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 215.0,
+    "franchise_value_millions": 7500.0,
+    "annual_revenue_millions": 656.0,
+    "mission_tags": [
+      "Cancer Awareness",
+      "Community Development",
+      "Diversity & Inclusion",
+      "Youth Development",
+      "Education",
+      "Economic Empowerment",
+      "Hunger Relief",
+      "Veterans & Military"
+    ],
+    "community_programs": [
+      "Dolphins Cancer Challenge",
+      "Football UNITES\u2122",
+      "Jason Jenkins Days of Service",
+      "Nat Moore Scholarship Endowment",
+      "Junior Dolphins",
+      "Football UNITES Captains program",
+      "My Cause My Cleats",
+      "Huddle for the Holidays",
+      "CommUNITY Tailgates",
+      "Nat Moore Vocational Grant",
+      "UpSkill Miami"
+    ],
+    "cause_partnerships": [
+      "Baptist Health",
+      "Pepsi",
+      "Truist",
+      "Space Coast Credit Union",
+      "Gatorade Water",
+      "Goya",
+      "United Way Miami"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262809"
+  },
+  {
+    "name": "Minnesota Vikings",
+    "region": "Minnesota",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Minnesota, plus the broader national NFL audience.",
+    "official_url": "https://www.vikings.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+    "geo_city": "Minneapolis",
+    "geo_country": "US",
+    "city_population": 428579,
+    "metro_gdp_millions": null,
+    "followers_x": 1500000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 5,
+    "family_program_types": [
+      "Birthday Party",
+      "Kids Club",
+      "School Programs",
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "U.S. Bank Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 123.0,
+    "franchise_value_millions": 6250.0,
+    "annual_revenue_millions": 609.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Hunger Relief",
+      "Social Justice",
+      "Veterans & Military",
+      "Cancer Awareness",
+      "Special Needs"
+    ],
+    "community_programs": [
+      "Vikings Voyage",
+      "Vikings Table",
+      "My Cause My Cleats",
+      "Veterans Voyage",
+      "Pamper Her Purple",
+      "Vikings Special Olympics Unified Flag Football",
+      "North Pole Express",
+      "Be the Change Scholarship"
+    ],
+    "cause_partnerships": [
+      "Boys & Girls Clubs",
+      "SCHEELS",
+      "A&A All The Way Foundation",
+      "Project Success",
+      "All Square",
+      "Make-A-Wish",
+      "Angelman Syndrome",
+      "Special Olympics",
+      "Leket Israel",
+      "Polaris",
+      "TAPS",
+      "Hy-Vee",
+      "American Cancer Society",
+      "Mystic Lake",
+      "Sleep Number",
+      "Blue Star Families",
+      "TCO Orthopedics",
+      "Land O'Lakes, Inc.",
+      "Xcel Energy"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262813"
+  },
+  {
+    "name": "New England Patriots",
+    "region": "New England",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New England, plus the broader national NFL audience.",
+    "official_url": "https://www.patriots.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+    "geo_city": "Boston",
+    "geo_country": "US",
+    "city_population": 673458,
+    "metro_gdp_millions": null,
+    "followers_x": 4300000,
+    "followers_instagram": 5000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1800000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Gillette Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 143.0,
+    "franchise_value_millions": 9000.0,
+    "annual_revenue_millions": 762.0,
+    "mission_tags": [
+      "Community Development",
+      "Youth Development",
+      "Veterans & Military",
+      "Health & Wellness",
+      "Special Needs",
+      "Education",
+      "Housing & Homelessness"
+    ],
+    "community_programs": [
+      "Celebrate Volunteerism",
+      "My Cause My Cleats",
+      "Salute to Service",
+      "PAWTRIOTS",
+      "Community Captains",
+      "Patriots NFL FLAG Regionals",
+      "Winter Wonderland Party",
+      "Football For You",
+      "Girls Flag Football College Showcase",
+      "Patriots Rookies - Skills & Drills Clinic",
+      "Hockamock YMCA Alumni Football Clinic",
+      "Girls High School Flag Kickoff Party"
+    ],
+    "cause_partnerships": [
+      "Community Nurse, Inc.",
+      "Nationwide",
+      "Diggs Deeper Foundation",
+      "International Justice Mission",
+      "Animal Rescue League of Boston",
+      "Mattahunt Elementary",
+      "Bob's Discount Furniture",
+      "Adaptive Sports New England",
+      "Naval Station Newport",
+      "Special Olympics Massachusetts",
+      "United Healthcare",
+      "Women's Lunch Place",
+      "Bridgestone"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262816"
+  },
+  {
+    "name": "New Orleans Saints",
+    "region": "New Orleans",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New Orleans, plus the broader national NFL audience.",
+    "official_url": "https://www.neworleanssaints.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
+    "geo_city": "New Orleans",
+    "geo_country": "US",
+    "city_population": 362701,
+    "metro_gdp_millions": null,
+    "followers_x": 1600000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1300000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Family Experience",
+      "Kids Club"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Caesars Superdome",
+    "sponsors": null,
+    "avg_ticket_price": 112.0,
+    "franchise_value_millions": 5300.0,
+    "annual_revenue_millions": 607.0,
+    "mission_tags": [
+      "First Responders",
+      "Youth Development",
+      "Health & Wellness",
+      "Veterans & Military",
+      "Community Development",
+      "Education"
+    ],
+    "community_programs": [
+      "Kicks for Kids",
+      "Catch for the Coast",
+      "Points for Disaster Relief",
+      "High School Football Game of the Month",
+      "High School Football Equipment Donation",
+      "Saints Military Moment",
+      "That Deserves a Crown",
+      "UHC Fit Zone",
+      "Saints 5K",
+      "Saints Kids Fun Run",
+      "Play Football Experience",
+      "NFL Youth Programs",
+      "Saints Experience"
+    ],
+    "cause_partnerships": [
+      "Bud Light",
+      "Keesler Federal Credit Union",
+      "New Orleans Women & Children's Shelter",
+      "Make-A-Wish",
+      "Dear Jack Foundation",
+      "Louisiana Cat Hope Ignites",
+      "American Heart Association",
+      "Southern Quality Ford",
+      "Ochsner Children's",
+      "Venture Global",
+      "John Fayard's",
+      "Community Coffee",
+      "Crown Royal",
+      "UnitedHealthcare",
+      "Ochsner Sports Medicine Institute/Andrews Institute",
+      "American Safety"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262820"
+  },
+  {
+    "name": "New York Giants",
+    "region": "New York",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New York, plus the broader national NFL audience.",
+    "official_url": "https://www.giants.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png",
+    "geo_city": "New York",
+    "geo_country": "US",
+    "city_population": 8478072,
+    "metro_gdp_millions": null,
+    "followers_x": 1800000,
+    "followers_instagram": 3000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "MetLife Stadium",
+    "sponsors": [
+      {
+        "name": "MetLife",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Bud Light",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "HCLTech",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Moody's",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Verizon",
+        "category": "Telecommunications",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Altec Lansing",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Amazon Web Services",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "American Dairy Association North East",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Barbados",
+        "category": "Travel & Tourism",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Big Blue Travel",
+        "category": "Travel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Bob's Discount Furniture",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Cadillac",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Campbell's Chunky",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Casamigos",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Choose New Jersey",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Citizens",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "The City College of New York",
+        "category": "Education",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Clancy Relocation & Logistics",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Constellation Energy",
+        "category": "Energy",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Crestron",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Diageo",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Draft Kings",
+        "category": "Sports Betting",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Dunkin'",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "EA Sports",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "EY",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Fanatics",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "FedEx",
+        "category": "Logistics",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Your Local Ford Stores",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "F.W. Webb",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Gatorade",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "GGL",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Hackensack Meridian Health",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Hellmann's",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Hospital for Special Surgery",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Instacart",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Invisalign",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Jo Malone London",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Kendra Scott",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Konica Minolta",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Legends Global Merchandise",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "London Jewelers",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "MARS",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Miller Lite",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Microsoft",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Modelo",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "New Jersey Division of Travel and Tourism",
+        "category": "Travel & Tourism",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "New Jersey Lottery",
+        "category": "Gambling",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NJEA",
+        "category": "Education",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "New York Lottery",
+        "category": "Gambling",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NFL Extra Points",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "NOBULL",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Novartis",
+        "category": "Pharmaceutical",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Oakley",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Panini",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Pepsi",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Pernod Ricard",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "PNC Private Bank",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Premio",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Primepoint",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Procter & Gamble",
+        "category": "Consumer Goods",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Quaker",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Quest Diagnostics",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "QuickChek",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Rider University",
+        "category": "Education",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Starter",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Teradata",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Ticketmaster",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tiffany & Co.",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Tommy's Tavern + Tap",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "United Airlines",
+        "category": "Travel",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Visa",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Waste Management",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Wendy's",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Zero Restriction",
+        "category": "Apparel",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 127.0,
+    "franchise_value_millions": 10100.0,
+    "annual_revenue_millions": 707.0,
+    "mission_tags": [
+      "Youth Development",
+      "Hunger Relief",
+      "Education",
+      "Community Development",
+      "Diversity & Inclusion",
+      "Veterans & Military",
+      "Cancer Awareness",
+      "Housing & Homelessness"
+    ],
+    "community_programs": [
+      "Giants Foundation Grant Program",
+      "Coach of the Week",
+      "Flag Football Coach of the Year",
+      "Heart of a Giant Award",
+      "Jingle Jam",
+      "Built Ford Tough Field Day",
+      "High School Football Officiating Crew of the Month",
+      "Inspire Change Changemaker Award"
+    ],
+    "cause_partnerships": [
+      "Gatorade",
+      "Ticketmaster",
+      "Hackensack Meridian Health",
+      "USA Football",
+      "Hospital for Special Surgery",
+      "American Cancer Society",
+      "NFL Crucial Catch campaign",
+      "New York Food Bank",
+      "Boys & Girls Clubs",
+      "Tom Coughlin Jay Fund",
+      "Bob's Discount Furniture",
+      "New York Gay Football League",
+      "Captain Morgan",
+      "Novartis"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262823"
+  },
+  {
+    "name": "New York Jets",
+    "region": "New York",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New York, plus the broader national NFL audience.",
+    "official_url": "https://www.newyorkjets.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
+    "geo_city": "New York",
+    "geo_country": "US",
+    "city_population": 8478072,
+    "metro_gdp_millions": null,
+    "followers_x": 1200000,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Kids Club",
+      "School Programs"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "MetLife Stadium",
+    "sponsors": [
+      {
+        "name": "A & B Talent Acquisition",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Abilene",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "A&D Entrances",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Allied Risk Management",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "BurgherGray LLP",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "CMS",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "CFG Merchant Solutions",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Cuttler Produce",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Dentist on Madison 1",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Elteni",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "General Workforce",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Golden Class Limo",
+        "category": "Transportation",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Harbor Asset Private Wealth",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Horizon Paper",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "HR Impact",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Integrated Business Systems",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "IT Radix",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "JC Protection",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Juiced Technologies, Inc.",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Leros",
+        "category": "Transportation",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Midtown Dental Group",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Mikula Contracting",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Nex-Gen Ready Mix Corporation",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Next Level Private",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Otis AI",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "ParaFlight Aviation",
+        "category": "Transportation",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Premier Building Services",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Protection Technologies",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Radson Development",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Safety Advisory",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "InWin Corporation",
+        "category": "Technology",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Wills Laser Vision",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": 127.0,
+    "franchise_value_millions": 8100.0,
+    "annual_revenue_millions": 663.0,
+    "mission_tags": [
+      "Diversity & Inclusion",
+      "Youth Development",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Special Needs",
+      "Education",
+      "Social Justice"
+    ],
+    "community_programs": [
+      "Inspire Change",
+      "My Cause My Cleats",
+      "Jets Unified High School Flag Football Championships",
+      "Digital Divide Hack-AI-Thon",
+      "ECAC Women's Flag Football League",
+      "Jets Nike Rivalries Program",
+      "Soldiers to Sidelines",
+      "SFC Young Man of the Year Awards"
+    ],
+    "cause_partnerships": [
+      "Special Olympics of New Jersey",
+      "Food Bank For New York City",
+      "Ticketmaster",
+      "Nike",
+      "Super Football Conference",
+      "Betty Wold Johnson Foundation",
+      "Johnson & Johnson",
+      "Lupus Research Alliance",
+      "Fathead",
+      "PSAL",
+      "New York Urban League",
+      "Year Up",
+      "All Star Project",
+      "Innocence Projecy",
+      "bcs",
+      "STS",
+      "fbnyc",
+      "NOURISH",
+      "MORRISTOWN",
+      "marty-lyons-logo",
+      "nyc-parks",
+      "National Football Foundation",
+      "pal",
+      "Section VIII",
+      "Section IX",
+      "Section XI",
+      "Big Central",
+      "INJC",
+      "NJSIAA",
+      "NYSPHAA"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262826"
+  },
+  {
+    "name": "Philadelphia Eagles",
+    "region": "Philadelphia",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Philadelphia, plus the broader national NFL audience.",
+    "official_url": "https://www.philadelphiaeagles.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
+    "geo_city": "Philadelphia",
+    "geo_country": "US",
+    "city_population": 1573916,
+    "metro_gdp_millions": null,
+    "followers_x": 3700000,
+    "followers_instagram": 5000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Kids Club",
+      "Youth Academy"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Lincoln Financial Field",
+    "sponsors": [
+      {
+        "name": "Toyota",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Janney",
+        "category": "Financial Services",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Fanatics",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Little Caesars",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "CHOP (Children's Hospital of Philadelphia)",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Nationwide",
+        "category": "Insurance",
+        "asset_type": "Presenting Sponsor"
+      },
+      {
+        "name": "Philly Music Fest",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Leveling the Playing Field",
+        "category": "Other",
+        "asset_type": "Eagles Care Partner"
+      },
+      {
+        "name": "Positive Coaching Alliance",
+        "category": "Other",
+        "asset_type": "Eagles Care Partner"
+      },
+      {
+        "name": "Big Brothers Big Sisters",
+        "category": "Other",
+        "asset_type": "Eagles Care Partner"
+      }
+    ],
+    "avg_ticket_price": 139.0,
+    "franchise_value_millions": 8300.0,
+    "annual_revenue_millions": 688.0,
+    "mission_tags": [
+      "Environmental Sustainability",
+      "Youth Development",
+      "Community Development"
+    ],
+    "community_programs": [
+      "Go Green",
+      "Touchdowns for Sustainability",
+      "Eagles Bike Share Program"
+    ],
+    "cause_partnerships": [
+      "The Ocean Foundation",
+      "Ocean Conservancy",
+      "The Bellwether District",
+      "Lincoln Financial Group",
+      "Essity",
+      "Ordinarie Heroes"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262830"
+  },
+  {
+    "name": "Pittsburgh Steelers",
+    "region": "Pittsburgh",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Pittsburgh, plus the broader national NFL audience.",
+    "official_url": "https://www.steelers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+    "geo_city": "Pittsburgh",
+    "geo_country": "US",
+    "city_population": 307668,
+    "metro_gdp_millions": null,
+    "followers_x": 3500000,
+    "followers_instagram": 4000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 4,
+    "family_program_types": [
+      "School Programs",
+      "Summer Camp",
+      "Youth Academy",
+      "Youth Night"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Acrisure Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 127.0,
+    "franchise_value_millions": 6500.0,
+    "annual_revenue_millions": 619.0,
+    "mission_tags": [
+      "Social Justice",
+      "Education",
+      "Youth Development",
+      "Health & Wellness",
+      "Hunger Relief",
+      "Veterans & Military",
+      "Cancer Awareness",
+      "Diversity & Inclusion"
+    ],
+    "community_programs": [
+      "Steelers STEM",
+      "Huddle for the Holidays",
+      "Cam's Kindness Week",
+      "Rookie Community Week Events",
+      "Steelers Showcase Program",
+      "Powering Pittsburgh Championships",
+      "Art Rooney Scholarship Fund",
+      "Gatorade/Steelers 5K Race, Fitness Walk and Kids\u2019 Kickoff Run",
+      "Heroes at Acrisure Stadium",
+      "Holy Family Institute-Pittsburgh Steelers Courage House",
+      "Ed Block Courage Award",
+      "NFL Latino Youth Honors"
+    ],
+    "cause_partnerships": [
+      "Convoy of Hope",
+      "UPMC",
+      "Project Bundle Up",
+      "American Heart Association",
+      "American Cancer Society",
+      "UPMC Magee-Womens Hospital",
+      "Catholic Youth Association",
+      "UPMC Children's Hospital of Pittsburgh",
+      "Chuck Noll Foundation for Brain Injury Research",
+      "Greater Pittsburgh Community Food Bank",
+      "Holy Family Institute",
+      "Hispanic Heritage Foundation",
+      "Make-A-Wish",
+      "Foster Love Project",
+      "Urban Impact",
+      "Pittsburgh Public Schools"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262833"
+  },
+  {
+    "name": "San Francisco 49ers",
+    "region": "San Francisco",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around San Francisco, plus the broader national NFL audience.",
+    "official_url": "https://www.49ers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+    "geo_city": "San Francisco",
+    "geo_country": "US",
+    "city_population": 827526,
+    "metro_gdp_millions": null,
+    "followers_x": 2200000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Kids Club"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Levi's Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 161.0,
+    "franchise_value_millions": 8600.0,
+    "annual_revenue_millions": 723.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Social Justice",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Education",
+      "Community Development"
+    ],
+    "community_programs": [
+      "Hope for the Holidays",
+      "Feast with the Niners",
+      "Inspire Change",
+      "My Cause My Cleats",
+      "49ers PREP",
+      "49ers EDU",
+      "49ers STEM Leadership Institute",
+      "Tony York Unity Award",
+      "Unlocking Potential",
+      "Tackling Literacy",
+      "Foundation for Success",
+      "Mentorship Academy"
+    ],
+    "cause_partnerships": [
+      "USAA",
+      "U.S. Bank",
+      "Toyota",
+      "Ticketmaster",
+      "Nationwide",
+      "Team Gleason",
+      "Football Camp for the Stars",
+      "Lucky Fin Project",
+      "Everytown",
+      "Shoe Palace",
+      "Mobilize Love",
+      "Zenni",
+      "Fresh Lifelines for Youth (FLY)",
+      "Chime",
+      "Dignity Health",
+      "William V. Campbell Family Foundation",
+      "Kyle J. Taylor Foundation",
+      "Leeds United FC Foundation",
+      "Chevron",
+      "Positive Coaching Alliance",
+      "Prime Meridian Group",
+      "Westly Foundation",
+      "NFL UK",
+      "Leeds United Foundations"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262836"
+  },
+  {
+    "name": "Seattle Seahawks",
+    "region": "Seattle",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Seattle, plus the broader national NFL audience.",
+    "official_url": "https://www.seahawks.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+    "geo_city": "Seattle",
+    "geo_country": "US",
+    "city_population": 780995,
+    "metro_gdp_millions": null,
+    "followers_x": 2300000,
+    "followers_instagram": 4000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 4,
+    "family_program_types": [
+      "Family Experience",
+      "School Programs",
+      "Youth Academy",
+      "Youth Night"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Lumen Field",
+    "sponsors": null,
+    "avg_ticket_price": 128.0,
+    "franchise_value_millions": 6700.0,
+    "annual_revenue_millions": 624.0,
+    "mission_tags": [
+      "Youth Development",
+      "Diversity & Inclusion",
+      "Veterans & Military",
+      "Community Development",
+      "Social Justice"
+    ],
+    "community_programs": [
+      "Girls Flag Takeover",
+      "Seahawks Classic",
+      "Annual Community Trip to Alaska",
+      "Impacting 50 Communities",
+      "Seahawks Community Award Show",
+      "Seahawks Tee Hawk Experience",
+      "12-Page Reading Program",
+      "My Cause My Cleats",
+      "Special Olympics Unified Bowl"
+    ],
+    "cause_partnerships": [
+      "Safeway",
+      "PCF Construction Group",
+      "Benaroya Research Institute at Virginia Mason Franciscan Health",
+      "Boys & Girls Club",
+      "SafeFutures Youth Center",
+      "DAWN",
+      "BELONG",
+      "AG Consulting",
+      "UW",
+      "Delta Air Lines",
+      "Special Olympics Washington",
+      "Special Olympics Minnesota",
+      "Canucks Autism Network",
+      "Starbucks",
+      "Salvation Army Toy N' Joy Program"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262840"
+  },
+  {
+    "name": "Tampa Bay Buccaneers",
+    "region": "Tampa Bay",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Tampa Bay, plus the broader national NFL audience.",
+    "official_url": "https://www.buccaneers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",
+    "geo_city": "Tampa",
+    "geo_country": "US",
+    "city_population": 414547,
+    "metro_gdp_millions": null,
+    "followers_x": 1300000,
+    "followers_instagram": 2000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1600000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "School Programs",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Raymond James Stadium",
+    "sponsors": [
+      {
+        "name": "Jabil",
+        "category": "Other",
+        "asset_type": "Presenting Sponsor"
+      }
+    ],
+    "avg_ticket_price": 124.0,
+    "franchise_value_millions": 6600.0,
+    "annual_revenue_millions": 629.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Community Development",
+      "Hunger Relief",
+      "Veterans & Military",
+      "Diversity & Inclusion",
+      "Special Needs",
+      "Cancer Awareness"
+    ],
+    "community_programs": [
+      "Buccaneers Player-Student Mentoring Program",
+      "Rookie Club Visit Johns Hopkins All Children's Hospital",
+      "Mike Evans Family Foundation Gala",
+      "Mike Evans Family Foundation's 'Catch for Christmas'",
+      "Bucs Run",
+      "Jr. Bucs Trick or Treasure",
+      "Bucs Beach Clean Up",
+      "Cut And Color Funds the Cure",
+      "Day of Service",
+      "National Coaching Academy",
+      "Buccaneers Battle Grounds Flag Football Game",
+      "Tackle Reading Event",
+      "She is Football Weekend",
+      "She is Football Summit",
+      "High School Media Day"
+    ],
+    "cause_partnerships": [
+      "AdventHealth Training Center",
+      "AdventHealth",
+      "Habitat for Humanity of Hillsborough",
+      "Pinellas Run Club",
+      "Moffitt Cancer Center",
+      "Tampa Bay Tech",
+      "Leto High School",
+      "Tampa Museum of Art",
+      "Top Golf",
+      "Special Olympics",
+      "Suzuki Marine",
+      "MacDill Air Force Base",
+      "Jabil",
+      "Jackson Heights NFL YET Center",
+      "Glazer Children's Museum",
+      "Mosaic",
+      "Ambetter",
+      "PT Solutions",
+      "Sulphur Springs K-8 Community School"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262843"
+  },
+  {
+    "name": "Tennessee Titans",
+    "region": "Tennessee",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Tennessee, plus the broader national NFL audience.",
+    "official_url": "https://www.tennesseetitans.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+    "geo_city": "Nashville",
+    "geo_country": "US",
+    "city_population": 704963,
+    "metro_gdp_millions": null,
+    "followers_x": 1000000,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 5,
+    "family_program_types": [
+      "Birthday Party",
+      "Kids Club",
+      "School Programs",
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Nissan Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 107.0,
+    "franchise_value_millions": 6300.0,
+    "annual_revenue_millions": 582.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Community Development",
+      "Diversity & Inclusion",
+      "Economic Empowerment",
+      "Housing & Homelessness"
+    ],
+    "community_programs": [
+      "Titans Youth Football Camps",
+      "High School Coach of the Week presented by Whataburger",
+      "Tennessee Titans Mr. Football Awards",
+      "Tennessee Titans Fireball Fridays Game of the Week presented by Whataburger",
+      "Girls Flag Football",
+      "High School Football Recruiting Fair",
+      "Coaching Summit",
+      "High School Football Media Day",
+      "Heads Up\u00ae Football and Player Safety Coach Clinics",
+      "NFL Flag Football",
+      "NFL Foundation and USA Football Grant Program",
+      "11-Online",
+      "ONE Community",
+      "Titans Economic Inclusion Program",
+      "1st & Goal Small Business Support Program",
+      "Titans' Hope and Imagination Center",
+      "Real Estate Development and Leadership Council",
+      "Home Field Advantage Catalyst Fund",
+      "Keep Nashville Home Campaign",
+      "Neighborhood Business Spotlight",
+      "Direct Community Support",
+      "Mental Health Initiative"
+    ],
+    "cause_partnerships": [
+      "Whataburger",
+      "Gatorade",
+      "USA Football",
+      "NFL Foundation",
+      "Tennessee Football Coaches Association",
+      "Tennessee Secondary School Athletic Association (TSSAA)",
+      "Citizens Bank",
+      "Nashville Business Incubation Center (NBIC)",
+      "Project Destined",
+      "Urban League",
+      "NAACP",
+      "Cheatcode Foundation"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262846"
+  },
+  {
+    "name": "Washington Commanders",
+    "region": "Washington",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Washington, plus the broader national NFL audience.",
+    "official_url": "https://www.commanders.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
+    "geo_city": "Washington",
+    "geo_country": "US",
+    "city_population": 702250,
+    "metro_gdp_millions": null,
+    "followers_x": 1300000,
+    "followers_instagram": 1000000,
+    "followers_facebook": null,
+    "followers_tiktok": 1000000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Summer Camp"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Northwest Stadium",
+    "sponsors": null,
+    "avg_ticket_price": 125.0,
+    "franchise_value_millions": 7600.0,
+    "annual_revenue_millions": 644.0,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Diversity & Inclusion",
+      "Veterans & Military",
+      "Hunger Relief",
+      "Education",
+      "Community Development",
+      "Social Justice",
+      "Cancer Awareness",
+      "Special Needs"
+    ],
+    "community_programs": [
+      "My Cause, My Cleats",
+      "Harvest Feast",
+      "Make-A-Wish experience",
+      "Tackle Coach of the Week",
+      "Flag Coach of the Week",
+      "Inspire Change",
+      "Winter Wonderland gift giveaway",
+      "Holiday Mobile Market",
+      "Commanders Read",
+      "Kids Day",
+      "Salute to Service Month",
+      "Hispanic Heritage Night",
+      "Play Football Recap",
+      "Salute to Service game"
+    ],
+    "cause_partnerships": [
+      "Boys & Girls Club MD",
+      "Exodus Treatment Center",
+      "Capital Area Food Bank",
+      "Dranesville Elementary",
+      "Children's National Hospital",
+      "Phenia Mae fund",
+      "Bobbi Engram Foundation",
+      "Best Buddies",
+      "Friendship Public Charter High School",
+      "Whole Heart Foundation",
+      "Humane Rescue Alliance",
+      "Fight Like 4 fund for Troy Haynes",
+      "Children's National",
+      "Easterns Motors",
+      "Children's Science Center Lab",
+      "Bowie State University",
+      "Howard University",
+      "Walter Reed National Military Medical Center",
+      "Children's National Hope Lodge",
+      "Hustler's Guild",
+      "Crucial Catch"
+    ],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "brand",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:00:43.262850"
+  }
+]

@@ -3,11 +3,13 @@ MLB + MiLB Teams Scraper
 - Pulls teams from MLB StatsAPI: https://statsapi.mlb.com/api/v1/teams
 - Outputs JSON and Excel files with team data
 - Enriches with logo URLs from MLB Static CDN
+- Generates proper website URLs for mlb.com and milb.com
 """
 
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from pathlib import Path
@@ -23,6 +25,47 @@ MLB_STATSAPI_TEAMS_URL = "https://statsapi.mlb.com/api/v1/teams"
 
 # Sport IDs: MLB(1), AAA(11), AA(12), High-A(13), A(14), Rookie(16)
 DEFAULT_SPORT_IDS = [1, 11, 12, 13, 14, 16]
+
+# =============================================================================
+# MLB TEAM ID TO WEBSITE SLUG MAPPING
+# =============================================================================
+# MLB.com URLs don't follow a predictable pattern from API data,
+# so we maintain an explicit mapping from team_id to URL slug.
+# Format: team_id -> slug (used as https://www.mlb.com/{slug})
+# =============================================================================
+MLB_TEAM_SLUGS: Dict[int, str] = {
+    # American League
+    108: "angels",           # Los Angeles Angels
+    109: "dbacks",           # Arizona Diamondbacks
+    110: "orioles",          # Baltimore Orioles
+    111: "redsox",           # Boston Red Sox
+    112: "cubs",             # Chicago Cubs
+    113: "reds",             # Cincinnati Reds
+    114: "guardians",        # Cleveland Guardians
+    115: "rockies",          # Colorado Rockies
+    116: "tigers",           # Detroit Tigers
+    117: "astros",           # Houston Astros
+    118: "royals",           # Kansas City Royals
+    119: "dodgers",          # Los Angeles Dodgers
+    120: "nationals",        # Washington Nationals
+    121: "mets",             # New York Mets
+    133: "athletics",        # Oakland Athletics (moved to Sacramento/Vegas)
+    134: "pirates",          # Pittsburgh Pirates
+    135: "padres",           # San Diego Padres
+    136: "mariners",         # Seattle Mariners
+    137: "giants",           # San Francisco Giants
+    138: "cardinals",        # St. Louis Cardinals
+    139: "rays",             # Tampa Bay Rays
+    140: "rangers",          # Texas Rangers
+    141: "bluejays",         # Toronto Blue Jays
+    142: "twins",            # Minnesota Twins
+    143: "phillies",         # Philadelphia Phillies
+    144: "braves",           # Atlanta Braves
+    145: "whitesox",         # Chicago White Sox
+    146: "marlins",          # Miami Marlins
+    147: "yankees",          # New York Yankees
+    158: "brewers",          # Milwaukee Brewers
+}
 
 
 @dataclass
@@ -79,6 +122,39 @@ class MLBMiLBScraper:
                 continue
         return all_teams
 
+    def _generate_website_url(self, team: Dict[str, Any], sport_id: int) -> str:
+        """
+        Generate the official team website URL.
+        
+        For MLB teams: Uses the MLB_TEAM_SLUGS mapping to mlb.com
+        For MiLB teams: Generates milb.com URL from location name
+        """
+        team_id = team.get("id", 0)
+        
+        # MLB teams - use explicit mapping
+        if sport_id == 1:
+            slug = MLB_TEAM_SLUGS.get(team_id)
+            if slug:
+                return f"https://www.mlb.com/{slug}"
+            # Fallback: try to derive from clubName
+            club_name = team.get("clubName", "")
+            if club_name:
+                slug = club_name.lower().replace(" ", "").replace("-", "")
+                return f"https://www.mlb.com/{slug}"
+        
+        # MiLB teams - derive from location name
+        # Pattern: https://www.milb.com/{location-with-dashes}
+        location = team.get("locationName", "")
+        if location:
+            # Convert location to URL slug: "Round Rock" -> "round-rock"
+            slug = re.sub(r"[^\w\s-]", "", location.lower())  # Remove special chars
+            slug = re.sub(r"\s+", "-", slug.strip())  # Replace spaces with dashes
+            return f"https://www.milb.com/{slug}"
+        
+        # Ultimate fallback - return the API URL
+        link = team.get("link") or ""
+        return f"https://statsapi.mlb.com{link}" if link else ""
+
     def _team_to_row(self, team: Dict[str, Any], logo_url: Optional[str] = None) -> TeamRow:
         """Convert raw API team data to structured TeamRow."""
         name = team.get("name", "")
@@ -98,9 +174,8 @@ class MLBMiLBScraper:
             else "Baseball fans"
         )
 
-        # Official API URL
-        link = team.get("link") or ""
-        official_url = f"https://statsapi.mlb.com{link}" if link else ""
+        # Generate proper team website URL
+        official_url = self._generate_website_url(team, sport_id)
 
         category = "MLB" if sport_id == 1 else "MiLB"
         team_id = team.get("id", 0)

@@ -101,10 +101,19 @@ export interface EnricherInfo {
   id: string;
   name: string;
   description: string;
+  fields_added: string[];  // Fields this enricher populates
   available: boolean;  // Whether the enricher can run (has required API keys, etc.)
   last_run?: string;
   status: 'idle' | 'running' | 'success' | 'failed';
 }
+
+// Map enricher IDs to their metric group IDs for display consistency
+export const ENRICHER_TO_GROUP: Record<string, string> = {
+  geo: 'geographic',
+  sponsor: 'inventory',
+  website: 'family',
+  brand: 'brand',
+};
 
 // Metric group definitions for UI display
 export interface MetricGroup {

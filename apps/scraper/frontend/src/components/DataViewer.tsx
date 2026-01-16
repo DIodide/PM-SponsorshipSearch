@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect, Fragment } from 'react';
 import { cn, formatRelativeTime, formatNumber, formatCurrency } from '@/lib/utils';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
@@ -19,10 +19,12 @@ import {
   Building03Icon,
   DollarCircleIcon,
   Tag01Icon,
+  Settings02Icon,
 } from '@hugeicons/core-free-icons';
 import type { DataResponse, TeamData, SponsorInfo } from '@/types';
 import { METRIC_GROUPS, FIELD_METADATA } from '@/types';
-import { updateTeam, cleanRegions, runEnrichment } from '@/lib/api';
+import { updateTeam, cleanRegions } from '@/lib/api';
+import { EnrichmentPanel } from './EnrichmentPanel';
 
 // Map metric group icons
 const GROUP_ICONS: Record<string, typeof InformationCircleIcon> = {
@@ -105,7 +107,9 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
   // Expanded team detail state
   const [expandedTeamIndex, setExpandedTeamIndex] = useState<number | null>(null);
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set(['geographic', 'social']));
-  const [isEnriching, setIsEnriching] = useState(false);
+  
+  // Enrichment panel state
+  const [showEnrichmentPanel, setShowEnrichmentPanel] = useState(false);
 
   // Focus input when editing starts
   useEffect(() => {
@@ -244,21 +248,10 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
     });
   }, []);
 
-  // Run enrichment
-  const handleRunEnrichment = useCallback(async () => {
-    if (!data?.scraper_id) return;
-    
-    setIsEnriching(true);
-    try {
-      await runEnrichment(data.scraper_id);
-      onDataChange?.();
-    } catch (err) {
-      console.error('Failed to run enrichment:', err);
-      alert(err instanceof Error ? err.message : 'Failed to run enrichment');
-    } finally {
-      setIsEnriching(false);
-    }
-  }, [data?.scraper_id, onDataChange]);
+  // Handle enrichment completion
+  const handleEnrichmentComplete = useCallback(() => {
+    onDataChange?.();
+  }, [onDataChange]);
 
   // Toggle team detail expansion
   const toggleTeamDetail = useCallback((index: number) => {
@@ -391,23 +384,31 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
             <span className="ml-2 text-xs opacity-70">(double-click cells to edit, click row to expand)</span>
           </div>
           <button
-            onClick={handleRunEnrichment}
-            disabled={isEnriching}
+            onClick={() => setShowEnrichmentPanel(!showEnrichmentPanel)}
             className={cn(
               "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
-              "bg-primary/10 text-primary hover:bg-primary/20",
-              isEnriching && "opacity-50 cursor-not-allowed"
+              showEnrichmentPanel 
+                ? "bg-primary text-primary-foreground" 
+                : "bg-primary/10 text-primary hover:bg-primary/20"
             )}
           >
-            {isEnriching ? (
-              <HugeiconsIcon icon={Loading03Icon} size={14} className="animate-spin" />
-            ) : (
-              <HugeiconsIcon icon={SparklesIcon} size={14} />
-            )}
-            {isEnriching ? 'Enriching...' : 'Run Enrichment'}
+            <HugeiconsIcon icon={showEnrichmentPanel ? Settings02Icon : SparklesIcon} size={14} />
+            {showEnrichmentPanel ? 'Hide Enrichment' : 'Enrich Data'}
           </button>
         </div>
       </div>
+
+      {/* Enrichment Panel */}
+      {showEnrichmentPanel && (
+        <div className="border-b">
+          <EnrichmentPanel
+            scraperId={data.scraper_id}
+            teamsCount={data.count}
+            onEnrichmentComplete={handleEnrichmentComplete}
+            onClose={() => setShowEnrichmentPanel(false)}
+          />
+        </div>
+      )}
 
       {/* Table */}
       <div className="overflow-x-auto max-h-[600px] overflow-y-auto">
@@ -492,9 +493,8 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
               const enrichedGroupCount = METRIC_GROUPS.filter(g => g.id !== 'core' && hasEnrichedData(team, g.id)).length;
               
               return (
-                <>
+                <Fragment key={`${team.name}-${team._originalIndex}`}>
                   <tr 
-                    key={`${team.name}-${team._originalIndex}`}
                     className={cn(isExpanded && "bg-muted/30")}
                   >
                     <td className="w-8">
@@ -669,7 +669,7 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
                       </td>
                     </tr>
                   )}
-                </>
+                </Fragment>
               );
             })}
           </tbody>

@@ -11,25 +11,17 @@
     "geo_country": "US",
     "city_population": 993588,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 23900,
+    "followers_instagram": 77000,
+    "followers_facebook": 140000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 2,
-    "family_program_types": [
-      "Kids Club",
-      "Youth Academy"
-    ],
+    "family_program_count": 0,
+    "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": "Cedar Park Center",
     "sponsors": [
-      {
-        "name": "H-E-B Center at Cedar Park",
-        "category": "Other",
-        "asset_type": "Stadium Naming Rights"
-      },
       {
         "name": "H-E-B",
         "category": "Retail",
@@ -39,22 +31,15 @@
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
-    "mission_tags": [
-      "Cancer Awareness",
-      "Diversity & Inclusion",
-      "Youth Development",
-      "Health & Wellness",
-      "Community Development"
-    ],
+    "mission_tags": [],
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website",
-      "brand"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:47.324899"
+    "last_enriched": "2026-01-16T09:29:28.436981"
   },
   {
     "name": "Birmingham Squadron",
@@ -68,10 +53,10 @@
     "geo_country": "US",
     "city_population": 196357,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 13500,
+    "followers_instagram": 20000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1365,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 1,
@@ -93,7 +78,7 @@
       },
       {
         "name": "Animation Partner",
-        "category": "Technology",
+        "category": "Other",
         "asset_type": "Official Partner"
       },
       {
@@ -105,47 +90,37 @@
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
-    "mission_tags": [
-      "Education",
-      "Health & Wellness",
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "Community Ticket Program",
-      "Assist for a Cause"
-    ],
+    "mission_tags": [],
+    "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
       "website",
-      "brand"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:47.324927"
+    "last_enriched": "2026-01-16T09:29:28.437043"
   },
   {
     "name": "Capital City Go-Go",
-    "region": "Washington, D.C.",
+    "region": "Capital City",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Capital City.",
     "official_url": "https://capitalcity.gleague.nba.com/",
     "category": "G League",
     "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709928/primary/L/logo.svg",
-    "geo_city": null,
-    "geo_country": null,
-    "city_population": null,
+    "geo_city": "Washington",
+    "geo_country": "US",
+    "city_population": 702250,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 8543,
+    "followers_instagram": 23000,
+    "followers_facebook": 7100,
+    "followers_tiktok": 35700,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 2,
-    "family_program_types": [
-      "Birthday Party",
-      "Family Experience"
-    ],
+    "family_program_count": 0,
+    "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": null,
     "sponsors": [
@@ -167,10 +142,11 @@
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
+      "geo",
       "sponsor",
-      "website"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467344"
+    "last_enriched": "2026-01-16T09:29:28.437056"
   },
   {
     "name": "Cleveland Charge",
@@ -184,10 +160,10 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 18100,
+    "followers_instagram": 47000,
+    "followers_facebook": 36000,
+    "followers_tiktok": 10700,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 1,
@@ -206,9 +182,10 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467351"
+    "last_enriched": "2026-01-16T09:29:28.437065"
   },
   {
     "name": "College Park Skyhawks",
@@ -222,10 +199,10 @@
     "geo_country": "US",
     "city_population": 520070,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 6815,
+    "followers_instagram": 33000,
+    "followers_facebook": 7000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 1,
@@ -238,25 +215,20 @@
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
-    "mission_tags": [
-      "Community Development"
-    ],
-    "community_programs": [
-      "Community Ticket Request",
-      "Youth Clinic Interest"
-    ],
+    "mission_tags": [],
+    "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
       "website",
-      "brand"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:47.324934"
+    "last_enriched": "2026-01-16T09:29:28.437075"
   },
   {
     "name": "Delaware Blue Coats",
-    "region": "Wilmington",
+    "region": "Delaware",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Delaware.",
     "official_url": "https://bluecoats.gleague.nba.com/",
@@ -266,9 +238,9 @@
     "geo_country": "US",
     "city_population": 73176,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 19700,
+    "followers_instagram": 44000,
+    "followers_facebook": 19000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -285,9 +257,10 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675221"
+    "last_enriched": "2026-01-16T09:29:28.437083"
   },
   {
     "name": "Grand Rapids Gold",
@@ -301,17 +274,14 @@
     "geo_country": "US",
     "city_population": 200117,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 13500,
+    "followers_instagram": 37000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 3682,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 2,
-    "family_program_types": [
-      "Birthday Party",
-      "Family Pack"
-    ],
+    "family_program_count": 0,
+    "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": "DeltaPlex Arena",
     "sponsors": null,
@@ -324,9 +294,9 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467384"
+    "last_enriched": "2026-01-16T09:29:28.437090"
   },
   {
     "name": "Greensboro Swarm",
@@ -341,13 +311,15 @@
     "city_population": 307381,
     "metro_gdp_millions": null,
     "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_instagram": 42000,
+    "followers_facebook": 16000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 0,
-    "family_program_types": [],
+    "family_program_count": 1,
+    "family_program_types": [
+      "Kids Club"
+    ],
     "owns_stadium": null,
     "stadium_name": "Greensboro Coliseum Complex",
     "sponsors": null,
@@ -359,13 +331,15 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675238"
+    "last_enriched": "2026-01-16T09:29:28.437099"
   },
   {
     "name": "Iowa Wolves",
-    "region": "Des Moines",
+    "region": "Iowa",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Iowa.",
     "official_url": "https://iowa.gleague.nba.com/",
@@ -375,17 +349,16 @@
     "geo_country": "US",
     "city_population": 213096,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 21100,
+    "followers_instagram": 38000,
     "followers_facebook": null,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 4,
+    "family_program_count": 3,
     "family_program_types": [
       "Birthday Party",
       "Family Pack",
-      "School Programs",
       "Youth Night"
     ],
     "owns_stadium": false,
@@ -400,9 +373,10 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467389"
+    "last_enriched": "2026-01-16T09:29:28.437126"
   },
   {
     "name": "Long Island Nets",
@@ -416,9 +390,9 @@
     "geo_country": "US",
     "city_population": 31321,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 11000,
+    "followers_instagram": 29000,
+    "followers_facebook": 7500,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -439,24 +413,25 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467395"
+    "last_enriched": "2026-01-16T09:29:28.437135"
   },
   {
     "name": "Maine Celtics",
-    "region": "Portland, ME",
+    "region": "Maine",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Maine.",
     "official_url": "https://maine.gleague.nba.com/",
     "category": "G League",
     "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709915/primary/L/logo.svg",
-    "geo_city": null,
-    "geo_country": null,
-    "city_population": null,
+    "geo_city": "Portland",
+    "geo_country": "US",
+    "city_population": 69568,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 23,
+    "followers_instagram": 394,
     "followers_facebook": null,
     "followers_tiktok": null,
     "subscribers_youtube": null,
@@ -493,10 +468,12 @@
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
+      "geo",
       "sponsor",
-      "website"
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467409"
+    "last_enriched": "2026-01-16T09:29:28.437144"
   },
   {
     "name": "Memphis Hustle",
@@ -510,17 +487,14 @@
     "geo_country": "US",
     "city_population": 610919,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 27100,
+    "followers_instagram": 42000,
+    "followers_facebook": 13000,
+    "followers_tiktok": 19000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 2,
-    "family_program_types": [
-      "Kids Club",
-      "Youth Night"
-    ],
+    "family_program_count": 0,
+    "family_program_types": [],
     "owns_stadium": false,
     "stadium_name": "Lander's Center",
     "sponsors": [
@@ -539,9 +513,9 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467414"
+    "last_enriched": "2026-01-16T09:29:28.437152"
   },
   {
     "name": "Mexico City Capitanes",
@@ -555,10 +529,10 @@
     "geo_country": "MX",
     "city_population": null,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 408000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 1400000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -573,13 +547,14 @@
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
-      "geo"
+      "geo",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:30:51.285492"
+    "last_enriched": "2026-01-16T09:29:28.437161"
   },
   {
     "name": "Motor City Cruise",
-    "region": "Detroit",
+    "region": "Motor City",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Motor City.",
     "official_url": "https://detroit.gleague.nba.com/",
@@ -589,9 +564,9 @@
     "geo_country": "US",
     "city_population": 645705,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 5103,
+    "followers_instagram": 25000,
+    "followers_facebook": 8700,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -619,9 +594,10 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467419"
+    "last_enriched": "2026-01-16T09:29:28.437168"
   },
   {
     "name": "Noblesville Boom",
@@ -635,9 +611,9 @@
     "geo_country": "US",
     "city_population": 891484,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 21100,
+    "followers_instagram": 38000,
+    "followers_facebook": 27000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -670,9 +646,10 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675269"
+    "last_enriched": "2026-01-16T09:29:28.437176"
   },
   {
     "name": "Oklahoma City Blue",
@@ -686,10 +663,10 @@
     "geo_country": "US",
     "city_population": 712919,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 23400,
+    "followers_instagram": 67000,
+    "followers_facebook": 21000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -705,13 +682,14 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675274"
+    "last_enriched": "2026-01-16T09:29:28.437184"
   },
   {
     "name": "Osceola Magic",
-    "region": "Kissimmee",
+    "region": "Osceola",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Osceola.",
     "official_url": "https://osceola.gleague.nba.com/",
@@ -721,10 +699,10 @@
     "geo_country": "US",
     "city_population": 84756,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 8662,
+    "followers_instagram": 33000,
+    "followers_facebook": 31000,
+    "followers_tiktok": 8942,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -739,13 +717,14 @@
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
-      "geo"
+      "geo",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:30:51.285512"
+    "last_enriched": "2026-01-16T09:29:28.437192"
   },
   {
     "name": "Raptors 905",
-    "region": "Mississauga",
+    "region": "Raptors",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Raptors.",
     "official_url": "https://raptors905.gleague.nba.com/",
@@ -755,9 +734,9 @@
     "geo_country": "CA",
     "city_population": null,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 40900,
+    "followers_instagram": 90000,
+    "followers_facebook": 19000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -774,13 +753,14 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675280"
+    "last_enriched": "2026-01-16T09:29:28.437199"
   },
   {
     "name": "Rio Grande Valley Vipers",
-    "region": "Edinburg",
+    "region": "Rio Grande Valley",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Rio Grande Valley.",
     "official_url": "https://riograndevalley.gleague.nba.com/",
@@ -790,9 +770,9 @@
     "geo_country": "US",
     "city_population": 148782,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 23900,
+    "followers_instagram": 37000,
+    "followers_facebook": 33000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -800,43 +780,76 @@
     "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": "Payne Arena",
-    "sponsors": null,
+    "sponsors": [
+      {
+        "name": "Title Partners",
+        "category": "Other",
+        "asset_type": "Title Partner"
+      },
+      {
+        "name": "Participating Sponsors",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Media Partners",
+        "category": "Media",
+        "asset_type": "Official Partner"
+      }
+    ],
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
-    "mission_tags": [],
-    "community_programs": [],
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Diversity & Inclusion"
+    ],
+    "community_programs": [
+      "Fang\u2019s Book Club",
+      "Venom Hype Squad",
+      "Snake Charmers",
+      "JR. Vipers Academy",
+      "Read To Achieve",
+      "Fang's P.E. Takeover",
+      "Operation Give Back",
+      "Perfect Attendance",
+      "Blocks For Books",
+      "Honor Roll",
+      "We're All In"
+    ],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "brand",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675285"
+    "last_enriched": "2026-01-16T09:29:28.437207"
   },
   {
     "name": "Rip City Remix",
-    "region": "Portland, OR",
+    "region": "Rip City",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Rip City.",
     "official_url": "https://ripcity.gleague.nba.com/",
     "category": "G League",
     "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709933/primary/L/logo.svg",
-    "geo_city": null,
-    "geo_country": null,
-    "city_population": null,
+    "geo_city": "Portland",
+    "geo_country": "US",
+    "city_population": 635749,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 7003,
+    "followers_instagram": 19000,
+    "followers_facebook": 2400,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 4,
+    "family_program_count": 2,
     "family_program_types": [
       "Birthday Party",
-      "Kids Club",
-      "School Programs",
-      "Youth Academy"
+      "Kids Club"
     ],
     "owns_stadium": false,
     "stadium_name": "Chiles Center",
@@ -848,10 +861,12 @@
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
+      "geo",
       "sponsor",
-      "website"
+      "website",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467426"
+    "last_enriched": "2026-01-16T09:29:28.437215"
   },
   {
     "name": "Salt Lake City Stars",
@@ -865,9 +880,9 @@
     "geo_country": "US",
     "city_population": 217783,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 9549,
+    "followers_instagram": 28000,
+    "followers_facebook": 15000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -890,9 +905,10 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675294"
+    "last_enriched": "2026-01-16T09:29:28.437223"
   },
   {
     "name": "San Diego Clippers",
@@ -906,9 +922,9 @@
     "geo_country": "US",
     "city_population": 1404452,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 2086,
+    "followers_instagram": 12000,
+    "followers_facebook": 861,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -925,9 +941,10 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675299"
+    "last_enriched": "2026-01-16T09:29:28.437231"
   },
   {
     "name": "Santa Cruz Warriors",
@@ -941,9 +958,9 @@
     "geo_country": "US",
     "city_population": 62581,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 46400,
+    "followers_instagram": 176000,
+    "followers_facebook": 123000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -951,23 +968,7 @@
     "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": "Kaiser Permanente Arena",
-    "sponsors": [
-      {
-        "name": "Kaiser Permanente",
-        "category": "Healthcare",
-        "asset_type": "Stadium Naming Rights"
-      },
-      {
-        "name": "BFCU",
-        "category": "Financial Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Devcon",
-        "category": "Other",
-        "asset_type": "Official Partner"
-      }
-    ],
+    "sponsors": null,
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
@@ -976,9 +977,10 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675304"
+    "last_enriched": "2026-01-16T09:29:28.437238"
   },
   {
     "name": "Sioux Falls Skyforce",
@@ -992,243 +994,66 @@
     "geo_country": "US",
     "city_population": 209289,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 20900,
+    "followers_instagram": 31000,
+    "followers_facebook": 32000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 2,
     "family_program_types": [
       "Birthday Party",
-      "Kids Club"
+      "Family Experience"
     ],
     "owns_stadium": false,
     "stadium_name": "Sanford Sports Pentagon",
     "sponsors": [
       {
-        "name": "AARP",
-        "category": "Non-profit",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "ad arts",
-        "category": "Marketing",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Aire-master",
-        "category": "Cleaning Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "ARBYs",
-        "category": "Food & Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Azzara Tax Service",
-        "category": "Financial Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Beal Distributing",
-        "category": "Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Brandon Martens Real Estate Team",
-        "category": "Real Estate",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Buckle",
-        "category": "Retail",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "BWW",
-        "category": "Food & Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Catfish Bay",
-        "category": "Entertainment",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Cell Only",
-        "category": "Telecommunications",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "ClickRain",
-        "category": "Marketing",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Culligan",
-        "category": "Water Treatment",
-        "asset_type": "Official Partner"
-      },
-      {
         "name": "Dacotah Bank",
         "category": "Financial Services",
         "asset_type": "Presenting Sponsor"
-      },
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T09:29:28.437246"
+  },
+  {
+    "name": "South Bay Lakers",
+    "region": "South Bay",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around South Bay.",
+    "official_url": "https://southbay.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709905/primary/L/logo.svg",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp_millions": null,
+    "followers_x": 70400,
+    "followers_instagram": 241000,
+    "followers_facebook": 292000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Toyota Sports Center",
+    "sponsors": [
       {
-        "name": "Dakota Beverage",
-        "category": "Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Firehouse Subs",
+        "name": "bibigo",
         "category": "Food & Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "First PREMIER",
-        "category": "Financial Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Freedom Realty",
-        "category": "Real Estate",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Gatorade",
-        "category": "Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Hidden Paradise Kennels",
-        "category": "Pet Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Hood Magazine",
-        "category": "Media",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Intek",
-        "category": "Technology",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "KELO",
-        "category": "Media",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Kory Davis",
-        "category": "Other",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Lewis Drug",
-        "category": "Retail",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Lloyd Companies",
-        "category": "Real Estate",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Looks Market",
-        "category": "Retail",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "MetaBank",
-        "category": "Financial Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Midco",
-        "category": "Telecommunications",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Monarch Sales",
-        "category": "Sales",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Northwestern Mutual",
-        "category": "Financial Services",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "POET",
-        "category": "Energy",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Pride Neon Signs",
-        "category": "Signage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Results Radio",
-        "category": "Media",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Royal River",
-        "category": "Other",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Sanford Health",
-        "category": "Healthcare",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Sanford Health Plan",
-        "category": "Insurance",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Scheels",
-        "category": "Retail",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Scooter's",
-        "category": "Food & Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Sioux Falls Ford",
-        "category": "Automotive",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Sioux Falls Airport",
-        "category": "Transportation",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Sisson Printing",
-        "category": "Printing",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Wermerson Orthodontics",
-        "category": "Healthcare",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Wollman Insurance Group",
-        "category": "Insurance",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "YMCA",
-        "category": "Non-profit",
         "asset_type": "Official Partner"
       }
     ],
@@ -1241,44 +1066,9 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467433"
-  },
-  {
-    "name": "South Bay Lakers",
-    "region": "Los Angeles",
-    "league": "NBA G League",
-    "target_demographic": "Local basketball fans and player-development followers in and around South Bay.",
-    "official_url": "https://southbay.gleague.nba.com/",
-    "category": "G League",
-    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709905/primary/L/logo.svg",
-    "geo_city": "Los Angeles",
-    "geo_country": "US",
-    "city_population": 3878704,
-    "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
-    "subscribers_youtube": null,
-    "avg_game_attendance": null,
-    "family_program_count": 0,
-    "family_program_types": [],
-    "owns_stadium": false,
-    "stadium_name": "Toyota Sports Center",
-    "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": null,
-    "annual_revenue_millions": null,
-    "mission_tags": [],
-    "community_programs": [],
-    "cause_partnerships": [],
-    "enrichments_applied": [
-      "geo",
-      "sponsor"
-    ],
-    "last_enriched": "2026-01-13T04:31:23.675313"
+    "last_enriched": "2026-01-16T09:29:28.437254"
   },
   {
     "name": "Stats",
@@ -1292,9 +1082,9 @@
     "geo_country": null,
     "city_population": null,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 408000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 1400000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1302,18 +1092,7 @@
     "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": null,
-    "sponsors": [
-      {
-        "name": "Gatorade",
-        "category": "Food & Beverage",
-        "asset_type": "Official Partner"
-      },
-      {
-        "name": "Hyatt",
-        "category": "Hotels",
-        "asset_type": "Official Partner"
-      }
-    ],
+    "sponsors": null,
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
@@ -1321,9 +1100,9 @@
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
-      "sponsor"
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675317"
+    "last_enriched": "2026-01-16T09:29:28.437263"
   },
   {
     "name": "Stockton Kings",
@@ -1337,16 +1116,14 @@
     "geo_country": "US",
     "city_population": 324975,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 19300,
+    "followers_instagram": 50000,
+    "followers_facebook": 467000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
-    "family_program_count": 1,
-    "family_program_types": [
-      "Kids Club"
-    ],
+    "family_program_count": 0,
+    "family_program_types": [],
     "owns_stadium": true,
     "stadium_name": "Adventist Health Arena",
     "sponsors": [
@@ -1395,26 +1172,26 @@
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "website"
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:12.467439"
+    "last_enriched": "2026-01-16T09:29:28.437270"
   },
   {
     "name": "Texas Legends",
-    "region": "Frisco",
+    "region": "Texas",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Texas.",
     "official_url": "https://texas.gleague.nba.com/",
     "category": "G League",
     "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709918/primary/L/logo.svg",
-    "geo_city": "Frisco",
+    "geo_city": "Dallas",
     "geo_country": "US",
-    "city_population": 235208,
+    "city_population": 1326087,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 21300,
+    "followers_instagram": 33000,
+    "followers_facebook": 39000,
+    "followers_tiktok": 360400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1430,17 +1207,12 @@
       {
         "name": "UnitedHealthcare",
         "category": "Insurance",
-        "asset_type": "Presenting Sponsor"
+        "asset_type": "Official Partner"
       },
       {
         "name": "Choctaw",
         "category": "Other",
         "asset_type": "Presenting Sponsor"
-      },
-      {
-        "name": "UnitedHealthcare",
-        "category": "Insurance",
-        "asset_type": "Official Partner"
       }
     ],
     "avg_ticket_price": null,
@@ -1451,13 +1223,14 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675326"
+    "last_enriched": "2026-01-16T09:29:28.437278"
   },
   {
     "name": "Valley Suns",
-    "region": "Phoenix",
+    "region": "Valley",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Valley.",
     "official_url": "https://valley.gleague.nba.com/",
@@ -1467,10 +1240,10 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 4054,
+    "followers_instagram": 16000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1113,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1486,13 +1259,14 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675331"
+    "last_enriched": "2026-01-16T09:29:28.437286"
   },
   {
     "name": "Westchester Knicks",
-    "region": "White Plains",
+    "region": "Westchester",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Westchester.",
     "official_url": "https://westchester.gleague.nba.com/",
@@ -1502,9 +1276,9 @@
     "geo_country": "US",
     "city_population": 62561,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 22400,
+    "followers_instagram": 52000,
+    "followers_facebook": 17000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1512,9 +1286,45 @@
     "family_program_types": [],
     "owns_stadium": true,
     "stadium_name": "Westchester County Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T09:29:28.437293"
+  },
+  {
+    "name": "Windy City Bulls",
+    "region": "Windy",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Windy.",
+    "official_url": "https://windycity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709923/primary/L/logo.svg",
+    "geo_city": "Chicago",
+    "geo_country": "US",
+    "city_population": 2721308,
+    "metro_gdp_millions": null,
+    "followers_x": 23300,
+    "followers_instagram": 69000,
+    "followers_facebook": 37000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Now Arena",
     "sponsors": [
       {
-        "name": "New York Knicks",
+        "name": "Chicago Bulls",
         "category": "Sports",
         "asset_type": "Official Partner"
       }
@@ -1527,68 +1337,45 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675335"
-  },
-  {
-    "name": "Windy City Bulls",
-    "region": "Hoffman Estates",
-    "league": "NBA G League",
-    "target_demographic": "Local basketball fans and player-development followers in and around Windy.",
-    "official_url": "https://windycity.gleague.nba.com/",
-    "category": "G League",
-    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709923/primary/L/logo.svg",
-    "geo_city": "Chicago",
-    "geo_country": "US",
-    "city_population": 2721308,
-    "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
-    "subscribers_youtube": null,
-    "avg_game_attendance": null,
-    "family_program_count": 0,
-    "family_program_types": [],
-    "owns_stadium": null,
-    "stadium_name": "Now Arena",
-    "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": null,
-    "annual_revenue_millions": null,
-    "mission_tags": [],
-    "community_programs": [],
-    "cause_partnerships": [],
-    "enrichments_applied": [
-      "geo",
-      "sponsor"
-    ],
-    "last_enriched": "2026-01-13T04:31:23.675339"
+    "last_enriched": "2026-01-16T09:29:28.437301"
   },
   {
     "name": "Wisconsin Herd",
-    "region": "Oshkosh",
+    "region": "Wisconsin",
     "league": "NBA G League",
     "target_demographic": "Local basketball fans and player-development followers in and around Wisconsin.",
     "official_url": "https://wisconsin.gleague.nba.com/",
     "category": "G League",
     "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709927/primary/L/logo.svg",
-    "geo_city": "Oshkosh",
+    "geo_city": "Milwaukee",
     "geo_country": "US",
-    "city_population": 67242,
+    "city_population": 563531,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 19600,
+    "followers_instagram": 60000,
+    "followers_facebook": 35000,
+    "followers_tiktok": 23400,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
     "family_program_types": [],
     "owns_stadium": null,
     "stadium_name": "Oshkosh Arena",
-    "sponsors": null,
+    "sponsors": [
+      {
+        "name": "COUSINS SUBS",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "SCHEELS",
+        "category": "Retail",
+        "asset_type": "Presenting Sponsor"
+      }
+    ],
     "avg_ticket_price": null,
     "franchise_value_millions": null,
     "annual_revenue_millions": null,
@@ -1597,9 +1384,10 @@
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "sponsor"
+      "sponsor",
+      "social"
     ],
-    "last_enriched": "2026-01-13T04:31:23.675346"
+    "last_enriched": "2026-01-16T09:29:28.437309"
   },
   {
     "name": "Atlanta Hawks",
@@ -1613,10 +1401,10 @@
     "geo_country": "US",
     "city_population": 520070,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 1400000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 1700000,
+    "followers_tiktok": 1400000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1624,39 +1412,19 @@
     "owns_stadium": null,
     "stadium_name": "State Farm Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3050,
-    "annual_revenue_millions": 285,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 77.0,
+    "franchise_value_millions": 5000.0,
+    "annual_revenue_millions": 477.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781334"
+    "last_enriched": "2026-01-16T09:29:28.437318"
   },
   {
     "name": "Boston Celtics",
@@ -1670,10 +1438,10 @@
     "geo_country": "US",
     "city_population": 673458,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 3900000,
+    "followers_instagram": 8000000,
+    "followers_facebook": 8900000,
+    "followers_tiktok": 2100000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1681,38 +1449,19 @@
     "owns_stadium": false,
     "stadium_name": "TD Garden",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 4700,
-    "annual_revenue_millions": 420,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 145.0,
+    "franchise_value_millions": 6700.0,
+    "annual_revenue_millions": 458.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781360"
+    "last_enriched": "2026-01-16T09:29:28.437326"
   },
   {
     "name": "Brooklyn Nets",
@@ -1726,10 +1475,10 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 1900000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 3100000,
+    "followers_tiktok": 3200000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1737,39 +1486,19 @@
     "owns_stadium": false,
     "stadium_name": "Barclays Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 4100,
-    "annual_revenue_millions": 330,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 70.0,
+    "franchise_value_millions": 5600.0,
+    "annual_revenue_millions": 402.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781363"
+    "last_enriched": "2026-01-16T09:29:28.437334"
   },
   {
     "name": "Charlotte Hornets",
@@ -1783,10 +1512,10 @@
     "geo_country": "US",
     "city_population": 943476,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 1100000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 1800000,
+    "followers_tiktok": 1700000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1794,39 +1523,19 @@
     "owns_stadium": true,
     "stadium_name": "Spectrum Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2400,
-    "annual_revenue_millions": 250,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 37.0,
+    "franchise_value_millions": 3800.0,
+    "annual_revenue_millions": 328.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781365"
+    "last_enriched": "2026-01-16T09:29:28.437341"
   },
   {
     "name": "Chicago Bulls",
@@ -1840,9 +1549,9 @@
     "geo_country": "US",
     "city_population": 2721308,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_x": 4200000,
+    "followers_instagram": 10000000,
+    "followers_facebook": 16000000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1851,40 +1560,19 @@
     "owns_stadium": true,
     "stadium_name": "United Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 4600,
-    "annual_revenue_millions": 370,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 110.0,
+    "franchise_value_millions": 6000.0,
+    "annual_revenue_millions": 434.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781367"
+    "last_enriched": "2026-01-16T09:29:28.437349"
   },
   {
     "name": "Cleveland Cavaliers",
@@ -1898,10 +1586,10 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 3000000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 913600,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1909,39 +1597,19 @@
     "owns_stadium": null,
     "stadium_name": "Rocket Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2800,
-    "annual_revenue_millions": 300,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 97.0,
+    "franchise_value_millions": 4800.0,
+    "annual_revenue_millions": 440.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781369"
+    "last_enriched": "2026-01-16T09:29:28.437357"
   },
   {
     "name": "Dallas Mavericks",
@@ -1955,10 +1623,10 @@
     "geo_country": "US",
     "city_population": 1326087,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 2200000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 5200000,
+    "followers_tiktok": 2900000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -1966,45 +1634,19 @@
     "owns_stadium": true,
     "stadium_name": "American Airlines Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 4600,
-    "annual_revenue_millions": 370,
-    "mission_tags": [
-      "Education",
-      "Social Justice",
-      "Health & Wellness",
-      "Veterans & Military",
-      "Environmental Sustainability",
-      "Youth Development",
-      "Diversity & Inclusion"
-    ],
-    "community_programs": [
-      "Mavs Reading Challenge",
-      "Mavs Foundation"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America",
-      "NBA Math Hoops"
-    ],
+    "avg_ticket_price": 65.0,
+    "franchise_value_millions": 5100.0,
+    "annual_revenue_millions": 407.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781371"
+    "last_enriched": "2026-01-16T09:29:28.437365"
   },
   {
     "name": "Denver Nuggets",
@@ -2018,10 +1660,10 @@
     "geo_country": "US",
     "city_population": 729019,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
-    "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_x": 1400000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 2500000,
+    "followers_tiktok": 1200000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2029,38 +1671,19 @@
     "owns_stadium": false,
     "stadium_name": "Ball Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3100,
-    "annual_revenue_millions": 310,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 78.0,
+    "franchise_value_millions": 4600.0,
+    "annual_revenue_millions": 364.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781377"
+    "last_enriched": "2026-01-16T09:29:28.437372"
   },
   {
     "name": "Detroit Pistons",
@@ -2074,10 +1697,10 @@
     "geo_country": "US",
     "city_population": 645705,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1000000,
+    "followers_instagram": 2000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 634200,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2085,43 +1708,23 @@
     "owns_stadium": null,
     "stadium_name": "Little Caesars Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2350,
-    "annual_revenue_millions": 245,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 50.0,
+    "franchise_value_millions": 3650.0,
+    "annual_revenue_millions": 321.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781379"
+    "last_enriched": "2026-01-16T09:29:28.437381"
   },
   {
     "name": "Golden State Warriors",
-    "region": "San Francisco Bay Area",
+    "region": "Golden State",
     "league": "NBA",
     "target_demographic": "Basketball fans in and around Golden State, plus the broader NBA audience.",
     "official_url": "https://www.nba.com/warriors/",
@@ -2131,10 +1734,10 @@
     "geo_country": "US",
     "city_population": 827526,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 8199999,
+    "followers_instagram": 32000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 6800000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2142,40 +1745,19 @@
     "owns_stadium": true,
     "stadium_name": "Chase Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 7700,
-    "annual_revenue_millions": 765,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 285.0,
+    "franchise_value_millions": 11000.0,
+    "annual_revenue_millions": 880.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781381"
+    "last_enriched": "2026-01-16T09:29:28.437389"
   },
   {
     "name": "Houston Rockets",
@@ -2189,7 +1771,7 @@
     "geo_country": "US",
     "city_population": 2390125,
     "metro_gdp_millions": null,
-    "followers_x": null,
+    "followers_x": 3000000,
     "followers_instagram": null,
     "followers_facebook": null,
     "followers_tiktok": null,
@@ -2200,44 +1782,23 @@
     "owns_stadium": false,
     "stadium_name": "Toyota Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 4250,
-    "annual_revenue_millions": 340,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 110.0,
+    "franchise_value_millions": 5900.0,
+    "annual_revenue_millions": 467.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781382"
+    "last_enriched": "2026-01-16T09:29:28.437397"
   },
   {
     "name": "Indiana Pacers",
-    "region": "Indianapolis",
+    "region": "Indiana",
     "league": "NBA",
     "target_demographic": "Basketball fans in and around Indiana, plus the broader NBA audience.",
     "official_url": "https://www.nba.com/pacers/",
@@ -2247,10 +1808,10 @@
     "geo_country": "US",
     "city_population": 891484,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1400000,
+    "followers_instagram": 90000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1100000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2258,18 +1819,19 @@
     "owns_stadium": false,
     "stadium_name": "Gainbridge Fieldhouse",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2550,
-    "annual_revenue_millions": 260,
+    "avg_ticket_price": 50.0,
+    "franchise_value_millions": 4200.0,
+    "annual_revenue_millions": 342.0,
     "mission_tags": [],
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781384"
+    "last_enriched": "2026-01-16T09:29:28.437405"
   },
   {
     "name": "LA Clippers",
@@ -2283,10 +1845,10 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 45700000,
+    "followers_instagram": 90000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 3100000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2294,37 +1856,18 @@
     "owns_stadium": null,
     "stadium_name": null,
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": null,
-    "annual_revenue_millions": null,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 165.0,
+    "franchise_value_millions": 7500.0,
+    "annual_revenue_millions": 569.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
-      "brand"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-13T13:18:47.325014"
+    "last_enriched": "2026-01-16T09:29:28.437413"
   },
   {
     "name": "Los Angeles Lakers",
@@ -2338,8 +1881,8 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 11700000,
+    "followers_instagram": 25000000,
     "followers_facebook": null,
     "followers_tiktok": null,
     "subscribers_youtube": null,
@@ -2349,40 +1892,19 @@
     "owns_stadium": false,
     "stadium_name": "Crypto.com Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 6400,
-    "annual_revenue_millions": 530,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops",
-      "NBA Math Hoops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 165.0,
+    "franchise_value_millions": 10000.0,
+    "annual_revenue_millions": 551.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781386"
+    "last_enriched": "2026-01-16T09:29:28.437421"
   },
   {
     "name": "Memphis Grizzlies",
@@ -2396,10 +1918,10 @@
     "geo_country": "US",
     "city_population": 610919,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1500000,
+    "followers_instagram": 2000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1600000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2407,41 +1929,19 @@
     "owns_stadium": true,
     "stadium_name": "FedExForum",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2250,
-    "annual_revenue_millions": 245,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 38.0,
+    "franchise_value_millions": 3500.0,
+    "annual_revenue_millions": 306.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781387"
+    "last_enriched": "2026-01-16T09:29:28.437428"
   },
   {
     "name": "Miami Heat",
@@ -2455,10 +1955,10 @@
     "geo_country": "US",
     "city_population": 487014,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 4400000,
+    "followers_instagram": 7000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1500000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2466,39 +1966,19 @@
     "owns_stadium": true,
     "stadium_name": "Kaseya Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3900,
-    "annual_revenue_millions": 340,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 87.0,
+    "franchise_value_millions": 5700.0,
+    "annual_revenue_millions": 417.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781393"
+    "last_enriched": "2026-01-16T09:29:28.437436"
   },
   {
     "name": "Milwaukee Bucks",
@@ -2512,7 +1992,7 @@
     "geo_country": "US",
     "city_population": 563531,
     "metro_gdp_millions": null,
-    "followers_x": null,
+    "followers_x": 1900000,
     "followers_instagram": null,
     "followers_facebook": null,
     "followers_tiktok": null,
@@ -2523,39 +2003,23 @@
     "owns_stadium": null,
     "stadium_name": "Fiserv Forum",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3600,
-    "annual_revenue_millions": 340,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
+    "avg_ticket_price": 85.0,
+    "franchise_value_millions": 4300.0,
+    "annual_revenue_millions": 355.0,
+    "mission_tags": [],
     "community_programs": [],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781396"
+    "last_enriched": "2026-01-16T09:29:28.437444"
   },
   {
     "name": "Minnesota Timberwolves",
-    "region": "Minneapolis",
+    "region": "Minnesota",
     "league": "NBA",
     "target_demographic": "Basketball fans in and around Minnesota, plus the broader NBA audience.",
     "official_url": "https://www.nba.com/timberwolves/",
@@ -2565,10 +2029,10 @@
     "geo_country": "US",
     "city_population": 428579,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1200000,
+    "followers_instagram": 90000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1300000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2576,39 +2040,19 @@
     "owns_stadium": false,
     "stadium_name": "Target Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2600,
-    "annual_revenue_millions": 275,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 42.0,
+    "franchise_value_millions": 3600.0,
+    "annual_revenue_millions": 320.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.781397"
+    "last_enriched": "2026-01-16T09:29:28.437452"
   },
   {
     "name": "New Orleans Pelicans",
@@ -2622,10 +2066,10 @@
     "geo_country": "US",
     "city_population": 362701,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1300000,
+    "followers_instagram": 3000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 935700,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2633,40 +2077,19 @@
     "owns_stadium": false,
     "stadium_name": "Smoothie King Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2300,
-    "annual_revenue_millions": 240,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 45.0,
+    "franchise_value_millions": 3550.0,
+    "annual_revenue_millions": 302.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883010"
+    "last_enriched": "2026-01-16T09:30:51.863506"
   },
   {
     "name": "New York Knicks",
@@ -2680,8 +2103,8 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 2200000,
+    "followers_instagram": 5000000,
     "followers_facebook": null,
     "followers_tiktok": null,
     "subscribers_youtube": null,
@@ -2691,18 +2114,19 @@
     "owns_stadium": false,
     "stadium_name": "Madison Square Garden",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 6600,
-    "annual_revenue_millions": 520,
+    "avg_ticket_price": 195.0,
+    "franchise_value_millions": 9750.0,
+    "annual_revenue_millions": 532.0,
     "mission_tags": [],
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883037"
+    "last_enriched": "2026-01-16T09:30:51.863539"
   },
   {
     "name": "Oklahoma City Thunder",
@@ -2716,10 +2140,10 @@
     "geo_country": "US",
     "city_population": 712919,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 2600000,
+    "followers_instagram": 6000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 894200,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2727,39 +2151,19 @@
     "owns_stadium": true,
     "stadium_name": "Paycom Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2700,
-    "annual_revenue_millions": 265,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 65.0,
+    "franchise_value_millions": 4350.0,
+    "annual_revenue_millions": 357.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883042"
+    "last_enriched": "2026-01-16T09:30:51.863545"
   },
   {
     "name": "Orlando Magic",
@@ -2773,10 +2177,10 @@
     "geo_country": "US",
     "city_population": 334854,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1500000,
+    "followers_instagram": 2000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1600000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2784,38 +2188,19 @@
     "owns_stadium": true,
     "stadium_name": "Kia Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2550,
-    "annual_revenue_millions": 255,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "Hoops For Troops",
-      "NBA Math Hoops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 60.0,
+    "franchise_value_millions": 3900.0,
+    "annual_revenue_millions": 318.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883048"
+    "last_enriched": "2026-01-16T09:30:51.863552"
   },
   {
     "name": "Philadelphia 76ers",
@@ -2829,10 +2214,10 @@
     "geo_country": "US",
     "city_population": 1573916,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 2200000,
+    "followers_instagram": 5000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1300000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2840,39 +2225,19 @@
     "owns_stadium": false,
     "stadium_name": "Xfinity Mobile Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 4000,
-    "annual_revenue_millions": 350,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 106.0,
+    "franchise_value_millions": 5450.0,
+    "annual_revenue_millions": 472.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883051"
+    "last_enriched": "2026-01-16T09:30:51.863558"
   },
   {
     "name": "Phoenix Suns",
@@ -2886,7 +2251,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
-    "followers_x": null,
+    "followers_x": 1600000,
     "followers_instagram": null,
     "followers_facebook": null,
     "followers_tiktok": null,
@@ -2897,39 +2262,19 @@
     "owns_stadium": true,
     "stadium_name": "Mortgage Matchup Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3650,
-    "annual_revenue_millions": 340,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Math Hoops",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 107.0,
+    "franchise_value_millions": 5425.0,
+    "annual_revenue_millions": 455.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883054"
+    "last_enriched": "2026-01-16T09:30:51.863564"
   },
   {
     "name": "Portland Trail Blazers",
@@ -2943,10 +2288,10 @@
     "geo_country": "US",
     "city_population": 635749,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1400000,
+    "followers_instagram": 3000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1100000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2954,18 +2299,19 @@
     "owns_stadium": false,
     "stadium_name": "Moda Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3200,
-    "annual_revenue_millions": 290,
+    "avg_ticket_price": 74.0,
+    "franchise_value_millions": 4250.0,
+    "annual_revenue_millions": 361.0,
     "mission_tags": [],
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883058"
+    "last_enriched": "2026-01-16T09:30:51.863570"
   },
   {
     "name": "Sacramento Kings",
@@ -2979,10 +2325,10 @@
     "geo_country": "US",
     "city_population": 535798,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1100000,
+    "followers_instagram": 2000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 591600,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -2990,18 +2336,19 @@
     "owns_stadium": true,
     "stadium_name": "Golden 1 Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2800,
-    "annual_revenue_millions": 280,
+    "avg_ticket_price": 90.0,
+    "franchise_value_millions": 4450.0,
+    "annual_revenue_millions": 354.0,
     "mission_tags": [],
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883061"
+    "last_enriched": "2026-01-16T09:30:51.863576"
   },
   {
     "name": "San Antonio Spurs",
@@ -3015,10 +2362,10 @@
     "geo_country": "US",
     "city_population": 1526656,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 3200000,
+    "followers_instagram": 5000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 1100000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -3026,40 +2373,19 @@
     "owns_stadium": false,
     "stadium_name": "Frost Bank Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3000,
-    "annual_revenue_millions": 300,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 75.0,
+    "franchise_value_millions": 4400.0,
+    "annual_revenue_millions": 401.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883064"
+    "last_enriched": "2026-01-16T09:30:51.863582"
   },
   {
     "name": "Toronto Raptors",
@@ -3073,10 +2399,10 @@
     "geo_country": "CA",
     "city_population": null,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 2300000,
+    "followers_instagram": 90000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 932000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -3084,40 +2410,19 @@
     "owns_stadium": false,
     "stadium_name": "Scotiabank Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3750,
-    "annual_revenue_millions": 330,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares",
-      "NBA Math Hoops",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America"
-    ],
+    "avg_ticket_price": 85.0,
+    "franchise_value_millions": 5400.0,
+    "annual_revenue_millions": 380.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883067"
+    "last_enriched": "2026-01-16T09:30:51.863587"
   },
   {
     "name": "Utah Jazz",
@@ -3131,10 +2436,10 @@
     "geo_country": "US",
     "city_population": 217783,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1200000,
+    "followers_instagram": 90000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 3700000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -3142,40 +2447,19 @@
     "owns_stadium": false,
     "stadium_name": "Delta Center",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 3050,
-    "annual_revenue_millions": 280,
-    "mission_tags": [
-      "Environmental Sustainability"
-    ],
-    "community_programs": [
-      "NBA Green",
-      "NBA Cares State Farm Assist Tracker",
-      "Hoops For Troops"
-    ],
-    "cause_partnerships": [
-      "Arbor Day Foundation",
-      "Clever Carbon",
-      "Delivering Good",
-      "Goodr",
-      "Green Sports Alliance",
-      "National Parks Conservation Association",
-      "NEEF",
-      "NRDC",
-      "Sport & Sustainability International",
-      "Student Conservation Association",
-      "The Cool Down",
-      "Trashie",
-      "Rewiring America",
-      "NBA Math Hoops"
-    ],
+    "avg_ticket_price": 160.0,
+    "franchise_value_millions": 4100.0,
+    "annual_revenue_millions": 340.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "brand",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883071"
+    "last_enriched": "2026-01-16T09:30:51.863593"
   },
   {
     "name": "Washington Wizards",
@@ -3189,10 +2473,10 @@
     "geo_country": "US",
     "city_population": 702250,
     "metro_gdp_millions": null,
-    "followers_x": null,
-    "followers_instagram": null,
+    "followers_x": 1100000,
+    "followers_instagram": 2000000,
     "followers_facebook": null,
-    "followers_tiktok": null,
+    "followers_tiktok": 835600,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
     "family_program_count": 0,
@@ -3200,17 +2484,18 @@
     "owns_stadium": true,
     "stadium_name": "Capital One Arena",
     "sponsors": null,
-    "avg_ticket_price": null,
-    "franchise_value_millions": 2650,
-    "annual_revenue_millions": 270,
+    "avg_ticket_price": 80.0,
+    "franchise_value_millions": 4700.0,
+    "annual_revenue_millions": 389.0,
     "mission_tags": [],
     "community_programs": [],
     "cause_partnerships": [],
     "enrichments_applied": [
       "geo",
       "sponsor",
-      "valuation"
+      "valuation",
+      "social"
     ],
-    "last_enriched": "2026-01-14T04:13:28.883073"
+    "last_enriched": "2026-01-16T09:30:51.863599"
   }
 ]

@@ -2,51 +2,51 @@
   "scrapers": {
     "mlb_milb": {
       "status": "success",
-      "last_run": "2026-01-13T04:32:57.413952",
-      "last_success": "2026-01-13T04:32:57.414248",
+      "last_run": "2026-01-15T17:39:27.402643",
+      "last_success": "2026-01-15T17:39:27.403322",
       "last_error": null,
-      "last_duration_ms": 1539,
-      "total_runs": 11,
-      "successful_runs": 9,
-      "last_teams_count": 236,
-      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260113_043257.json",
-      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260113_043257.xlsx"
+      "last_duration_ms": 1810,
+      "total_runs": 14,
+      "successful_runs": 12,
+      "last_teams_count": 235,
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260115_173927.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/mlb_milb_teams_20260115_173927.xlsx"
     },
     "nba_gleague": {
       "status": "success",
-      "last_run": "2026-01-13T04:29:57.800691",
-      "last_success": "2026-01-13T04:29:57.801780",
+      "last_run": "2026-01-15T17:32:34.025015",
+      "last_success": "2026-01-15T17:32:34.026146",
       "last_error": null,
-      "last_duration_ms": 1602,
-      "total_runs": 9,
-      "successful_runs": 9,
+      "last_duration_ms": 1674,
+      "total_runs": 11,
+      "successful_runs": 11,
       "last_teams_count": 62,
-      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260113_042957.json",
-      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260113_042957.xlsx"
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260115_173234.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nba_gleague_teams_20260115_173234.xlsx"
     },
     "nfl": {
       "status": "success",
-      "last_run": "2026-01-13T04:35:23.233703",
-      "last_success": "2026-01-13T04:35:23.234294",
+      "last_run": "2026-01-15T17:32:35.587380",
+      "last_success": "2026-01-15T17:32:35.587961",
       "last_error": null,
-      "last_duration_ms": 454,
-      "total_runs": 9,
-      "successful_runs": 9,
+      "last_duration_ms": 1128,
+      "total_runs": 12,
+      "successful_runs": 12,
       "last_teams_count": 32,
-      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nfl_teams_20260113_043523.json",
-      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nfl_teams_20260113_043523.xlsx"
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nfl_teams_20260115_173235.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nfl_teams_20260115_173235.xlsx"
     },
     "nhl_ahl_echl": {
       "status": "success",
-      "last_run": "2026-01-13T04:38:06.527036",
-      "last_success": "2026-01-13T04:38:06.527703",
+      "last_run": "2026-01-15T17:32:34.865305",
+      "last_success": "2026-01-15T17:32:34.866128",
       "last_error": null,
-      "last_duration_ms": 2144,
-      "total_runs": 8,
-      "successful_runs": 8,
+      "last_duration_ms": 1976,
+      "total_runs": 9,
+      "successful_runs": 9,
       "last_teams_count": 97,
-      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260113_043806.json",
-      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260113_043806.xlsx"
+      "last_json_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260115_173234.json",
+      "last_xlsx_path": "/Users/ibraheemamin/Documents/PlayMaker2026/PM-SponsorshipSearch/apps/scraper/backend/data/nhl_ahl_echl_teams_20260115_173234.xlsx"
     }
   }
 }

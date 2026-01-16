@@ -13,6 +13,22 @@ from datetime import datetime
 
 
 @dataclass
+class SocialHandle:
+    """
+    Represents a social media handle for a team.
+
+    Stores the username/handle and any stable unique ID if available.
+    For YouTube, the channel_id IS the stable ID (starts with UC).
+    For other platforms, usernames may change but we store what's available.
+    """
+
+    platform: str  # "x", "instagram", "facebook", "tiktok", "youtube"
+    handle: str  # Username/handle (e.g., "Lakers", "yankees")
+    url: Optional[str] = None  # Full profile URL
+    unique_id: Optional[str] = None  # Stable ID if available (YouTube channel ID)
+
+
+@dataclass
 class SponsorInfo:
     """Represents a sponsor partnership."""
 
@@ -67,6 +83,11 @@ class TeamRow:
     metro_gdp_millions: Optional[float] = None
 
     # ========== Social/Audience (Phase 3) ==========
+    # Social handles with platform info
+    social_handles: Optional[List[Dict[str, Any]]] = (
+        None  # List of SocialHandle as dicts
+    )
+    # Follower counts
     followers_x: Optional[int] = None
     followers_instagram: Optional[int] = None
     followers_facebook: Optional[int] = None
@@ -178,6 +199,7 @@ METRIC_GROUPS = {
     "social": {
         "label": "Social & Audience",
         "fields": [
+            "social_handles",
             "followers_x",
             "followers_instagram",
             "followers_facebook",
@@ -220,6 +242,7 @@ FIELD_METADATA = {
     "geo_country": {"label": "Country", "format": "text"},
     "city_population": {"label": "City Population", "format": "number"},
     "metro_gdp_millions": {"label": "Metro GDP (M)", "format": "currency"},
+    "social_handles": {"label": "Social Handles", "format": "social_handles"},
     "followers_x": {"label": "X Followers", "format": "number"},
     "followers_instagram": {"label": "Instagram Followers", "format": "number"},
     "followers_facebook": {"label": "Facebook Followers", "format": "number"},

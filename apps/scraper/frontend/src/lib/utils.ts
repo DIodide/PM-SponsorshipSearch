@@ -48,9 +48,7 @@ export function formatNumber(value: number): string {
     return `${(value / 1_000).toFixed(1)}K`;
   }
   return value.toLocaleString();
-}
-
-export function formatCurrency(value: number, currency: string = '$'): string {
+}export function formatCurrency(value: number, currency: string = '$'): string {
   if (value >= 1_000_000_000) {
     return `${currency}${(value / 1_000_000_000).toFixed(1)}B`;
   }

@@ -8,20 +8,29 @@ Each enricher is a standalone module that:
 
 Available Enrichers:
 - GeoEnricher: Adds city_population and metro_gdp_millions
-- SocialEnricher: Adds social media follower counts
+- SocialEnricher: Adds social media follower counts (X, Instagram, Facebook, TikTok, YouTube)
 - WebsiteEnricher: Adds family friendliness metrics
 - SponsorEnricher: Adds stadium and sponsor information
-- ValuationEnricher: Adds pricing and valuation data
+- ValuationEnricher: Adds pricing and valuation data from Forbes and SeatGeek
 - BrandEnricher: Adds mission and community program tags
 """
 
-from .base import BaseEnricher, EnricherRegistry
+from .base import BaseEnricher, EnricherRegistry, EnricherConfig
 from .geo_enricher import GeoEnricher
+from .social_enricher import SocialEnricher
 from .sponsor_enricher import SponsorEnricher
+from .website_enricher import WebsiteEnricher
+from .brand_enricher import BrandEnricher
+from .valuation_enricher import ValuationEnricher
 
 __all__ = [
     "BaseEnricher",
+    "EnricherConfig",
     "EnricherRegistry",
     "GeoEnricher",
+    "SocialEnricher",
     "SponsorEnricher",
+    "WebsiteEnricher",
+    "BrandEnricher",
+    "ValuationEnricher",
 ]
