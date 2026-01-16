@@ -1,129 +1,274 @@
 import { useState } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { SparklesIcon, Cancel01Icon } from '@hugeicons/core-free-icons';
-import type { RecommendationPrompt } from '../types';
+import { 
+  SparklesIcon, 
+  Cancel01Icon,
+  Settings02Icon,
+} from '@hugeicons/core-free-icons';
+import { 
+  REGIONS, 
+  DEMOGRAPHICS, 
+  BRAND_VALUES, 
+  LEAGUES, 
+  GOALS,
+  type SearchFilters,
+} from '../types';
 
 interface PromptEditorProps {
-  prompt: RecommendationPrompt;
-  onSubmit: (prompt: RecommendationPrompt) => void;
+  filters: SearchFilters;
+  query: string;
+  onSubmit: (query: string, filters: SearchFilters) => void;
   onClose?: () => void;
   isModal?: boolean;
 }
 
-const REGIONS = [
-  'All Regions',
-  'Northeast',
-  'Southeast',
-  'Southern',
-  'Midwest',
-  'Southwest',
-  'West Coast',
-  'Pacific Northwest',
-];
+// Badge component for filter chips
+function FilterBadge({
+  label,
+  selected,
+  onClick,
+}: {
+  label: string;
+  selected: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-all ${
+        selected
+          ? 'bg-teal-600 text-white border-transparent'
+          : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:border-gray-300'
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
 
-const BUDGET_OPTIONS = [
-  { label: 'Any budget', value: undefined },
-  { label: '$250,000', value: 250000 },
-  { label: '$500,000', value: 500000 },
-  { label: '$1,000,000', value: 1000000 },
-  { label: '$2,000,000', value: 2000000 },
-  { label: '$5,000,000', value: 5000000 },
-  { label: '$10,000,000+', value: 10000000 },
-];
+// Filter section component
+function FilterSection({
+  label,
+  options,
+  selected,
+  onToggle,
+}: {
+  label: string;
+  options: { value: string; label: string }[];
+  selected: string[];
+  onToggle: (value: string) => void;
+}) {
+  return (
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>
+      <div className="flex flex-wrap gap-2">
+        {options.map((option) => (
+          <FilterBadge
+            key={option.value}
+            label={option.label}
+            selected={selected.includes(option.value)}
+            onClick={() => onToggle(option.value)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
-const EXAMPLE_PROMPTS = [
-  'Reach young families through a partnership with a community-focused team',
-  'Build brand awareness with millennial sports fans in urban markets',
-  'Connect with local communities through grassroots youth sports programs',
-  'Engage with passionate fan bases in minor league markets',
-  'Partner with teams that have strong digital and social media presence',
-];
+export function PromptEditor({ 
+  filters: initialFilters, 
+  query: initialQuery,
+  onSubmit, 
+  onClose, 
+  isModal = false 
+}: PromptEditorProps) {
+  const [query, setQuery] = useState(initialQuery);
+  const [filters, setFilters] = useState<SearchFilters>(initialFilters);
+  const [showAdvanced, setShowAdvanced] = useState(true);
 
-export function PromptEditor({ prompt, onSubmit, onClose, isModal = false }: PromptEditorProps) {
-  const [objective, setObjective] = useState(prompt.objective);
-  const [budget, setBudget] = useState<number | undefined>(prompt.budget);
-  const [region, setRegion] = useState(prompt.region || '');
+  const toggleFilter = (
+    category: keyof Pick<SearchFilters, 'regions' | 'demographics' | 'brandValues' | 'leagues' | 'goals'>,
+    value: string
+  ) => {
+    setFilters((prev) => ({
+      ...prev,
+      [category]: prev[category].includes(value)
+        ? prev[category].filter((v) => v !== value)
+        : [...prev[category], value],
+    }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!objective.trim()) return;
-    onSubmit({
-      objective: objective.trim(),
-      budget,
-      region: region && region !== 'All Regions' ? region : undefined,
+    
+    const hasFilters = 
+      filters.regions.length > 0 || 
+      filters.demographics.length > 0 || 
+      filters.brandValues.length > 0 || 
+      filters.leagues.length > 0 || 
+      filters.goals.length > 0 ||
+      filters.budgetMin !== undefined ||
+      filters.budgetMax !== undefined;
+    
+    if (!query.trim() && !hasFilters) {
+      return;
+    }
+    
+    onSubmit(query, filters);
+  };
+
+  const activeFilterCount =
+    filters.regions.length +
+    filters.demographics.length +
+    filters.brandValues.length +
+    filters.leagues.length +
+    filters.goals.length +
+    (filters.budgetMin ? 1 : 0) +
+    (filters.budgetMax ? 1 : 0);
+
+  const clearFilters = () => {
+    setFilters({
+      regions: [],
+      demographics: [],
+      brandValues: [],
+      leagues: [],
+      goals: [],
     });
+    setQuery('');
   };
 
   const content = (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Objective Input */}
+      {/* Search Query Input */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          What's your sponsorship objective?
+          Describe your sponsorship objective
         </label>
         <textarea
-          value={objective}
-          onChange={(e) => setObjective(e.target.value)}
-          placeholder="Describe what you want to achieve with a sports partnership..."
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 resize-none"
-          rows={3}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="e.g., 'Looking for community-focused teams to build local brand awareness with families'"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 resize-none bg-white"
+          rows={2}
         />
-        {/* Example prompts */}
-        <div className="mt-3">
-          <div className="text-xs text-gray-500 mb-2">Try an example:</div>
-          <div className="flex flex-wrap gap-2">
-            {EXAMPLE_PROMPTS.slice(0, 3).map((example, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setObjective(example)}
-                className="px-3 py-1.5 text-xs bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors truncate max-w-[200px]"
-              >
-                {example}
-              </button>
-            ))}
-          </div>
-        </div>
+        <p className="mt-1.5 text-xs text-gray-500">
+          This text will be embedded and matched against team values
+        </p>
       </div>
 
-      {/* Budget and Region */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Budget
-          </label>
-          <select
-            value={budget || ''}
-            onChange={(e) => setBudget(e.target.value ? Number(e.target.value) : undefined)}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
-          >
-            {BUDGET_OPTIONS.map((opt) => (
-              <option key={opt.label} value={opt.value || ''}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
+      {/* Toggle Advanced Filters */}
+      <button
+        type="button"
+        onClick={() => setShowAdvanced(!showAdvanced)}
+        className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+      >
+        <HugeiconsIcon icon={Settings02Icon} size={16} />
+        <span>Filter Options</span>
+        {activeFilterCount > 0 && (
+          <span className="px-2 py-0.5 bg-teal-100 text-teal-700 text-xs font-medium rounded-full">
+            {activeFilterCount}
+          </span>
+        )}
+      </button>
+
+      {/* Advanced Filters */}
+      {showAdvanced && (
+        <div className="space-y-5 pt-2 border-t border-gray-100">
+          {/* Budget Range */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Budget Range
+            </label>
+            <div className="flex items-center gap-3">
+              <div className="flex-1">
+                <input
+                  type="number"
+                  placeholder="Min ($)"
+                  value={filters.budgetMin || ''}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      budgetMin: e.target.value ? Number(e.target.value) : undefined,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
+                />
+              </div>
+              <span className="text-gray-400 text-sm">to</span>
+              <div className="flex-1">
+                <input
+                  type="number"
+                  placeholder="Max ($)"
+                  value={filters.budgetMax || ''}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      budgetMax: e.target.value ? Number(e.target.value) : undefined,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Regions */}
+          <FilterSection
+            label="Target Regions"
+            options={REGIONS}
+            selected={filters.regions}
+            onToggle={(value) => toggleFilter('regions', value)}
+          />
+
+          {/* Leagues */}
+          <FilterSection
+            label="Preferred Leagues"
+            options={LEAGUES}
+            selected={filters.leagues}
+            onToggle={(value) => toggleFilter('leagues', value)}
+          />
+
+          {/* Demographics */}
+          <FilterSection
+            label="Target Demographics"
+            options={DEMOGRAPHICS}
+            selected={filters.demographics}
+            onToggle={(value) => toggleFilter('demographics', value)}
+          />
+
+          {/* Brand Values */}
+          <FilterSection
+            label="Brand Values Alignment"
+            options={BRAND_VALUES}
+            selected={filters.brandValues}
+            onToggle={(value) => toggleFilter('brandValues', value)}
+          />
+
+          {/* Goals */}
+          <FilterSection
+            label="Sponsorship Goals"
+            options={GOALS}
+            selected={filters.goals}
+            onToggle={(value) => toggleFilter('goals', value)}
+          />
+
+          {/* Clear Filters */}
+          {activeFilterCount > 0 && (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              <HugeiconsIcon icon={Cancel01Icon} size={14} />
+              Clear all filters
+            </button>
+          )}
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Region
-          </label>
-          <select
-            value={region}
-            onChange={(e) => setRegion(e.target.value)}
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
-          >
-            {REGIONS.map((r) => (
-              <option key={r} value={r}>
-                {r}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
+      )}
 
       {/* Submit Button */}
-      <div className="flex justify-end gap-3">
+      <div className="flex justify-end gap-3 pt-2">
         {onClose && (
           <button
             type="button"
@@ -135,11 +280,11 @@ export function PromptEditor({ prompt, onSubmit, onClose, isModal = false }: Pro
         )}
         <button
           type="submit"
-          disabled={!objective.trim()}
+          disabled={!query.trim() && activeFilterCount === 0}
           className="flex items-center gap-2 px-5 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <HugeiconsIcon icon={SparklesIcon} size={16} />
-          Get Recommendations
+          Find Matching Teams
         </button>
       </div>
     </form>
@@ -148,9 +293,9 @@ export function PromptEditor({ prompt, onSubmit, onClose, isModal = false }: Pro
   if (isModal) {
     return (
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg font-semibold text-gray-900">Edit Your Prompt</h2>
+        <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-gray-900">Edit Search Criteria</h2>
             {onClose && (
               <button
                 onClick={onClose}
@@ -160,11 +305,55 @@ export function PromptEditor({ prompt, onSubmit, onClose, isModal = false }: Pro
               </button>
             )}
           </div>
-          {content}
+          <div className="p-6">
+            {content}
+          </div>
         </div>
       </div>
     );
   }
 
   return content;
+}
+
+/**
+ * Build a human-readable summary of the search criteria
+ */
+export function buildSearchSummary(query: string, filters: SearchFilters): string {
+  const parts: string[] = [];
+  
+  if (query.trim()) {
+    parts.push(`"${query.trim()}"`);
+  }
+  
+  if (filters.budgetMin || filters.budgetMax) {
+    const budgetStr = filters.budgetMin && filters.budgetMax
+      ? `Budget: $${(filters.budgetMin / 1000).toFixed(0)}K–$${(filters.budgetMax / 1000).toFixed(0)}K`
+      : filters.budgetMin
+        ? `Budget: $${(filters.budgetMin / 1000).toFixed(0)}K+`
+        : `Budget: up to $${(filters.budgetMax! / 1000).toFixed(0)}K`;
+    parts.push(budgetStr);
+  }
+  
+  if (filters.regions.length > 0) {
+    parts.push(`Regions: ${filters.regions.join(', ')}`);
+  }
+  
+  if (filters.leagues.length > 0) {
+    parts.push(`Leagues: ${filters.leagues.join(', ')}`);
+  }
+  
+  if (filters.demographics.length > 0) {
+    parts.push(`Demographics: ${filters.demographics.join(', ')}`);
+  }
+  
+  if (filters.brandValues.length > 0) {
+    parts.push(`Values: ${filters.brandValues.join(', ')}`);
+  }
+  
+  if (filters.goals.length > 0) {
+    parts.push(`Goals: ${filters.goals.join(', ')}`);
+  }
+  
+  return parts.join('. ') || 'No criteria specified';
 }
