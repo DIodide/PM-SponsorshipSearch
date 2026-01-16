@@ -3,11 +3,6 @@ import { query, action } from "./_generated/server";
 import { api } from "./_generated/api";
 import { AllTeamsClean } from "./All_Teams_Clean";
 
-
-// ----------------------
-// Utility Functions
-// ----------------------
-
 function cosineSimilarity(a: number[] | null, b: number[] | null): number {
   if (!a || !b || a.length === 0 || b.length === 0) return 0;
   const dot = a.reduce((sum, val, i) => sum + val * b[i], 0);
@@ -17,24 +12,35 @@ function cosineSimilarity(a: number[] | null, b: number[] | null): number {
   return dot / (normA * normB); // [-1,1]
 }
 
-function euclideanSimilarity(a: number | null, b: number | null): number {
-  if (a === null || b === null) return 0;
-  const distance = Math.abs(a - b);
-  return 1 / (1 + distance); // Converts distance → similarity in (0,1]
-}
-
 // ----------------------
 // Embedding Helper
 // ----------------------
-// Replace this with your actual embedding provider call.
-async function embedText(text: string): Promise<number[] | null> {
-  if (!text || text.trim() === "") return null;
 
-  // Example: Replace with your embedding API
-  // const response = await fetch("https://api.openai.com/v1/embeddings", {...})
-  // return response.data[0].embedding;
+// YUBI: added embedding logic, make sure that this is correct
+async function embedText(txt: string | undefined | null): Promise<number[] | null> {
+    if (!txt || txt.trim() === "") return null;
 
-  return Array(256).fill(0).map(() => Math.random());  
+    // 1. Access the environment variable via process.env
+    const apiKey = process.env.GEMINI_API_KEY;
+  
+    const body = {
+      model: "models/embedding-001",
+      content: { parts: [{ text: txt }] }
+    };
+  
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      }
+    );
+  
+    const json = await res.json();
+    if (!res.ok) throw new Error(`Gemini Error: ${json.error?.message || res.statusText}`);
+    
+    return json.embedding.values;
 }
 
 // ----------------------
