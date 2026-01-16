@@ -23,6 +23,7 @@ import type * as jobsHelpers from "../jobsHelpers.js";
 import type * as research from "../research.js";
 import type * as search from "../search.js";
 import type * as seedData from "../seedData.js";
+import type * as similarityScoring from "../similarityScoring.js";
 import type * as social from "../social.js";
 import type * as socialHelpers from "../socialHelpers.js";
 import type * as teams from "../teams.js";
@@ -49,6 +50,7 @@ declare const fullApi: ApiFromModules<{
   research: typeof research;
   search: typeof search;
   seedData: typeof seedData;
+  similarityScoring: typeof similarityScoring;
   social: typeof social;
   socialHelpers: typeof socialHelpers;
   teams: typeof teams;

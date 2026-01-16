@@ -65,10 +65,33 @@ export const computeBrandSimilarity = action({
     const brandRegion = filters.regions.join(" ");
     const brandLeague = filters.leagues.join(" ");
     const brandValues = filters.brandValues.join(" ");
-    // YUBI: THIS IS NOT ACCURATE
     // const brandPartners = filters.demographics.join(" "); // interpret "demographics" as partner-related inputs if needed
     const brandAudience = filters.demographics.join(" ");
     const brandGoals = filters.goals.join(" ");
+
+    // YUBI: use direct inputs
+
+    // Set target value tier of team using goals
+    let target_value_tier = 2
+    if (brandGoals.includes("prestige-credibility")) {
+        target_value_tier += 1
+    } else if (brandGoals.includes("brand-awareness")) {
+        target_value_tier += 1
+    } else if (brandGoals.includes("business-to-business")) {
+        target_value_tier += 1
+    } else if (brandGoals.includes("fan-connection-activation-control")) {
+        target_value_tier -= 2
+    }
+
+    // constrain the target value tier to be within 1 and 3
+    if (target_value_tier < 1) {
+        target_value_tier = 1
+    } else if (target_value_tier > 3) {
+        target_value_tier = 3
+    }
+
+    // YUBI: use direct inputs to compute demographic similarity
+    // YUBI: use budget inputs to compute target value tier
 
     const brandVector = {
       region_embedding: await embedText(brandRegion),
@@ -96,16 +119,18 @@ export const computeBrandSimilarity = action({
         const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
         const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
         const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
+        
+        // YUBI: not relevant
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
 
-        // use goals embedding and audience embedding
-        // YUBI: add more similarity scores that take into account local presence, digital presence, etc.
-      
+        // YUBI: this has a range of 2, but we want it to span from -1 to 1
+        const valuationSim = (1-Math.abs(target_value_tier - team.value_tier))
+
         const components = [
           simRegion,
           simLeague,
           simValues,
-          simGoals
+          valuationSim
           // YUBI: want to add more components here
         ];
       
