@@ -1,18 +1,24 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useScrapers, useScraperData } from '@/hooks/useScrapers';
 import { ScraperCard } from '@/components/ScraperCard';
 import { DataViewer } from '@/components/DataViewer';
+import { EnrichmentTasksPanel } from '@/components/EnrichmentTasksPanel';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   Database01Icon,
   RefreshIcon,
   GridIcon,
+  SparklesIcon,
+  Layers01Icon,
 } from '@hugeicons/core-free-icons';
+
+type ViewMode = 'scrapers' | 'enrichment';
 
 function App() {
   const { scrapers, loading, error, refresh, run } = useScrapers();
   const [selectedScraperId, setSelectedScraperId] = useState<string | null>(null);
   const { data: scraperData, loading: dataLoading, refresh: refreshData } = useScraperData(selectedScraperId);
+  const [viewMode, setViewMode] = useState<ViewMode>('scrapers');
 
   const handleViewData = (id: string) => {
     if (selectedScraperId === id) {
@@ -30,6 +36,15 @@ function App() {
     }
   };
 
+  const handleTaskComplete = useCallback(() => {
+    // Refresh scraper data when enrichment completes
+    refreshData();
+    refresh();
+  }, [refreshData, refresh]);
+
+  // Count active enrichment tasks from scrapers
+  const totalTeams = scrapers.reduce((sum, s) => sum + s.last_teams_count, 0);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -37,13 +52,39 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <HugeiconsIcon icon={GridIcon} size={20} className="text-primary-foreground" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/20">
+                <HugeiconsIcon icon={GridIcon} size={20} className="text-white" />
               </div>
               <div>
                 <h1 className="text-xl font-bold tracking-tight">PlayMaker Scraper</h1>
                 <p className="text-sm text-muted-foreground">Sports Team Data Pipeline</p>
               </div>
+            </div>
+            
+            {/* View Mode Tabs */}
+            <div className="flex items-center gap-1 p-1 bg-muted rounded-lg">
+              <button
+                onClick={() => setViewMode('scrapers')}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  viewMode === 'scrapers'
+                    ? 'bg-background text-foreground shadow-sm'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <HugeiconsIcon icon={Database01Icon} size={16} />
+                Scrapers
+              </button>
+              <button
+                onClick={() => setViewMode('enrichment')}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  viewMode === 'enrichment'
+                    ? 'bg-background text-foreground shadow-sm'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <HugeiconsIcon icon={SparklesIcon} size={16} />
+                Enrichment
+              </button>
             </div>
             
             <button
@@ -84,35 +125,93 @@ function App() {
           </div>
         )}
 
-        {/* Scrapers Grid */}
+        {/* Content based on view mode */}
         {!loading && !error && (
           <>
-            <section className="mb-8">
-              <div className="flex items-center gap-2 mb-6">
-                <HugeiconsIcon icon={Database01Icon} size={24} className="text-muted-foreground" />
-                <h2 className="text-2xl font-bold">Data Scrapers</h2>
-              </div>
-              
-              <div className="grid gap-6 md:grid-cols-2">
-                {scrapers.map(scraper => (
-                  <ScraperCard
-                    key={scraper.id}
-                    scraper={scraper}
-                    onRun={handleRun}
-                    onViewData={handleViewData}
-                    isSelected={selectedScraperId === scraper.id}
-                  />
-                ))}
-              </div>
-            </section>
+            {viewMode === 'scrapers' && (
+              <>
+                {/* Stats Bar */}
+                <div className="grid grid-cols-4 gap-4 mb-8">
+                  <div className="bg-card border rounded-xl p-4">
+                    <div className="text-2xl font-bold">{scrapers.length}</div>
+                    <div className="text-sm text-muted-foreground">Data Sources</div>
+                  </div>
+                  <div className="bg-card border rounded-xl p-4">
+                    <div className="text-2xl font-bold">{totalTeams.toLocaleString()}</div>
+                    <div className="text-sm text-muted-foreground">Total Teams</div>
+                  </div>
+                  <div className="bg-card border rounded-xl p-4">
+                    <div className="text-2xl font-bold">
+                      {scrapers.filter(s => s.status === 'running').length}
+                    </div>
+                    <div className="text-sm text-muted-foreground">Running</div>
+                  </div>
+                  <div className="bg-card border rounded-xl p-4">
+                    <div className="text-2xl font-bold text-green-600">
+                      {scrapers.filter(s => s.status === 'success').length}
+                    </div>
+                    <div className="text-sm text-muted-foreground">Ready</div>
+                  </div>
+                </div>
 
-            {/* Data Viewer */}
-            {selectedScraperId && (
-              <section className="mt-8">
-                <DataViewer
-                  data={scraperData}
-                  loading={dataLoading}
-                  onClose={() => setSelectedScraperId(null)}
+                {/* Scrapers Grid */}
+                <section className="mb-8">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-2">
+                      <HugeiconsIcon icon={Database01Icon} size={24} className="text-muted-foreground" />
+                      <h2 className="text-2xl font-bold">Data Scrapers</h2>
+                    </div>
+                    <button
+                      onClick={() => setViewMode('enrichment')}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white hover:from-violet-700 hover:to-fuchsia-700 transition-all font-medium shadow-lg shadow-violet-500/20"
+                    >
+                      <HugeiconsIcon icon={SparklesIcon} size={16} />
+                      Enrich Data
+                    </button>
+                  </div>
+                  
+                  <div className="grid gap-6 md:grid-cols-2">
+                    {scrapers.map(scraper => (
+                      <ScraperCard
+                        key={scraper.id}
+                        scraper={scraper}
+                        onRun={handleRun}
+                        onViewData={handleViewData}
+                        isSelected={selectedScraperId === scraper.id}
+                      />
+                    ))}
+                  </div>
+                </section>
+
+                {/* Data Viewer */}
+                {selectedScraperId && (
+                  <section className="mt-8">
+                    <DataViewer
+                      data={scraperData}
+                      loading={dataLoading}
+                      onClose={() => setSelectedScraperId(null)}
+                      onDataChange={refreshData}
+                    />
+                  </section>
+                )}
+              </>
+            )}
+
+            {viewMode === 'enrichment' && (
+              <section>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2">
+                    <HugeiconsIcon icon={Layers01Icon} size={24} className="text-muted-foreground" />
+                    <h2 className="text-2xl font-bold">Data Enrichment</h2>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Run multiple enrichment tasks concurrently across different datasets
+                  </p>
+                </div>
+                
+                <EnrichmentTasksPanel 
+                  scrapers={scrapers}
+                  onTaskComplete={handleTaskComplete}
                 />
               </section>
             )}

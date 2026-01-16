@@ -14,6 +14,12 @@ else
     source venv/bin/activate
 fi
 
+# Load environment variables from .env file if it exists
+if [ -f .env ]; then
+    echo "Loading environment variables from .env..."
+    export $(grep -v '^#' .env | xargs)
+fi
+
 # Run uvicorn
 exec uvicorn main:app --reload --host 0.0.0.0 --port 8000
 

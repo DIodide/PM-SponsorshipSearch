@@ -35,7 +35,7 @@ export function useScrapers() {
       if (scrapersRef.current.some(s => s.status === 'running')) {
         refresh();
       }
-    }, 3000); // Poll every 3 seconds when running
+    }, 2000); // Poll every 3 seconds when running
     
     return () => clearInterval(interval);
   }, [refresh]);
@@ -65,6 +65,7 @@ export function useScraperData(scraperId: string | null) {
     }
 
     setLoading(true);
+    
     try {
       const result = await fetchScraperData(scraperId);
       setData(result);
