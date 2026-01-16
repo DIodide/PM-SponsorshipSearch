@@ -65,6 +65,7 @@ export const computeBrandSimilarity = action({
     const brandRegion = filters.regions.join(" ");
     const brandLeague = filters.leagues.join(" ");
     const brandValues = filters.brandValues.join(" ");
+    // YUBI: THIS IS NOT ACCURATE
     const brandPartners = filters.demographics.join(" "); // interpret "demographics" as partner-related inputs if needed
 
     const brandVector = {
@@ -122,6 +123,8 @@ export const computeBrandSimilarity = action({
         ];
       
         const active = components.filter((v) => typeof v === "number") as number[];
+
+        // YUBI: this is robust against unknown values in a team by only dividing by the number of known values per team
         const avgScore =
           active.length > 0 ? active.reduce((s, v) => s + v, 0) / active.length : 0;
       
