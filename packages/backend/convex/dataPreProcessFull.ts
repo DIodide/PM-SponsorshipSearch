@@ -111,18 +111,18 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
       const weights = { val: 0.4, rev: 0.3, ticket: 0.2, gdp: 0.1 };
 
       for (const row of seed) {
-        // Parallelize the 4 embedding calls for THIS row
+        // Parallelize the 48embedding calls for THIS row
         // We use Promise.all to "await" all of them together
         const [regionEmb, leagueEmb, valuesEmb, sponsorsEmb, familyProgramsEmb, missionEmb, communityProgramsEmb, partnersEmb] = await Promise.all([
             row.region ? embed(row.region, apiKey) : Promise.resolve(null),
             // Should I use league or category?
             row.league ? embed(row.league, apiKey) : Promise.resolve(null),
-            row.values ? embed(row.values, apiKey) : Promise.resolve(null),
-            row.sponsors ? embed(row.sponsors, apiKey) : Promise.resolve(null),
-            row.family_program_types ? embed(row.family_program_types, apiKey) : Promise.resolve(null),
-            row.mission_tags ? embed(row.mission_tags, apiKey) : Promise.resolve(null),
-            row.community_programs ? embed(row.community_programs, apiKey) : Promise.resolve(null),
-            row.cause_partnerships ? embed(row.cause_partnerships, apiKey) : Promise.resolve(null),
+            row.mission_tags ? embed(row.mission_tags.join(" "), apiKey) : Promise.resolve(null),
+            row.sponsors ? embed(typeof row.sponsors === "string" ? row.sponsors : JSON.stringify(row.sponsors), apiKey) : Promise.resolve(null),
+            row.family_program_types ? embed(row.family_program_types.join(" "), apiKey) : Promise.resolve(null),
+            row.mission_tags ? embed(row.mission_tags.join(" "), apiKey) : Promise.resolve(null),
+            row.community_programs ? embed(row.community_programs.join(" "), apiKey) : Promise.resolve(null),
+            row.cause_partnerships ? embed(row.cause_partnerships.join(" "), apiKey) : Promise.resolve(null),
         ]);
 
         // normalize all of the numerical values
@@ -180,7 +180,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
   
         };
   
-        await ctx.runMutation(api.dataPreProcess.insertCleanRow, { row: cleanRow });
+        await ctx.runMutation(api.dataPreProcessFull.insertCleanRow, { row: cleanRow });
       }
   
       return "All_Teams_Clean built successfully.";
