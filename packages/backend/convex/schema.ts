@@ -239,7 +239,16 @@ export default defineSchema({
       geo_country: v.optional(v.union(v.string(), v.null())),
       
       city_population: v.optional(v.union(v.number(), v.null())),
-      metro_gdp_millions: v.optional(v.union(v.number(), v.null())),
+      metro_gdp: v.optional(v.union(v.number(), v.null())), // Raw value in dollars
+      
+      // Social media handles - array of platform/handle/url objects
+      social_handles: v.optional(v.union(v.array(v.object({
+        platform: v.string(),
+        handle: v.string(),
+        url: v.optional(v.union(v.string(), v.null())),
+        unique_id: v.optional(v.union(v.string(), v.null())),
+      })), v.null())),
+      
       followers_x: v.optional(v.union(v.number(), v.null())),
       followers_instagram: v.optional(v.union(v.number(), v.null())),
       followers_facebook: v.optional(v.union(v.number(), v.null())),
@@ -254,8 +263,8 @@ export default defineSchema({
       sponsors: v.optional(v.union(v.any(), v.null())),
       
       avg_ticket_price: v.optional(v.union(v.number(), v.null())),
-      franchise_value_millions: v.optional(v.union(v.number(), v.null())),
-      annual_revenue_millions: v.optional(v.union(v.number(), v.null())),
+      franchise_value: v.optional(v.union(v.number(), v.null())), // Raw value in dollars
+      annual_revenue: v.optional(v.union(v.number(), v.null())), // Raw value in dollars
       
       mission_tags: v.optional(v.union(v.array(v.string()), v.null())),
       community_programs: v.optional(v.union(v.array(v.string()), v.null())),
@@ -263,7 +272,9 @@ export default defineSchema({
       enrichments_applied: v.optional(v.union(v.array(v.string()), v.null())),
       last_enriched: v.optional(v.union(v.string(), v.null())),
     })
-    .index("by_name", ["name"]),
+    .index("by_name", ["name"])
+    .index("by_league", ["league"])
+    .index("by_category", ["category"]),
     // YUBI: is there anything else I want to index by?
 
     All_Teams_Clean: defineTable({
