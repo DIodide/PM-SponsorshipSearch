@@ -1,4 +1,4 @@
-import { HugeiconsIcon } from '@hugeicons/react';
+import { HugeiconsIcon, type IconSvgElement } from '@hugeicons/react';
 import {
   LinkSquare02Icon,
   CheckmarkCircle02Icon,
@@ -22,7 +22,7 @@ interface SidebarProps {
   };
 }
 
-const navIcons: Record<string, React.ComponentType> = {
+const navIcons: Record<string, IconSvgElement> = {
   partnerships: LinkSquare02Icon,
   approvals: CheckmarkCircle02Icon,
   schedule: Calendar03Icon,
@@ -114,7 +114,7 @@ export function Sidebar({ activeItem, onItemClick, user = { name: 'Sameer Mehra'
                       : 'text-slate-300 hover:bg-slate-700/50 hover:text-white'
                   }`}
                 >
-                  {Icon && <HugeiconsIcon icon={Icon} size={18} />}
+                  {Icon && <HugeiconsIcon icon={Icon as IconSvgElement} size={18} />}
                   <span className="flex-1 text-left">{item.label}</span>
                   {item.isBeta && (
                     <span className="px-1.5 py-0.5 text-[10px] font-medium bg-teal-500/20 text-teal-400 rounded">
