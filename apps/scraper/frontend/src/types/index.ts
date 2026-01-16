@@ -230,6 +230,95 @@ export const METRIC_GROUPS: MetricGroup[] = [
   },
 ];
 
+// ============ Convex Export Types ============
+
+export type ConvexExportMode = 'overwrite' | 'append';
+
+export interface ConvexTeamPreview {
+  name: string;
+  league: string | null;
+  region: string | null;
+  has_geo_data: boolean;
+  has_social_data: boolean;
+  has_valuation_data: boolean;
+  enrichments_count: number;
+}
+
+export interface ConvexExportPreview {
+  scraper_id: string;
+  scraper_name: string;
+  teams_to_export: number;
+  existing_teams_in_convex: number;
+  sample_teams: ConvexTeamPreview[];
+  leagues_breakdown: Record<string, number>;
+  data_quality: {
+    has_geo_data: number;
+    has_social_data: number;
+    has_valuation_data: number;
+    has_enrichments: number;
+  };
+}
+
+export interface ConvexExportResult {
+  success: boolean;
+  mode: ConvexExportMode;
+  teams_exported: number;
+  teams_deleted: number;
+  duration_ms: number;
+  timestamp: string;
+  error?: string;
+}
+
+export interface ConvexStatus {
+  connected: boolean;
+  url: string;
+  teams_count: number;
+  timestamp: string;
+}
+
+// ============ Convex Export All Types ============
+
+export interface ConvexExportAllScraperInfo {
+  scraper_id: string;
+  scraper_name: string;
+  teams_count: number;
+  has_data: boolean;
+}
+
+export interface ConvexExportAllPreview {
+  total_teams: number;
+  scrapers_with_data: number;
+  existing_teams_in_convex: number;
+  scrapers: ConvexExportAllScraperInfo[];
+  leagues_breakdown: Record<string, number>;
+  data_quality: {
+    has_geo_data: number;
+    has_social_data: number;
+    has_valuation_data: number;
+    has_enrichments: number;
+  };
+}
+
+export interface ConvexExportAllScraperResult {
+  scraper_id: string;
+  scraper_name: string;
+  teams_exported: number;
+  success: boolean;
+  error?: string;
+}
+
+export interface ConvexExportAllResult {
+  success: boolean;
+  mode: ConvexExportMode;
+  total_teams_exported: number;
+  teams_deleted: number;
+  scrapers_exported: number;
+  scraper_results: ConvexExportAllScraperResult[];
+  duration_ms: number;
+  timestamp: string;
+  error?: string;
+}
+
 // Field display metadata for formatting
 export const FIELD_METADATA: Record<string, { label: string; format: 'number' | 'currency' | 'boolean' | 'text' | 'list' | 'tags' | 'sponsors' }> = {
   geo_city: { label: 'City', format: 'text' },

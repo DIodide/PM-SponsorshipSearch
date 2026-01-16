@@ -165,8 +165,51 @@ export default defineSchema({
     expiresAt: v.number(), // TTL for cache invalidation
     hitCount: v.number(), // Track cache usage
   })
-    .index("by_hash", ["queryHash"])
-    .index("by_expiry", ["expiresAt"]),
+  .index("by_hash", ["queryHash"])
+  .index("by_expiry", ["expiresAt"]),
+
+  NFL_seed: defineTable({
+    name: v.string(),
+    region: v.string(),
+    // YUBI: ASK Ibraheem, how confident are we that we will have the region of every team?
+    league: v.string(),
+    official_url: v.string(),
+    // These fields are marked as optional (v.optional) because 
+    // some rows in your CSV had missing (null) values.
+    game_attendance: v.optional(v.number()),
+    valuation: v.optional(v.number()),
+    instagram_followers: v.optional(v.number()),
+    brand_values: v.optional(v.string()),
+    current_partners: v.optional(v.string()),
+  })
+    // 1. Look up a team by its exact name
+    .index("by_name", ["name"])
+    // 2. Filter teams by region
+    .index("by_region", ["region"])
+    // 3. Filter by league
+    .index("by_league", ["league"]),
+
+  NFL_seed_clean: defineTable({
+    name: v.string(),
+    region: v.string(),
+    league: v.string(),
+    official_url: v.string(),
+
+    // Embeddings: Must be nullable because our script returns null for empty strings
+    region_embedding: v.union(v.array(v.number()), v.null()),
+    league_embedding: v.union(v.array(v.number()), v.null()),
+    brand_values_embedding: v.union(v.array(v.number()), v.null()),
+    current_partners_embedding: v.union(v.array(v.number()), v.null()),
+
+    // Normalized numeric fields: These are correctly defined as nullable
+    game_attendance_norm: v.union(v.number(), v.null()),
+    valuation_norm: v.union(v.number(), v.null()),
+    instagram_followers_norm: v.union(v.number(), v.null()),
+  })
+  .index("by_name", ["name"])
+  .index("by_region", ["region"])
+  .index("by_league", ["league"]),
+    
 
   // Social media update jobs queue
   socialUpdateQueue: defineTable({
@@ -180,4 +223,83 @@ export default defineSchema({
   })
     .index("by_status", ["status"])
     .index("by_scheduled", ["scheduledFor"]),
+
+    All_Teams: defineTable({
+      // Name remains required and non-nullable
+      name: v.string(),
+  
+      // All other fields modified to allow null
+      region: v.optional(v.union(v.string(), v.null())),
+      league: v.optional(v.union(v.string(), v.null())),
+      target_demographic: v.optional(v.union(v.string(), v.null())),
+      official_url: v.optional(v.union(v.string(), v.null())),
+      category: v.optional(v.union(v.string(), v.null())),
+      logo_url: v.optional(v.union(v.string(), v.null())),
+      geo_city: v.optional(v.union(v.string(), v.null())),
+      geo_country: v.optional(v.union(v.string(), v.null())),
+      
+      city_population: v.optional(v.union(v.number(), v.null())),
+      metro_gdp: v.optional(v.union(v.number(), v.null())), // Raw value in dollars
+      
+      // Social media handles - array of platform/handle/url objects
+      social_handles: v.optional(v.union(v.array(v.object({
+        platform: v.string(),
+        handle: v.string(),
+        url: v.optional(v.union(v.string(), v.null())),
+        unique_id: v.optional(v.union(v.string(), v.null())),
+      })), v.null())),
+      
+      followers_x: v.optional(v.union(v.number(), v.null())),
+      followers_instagram: v.optional(v.union(v.number(), v.null())),
+      followers_facebook: v.optional(v.union(v.number(), v.null())),
+      followers_tiktok: v.optional(v.union(v.number(), v.null())),
+      subscribers_youtube: v.optional(v.union(v.number(), v.null())),
+      avg_game_attendance: v.optional(v.union(v.number(), v.null())),
+      
+      family_program_count: v.optional(v.union(v.number(), v.null())),
+      family_program_types: v.optional(v.union(v.array(v.string()), v.null())),
+      owns_stadium: v.optional(v.union(v.boolean(), v.null())),
+      stadium_name: v.optional(v.union(v.string(), v.null())),
+      sponsors: v.optional(v.union(v.any(), v.null())),
+      
+      avg_ticket_price: v.optional(v.union(v.number(), v.null())),
+      franchise_value: v.optional(v.union(v.number(), v.null())), // Raw value in dollars
+      annual_revenue: v.optional(v.union(v.number(), v.null())), // Raw value in dollars
+      
+      mission_tags: v.optional(v.union(v.array(v.string()), v.null())),
+      community_programs: v.optional(v.union(v.array(v.string()), v.null())),
+      cause_partnerships: v.optional(v.union(v.array(v.string()), v.null())),
+      enrichments_applied: v.optional(v.union(v.array(v.string()), v.null())),
+      last_enriched: v.optional(v.union(v.string(), v.null())),
+    })
+    .index("by_name", ["name"])
+    .index("by_league", ["league"])
+    .index("by_category", ["category"]),
+    // YUBI: is there anything else I want to index by?
+
+    All_Teams_Clean: defineTable({
+      // String fields
+      name: v.string(),
+      region: v.string(),
+      league: v.string(),
+      official_url: v.string(),
+  
+      // These allow the specific null value returned by your Promise.resolve(null)
+    region_embedding: v.union(v.array(v.float64()), v.null()),
+    league_embedding: v.union(v.array(v.float64()), v.null()),
+    values_embedding: v.union(v.array(v.float64()), v.null()),
+    sponsors_embedding: v.union(v.array(v.float64()), v.null()),
+    family_programs_embedding: v.union(v.array(v.float64()), v.null()),
+    community_programs_embedding: v.union(v.array(v.float64()), v.null()),
+    partners_embedding: v.union(v.array(v.float64()), v.null()),
+  
+      // Numeric score fields
+      digital_reach: v.number(),
+      local_reach: v.number(),
+      family_friendly: v.union(v.number(), v.null()),
+      value_tier: v.number(),
+    })
+    // Optional: Add indexes for non-embedding fields if you plan to filter by them
+    .index("by_name", ["name"])
+    .index("by_league", ["league"]),
 });

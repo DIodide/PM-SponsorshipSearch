@@ -23,11 +23,13 @@ import {
   SourceCodeIcon,
   Copy01Icon,
   Download01Icon,
+  CloudUploadIcon,
 } from '@hugeicons/core-free-icons';
 import type { DataResponse, TeamData, SponsorInfo } from '@/types';
 import { METRIC_GROUPS, FIELD_METADATA } from '@/types';
 import { updateTeam, cleanRegions } from '@/lib/api';
 import { EnrichmentPanel } from './EnrichmentPanel';
+import { ConvexExportModal } from './ConvexExportModal';
 
 // Map metric group icons
 const GROUP_ICONS: Record<string, typeof InformationCircleIcon> = {
@@ -117,6 +119,9 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
   // JSON viewer state
   const [showJsonViewer, setShowJsonViewer] = useState(false);
   const [jsonCopied, setJsonCopied] = useState(false);
+  
+  // Convex export modal state
+  const [showConvexExport, setShowConvexExport] = useState(false);
 
   // Focus input when editing starts
   useEffect(() => {
@@ -426,6 +431,13 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
             >
               <HugeiconsIcon icon={SourceCodeIcon} size={14} />
               {showJsonViewer ? 'Hide JSON' : 'View JSON'}
+            </button>
+            <button
+              onClick={() => setShowConvexExport(true)}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 transition-colors shadow-sm"
+            >
+              <HugeiconsIcon icon={CloudUploadIcon} size={14} />
+              Export to Convex
             </button>
             <button
               onClick={() => setShowEnrichmentPanel(!showEnrichmentPanel)}
@@ -757,6 +769,15 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
           </tbody>
         </table>
       </div>
+      
+      {/* Convex Export Modal */}
+      <ConvexExportModal
+        scraperId={data.scraper_id}
+        scraperName={data.scraper_id.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+        isOpen={showConvexExport}
+        onClose={() => setShowConvexExport(false)}
+        onExportComplete={onDataChange}
+      />
     </div>
   );
 }

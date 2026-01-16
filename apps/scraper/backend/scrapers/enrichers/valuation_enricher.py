@@ -7,9 +7,12 @@ Adds financial metrics by scraping Forbes team pages:
 - Annual revenue figures
 
 Fields added:
-- avg_ticket_price: Average ticket price from Forbes venue data
-- franchise_value_millions: Forbes estimated franchise value
-- annual_revenue_millions: Forbes estimated annual revenue
+- avg_ticket_price: Average ticket price (raw dollars)
+- franchise_value: Forbes estimated franchise value (raw dollars)
+- annual_revenue: Forbes estimated annual revenue (raw dollars)
+
+NOTE: All values are stored in RAW format (not "in millions").
+For example, a $5.5B franchise is stored as 5500000000.
 """
 
 from __future__ import annotations
@@ -87,9 +90,9 @@ def is_major_league(league: str) -> bool:
 
 def parse_money_value(text: str) -> Optional[float]:
     """
-    Parse a money string like "$11B" or "$880M" into millions.
+    Parse a money string like "$11B" or "$880M" into raw dollars.
 
-    Returns value in millions (e.g., "$11B" -> 11000.0, "$880M" -> 880.0)
+    Returns value in raw dollars (e.g., "$11B" -> 11000000000.0, "$880M" -> 880000000.0)
     """
     if not text:
         return None
@@ -102,17 +105,17 @@ def parse_money_value(text: str) -> Optional[float]:
     text = text.lstrip("-−")
 
     try:
-        # Check for billion
+        # Check for billion -> multiply by 1,000,000,000
         if "B" in text.upper():
-            value = float(text.upper().replace("B", "")) * 1000
-        # Check for million
+            value = float(text.upper().replace("B", "")) * 1_000_000_000
+        # Check for million -> multiply by 1,000,000
         elif "M" in text.upper():
-            value = float(text.upper().replace("M", ""))
-        # Check for thousand
+            value = float(text.upper().replace("M", "")) * 1_000_000
+        # Check for thousand -> multiply by 1,000
         elif "K" in text.upper():
-            value = float(text.upper().replace("K", "")) / 1000
+            value = float(text.upper().replace("K", "")) * 1_000
         else:
-            # Assume raw number in millions
+            # Assume raw number
             value = float(text)
 
         return -value if negative else value
@@ -147,10 +150,10 @@ class ValuationEnricher(BaseEnricher):
     Note: Only works for major professional leagues tracked by Forbes
     (NFL, NBA, MLB, NHL, MLS).
 
-    Fields added:
-    - avg_ticket_price: Average ticket price ($) from Forbes venue data
-    - franchise_value_millions: Forbes estimated franchise value ($M)
-    - annual_revenue_millions: Forbes estimated annual revenue ($M)
+    Fields added (all in raw dollars):
+    - avg_ticket_price: Average ticket price from Forbes venue data
+    - franchise_value: Forbes estimated franchise value (raw dollars)
+    - annual_revenue: Forbes estimated annual revenue (raw dollars)
     """
 
     name = "Valuation Enricher"
@@ -159,8 +162,8 @@ class ValuationEnricher(BaseEnricher):
     )
     fields_added = [
         "avg_ticket_price",
-        "franchise_value_millions",
-        "annual_revenue_millions",
+        "franchise_value",
+        "annual_revenue",
     ]
 
     def __init__(self, config: Optional[EnricherConfig] = None):
@@ -525,8 +528,8 @@ class ValuationEnricher(BaseEnricher):
 
         # Skip if already has all data
         if (
-            team.franchise_value_millions is not None
-            and team.annual_revenue_millions is not None
+            team.franchise_value is not None
+            and team.annual_revenue is not None
             and team.avg_ticket_price is not None
         ):
             return False
@@ -534,14 +537,14 @@ class ValuationEnricher(BaseEnricher):
         # Get Forbes data
         forbes_data = await self._try_alternate_names(team.name)
 
-        # Apply data
-        if team.franchise_value_millions is None and forbes_data.get("franchise_value"):
-            team.franchise_value_millions = forbes_data["franchise_value"]
+        # Apply data (values are now in raw dollars)
+        if team.franchise_value is None and forbes_data.get("franchise_value"):
+            team.franchise_value = forbes_data["franchise_value"]
             self._stats["valuations_found"] += 1
             enriched = True
 
-        if team.annual_revenue_millions is None and forbes_data.get("revenue"):
-            team.annual_revenue_millions = forbes_data["revenue"]
+        if team.annual_revenue is None and forbes_data.get("revenue"):
+            team.annual_revenue = forbes_data["revenue"]
             self._stats["revenues_found"] += 1
             enriched = True
 

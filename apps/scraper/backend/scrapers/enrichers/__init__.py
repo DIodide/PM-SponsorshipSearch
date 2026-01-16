@@ -6,12 +6,14 @@ Each enricher is a standalone module that:
 2. Adds nullable fields from its domain
 3. Returns the enriched list
 
+NOTE: All monetary values are stored in RAW format (not "in millions").
+
 Available Enrichers:
-- GeoEnricher: Adds city_population and metro_gdp_millions
-- SocialEnricher: Adds social media follower counts (X, Instagram, Facebook, TikTok, YouTube)
+- GeoEnricher: Adds city_population and metro_gdp (raw dollars)
+- SocialEnricher: Adds social_handles and follower counts (X, Instagram, Facebook, TikTok, YouTube)
 - WebsiteEnricher: Adds family friendliness metrics
 - SponsorEnricher: Adds stadium and sponsor information
-- ValuationEnricher: Adds pricing and valuation data from Forbes and SeatGeek
+- ValuationEnricher: Adds pricing and valuation data (raw dollars) from Forbes
 - BrandEnricher: Adds mission and community program tags
 """
 

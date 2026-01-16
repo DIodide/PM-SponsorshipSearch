@@ -44,13 +44,17 @@ class TeamRow:
     """
     Extended team data model supporting core fields and enrichment layers.
 
+    NOTE: All monetary values are stored in RAW format (not "in millions").
+    For example, a $5.5B franchise value is stored as 5500000000.
+
     Core Fields (Phase 1 - Base Scraping):
         - name, region, league, target_demographic, official_url, category, logo_url
 
     Geographic Fields (Phase 2 - GeoEnricher):
-        - city_population, metro_gdp_millions
+        - city_population, metro_gdp (raw dollars)
 
     Social/Audience Fields (Phase 3 - SocialEnricher):
+        - social_handles (list of platform/handle/url objects)
         - followers_x, followers_instagram, followers_facebook, followers_tiktok
         - subscribers_youtube, avg_game_attendance
 
@@ -61,7 +65,7 @@ class TeamRow:
         - owns_stadium, stadium_name, sponsors
 
     Pricing/Valuation Fields (Phase 6 - ValuationEnricher):
-        - avg_ticket_price, franchise_value_millions, annual_revenue_millions
+        - avg_ticket_price, franchise_value (raw dollars), annual_revenue (raw dollars)
 
     Brand Alignment Fields (Phase 7 - BrandEnricher):
         - mission_tags, community_programs, cause_partnerships
@@ -80,7 +84,7 @@ class TeamRow:
     geo_city: Optional[str] = None  # Resolved city name for population lookup
     geo_country: Optional[str] = None  # Country code (US, CA, MX, DO, etc.)
     city_population: Optional[int] = None
-    metro_gdp_millions: Optional[float] = None
+    metro_gdp: Optional[float] = None  # Raw value in dollars
 
     # ========== Social/Audience (Phase 3) ==========
     # Social handles with platform info
@@ -106,8 +110,8 @@ class TeamRow:
 
     # ========== Pricing/Valuation (Phase 6) ==========
     avg_ticket_price: Optional[float] = None
-    franchise_value_millions: Optional[float] = None
-    annual_revenue_millions: Optional[float] = None
+    franchise_value: Optional[float] = None  # Raw value in dollars
+    annual_revenue: Optional[float] = None  # Raw value in dollars
 
     # ========== Brand Alignment (Phase 7) ==========
     mission_tags: Optional[List[str]] = None
@@ -193,7 +197,7 @@ METRIC_GROUPS = {
     },
     "geographic": {
         "label": "Geographic Data",
-        "fields": ["geo_city", "geo_country", "city_population", "metro_gdp_millions"],
+        "fields": ["geo_city", "geo_country", "city_population", "metro_gdp"],
         "icon": "map",
     },
     "social": {
@@ -223,8 +227,8 @@ METRIC_GROUPS = {
         "label": "Pricing & Valuation",
         "fields": [
             "avg_ticket_price",
-            "franchise_value_millions",
-            "annual_revenue_millions",
+            "franchise_value",
+            "annual_revenue",
         ],
         "icon": "dollar",
     },
@@ -241,7 +245,7 @@ FIELD_METADATA = {
     "geo_city": {"label": "City", "format": "text"},
     "geo_country": {"label": "Country", "format": "text"},
     "city_population": {"label": "City Population", "format": "number"},
-    "metro_gdp_millions": {"label": "Metro GDP (M)", "format": "currency"},
+    "metro_gdp": {"label": "Metro GDP", "format": "currency"},
     "social_handles": {"label": "Social Handles", "format": "social_handles"},
     "followers_x": {"label": "X Followers", "format": "number"},
     "followers_instagram": {"label": "Instagram Followers", "format": "number"},
@@ -255,8 +259,8 @@ FIELD_METADATA = {
     "stadium_name": {"label": "Stadium Name", "format": "text"},
     "sponsors": {"label": "Sponsors", "format": "sponsors"},
     "avg_ticket_price": {"label": "Avg. Ticket Price", "format": "currency"},
-    "franchise_value_millions": {"label": "Franchise Value (M)", "format": "currency"},
-    "annual_revenue_millions": {"label": "Annual Revenue (M)", "format": "currency"},
+    "franchise_value": {"label": "Franchise Value", "format": "currency"},
+    "annual_revenue": {"label": "Annual Revenue", "format": "currency"},
     "mission_tags": {"label": "Mission Tags", "format": "tags"},
     "community_programs": {"label": "Community Programs", "format": "list"},
     "cause_partnerships": {"label": "Cause Partnerships", "format": "list"},
