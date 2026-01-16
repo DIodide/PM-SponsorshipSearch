@@ -274,7 +274,18 @@ export function TeamDetailView({
               {fullTeam?.stadium_name && (
                 <div>
                   <div className="text-sm text-gray-400 mb-1">Stadium</div>
-                  <div className="font-medium text-gray-900">{fullTeam.stadium_name}</div>
+                  <div className="font-medium text-gray-900">
+                    {fullTeam.stadium_name}
+                    {fullTeam.owns_stadium !== null && fullTeam.owns_stadium !== undefined && (
+                      <span className={`ml-2 text-xs px-1.5 py-0.5 rounded ${
+                        fullTeam.owns_stadium 
+                          ? 'bg-green-100 text-green-700' 
+                          : 'bg-gray-100 text-gray-600'
+                      }`}>
+                        {fullTeam.owns_stadium ? 'Owned' : 'Leased'}
+                      </span>
+                    )}
+                  </div>
                 </div>
               )}
               {fullTeam?.avg_game_attendance && (
@@ -350,63 +361,153 @@ export function TeamDetailView({
               </div>
             )}
 
-            {/* Audience and Partners */}
+            {/* Audience */}
             {!loading && analysis && (
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                {/* Audience */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Audience</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Primary Audience:</div>
-                      <ul className="space-y-1.5">
-                        {analysis.primaryAudience.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                            <span className="text-gray-400 mt-1">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Secondary Audience:</div>
-                      <ul className="space-y-1.5">
-                        {analysis.secondaryAudience.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                            <span className="text-gray-400 mt-1">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Audience Characteristics:</div>
-                      <ul className="space-y-1.5">
-                        {analysis.audienceCharacteristics.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                            <span className="text-gray-400 mt-1">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+              <div className="mb-8">
+                <h3 className="font-semibold text-gray-900 mb-3">Audience</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 mb-2">Primary Audience:</div>
+                    <ul className="space-y-1.5">
+                      {analysis.primaryAudience.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                          <span className="text-gray-400 mt-1">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-
-                {/* Current Partners */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Current Partners</h3>
-                  <ol className="space-y-2">
-                    {analysis.currentPartners.map((partner, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span className="text-gray-500 font-medium">{i + 1}.</span>
-                        {partner}
-                      </li>
-                    ))}
-                  </ol>
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 mb-2">Secondary Audience:</div>
+                    <ul className="space-y-1.5">
+                      {analysis.secondaryAudience.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                          <span className="text-gray-400 mt-1">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 mb-2">Audience Characteristics:</div>
+                    <ul className="space-y-1.5">
+                      {analysis.audienceCharacteristics.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                          <span className="text-gray-400 mt-1">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             )}
+
+            {/* Current Partners & Cause Partnerships - 2 column layout */}
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* Current Partners (Sponsors) - Using real data from Convex */}
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Current Partners</h3>
+                {fullTeam?.sponsors && fullTeam.sponsors.length > 0 ? (
+                  <ul className="space-y-1.5">
+                    {fullTeam.sponsors.map((sponsor, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="text-gray-400 mt-1">•</span>
+                        <span>
+                          <span className="text-gray-900 font-medium">
+                            {typeof sponsor === 'string' ? sponsor : sponsor.name}
+                          </span>
+                          {typeof sponsor !== 'string' && (sponsor.category || sponsor.asset_type) && (
+                            <span className="text-gray-500">
+                              {' '}– {sponsor.asset_type || sponsor.category}
+                            </span>
+                          )}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-gray-500 italic">
+                    {!fullTeam 
+                      ? 'Team data not available (team not found in All_Teams table)' 
+                      : 'No sponsor data has been collected for this team'}
+                  </p>
+                )}
+              </div>
+
+              {/* Cause Partnerships - Using real data from Convex */}
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Cause Partnerships</h3>
+                {fullTeam?.cause_partnerships && fullTeam.cause_partnerships.length > 0 ? (
+                  <ul className="space-y-1.5">
+                    {fullTeam.cause_partnerships.map((cause, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="text-gray-400 mt-1">•</span>
+                        {cause}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-gray-500 italic">
+                    {!fullTeam 
+                      ? 'Team data not available' 
+                      : 'No cause partnerships have been identified for this team'}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Family Programs & Community Programs - 2 column layout */}
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* Family Programs - Using real data from Convex */}
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">
+                  Family Programs
+                  {fullTeam?.family_program_count ? (
+                    <span className="ml-2 text-sm font-normal text-gray-500">
+                      ({fullTeam.family_program_count} total)
+                    </span>
+                  ) : null}
+                </h3>
+                {fullTeam?.family_program_types && fullTeam.family_program_types.length > 0 ? (
+                  <ul className="space-y-1.5">
+                    {fullTeam.family_program_types.map((program, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="text-gray-400 mt-1">•</span>
+                        {program}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-gray-500 italic">
+                    {!fullTeam 
+                      ? 'Team data not available' 
+                      : 'No family programs have been identified for this team'}
+                  </p>
+                )}
+              </div>
+
+              {/* Community Programs - Using real data from Convex */}
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Community Programs</h3>
+                {fullTeam?.community_programs && fullTeam.community_programs.length > 0 ? (
+                  <ul className="space-y-1.5">
+                    {fullTeam.community_programs.map((program, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="text-gray-400 mt-1">•</span>
+                        {program}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-gray-500 italic">
+                    {!fullTeam 
+                      ? 'Team data not available' 
+                      : 'No community programs have been identified for this team'}
+                  </p>
+                )}
+              </div>
+            </div>
 
             {/* Sources */}
             {!loading && analysis && (
