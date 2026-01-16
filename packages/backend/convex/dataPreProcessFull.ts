@@ -126,7 +126,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
 
         // normalize all of the numerical values
         const attendance_norm = (row.avg_game_attendance != null) ? (row.avg_game_attendance - attendance.mean) / attendance.sd : null
-        const valuation_norm = (row.franchise_value_millions != null) ? (row.franchise_value_millions - valuation.mean) / valuation.sd : null
+        const valuation_norm = (row.franchise_value != null) ? (row.franchise_value - valuation.mean) / valuation.sd : null
         const gdp_norm = (row.metro_gdp_millions != null) ? (row.metro_gdp_millions - gdp.mean) / gdp.sd : null
         const ticket_price_norm = (row.avg_ticket_price != null) ? (row.avg_ticket_price - ticketStats.mean) / ticketStats.sd : null
         const family_programs_norm = (row.family_program_count != null) ? (row.family_program_count - family_programs.mean) / family_programs.sd : null
@@ -140,6 +140,22 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         
         const digital_reach_score = (instagram_norm ?? 0) + (x_norm ?? 0) + (facebook_norm ?? 0) + (tiktok_norm ?? 0) + (youtube_norm ?? 0)
         const local_reach_score = (attendance_norm ?? 0) + (population_norm ?? 0)
+
+        // Calculate demographic weights
+        // YUBI: should I use womenWeight and menWeight?
+        const womenWeight = (x_norm != null) ? 0.33*x_norm : null
+        const menWeight = (x_norm != null) ? 0.67*x_norm : null
+
+
+        const genZWeight = ((instagram_norm != null) ? 0.5*instagram_norm : 0) + ((tiktok_norm != null) ? 0.5*tiktok_norm : 0)
+        const millenialWeight = (((instagram_norm != null) ? 0.2*instagram_norm : 0) + ((tiktok_norm != null) ? 0.2*tiktok_norm : 0) 
+        + ((x_norm != null) ? 0.2*x_norm : 0) + ((facebook_norm != null) ? 0.2*facebook_norm : 0) 
+        + ((youtube_norm != null) ? 0.2*youtube_norm : 0))
+        const genXWeight = (((x_norm != null) ? 0.33*x_norm : 0) + ((facebook_norm != null) ? 0.33*facebook_norm : 0) 
+        + ((youtube_norm != null) ? 0.33*youtube_norm : 0))
+        const boomerWeight = ((facebook_norm != null) ? facebook_norm : null)
+        const kidsWeight = ((youtube_norm != null) ? youtube_norm : null)
+
 
         // 3. Compute Weighted Score
         let totalWeightedScore = 0;
@@ -175,6 +191,15 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             family_friendly: family_programs_norm,
 
             value_tier: valueTierScore,
+
+            women_weight: womenWeight,
+            men_weight: menWeight,
+            gen_z_weight: genZWeight,
+            millenial_weight: millenialWeight,
+            gen_x_weight: genXWeight,
+            boomer_weight: boomerWeight,
+            kids_weight: kidsWeight,
+            stadium_ownership: owns_stadium
   
         };
   

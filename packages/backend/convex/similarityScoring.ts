@@ -132,11 +132,30 @@ export const computeBrandSimilarity = action({
         // YUBI: this has a range of 2, but we want it to span from -1 to 1
         const valuationSim = (1-Math.abs(target_value_tier - team.value_tier))
 
+        // Set target value tier of team using goals
+        let demSim = 0
+        if (brandAudience.includes("gen-z")) {
+            demSim += team.gen_z_weight
+        } else if (brandAudience.includes("millennials")) {
+            demSim += team.millenial_weight
+        } else if (brandAudience.includes("gen-x")) {
+            demSim += team.gen_x_weight
+        } else if (brandAudience.includes("boomer")) {
+            demSim += team.boomer_weight
+        } else if (brandAudience.includes("kids")) {
+            demSim += team.kids_weight
+        } else if (brandAudience.includes("women")) {
+            demSim += team.women_weight
+        } else if (brandAudience.includes("men")) {
+            demSim += team.men_weight
+        }
+
         const components = [
           simRegion,
           simLeague,
           simValues,
-          valuationSim
+          valuationSim,
+          demSim
           // YUBI: want to add more components here
         ];
       
