@@ -20,6 +20,9 @@ import {
   DollarCircleIcon,
   Tag01Icon,
   Settings02Icon,
+  SourceCodeIcon,
+  Copy01Icon,
+  Download01Icon,
 } from '@hugeicons/core-free-icons';
 import type { DataResponse, TeamData, SponsorInfo } from '@/types';
 import { METRIC_GROUPS, FIELD_METADATA } from '@/types';
@@ -110,6 +113,10 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
   
   // Enrichment panel state
   const [showEnrichmentPanel, setShowEnrichmentPanel] = useState(false);
+  
+  // JSON viewer state
+  const [showJsonViewer, setShowJsonViewer] = useState(false);
+  const [jsonCopied, setJsonCopied] = useState(false);
 
   // Focus input when editing starts
   useEffect(() => {
@@ -252,6 +259,30 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
   const handleEnrichmentComplete = useCallback(() => {
     onDataChange?.();
   }, [onDataChange]);
+  
+  // Copy JSON to clipboard
+  const handleCopyJson = useCallback(async () => {
+    if (!data?.teams) return;
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(data.teams, null, 2));
+      setJsonCopied(true);
+      setTimeout(() => setJsonCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  }, [data?.teams]);
+  
+  // Download JSON
+  const handleDownloadJson = useCallback(() => {
+    if (!data?.teams || !data.scraper_id) return;
+    const blob = new Blob([JSON.stringify(data.teams, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${data.scraper_id}_${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [data?.teams, data?.scraper_id]);
 
   // Toggle team detail expansion
   const toggleTeamDetail = useCallback((index: number) => {
@@ -383,18 +414,32 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
             Showing {filteredTeamsWithIndex.length} of {data.count} teams
             <span className="ml-2 text-xs opacity-70">(double-click cells to edit, click row to expand)</span>
           </div>
-          <button
-            onClick={() => setShowEnrichmentPanel(!showEnrichmentPanel)}
-            className={cn(
-              "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
-              showEnrichmentPanel 
-                ? "bg-primary text-primary-foreground" 
-                : "bg-primary/10 text-primary hover:bg-primary/20"
-            )}
-          >
-            <HugeiconsIcon icon={showEnrichmentPanel ? Settings02Icon : SparklesIcon} size={14} />
-            {showEnrichmentPanel ? 'Hide Enrichment' : 'Enrich Data'}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowJsonViewer(!showJsonViewer)}
+              className={cn(
+                "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+                showJsonViewer 
+                  ? "bg-slate-700 text-white" 
+                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+              )}
+            >
+              <HugeiconsIcon icon={SourceCodeIcon} size={14} />
+              {showJsonViewer ? 'Hide JSON' : 'View JSON'}
+            </button>
+            <button
+              onClick={() => setShowEnrichmentPanel(!showEnrichmentPanel)}
+              className={cn(
+                "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+                showEnrichmentPanel 
+                  ? "bg-primary text-primary-foreground" 
+                  : "bg-primary/10 text-primary hover:bg-primary/20"
+              )}
+            >
+              <HugeiconsIcon icon={showEnrichmentPanel ? Settings02Icon : SparklesIcon} size={14} />
+              {showEnrichmentPanel ? 'Hide Enrichment' : 'Enrich Data'}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -407,6 +452,43 @@ export function DataViewer({ data, loading, onClose, onDataChange }: DataViewerP
             onEnrichmentComplete={handleEnrichmentComplete}
             onClose={() => setShowEnrichmentPanel(false)}
           />
+        </div>
+      )}
+      
+      {/* JSON Viewer Panel */}
+      {showJsonViewer && (
+        <div className="border-b bg-slate-900 text-slate-100">
+          {/* JSON Viewer Header */}
+          <div className="flex items-center justify-between px-4 py-2 border-b border-slate-700">
+            <div className="flex items-center gap-2">
+              <HugeiconsIcon icon={SourceCodeIcon} size={16} className="text-slate-400" />
+              <span className="text-sm font-medium">Raw JSON Data</span>
+              <span className="text-xs text-slate-500">({data.count} teams)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleCopyJson}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium bg-slate-800 hover:bg-slate-700 transition-colors"
+              >
+                <HugeiconsIcon icon={jsonCopied ? Tick01Icon : Copy01Icon} size={12} />
+                {jsonCopied ? 'Copied!' : 'Copy'}
+              </button>
+              <button
+                onClick={handleDownloadJson}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-medium bg-slate-800 hover:bg-slate-700 transition-colors"
+              >
+                <HugeiconsIcon icon={Download01Icon} size={12} />
+                Download
+              </button>
+            </div>
+          </div>
+          
+          {/* JSON Content */}
+          <div className="max-h-[400px] overflow-auto">
+            <pre className="p-4 text-xs font-mono leading-relaxed whitespace-pre-wrap break-all">
+              {JSON.stringify(data.teams, null, 2)}
+            </pre>
+          </div>
         </div>
       )}
 

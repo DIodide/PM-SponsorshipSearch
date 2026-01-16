@@ -19,9 +19,14 @@ import asyncio
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Type
+from typing import Any, Callable, Dict, List, Optional, Type, Awaitable
 
 from ..models import TeamRow, EnrichmentResult
+
+
+# Type alias for progress callback
+# Callback receives: (teams_processed, teams_enriched, teams_total)
+ProgressCallback = Callable[[int, int, int], Awaitable[None]]
 
 
 @dataclass
@@ -38,8 +43,8 @@ class EnricherConfig:
     # Timeout settings
     request_timeout_s: int = 30
     
-    # Batch settings
-    batch_size: int = 50
+    # Batch settings (smaller = more frequent progress updates)
+    batch_size: int = 5
     
     # API keys (enricher-specific)
     api_keys: Dict[str, str] = field(default_factory=dict)
@@ -92,12 +97,18 @@ class BaseEnricher(ABC):
             "available": self.is_available(),
         }
     
-    async def enrich(self, teams: List[TeamRow]) -> EnrichmentResult:
+    async def enrich(
+        self, 
+        teams: List[TeamRow],
+        progress_callback: Optional[ProgressCallback] = None,
+    ) -> EnrichmentResult:
         """
         Enrich a list of teams with additional data.
         
         Args:
             teams: List of TeamRow objects to enrich
+            progress_callback: Optional async callback for progress updates
+                              Receives (teams_processed, teams_enriched, teams_total)
             
         Returns:
             EnrichmentResult with success status and enriched teams
@@ -134,6 +145,8 @@ class BaseEnricher(ABC):
             
             # Process teams in batches
             enriched_count = 0
+            processed_count = 0
+            total_teams = len(teams)
             batch_size = self.config.batch_size
             
             for i in range(0, len(teams), batch_size):
@@ -144,12 +157,20 @@ class BaseEnricher(ABC):
                 )
                 
                 for team, result in zip(batch, results):
+                    processed_count += 1
                     if isinstance(result, Exception):
                         # Log but don't fail the whole batch
                         print(f"Error enriching {team.name}: {result}")
                     elif result:
                         enriched_count += 1
                         team.apply_enrichment(self.enricher_id)
+                
+                # Send progress update after each batch
+                if progress_callback:
+                    try:
+                        await progress_callback(processed_count, enriched_count, total_teams)
+                    except Exception:
+                        pass  # Don't let callback errors break enrichment
                 
                 # Delay between batches
                 if i + batch_size < len(teams):

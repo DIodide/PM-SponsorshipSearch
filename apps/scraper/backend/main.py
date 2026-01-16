@@ -9,15 +9,17 @@ import asyncio
 import json
 import os
 import httpx
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from dataclasses import dataclass, asdict, field
 from enum import Enum
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from pydantic import BaseModel
 
 from scrapers import MLBMiLBScraper, NBAGLeagueScraper, NFLScraper, NHLAHLECHLScraper
@@ -47,6 +49,283 @@ class TaskStatus(str, Enum):
     RUNNING = "running"
     SUCCESS = "success"
     FAILED = "failed"
+
+
+class EnrichmentTaskStatus(str, Enum):
+    PENDING = "pending"
+    RUNNING = "running"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    CANCELLED = "cancelled"
+
+
+@dataclass
+class EnrichmentTaskProgress:
+    """Progress tracking for individual enricher within a task."""
+    enricher_id: str
+    enricher_name: str
+    status: str = "pending"
+    teams_processed: int = 0
+    teams_enriched: int = 0
+    teams_total: int = 0
+    error: Optional[str] = None
+    started_at: Optional[str] = None
+    completed_at: Optional[str] = None
+    duration_ms: int = 0
+
+
+@dataclass
+class EnrichmentFieldDiff:
+    """Represents a change to a single field."""
+    field: str
+    old_value: Any
+    new_value: Any
+    change_type: str  # "added", "modified", "removed"
+
+
+@dataclass
+class EnrichmentTeamDiff:
+    """Represents all changes to a single team."""
+    team_name: str
+    changes: List[Dict[str, Any]] = field(default_factory=list)  # List of field changes
+    fields_added: int = 0
+    fields_modified: int = 0
+
+
+@dataclass
+class EnrichmentDiff:
+    """Summary of all changes from an enrichment task."""
+    teams_changed: int = 0
+    total_fields_added: int = 0
+    total_fields_modified: int = 0
+    teams: List[EnrichmentTeamDiff] = field(default_factory=list)
+    
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "teams_changed": self.teams_changed,
+            "total_fields_added": self.total_fields_added,
+            "total_fields_modified": self.total_fields_modified,
+            "teams": [
+                {
+                    "team_name": t.team_name,
+                    "changes": t.changes,
+                    "fields_added": t.fields_added,
+                    "fields_modified": t.fields_modified,
+                }
+                for t in self.teams
+            ]
+        }
+
+
+@dataclass
+class EnrichmentTask:
+    """Represents an async enrichment task."""
+    id: str
+    scraper_id: str
+    scraper_name: str
+    enricher_ids: List[str]
+    status: EnrichmentTaskStatus = EnrichmentTaskStatus.PENDING
+    progress: Dict[str, EnrichmentTaskProgress] = field(default_factory=dict)
+    created_at: str = ""
+    started_at: Optional[str] = None
+    completed_at: Optional[str] = None
+    teams_total: int = 0
+    teams_enriched: int = 0
+    error: Optional[str] = None
+    # Diff tracking
+    before_snapshot: Optional[Dict[str, Dict[str, Any]]] = None  # team_name -> fields
+    diff: Optional[EnrichmentDiff] = None
+    
+    def __post_init__(self):
+        if not self.created_at:
+            self.created_at = datetime.now().isoformat()
+        # Initialize progress for each enricher
+        for enricher_id in self.enricher_ids:
+            if enricher_id not in self.progress:
+                enricher = EnricherRegistry.create(enricher_id)
+                name = enricher.name if enricher else enricher_id
+                self.progress[enricher_id] = EnrichmentTaskProgress(
+                    enricher_id=enricher_id,
+                    enricher_name=name,
+                )
+    
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "id": self.id,
+            "scraper_id": self.scraper_id,
+            "scraper_name": self.scraper_name,
+            "enricher_ids": self.enricher_ids,
+            "status": self.status.value,
+            "progress": {k: asdict(v) for k, v in self.progress.items()},
+            "created_at": self.created_at,
+            "started_at": self.started_at,
+            "completed_at": self.completed_at,
+            "teams_total": self.teams_total,
+            "teams_enriched": self.teams_enriched,
+            "error": self.error,
+            "has_diff": self.diff is not None,
+        }
+    
+    def get_diff_dict(self) -> Optional[Dict[str, Any]]:
+        """Get the diff as a dictionary."""
+        if self.diff is None:
+            return None
+        return self.diff.to_dict()
+
+
+class EnrichmentTaskManager:
+    """Manages async enrichment tasks with progress tracking."""
+    
+    def __init__(self):
+        self._tasks: Dict[str, EnrichmentTask] = {}
+        self._running_tasks: Dict[str, asyncio.Task] = {}
+        self._task_history: List[EnrichmentTask] = []  # Keep last N completed tasks
+        self._max_history = 50
+        self._subscribers: Dict[str, List[asyncio.Queue]] = {}  # Task ID -> list of subscriber queues
+    
+    def create_task(
+        self, 
+        scraper_id: str, 
+        scraper_name: str,
+        enricher_ids: List[str],
+        teams_total: int
+    ) -> EnrichmentTask:
+        """Create a new enrichment task."""
+        task_id = str(uuid.uuid4())[:8]
+        task = EnrichmentTask(
+            id=task_id,
+            scraper_id=scraper_id,
+            scraper_name=scraper_name,
+            enricher_ids=enricher_ids,
+            teams_total=teams_total,
+        )
+        self._tasks[task_id] = task
+        return task
+    
+    def get_task(self, task_id: str) -> Optional[EnrichmentTask]:
+        """Get a task by ID."""
+        return self._tasks.get(task_id)
+    
+    def list_tasks(self, include_history: bool = True) -> List[EnrichmentTask]:
+        """List all active and optionally historical tasks."""
+        tasks = list(self._tasks.values())
+        if include_history:
+            tasks.extend(self._task_history)
+        # Sort by created_at descending
+        return sorted(tasks, key=lambda t: t.created_at, reverse=True)
+    
+    def list_active_tasks(self) -> List[EnrichmentTask]:
+        """List only running/pending tasks."""
+        return [
+            t for t in self._tasks.values() 
+            if t.status in (EnrichmentTaskStatus.PENDING, EnrichmentTaskStatus.RUNNING)
+        ]
+    
+    async def update_task_progress(
+        self,
+        task_id: str,
+        enricher_id: str,
+        **kwargs
+    ):
+        """Update progress for a specific enricher in a task."""
+        task = self._tasks.get(task_id)
+        if not task or enricher_id not in task.progress:
+            return
+        
+        progress = task.progress[enricher_id]
+        for key, value in kwargs.items():
+            if hasattr(progress, key):
+                setattr(progress, key, value)
+        
+        # Recalculate total enriched
+        task.teams_enriched = sum(p.teams_enriched for p in task.progress.values())
+        
+        # Notify subscribers
+        await self._notify_subscribers(task_id, task)
+    
+    async def mark_task_running(self, task_id: str):
+        """Mark a task as running."""
+        task = self._tasks.get(task_id)
+        if task:
+            task.status = EnrichmentTaskStatus.RUNNING
+            task.started_at = datetime.now().isoformat()
+            await self._notify_subscribers(task_id, task)
+    
+    async def mark_task_completed(self, task_id: str, error: Optional[str] = None):
+        """Mark a task as completed or failed."""
+        task = self._tasks.get(task_id)
+        if task:
+            task.status = EnrichmentTaskStatus.FAILED if error else EnrichmentTaskStatus.COMPLETED
+            task.completed_at = datetime.now().isoformat()
+            task.error = error
+            await self._notify_subscribers(task_id, task)
+            
+            # Move to history
+            self._move_to_history(task_id)
+    
+    def cancel_task(self, task_id: str) -> bool:
+        """Cancel a running task."""
+        if task_id in self._running_tasks:
+            self._running_tasks[task_id].cancel()
+            del self._running_tasks[task_id]
+        
+        task = self._tasks.get(task_id)
+        if task:
+            task.status = EnrichmentTaskStatus.CANCELLED
+            task.completed_at = datetime.now().isoformat()
+            self._move_to_history(task_id)
+            return True
+        return False
+    
+    def register_async_task(self, task_id: str, async_task: asyncio.Task):
+        """Register the asyncio Task for a task ID."""
+        self._running_tasks[task_id] = async_task
+    
+    def unregister_async_task(self, task_id: str):
+        """Unregister the asyncio Task."""
+        self._running_tasks.pop(task_id, None)
+    
+    def _move_to_history(self, task_id: str):
+        """Move a completed task to history."""
+        task = self._tasks.pop(task_id, None)
+        if task:
+            self._task_history.insert(0, task)
+            # Trim history
+            if len(self._task_history) > self._max_history:
+                self._task_history = self._task_history[:self._max_history]
+    
+    # SSE Support
+    def subscribe(self, task_id: str) -> asyncio.Queue:
+        """Subscribe to updates for a specific task."""
+        queue: asyncio.Queue = asyncio.Queue()
+        if task_id not in self._subscribers:
+            self._subscribers[task_id] = []
+        self._subscribers[task_id].append(queue)
+        return queue
+    
+    def unsubscribe(self, task_id: str, queue: asyncio.Queue):
+        """Unsubscribe from task updates."""
+        if task_id in self._subscribers:
+            try:
+                self._subscribers[task_id].remove(queue)
+            except ValueError:
+                pass
+    
+    async def _notify_subscribers(self, task_id: str, task: EnrichmentTask):
+        """Notify all subscribers of a task update."""
+        if task_id not in self._subscribers:
+            return
+        
+        data = task.to_dict()
+        for queue in self._subscribers[task_id]:
+            try:
+                await queue.put(data)
+            except Exception:
+                pass
+
+
+# Global task manager
+task_manager = EnrichmentTaskManager()
 
 
 @dataclass
@@ -205,6 +484,33 @@ class EnrichmentResultResponse(BaseModel):
 
 class RunEnrichmentRequest(BaseModel):
     enricher_ids: Optional[List[str]] = None  # If None, run all available enrichers
+
+
+class CreateEnrichmentTaskRequest(BaseModel):
+    scraper_id: str
+    enricher_ids: List[str]
+
+
+class EnrichmentTaskResponse(BaseModel):
+    id: str
+    scraper_id: str
+    scraper_name: str
+    enricher_ids: List[str]
+    status: str
+    progress: Dict[str, Any]
+    created_at: str
+    started_at: Optional[str]
+    completed_at: Optional[str]
+    teams_total: int
+    teams_enriched: int
+    error: Optional[str]
+    has_diff: bool = False
+
+
+class EnrichmentTaskListResponse(BaseModel):
+    tasks: List[EnrichmentTaskResponse]
+    active_count: int
+    total_count: int
 
 
 # Scraper instances
@@ -777,6 +1083,424 @@ async def get_enrichment_status(scraper_id: str):
         "enrichments": enrichment_counts,
         "available_enrichers": [e["id"] for e in EnricherRegistry.list_all()],
     }
+
+
+# ============ Async Enrichment Task Endpoints ============
+
+
+def _compute_enrichment_diff(
+    before_snapshot: Dict[str, Dict[str, Any]], 
+    after_data: List[Dict[str, Any]]
+) -> EnrichmentDiff:
+    """Compute the diff between before and after enrichment states."""
+    diff = EnrichmentDiff()
+    
+    # Fields to ignore in diff (metadata fields)
+    ignore_fields = {"enrichments_applied", "last_enriched"}
+    
+    for team_dict in after_data:
+        team_name = team_dict.get("name", "Unknown")
+        before = before_snapshot.get(team_name, {})
+        
+        team_diff = EnrichmentTeamDiff(team_name=team_name)
+        
+        for field, new_value in team_dict.items():
+            if field in ignore_fields:
+                continue
+            
+            old_value = before.get(field)
+            
+            # Skip if both are None/empty
+            if old_value is None and new_value is None:
+                continue
+            if old_value == [] and new_value == []:
+                continue
+            if old_value == new_value:
+                continue
+            
+            # Determine change type
+            if old_value is None or old_value == [] or old_value == "":
+                if new_value is not None and new_value != [] and new_value != "":
+                    change_type = "added"
+                    team_diff.fields_added += 1
+                else:
+                    continue
+            elif new_value is None or new_value == [] or new_value == "":
+                # Field was removed (rare, but possible)
+                change_type = "removed"
+            else:
+                change_type = "modified"
+                team_diff.fields_modified += 1
+            
+            # Format values for display (truncate long lists/strings)
+            def format_value(v):
+                if v is None:
+                    return None
+                if isinstance(v, list):
+                    if len(v) > 3:
+                        return v[:3] + [f"...+{len(v)-3} more"]
+                    return v
+                if isinstance(v, str) and len(v) > 100:
+                    return v[:100] + "..."
+                return v
+            
+            team_diff.changes.append({
+                "field": field,
+                "old_value": format_value(old_value),
+                "new_value": format_value(new_value),
+                "change_type": change_type,
+            })
+        
+        if team_diff.changes:
+            diff.teams.append(team_diff)
+            diff.teams_changed += 1
+            diff.total_fields_added += team_diff.fields_added
+            diff.total_fields_modified += team_diff.fields_modified
+    
+    # Sort teams by number of changes (descending)
+    diff.teams.sort(key=lambda t: len(t.changes), reverse=True)
+    
+    return diff
+
+
+async def _run_enrichment_task(task_id: str):
+    """Background task to run enrichments with progress tracking."""
+    task = task_manager.get_task(task_id)
+    if not task:
+        return
+    
+    try:
+        await task_manager.mark_task_running(task_id)
+        
+        # Get scraper info and load data
+        scraper_id = task.scraper_id
+        state = app_state.scrapers.get(scraper_id, ScraperState())
+        json_path = state.last_json_path
+        
+        if not json_path or not Path(json_path).exists():
+            await task_manager.mark_task_completed(task_id, "No data file found")
+            return
+        
+        # Load teams
+        with open(json_path, "r") as f:
+            teams_data = json.load(f)
+        
+        teams = [TeamRow.from_dict(t) for t in teams_data]
+        task.teams_total = len(teams)
+        
+        # Store before snapshot for diff computation
+        # Key by team name for easier lookup
+        task.before_snapshot = {
+            team.get("name", f"team_{i}"): dict(team)
+            for i, team in enumerate(teams_data)
+        }
+        
+        # Run each enricher sequentially with progress updates
+        for enricher_id in task.enricher_ids:
+            # Check if cancelled
+            if task.status == EnrichmentTaskStatus.CANCELLED:
+                break
+            
+            enricher = EnricherRegistry.create(enricher_id)
+            if not enricher:
+                await task_manager.update_task_progress(
+                    task_id, enricher_id,
+                    status="failed",
+                    error=f"Enricher '{enricher_id}' not found"
+                )
+                continue
+            
+            if not enricher.is_available():
+                await task_manager.update_task_progress(
+                    task_id, enricher_id,
+                    status="failed",
+                    error="Enricher not available (missing configuration)"
+                )
+                continue
+            
+            # Mark enricher as running
+            await task_manager.update_task_progress(
+                task_id, enricher_id,
+                status="running",
+                started_at=datetime.now().isoformat(),
+                teams_total=len(teams)
+            )
+            
+            # Create progress callback for real-time updates
+            async def make_progress_callback(eid: str):
+                async def callback(processed: int, enriched: int, total: int):
+                    await task_manager.update_task_progress(
+                        task_id, eid,
+                        status="running",
+                        teams_processed=processed,
+                        teams_enriched=enriched,
+                        teams_total=total
+                    )
+                return callback
+            
+            progress_cb = await make_progress_callback(enricher_id)
+            
+            # Run the enricher with progress callback
+            start_time = datetime.now()
+            try:
+                result = await enricher.enrich(teams, progress_callback=progress_cb)
+                duration_ms = int((datetime.now() - start_time).total_seconds() * 1000)
+                
+                await task_manager.update_task_progress(
+                    task_id, enricher_id,
+                    status="completed" if result.success else "failed",
+                    teams_processed=result.teams_processed,
+                    teams_enriched=result.teams_enriched,
+                    completed_at=datetime.now().isoformat(),
+                    duration_ms=duration_ms,
+                    error=result.error
+                )
+            except asyncio.CancelledError:
+                await task_manager.update_task_progress(
+                    task_id, enricher_id,
+                    status="cancelled",
+                    completed_at=datetime.now().isoformat()
+                )
+                raise
+            except Exception as e:
+                duration_ms = int((datetime.now() - start_time).total_seconds() * 1000)
+                await task_manager.update_task_progress(
+                    task_id, enricher_id,
+                    status="failed",
+                    completed_at=datetime.now().isoformat(),
+                    duration_ms=duration_ms,
+                    error=str(e)
+                )
+        
+        # Save enriched data back to file
+        enriched_data = [t.to_dict() for t in teams]
+        with open(json_path, "w") as f:
+            json.dump(enriched_data, f, indent=2)
+        
+        # Compute diff between before and after
+        if task.before_snapshot:
+            task.diff = _compute_enrichment_diff(task.before_snapshot, enriched_data)
+        
+        await task_manager.mark_task_completed(task_id)
+        
+    except asyncio.CancelledError:
+        await task_manager.mark_task_completed(task_id, "Task was cancelled")
+    except Exception as e:
+        await task_manager.mark_task_completed(task_id, str(e))
+    finally:
+        task_manager.unregister_async_task(task_id)
+
+
+@app.post("/api/enrichment-tasks", response_model=EnrichmentTaskResponse)
+async def create_enrichment_task(request: CreateEnrichmentTaskRequest):
+    """
+    Create and start a new async enrichment task.
+    
+    This allows running enrichments in the background while tracking progress.
+    Multiple tasks can run concurrently for different scrapers.
+    """
+    if request.scraper_id not in SCRAPERS:
+        raise HTTPException(status_code=404, detail="Scraper not found")
+    
+    if not request.enricher_ids:
+        raise HTTPException(status_code=400, detail="At least one enricher_id is required")
+    
+    # Validate enricher IDs
+    for enricher_id in request.enricher_ids:
+        if not EnricherRegistry.get(enricher_id):
+            raise HTTPException(
+                status_code=400, 
+                detail=f"Enricher '{enricher_id}' not found"
+            )
+    
+    # Get scraper info
+    scraper_info = SCRAPER_INFO.get(request.scraper_id, {})
+    state = app_state.scrapers.get(request.scraper_id, ScraperState())
+    
+    # Check if data exists
+    json_path = state.last_json_path
+    if not json_path or not Path(json_path).exists():
+        raise HTTPException(
+            status_code=404, 
+            detail="No data file found. Run the scraper first."
+        )
+    
+    # Get teams count
+    with open(json_path, "r") as f:
+        teams_data = json.load(f)
+    teams_count = len(teams_data)
+    
+    # Create the task
+    task = task_manager.create_task(
+        scraper_id=request.scraper_id,
+        scraper_name=scraper_info.get("name", request.scraper_id),
+        enricher_ids=request.enricher_ids,
+        teams_total=teams_count
+    )
+    
+    # Start the background task
+    async_task = asyncio.create_task(_run_enrichment_task(task.id))
+    task_manager.register_async_task(task.id, async_task)
+    
+    return EnrichmentTaskResponse(**task.to_dict())
+
+
+@app.get("/api/enrichment-tasks", response_model=EnrichmentTaskListResponse)
+async def list_enrichment_tasks(active_only: bool = False):
+    """List all enrichment tasks (active and historical)."""
+    if active_only:
+        tasks = task_manager.list_active_tasks()
+    else:
+        tasks = task_manager.list_tasks()
+    
+    active_count = len([t for t in tasks if t.status in (
+        EnrichmentTaskStatus.PENDING, 
+        EnrichmentTaskStatus.RUNNING
+    )])
+    
+    return EnrichmentTaskListResponse(
+        tasks=[EnrichmentTaskResponse(**t.to_dict()) for t in tasks],
+        active_count=active_count,
+        total_count=len(tasks)
+    )
+
+
+@app.get("/api/enrichment-tasks/{task_id}", response_model=EnrichmentTaskResponse)
+async def get_enrichment_task(task_id: str):
+    """Get the status of a specific enrichment task."""
+    task = task_manager.get_task(task_id)
+    
+    # Also check history
+    if not task:
+        for historical in task_manager._task_history:
+            if historical.id == task_id:
+                task = historical
+                break
+    
+    if not task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    return EnrichmentTaskResponse(**task.to_dict())
+
+
+@app.get("/api/enrichment-tasks/{task_id}/diff")
+async def get_enrichment_task_diff(task_id: str):
+    """
+    Get the diff/changes made by an enrichment task.
+    
+    Returns a detailed breakdown of what fields were added or modified
+    for each team during the enrichment process.
+    
+    Only available for completed tasks.
+    """
+    task = task_manager.get_task(task_id)
+    
+    # Also check history
+    if not task:
+        for historical in task_manager._task_history:
+            if historical.id == task_id:
+                task = historical
+                break
+    
+    if not task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    if task.status != EnrichmentTaskStatus.COMPLETED:
+        raise HTTPException(
+            status_code=400, 
+            detail=f"Diff only available for completed tasks. Current status: {task.status.value}"
+        )
+    
+    diff_dict = task.get_diff_dict()
+    if diff_dict is None:
+        # No diff available (shouldn't happen for completed tasks, but handle gracefully)
+        return {
+            "teams_changed": 0,
+            "total_fields_added": 0,
+            "total_fields_modified": 0,
+            "teams": [],
+        }
+    
+    return diff_dict
+
+
+@app.delete("/api/enrichment-tasks/{task_id}")
+async def cancel_enrichment_task(task_id: str):
+    """Cancel a running enrichment task."""
+    task = task_manager.get_task(task_id)
+    if not task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    if task.status not in (EnrichmentTaskStatus.PENDING, EnrichmentTaskStatus.RUNNING):
+        raise HTTPException(
+            status_code=400, 
+            detail=f"Cannot cancel task with status '{task.status.value}'"
+        )
+    
+    if task_manager.cancel_task(task_id):
+        return {"success": True, "message": "Task cancelled"}
+    else:
+        raise HTTPException(status_code=500, detail="Failed to cancel task")
+
+
+@app.get("/api/enrichment-tasks/{task_id}/stream")
+async def stream_task_updates(task_id: str):
+    """
+    Server-Sent Events endpoint for real-time task updates.
+    
+    Connect to this endpoint to receive live updates about task progress.
+    """
+    task = task_manager.get_task(task_id)
+    
+    # Also check history for completed tasks
+    if not task:
+        for historical in task_manager._task_history:
+            if historical.id == task_id:
+                task = historical
+                break
+    
+    if not task:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+    async def event_generator():
+        # Send initial state
+        yield f"data: {json.dumps(task.to_dict())}\n\n"
+        
+        # If task is already completed, close the stream
+        if task.status in (
+            EnrichmentTaskStatus.COMPLETED, 
+            EnrichmentTaskStatus.FAILED, 
+            EnrichmentTaskStatus.CANCELLED
+        ):
+            return
+        
+        # Subscribe to updates
+        queue = task_manager.subscribe(task_id)
+        try:
+            while True:
+                try:
+                    # Wait for updates with timeout
+                    data = await asyncio.wait_for(queue.get(), timeout=30.0)
+                    yield f"data: {json.dumps(data)}\n\n"
+                    
+                    # Check if task is done
+                    if data.get("status") in ("completed", "failed", "cancelled"):
+                        break
+                except asyncio.TimeoutError:
+                    # Send keepalive
+                    yield ": keepalive\n\n"
+        finally:
+            task_manager.unsubscribe(task_id, queue)
+    
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        }
+    )
 
 
 @app.get("/health")

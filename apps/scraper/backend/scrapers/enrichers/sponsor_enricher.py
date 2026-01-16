@@ -713,9 +713,9 @@ Return ONLY the JSON array, no explanation or markdown."""
 
         return enriched
 
-    async def enrich(self, teams: List[TeamRow]) -> EnrichmentResult:
+    async def enrich(self, teams: List[TeamRow], progress_callback=None) -> EnrichmentResult:
         """Override enrich to add detailed reporting in the result."""
-        result = await super().enrich(teams)
+        result = await super().enrich(teams, progress_callback=progress_callback)
 
         if result.success:
             result.details = {

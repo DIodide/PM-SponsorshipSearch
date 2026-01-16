@@ -107,6 +107,68 @@ export interface EnricherInfo {
   status: 'idle' | 'running' | 'success' | 'failed';
 }
 
+// ============ Enrichment Task Types ============
+
+export type EnrichmentTaskStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
+
+export interface EnrichmentTaskProgress {
+  enricher_id: string;
+  enricher_name: string;
+  status: 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
+  teams_processed: number;
+  teams_enriched: number;
+  teams_total: number;
+  error?: string;
+  started_at?: string;
+  completed_at?: string;
+  duration_ms: number;
+}
+
+export interface EnrichmentTask {
+  id: string;
+  scraper_id: string;
+  scraper_name: string;
+  enricher_ids: string[];
+  status: EnrichmentTaskStatus;
+  progress: Record<string, EnrichmentTaskProgress>;
+  created_at: string;
+  started_at?: string;
+  completed_at?: string;
+  teams_total: number;
+  teams_enriched: number;
+  error?: string;
+  has_diff?: boolean;
+}
+
+export interface EnrichmentTaskListResponse {
+  tasks: EnrichmentTask[];
+  active_count: number;
+  total_count: number;
+}
+
+// ============ Enrichment Diff Types ============
+
+export interface EnrichmentFieldChange {
+  field: string;
+  old_value: unknown;
+  new_value: unknown;
+  change_type: 'added' | 'modified' | 'removed';
+}
+
+export interface EnrichmentTeamDiff {
+  team_name: string;
+  changes: EnrichmentFieldChange[];
+  fields_added: number;
+  fields_modified: number;
+}
+
+export interface EnrichmentDiff {
+  teams_changed: number;
+  total_fields_added: number;
+  total_fields_modified: number;
+  teams: EnrichmentTeamDiff[];
+}
+
 // Map enricher IDs to their metric group IDs for display consistency
 export const ENRICHER_TO_GROUP: Record<string, string> = {
   geo: 'geographic',

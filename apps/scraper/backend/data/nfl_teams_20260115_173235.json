@@ -11,9 +11,36 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "AZCardinals",
+        "url": "https://x.com/AZCardinals"
+      },
+      {
+        "platform": "instagram",
+        "handle": "azcardinals",
+        "url": "https://www.instagram.com/azcardinals/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "arizonacardinals",
+        "url": "https://www.facebook.com/arizonacardinals/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "azcardinals",
+        "url": "https://www.tiktok.com/@azcardinals"
+      },
+      {
+        "platform": "youtube",
+        "handle": "azcardinals",
+        "url": "https://www.youtube.com/@azcardinals"
+      }
+    ],
     "followers_x": 1000000,
     "followers_instagram": 1000000,
-    "followers_facebook": null,
+    "followers_facebook": 1300000,
     "followers_tiktok": 1000000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -54,7 +81,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262725"
+    "last_enriched": "2026-01-16T10:28:27.096084"
   },
   {
     "name": "Atlanta Falcons",
@@ -68,9 +95,26 @@
     "geo_country": "US",
     "city_population": 520070,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "AtlantaFalcons",
+        "url": "https://x.com/AtlantaFalcons"
+      },
+      {
+        "platform": "instagram",
+        "handle": "atlantafalcons",
+        "url": "https://www.instagram.com/atlantafalcons/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "atlantafalcons",
+        "url": "https://www.facebook.com/atlantafalcons/"
+      }
+    ],
     "followers_x": 2200000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 2100000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -130,7 +174,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262744"
+    "last_enriched": "2026-01-16T10:28:27.096120"
   },
   {
     "name": "Baltimore Ravens",
@@ -144,9 +188,32 @@
     "geo_country": "US",
     "city_population": 568271,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Ravens",
+        "url": "https://x.com/Ravens"
+      },
+      {
+        "platform": "instagram",
+        "handle": "ravens",
+        "url": "https://www.instagram.com/ravens/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "baltimoreravens",
+        "url": "https://www.facebook.com/baltimoreravens/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCbpj2JAUMb8G_oQQFPeGrhg",
+        "url": "https://www.youtube.com/channel/UCbpj2JAUMb8G_oQQFPeGrhg",
+        "unique_id": "UCbpj2JAUMb8G_oQQFPeGrhg"
+      }
+    ],
     "followers_x": 1800000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 2400000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -173,7 +240,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262749"
+    "last_enriched": "2026-01-16T10:28:27.096128"
   },
   {
     "name": "Buffalo Bills",
@@ -187,9 +254,37 @@
     "geo_country": "US",
     "city_population": 276617,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "buffalobills",
+        "url": "https://x.com/buffalobills"
+      },
+      {
+        "platform": "instagram",
+        "handle": "buffalobills",
+        "url": "https://www.instagram.com/buffalobills/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BuffaloBills",
+        "url": "https://www.facebook.com/BuffaloBills/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "buffalobills",
+        "url": "https://www.tiktok.com/@buffalobills"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCcEvCxUe2Sm5W6MliEUv0vg",
+        "url": "https://www.youtube.com/channel/UCcEvCxUe2Sm5W6MliEUv0vg",
+        "unique_id": "UCcEvCxUe2Sm5W6MliEUv0vg"
+      }
+    ],
     "followers_x": 1800000,
     "followers_instagram": 3000000,
-    "followers_facebook": null,
+    "followers_facebook": 1600000,
     "followers_tiktok": 2700000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -299,7 +394,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262753"
+    "last_enriched": "2026-01-16T10:28:27.096135"
   },
   {
     "name": "Carolina Panthers",
@@ -313,9 +408,31 @@
     "geo_country": "US",
     "city_population": 943476,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Panthers",
+        "url": "https://x.com/Panthers"
+      },
+      {
+        "platform": "facebook",
+        "handle": "CarolinaPanthers",
+        "url": "https://www.facebook.com/CarolinaPanthers/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "panthers",
+        "url": "https://www.instagram.com/panthers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "panthers",
+        "url": "https://www.tiktok.com/@panthers"
+      }
+    ],
     "followers_x": 2800000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 2200000,
     "followers_tiktok": 1400000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -337,7 +454,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262758"
+    "last_enriched": "2026-01-16T10:28:27.096141"
   },
   {
     "name": "Chicago Bears",
@@ -351,9 +468,32 @@
     "geo_country": "US",
     "city_population": 2721308,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ChicagoBears",
+        "url": "https://x.com/ChicagoBears"
+      },
+      {
+        "platform": "instagram",
+        "handle": "chicagobears",
+        "url": "https://www.instagram.com/chicagobears/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ChicagoBears",
+        "url": "https://www.facebook.com/ChicagoBears/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCP0Cdc6moLMyDJiO0s-yhbQ",
+        "url": "https://www.youtube.com/channel/UCP0Cdc6moLMyDJiO0s-yhbQ",
+        "unique_id": "UCP0Cdc6moLMyDJiO0s-yhbQ"
+      }
+    ],
     "followers_x": 2000000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 3800000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -404,7 +544,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262761"
+    "last_enriched": "2026-01-16T10:28:27.096147"
   },
   {
     "name": "Cincinnati Bengals",
@@ -418,9 +558,31 @@
     "geo_country": "US",
     "city_population": 314915,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Bengals",
+        "url": "https://x.com/Bengals"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Bengals",
+        "url": "https://www.facebook.com/Bengals/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bengals",
+        "url": "https://www.instagram.com/bengals/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "bengals",
+        "url": "https://www.tiktok.com/@bengals"
+      }
+    ],
     "followers_x": 1600000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 1400000,
     "followers_tiktok": 2400000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -505,7 +667,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262765"
+    "last_enriched": "2026-01-16T10:28:27.096153"
   },
   {
     "name": "Cleveland Browns",
@@ -519,9 +681,31 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Browns",
+        "url": "https://x.com/Browns"
+      },
+      {
+        "platform": "instagram",
+        "handle": "clevelandbrowns",
+        "url": "https://www.instagram.com/clevelandbrowns/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "clevelandbrowns",
+        "url": "https://www.facebook.com/clevelandbrowns/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "browns",
+        "url": "https://www.tiktok.com/@browns"
+      }
+    ],
     "followers_x": 1600000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 1600000,
     "followers_tiktok": 1500000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -588,7 +772,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262769"
+    "last_enriched": "2026-01-16T10:28:27.096157"
   },
   {
     "name": "Dallas Cowboys",
@@ -602,9 +786,32 @@
     "geo_country": "US",
     "city_population": 1326087,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "DallasCowboys",
+        "url": "https://x.com/DallasCowboys"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dallascowboys",
+        "url": "https://www.instagram.com/dallascowboys/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DallasCowboys",
+        "url": "https://www.facebook.com/DallasCowboys/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCC0BPKJxAyxjQoRTYbpW0FQ",
+        "url": "https://www.youtube.com/channel/UCC0BPKJxAyxjQoRTYbpW0FQ",
+        "unique_id": "UCC0BPKJxAyxjQoRTYbpW0FQ"
+      }
+    ],
     "followers_x": 4099999,
     "followers_instagram": 5000000,
-    "followers_facebook": null,
+    "followers_facebook": 8100000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -651,7 +858,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262772"
+    "last_enriched": "2026-01-16T10:28:27.096163"
   },
   {
     "name": "Denver Broncos",
@@ -665,9 +872,27 @@
     "geo_country": "US",
     "city_population": 729019,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Broncos",
+        "url": "https://x.com/Broncos"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DenverBroncos",
+        "url": "https://www.facebook.com/DenverBroncos/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCDGdBexlDZA8T7hnweWWyow",
+        "url": "https://www.youtube.com/channel/UCDGdBexlDZA8T7hnweWWyow",
+        "unique_id": "UCDGdBexlDZA8T7hnweWWyow"
+      }
+    ],
     "followers_x": 2500000,
     "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_facebook": 3800000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -724,7 +949,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262775"
+    "last_enriched": "2026-01-16T10:28:27.096168"
   },
   {
     "name": "Detroit Lions",
@@ -738,9 +963,26 @@
     "geo_country": "US",
     "city_population": 645705,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Lions",
+        "url": "https://x.com/Lions"
+      },
+      {
+        "platform": "instagram",
+        "handle": "detroitlionsnfl",
+        "url": "https://www.instagram.com/detroitlionsnfl/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DetroitLions",
+        "url": "https://www.facebook.com/DetroitLions/"
+      }
+    ],
     "followers_x": 1700000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 2400000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -789,7 +1031,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262779"
+    "last_enriched": "2026-01-16T10:28:27.096174"
   },
   {
     "name": "Green Bay Packers",
@@ -803,9 +1045,26 @@
     "geo_country": "US",
     "city_population": 106311,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "packers",
+        "url": "https://x.com/packers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "packers",
+        "url": "https://www.instagram.com/packers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Packers",
+        "url": "https://www.facebook.com/Packers/"
+      }
+    ],
     "followers_x": 2400000,
     "followers_instagram": 3000000,
-    "followers_facebook": null,
+    "followers_facebook": 4900000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -867,7 +1126,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262783"
+    "last_enriched": "2026-01-16T10:28:27.096180"
   },
   {
     "name": "Houston Texans",
@@ -881,9 +1140,27 @@
     "geo_country": "US",
     "city_population": 2390125,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "HoustonTexans",
+        "url": "https://x.com/HoustonTexans"
+      },
+      {
+        "platform": "facebook",
+        "handle": "HoustonTexans",
+        "url": "https://www.facebook.com/HoustonTexans/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCa_FcpOBe8G6VAR18RYS-aA",
+        "url": "https://www.youtube.com/channel/UCa_FcpOBe8G6VAR18RYS-aA",
+        "unique_id": "UCa_FcpOBe8G6VAR18RYS-aA"
+      }
+    ],
     "followers_x": 1900000,
     "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_facebook": 2300000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1332,7 +1609,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262786"
+    "last_enriched": "2026-01-16T10:28:27.096186"
   },
   {
     "name": "Indianapolis Colts",
@@ -1346,9 +1623,37 @@
     "geo_country": "US",
     "city_population": 891484,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Colts",
+        "url": "https://x.com/Colts"
+      },
+      {
+        "platform": "instagram",
+        "handle": "colts",
+        "url": "https://www.instagram.com/colts/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "colts",
+        "url": "https://www.facebook.com/colts/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "colts",
+        "url": "https://www.tiktok.com/@colts"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCyYn26HPC4HIedifGnNbjBw",
+        "url": "https://www.youtube.com/channel/UCyYn26HPC4HIedifGnNbjBw",
+        "unique_id": "UCyYn26HPC4HIedifGnNbjBw"
+      }
+    ],
     "followers_x": 1100000,
     "followers_instagram": 1000000,
-    "followers_facebook": null,
+    "followers_facebook": 2000000,
     "followers_tiktok": 1300000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1392,7 +1697,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262790"
+    "last_enriched": "2026-01-16T10:28:27.096192"
   },
   {
     "name": "Jacksonville Jaguars",
@@ -1406,9 +1711,32 @@
     "geo_country": "US",
     "city_population": 1009833,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "JaguarsUK",
+        "url": "https://x.com/JaguarsUK"
+      },
+      {
+        "platform": "instagram",
+        "handle": "jaguars",
+        "url": "https://www.instagram.com/jaguars/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "jacksonvillejaguars",
+        "url": "https://www.facebook.com/jacksonvillejaguars/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCsGacW6z0GedR-Wv45SBRZg",
+        "url": "https://www.youtube.com/channel/UCsGacW6z0GedR-Wv45SBRZg",
+        "unique_id": "UCsGacW6z0GedR-Wv45SBRZg"
+      }
+    ],
     "followers_x": 9,
     "followers_instagram": 1000000,
-    "followers_facebook": null,
+    "followers_facebook": 770000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1471,7 +1799,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262793"
+    "last_enriched": "2026-01-16T10:28:27.096197"
   },
   {
     "name": "Kansas City Chiefs",
@@ -1485,9 +1813,27 @@
     "geo_country": "US",
     "city_population": 516032,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Chiefs",
+        "url": "https://x.com/Chiefs"
+      },
+      {
+        "platform": "facebook",
+        "handle": "KansasCityChiefs",
+        "url": "https://www.facebook.com/KansasCityChiefs/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC-hXefb6XBFSubWz6Ezf_lA",
+        "url": "https://www.youtube.com/channel/UC-hXefb6XBFSubWz6Ezf_lA",
+        "unique_id": "UC-hXefb6XBFSubWz6Ezf_lA"
+      }
+    ],
     "followers_x": 2600000,
     "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_facebook": 3300000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1894,7 +2240,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262796"
+    "last_enriched": "2026-01-16T10:28:27.096203"
   },
   {
     "name": "Las Vegas Raiders",
@@ -1908,9 +2254,32 @@
     "geo_country": "US",
     "city_population": 678922,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RAIDERS",
+        "url": "https://x.com/RAIDERS"
+      },
+      {
+        "platform": "instagram",
+        "handle": "raiders",
+        "url": "https://www.instagram.com/raiders/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Raiders",
+        "url": "https://www.facebook.com/Raiders/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC1es5fp8FEK1L0EgHjCvmtQ",
+        "url": "https://www.youtube.com/channel/UC1es5fp8FEK1L0EgHjCvmtQ",
+        "unique_id": "UC1es5fp8FEK1L0EgHjCvmtQ"
+      }
+    ],
     "followers_x": 1800000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 3300000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -1953,7 +2322,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262800"
+    "last_enriched": "2026-01-16T10:28:27.096208"
   },
   {
     "name": "Los Angeles Chargers",
@@ -1967,9 +2336,26 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "chargers",
+        "url": "https://x.com/chargers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "chargers",
+        "url": "https://www.instagram.com/chargers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "chargers",
+        "url": "https://www.facebook.com/chargers/"
+      }
+    ],
     "followers_x": 1000000,
     "followers_instagram": 1000000,
-    "followers_facebook": null,
+    "followers_facebook": 1500000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2013,7 +2399,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262803"
+    "last_enriched": "2026-01-16T10:28:27.096213"
   },
   {
     "name": "Los Angeles Rams",
@@ -2027,9 +2413,32 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RamsNFL",
+        "url": "https://x.com/RamsNFL"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rams",
+        "url": "https://www.instagram.com/rams/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Rams",
+        "url": "https://www.facebook.com/Rams/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCyJ6yZdVUkBvt2vl4R03jcA",
+        "url": "https://www.youtube.com/channel/UCyJ6yZdVUkBvt2vl4R03jcA",
+        "unique_id": "UCyJ6yZdVUkBvt2vl4R03jcA"
+      }
+    ],
     "followers_x": 1200000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 1100000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2087,7 +2496,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262806"
+    "last_enriched": "2026-01-16T10:28:27.096218"
   },
   {
     "name": "Miami Dolphins",
@@ -2101,9 +2510,31 @@
     "geo_country": "US",
     "city_population": 487014,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "MiamiDolphins",
+        "url": "https://x.com/MiamiDolphins"
+      },
+      {
+        "platform": "facebook",
+        "handle": "MiamiDolphins",
+        "url": "https://www.facebook.com/MiamiDolphins/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "miamidolphins",
+        "url": "https://www.instagram.com/miamidolphins/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "miamidolphins",
+        "url": "https://www.tiktok.com/@miamidolphins"
+      }
+    ],
     "followers_x": 1200000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 2100000,
     "followers_tiktok": 1700000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2240,7 +2671,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262809"
+    "last_enriched": "2026-01-16T10:28:27.096224"
   },
   {
     "name": "Minnesota Vikings",
@@ -2254,9 +2685,32 @@
     "geo_country": "US",
     "city_population": 428579,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Vikings",
+        "url": "https://x.com/Vikings"
+      },
+      {
+        "platform": "facebook",
+        "handle": "minnesotavikings",
+        "url": "https://www.facebook.com/minnesotavikings/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "vikings",
+        "url": "https://www.instagram.com/vikings/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCcsw_KrB_wg5lQ5nXWR_LFA",
+        "url": "https://www.youtube.com/channel/UCcsw_KrB_wg5lQ5nXWR_LFA",
+        "unique_id": "UCcsw_KrB_wg5lQ5nXWR_LFA"
+      }
+    ],
     "followers_x": 1500000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 2100000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2323,7 +2777,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262813"
+    "last_enriched": "2026-01-16T10:28:27.096229"
   },
   {
     "name": "New England Patriots",
@@ -2337,9 +2791,37 @@
     "geo_country": "US",
     "city_population": 673458,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Patriots",
+        "url": "https://x.com/Patriots"
+      },
+      {
+        "platform": "instagram",
+        "handle": "patriots",
+        "url": "https://www.instagram.com/patriots/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "newenglandpatriots",
+        "url": "https://www.facebook.com/newenglandpatriots/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "patriots",
+        "url": "https://www.tiktok.com/@patriots"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCMm_V8YjmnZRhToXIqDYDuw",
+        "url": "https://www.youtube.com/channel/UCMm_V8YjmnZRhToXIqDYDuw",
+        "unique_id": "UCMm_V8YjmnZRhToXIqDYDuw"
+      }
+    ],
     "followers_x": 4300000,
     "followers_instagram": 5000000,
-    "followers_facebook": null,
+    "followers_facebook": 6500000,
     "followers_tiktok": 1800000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2396,7 +2878,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262816"
+    "last_enriched": "2026-01-16T10:28:27.096234"
   },
   {
     "name": "New Orleans Saints",
@@ -2410,9 +2892,37 @@
     "geo_country": "US",
     "city_population": 362701,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Saints",
+        "url": "https://x.com/Saints"
+      },
+      {
+        "platform": "instagram",
+        "handle": "saints",
+        "url": "https://www.instagram.com/saints/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "neworleanssaints",
+        "url": "https://www.facebook.com/neworleanssaints/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "saints",
+        "url": "https://www.tiktok.com/@saints"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCwuddf1JrodMlc5fYpVlrQA",
+        "url": "https://www.youtube.com/channel/UCwuddf1JrodMlc5fYpVlrQA",
+        "unique_id": "UCwuddf1JrodMlc5fYpVlrQA"
+      }
+    ],
     "followers_x": 1600000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 3800000,
     "followers_tiktok": 1300000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2476,7 +2986,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262820"
+    "last_enriched": "2026-01-16T10:28:27.096240"
   },
   {
     "name": "New York Giants",
@@ -2490,9 +3000,26 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "giants",
+        "url": "https://x.com/giants"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nygiants",
+        "url": "https://www.instagram.com/nygiants/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "newyorkgiants",
+        "url": "https://www.facebook.com/newyorkgiants/"
+      }
+    ],
     "followers_x": 1800000,
     "followers_instagram": 3000000,
-    "followers_facebook": null,
+    "followers_facebook": 3600000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -2918,7 +3445,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262823"
+    "last_enriched": "2026-01-16T10:28:27.096246"
   },
   {
     "name": "New York Jets",
@@ -2932,9 +3459,26 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nyjets",
+        "url": "https://x.com/nyjets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nyjets",
+        "url": "https://www.instagram.com/nyjets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Jets",
+        "url": "https://www.facebook.com/Jets/"
+      }
+    ],
     "followers_x": 1200000,
     "followers_instagram": 1000000,
-    "followers_facebook": null,
+    "followers_facebook": 1800000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3169,7 +3713,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262826"
+    "last_enriched": "2026-01-16T10:28:27.096252"
   },
   {
     "name": "Philadelphia Eagles",
@@ -3183,9 +3727,26 @@
     "geo_country": "US",
     "city_population": 1573916,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Eagles",
+        "url": "https://x.com/Eagles"
+      },
+      {
+        "platform": "instagram",
+        "handle": "philadelphiaeagles",
+        "url": "https://www.instagram.com/philadelphiaeagles/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "philadelphiaeagles",
+        "url": "https://www.facebook.com/philadelphiaeagles/"
+      }
+    ],
     "followers_x": 3700000,
     "followers_instagram": 5000000,
-    "followers_facebook": null,
+    "followers_facebook": 5400000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3277,7 +3838,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262830"
+    "last_enriched": "2026-01-16T10:28:27.096258"
   },
   {
     "name": "Pittsburgh Steelers",
@@ -3291,9 +3852,32 @@
     "geo_country": "US",
     "city_population": 307668,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "steelers",
+        "url": "https://x.com/steelers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "steelers",
+        "url": "https://www.instagram.com/steelers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "steelers",
+        "url": "https://www.facebook.com/steelers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UChaRXjMDs4ppKfnTPE6Z89w",
+        "url": "https://www.youtube.com/channel/UChaRXjMDs4ppKfnTPE6Z89w",
+        "unique_id": "UChaRXjMDs4ppKfnTPE6Z89w"
+      }
+    ],
     "followers_x": 3500000,
     "followers_instagram": 4000000,
-    "followers_facebook": null,
+    "followers_facebook": 6200000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3360,7 +3944,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262833"
+    "last_enriched": "2026-01-16T10:28:27.096264"
   },
   {
     "name": "San Francisco 49ers",
@@ -3374,9 +3958,27 @@
     "geo_country": "US",
     "city_population": 827526,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "49ers",
+        "url": "https://x.com/49ers"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SANFRANCISCO49ERS",
+        "url": "https://www.facebook.com/SANFRANCISCO49ERS/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCeIOarQkwmGhimim9cDUTng",
+        "url": "https://www.youtube.com/channel/UCeIOarQkwmGhimim9cDUTng",
+        "unique_id": "UCeIOarQkwmGhimim9cDUTng"
+      }
+    ],
     "followers_x": 2200000,
     "followers_instagram": null,
-    "followers_facebook": null,
+    "followers_facebook": 4099999,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3447,7 +4049,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262836"
+    "last_enriched": "2026-01-16T10:28:27.096270"
   },
   {
     "name": "Seattle Seahawks",
@@ -3461,9 +4063,32 @@
     "geo_country": "US",
     "city_population": 780995,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Seahawks",
+        "url": "https://x.com/Seahawks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "seahawks",
+        "url": "https://www.instagram.com/seahawks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Seahawks",
+        "url": "https://www.facebook.com/Seahawks/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCzkFCRiMcOBeef8xcaqipmw",
+        "url": "https://www.youtube.com/channel/UCzkFCRiMcOBeef8xcaqipmw",
+        "unique_id": "UCzkFCRiMcOBeef8xcaqipmw"
+      }
+    ],
     "followers_x": 2300000,
     "followers_instagram": 4000000,
-    "followers_facebook": null,
+    "followers_facebook": 3600000,
     "followers_tiktok": null,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3523,7 +4148,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262840"
+    "last_enriched": "2026-01-16T10:28:27.096276"
   },
   {
     "name": "Tampa Bay Buccaneers",
@@ -3537,9 +4162,36 @@
     "geo_country": "US",
     "city_population": 414547,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "buccaneers",
+        "url": "https://x.com/buccaneers"
+      },
+      {
+        "platform": "facebook",
+        "handle": "TampaBayBuccaneers",
+        "url": "https://www.facebook.com/TampaBayBuccaneers/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "buccaneers",
+        "url": "https://www.instagram.com/buccaneers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "bucsnfl",
+        "url": "https://www.tiktok.com/@bucsnfl"
+      },
+      {
+        "platform": "youtube",
+        "handle": "tbbuccaneers",
+        "url": "https://www.youtube.com/@tbbuccaneers"
+      }
+    ],
     "followers_x": 1300000,
     "followers_instagram": 2000000,
-    "followers_facebook": null,
+    "followers_facebook": 1400000,
     "followers_tiktok": 1600000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3617,7 +4269,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262843"
+    "last_enriched": "2026-01-16T10:28:27.096280"
   },
   {
     "name": "Tennessee Titans",
@@ -3631,6 +4283,24 @@
     "geo_country": "US",
     "city_population": 704963,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Titans",
+        "url": "https://x.com/Titans"
+      },
+      {
+        "platform": "instagram",
+        "handle": "titans",
+        "url": "https://www.instagram.com/titans/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCHBsqVkFraWvtNd1w0Qx4_g",
+        "url": "https://www.youtube.com/channel/UCHBsqVkFraWvtNd1w0Qx4_g",
+        "unique_id": "UCHBsqVkFraWvtNd1w0Qx4_g"
+      }
+    ],
     "followers_x": 1000000,
     "followers_instagram": 1000000,
     "followers_facebook": null,
@@ -3706,7 +4376,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262846"
+    "last_enriched": "2026-01-16T10:28:27.096285"
   },
   {
     "name": "Washington Commanders",
@@ -3720,9 +4390,37 @@
     "geo_country": "US",
     "city_population": 702250,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Commanders",
+        "url": "https://x.com/Commanders"
+      },
+      {
+        "platform": "instagram",
+        "handle": "commanders",
+        "url": "https://www.instagram.com/commanders/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "CommandersNFL",
+        "url": "https://www.facebook.com/CommandersNFL/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "commanders",
+        "url": "https://www.tiktok.com/@commanders"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC2a0ENbCZqIO5C1fWXGXZXA",
+        "url": "https://www.youtube.com/channel/UC2a0ENbCZqIO5C1fWXGXZXA",
+        "unique_id": "UC2a0ENbCZqIO5C1fWXGXZXA"
+      }
+    ],
     "followers_x": 1300000,
     "followers_instagram": 1000000,
-    "followers_facebook": null,
+    "followers_facebook": 1800000,
     "followers_tiktok": 1000000,
     "subscribers_youtube": null,
     "avg_game_attendance": null,
@@ -3795,6 +4493,6 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T10:00:43.262850"
+    "last_enriched": "2026-01-16T10:28:27.096290"
   }
 ]

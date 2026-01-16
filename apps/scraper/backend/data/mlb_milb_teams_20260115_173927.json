@@ -11,6 +11,29 @@
     "geo_country": "US",
     "city_population": 344561,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Angels",
+        "url": "https://x.com/Angels"
+      },
+      {
+        "platform": "instagram",
+        "handle": "angels",
+        "url": "https://www.instagram.com/angels/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Angels",
+        "url": "https://www.facebook.com/Angels/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCS7H_WWPj5_qfD-zoUzuX2A",
+        "url": "https://www.youtube.com/channel/UCS7H_WWPj5_qfD-zoUzuX2A",
+        "unique_id": "UCS7H_WWPj5_qfD-zoUzuX2A"
+      }
+    ],
     "followers_x": 1200000,
     "followers_instagram": 1200000,
     "followers_facebook": 1300000,
@@ -73,7 +96,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118724"
+    "last_enriched": "2026-01-16T10:31:07.502939"
   },
   {
     "name": "Texas Rangers",
@@ -87,6 +110,34 @@
     "geo_country": "US",
     "city_population": 403672,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Rangers",
+        "url": "https://x.com/Rangers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rangers",
+        "url": "https://www.instagram.com/rangers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Rangers",
+        "url": "https://www.facebook.com/Rangers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "rangers",
+        "url": "https://www.tiktok.com/@rangers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCZjXWMvOrhc91chSDPDUspA",
+        "url": "https://www.youtube.com/channel/UCZjXWMvOrhc91chSDPDUspA",
+        "unique_id": "UCZjXWMvOrhc91chSDPDUspA"
+      }
+    ],
     "followers_x": 1300000,
     "followers_instagram": 1000000,
     "followers_facebook": 2300000,
@@ -159,7 +210,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118770"
+    "last_enriched": "2026-01-16T10:31:07.502947"
   },
   {
     "name": "Baltimore Orioles",
@@ -173,6 +224,29 @@
     "geo_country": "US",
     "city_population": 568271,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Orioles",
+        "url": "https://x.com/Orioles"
+      },
+      {
+        "platform": "instagram",
+        "handle": "baltimoreorioles",
+        "url": "https://www.instagram.com/baltimoreorioles/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Orioles",
+        "url": "https://www.facebook.com/Orioles/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC2jqf9lgDjMUtTow1Q4IKzg",
+        "url": "https://www.youtube.com/channel/UC2jqf9lgDjMUtTow1Q4IKzg",
+        "unique_id": "UC2jqf9lgDjMUtTow1Q4IKzg"
+      }
+    ],
     "followers_x": 839600,
     "followers_instagram": 95,
     "followers_facebook": 1200000,
@@ -235,7 +309,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118783"
+    "last_enriched": "2026-01-16T10:31:07.502949"
   },
   {
     "name": "Boston Red Sox",
@@ -249,6 +323,29 @@
     "geo_country": "US",
     "city_population": 673458,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RedSoxBeisbol",
+        "url": "https://x.com/RedSoxBeisbol"
+      },
+      {
+        "platform": "instagram",
+        "handle": "redsox",
+        "url": "https://www.instagram.com/redsox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "RedSox",
+        "url": "https://www.facebook.com/RedSox/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCoLrny_Oky6BE206kOfTmiw",
+        "url": "https://www.youtube.com/channel/UCoLrny_Oky6BE206kOfTmiw",
+        "unique_id": "UCoLrny_Oky6BE206kOfTmiw"
+      }
+    ],
     "followers_x": 150200,
     "followers_instagram": 2000000,
     "followers_facebook": 4900000,
@@ -323,7 +420,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118793"
+    "last_enriched": "2026-01-16T10:31:07.502951"
   },
   {
     "name": "New York Yankees",
@@ -337,6 +434,29 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Yankees",
+        "url": "https://x.com/Yankees"
+      },
+      {
+        "platform": "instagram",
+        "handle": "yankees",
+        "url": "https://www.instagram.com/yankees/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Yankees",
+        "url": "https://www.facebook.com/Yankees/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCmAQ_4ELJodnKuNqviK86Dg",
+        "url": "https://www.youtube.com/channel/UCmAQ_4ELJodnKuNqviK86Dg",
+        "unique_id": "UCmAQ_4ELJodnKuNqviK86Dg"
+      }
+    ],
     "followers_x": 3600000,
     "followers_instagram": 4099999,
     "followers_facebook": 8000000,
@@ -529,7 +649,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118803"
+    "last_enriched": "2026-01-16T10:31:07.502952"
   },
   {
     "name": "Chicago White Sox",
@@ -543,6 +663,29 @@
     "geo_country": "US",
     "city_population": 2721308,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WhiteSox",
+        "url": "https://x.com/WhiteSox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "whitesox",
+        "url": "https://www.instagram.com/whitesox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "WhiteSox",
+        "url": "https://www.facebook.com/WhiteSox/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCve-Ci-M4CkBOmNi2LQdCRg",
+        "url": "https://www.youtube.com/channel/UCve-Ci-M4CkBOmNi2LQdCRg",
+        "unique_id": "UCve-Ci-M4CkBOmNi2LQdCRg"
+      }
+    ],
     "followers_x": 972500,
     "followers_instagram": 726000,
     "followers_facebook": 1600000,
@@ -602,7 +745,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118812"
+    "last_enriched": "2026-01-16T10:31:07.502954"
   },
   {
     "name": "Cleveland Guardians",
@@ -616,6 +759,29 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Indians",
+        "url": "https://x.com/Indians"
+      },
+      {
+        "platform": "instagram",
+        "handle": "cleguardians",
+        "url": "https://www.instagram.com/cleguardians/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Indians",
+        "url": "https://www.facebook.com/Indians/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCpI50OSBxxalmRZRq4gtRDw",
+        "url": "https://www.youtube.com/channel/UCpI50OSBxxalmRZRq4gtRDw",
+        "unique_id": "UCpI50OSBxxalmRZRq4gtRDw"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 768000,
     "followers_facebook": null,
@@ -682,7 +848,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118820"
+    "last_enriched": "2026-01-16T10:31:07.502955"
   },
   {
     "name": "Detroit Tigers",
@@ -696,6 +862,29 @@
     "geo_country": "US",
     "city_population": 645705,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "tigers",
+        "url": "https://x.com/tigers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "tigers",
+        "url": "https://www.instagram.com/tigers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Tigers",
+        "url": "https://www.facebook.com/Tigers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCKKG465DFaJ3Yp-jQHA3jhw",
+        "url": "https://www.youtube.com/channel/UCKKG465DFaJ3Yp-jQHA3jhw",
+        "unique_id": "UCKKG465DFaJ3Yp-jQHA3jhw"
+      }
+    ],
     "followers_x": 1300000,
     "followers_instagram": 1100000,
     "followers_facebook": 2300000,
@@ -773,7 +962,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118829"
+    "last_enriched": "2026-01-16T10:31:07.502957"
   },
   {
     "name": "Houston Astros",
@@ -787,6 +976,29 @@
     "geo_country": "US",
     "city_population": 2390125,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LosAstros",
+        "url": "https://x.com/LosAstros"
+      },
+      {
+        "platform": "instagram",
+        "handle": "astrosbaseball",
+        "url": "https://www.instagram.com/astrosbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Astros",
+        "url": "https://www.facebook.com/Astros/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC3RPfeyaEIPosC4eIcNr4Gw",
+        "url": "https://www.youtube.com/channel/UC3RPfeyaEIPosC4eIcNr4Gw",
+        "unique_id": "UC3RPfeyaEIPosC4eIcNr4Gw"
+      }
+    ],
     "followers_x": 130300,
     "followers_instagram": null,
     "followers_facebook": 1800000,
@@ -862,7 +1074,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118838"
+    "last_enriched": "2026-01-16T10:31:07.502958"
   },
   {
     "name": "Kansas City Royals",
@@ -876,6 +1088,29 @@
     "geo_country": "US",
     "city_population": 516032,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Royals",
+        "url": "https://x.com/Royals"
+      },
+      {
+        "platform": "instagram",
+        "handle": "kcroyals",
+        "url": "https://www.instagram.com/kcroyals/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Royals",
+        "url": "https://www.facebook.com/Royals/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCvA2SgPVi3Hw6n_WER0VrcQ",
+        "url": "https://www.youtube.com/channel/UCvA2SgPVi3Hw6n_WER0VrcQ",
+        "unique_id": "UCvA2SgPVi3Hw6n_WER0VrcQ"
+      }
+    ],
     "followers_x": 1000000,
     "followers_instagram": 1000000,
     "followers_facebook": 1200000,
@@ -939,7 +1174,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118846"
+    "last_enriched": "2026-01-16T10:31:07.502959"
   },
   {
     "name": "Minnesota Twins",
@@ -953,6 +1188,29 @@
     "geo_country": "US",
     "city_population": 428579,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Twins",
+        "url": "https://x.com/Twins"
+      },
+      {
+        "platform": "instagram",
+        "handle": "twins",
+        "url": "https://www.instagram.com/twins/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Twins",
+        "url": "https://www.facebook.com/Twins/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCkXEh3jSl4oB1mQqjIePfTg",
+        "url": "https://www.youtube.com/channel/UCkXEh3jSl4oB1mQqjIePfTg",
+        "unique_id": "UCkXEh3jSl4oB1mQqjIePfTg"
+      }
+    ],
     "followers_x": 658300,
     "followers_instagram": 602000,
     "followers_facebook": 1100000,
@@ -1018,7 +1276,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118854"
+    "last_enriched": "2026-01-16T10:31:07.502960"
   },
   {
     "name": "Athletics",
@@ -1032,6 +1290,29 @@
     "geo_country": "US",
     "city_population": 535798,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Athletics",
+        "url": "https://x.com/Athletics"
+      },
+      {
+        "platform": "instagram",
+        "handle": "athletics",
+        "url": "https://www.instagram.com/athletics/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Athletics",
+        "url": "https://www.facebook.com/Athletics/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCeiRABiGBQTzpuEYohN_I1Q",
+        "url": "https://www.youtube.com/channel/UCeiRABiGBQTzpuEYohN_I1Q",
+        "unique_id": "UCeiRABiGBQTzpuEYohN_I1Q"
+      }
+    ],
     "followers_x": 553100,
     "followers_instagram": 563000,
     "followers_facebook": 784000,
@@ -1092,7 +1373,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118863"
+    "last_enriched": "2026-01-16T10:31:07.502962"
   },
   {
     "name": "Seattle Mariners",
@@ -1106,6 +1387,29 @@
     "geo_country": "US",
     "city_population": 780995,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Mariners",
+        "url": "https://x.com/Mariners"
+      },
+      {
+        "platform": "instagram",
+        "handle": "mariners",
+        "url": "https://www.instagram.com/mariners/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Mariners",
+        "url": "https://www.facebook.com/Mariners/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCWWLs-O8JGYYcNea7AgumAA",
+        "url": "https://www.youtube.com/channel/UCWWLs-O8JGYYcNea7AgumAA",
+        "unique_id": "UCWWLs-O8JGYYcNea7AgumAA"
+      }
+    ],
     "followers_x": 715700,
     "followers_instagram": 1100000,
     "followers_facebook": 1400000,
@@ -1165,7 +1469,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118872"
+    "last_enriched": "2026-01-16T10:31:07.502963"
   },
   {
     "name": "Tampa Bay Rays",
@@ -1179,6 +1483,29 @@
     "geo_country": "US",
     "city_population": 267102,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RaysBaseball",
+        "url": "https://x.com/RaysBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "raysbaseball",
+        "url": "https://www.instagram.com/raysbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Rays",
+        "url": "https://www.facebook.com/Rays/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCZaT7TplNF541ySP8SlHVGA",
+        "url": "https://www.youtube.com/channel/UCZaT7TplNF541ySP8SlHVGA",
+        "unique_id": "UCZaT7TplNF541ySP8SlHVGA"
+      }
+    ],
     "followers_x": 644000,
     "followers_instagram": 546000,
     "followers_facebook": null,
@@ -1228,7 +1555,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118881"
+    "last_enriched": "2026-01-16T10:31:07.502964"
   },
   {
     "name": "Toronto Blue Jays",
@@ -1242,6 +1569,34 @@
     "geo_country": "CA",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BluefieldJays",
+        "url": "https://x.com/BluefieldJays"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bluejays",
+        "url": "https://www.instagram.com/bluejays/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Bluejays",
+        "url": "https://www.facebook.com/Bluejays/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "bluejays",
+        "url": "https://www.tiktok.com/@bluejays"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCVPkZh_H6m_stW8hq-2-yNw",
+        "url": "https://www.youtube.com/channel/UCVPkZh_H6m_stW8hq-2-yNw",
+        "unique_id": "UCVPkZh_H6m_stW8hq-2-yNw"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 2000000,
     "followers_facebook": 2200000,
@@ -1297,7 +1652,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118890"
+    "last_enriched": "2026-01-16T10:31:07.502965"
   },
   {
     "name": "Atlanta Braves",
@@ -1311,6 +1666,29 @@
     "geo_country": "US",
     "city_population": 520070,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Braves",
+        "url": "https://x.com/Braves"
+      },
+      {
+        "platform": "instagram",
+        "handle": "braves",
+        "url": "https://www.instagram.com/braves/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Braves",
+        "url": "https://www.facebook.com/Braves/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCNWnkblY5_kmf4OQ9l0LgnA",
+        "url": "https://www.youtube.com/channel/UCNWnkblY5_kmf4OQ9l0LgnA",
+        "unique_id": "UCNWnkblY5_kmf4OQ9l0LgnA"
+      }
+    ],
     "followers_x": 1500000,
     "followers_instagram": 2000000,
     "followers_facebook": 2400000,
@@ -1378,7 +1756,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118899"
+    "last_enriched": "2026-01-16T10:31:07.502966"
   },
   {
     "name": "Chicago Cubs",
@@ -1392,6 +1770,29 @@
     "geo_country": "US",
     "city_population": 2721308,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Cubs",
+        "url": "https://x.com/Cubs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "cubs",
+        "url": "https://www.instagram.com/cubs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Cubs",
+        "url": "https://www.facebook.com/Cubs/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCnU7B7B0U0t2vs-2HMLjgvg",
+        "url": "https://www.youtube.com/channel/UCnU7B7B0U0t2vs-2HMLjgvg",
+        "unique_id": "UCnU7B7B0U0t2vs-2HMLjgvg"
+      }
+    ],
     "followers_x": 2400000,
     "followers_instagram": 2000000,
     "followers_facebook": 3200000,
@@ -1442,7 +1843,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118907"
+    "last_enriched": "2026-01-16T10:31:07.502967"
   },
   {
     "name": "Cincinnati Reds",
@@ -1456,6 +1857,29 @@
     "geo_country": "US",
     "city_population": 314915,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Reds",
+        "url": "https://x.com/Reds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "redsbaseball",
+        "url": "https://www.instagram.com/redsbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Reds",
+        "url": "https://www.facebook.com/Reds/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCENXPJrzbHXudxhURfk5NCg",
+        "url": "https://www.youtube.com/channel/UCENXPJrzbHXudxhURfk5NCg",
+        "unique_id": "UCENXPJrzbHXudxhURfk5NCg"
+      }
+    ],
     "followers_x": 950700,
     "followers_instagram": 12000,
     "followers_facebook": 1400000,
@@ -1503,7 +1927,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118915"
+    "last_enriched": "2026-01-16T10:31:07.502968"
   },
   {
     "name": "Colorado Rockies",
@@ -1517,6 +1941,29 @@
     "geo_country": "US",
     "city_population": 729019,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Rockies",
+        "url": "https://x.com/Rockies"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rockies",
+        "url": "https://www.instagram.com/rockies/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Rockies",
+        "url": "https://www.facebook.com/Rockies/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCBci3py0IfkjkjPKDE-B6Bw",
+        "url": "https://www.youtube.com/channel/UCBci3py0IfkjkjPKDE-B6Bw",
+        "unique_id": "UCBci3py0IfkjkjPKDE-B6Bw"
+      }
+    ],
     "followers_x": 583300,
     "followers_instagram": 570000,
     "followers_facebook": 865000,
@@ -1567,7 +2014,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118923"
+    "last_enriched": "2026-01-16T10:31:07.502970"
   },
   {
     "name": "New York Mets",
@@ -1581,6 +2028,29 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Mets",
+        "url": "https://x.com/Mets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "mets",
+        "url": "https://www.instagram.com/mets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Mets",
+        "url": "https://www.facebook.com/Mets/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCgIMbGazP0uBDy9JVCqBUaA",
+        "url": "https://www.youtube.com/channel/UCgIMbGazP0uBDy9JVCqBUaA",
+        "unique_id": "UCgIMbGazP0uBDy9JVCqBUaA"
+      }
+    ],
     "followers_x": 1200000,
     "followers_instagram": 2000000,
     "followers_facebook": 1600000,
@@ -1625,7 +2095,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118933"
+    "last_enriched": "2026-01-16T10:31:07.502971"
   },
   {
     "name": "Los Angeles Dodgers",
@@ -1639,6 +2109,29 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Pantone294",
+        "url": "https://x.com/Pantone294"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dodgers",
+        "url": "https://www.instagram.com/dodgers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Dodgers",
+        "url": "https://www.facebook.com/Dodgers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC05cNJvMKzDLRPo59X2Xx7g",
+        "url": "https://www.youtube.com/channel/UC05cNJvMKzDLRPo59X2Xx7g",
+        "unique_id": "UC05cNJvMKzDLRPo59X2Xx7g"
+      }
+    ],
     "followers_x": 40100,
     "followers_instagram": 6000000,
     "followers_facebook": 4000000,
@@ -1693,7 +2186,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118941"
+    "last_enriched": "2026-01-16T10:31:07.502972"
   },
   {
     "name": "Miami Marlins",
@@ -1707,6 +2200,29 @@
     "geo_country": "US",
     "city_population": 487014,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Marlins",
+        "url": "https://x.com/Marlins"
+      },
+      {
+        "platform": "instagram",
+        "handle": "marlins",
+        "url": "https://www.instagram.com/marlins/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Marlins",
+        "url": "https://www.facebook.com/Marlins/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC1Gh_pQ7l41tyBn2HeJ1k-A",
+        "url": "https://www.youtube.com/channel/UC1Gh_pQ7l41tyBn2HeJ1k-A",
+        "unique_id": "UC1Gh_pQ7l41tyBn2HeJ1k-A"
+      }
+    ],
     "followers_x": 409000,
     "followers_instagram": 806000,
     "followers_facebook": 716000,
@@ -1764,7 +2280,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118950"
+    "last_enriched": "2026-01-16T10:31:07.502973"
   },
   {
     "name": "Milwaukee Brewers",
@@ -1778,6 +2294,29 @@
     "geo_country": "US",
     "city_population": 563531,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Brewers",
+        "url": "https://x.com/Brewers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "brewers",
+        "url": "https://www.instagram.com/brewers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Brewers",
+        "url": "https://www.facebook.com/Brewers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCybiT6P8jSv7gIxC4cHXl2Q",
+        "url": "https://www.youtube.com/channel/UCybiT6P8jSv7gIxC4cHXl2Q",
+        "unique_id": "UCybiT6P8jSv7gIxC4cHXl2Q"
+      }
+    ],
     "followers_x": 711000,
     "followers_instagram": 740000,
     "followers_facebook": 1100000,
@@ -1834,7 +2373,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118957"
+    "last_enriched": "2026-01-16T10:31:07.502974"
   },
   {
     "name": "Philadelphia Phillies",
@@ -1848,6 +2387,29 @@
     "geo_country": "US",
     "city_population": 1573916,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Phillies",
+        "url": "https://x.com/Phillies"
+      },
+      {
+        "platform": "instagram",
+        "handle": "phillies",
+        "url": "https://www.instagram.com/phillies/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Phillies",
+        "url": "https://www.facebook.com/Phillies/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCWkTX0S0Ii5pT2aRVz7Zctw",
+        "url": "https://www.youtube.com/channel/UCWkTX0S0Ii5pT2aRVz7Zctw",
+        "unique_id": "UCWkTX0S0Ii5pT2aRVz7Zctw"
+      }
+    ],
     "followers_x": 2000000,
     "followers_instagram": 1000000,
     "followers_facebook": 1700000,
@@ -1923,7 +2485,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118965"
+    "last_enriched": "2026-01-16T10:31:07.502975"
   },
   {
     "name": "Arizona Diamondbacks",
@@ -1937,6 +2499,29 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Dbacks",
+        "url": "https://x.com/Dbacks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dbacks",
+        "url": "https://www.instagram.com/dbacks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "D-backs",
+        "url": "https://www.facebook.com/D-backs/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCxeK534L7DDIwPFv_o9CZjw",
+        "url": "https://www.youtube.com/channel/UCxeK534L7DDIwPFv_o9CZjw",
+        "unique_id": "UCxeK534L7DDIwPFv_o9CZjw"
+      }
+    ],
     "followers_x": 598600,
     "followers_instagram": 696000,
     "followers_facebook": 843000,
@@ -2028,7 +2613,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118973"
+    "last_enriched": "2026-01-16T10:31:07.502976"
   },
   {
     "name": "Pittsburgh Pirates",
@@ -2042,6 +2627,29 @@
     "geo_country": "US",
     "city_population": 307668,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Pirates",
+        "url": "https://x.com/Pirates"
+      },
+      {
+        "platform": "instagram",
+        "handle": "pittsburghpirates",
+        "url": "https://www.instagram.com/pittsburghpirates/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Pirates",
+        "url": "https://www.facebook.com/Pirates/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCmBaK2wdmP1LZ9gLkkHiM4Q",
+        "url": "https://www.youtube.com/channel/UCmBaK2wdmP1LZ9gLkkHiM4Q",
+        "unique_id": "UCmBaK2wdmP1LZ9gLkkHiM4Q"
+      }
+    ],
     "followers_x": 789600,
     "followers_instagram": 867000,
     "followers_facebook": 1100000,
@@ -2107,7 +2715,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118981"
+    "last_enriched": "2026-01-16T10:31:07.502977"
   },
   {
     "name": "San Diego Padres",
@@ -2121,6 +2729,29 @@
     "geo_country": "US",
     "city_population": 1404452,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Padres",
+        "url": "https://x.com/Padres"
+      },
+      {
+        "platform": "instagram",
+        "handle": "padres",
+        "url": "https://www.instagram.com/padres/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Padres",
+        "url": "https://www.facebook.com/Padres/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCdhukF6o5_ENjbf_9oNGXNQ",
+        "url": "https://www.youtube.com/channel/UCdhukF6o5_ENjbf_9oNGXNQ",
+        "unique_id": "UCdhukF6o5_ENjbf_9oNGXNQ"
+      }
+    ],
     "followers_x": 693700,
     "followers_instagram": 2000000,
     "followers_facebook": 978000,
@@ -2186,7 +2817,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118990"
+    "last_enriched": "2026-01-16T10:31:07.502978"
   },
   {
     "name": "San Francisco Giants",
@@ -2200,6 +2831,29 @@
     "geo_country": "US",
     "city_population": 827526,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SFGiants",
+        "url": "https://x.com/SFGiants"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sfgiants",
+        "url": "https://www.instagram.com/sfgiants/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Giants",
+        "url": "https://www.facebook.com/Giants/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCpXMHgjrpnynDSV5mXpqImw",
+        "url": "https://www.youtube.com/channel/UCpXMHgjrpnynDSV5mXpqImw",
+        "unique_id": "UCpXMHgjrpnynDSV5mXpqImw"
+      }
+    ],
     "followers_x": 1500000,
     "followers_instagram": 2000000,
     "followers_facebook": 2700000,
@@ -2258,7 +2912,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.118999"
+    "last_enriched": "2026-01-16T10:31:07.502979"
   },
   {
     "name": "St. Louis Cardinals",
@@ -2272,6 +2926,29 @@
     "geo_country": "US",
     "city_population": 279695,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Cardinals",
+        "url": "https://x.com/Cardinals"
+      },
+      {
+        "platform": "instagram",
+        "handle": "cardinals",
+        "url": "https://www.instagram.com/cardinals/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Cardinals",
+        "url": "https://www.facebook.com/Cardinals/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCwaMqLYzbyp2IbFgcF_s5Og",
+        "url": "https://www.youtube.com/channel/UCwaMqLYzbyp2IbFgcF_s5Og",
+        "unique_id": "UCwaMqLYzbyp2IbFgcF_s5Og"
+      }
+    ],
     "followers_x": 1300000,
     "followers_instagram": 1000000,
     "followers_facebook": 2200000,
@@ -2341,7 +3018,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119008"
+    "last_enriched": "2026-01-16T10:31:07.502981"
   },
   {
     "name": "Washington Nationals",
@@ -2355,6 +3032,29 @@
     "geo_country": "US",
     "city_population": 702250,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Nationals",
+        "url": "https://x.com/Nationals"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nationals",
+        "url": "https://www.instagram.com/nationals/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Nationals",
+        "url": "https://www.facebook.com/Nationals/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCUnB3WNX238eraj5IK3fFEw",
+        "url": "https://www.youtube.com/channel/UCUnB3WNX238eraj5IK3fFEw",
+        "unique_id": "UCUnB3WNX238eraj5IK3fFEw"
+      }
+    ],
     "followers_x": 734600,
     "followers_instagram": 728000,
     "followers_facebook": 712000,
@@ -2429,7 +3129,7 @@
       "valuation",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119017"
+    "last_enriched": "2026-01-16T10:31:07.502982"
   },
   {
     "name": "Kane County Cougars",
@@ -2443,6 +3143,23 @@
     "geo_country": "US",
     "city_population": 4106,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "KCCougars",
+        "url": "https://x.com/KCCougars"
+      },
+      {
+        "platform": "instagram",
+        "handle": "kccougars",
+        "url": "https://www.instagram.com/kccougars/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "kanecountycougars",
+        "url": "https://www.facebook.com/kanecountycougars/"
+      }
+    ],
     "followers_x": 16800,
     "followers_instagram": 17000,
     "followers_facebook": 55000,
@@ -2464,7 +3181,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119025"
+    "last_enriched": "2026-01-16T10:31:07.502983"
   },
   {
     "name": "Akron RubberDucks",
@@ -2478,6 +3195,33 @@
     "geo_country": "US",
     "city_population": 189664,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "AkronRubberDuck",
+        "url": "https://x.com/AkronRubberDuck"
+      },
+      {
+        "platform": "instagram",
+        "handle": "akronrubberducks",
+        "url": "https://www.instagram.com/akronrubberducks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "AkronRubberDucks",
+        "url": "https://www.facebook.com/AkronRubberDucks/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "akronrubberducks",
+        "url": "https://www.tiktok.com/@akronrubberducks"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 49900,
     "followers_instagram": 40000,
     "followers_facebook": 70000,
@@ -2528,7 +3272,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119033"
+    "last_enriched": "2026-01-16T10:31:07.502984"
   },
   {
     "name": "Altoona Curve",
@@ -2542,6 +3286,33 @@
     "geo_country": "US",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "AltoonaCurve",
+        "url": "https://x.com/AltoonaCurve"
+      },
+      {
+        "platform": "instagram",
+        "handle": "altoonacurve",
+        "url": "https://www.instagram.com/altoonacurve/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "AltoonaCurveBaseball",
+        "url": "https://www.facebook.com/AltoonaCurveBaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "altoonacurve",
+        "url": "https://www.tiktok.com/@altoonacurve"
+      },
+      {
+        "platform": "youtube",
+        "handle": "AltoonaCurveBaseball",
+        "url": "https://www.youtube.com/@AltoonaCurveBaseball"
+      }
+    ],
     "followers_x": 25900,
     "followers_instagram": 34000,
     "followers_facebook": 62000,
@@ -2593,7 +3364,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119042"
+    "last_enriched": "2026-01-16T10:31:07.502985"
   },
   {
     "name": "Binghamton Rumble Ponies",
@@ -2607,6 +3378,29 @@
     "geo_country": "US",
     "city_population": 46773,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RumblePoniesBB",
+        "url": "https://x.com/RumblePoniesBB"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rumbleponiesbb",
+        "url": "https://www.instagram.com/rumbleponiesbb/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "RumblePoniesBB",
+        "url": "https://www.facebook.com/RumblePoniesBB/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCb6K4qW94b1x6yp4OQute6A",
+        "url": "https://www.youtube.com/channel/UCb6K4qW94b1x6yp4OQute6A",
+        "unique_id": "UCb6K4qW94b1x6yp4OQute6A"
+      }
+    ],
     "followers_x": 31700,
     "followers_instagram": 27000,
     "followers_facebook": 41000,
@@ -2666,7 +3460,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119050"
+    "last_enriched": "2026-01-16T10:31:07.502986"
   },
   {
     "name": "Chesapeake Baysox",
@@ -2680,6 +3474,33 @@
     "geo_country": "US",
     "city_population": 58421,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BowieBaysox",
+        "url": "https://x.com/BowieBaysox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bowiebaysox",
+        "url": "https://www.instagram.com/bowiebaysox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BowieBaysox",
+        "url": "https://www.facebook.com/BowieBaysox/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "baysoxofficial",
+        "url": "https://www.tiktok.com/@baysoxofficial"
+      },
+      {
+        "platform": "youtube",
+        "handle": "BaysoxOfficial",
+        "url": "https://www.youtube.com/@BaysoxOfficial"
+      }
+    ],
     "followers_x": 91,
     "followers_instagram": null,
     "followers_facebook": 73,
@@ -2746,7 +3567,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119058"
+    "last_enriched": "2026-01-16T10:31:07.502987"
   },
   {
     "name": "Somerset Patriots",
@@ -2760,6 +3581,18 @@
     "geo_country": "US",
     "city_population": 7697,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SOMPatriots",
+        "url": "https://x.com/SOMPatriots"
+      },
+      {
+        "platform": "instagram",
+        "handle": "somersetpatriots",
+        "url": "https://www.instagram.com/somersetpatriots/"
+      }
+    ],
     "followers_x": 37200,
     "followers_instagram": 65000,
     "followers_facebook": null,
@@ -2782,7 +3615,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119070"
+    "last_enriched": "2026-01-16T10:31:07.502988"
   },
   {
     "name": "Erie SeaWolves",
@@ -2796,6 +3629,23 @@
     "geo_country": "US",
     "city_population": 92940,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "erie_seawolves",
+        "url": "https://x.com/erie_seawolves"
+      },
+      {
+        "platform": "instagram",
+        "handle": "erieseawolves",
+        "url": "https://www.instagram.com/erieseawolves/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "seawolvesfans",
+        "url": "https://www.facebook.com/seawolvesfans/"
+      }
+    ],
     "followers_x": 29200,
     "followers_instagram": 17000,
     "followers_facebook": 33000,
@@ -2866,7 +3716,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119077"
+    "last_enriched": "2026-01-16T10:31:07.502989"
   },
   {
     "name": "Harrisburg Senators",
@@ -2880,6 +3730,28 @@
     "geo_country": "US",
     "city_population": 50649,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "HbgSenators",
+        "url": "https://x.com/HbgSenators"
+      },
+      {
+        "platform": "instagram",
+        "handle": "senatorsbaseball",
+        "url": "https://www.instagram.com/senatorsbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "senatorsbaseball",
+        "url": "https://www.facebook.com/senatorsbaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 22500,
     "followers_instagram": 19000,
     "followers_facebook": 41000,
@@ -2917,7 +3789,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119085"
+    "last_enriched": "2026-01-16T10:31:07.502990"
   },
   {
     "name": "Hartford Yard Goats",
@@ -2931,6 +3803,33 @@
     "geo_country": "US",
     "city_population": 122129,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoYardGoats",
+        "url": "https://x.com/GoYardGoats"
+      },
+      {
+        "platform": "instagram",
+        "handle": "hartfordyardgoats",
+        "url": "https://www.instagram.com/hartfordyardgoats/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "hartfordyardgoats",
+        "url": "https://www.facebook.com/hartfordyardgoats/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "hartfordyardgoats",
+        "url": "https://www.tiktok.com/@hartfordyardgoats"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 41400,
     "followers_instagram": 56000,
     "followers_facebook": 55000,
@@ -3014,7 +3913,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119093"
+    "last_enriched": "2026-01-16T10:31:07.502991"
   },
   {
     "name": "New Hampshire Fisher Cats",
@@ -3028,6 +3927,13 @@
     "geo_country": "US",
     "city_population": 116386,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "FisherCats",
+        "url": "https://x.com/FisherCats"
+      }
+    ],
     "followers_x": 29000,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -3049,7 +3955,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119100"
+    "last_enriched": "2026-01-16T10:31:07.502992"
   },
   {
     "name": "Portland Sea Dogs",
@@ -3063,6 +3969,33 @@
     "geo_country": "US",
     "city_population": 635749,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "PortlandSeaDogs",
+        "url": "https://x.com/PortlandSeaDogs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "portland_seadogs",
+        "url": "https://www.instagram.com/portland_seadogs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "portlandseadogs",
+        "url": "https://www.facebook.com/portlandseadogs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "portlandseadogs",
+        "url": "https://www.tiktok.com/@portlandseadogs"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 50600,
     "followers_instagram": 63000,
     "followers_facebook": 88000,
@@ -3123,7 +4056,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119108"
+    "last_enriched": "2026-01-16T10:31:07.502993"
   },
   {
     "name": "Reading Fightin Phils",
@@ -3137,6 +4070,28 @@
     "geo_country": "US",
     "city_population": 96000,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ReadingFightins",
+        "url": "https://x.com/ReadingFightins"
+      },
+      {
+        "platform": "instagram",
+        "handle": "fightins",
+        "url": "https://www.instagram.com/fightins/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Fightins",
+        "url": "https://www.facebook.com/Fightins/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "ReadingPhillies",
+        "url": "https://www.youtube.com/@ReadingPhillies"
+      }
+    ],
     "followers_x": 41300,
     "followers_instagram": 47000,
     "followers_facebook": 77000,
@@ -3195,7 +4150,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119115"
+    "last_enriched": "2026-01-16T10:31:07.502994"
   },
   {
     "name": "Richmond Flying Squirrels",
@@ -3209,6 +4164,28 @@
     "geo_country": "US",
     "city_population": 233655,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoSquirrels",
+        "url": "https://x.com/GoSquirrels"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gosquirrels",
+        "url": "https://www.instagram.com/gosquirrels/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "FlyingSquirrelsBaseball",
+        "url": "https://www.facebook.com/FlyingSquirrelsBaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "RichmondSquirrels",
+        "url": "https://www.youtube.com/@RichmondSquirrels"
+      }
+    ],
     "followers_x": 45700,
     "followers_instagram": 42000,
     "followers_facebook": 60000,
@@ -3271,7 +4248,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119123"
+    "last_enriched": "2026-01-16T10:31:07.502995"
   },
   {
     "name": "Biloxi Shuckers",
@@ -3285,6 +4262,29 @@
     "geo_country": "US",
     "city_population": 48144,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BiloxiShuckers",
+        "url": "https://x.com/BiloxiShuckers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "officialbiloxishuckers",
+        "url": "https://www.instagram.com/officialbiloxishuckers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BiloxiShuckers",
+        "url": "https://www.facebook.com/BiloxiShuckers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCr0R517SgRbzFsCWlt5KNcQ",
+        "url": "https://www.youtube.com/channel/UCr0R517SgRbzFsCWlt5KNcQ",
+        "unique_id": "UCr0R517SgRbzFsCWlt5KNcQ"
+      }
+    ],
     "followers_x": 21200,
     "followers_instagram": 26000,
     "followers_facebook": 53000,
@@ -3322,7 +4322,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119130"
+    "last_enriched": "2026-01-16T10:31:07.502996"
   },
   {
     "name": "Birmingham Barons",
@@ -3336,6 +4336,29 @@
     "geo_country": "US",
     "city_population": 196357,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BhamBarons",
+        "url": "https://x.com/BhamBarons"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bhambarons",
+        "url": "https://www.instagram.com/bhambarons/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BirminghamBarons",
+        "url": "https://www.facebook.com/BirminghamBarons/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC-KsMuJoyExY9-24ogw0YgQ",
+        "url": "https://www.youtube.com/channel/UC-KsMuJoyExY9-24ogw0YgQ",
+        "unique_id": "UC-KsMuJoyExY9-24ogw0YgQ"
+      }
+    ],
     "followers_x": 53400,
     "followers_instagram": 50000,
     "followers_facebook": 78000,
@@ -3364,7 +4387,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119138"
+    "last_enriched": "2026-01-16T10:31:07.502997"
   },
   {
     "name": "Chattanooga Lookouts",
@@ -3378,6 +4401,28 @@
     "geo_country": "US",
     "city_population": 191496,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ChattLookouts",
+        "url": "https://x.com/ChattLookouts"
+      },
+      {
+        "platform": "instagram",
+        "handle": "chattlookouts",
+        "url": "https://www.instagram.com/chattlookouts/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ChattanoogaLookouts",
+        "url": "https://www.facebook.com/ChattanoogaLookouts/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 45400,
     "followers_instagram": 40000,
     "followers_facebook": 56000,
@@ -3402,7 +4447,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119146"
+    "last_enriched": "2026-01-16T10:31:07.502998"
   },
   {
     "name": "Columbus Clingstones",
@@ -3416,6 +4461,28 @@
     "geo_country": "US",
     "city_population": 933263,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "CLBClippers",
+        "url": "https://x.com/CLBClippers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "clbclippers",
+        "url": "https://www.instagram.com/clbclippers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "clippersbaseball",
+        "url": "https://www.facebook.com/clippersbaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 53900,
     "followers_instagram": 47000,
     "followers_facebook": 65000,
@@ -3566,7 +4633,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119153"
+    "last_enriched": "2026-01-16T10:31:07.502999"
   },
   {
     "name": "Knoxville Smokies",
@@ -3580,6 +4647,34 @@
     "geo_country": "US",
     "city_population": 198722,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "smokiesbaseball",
+        "url": "https://x.com/smokiesbaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "smokiesbaseball",
+        "url": "https://www.instagram.com/smokiesbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SmokiesBaseball",
+        "url": "https://www.facebook.com/SmokiesBaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "smokiesbaseball",
+        "url": "https://www.tiktok.com/@smokiesbaseball"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCQ5HBWbe_N57Z5BEJQna1-g",
+        "url": "https://www.youtube.com/channel/UCQ5HBWbe_N57Z5BEJQna1-g",
+        "unique_id": "UCQ5HBWbe_N57Z5BEJQna1-g"
+      }
+    ],
     "followers_x": 49100,
     "followers_instagram": 53000,
     "followers_facebook": 94000,
@@ -3651,7 +4746,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119160"
+    "last_enriched": "2026-01-16T10:31:07.503000"
   },
   {
     "name": "Rocket City Trash Pandas",
@@ -3665,6 +4760,13 @@
     "geo_country": "US",
     "city_population": 285300,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "trashpandas",
+        "url": "https://x.com/trashpandas"
+      }
+    ],
     "followers_x": 49700,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -3687,7 +4789,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119167"
+    "last_enriched": "2026-01-16T10:31:07.503001"
   },
   {
     "name": "Montgomery Biscuits",
@@ -3701,6 +4803,28 @@
     "geo_country": "US",
     "city_population": 195818,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BiscuitBaseball",
+        "url": "https://x.com/BiscuitBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "biscuitbaseball",
+        "url": "https://www.instagram.com/biscuitbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "MontgomeryBiscuits",
+        "url": "https://www.facebook.com/MontgomeryBiscuits/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 21500,
     "followers_instagram": 22000,
     "followers_facebook": 59000,
@@ -3732,7 +4856,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:33:47.119174"
+    "last_enriched": "2026-01-16T10:31:07.503002"
   },
   {
     "name": "Mississippi Braves",
@@ -3746,6 +4870,23 @@
     "geo_country": "US",
     "city_population": 141449,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "mbraves",
+        "url": "https://x.com/mbraves"
+      },
+      {
+        "platform": "instagram",
+        "handle": "mbraves",
+        "url": "https://www.instagram.com/mbraves/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "mbraves",
+        "url": "https://www.facebook.com/mbraves/"
+      }
+    ],
     "followers_x": 38800,
     "followers_instagram": 37000,
     "followers_facebook": 47000,
@@ -3768,7 +4909,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154458"
+    "last_enriched": "2026-01-16T10:32:54.846352"
   },
   {
     "name": "Pensacola Blue Wahoos",
@@ -3782,6 +4923,28 @@
     "geo_country": "US",
     "city_population": 53898,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BlueWahoosBBall",
+        "url": "https://x.com/BlueWahoosBBall"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bluewahoosbball",
+        "url": "https://www.instagram.com/bluewahoosbball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BlueWahoosBaseball",
+        "url": "https://www.facebook.com/BlueWahoosBaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 44500,
     "followers_instagram": 39000,
     "followers_facebook": 91000,
@@ -3864,7 +5027,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154487"
+    "last_enriched": "2026-01-16T10:32:54.846373"
   },
   {
     "name": "Amarillo Sod Poodles",
@@ -3878,6 +5041,33 @@
     "geo_country": "US",
     "city_population": 203729,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "sodpoodles",
+        "url": "https://x.com/sodpoodles"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sodpoodles",
+        "url": "https://www.instagram.com/sodpoodles/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "sodpoodles",
+        "url": "https://www.facebook.com/sodpoodles/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "sodpoodles",
+        "url": "https://www.tiktok.com/@sodpoodles"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 17500,
     "followers_instagram": 36000,
     "followers_facebook": 51000,
@@ -3917,7 +5107,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154493"
+    "last_enriched": "2026-01-16T10:32:54.846375"
   },
   {
     "name": "Corpus Christi Hooks",
@@ -3931,6 +5121,33 @@
     "geo_country": "US",
     "city_population": 317317,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "cchooks",
+        "url": "https://x.com/cchooks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "cchooks",
+        "url": "https://www.instagram.com/cchooks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "cchooks",
+        "url": "https://www.facebook.com/cchooks/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "cchooks",
+        "url": "https://www.tiktok.com/@cchooks"
+      },
+      {
+        "platform": "youtube",
+        "handle": "cchookstv",
+        "url": "https://www.youtube.com/@cchookstv"
+      }
+    ],
     "followers_x": 51800,
     "followers_instagram": 60000,
     "followers_facebook": 96000,
@@ -3992,7 +5209,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154499"
+    "last_enriched": "2026-01-16T10:32:54.846377"
   },
   {
     "name": "Frisco RoughRiders",
@@ -4006,6 +5223,29 @@
     "geo_country": "US",
     "city_population": 235208,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RidersBaseball",
+        "url": "https://x.com/RidersBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "friscoroughriders",
+        "url": "https://www.instagram.com/friscoroughriders/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ridersbaseball",
+        "url": "https://www.facebook.com/ridersbaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCLq9GVTKZlgNausuOuLn6pA",
+        "url": "https://www.youtube.com/channel/UCLq9GVTKZlgNausuOuLn6pA",
+        "unique_id": "UCLq9GVTKZlgNausuOuLn6pA"
+      }
+    ],
     "followers_x": 40500,
     "followers_instagram": 54000,
     "followers_facebook": 60000,
@@ -4052,7 +5292,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154504"
+    "last_enriched": "2026-01-16T10:32:54.846379"
   },
   {
     "name": "Midland RockHounds",
@@ -4066,6 +5306,23 @@
     "geo_country": "US",
     "city_population": 143687,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RockHounds",
+        "url": "https://x.com/RockHounds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "midlandrockhounds",
+        "url": "https://www.instagram.com/midlandrockhounds/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "midland.rockhounds",
+        "url": "https://www.facebook.com/midland.rockhounds/"
+      }
+    ],
     "followers_x": 13000,
     "followers_instagram": 13000,
     "followers_facebook": 36000,
@@ -4126,7 +5383,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154510"
+    "last_enriched": "2026-01-16T10:32:54.846381"
   },
   {
     "name": "Arkansas Travelers",
@@ -4140,6 +5397,13 @@
     "geo_country": "US",
     "city_population": 204774,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "artravs",
+        "url": "https://www.instagram.com/artravs/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 22000,
     "followers_facebook": null,
@@ -4162,7 +5426,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154515"
+    "last_enriched": "2026-01-16T10:32:54.846383"
   },
   {
     "name": "San Antonio Missions",
@@ -4176,6 +5440,28 @@
     "geo_country": "US",
     "city_population": 1526656,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "missionsmilb",
+        "url": "https://x.com/missionsmilb"
+      },
+      {
+        "platform": "instagram",
+        "handle": "samissions",
+        "url": "https://www.instagram.com/samissions/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "samissions",
+        "url": "https://www.facebook.com/samissions/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 26900,
     "followers_instagram": 33000,
     "followers_facebook": 85000,
@@ -4200,7 +5486,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154521"
+    "last_enriched": "2026-01-16T10:32:54.846385"
   },
   {
     "name": "Northwest Arkansas Naturals",
@@ -4214,6 +5500,7 @@
     "geo_country": "US",
     "city_population": 89368,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -4248,6 +5535,34 @@
     "geo_country": "US",
     "city_population": 154888,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Sgf_Cardinals",
+        "url": "https://x.com/Sgf_Cardinals"
+      },
+      {
+        "platform": "instagram",
+        "handle": "springfield_cardinals",
+        "url": "https://www.instagram.com/springfield_cardinals/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SpringfieldCardinalsBaseball",
+        "url": "https://www.facebook.com/SpringfieldCardinalsBaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "springfieldcardinals",
+        "url": "https://www.tiktok.com/@springfieldcardinals"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCs3GD9vWLBygnre6aRUgGiw",
+        "url": "https://www.youtube.com/channel/UCs3GD9vWLBygnre6aRUgGiw",
+        "unique_id": "UCs3GD9vWLBygnre6aRUgGiw"
+      }
+    ],
     "followers_x": 53600,
     "followers_instagram": 54000,
     "followers_facebook": 105000,
@@ -4286,7 +5601,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154526"
+    "last_enriched": "2026-01-16T10:32:54.846386"
   },
   {
     "name": "Tulsa Drillers",
@@ -4300,6 +5615,33 @@
     "geo_country": "US",
     "city_population": 415154,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "TulsaDrillers",
+        "url": "https://x.com/TulsaDrillers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "tulsadrillers",
+        "url": "https://www.instagram.com/tulsadrillers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "tulsadrillers",
+        "url": "https://www.facebook.com/tulsadrillers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "tulsadrillers",
+        "url": "https://www.tiktok.com/@tulsadrillers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 38500,
     "followers_instagram": 45000,
     "followers_facebook": 94000,
@@ -4339,7 +5681,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154531"
+    "last_enriched": "2026-01-16T10:32:54.846388"
   },
   {
     "name": "Wichita Wind Surge",
@@ -4353,6 +5695,28 @@
     "geo_country": "US",
     "city_population": 400991,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "windsurgeict",
+        "url": "https://x.com/windsurgeict"
+      },
+      {
+        "platform": "instagram",
+        "handle": "windsurgeict",
+        "url": "https://www.instagram.com/windsurgeict/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "windsurgeict",
+        "url": "https://www.facebook.com/windsurgeict/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 16100,
     "followers_instagram": 20000,
     "followers_facebook": 32000,
@@ -4391,7 +5755,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154535"
+    "last_enriched": "2026-01-16T10:32:54.846390"
   },
   {
     "name": "Wisconsin Timber Rattlers",
@@ -4405,6 +5769,13 @@
     "geo_country": "US",
     "city_population": 75344,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "witimberrattlers",
+        "url": "https://www.instagram.com/witimberrattlers/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 32000,
     "followers_facebook": null,
@@ -4427,7 +5798,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154540"
+    "last_enriched": "2026-01-16T10:32:54.846392"
   },
   {
     "name": "Beloit Sky Carp",
@@ -4441,6 +5812,28 @@
     "geo_country": "US",
     "city_population": 36633,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "beloitskycarp",
+        "url": "https://x.com/beloitskycarp"
+      },
+      {
+        "platform": "instagram",
+        "handle": "beloitskycarp",
+        "url": "https://www.instagram.com/beloitskycarp/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SkyCarpBaseball",
+        "url": "https://www.facebook.com/SkyCarpBaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 11600,
     "followers_instagram": 10000,
     "followers_facebook": 26000,
@@ -4490,7 +5883,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154544"
+    "last_enriched": "2026-01-16T10:32:54.846393"
   },
   {
     "name": "Cedar Rapids Kernels",
@@ -4504,6 +5897,29 @@
     "geo_country": "US",
     "city_population": 137904,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "CRKernels",
+        "url": "https://x.com/CRKernels"
+      },
+      {
+        "platform": "instagram",
+        "handle": "crkernels",
+        "url": "https://www.instagram.com/crkernels/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "CedarRapidsKernels",
+        "url": "https://www.facebook.com/CedarRapidsKernels/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC0Ch9PvdTNdaPbz79enE1yA",
+        "url": "https://www.youtube.com/channel/UC0Ch9PvdTNdaPbz79enE1yA",
+        "unique_id": "UC0Ch9PvdTNdaPbz79enE1yA"
+      }
+    ],
     "followers_x": 16400,
     "followers_instagram": 13000,
     "followers_facebook": 30000,
@@ -4610,7 +6026,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154549"
+    "last_enriched": "2026-01-16T10:32:54.846395"
   },
   {
     "name": "West Michigan Whitecaps",
@@ -4624,6 +6040,23 @@
     "geo_country": "US",
     "city_population": 200117,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "wmwhitecaps",
+        "url": "https://x.com/wmwhitecaps"
+      },
+      {
+        "platform": "instagram",
+        "handle": "whitecaps",
+        "url": "https://www.instagram.com/whitecaps/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "wmwcaps",
+        "url": "https://www.facebook.com/wmwcaps/"
+      }
+    ],
     "followers_x": 30600,
     "followers_instagram": 35000,
     "followers_facebook": 84000,
@@ -4646,7 +6079,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154553"
+    "last_enriched": "2026-01-16T10:32:54.846397"
   },
   {
     "name": "Quad Cities River Bandits",
@@ -4660,6 +6093,29 @@
     "geo_country": "US",
     "city_population": 100938,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "QCRiverBandits",
+        "url": "https://x.com/QCRiverBandits"
+      },
+      {
+        "platform": "instagram",
+        "handle": "qcriverbandits",
+        "url": "https://www.instagram.com/qcriverbandits/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Jeffersoncountybaseball",
+        "url": "https://www.facebook.com/Jeffersoncountybaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCbudXSpR0c2scmUeoTb-jIw",
+        "url": "https://www.youtube.com/channel/UCbudXSpR0c2scmUeoTb-jIw",
+        "unique_id": "UCbudXSpR0c2scmUeoTb-jIw"
+      }
+    ],
     "followers_x": 18800,
     "followers_instagram": 13000,
     "followers_facebook": null,
@@ -4681,7 +6137,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154557"
+    "last_enriched": "2026-01-16T10:32:54.846398"
   },
   {
     "name": "Dayton Dragons",
@@ -4695,6 +6151,28 @@
     "geo_country": "US",
     "city_population": 136346,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "DragonsBaseball",
+        "url": "https://x.com/DragonsBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dragonsbaseball",
+        "url": "https://www.instagram.com/dragonsbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "dragonsbaseball",
+        "url": "https://www.facebook.com/dragonsbaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "dragonsbaseball",
+        "url": "https://www.tiktok.com/@dragonsbaseball"
+      }
+    ],
     "followers_x": 24400,
     "followers_instagram": 32000,
     "followers_facebook": 65000,
@@ -4738,7 +6216,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154562"
+    "last_enriched": "2026-01-16T10:32:54.846400"
   },
   {
     "name": "Lake County Captains",
@@ -4752,6 +6230,23 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LCCaptains",
+        "url": "https://x.com/LCCaptains"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lccaptains",
+        "url": "https://www.instagram.com/lccaptains/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "captainsbaseball",
+        "url": "https://www.facebook.com/captainsbaseball/"
+      }
+    ],
     "followers_x": 26500,
     "followers_instagram": 28000,
     "followers_facebook": 42000,
@@ -4773,7 +6268,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154567"
+    "last_enriched": "2026-01-16T10:32:54.846401"
   },
   {
     "name": "Fort Wayne TinCaps",
@@ -4787,6 +6282,28 @@
     "geo_country": "US",
     "city_population": 273203,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "TinCaps",
+        "url": "https://x.com/TinCaps"
+      },
+      {
+        "platform": "instagram",
+        "handle": "tincaps",
+        "url": "https://www.instagram.com/tincaps/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "tincaps",
+        "url": "https://www.facebook.com/tincaps/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "TheTincaps",
+        "url": "https://www.youtube.com/@TheTincaps"
+      }
+    ],
     "followers_x": 48600,
     "followers_instagram": 37000,
     "followers_facebook": 97000,
@@ -4826,7 +6343,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154571"
+    "last_enriched": "2026-01-16T10:32:54.846403"
   },
   {
     "name": "Lansing Lugnuts",
@@ -4840,6 +6357,28 @@
     "geo_country": "US",
     "city_population": 114336,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LansingLugnuts",
+        "url": "https://x.com/LansingLugnuts"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lansinglugnuts",
+        "url": "https://www.instagram.com/lansinglugnuts/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "lansinglugnuts",
+        "url": "https://www.facebook.com/lansinglugnuts/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 18200,
     "followers_instagram": 18000,
     "followers_facebook": 64000,
@@ -4880,7 +6419,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154576"
+    "last_enriched": "2026-01-16T10:32:54.846405"
   },
   {
     "name": "Great Lakes Loons",
@@ -4894,6 +6433,34 @@
     "geo_country": "US",
     "city_population": 143687,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RockHounds",
+        "url": "https://x.com/RockHounds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "midlandrockhounds",
+        "url": "https://www.instagram.com/midlandrockhounds/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "midland.rockhounds",
+        "url": "https://www.facebook.com/midland.rockhounds/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "midlandrockhounds",
+        "url": "https://www.tiktok.com/@midlandrockhounds"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCsGcOMpr93ISYg2-WdrVseg",
+        "url": "https://www.youtube.com/channel/UCsGcOMpr93ISYg2-WdrVseg",
+        "unique_id": "UCsGcOMpr93ISYg2-WdrVseg"
+      }
+    ],
     "followers_x": 13000,
     "followers_instagram": 13000,
     "followers_facebook": 36000,
@@ -4954,7 +6521,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154581"
+    "last_enriched": "2026-01-16T10:32:54.846407"
   },
   {
     "name": "Peoria Chiefs",
@@ -4968,6 +6535,33 @@
     "geo_country": "US",
     "city_population": 48224,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "peoriachiefs",
+        "url": "https://x.com/peoriachiefs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "peoriachiefs",
+        "url": "https://www.instagram.com/peoriachiefs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "PeoriaChiefs",
+        "url": "https://www.facebook.com/PeoriaChiefs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "peoriachiefs",
+        "url": "https://www.tiktok.com/@peoriachiefs"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 23900,
     "followers_instagram": 18000,
     "followers_facebook": 40000,
@@ -5001,7 +6595,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154586"
+    "last_enriched": "2026-01-16T10:32:54.846410"
   },
   {
     "name": "South Bend Cubs",
@@ -5015,6 +6609,28 @@
     "geo_country": "US",
     "city_population": 103713,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SBCubs",
+        "url": "https://x.com/SBCubs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sbcubs",
+        "url": "https://www.instagram.com/sbcubs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SouthBendCubs",
+        "url": "https://www.facebook.com/SouthBendCubs/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "SouthBendCubbies",
+        "url": "https://www.youtube.com/@SouthBendCubbies"
+      }
+    ],
     "followers_x": 53400,
     "followers_instagram": 36000,
     "followers_facebook": 74000,
@@ -5060,7 +6676,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154590"
+    "last_enriched": "2026-01-16T10:32:54.846412"
   },
   {
     "name": "Eugene Emeralds",
@@ -5074,6 +6690,33 @@
     "geo_country": "US",
     "city_population": 178786,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "EugeneEmeralds",
+        "url": "https://x.com/EugeneEmeralds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "eugeneemeralds",
+        "url": "https://www.instagram.com/eugeneemeralds/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "eugeneemeraldsfanpage",
+        "url": "https://www.facebook.com/eugeneemeraldsfanpage/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "goemeralds",
+        "url": "https://www.tiktok.com/@goemeralds"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 18300,
     "followers_instagram": 18000,
     "followers_facebook": 29000,
@@ -5114,7 +6757,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154595"
+    "last_enriched": "2026-01-16T10:32:54.846413"
   },
   {
     "name": "Everett AquaSox",
@@ -5128,6 +6771,33 @@
     "geo_country": "US",
     "city_population": 113011,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "EverettAquaSox",
+        "url": "https://x.com/EverettAquaSox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "everettaquasox",
+        "url": "https://www.instagram.com/everettaquasox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "EverettAquaSox",
+        "url": "https://www.facebook.com/EverettAquaSox/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "everettaquasox",
+        "url": "https://www.tiktok.com/@everettaquasox"
+      },
+      {
+        "platform": "youtube",
+        "handle": "EverettAquaSoxBaseballClub",
+        "url": "https://www.youtube.com/@EverettAquaSoxBaseballClub"
+      }
+    ],
     "followers_x": 20600,
     "followers_instagram": 26000,
     "followers_facebook": 27000,
@@ -5178,7 +6848,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154600"
+    "last_enriched": "2026-01-16T10:32:54.846415"
   },
   {
     "name": "Hillsboro Hops",
@@ -5192,6 +6862,29 @@
     "geo_country": "US",
     "city_population": 110337,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "HillsboroHops",
+        "url": "https://x.com/HillsboroHops"
+      },
+      {
+        "platform": "instagram",
+        "handle": "hillsborohops",
+        "url": "https://www.instagram.com/hillsborohops/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "HillsboroHops",
+        "url": "https://www.facebook.com/HillsboroHops/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC85qZqCq-1L8Q4jwPw391Qw",
+        "url": "https://www.youtube.com/channel/UC85qZqCq-1L8Q4jwPw391Qw",
+        "unique_id": "UC85qZqCq-1L8Q4jwPw391Qw"
+      }
+    ],
     "followers_x": 18500,
     "followers_instagram": 35000,
     "followers_facebook": 31000,
@@ -5226,7 +6919,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154604"
+    "last_enriched": "2026-01-16T10:32:54.846417"
   },
   {
     "name": "Tri-City Dust Devils",
@@ -5240,6 +6933,13 @@
     "geo_country": "US",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "TC_DustDevils",
+        "url": "https://x.com/TC_DustDevils"
+      }
+    ],
     "followers_x": 7338,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -5262,7 +6962,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154609"
+    "last_enriched": "2026-01-16T10:32:54.846419"
   },
   {
     "name": "Spokane Indians",
@@ -5276,6 +6976,34 @@
     "geo_country": "US",
     "city_population": 230609,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "spokaneindiansbaseball",
+        "url": "https://www.instagram.com/spokaneindiansbaseball/"
+      },
+      {
+        "platform": "x",
+        "handle": "merchant_balcheck",
+        "url": "https://x.com/merchant_balcheck"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SpokaneIndians",
+        "url": "https://www.facebook.com/SpokaneIndians/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "spokaneindians",
+        "url": "https://www.tiktok.com/@spokaneindians"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCO_MKoaoYYWcsZX2Fgaetzw",
+        "url": "https://www.youtube.com/channel/UCO_MKoaoYYWcsZX2Fgaetzw",
+        "unique_id": "UCO_MKoaoYYWcsZX2Fgaetzw"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 28000,
     "followers_facebook": 47000,
@@ -5344,7 +7072,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154613"
+    "last_enriched": "2026-01-16T10:32:54.846420"
   },
   {
     "name": "Vancouver Canadians",
@@ -5358,6 +7086,23 @@
     "geo_country": "CA",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "vancanadians",
+        "url": "https://x.com/vancanadians"
+      },
+      {
+        "platform": "instagram",
+        "handle": "vancanadians",
+        "url": "https://www.instagram.com/vancanadians/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "vancanadians",
+        "url": "https://www.facebook.com/vancanadians/"
+      }
+    ],
     "followers_x": 30700,
     "followers_instagram": 43000,
     "followers_facebook": 26000,
@@ -5455,7 +7200,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154618"
+    "last_enriched": "2026-01-16T10:32:54.846422"
   },
   {
     "name": "Asheville Tourists",
@@ -5469,6 +7214,28 @@
     "geo_country": "US",
     "city_population": 94992,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoTourists",
+        "url": "https://x.com/GoTourists"
+      },
+      {
+        "platform": "instagram",
+        "handle": "ashevilletourists",
+        "url": "https://www.instagram.com/ashevilletourists/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ashevilletourists",
+        "url": "https://www.facebook.com/ashevilletourists/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 18200,
     "followers_instagram": 23000,
     "followers_facebook": 38000,
@@ -5490,7 +7257,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154622"
+    "last_enriched": "2026-01-16T10:32:54.846424"
   },
   {
     "name": "Bowling Green Hot Rods",
@@ -5504,6 +7271,34 @@
     "geo_country": "US",
     "city_population": 79076,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BGHotRods",
+        "url": "https://x.com/BGHotRods"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bg_hotrods",
+        "url": "https://www.instagram.com/bg_hotrods/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "bghotrods",
+        "url": "https://www.facebook.com/bghotrods/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "bghotrods",
+        "url": "https://www.tiktok.com/@bghotrods"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCa7ZdNSJIbUKqhAmLrLtrIQ",
+        "url": "https://www.youtube.com/channel/UCa7ZdNSJIbUKqhAmLrLtrIQ",
+        "unique_id": "UCa7ZdNSJIbUKqhAmLrLtrIQ"
+      }
+    ],
     "followers_x": 15800,
     "followers_instagram": 17000,
     "followers_facebook": null,
@@ -5541,7 +7336,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154626"
+    "last_enriched": "2026-01-16T10:32:54.846426"
   },
   {
     "name": "Brooklyn Cyclones",
@@ -5555,6 +7350,23 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BKCyclones",
+        "url": "https://x.com/BKCyclones"
+      },
+      {
+        "platform": "instagram",
+        "handle": "brooklyncyclones",
+        "url": "https://www.instagram.com/brooklyncyclones/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BrooklynCyclones",
+        "url": "https://www.facebook.com/BrooklynCyclones/"
+      }
+    ],
     "followers_x": 37600,
     "followers_instagram": 56000,
     "followers_facebook": 72000,
@@ -5597,7 +7409,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154631"
+    "last_enriched": "2026-01-16T10:32:54.846427"
   },
   {
     "name": "Frederick Keys",
@@ -5611,6 +7423,33 @@
     "geo_country": "US",
     "city_population": 89537,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "FrederickKeys",
+        "url": "https://x.com/FrederickKeys"
+      },
+      {
+        "platform": "instagram",
+        "handle": "frederickkeys",
+        "url": "https://www.instagram.com/frederickkeys/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "FrederickKeys",
+        "url": "https://www.facebook.com/FrederickKeys/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "frederickkeysbaseball",
+        "url": "https://www.tiktok.com/@frederickkeysbaseball"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 25400,
     "followers_instagram": 19000,
     "followers_facebook": 30000,
@@ -5648,7 +7487,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154636"
+    "last_enriched": "2026-01-16T10:32:54.846429"
   },
   {
     "name": "Greensboro Grasshoppers",
@@ -5662,6 +7501,28 @@
     "geo_country": "US",
     "city_population": 307381,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "gsohoppers",
+        "url": "https://www.instagram.com/gsohoppers/"
+      },
+      {
+        "platform": "x",
+        "handle": "GSOHoppers",
+        "url": "https://x.com/GSOHoppers"
+      },
+      {
+        "platform": "facebook",
+        "handle": "greensborograsshoppers",
+        "url": "https://www.facebook.com/greensborograsshoppers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 16300,
     "followers_instagram": 25000,
     "followers_facebook": 80000,
@@ -5686,7 +7547,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154640"
+    "last_enriched": "2026-01-16T10:32:54.846431"
   },
   {
     "name": "Greenville Drive",
@@ -5700,6 +7561,28 @@
     "geo_country": "US",
     "city_population": 74371,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "greenvilledrive",
+        "url": "https://www.instagram.com/greenvilledrive/"
+      },
+      {
+        "platform": "x",
+        "handle": "GreenvilleDrive",
+        "url": "https://x.com/GreenvilleDrive"
+      },
+      {
+        "platform": "facebook",
+        "handle": "GreenvilleDrive",
+        "url": "https://www.facebook.com/GreenvilleDrive/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 35600,
     "followers_instagram": 41000,
     "followers_facebook": 56000,
@@ -5879,7 +7762,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154645"
+    "last_enriched": "2026-01-16T10:32:54.846434"
   },
   {
     "name": "Jersey Shore BlueClaws",
@@ -5893,6 +7776,29 @@
     "geo_country": "US",
     "city_population": 20639,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BlueClaws",
+        "url": "https://x.com/BlueClaws"
+      },
+      {
+        "platform": "instagram",
+        "handle": "blueclaws1",
+        "url": "https://www.instagram.com/blueclaws1/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BlueClaws1",
+        "url": "https://www.facebook.com/BlueClaws1/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCeECM8wwWp_aRSDzBvYMOkw",
+        "url": "https://www.youtube.com/channel/UCeECM8wwWp_aRSDzBvYMOkw",
+        "unique_id": "UCeECM8wwWp_aRSDzBvYMOkw"
+      }
+    ],
     "followers_x": 27700,
     "followers_instagram": 30000,
     "followers_facebook": 52000,
@@ -5997,7 +7903,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154649"
+    "last_enriched": "2026-01-16T10:32:54.846436"
   },
   {
     "name": "Rome Emperors",
@@ -6011,6 +7917,28 @@
     "geo_country": "US",
     "city_population": 38747,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoEmperors",
+        "url": "https://x.com/GoEmperors"
+      },
+      {
+        "platform": "instagram",
+        "handle": "GoEmperors",
+        "url": "https://www.instagram.com/GoEmperors/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "romeemperors",
+        "url": "https://www.facebook.com/romeemperors/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 31100,
     "followers_instagram": 31000,
     "followers_facebook": 45000,
@@ -6040,7 +7968,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154653"
+    "last_enriched": "2026-01-16T10:32:54.846437"
   },
   {
     "name": "Hub City Spartanburgers",
@@ -6054,6 +7982,7 @@
     "geo_country": "US",
     "city_population": 39606,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6088,6 +8017,18 @@
     "geo_country": "US",
     "city_population": 32293,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "HVRenegades",
+        "url": "https://x.com/HVRenegades"
+      },
+      {
+        "platform": "instagram",
+        "handle": "hvrenegades",
+        "url": "https://www.instagram.com/hvrenegades/"
+      }
+    ],
     "followers_x": 20500,
     "followers_instagram": 29000,
     "followers_facebook": null,
@@ -6109,7 +8050,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154657"
+    "last_enriched": "2026-01-16T10:32:54.846440"
   },
   {
     "name": "Wilmington Blue Rocks",
@@ -6123,6 +8064,33 @@
     "geo_country": "US",
     "city_population": 73176,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WilmBlueRocks",
+        "url": "https://x.com/WilmBlueRocks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "wilmbluerocks",
+        "url": "https://www.instagram.com/wilmbluerocks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "wilmingtonbluerocks",
+        "url": "https://www.facebook.com/wilmingtonbluerocks/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "wilmbluerocks",
+        "url": "https://www.tiktok.com/@wilmbluerocks"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 15700,
     "followers_instagram": 17000,
     "followers_facebook": 33000,
@@ -6170,7 +8138,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154662"
+    "last_enriched": "2026-01-16T10:32:54.846442"
   },
   {
     "name": "Winston-Salem Dash",
@@ -6184,6 +8152,33 @@
     "geo_country": "US",
     "city_population": 255769,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WSDashBaseball",
+        "url": "https://x.com/WSDashBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "wsdashbaseball",
+        "url": "https://www.instagram.com/wsdashbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "WSDashBaseball",
+        "url": "https://www.facebook.com/WSDashBaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "wsdash",
+        "url": "https://www.tiktok.com/@wsdash"
+      },
+      {
+        "platform": "youtube",
+        "handle": "WSDash",
+        "url": "https://www.youtube.com/@WSDash"
+      }
+    ],
     "followers_x": 22300,
     "followers_instagram": 28000,
     "followers_facebook": 42000,
@@ -6425,7 +8420,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154666"
+    "last_enriched": "2026-01-16T10:32:54.846444"
   },
   {
     "name": "ACL Dodgers",
@@ -6439,6 +8434,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6473,6 +8469,29 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WhiteSox",
+        "url": "https://x.com/WhiteSox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "whitesox",
+        "url": "https://www.instagram.com/whitesox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "WhiteSox",
+        "url": "https://www.facebook.com/WhiteSox/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCve-Ci-M4CkBOmNi2LQdCRg",
+        "url": "https://www.youtube.com/channel/UCve-Ci-M4CkBOmNi2LQdCRg",
+        "unique_id": "UCve-Ci-M4CkBOmNi2LQdCRg"
+      }
+    ],
     "followers_x": 972500,
     "followers_instagram": 726000,
     "followers_facebook": 1600000,
@@ -6495,7 +8514,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154671"
+    "last_enriched": "2026-01-16T10:32:54.846446"
   },
   {
     "name": "ACL Guardians",
@@ -6509,6 +8528,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6543,6 +8563,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6577,6 +8598,29 @@
     "geo_country": "US",
     "city_population": 517151,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Athletics",
+        "url": "https://x.com/Athletics"
+      },
+      {
+        "platform": "instagram",
+        "handle": "athletics",
+        "url": "https://www.instagram.com/athletics/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Athletics",
+        "url": "https://www.facebook.com/Athletics/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCeiRABiGBQTzpuEYohN_I1Q",
+        "url": "https://www.youtube.com/channel/UCeiRABiGBQTzpuEYohN_I1Q",
+        "unique_id": "UCeiRABiGBQTzpuEYohN_I1Q"
+      }
+    ],
     "followers_x": 553100,
     "followers_instagram": 563000,
     "followers_facebook": 784000,
@@ -6599,7 +8643,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154676"
+    "last_enriched": "2026-01-16T10:32:54.846449"
   },
   {
     "name": "ACL Cubs",
@@ -6613,6 +8657,7 @@
     "geo_country": "US",
     "city_population": 517151,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6647,6 +8692,33 @@
     "geo_country": "US",
     "city_population": 48224,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "peoriachiefs",
+        "url": "https://x.com/peoriachiefs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "peoriachiefs",
+        "url": "https://www.instagram.com/peoriachiefs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "PeoriaChiefs",
+        "url": "https://www.facebook.com/PeoriaChiefs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "peoriachiefs",
+        "url": "https://www.tiktok.com/@peoriachiefs"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 23900,
     "followers_instagram": 18000,
     "followers_facebook": 40000,
@@ -6680,7 +8752,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154681"
+    "last_enriched": "2026-01-16T10:32:54.846451"
   },
   {
     "name": "ACL Padres",
@@ -6694,6 +8766,33 @@
     "geo_country": "US",
     "city_population": 48224,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "peoriachiefs",
+        "url": "https://x.com/peoriachiefs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "peoriachiefs",
+        "url": "https://www.instagram.com/peoriachiefs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "PeoriaChiefs",
+        "url": "https://www.facebook.com/PeoriaChiefs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "peoriachiefs",
+        "url": "https://www.tiktok.com/@peoriachiefs"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 23900,
     "followers_instagram": 18000,
     "followers_facebook": 40000,
@@ -6728,7 +8827,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:06.154686"
+    "last_enriched": "2026-01-16T10:32:54.846452"
   },
   {
     "name": "ACL Brewers",
@@ -6742,6 +8841,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6776,6 +8876,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6810,6 +8911,7 @@
     "geo_country": "US",
     "city_population": 246170,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6844,6 +8946,7 @@
     "geo_country": "US",
     "city_population": 246170,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6878,6 +8981,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6912,6 +9016,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6946,6 +9051,7 @@
     "geo_country": "US",
     "city_population": 190114,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -6980,6 +9086,7 @@
     "geo_country": "US",
     "city_population": 403672,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7014,6 +9121,7 @@
     "geo_country": "US",
     "city_population": 403672,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7048,6 +9156,7 @@
     "geo_country": "US",
     "city_population": 520070,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7082,6 +9191,7 @@
     "geo_country": "US",
     "city_population": 568271,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7116,6 +9226,7 @@
     "geo_country": "US",
     "city_population": 568271,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7150,6 +9261,29 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Athletics",
+        "url": "https://x.com/Athletics"
+      },
+      {
+        "platform": "instagram",
+        "handle": "athletics",
+        "url": "https://www.instagram.com/athletics/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Athletics",
+        "url": "https://www.facebook.com/Athletics/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCeiRABiGBQTzpuEYohN_I1Q",
+        "url": "https://www.youtube.com/channel/UCeiRABiGBQTzpuEYohN_I1Q",
+        "unique_id": "UCeiRABiGBQTzpuEYohN_I1Q"
+      }
+    ],
     "followers_x": 553100,
     "followers_instagram": 563000,
     "followers_facebook": 784000,
@@ -7172,7 +9306,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:29.903713"
+    "last_enriched": "2026-01-16T10:33:09.202688"
   },
   {
     "name": "DSL Red Sox Blue",
@@ -7186,6 +9320,7 @@
     "geo_country": "US",
     "city_population": 673458,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7220,6 +9355,7 @@
     "geo_country": "US",
     "city_population": 673458,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7254,6 +9390,29 @@
     "geo_country": "US",
     "city_population": 2721308,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WhiteSox",
+        "url": "https://x.com/WhiteSox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "whitesox",
+        "url": "https://www.instagram.com/whitesox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "WhiteSox",
+        "url": "https://www.facebook.com/WhiteSox/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCve-Ci-M4CkBOmNi2LQdCRg",
+        "url": "https://www.youtube.com/channel/UCve-Ci-M4CkBOmNi2LQdCRg",
+        "unique_id": "UCve-Ci-M4CkBOmNi2LQdCRg"
+      }
+    ],
     "followers_x": 972500,
     "followers_instagram": 726000,
     "followers_facebook": 1600000,
@@ -7276,7 +9435,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:37:29.903739"
+    "last_enriched": "2026-01-16T10:33:09.202718"
   },
   {
     "name": "DSL Reds",
@@ -7290,6 +9449,7 @@
     "geo_country": "US",
     "city_population": 314915,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7324,6 +9484,7 @@
     "geo_country": "US",
     "city_population": 314915,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7358,6 +9519,7 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7392,6 +9554,7 @@
     "geo_country": "US",
     "city_population": 365379,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7426,6 +9589,7 @@
     "geo_country": "US",
     "city_population": 729019,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7460,6 +9624,7 @@
     "geo_country": "US",
     "city_population": 729019,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7494,6 +9659,7 @@
     "geo_country": "US",
     "city_population": 645705,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7528,6 +9694,7 @@
     "geo_country": "US",
     "city_population": 645705,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7562,6 +9729,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7596,6 +9764,7 @@
     "geo_country": "US",
     "city_population": 516032,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7630,6 +9799,7 @@
     "geo_country": "US",
     "city_population": 516032,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7664,6 +9834,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7698,6 +9869,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7732,6 +9904,7 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7766,6 +9939,7 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7800,6 +9974,7 @@
     "geo_country": "US",
     "city_population": 3878704,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7834,6 +10009,7 @@
     "geo_country": "US",
     "city_population": 487014,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7868,6 +10044,7 @@
     "geo_country": "US",
     "city_population": 487014,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7902,6 +10079,7 @@
     "geo_country": "US",
     "city_population": 563531,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7936,6 +10114,7 @@
     "geo_country": "US",
     "city_population": 563531,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -7970,6 +10149,7 @@
     "geo_country": "US",
     "city_population": 428579,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8004,6 +10184,7 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8038,6 +10219,7 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8072,6 +10254,7 @@
     "geo_country": "US",
     "city_population": 8478072,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8106,6 +10289,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8140,6 +10324,7 @@
     "geo_country": "US",
     "city_population": 1673164,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8174,6 +10359,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8208,6 +10394,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8242,6 +10429,7 @@
     "geo_country": "US",
     "city_population": 1404452,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8276,6 +10464,7 @@
     "geo_country": "US",
     "city_population": 1404452,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8310,6 +10499,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8344,6 +10534,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8378,6 +10569,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8412,6 +10604,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8446,6 +10639,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8480,6 +10674,7 @@
     "geo_country": "DO",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8514,6 +10709,7 @@
     "geo_country": "US",
     "city_population": 780995,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8548,6 +10744,7 @@
     "geo_country": "US",
     "city_population": 279695,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8582,6 +10779,7 @@
     "geo_country": "US",
     "city_population": 414547,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8616,6 +10814,7 @@
     "geo_country": "US",
     "city_population": 414547,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8650,6 +10849,7 @@
     "geo_country": "CA",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8684,6 +10884,7 @@
     "geo_country": "CA",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8718,6 +10919,7 @@
     "geo_country": "US",
     "city_population": 702250,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -8752,6 +10954,28 @@
     "geo_country": "US",
     "city_population": 58184,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "The_Marauders",
+        "url": "https://x.com/The_Marauders"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bradentonmarauders",
+        "url": "https://www.instagram.com/bradentonmarauders/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BradentonMarauders",
+        "url": "https://www.facebook.com/BradentonMarauders/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 14100,
     "followers_instagram": 14000,
     "followers_facebook": 21000,
@@ -9069,7 +11293,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505778"
+    "last_enriched": "2026-01-16T10:34:53.310380"
   },
   {
     "name": "FCL Phillies",
@@ -9083,6 +11307,28 @@
     "geo_country": "US",
     "city_population": 116811,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Threshers",
+        "url": "https://x.com/Threshers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "threshersbaseball",
+        "url": "https://www.instagram.com/threshersbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ThreshersBaseball",
+        "url": "https://www.facebook.com/ThreshersBaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "ClearwaterThreshersBaseball",
+        "url": "https://www.youtube.com/@ClearwaterThreshersBaseball"
+      }
+    ],
     "followers_x": 19200,
     "followers_instagram": 18000,
     "followers_facebook": 29000,
@@ -9120,7 +11366,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505803"
+    "last_enriched": "2026-01-16T10:34:53.310400"
   },
   {
     "name": "FCL Blue Jays",
@@ -9134,6 +11380,34 @@
     "geo_country": "US",
     "city_population": 35932,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BluefieldJays",
+        "url": "https://x.com/BluefieldJays"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dunedinbluejays",
+        "url": "https://www.instagram.com/dunedinbluejays/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DunedinBlueJays",
+        "url": "https://www.facebook.com/DunedinBlueJays/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "dunedinbluejays",
+        "url": "https://www.tiktok.com/@dunedinbluejays"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC3O4MrCyWw74hkzdXo1cCtg",
+        "url": "https://www.youtube.com/channel/UC3O4MrCyWw74hkzdXo1cCtg",
+        "unique_id": "UC3O4MrCyWw74hkzdXo1cCtg"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 35000,
     "followers_facebook": 24000,
@@ -9165,7 +11439,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505809"
+    "last_enriched": "2026-01-16T10:34:53.310402"
   },
   {
     "name": "FCL Twins",
@@ -9179,6 +11453,28 @@
     "geo_country": "US",
     "city_population": 99918,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "mightymussels",
+        "url": "https://x.com/mightymussels"
+      },
+      {
+        "platform": "instagram",
+        "handle": "mightymussels",
+        "url": "https://www.instagram.com/mightymussels/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "mightymussels",
+        "url": "https://www.facebook.com/mightymussels/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "MightyMussels",
+        "url": "https://www.youtube.com/@MightyMussels"
+      }
+    ],
     "followers_x": 17900,
     "followers_instagram": 15000,
     "followers_facebook": 20000,
@@ -9222,7 +11518,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505813"
+    "last_enriched": "2026-01-16T10:34:53.310404"
   },
   {
     "name": "FCL Red Sox",
@@ -9236,6 +11532,23 @@
     "geo_country": "US",
     "city_population": 99918,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "PawSox",
+        "url": "https://x.com/PawSox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "pawsox",
+        "url": "https://www.instagram.com/pawsox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "GoPawSox",
+        "url": "https://www.facebook.com/GoPawSox/"
+      }
+    ],
     "followers_x": 37000,
     "followers_instagram": 41000,
     "followers_facebook": 106000,
@@ -9257,7 +11570,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505821"
+    "last_enriched": "2026-01-16T10:34:53.310406"
   },
   {
     "name": "FCL Cardinals",
@@ -9271,6 +11584,33 @@
     "geo_country": "US",
     "city_population": 127744,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoHammerheads",
+        "url": "https://x.com/GoHammerheads"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gohammerheads",
+        "url": "https://www.instagram.com/gohammerheads/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "jupiterhammerheads",
+        "url": "https://www.facebook.com/jupiterhammerheads/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "gohammerheads",
+        "url": "https://www.tiktok.com/@gohammerheads"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 13100,
     "followers_instagram": 8745,
     "followers_facebook": 7500,
@@ -9303,7 +11643,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505826"
+    "last_enriched": "2026-01-16T10:34:53.310410"
   },
   {
     "name": "FCL Marlins",
@@ -9317,6 +11657,33 @@
     "geo_country": "US",
     "city_population": 127744,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoHammerheads",
+        "url": "https://x.com/GoHammerheads"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gohammerheads",
+        "url": "https://www.instagram.com/gohammerheads/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "jupiterhammerheads",
+        "url": "https://www.facebook.com/jupiterhammerheads/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "gohammerheads",
+        "url": "https://www.tiktok.com/@gohammerheads"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 13100,
     "followers_instagram": 8745,
     "followers_facebook": 7500,
@@ -9350,7 +11717,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505830"
+    "last_enriched": "2026-01-16T10:34:53.310412"
   },
   {
     "name": "FCL Tigers",
@@ -9364,6 +11731,28 @@
     "geo_country": "US",
     "city_population": 38701,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LkdFlyingTigers",
+        "url": "https://x.com/LkdFlyingTigers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lkdflyingtigers",
+        "url": "https://www.instagram.com/lkdflyingtigers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "OfficialLakelandFlyingTigers",
+        "url": "https://www.facebook.com/OfficialLakelandFlyingTigers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 14600,
     "followers_instagram": 17000,
     "followers_facebook": 30000,
@@ -9388,7 +11777,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505834"
+    "last_enriched": "2026-01-16T10:34:53.310415"
   },
   {
     "name": "FCL Braves",
@@ -9402,6 +11791,7 @@
     "geo_country": "US",
     "city_population": 92875,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -9436,6 +11826,7 @@
     "geo_country": "US",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -9470,6 +11861,7 @@
     "geo_country": "US",
     "city_population": 57764,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -9504,6 +11896,28 @@
     "geo_country": "US",
     "city_population": 258575,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "stluciemets",
+        "url": "https://x.com/stluciemets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "stluciemets",
+        "url": "https://www.instagram.com/stluciemets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "stluciemets",
+        "url": "https://www.facebook.com/stluciemets/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 28100,
     "followers_instagram": 22000,
     "followers_facebook": 20000,
@@ -9535,7 +11949,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505840"
+    "last_enriched": "2026-01-16T10:34:53.310418"
   },
   {
     "name": "FCL Yankees",
@@ -9549,6 +11963,28 @@
     "geo_country": "US",
     "city_population": 414547,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "TampaTarpons",
+        "url": "https://x.com/TampaTarpons"
+      },
+      {
+        "platform": "instagram",
+        "handle": "tampatarpons",
+        "url": "https://www.instagram.com/tampatarpons/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "TampaTarpons",
+        "url": "https://www.facebook.com/TampaTarpons/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 28900,
     "followers_instagram": 36000,
     "followers_facebook": 19000,
@@ -9610,7 +12046,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505848"
+    "last_enriched": "2026-01-16T10:34:53.310420"
   },
   {
     "name": "FCL Astros",
@@ -9624,6 +12060,7 @@
     "geo_country": "US",
     "city_population": 127744,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -9658,6 +12095,7 @@
     "geo_country": "US",
     "city_population": 127744,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -9692,6 +12130,34 @@
     "geo_country": "US",
     "city_population": 550105,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "FresnoGrizzlies",
+        "url": "https://x.com/FresnoGrizzlies"
+      },
+      {
+        "platform": "instagram",
+        "handle": "instagrizz_fg",
+        "url": "https://www.instagram.com/instagrizz_fg/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "FresnoGrizzlies",
+        "url": "https://www.facebook.com/FresnoGrizzlies/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "fresnogrizzlies",
+        "url": "https://www.tiktok.com/@fresnogrizzlies"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCQEJTZ7Y-GhSpp7W5TdJfkg",
+        "url": "https://www.youtube.com/channel/UCQEJTZ7Y-GhSpp7W5TdJfkg",
+        "unique_id": "UCQEJTZ7Y-GhSpp7W5TdJfkg"
+      }
+    ],
     "followers_x": 45400,
     "followers_instagram": null,
     "followers_facebook": 74000,
@@ -9732,7 +12198,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505853"
+    "last_enriched": "2026-01-16T10:34:53.310422"
   },
   {
     "name": "Lake Elsinore Storm",
@@ -9746,6 +12212,28 @@
     "geo_country": "US",
     "city_population": 39907,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Storm_Baseball",
+        "url": "https://x.com/Storm_Baseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lakeelsinorestorm",
+        "url": "https://www.instagram.com/lakeelsinorestorm/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "LakeElsinoreStorm",
+        "url": "https://www.facebook.com/LakeElsinoreStorm/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "stormbaseball",
+        "url": "https://www.youtube.com/@stormbaseball"
+      }
+    ],
     "followers_x": 19900,
     "followers_instagram": 34000,
     "followers_facebook": 43000,
@@ -9770,7 +12258,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505857"
+    "last_enriched": "2026-01-16T10:34:53.310424"
   },
   {
     "name": "Ontario Tower Buzzers",
@@ -9784,6 +12272,33 @@
     "geo_country": "US",
     "city_population": 185285,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "latimes",
+        "url": "https://x.com/latimes"
+      },
+      {
+        "platform": "instagram",
+        "handle": "towerbuzzers",
+        "url": "https://www.instagram.com/towerbuzzers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Towerbuzzers",
+        "url": "https://www.facebook.com/Towerbuzzers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "towerbuzzers",
+        "url": "https://www.tiktok.com/@towerbuzzers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 3600000,
     "followers_instagram": 30000,
     "followers_facebook": 8900,
@@ -9808,7 +12323,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505861"
+    "last_enriched": "2026-01-16T10:34:53.310425"
   },
   {
     "name": "Rancho Cucamonga Quakes",
@@ -9822,6 +12337,28 @@
     "geo_country": "US",
     "city_population": 176675,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "rcquakes",
+        "url": "https://www.instagram.com/rcquakes/"
+      },
+      {
+        "platform": "x",
+        "handle": "RCQuakes",
+        "url": "https://x.com/RCQuakes"
+      },
+      {
+        "platform": "facebook",
+        "handle": "RCQuakes",
+        "url": "https://www.facebook.com/RCQuakes/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 22000,
     "followers_instagram": 73000,
     "followers_facebook": 38000,
@@ -10170,7 +12707,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505865"
+    "last_enriched": "2026-01-16T10:34:53.310427"
   },
   {
     "name": "Inland Empire 66ers",
@@ -10184,6 +12721,18 @@
     "geo_country": "US",
     "city_population": 224775,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "66ersBaseball",
+        "url": "https://x.com/66ersBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "66ersbaseball",
+        "url": "https://www.instagram.com/66ersbaseball/"
+      }
+    ],
     "followers_x": 15800,
     "followers_instagram": 37000,
     "followers_facebook": null,
@@ -10206,7 +12755,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505869"
+    "last_enriched": "2026-01-16T10:34:53.310429"
   },
   {
     "name": "San Jose Giants",
@@ -10220,6 +12769,29 @@
     "geo_country": "US",
     "city_population": 997368,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SFGiants",
+        "url": "https://x.com/SFGiants"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sfgiants",
+        "url": "https://www.instagram.com/sfgiants/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Giants",
+        "url": "https://www.facebook.com/Giants/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCpXMHgjrpnynDSV5mXpqImw",
+        "url": "https://www.youtube.com/channel/UCpXMHgjrpnynDSV5mXpqImw",
+        "unique_id": "UCpXMHgjrpnynDSV5mXpqImw"
+      }
+    ],
     "followers_x": 1500000,
     "followers_instagram": 2000000,
     "followers_facebook": 2700000,
@@ -10272,7 +12844,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505874"
+    "last_enriched": "2026-01-16T10:34:53.310431"
   },
   {
     "name": "Stockton Ports",
@@ -10286,6 +12858,34 @@
     "geo_country": "US",
     "city_population": 324975,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "stocktonports",
+        "url": "https://www.instagram.com/stocktonports/"
+      },
+      {
+        "platform": "x",
+        "handle": "stocktonports",
+        "url": "https://x.com/stocktonports"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Portsbaseball",
+        "url": "https://www.facebook.com/Portsbaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "stocktonportsofficial",
+        "url": "https://www.tiktok.com/@stocktonportsofficial"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCbNuRoqXBYBLqOP0IBQvzEw",
+        "url": "https://www.youtube.com/channel/UCbNuRoqXBYBLqOP0IBQvzEw",
+        "unique_id": "UCbNuRoqXBYBLqOP0IBQvzEw"
+      }
+    ],
     "followers_x": 22200,
     "followers_instagram": 23000,
     "followers_facebook": 35000,
@@ -10342,7 +12942,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505878"
+    "last_enriched": "2026-01-16T10:34:53.310434"
   },
   {
     "name": "Visalia Rawhide",
@@ -10356,6 +12956,28 @@
     "geo_country": "US",
     "city_population": 146271,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "visaliarawhide",
+        "url": "https://www.instagram.com/visaliarawhide/"
+      },
+      {
+        "platform": "x",
+        "handle": "VisaliaRawhide",
+        "url": "https://x.com/VisaliaRawhide"
+      },
+      {
+        "platform": "facebook",
+        "handle": "TheRawhide",
+        "url": "https://www.facebook.com/TheRawhide/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 10500,
     "followers_instagram": 21000,
     "followers_facebook": 25000,
@@ -10432,7 +13054,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505883"
+    "last_enriched": "2026-01-16T10:34:53.310436"
   },
   {
     "name": "Charleston RiverDogs",
@@ -10446,6 +13068,23 @@
     "geo_country": "US",
     "city_population": 157665,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ChasRiverDogs",
+        "url": "https://x.com/ChasRiverDogs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "chasriverdogs",
+        "url": "https://www.instagram.com/chasriverdogs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "chasriverdogs",
+        "url": "https://www.facebook.com/chasriverdogs/"
+      }
+    ],
     "followers_x": 44700,
     "followers_instagram": 52000,
     "followers_facebook": 67000,
@@ -10489,7 +13128,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505886"
+    "last_enriched": "2026-01-16T10:34:53.310438"
   },
   {
     "name": "Columbia Fireflies",
@@ -10503,6 +13142,29 @@
     "geo_country": "US",
     "city_population": 144788,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ColaFireflies",
+        "url": "https://x.com/ColaFireflies"
+      },
+      {
+        "platform": "instagram",
+        "handle": "colafireflies",
+        "url": "https://www.instagram.com/colafireflies/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "columbiafireflies",
+        "url": "https://www.facebook.com/columbiafireflies/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCEs40KSfEVu_C0t6loJiXaQ",
+        "url": "https://www.youtube.com/channel/UCEs40KSfEVu_C0t6loJiXaQ",
+        "unique_id": "UCEs40KSfEVu_C0t6loJiXaQ"
+      }
+    ],
     "followers_x": 23300,
     "followers_instagram": 37000,
     "followers_facebook": 60000,
@@ -10547,7 +13209,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505891"
+    "last_enriched": "2026-01-16T10:34:53.310440"
   },
   {
     "name": "Fayetteville Woodpeckers",
@@ -10561,6 +13223,29 @@
     "geo_country": "US",
     "city_population": 103134,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "fayettevillewoodpeckers",
+        "url": "https://www.instagram.com/fayettevillewoodpeckers/"
+      },
+      {
+        "platform": "x",
+        "handle": "woodpeckersNC",
+        "url": "https://x.com/woodpeckersNC"
+      },
+      {
+        "platform": "facebook",
+        "handle": "fayettevillewoodpeckers",
+        "url": "https://www.facebook.com/fayettevillewoodpeckers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCjh70Rsjod_h8GgRid8Yeiw",
+        "url": "https://www.youtube.com/channel/UCjh70Rsjod_h8GgRid8Yeiw",
+        "unique_id": "UCjh70Rsjod_h8GgRid8Yeiw"
+      }
+    ],
     "followers_x": 16200,
     "followers_instagram": 29000,
     "followers_facebook": 38000,
@@ -10890,7 +13575,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505895"
+    "last_enriched": "2026-01-16T10:34:53.310442"
   },
   {
     "name": "Fredericksburg Nationals",
@@ -10904,6 +13589,28 @@
     "geo_country": "US",
     "city_population": 8373,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "FXBGNats",
+        "url": "https://x.com/FXBGNats"
+      },
+      {
+        "platform": "instagram",
+        "handle": "fxbgnats",
+        "url": "https://www.instagram.com/fxbgnats/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "FXBGNats",
+        "url": "https://www.facebook.com/FXBGNats/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 18300,
     "followers_instagram": 24000,
     "followers_facebook": 44000,
@@ -10944,7 +13651,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505899"
+    "last_enriched": "2026-01-16T10:34:53.310444"
   },
   {
     "name": "Hickory Crawdads",
@@ -10958,6 +13665,28 @@
     "geo_country": "US",
     "city_population": 45081,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "hickorycrawdads",
+        "url": "https://www.instagram.com/hickorycrawdads/"
+      },
+      {
+        "platform": "x",
+        "handle": "HickoryCrawdads",
+        "url": "https://x.com/HickoryCrawdads"
+      },
+      {
+        "platform": "facebook",
+        "handle": "crawdadsbaseball",
+        "url": "https://www.facebook.com/crawdadsbaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 15300,
     "followers_instagram": 16000,
     "followers_facebook": 33000,
@@ -10989,7 +13718,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505903"
+    "last_enriched": "2026-01-16T10:34:53.310446"
   },
   {
     "name": "Kannapolis Cannon Ballers",
@@ -11003,6 +13732,28 @@
     "geo_country": "US",
     "city_population": 60521,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Kcannonballers",
+        "url": "https://x.com/Kcannonballers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "kcannonballers",
+        "url": "https://www.instagram.com/kcannonballers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "KannapolisCannonBallers",
+        "url": "https://www.facebook.com/KannapolisCannonBallers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 20600,
     "followers_instagram": 24000,
     "followers_facebook": 43000,
@@ -11039,7 +13790,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505907"
+    "last_enriched": "2026-01-16T10:34:53.310448"
   },
   {
     "name": "Down East Wood Ducks",
@@ -11053,6 +13804,7 @@
     "geo_country": "US",
     "city_population": 125,
     "metro_gdp_millions": null,
+    "social_handles": null,
     "followers_x": null,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -11087,6 +13839,28 @@
     "geo_country": "US",
     "city_population": 80301,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LynHillcats",
+        "url": "https://x.com/LynHillcats"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lynhillcats",
+        "url": "https://www.instagram.com/lynhillcats/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "LynHillcats",
+        "url": "https://www.facebook.com/LynHillcats/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 12300,
     "followers_instagram": 12000,
     "followers_facebook": 26000,
@@ -11182,7 +13956,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505912"
+    "last_enriched": "2026-01-16T10:34:53.310451"
   },
   {
     "name": "Myrtle Beach Pelicans",
@@ -11196,6 +13970,28 @@
     "geo_country": "US",
     "city_population": 40535,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Pelicanbaseball",
+        "url": "https://x.com/Pelicanbaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "pelicansbaseball",
+        "url": "https://www.instagram.com/pelicansbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "myrtlebeachpelicans",
+        "url": "https://www.facebook.com/myrtlebeachpelicans/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "MyrtleBeachPelicans",
+        "url": "https://www.youtube.com/@MyrtleBeachPelicans"
+      }
+    ],
     "followers_x": 36900,
     "followers_instagram": 45000,
     "followers_facebook": 70000,
@@ -11227,7 +14023,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505917"
+    "last_enriched": "2026-01-16T10:34:53.310453"
   },
   {
     "name": "Augusta GreenJackets",
@@ -11241,6 +14037,19 @@
     "geo_country": "US",
     "city_population": 201737,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GreenJackets",
+        "url": "https://x.com/GreenJackets"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCrLZBqzSKY1NJM6Mtk10gsg",
+        "url": "https://www.youtube.com/channel/UCrLZBqzSKY1NJM6Mtk10gsg",
+        "unique_id": "UCrLZBqzSKY1NJM6Mtk10gsg"
+      }
+    ],
     "followers_x": 15400,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -11262,7 +14071,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505921"
+    "last_enriched": "2026-01-16T10:34:53.310455"
   },
   {
     "name": "Salem RidgeYaks",
@@ -11276,6 +14085,29 @@
     "geo_country": "US",
     "city_population": null,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ridgeyaks",
+        "url": "https://x.com/ridgeyaks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "ridgeyaksbaseball",
+        "url": "https://www.instagram.com/ridgeyaksbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "salemridgeyaks",
+        "url": "https://www.facebook.com/salemridgeyaks/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC58t9mFneTT10iVRNcbH56Q",
+        "url": "https://www.youtube.com/channel/UC58t9mFneTT10iVRNcbH56Q",
+        "unique_id": "UC58t9mFneTT10iVRNcbH56Q"
+      }
+    ],
     "followers_x": 30600,
     "followers_instagram": 24000,
     "followers_facebook": 45000,
@@ -11491,7 +14323,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505924"
+    "last_enriched": "2026-01-16T10:34:53.310457"
   },
   {
     "name": "Delmarva Shorebirds",
@@ -11505,6 +14337,13 @@
     "geo_country": "US",
     "city_population": 32971,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "shorebirds",
+        "url": "https://x.com/shorebirds"
+      }
+    ],
     "followers_x": 23500,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -11527,7 +14366,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505928"
+    "last_enriched": "2026-01-16T10:34:53.310458"
   },
   {
     "name": "Wilson Warbirds",
@@ -11541,6 +14380,33 @@
     "geo_country": "US",
     "city_population": 48579,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "wilsonwarbirds",
+        "url": "https://x.com/wilsonwarbirds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "wilsonwarbirds",
+        "url": "https://www.instagram.com/wilsonwarbirds/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "wilsonwarbirds",
+        "url": "https://www.facebook.com/wilsonwarbirds/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "wilsonwarbirdsbaseball",
+        "url": "https://www.tiktok.com/@wilsonwarbirdsbaseball"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 519,
     "followers_instagram": 28000,
     "followers_facebook": 44000,
@@ -11579,7 +14445,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505932"
+    "last_enriched": "2026-01-16T10:34:53.310460"
   },
   {
     "name": "Bradenton Marauders",
@@ -11593,6 +14459,23 @@
     "geo_country": "US",
     "city_population": 58184,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "The_Marauders",
+        "url": "https://x.com/The_Marauders"
+      },
+      {
+        "platform": "instagram",
+        "handle": "bradentonmarauders",
+        "url": "https://www.instagram.com/bradentonmarauders/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BradentonMarauders",
+        "url": "https://www.facebook.com/BradentonMarauders/"
+      }
+    ],
     "followers_x": 14100,
     "followers_instagram": 14000,
     "followers_facebook": 21000,
@@ -11911,7 +14794,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505936"
+    "last_enriched": "2026-01-16T10:34:53.310462"
   },
   {
     "name": "Clearwater Threshers",
@@ -11925,6 +14808,28 @@
     "geo_country": "US",
     "city_population": 116811,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Threshers",
+        "url": "https://x.com/Threshers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "threshersbaseball",
+        "url": "https://www.instagram.com/threshersbaseball/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ThreshersBaseball",
+        "url": "https://www.facebook.com/ThreshersBaseball/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "ClearwaterThreshersBaseball",
+        "url": "https://www.youtube.com/@ClearwaterThreshersBaseball"
+      }
+    ],
     "followers_x": 19200,
     "followers_instagram": 18000,
     "followers_facebook": 29000,
@@ -11962,7 +14867,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505941"
+    "last_enriched": "2026-01-16T10:34:53.310463"
   },
   {
     "name": "Daytona Tortugas",
@@ -11976,6 +14881,13 @@
     "geo_country": "US",
     "city_population": 86015,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "daytonatortugas",
+        "url": "https://x.com/daytonatortugas"
+      }
+    ],
     "followers_x": 26000,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -11997,7 +14909,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505945"
+    "last_enriched": "2026-01-16T10:34:53.310465"
   },
   {
     "name": "Dunedin Blue Jays",
@@ -12011,6 +14923,34 @@
     "geo_country": "US",
     "city_population": 35932,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BluefieldJays",
+        "url": "https://x.com/BluefieldJays"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dunedinbluejays",
+        "url": "https://www.instagram.com/dunedinbluejays/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DunedinBlueJays",
+        "url": "https://www.facebook.com/DunedinBlueJays/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "dunedinbluejays",
+        "url": "https://www.tiktok.com/@dunedinbluejays"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC3O4MrCyWw74hkzdXo1cCtg",
+        "url": "https://www.youtube.com/channel/UC3O4MrCyWw74hkzdXo1cCtg",
+        "unique_id": "UC3O4MrCyWw74hkzdXo1cCtg"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 35000,
     "followers_facebook": 24000,
@@ -12042,7 +14982,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505949"
+    "last_enriched": "2026-01-16T10:34:53.310467"
   },
   {
     "name": "Fort Myers Mighty Mussels",
@@ -12056,6 +14996,23 @@
     "geo_country": "US",
     "city_population": 99918,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "MiracleBaseball",
+        "url": "https://x.com/MiracleBaseball"
+      },
+      {
+        "platform": "instagram",
+        "handle": "fortmyersmiracle",
+        "url": "https://www.instagram.com/fortmyersmiracle/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "FortMyersMiracle",
+        "url": "https://www.facebook.com/FortMyersMiracle/"
+      }
+    ],
     "followers_x": 6,
     "followers_instagram": 63,
     "followers_facebook": null,
@@ -12104,7 +15061,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:40:10.505953"
+    "last_enriched": "2026-01-16T10:34:53.310469"
   },
   {
     "name": "Jupiter Hammerheads",
@@ -12118,6 +15075,33 @@
     "geo_country": "US",
     "city_population": 127744,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "gohammerheads",
+        "url": "https://www.instagram.com/gohammerheads/"
+      },
+      {
+        "platform": "x",
+        "handle": "GoHammerheads",
+        "url": "https://x.com/GoHammerheads"
+      },
+      {
+        "platform": "facebook",
+        "handle": "jupiterhammerheads",
+        "url": "https://www.facebook.com/jupiterhammerheads/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "gohammerheads",
+        "url": "https://www.tiktok.com/@gohammerheads"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 13100,
     "followers_instagram": 8745,
     "followers_facebook": 7500,
@@ -12151,7 +15135,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811612"
+    "last_enriched": "2026-01-16T10:36:39.273698"
   },
   {
     "name": "Palm Beach Cardinals",
@@ -12165,6 +15149,33 @@
     "geo_country": "US",
     "city_population": 127744,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GoPBCardinals",
+        "url": "https://x.com/GoPBCardinals"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gohammerheads",
+        "url": "https://www.instagram.com/gohammerheads/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "jupiterhammerheads",
+        "url": "https://www.facebook.com/jupiterhammerheads/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "gohammerheads",
+        "url": "https://www.tiktok.com/@gohammerheads"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 21900,
     "followers_instagram": 8745,
     "followers_facebook": 7500,
@@ -12197,7 +15208,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811635"
+    "last_enriched": "2026-01-16T10:36:39.273720"
   },
   {
     "name": "Lakeland Flying Tigers",
@@ -12211,6 +15222,28 @@
     "geo_country": "US",
     "city_population": 38701,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LkdFlyingTigers",
+        "url": "https://x.com/LkdFlyingTigers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lkdflyingtigers",
+        "url": "https://www.instagram.com/lkdflyingtigers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "OfficialLakelandFlyingTigers",
+        "url": "https://www.facebook.com/OfficialLakelandFlyingTigers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 14600,
     "followers_instagram": 17000,
     "followers_facebook": 30000,
@@ -12235,7 +15268,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811639"
+    "last_enriched": "2026-01-16T10:36:39.273723"
   },
   {
     "name": "St. Lucie Mets",
@@ -12249,6 +15282,18 @@
     "geo_country": "US",
     "city_population": 258575,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "stluciemets",
+        "url": "https://x.com/stluciemets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "stluciemets",
+        "url": "https://www.instagram.com/stluciemets/"
+      }
+    ],
     "followers_x": 28100,
     "followers_instagram": 22000,
     "followers_facebook": null,
@@ -12270,7 +15315,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811644"
+    "last_enriched": "2026-01-16T10:36:39.273726"
   },
   {
     "name": "Tampa Tarpons",
@@ -12284,6 +15329,23 @@
     "geo_country": "US",
     "city_population": 414547,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "TampaTarpons",
+        "url": "https://x.com/TampaTarpons"
+      },
+      {
+        "platform": "instagram",
+        "handle": "tampatarpons",
+        "url": "https://www.instagram.com/tampatarpons/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "TampaYankees",
+        "url": "https://www.facebook.com/TampaYankees/"
+      }
+    ],
     "followers_x": 28900,
     "followers_instagram": 36000,
     "followers_facebook": null,
@@ -12344,7 +15406,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811647"
+    "last_enriched": "2026-01-16T10:36:39.273728"
   },
   {
     "name": "Lehigh Valley IronPigs",
@@ -12358,6 +15420,23 @@
     "geo_country": "US",
     "city_population": 127138,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "IronPigs",
+        "url": "https://x.com/IronPigs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lhvironpigs",
+        "url": "https://www.instagram.com/lhvironpigs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "LHVIronPigs",
+        "url": "https://www.facebook.com/LHVIronPigs/"
+      }
+    ],
     "followers_x": 69300,
     "followers_instagram": 78000,
     "followers_facebook": 109000,
@@ -12379,7 +15458,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811651"
+    "last_enriched": "2026-01-16T10:36:39.273730"
   },
   {
     "name": "Buffalo Bisons",
@@ -12393,6 +15472,23 @@
     "geo_country": "US",
     "city_population": 276617,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BuffaloBisons",
+        "url": "https://x.com/BuffaloBisons"
+      },
+      {
+        "platform": "instagram",
+        "handle": "buffalobisons",
+        "url": "https://www.instagram.com/buffalobisons/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BuffaloBisons",
+        "url": "https://www.facebook.com/BuffaloBisons/"
+      }
+    ],
     "followers_x": 59400,
     "followers_instagram": 63000,
     "followers_facebook": null,
@@ -12422,7 +15518,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811654"
+    "last_enriched": "2026-01-16T10:36:39.273733"
   },
   {
     "name": "Charlotte Knights",
@@ -12436,6 +15532,13 @@
     "geo_country": "US",
     "city_population": 943476,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "KnightsBaseball",
+        "url": "https://x.com/KnightsBaseball"
+      }
+    ],
     "followers_x": 83000,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -12458,7 +15561,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811657"
+    "last_enriched": "2026-01-16T10:36:39.273735"
   },
   {
     "name": "Columbus Clippers",
@@ -12472,6 +15575,23 @@
     "geo_country": "US",
     "city_population": 933263,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "CLBClippers",
+        "url": "https://x.com/CLBClippers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "clbclippers",
+        "url": "https://www.instagram.com/clbclippers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "clippersbaseball",
+        "url": "https://www.facebook.com/clippersbaseball/"
+      }
+    ],
     "followers_x": 53900,
     "followers_instagram": 47000,
     "followers_facebook": 65000,
@@ -12622,7 +15742,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811661"
+    "last_enriched": "2026-01-16T10:36:39.273738"
   },
   {
     "name": "Iowa Cubs",
@@ -12636,6 +15756,13 @@
     "geo_country": "US",
     "city_population": 213096,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "IowaCubs",
+        "url": "https://x.com/IowaCubs"
+      }
+    ],
     "followers_x": 78900,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -12658,7 +15785,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811665"
+    "last_enriched": "2026-01-16T10:36:39.273740"
   },
   {
     "name": "Durham Bulls",
@@ -12672,6 +15799,33 @@
     "geo_country": "US",
     "city_population": 301870,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "DurhamBulls",
+        "url": "https://x.com/DurhamBulls"
+      },
+      {
+        "platform": "instagram",
+        "handle": "durhambulls",
+        "url": "https://www.instagram.com/durhambulls/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "durhambulls",
+        "url": "https://www.facebook.com/durhambulls/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "durhambulls",
+        "url": "https://www.tiktok.com/@durhambulls"
+      },
+      {
+        "platform": "youtube",
+        "handle": "durhambullstv",
+        "url": "https://www.youtube.com/@durhambullstv"
+      }
+    ],
     "followers_x": 88800,
     "followers_instagram": 94000,
     "followers_facebook": 98000,
@@ -12710,7 +15864,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811668"
+    "last_enriched": "2026-01-16T10:36:39.273743"
   },
   {
     "name": "Indianapolis Indians",
@@ -12724,6 +15878,23 @@
     "geo_country": "US",
     "city_population": 891484,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "indyindians",
+        "url": "https://x.com/indyindians"
+      },
+      {
+        "platform": "instagram",
+        "handle": "indyindians",
+        "url": "https://www.instagram.com/indyindians/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "IndianapolisIndians",
+        "url": "https://www.facebook.com/IndianapolisIndians/"
+      }
+    ],
     "followers_x": 89700,
     "followers_instagram": 70000,
     "followers_facebook": 137000,
@@ -12776,7 +15947,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811671"
+    "last_enriched": "2026-01-16T10:36:39.273745"
   },
   {
     "name": "Jacksonville Jumbo Shrimp",
@@ -12790,6 +15961,33 @@
     "geo_country": "US",
     "city_population": 1009833,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "JaxShrimp",
+        "url": "https://x.com/JaxShrimp"
+      },
+      {
+        "platform": "instagram",
+        "handle": "jaxshrimp",
+        "url": "https://www.instagram.com/jaxshrimp/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "jaxshrimp",
+        "url": "https://www.facebook.com/jaxshrimp/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "jaxjumboshrimp",
+        "url": "https://www.tiktok.com/@jaxjumboshrimp"
+      },
+      {
+        "platform": "youtube",
+        "handle": "jaxshrimp",
+        "url": "https://www.youtube.com/@jaxshrimp"
+      }
+    ],
     "followers_x": 44700,
     "followers_instagram": 65000,
     "followers_facebook": 72000,
@@ -12832,7 +16030,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811674"
+    "last_enriched": "2026-01-16T10:36:39.273747"
   },
   {
     "name": "Gwinnett Stripers",
@@ -12846,6 +16044,23 @@
     "geo_country": "US",
     "city_population": 31877,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "gwinnettbraves",
+        "url": "https://x.com/gwinnettbraves"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gwinnettbravs",
+        "url": "https://www.instagram.com/gwinnettbravs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "gwinnettbraves1",
+        "url": "https://www.facebook.com/gwinnettbraves1/"
+      }
+    ],
     "followers_x": 32,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -12868,7 +16083,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811677"
+    "last_enriched": "2026-01-16T10:36:39.273749"
   },
   {
     "name": "Louisville Bats",
@@ -12882,6 +16097,33 @@
     "geo_country": "US",
     "city_population": 640796,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "louisvillebats",
+        "url": "https://www.instagram.com/louisvillebats/"
+      },
+      {
+        "platform": "x",
+        "handle": "LouisvilleBats",
+        "url": "https://x.com/LouisvilleBats"
+      },
+      {
+        "platform": "facebook",
+        "handle": "louisvillebats",
+        "url": "https://www.facebook.com/louisvillebats/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "louisvillebats",
+        "url": "https://www.tiktok.com/@louisvillebats"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": 52300,
     "followers_instagram": 58000,
     "followers_facebook": 83000,
@@ -13097,7 +16339,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811681"
+    "last_enriched": "2026-01-16T10:36:39.273752"
   },
   {
     "name": "Memphis Redbirds",
@@ -13111,6 +16353,23 @@
     "geo_country": "US",
     "city_population": 610919,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "memphisredbirds",
+        "url": "https://x.com/memphisredbirds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "memphisredbirds",
+        "url": "https://www.instagram.com/memphisredbirds/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "MemphisRedbirds",
+        "url": "https://www.facebook.com/MemphisRedbirds/"
+      }
+    ],
     "followers_x": 68400,
     "followers_instagram": 72000,
     "followers_facebook": 87000,
@@ -13132,7 +16391,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811684"
+    "last_enriched": "2026-01-16T10:36:39.273754"
   },
   {
     "name": "Scranton/Wilkes-Barre RailRiders",
@@ -13146,6 +16405,23 @@
     "geo_country": "US",
     "city_population": 75905,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "swbrailriders",
+        "url": "https://x.com/swbrailriders"
+      },
+      {
+        "platform": "instagram",
+        "handle": "swbrailriders",
+        "url": "https://www.instagram.com/swbrailriders/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "swbrailriders",
+        "url": "https://www.facebook.com/swbrailriders/"
+      }
+    ],
     "followers_x": 60800,
     "followers_instagram": 66000,
     "followers_facebook": 63000,
@@ -13167,7 +16443,7 @@
       "geo",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811687"
+    "last_enriched": "2026-01-16T10:36:39.273757"
   },
   {
     "name": "Nashville Sounds",
@@ -13181,6 +16457,33 @@
     "geo_country": "US",
     "city_population": 704963,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nashvillesounds",
+        "url": "https://x.com/nashvillesounds"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nashvillesounds",
+        "url": "https://www.instagram.com/nashvillesounds/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "nashvillesounds",
+        "url": "https://www.facebook.com/nashvillesounds/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nashvillesounds",
+        "url": "https://www.tiktok.com/@nashvillesounds"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NashvilleSoundsBaseballClub",
+        "url": "https://www.youtube.com/@NashvilleSoundsBaseballClub"
+      }
+    ],
     "followers_x": 52100,
     "followers_instagram": 75000,
     "followers_facebook": 100000,
@@ -13240,7 +16543,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811690"
+    "last_enriched": "2026-01-16T10:36:39.273759"
   },
   {
     "name": "Norfolk Tides",
@@ -13254,6 +16557,28 @@
     "geo_country": "US",
     "city_population": 231105,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "NorfolkTides",
+        "url": "https://x.com/NorfolkTides"
+      },
+      {
+        "platform": "instagram",
+        "handle": "norfolktides",
+        "url": "https://www.instagram.com/norfolktides/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "norfolktides",
+        "url": "https://www.facebook.com/norfolktides/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NorfolkTidesClips",
+        "url": "https://www.youtube.com/@NorfolkTidesClips"
+      }
+    ],
     "followers_x": 55800,
     "followers_instagram": 72000,
     "followers_facebook": 89000,
@@ -13291,7 +16616,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811693"
+    "last_enriched": "2026-01-16T10:36:39.273762"
   },
   {
     "name": "Omaha Storm Chasers",
@@ -13305,6 +16630,13 @@
     "geo_country": "US",
     "city_population": 489265,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "OMAStormChasers",
+        "url": "https://x.com/OMAStormChasers"
+      }
+    ],
     "followers_x": 45200,
     "followers_instagram": null,
     "followers_facebook": null,
@@ -13327,7 +16659,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811696"
+    "last_enriched": "2026-01-16T10:36:39.273764"
   },
   {
     "name": "Rochester Red Wings",
@@ -13341,6 +16673,23 @@
     "geo_country": "US",
     "city_population": 207282,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RocRedWings",
+        "url": "https://x.com/RocRedWings"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rocredwings",
+        "url": "https://www.instagram.com/rocredwings/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "RocRedWings",
+        "url": "https://www.facebook.com/RocRedWings/"
+      }
+    ],
     "followers_x": 53200,
     "followers_instagram": 98000,
     "followers_facebook": 55000,
@@ -13367,7 +16716,7 @@
       "website",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811699"
+    "last_enriched": "2026-01-16T10:36:39.273766"
   },
   {
     "name": "St. Paul Saints",
@@ -13381,6 +16730,28 @@
     "geo_country": "US",
     "city_population": 307465,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "StPaulSaints",
+        "url": "https://x.com/StPaulSaints"
+      },
+      {
+        "platform": "instagram",
+        "handle": "stpaulsaints",
+        "url": "https://www.instagram.com/stpaulsaints/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "stpaulsaints",
+        "url": "https://www.facebook.com/stpaulsaints/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 51000,
     "followers_facebook": 89000,
@@ -13422,7 +16793,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811702"
+    "last_enriched": "2026-01-16T10:36:39.273769"
   },
   {
     "name": "Syracuse Mets",
@@ -13436,6 +16807,23 @@
     "geo_country": "US",
     "city_population": 146097,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SyracuseMets",
+        "url": "https://x.com/SyracuseMets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "syracusemets",
+        "url": "https://www.instagram.com/syracusemets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SyracuseMets",
+        "url": "https://www.facebook.com/SyracuseMets/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 58000,
     "followers_facebook": 50000,
@@ -13476,7 +16864,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811705"
+    "last_enriched": "2026-01-16T10:36:39.273771"
   },
   {
     "name": "Toledo Mud Hens",
@@ -13490,6 +16878,23 @@
     "geo_country": "US",
     "city_population": 265638,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "MudHens",
+        "url": "https://x.com/MudHens"
+      },
+      {
+        "platform": "instagram",
+        "handle": "mudhens",
+        "url": "https://www.instagram.com/mudhens/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "mudhens",
+        "url": "https://www.facebook.com/mudhens/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 61000,
     "followers_facebook": 161000,
@@ -13544,7 +16949,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811708"
+    "last_enriched": "2026-01-16T10:36:39.273773"
   },
   {
     "name": "Worcester Red Sox",
@@ -13558,6 +16963,23 @@
     "geo_country": "US",
     "city_population": 211286,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "PawSox",
+        "url": "https://x.com/PawSox"
+      },
+      {
+        "platform": "instagram",
+        "handle": "pawsox",
+        "url": "https://www.instagram.com/pawsox/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "GoPawSox",
+        "url": "https://www.facebook.com/GoPawSox/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 41000,
     "followers_facebook": 106000,
@@ -13608,7 +17030,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811710"
+    "last_enriched": "2026-01-16T10:36:39.273777"
   },
   {
     "name": "Albuquerque Isotopes",
@@ -13622,6 +17044,29 @@
     "geo_country": "US",
     "city_population": 560326,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ABQTopes",
+        "url": "https://x.com/ABQTopes"
+      },
+      {
+        "platform": "facebook",
+        "handle": "abqisotopes",
+        "url": "https://www.facebook.com/abqisotopes/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "abqtopes",
+        "url": "https://www.instagram.com/abqtopes/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCocRTnlp6MSQBH0Z-bvFxLA",
+        "url": "https://www.youtube.com/channel/UCocRTnlp6MSQBH0Z-bvFxLA",
+        "unique_id": "UCocRTnlp6MSQBH0Z-bvFxLA"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 42000,
     "followers_facebook": null,
@@ -13696,7 +17141,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811714"
+    "last_enriched": "2026-01-16T10:36:39.273780"
   },
   {
     "name": "El Paso Chihuahuas",
@@ -13710,6 +17155,28 @@
     "geo_country": "US",
     "city_population": 681723,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "epchihuahuas",
+        "url": "https://x.com/epchihuahuas"
+      },
+      {
+        "platform": "instagram",
+        "handle": "epchihuahuas",
+        "url": "https://www.instagram.com/epchihuahuas/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "epchihuahuas",
+        "url": "https://www.facebook.com/epchihuahuas/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "OfficialEPChihuahuas",
+        "url": "https://www.youtube.com/@OfficialEPChihuahuas"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 117000,
     "followers_facebook": 164000,
@@ -13746,7 +17213,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811718"
+    "last_enriched": "2026-01-16T10:36:39.273782"
   },
   {
     "name": "Las Vegas Aviators",
@@ -13760,6 +17227,28 @@
     "geo_country": "US",
     "city_population": 678922,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "AviatorsLV",
+        "url": "https://x.com/AviatorsLV"
+      },
+      {
+        "platform": "facebook",
+        "handle": "AviatorsLV",
+        "url": "https://www.facebook.com/AviatorsLV/"
+      },
+      {
+        "platform": "instagram",
+        "handle": "aviatorslv",
+        "url": "https://www.instagram.com/aviatorslv/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 57000,
     "followers_facebook": 71000,
@@ -13804,7 +17293,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811721"
+    "last_enriched": "2026-01-16T10:36:39.273785"
   },
   {
     "name": "Oklahoma City Comets",
@@ -13818,6 +17307,33 @@
     "geo_country": "US",
     "city_population": 712919,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "okc_dodgers",
+        "url": "https://x.com/okc_dodgers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "okc_comets",
+        "url": "https://www.instagram.com/okc_comets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "OKCBaseball",
+        "url": "https://www.facebook.com/OKCBaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "okc_comets",
+        "url": "https://www.tiktok.com/@okc_comets"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 81000,
     "followers_facebook": null,
@@ -13890,7 +17406,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811724"
+    "last_enriched": "2026-01-16T10:36:39.273787"
   },
   {
     "name": "Reno Aces",
@@ -13904,6 +17420,28 @@
     "geo_country": "US",
     "city_population": 281714,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Aces",
+        "url": "https://x.com/Aces"
+      },
+      {
+        "platform": "instagram",
+        "handle": "renoaces",
+        "url": "https://www.instagram.com/renoaces/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "RenoAces",
+        "url": "https://www.facebook.com/RenoAces/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 50000,
     "followers_facebook": 71000,
@@ -13943,7 +17481,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811727"
+    "last_enriched": "2026-01-16T10:36:39.273789"
   },
   {
     "name": "Round Rock Express",
@@ -13957,6 +17495,23 @@
     "geo_country": "US",
     "city_population": 135359,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RRExpress",
+        "url": "https://x.com/RRExpress"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rrexpress",
+        "url": "https://www.instagram.com/rrexpress/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "ExpressBaseball",
+        "url": "https://www.facebook.com/ExpressBaseball/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 45000,
     "followers_facebook": 84000,
@@ -14038,7 +17593,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811730"
+    "last_enriched": "2026-01-16T10:36:39.273792"
   },
   {
     "name": "Sacramento River Cats",
@@ -14052,6 +17607,33 @@
     "geo_country": "US",
     "city_population": 535798,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RiverCats",
+        "url": "https://x.com/RiverCats"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rivercats",
+        "url": "https://www.instagram.com/rivercats/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "rivercatsbaseball",
+        "url": "https://www.facebook.com/rivercatsbaseball/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "therivercats",
+        "url": "https://www.tiktok.com/@therivercats"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 69000,
     "followers_facebook": 106000,
@@ -14122,7 +17704,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811733"
+    "last_enriched": "2026-01-16T10:36:39.273794"
   },
   {
     "name": "Salt Lake Bees",
@@ -14136,6 +17718,23 @@
     "geo_country": "US",
     "city_population": 217783,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SaltLakeBees",
+        "url": "https://x.com/SaltLakeBees"
+      },
+      {
+        "platform": "instagram",
+        "handle": "saltlakebees",
+        "url": "https://www.instagram.com/saltlakebees/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SaltLakeBees",
+        "url": "https://www.facebook.com/SaltLakeBees/"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 63000,
     "followers_facebook": 71000,
@@ -14158,7 +17757,7 @@
       "sponsor",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811737"
+    "last_enriched": "2026-01-16T10:36:39.273796"
   },
   {
     "name": "Sugar Land Space Cowboys",
@@ -14172,6 +17771,34 @@
     "geo_country": "US",
     "city_population": 109851,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "instagram",
+        "handle": "slspacecowboys",
+        "url": "https://www.instagram.com/slspacecowboys/"
+      },
+      {
+        "platform": "x",
+        "handle": "slspacecowboys",
+        "url": "https://x.com/slspacecowboys"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SLSpaceCowboys",
+        "url": "https://www.facebook.com/SLSpaceCowboys/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "slspacecowboys",
+        "url": "https://www.tiktok.com/@slspacecowboys"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCFKJ07fMCsg30Fm5kavwWDw",
+        "url": "https://www.youtube.com/channel/UCFKJ07fMCsg30Fm5kavwWDw",
+        "unique_id": "UCFKJ07fMCsg30Fm5kavwWDw"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 68000,
     "followers_facebook": 96000,
@@ -14225,7 +17852,7 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811740"
+    "last_enriched": "2026-01-16T10:36:39.273799"
   },
   {
     "name": "Tacoma Rainiers",
@@ -14239,6 +17866,33 @@
     "geo_country": "US",
     "city_population": 228202,
     "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RainiersLand",
+        "url": "https://x.com/RainiersLand"
+      },
+      {
+        "platform": "instagram",
+        "handle": "tacomarainiers",
+        "url": "https://www.instagram.com/tacomarainiers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "TacomaRainiers",
+        "url": "https://www.facebook.com/TacomaRainiers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "tacomarainiers",
+        "url": "https://www.tiktok.com/@tacomarainiers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "mlb",
+        "url": "https://www.youtube.com/@mlb"
+      }
+    ],
     "followers_x": null,
     "followers_instagram": 61000,
     "followers_facebook": 82000,
@@ -14379,6 +18033,6 @@
       "brand",
       "social"
     ],
-    "last_enriched": "2026-01-16T07:42:22.811743"
+    "last_enriched": "2026-01-16T10:36:39.273801"
   }
 ]
