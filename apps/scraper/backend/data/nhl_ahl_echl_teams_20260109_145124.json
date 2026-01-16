@@ -1,0 +1,875 @@
+[
+  {
+    "name": "Anaheim Ducks",
+    "region": "Anaheim",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Anaheim, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/ducks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg"
+  },
+  {
+    "name": "Boston Bruins",
+    "region": "Boston",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Boston, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/bruins",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg"
+  },
+  {
+    "name": "Buffalo Sabres",
+    "region": "Buffalo",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Buffalo, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/sabres",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg"
+  },
+  {
+    "name": "Calgary Flames",
+    "region": "Calgary",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Calgary, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/flames",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg"
+  },
+  {
+    "name": "Carolina Hurricanes",
+    "region": "Carolina",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Carolina, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/hurricanes",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg"
+  },
+  {
+    "name": "Chicago Blackhawks",
+    "region": "Chicago",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Chicago, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/blackhawks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg"
+  },
+  {
+    "name": "Colorado Avalanche",
+    "region": "Colorado",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Colorado, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/avalanche",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg"
+  },
+  {
+    "name": "Columbus Blue Jackets",
+    "region": "Columbus",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Columbus, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/bluejackets",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg"
+  },
+  {
+    "name": "Dallas Stars",
+    "region": "Dallas",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Dallas, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/stars",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg"
+  },
+  {
+    "name": "Detroit Red Wings",
+    "region": "Detroit",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Detroit, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/redwings",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg"
+  },
+  {
+    "name": "Edmonton Oilers",
+    "region": "Edmonton",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Edmonton, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/oilers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg"
+  },
+  {
+    "name": "Florida Panthers",
+    "region": "Florida",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Florida, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/panthers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg"
+  },
+  {
+    "name": "Los Angeles Kings",
+    "region": "Los Angeles",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Los Angeles, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/kings",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg"
+  },
+  {
+    "name": "Minnesota Wild",
+    "region": "Minnesota",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Minnesota, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/wild",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg"
+  },
+  {
+    "name": "Montréal Canadiens",
+    "region": "Montréal",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Montréal, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/canadiens",
+    "category": "Major",
+    "logo_url": null
+  },
+  {
+    "name": "Nashville Predators",
+    "region": "Nashville",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Nashville, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/predators",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg"
+  },
+  {
+    "name": "New Jersey Devils",
+    "region": "New Jersey",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around New Jersey, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/devils",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg"
+  },
+  {
+    "name": "New York Islanders",
+    "region": "New York",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around New York, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/islanders",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg"
+  },
+  {
+    "name": "New York Rangers",
+    "region": "New York",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around New York, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/rangers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg"
+  },
+  {
+    "name": "Ottawa Senators",
+    "region": "Ottawa",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Ottawa, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/senators",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg"
+  },
+  {
+    "name": "Philadelphia Flyers",
+    "region": "Philadelphia",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Philadelphia, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/flyers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg"
+  },
+  {
+    "name": "Pittsburgh Penguins",
+    "region": "Pittsburgh",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Pittsburgh, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/penguins",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg"
+  },
+  {
+    "name": "San Jose Sharks",
+    "region": "San Jose",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around San Jose, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/sharks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg"
+  },
+  {
+    "name": "Seattle Kraken",
+    "region": "Seattle",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Seattle, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/kraken",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg"
+  },
+  {
+    "name": "St. Louis Blues",
+    "region": "St. Louis",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around St. Louis, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/blues",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg"
+  },
+  {
+    "name": "Tampa Bay Lightning",
+    "region": "Tampa Bay",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Tampa Bay, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/lightning",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg"
+  },
+  {
+    "name": "Toronto Maple Leafs",
+    "region": "Toronto",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Toronto, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/mapleleafs",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg"
+  },
+  {
+    "name": "Utah Mammoth",
+    "region": "Utah",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Utah, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/utah",
+    "category": "Major",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/utah.png"
+  },
+  {
+    "name": "Vancouver Canucks",
+    "region": "Vancouver",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Vancouver, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/canucks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg"
+  },
+  {
+    "name": "Vegas Golden Knights",
+    "region": "Vegas",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Vegas, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/goldenknights",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg"
+  },
+  {
+    "name": "Washington Capitals",
+    "region": "Washington",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Washington, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/capitals",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/WSH_light.svg"
+  },
+  {
+    "name": "Winnipeg Jets",
+    "region": "Winnipeg",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Winnipeg, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/jets",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg"
+  },
+  {
+    "name": "Abbotsford Canucks",
+    "region": "Abbotsford",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Abbotsford.",
+    "official_url": "http://abbotsford.canucks.com",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/abb1200.png"
+  },
+  {
+    "name": "Bakersfield Condors",
+    "region": "Bakersfield",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Bakersfield.",
+    "official_url": "http://www.bakersfieldcondors.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/bak1200.png"
+  },
+  {
+    "name": "Belleville Senators",
+    "region": "Belleville",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Belleville.",
+    "official_url": "http://www.bellevillesens.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/bel1200.png"
+  },
+  {
+    "name": "Bridgeport Islanders",
+    "region": "Bridgeport",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Bridgeport.",
+    "official_url": "http://www.bridgeportislanders.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2024/07/bri1200.png"
+  },
+  {
+    "name": "Calgary Wranglers",
+    "region": "Calgary",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Calgary.",
+    "official_url": "https://calgarywranglers.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/cgy1200.png"
+  },
+  {
+    "name": "Charlotte Checkers",
+    "region": "Charlotte",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Charlotte.",
+    "official_url": "http://www.charlottecheckers.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/clt1200.png"
+  },
+  {
+    "name": "Chicago Wolves",
+    "region": "Chicago",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Chicago.",
+    "official_url": "http://www.chicagowolves.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/chi1200.png"
+  },
+  {
+    "name": "Cleveland Monsters",
+    "region": "Cleveland",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Cleveland.",
+    "official_url": "http://www.clevelandmonsters.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/cle1200.png"
+  },
+  {
+    "name": "Coachella Valley Firebirds",
+    "region": "Coachella Valley",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Coachella Valley.",
+    "official_url": "http://www.cvfirebirds.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/cv1200.png"
+  },
+  {
+    "name": "Colorado Eagles",
+    "region": "Colorado",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Colorado.",
+    "official_url": "http://www.coloradoeagles.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/col1200.png"
+  },
+  {
+    "name": "Grand Rapids Griffins",
+    "region": "Grand Rapids",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Grand Rapids.",
+    "official_url": "http://www.griffinshockey.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/gr1200.png"
+  },
+  {
+    "name": "Hartford Wolf Pack",
+    "region": "Hartford",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Hartford.",
+    "official_url": "http://www.hartfordwolfpack.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/hfd1200.png"
+  },
+  {
+    "name": "Henderson Silver Knights",
+    "region": "Henderson",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Henderson.",
+    "official_url": "https://hendersonsilverknights.com//",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/hsk1200.png"
+  },
+  {
+    "name": "Hershey Bears",
+    "region": "Hershey",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Hershey.",
+    "official_url": "http://www.hersheybears.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/her1200.png"
+  },
+  {
+    "name": "Iowa Wild",
+    "region": "Iowa",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Iowa.",
+    "official_url": "http://www.iowawild.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/ia1200.png"
+  },
+  {
+    "name": "Laval Rocket",
+    "region": "Laval",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Laval.",
+    "official_url": "http://www.rocketlaval.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/lav1200.png"
+  },
+  {
+    "name": "Lehigh Valley Phantoms",
+    "region": "Lehigh Valley",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Lehigh Valley.",
+    "official_url": "http://www.wbspenguins.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/lv1200.png"
+  },
+  {
+    "name": "Manitoba Moose",
+    "region": "Manitoba",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Manitoba.",
+    "official_url": "http://www.moosehockey.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/mb1200.png"
+  },
+  {
+    "name": "Milwaukee Admirals",
+    "region": "Milwaukee",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Milwaukee.",
+    "official_url": "http://www.milwaukeeadmirals.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/mil1200.png"
+  },
+  {
+    "name": "Ontario Reign",
+    "region": "Ontario",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Ontario.",
+    "official_url": "http://www.ontarioreign.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/ont1200.png"
+  },
+  {
+    "name": "Providence Bruins",
+    "region": "Providence",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Providence.",
+    "official_url": "http://www.providencebruins.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/pro1200.png"
+  },
+  {
+    "name": "Rochester Americans",
+    "region": "Rochester",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Rochester.",
+    "official_url": "http://www.amerks.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/roc1200.png"
+  },
+  {
+    "name": "Rockford IceHogs",
+    "region": "Rockford",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Rockford.",
+    "official_url": "http://www.icehogs.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/rfd1200.png"
+  },
+  {
+    "name": "San Diego Gulls",
+    "region": "San Diego",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around San Diego.",
+    "official_url": "http://www.sandiegogulls.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/sd1200.png"
+  },
+  {
+    "name": "San Jose Barracuda",
+    "region": "San Jose",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around San Jose.",
+    "official_url": "http://www.sjbarracuda.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2024/09/sj_1200.png"
+  },
+  {
+    "name": "Springfield Thunderbirds",
+    "region": "Springfield",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Springfield.",
+    "official_url": "http://www.springfieldthunderbirds.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/spr1200.png"
+  },
+  {
+    "name": "Syracuse Crunch",
+    "region": "Syracuse",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Syracuse.",
+    "official_url": "http://www.syracusecrunch.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/syr1200.png"
+  },
+  {
+    "name": "Texas Stars",
+    "region": "Texas",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Texas.",
+    "official_url": "http://www.texasstars.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/tex1200.png"
+  },
+  {
+    "name": "Toronto Marlies",
+    "region": "Toronto",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Toronto.",
+    "official_url": "http://www.marlies.ca/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/tor1200.png"
+  },
+  {
+    "name": "Tucson Roadrunners",
+    "region": "Tucson",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Tucson.",
+    "official_url": "http://www.tucsonroadrunners.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2025/07/tuc1200.png"
+  },
+  {
+    "name": "Utica Comets",
+    "region": "Utica",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Utica.",
+    "official_url": "http://www.uticacomets.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/utc1200.png"
+  },
+  {
+    "name": "Wilkes-Barre/Scranton Penguins",
+    "region": "Wilkes-Barre/Scranton",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Wilkes-Barre/Scranton.",
+    "official_url": "http://www.wbspenguins.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/wbs1200.png"
+  },
+  {
+    "name": "Adirondack Thunder",
+    "region": "Adirondack",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Adirondack.",
+    "official_url": "https://echlthunder.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/74.png"
+  },
+  {
+    "name": "Allen Americans",
+    "region": "Allen",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Allen.",
+    "official_url": "https://allenamericans.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/66.png"
+  },
+  {
+    "name": "Atlanta Gladiators",
+    "region": "Atlanta",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Atlanta.",
+    "official_url": "https://atlantagladiators.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/10.png"
+  },
+  {
+    "name": "Bloomington Bison",
+    "region": "Bloomington",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Bloomington.",
+    "official_url": "https://bloomingtonbisonhockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/107.png"
+  },
+  {
+    "name": "Cincinnati Cyclones",
+    "region": "Cincinnati",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Cincinnati.",
+    "official_url": "https://cycloneshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/5.png"
+  },
+  {
+    "name": "Florida Everblades",
+    "region": "Florida",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Florida.",
+    "official_url": "https://floridaeverblades.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/8.png"
+  },
+  {
+    "name": "Fort Wayne Komets",
+    "region": "Fort Wayne",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Fort Wayne.",
+    "official_url": "https://komets.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/60.png"
+  },
+  {
+    "name": "Future Markets",
+    "region": "Future",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Future.",
+    "official_url": "https://echl.com/teams/future-markets",
+    "category": "Minor",
+    "logo_url": null
+  },
+  {
+    "name": "Greensboro Gargoyles",
+    "region": "Greensboro",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Greensboro.",
+    "official_url": "https://gargoyleshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/108.png"
+  },
+  {
+    "name": "Greenville Swamp Rabbits",
+    "region": "Greenville",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Greenville.",
+    "official_url": "https://swamprabbits.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/52.png"
+  },
+  {
+    "name": "Idaho Steelheads",
+    "region": "Idaho",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Idaho.",
+    "official_url": "https://idahosteelheads.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/11.png"
+  },
+  {
+    "name": "Indy Fuel",
+    "region": "Indy",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Indy.",
+    "official_url": "https://indyfuelhockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/65.png"
+  },
+  {
+    "name": "Iowa Heartlanders",
+    "region": "Iowa",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Iowa.",
+    "official_url": "https://iowaheartlanders.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/98.png"
+  },
+  {
+    "name": "Jacksonville Icemen",
+    "region": "Jacksonville",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Jacksonville.",
+    "official_url": "https://jacksonvilleicemen.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/79.png"
+  },
+  {
+    "name": "Kalamazoo Wings",
+    "region": "Kalamazoo",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Kalamazoo.",
+    "official_url": "https://kwings.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/50.png"
+  },
+  {
+    "name": "Kansas City Mavericks",
+    "region": "Kansas City",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Kansas City.",
+    "official_url": "https://kcmavericks.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/68.png"
+  },
+  {
+    "name": "Maine Mariners",
+    "region": "Maine",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Maine.",
+    "official_url": "https://marinersofmaine.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/82.png"
+  },
+  {
+    "name": "NHL/AHL Affiliates",
+    "region": "NHL/AHL",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around NHL/AHL.",
+    "official_url": "https://echl.com/teams/nhl-ahl-affiliations",
+    "category": "Minor",
+    "logo_url": null
+  },
+  {
+    "name": "Norfolk Admirals",
+    "region": "Norfolk",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Norfolk.",
+    "official_url": "https://norfolkadmirals.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/76.png"
+  },
+  {
+    "name": "Orlando Solar Bears",
+    "region": "Orlando",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Orlando.",
+    "official_url": "https://orlandosolarbearshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/61.png"
+  },
+  {
+    "name": "Rapid City Rush",
+    "region": "Rapid City",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Rapid City.",
+    "official_url": "https://rapidcityrush.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/70.png"
+  },
+  {
+    "name": "Reading Royals",
+    "region": "Reading",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Reading.",
+    "official_url": "https://royalshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/17.png"
+  },
+  {
+    "name": "Savannah Ghost Pirates",
+    "region": "Savannah Ghost",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Savannah Ghost.",
+    "official_url": "https://ghostpirateshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/102.png"
+  },
+  {
+    "name": "South Carolina Stingrays",
+    "region": "South Carolina",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around South Carolina.",
+    "official_url": "https://stingrayshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/18.png"
+  },
+  {
+    "name": "Tahoe Knight Monsters",
+    "region": "Tahoe",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Tahoe.",
+    "official_url": "https://knightmonstershockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/106.png"
+  },
+  {
+    "name": "Team Map",
+    "region": "Team",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Team.",
+    "official_url": "https://echl.com/teams/map",
+    "category": "Minor",
+    "logo_url": null
+  },
+  {
+    "name": "Toledo Walleye",
+    "region": "Toledo",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Toledo.",
+    "official_url": "https://toledowalleye.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/21.png"
+  },
+  {
+    "name": "Trois-Rivières Lions",
+    "region": "Trois-Rivières",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Trois-Rivières.",
+    "official_url": "https://lions3r.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/99.png"
+  },
+  {
+    "name": "Tulsa Oilers",
+    "region": "Tulsa",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Tulsa.",
+    "official_url": "https://tulsaoilers.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/71.png"
+  },
+  {
+    "name": "Utah Grizzlies",
+    "region": "Utah",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Utah.",
+    "official_url": "https://utahgrizzlies.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/23.png"
+  },
+  {
+    "name": "Wheeling Nailers",
+    "region": "Wheeling",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Wheeling.",
+    "official_url": "https://wheelingnailers.com",
+    "category": "Minor",
+    "logo_url": null
+  },
+  {
+    "name": "Wichita Thunder",
+    "region": "Wichita",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Wichita.",
+    "official_url": "https://wichitathunder.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/72.png"
+  },
+  {
+    "name": "Worcester Railers",
+    "region": "Worcester",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Worcester.",
+    "official_url": "https://railershc.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/77.png"
+  }
+]

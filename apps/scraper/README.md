@@ -117,3 +117,7 @@ Scraped data is saved to `backend/data/` as:
 - Pandas
 - Requests
 
+
+# Setup
+
+Create profile on https://apikeys.datacommons.org/

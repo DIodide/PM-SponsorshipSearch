@@ -1,0 +1,3976 @@
+[
+  {
+    "name": "Austin Spurs",
+    "region": "Austin",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Austin.",
+    "official_url": "https://austin.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709890/primary/L/logo.svg",
+    "geo_city": "Austin",
+    "geo_country": "US",
+    "city_population": 993588,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "austin_spurs",
+        "url": "https://x.com/austin_spurs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "austin_spurs",
+        "url": "https://www.instagram.com/austin_spurs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "austinspurs",
+        "url": "https://www.facebook.com/austinspurs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCPJekLobaHSbEJRu3pVrUZg",
+        "url": "https://www.youtube.com/channel/UCPJekLobaHSbEJRu3pVrUZg",
+        "unique_id": "UCPJekLobaHSbEJRu3pVrUZg"
+      }
+    ],
+    "followers_x": 23900,
+    "followers_instagram": 77000,
+    "followers_facebook": 140000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Cedar Park Center",
+    "sponsors": [
+      {
+        "name": "H-E-B",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474048"
+  },
+  {
+    "name": "Birmingham Squadron",
+    "region": "Birmingham",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Birmingham.",
+    "official_url": "https://birmingham.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709913/primary/L/logo.svg",
+    "geo_city": "Birmingham",
+    "geo_country": "US",
+    "city_population": 196357,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ErieBayHawks",
+        "url": "https://x.com/ErieBayHawks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "birminghamsquadron",
+        "url": "https://www.instagram.com/birminghamsquadron/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "tr",
+        "url": "https://www.facebook.com/tr/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "gleaguesquadron",
+        "url": "https://www.tiktok.com/@gleaguesquadron"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC3An3MA0Zx5fz6oXNea8Ukw",
+        "url": "https://www.youtube.com/channel/UC3An3MA0Zx5fz6oXNea8Ukw",
+        "unique_id": "UC3An3MA0Zx5fz6oXNea8Ukw"
+      }
+    ],
+    "followers_x": 13500,
+    "followers_instagram": 20000,
+    "followers_facebook": null,
+    "followers_tiktok": 1365,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Mascot Programs"
+    ],
+    "owns_stadium": null,
+    "stadium_name": "Erie Insurance Arena",
+    "sponsors": [
+      {
+        "name": "Children's Hospital",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Non-Alcoholic Beverage",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Animation Partner",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Vodka",
+        "category": "Beverage",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474060"
+  },
+  {
+    "name": "Capital City Go-Go",
+    "region": "Capital City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Capital City.",
+    "official_url": "https://capitalcity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709928/primary/L/logo.svg",
+    "geo_city": "Washington",
+    "geo_country": "US",
+    "city_population": 702250,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "CapitalCityGoGo",
+        "url": "https://x.com/CapitalCityGoGo"
+      },
+      {
+        "platform": "instagram",
+        "handle": "capitalcitygogo",
+        "url": "https://www.instagram.com/capitalcitygogo/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "CapitalCityGoGo",
+        "url": "https://www.facebook.com/CapitalCityGoGo/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "capitalcitygogo",
+        "url": "https://www.tiktok.com/@capitalcitygogo"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC2gzHv1GApHqolSOc5HdLfQ",
+        "url": "https://www.youtube.com/channel/UC2gzHv1GApHqolSOc5HdLfQ",
+        "unique_id": "UC2gzHv1GApHqolSOc5HdLfQ"
+      }
+    ],
+    "followers_x": 8543,
+    "followers_instagram": 23000,
+    "followers_facebook": 7100,
+    "followers_tiktok": 35700,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": null,
+    "sponsors": [
+      {
+        "name": "Monumental Sports & Entertainment",
+        "category": "Sports & Entertainment",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "MedStar Health",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474062"
+  },
+  {
+    "name": "Cleveland Charge",
+    "region": "Cleveland",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Cleveland.",
+    "official_url": "https://cleveland.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709893/primary/L/logo.svg",
+    "geo_city": "Cleveland",
+    "geo_country": "US",
+    "city_population": 365379,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "chargecle",
+        "url": "https://x.com/chargecle"
+      },
+      {
+        "platform": "instagram",
+        "handle": "chargecle",
+        "url": "https://www.instagram.com/chargecle/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "chargecle",
+        "url": "https://www.facebook.com/chargecle/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "chargecle",
+        "url": "https://www.tiktok.com/@chargecle"
+      },
+      {
+        "platform": "youtube",
+        "handle": "ChargeCLE",
+        "url": "https://www.youtube.com/@ChargeCLE"
+      }
+    ],
+    "followers_x": 18100,
+    "followers_instagram": 47000,
+    "followers_facebook": 36000,
+    "followers_tiktok": 10700,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Family Pack"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Wolstein Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474064"
+  },
+  {
+    "name": "College Park Skyhawks",
+    "region": "College Park",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around College Park.",
+    "official_url": "https://cpskyhawks.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709929/primary/L/logo.svg",
+    "geo_city": "Atlanta",
+    "geo_country": "US",
+    "city_population": 520070,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "CPSkyhawks",
+        "url": "https://x.com/CPSkyhawks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "cpskyhawks",
+        "url": "https://www.instagram.com/cpskyhawks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "CollegeParkSkyhawks",
+        "url": "https://www.facebook.com/CollegeParkSkyhawks/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCACj41Rh194gkf5aYaV2Dkg",
+        "url": "https://www.youtube.com/channel/UCACj41Rh194gkf5aYaV2Dkg",
+        "unique_id": "UCACj41Rh194gkf5aYaV2Dkg"
+      }
+    ],
+    "followers_x": 6815,
+    "followers_instagram": 33000,
+    "followers_facebook": 7000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Youth Academy"
+    ],
+    "owns_stadium": true,
+    "stadium_name": "Gateway Center Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474065"
+  },
+  {
+    "name": "Delaware Blue Coats",
+    "region": "Delaware",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Delaware.",
+    "official_url": "https://bluecoats.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709909/primary/L/logo.svg",
+    "geo_city": "Wilmington",
+    "geo_country": "US",
+    "city_population": 73176,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "blue_coats",
+        "url": "https://x.com/blue_coats"
+      },
+      {
+        "platform": "instagram",
+        "handle": "delawarebluecoats",
+        "url": "https://www.instagram.com/delawarebluecoats/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DelawareBlueCoats",
+        "url": "https://www.facebook.com/DelawareBlueCoats/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC17_dEsLhxyitJVvUtOlwMw",
+        "url": "https://www.youtube.com/channel/UC17_dEsLhxyitJVvUtOlwMw",
+        "unique_id": "UC17_dEsLhxyitJVvUtOlwMw"
+      }
+    ],
+    "followers_x": 19700,
+    "followers_instagram": 44000,
+    "followers_facebook": 19000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "76ers Fieldhouse",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474066"
+  },
+  {
+    "name": "Grand Rapids Gold",
+    "region": "Grand Rapids",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Grand Rapids.",
+    "official_url": "https://grandrapids.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709917/primary/L/logo.svg",
+    "geo_city": "Grand Rapids",
+    "geo_country": "US",
+    "city_population": 200117,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "NBAGrandRapids",
+        "url": "https://x.com/NBAGrandRapids"
+      },
+      {
+        "platform": "instagram",
+        "handle": "grandrapidsgold",
+        "url": "https://www.instagram.com/grandrapidsgold/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "tr",
+        "url": "https://www.facebook.com/tr/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "grandrapidsgold",
+        "url": "https://www.tiktok.com/@grandrapidsgold"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC6x_v3O7tZD4G2bllyaUHXQ",
+        "url": "https://www.youtube.com/channel/UC6x_v3O7tZD4G2bllyaUHXQ",
+        "unique_id": "UC6x_v3O7tZD4G2bllyaUHXQ"
+      }
+    ],
+    "followers_x": 13500,
+    "followers_instagram": 37000,
+    "followers_facebook": null,
+    "followers_tiktok": 3682,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "DeltaPlex Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474067"
+  },
+  {
+    "name": "Greensboro Swarm",
+    "region": "Greensboro",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Greensboro.",
+    "official_url": "https://greensboro.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709922/primary/L/logo.svg",
+    "geo_city": "Greensboro",
+    "geo_country": "US",
+    "city_population": 307381,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "plan",
+        "url": "https://x.com/plan"
+      },
+      {
+        "platform": "instagram",
+        "handle": "greensboroswarm",
+        "url": "https://www.instagram.com/greensboroswarm/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "greensboroswarm",
+        "url": "https://www.facebook.com/greensboroswarm/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "nbagleague",
+        "url": "https://www.youtube.com/@nbagleague"
+      }
+    ],
+    "followers_x": null,
+    "followers_instagram": 42000,
+    "followers_facebook": 16000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 1,
+    "family_program_types": [
+      "Kids Club"
+    ],
+    "owns_stadium": null,
+    "stadium_name": "Greensboro Coliseum Complex",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474069"
+  },
+  {
+    "name": "Iowa Wolves",
+    "region": "Iowa",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Iowa.",
+    "official_url": "https://iowa.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709911/primary/L/logo.svg",
+    "geo_city": "Des Moines",
+    "geo_country": "US",
+    "city_population": 213096,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "iawolves",
+        "url": "https://x.com/iawolves"
+      },
+      {
+        "platform": "instagram",
+        "handle": "iawolves",
+        "url": "https://www.instagram.com/iawolves/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCvJv1lr3zb_s3ePk7ECQO7Q",
+        "url": "https://www.youtube.com/channel/UCvJv1lr3zb_s3ePk7ECQO7Q",
+        "unique_id": "UCvJv1lr3zb_s3ePk7ECQO7Q"
+      }
+    ],
+    "followers_x": 21100,
+    "followers_instagram": 38000,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Birthday Party",
+      "Family Pack",
+      "Youth Night"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Casey's Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474070"
+  },
+  {
+    "name": "Long Island Nets",
+    "region": "Long Island",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Long Island.",
+    "official_url": "https://longisland.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709921/primary/L/logo.svg",
+    "geo_city": "Hempstead",
+    "geo_country": "US",
+    "city_population": 31321,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "LongIslandNets",
+        "url": "https://x.com/LongIslandNets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "longislandnets",
+        "url": "https://www.instagram.com/longislandnets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "LongIslandNets",
+        "url": "https://www.facebook.com/LongIslandNets/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCL4hbEfrgnmoUOU_OU3vZig",
+        "url": "https://www.youtube.com/channel/UCL4hbEfrgnmoUOU_OU3vZig",
+        "unique_id": "UCL4hbEfrgnmoUOU_OU3vZig"
+      }
+    ],
+    "followers_x": 11000,
+    "followers_instagram": 29000,
+    "followers_facebook": 7500,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Birthday Party",
+      "Youth Night"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Barclays Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474071"
+  },
+  {
+    "name": "Maine Celtics",
+    "region": "Maine",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Maine.",
+    "official_url": "https://maine.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709915/primary/L/logo.svg",
+    "geo_city": "Portland",
+    "geo_country": "US",
+    "city_population": 69568,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "maineredclaws",
+        "url": "https://x.com/maineredclaws"
+      },
+      {
+        "platform": "instagram",
+        "handle": "maineredclaws",
+        "url": "https://www.instagram.com/maineredclaws/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "maineredclaws",
+        "url": "https://www.facebook.com/maineredclaws/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC86sn3BD4JZ1rFPQJts5TOg",
+        "url": "https://www.youtube.com/channel/UC86sn3BD4JZ1rFPQJts5TOg",
+        "unique_id": "UC86sn3BD4JZ1rFPQJts5TOg"
+      }
+    ],
+    "followers_x": 23,
+    "followers_instagram": 394,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Birthday Party",
+      "Summer Camp",
+      "Youth Academy"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Portland Exposition Building",
+    "sponsors": [
+      {
+        "name": "Martin's Point",
+        "category": "Healthcare",
+        "asset_type": "Presenting Sponsor"
+      },
+      {
+        "name": "Maine Lottery",
+        "category": "Other",
+        "asset_type": "Presenting Sponsor"
+      },
+      {
+        "name": "McDonald's",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474072"
+  },
+  {
+    "name": "Memphis Hustle",
+    "region": "Memphis",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Memphis.",
+    "official_url": "https://memphis.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709926/primary/L/logo.svg",
+    "geo_city": "Memphis",
+    "geo_country": "US",
+    "city_population": 610919,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "MemphisHustle",
+        "url": "https://x.com/MemphisHustle"
+      },
+      {
+        "platform": "instagram",
+        "handle": "memphishustle",
+        "url": "https://www.instagram.com/memphishustle/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "MemphisHustle",
+        "url": "https://www.facebook.com/MemphisHustle/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "memphishustle",
+        "url": "https://www.tiktok.com/@memphishustle"
+      },
+      {
+        "platform": "youtube",
+        "handle": "memphishustle",
+        "url": "https://www.youtube.com/@memphishustle"
+      }
+    ],
+    "followers_x": 27100,
+    "followers_instagram": 42000,
+    "followers_facebook": 13000,
+    "followers_tiktok": 19000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Lander's Center",
+    "sponsors": [
+      {
+        "name": "Campbell Clinic",
+        "category": "Healthcare",
+        "asset_type": "Presenting Sponsor"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474073"
+  },
+  {
+    "name": "Mexico City Capitanes",
+    "region": "Mexico City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Mexico City.",
+    "official_url": "https://capitanes.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709931/primary/L/logo.svg",
+    "geo_city": "Mexico City",
+    "geo_country": "MX",
+    "city_population": null,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nbagleague",
+        "url": "https://x.com/nbagleague"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nbagleague",
+        "url": "https://www.instagram.com/nbagleague/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "nbagleague",
+        "url": "https://www.facebook.com/nbagleague/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "nbagleague",
+        "url": "https://www.youtube.com/@nbagleague"
+      }
+    ],
+    "followers_x": 408000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 1400000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": null,
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474074"
+  },
+  {
+    "name": "Motor City Cruise",
+    "region": "Motor City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Motor City.",
+    "official_url": "https://detroit.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709932/primary/L/logo.svg",
+    "geo_city": "Detroit",
+    "geo_country": "US",
+    "city_population": 645705,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nazsuns",
+        "url": "https://x.com/nazsuns"
+      },
+      {
+        "platform": "instagram",
+        "handle": "motorcitycruise",
+        "url": "https://www.instagram.com/motorcitycruise/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "MotorCityCruise",
+        "url": "https://www.facebook.com/MotorCityCruise/"
+      }
+    ],
+    "followers_x": 5103,
+    "followers_instagram": 25000,
+    "followers_facebook": 8700,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 3,
+    "family_program_types": [
+      "Birthday Party",
+      "Family Pack",
+      "Youth Night"
+    ],
+    "owns_stadium": null,
+    "stadium_name": "Wayne State Arena",
+    "sponsors": [
+      {
+        "name": "Lucky Seat",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474077"
+  },
+  {
+    "name": "Noblesville Boom",
+    "region": "Noblesville",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Noblesville.",
+    "official_url": "https://noblesville.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709910/primary/L/logo.svg",
+    "geo_city": "Indianapolis",
+    "geo_country": "US",
+    "city_population": 891484,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "noblesvilleboom",
+        "url": "https://x.com/noblesvilleboom"
+      },
+      {
+        "platform": "instagram",
+        "handle": "noblesvilleboom",
+        "url": "https://www.instagram.com/noblesvilleboom/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "noblesvilleboom",
+        "url": "https://www.facebook.com/noblesvilleboom/"
+      }
+    ],
+    "followers_x": 21100,
+    "followers_instagram": 38000,
+    "followers_facebook": 27000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "The Arena at Innovation Mile",
+    "sponsors": [
+      {
+        "name": "Indiana Pacers",
+        "category": "Sports",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Indiana Fever",
+        "category": "Sports",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Gainbridge Fieldhouse",
+        "category": "Venue",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474079"
+  },
+  {
+    "name": "Oklahoma City Blue",
+    "region": "Oklahoma City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Oklahoma City.",
+    "official_url": "https://oklahomacity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709889/primary/L/logo.svg",
+    "geo_city": "Oklahoma City",
+    "geo_country": "US",
+    "city_population": 712919,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "okcblue",
+        "url": "https://x.com/okcblue"
+      },
+      {
+        "platform": "instagram",
+        "handle": "okcblue",
+        "url": "https://www.instagram.com/okcblue/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "OKCBlue",
+        "url": "https://www.facebook.com/OKCBlue/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "nbagleague",
+        "url": "https://www.youtube.com/@nbagleague"
+      }
+    ],
+    "followers_x": 23400,
+    "followers_instagram": 67000,
+    "followers_facebook": 21000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Cox Convention Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474080"
+  },
+  {
+    "name": "Osceola Magic",
+    "region": "Osceola",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Osceola.",
+    "official_url": "https://osceola.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709925/primary/L/logo.svg",
+    "geo_city": "Kissimmee",
+    "geo_country": "US",
+    "city_population": 84756,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "osceolaMagic",
+        "url": "https://x.com/osceolaMagic"
+      },
+      {
+        "platform": "instagram",
+        "handle": "osceolamagic",
+        "url": "https://www.instagram.com/osceolamagic/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "osceolamagic",
+        "url": "https://www.facebook.com/osceolamagic/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "osceolamagic",
+        "url": "https://www.tiktok.com/@osceolamagic"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCKxXfzCwyj0dw1gzefH2Y-g",
+        "url": "https://www.youtube.com/channel/UCKxXfzCwyj0dw1gzefH2Y-g",
+        "unique_id": "UCKxXfzCwyj0dw1gzefH2Y-g"
+      }
+    ],
+    "followers_x": 8662,
+    "followers_instagram": 33000,
+    "followers_facebook": 31000,
+    "followers_tiktok": 8942,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": null,
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474081"
+  },
+  {
+    "name": "Raptors 905",
+    "region": "Raptors",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Raptors.",
+    "official_url": "https://raptors905.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709920/primary/L/logo.svg",
+    "geo_city": "Toronto",
+    "geo_country": "CA",
+    "city_population": null,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "raptors905",
+        "url": "https://x.com/raptors905"
+      },
+      {
+        "platform": "instagram",
+        "handle": "raptors905",
+        "url": "https://www.instagram.com/raptors905/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "raptors905",
+        "url": "https://www.facebook.com/raptors905/"
+      }
+    ],
+    "followers_x": 40900,
+    "followers_instagram": 90000,
+    "followers_facebook": 19000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Paramount Fine Foods Centre",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474082"
+  },
+  {
+    "name": "Rio Grande Valley Vipers",
+    "region": "Rio Grande Valley",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Rio Grande Valley.",
+    "official_url": "https://riograndevalley.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709908/primary/L/logo.svg",
+    "geo_city": "McAllen",
+    "geo_country": "US",
+    "city_population": 148782,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "RGVVipers",
+        "url": "https://x.com/RGVVipers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "rgvvipers",
+        "url": "https://www.instagram.com/rgvvipers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "rgvipers",
+        "url": "https://www.facebook.com/rgvipers/"
+      }
+    ],
+    "followers_x": 23900,
+    "followers_instagram": 37000,
+    "followers_facebook": 33000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Payne Arena",
+    "sponsors": [
+      {
+        "name": "Title Partners",
+        "category": "Other",
+        "asset_type": "Title Partner"
+      },
+      {
+        "name": "Participating Sponsors",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Media Partners",
+        "category": "Media",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [
+      "Youth Development",
+      "Health & Wellness",
+      "Education",
+      "Diversity & Inclusion"
+    ],
+    "community_programs": [
+      "Fang\u2019s Book Club",
+      "Venom Hype Squad",
+      "Snake Charmers",
+      "JR. Vipers Academy",
+      "Read To Achieve",
+      "Fang's P.E. Takeover",
+      "Operation Give Back",
+      "Perfect Attendance",
+      "Blocks For Books",
+      "Honor Roll",
+      "We're All In"
+    ],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "brand",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474083"
+  },
+  {
+    "name": "Rip City Remix",
+    "region": "Rip City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Rip City.",
+    "official_url": "https://ripcity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709933/primary/L/logo.svg",
+    "geo_city": "Portland",
+    "geo_country": "US",
+    "city_population": 635749,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ripcityremix",
+        "url": "https://x.com/ripcityremix"
+      },
+      {
+        "platform": "instagram",
+        "handle": "ripcityremix",
+        "url": "https://www.instagram.com/ripcityremix/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "RipCityRemix",
+        "url": "https://www.facebook.com/RipCityRemix/"
+      }
+    ],
+    "followers_x": 7003,
+    "followers_instagram": 19000,
+    "followers_facebook": 2400,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Birthday Party",
+      "Kids Club"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Chiles Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474084"
+  },
+  {
+    "name": "Salt Lake City Stars",
+    "region": "Salt Lake City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Salt Lake City.",
+    "official_url": "https://saltlakecity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709903/primary/L/logo.svg",
+    "geo_city": "Salt Lake City",
+    "geo_country": "US",
+    "city_population": 217783,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "slcstars",
+        "url": "https://x.com/slcstars"
+      },
+      {
+        "platform": "instagram",
+        "handle": "slcstars",
+        "url": "https://www.instagram.com/slcstars/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "slcstars",
+        "url": "https://www.facebook.com/slcstars/"
+      }
+    ],
+    "followers_x": 9549,
+    "followers_instagram": 28000,
+    "followers_facebook": 15000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Maverik Center",
+    "sponsors": [
+      {
+        "name": "University of Utah Health",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474085"
+  },
+  {
+    "name": "San Diego Clippers",
+    "region": "San Diego",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around San Diego.",
+    "official_url": "https://sandiego.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709924/primary/L/logo.svg",
+    "geo_city": "San Diego",
+    "geo_country": "US",
+    "city_population": 1404452,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "sandiego_clips",
+        "url": "https://x.com/sandiego_clips"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sd_clippers",
+        "url": "https://www.instagram.com/sd_clippers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "sandiegoclips",
+        "url": "https://www.facebook.com/sandiegoclips/"
+      }
+    ],
+    "followers_x": 2086,
+    "followers_instagram": 12000,
+    "followers_facebook": 861,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Toyota Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474086"
+  },
+  {
+    "name": "Santa Cruz Warriors",
+    "region": "Santa Cruz",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Santa Cruz.",
+    "official_url": "https://santacruz.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709902/primary/L/logo.svg",
+    "geo_city": "Santa Cruz",
+    "geo_country": "US",
+    "city_population": 62581,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GLeagueWarriors",
+        "url": "https://x.com/GLeagueWarriors"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gleaguewarriors",
+        "url": "https://www.instagram.com/gleaguewarriors/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SantaCruzWarriors",
+        "url": "https://www.facebook.com/SantaCruzWarriors/"
+      }
+    ],
+    "followers_x": 46400,
+    "followers_instagram": 176000,
+    "followers_facebook": 123000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Kaiser Permanente Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474087"
+  },
+  {
+    "name": "Sioux Falls Skyforce",
+    "region": "Sioux Falls",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Sioux Falls.",
+    "official_url": "https://siouxfalls.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709904/primary/L/logo.svg",
+    "geo_city": "Sioux Falls",
+    "geo_country": "US",
+    "city_population": 209289,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SFSkyforce",
+        "url": "https://x.com/SFSkyforce"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sfskyforce",
+        "url": "https://www.instagram.com/sfskyforce/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "skyforce",
+        "url": "https://www.facebook.com/skyforce/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC6yZ2LOv3krLugJn7pkSlLw",
+        "url": "https://www.youtube.com/channel/UC6yZ2LOv3krLugJn7pkSlLw",
+        "unique_id": "UC6yZ2LOv3krLugJn7pkSlLw"
+      }
+    ],
+    "followers_x": 20900,
+    "followers_instagram": 31000,
+    "followers_facebook": 32000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 2,
+    "family_program_types": [
+      "Birthday Party",
+      "Family Experience"
+    ],
+    "owns_stadium": false,
+    "stadium_name": "Sanford Sports Pentagon",
+    "sponsors": [
+      {
+        "name": "Dacotah Bank",
+        "category": "Financial Services",
+        "asset_type": "Presenting Sponsor"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "website",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474088"
+  },
+  {
+    "name": "South Bay Lakers",
+    "region": "South Bay",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around South Bay.",
+    "official_url": "https://southbay.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709905/primary/L/logo.svg",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SouthBayLakers",
+        "url": "https://x.com/SouthBayLakers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "southbaylakers",
+        "url": "https://www.instagram.com/southbaylakers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "SouthBayLakers",
+        "url": "https://www.facebook.com/SouthBayLakers/"
+      }
+    ],
+    "followers_x": 70400,
+    "followers_instagram": 241000,
+    "followers_facebook": 292000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Toyota Sports Center",
+    "sponsors": [
+      {
+        "name": "bibigo",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474089"
+  },
+  {
+    "name": "Stats",
+    "region": "Stats",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Stats.",
+    "official_url": "https://stats.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": null,
+    "geo_city": null,
+    "geo_country": null,
+    "city_population": null,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nbagleague",
+        "url": "https://x.com/nbagleague"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nbagleague",
+        "url": "https://www.instagram.com/nbagleague/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "nbagleague",
+        "url": "https://www.facebook.com/nbagleague/"
+      }
+    ],
+    "followers_x": 408000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 1400000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": null,
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474090"
+  },
+  {
+    "name": "Stockton Kings",
+    "region": "Stockton",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Stockton.",
+    "official_url": "https://stockton.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709914/primary/L/logo.svg",
+    "geo_city": "Stockton",
+    "geo_country": "US",
+    "city_population": 324975,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "StocktonKings",
+        "url": "https://x.com/StocktonKings"
+      },
+      {
+        "platform": "instagram",
+        "handle": "stocktonkings",
+        "url": "https://www.instagram.com/stocktonkings/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "KingsStockton",
+        "url": "https://www.facebook.com/KingsStockton/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCW3AG6MCLS6xq7Nvv_tzcaQ",
+        "url": "https://www.youtube.com/channel/UCW3AG6MCLS6xq7Nvv_tzcaQ",
+        "unique_id": "UCW3AG6MCLS6xq7Nvv_tzcaQ"
+      }
+    ],
+    "followers_x": 19300,
+    "followers_instagram": 50000,
+    "followers_facebook": 467000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Adventist Health Arena",
+    "sponsors": [
+      {
+        "name": "CalHOPE",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Dignity Dental",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Kaiser Permanente",
+        "category": "Healthcare",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Les Schwab",
+        "category": "Retail",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Mountain Mike's Pizza",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Red Hawk Casino",
+        "category": "Other",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Stockton Honda",
+        "category": "Automotive",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474091"
+  },
+  {
+    "name": "Texas Legends",
+    "region": "Texas",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Texas.",
+    "official_url": "https://texas.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709918/primary/L/logo.svg",
+    "geo_city": "Dallas",
+    "geo_country": "US",
+    "city_population": 1326087,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "texaslegends",
+        "url": "https://x.com/texaslegends"
+      },
+      {
+        "platform": "instagram",
+        "handle": "texaslegends",
+        "url": "https://www.instagram.com/texaslegends/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Texlegends",
+        "url": "https://www.facebook.com/Texlegends/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCm6HLVNZamrH4nWFWU1ED2w",
+        "url": "https://www.youtube.com/channel/UCm6HLVNZamrH4nWFWU1ED2w",
+        "unique_id": "UCm6HLVNZamrH4nWFWU1ED2w"
+      }
+    ],
+    "followers_x": 21300,
+    "followers_instagram": 33000,
+    "followers_facebook": 39000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Comerica Center",
+    "sponsors": [
+      {
+        "name": "Coserv",
+        "category": "Other",
+        "asset_type": "Presenting Sponsor"
+      },
+      {
+        "name": "UnitedHealthcare",
+        "category": "Insurance",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "Choctaw",
+        "category": "Other",
+        "asset_type": "Presenting Sponsor"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474092"
+  },
+  {
+    "name": "Valley Suns",
+    "region": "Valley",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Valley.",
+    "official_url": "https://valley.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709934/primary/L/logo.svg",
+    "geo_city": "Phoenix",
+    "geo_country": "US",
+    "city_population": 1673164,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "GLeagueSuns",
+        "url": "https://x.com/GLeagueSuns"
+      },
+      {
+        "platform": "instagram",
+        "handle": "gleaguesuns",
+        "url": "https://www.instagram.com/gleaguesuns/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "people",
+        "url": "https://www.facebook.com/people/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "gleaguesuns",
+        "url": "https://www.tiktok.com/@gleaguesuns"
+      },
+      {
+        "platform": "youtube",
+        "handle": "GLeagueSuns",
+        "url": "https://www.youtube.com/@GLeagueSuns"
+      }
+    ],
+    "followers_x": 4054,
+    "followers_instagram": 16000,
+    "followers_facebook": null,
+    "followers_tiktok": 1113,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Mullett Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474093"
+  },
+  {
+    "name": "Westchester Knicks",
+    "region": "Westchester",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Westchester.",
+    "official_url": "https://westchester.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709919/primary/L/logo.svg",
+    "geo_city": "White Plains",
+    "geo_country": "US",
+    "city_population": 62561,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "wcknicks",
+        "url": "https://x.com/wcknicks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "wcknicks",
+        "url": "https://www.instagram.com/wcknicks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "wcknicks",
+        "url": "https://www.facebook.com/wcknicks/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC-Es6JbccPcAiBxIKqr4mQw",
+        "url": "https://www.youtube.com/channel/UC-Es6JbccPcAiBxIKqr4mQw",
+        "unique_id": "UC-Es6JbccPcAiBxIKqr4mQw"
+      }
+    ],
+    "followers_x": 22400,
+    "followers_instagram": 52000,
+    "followers_facebook": 17000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Westchester County Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474094"
+  },
+  {
+    "name": "Windy City Bulls",
+    "region": "Windy",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Windy.",
+    "official_url": "https://windycity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709923/primary/L/logo.svg",
+    "geo_city": "Chicago",
+    "geo_country": "US",
+    "city_population": 2721308,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "windycitybulls",
+        "url": "https://x.com/windycitybulls"
+      },
+      {
+        "platform": "instagram",
+        "handle": "windycitybulls",
+        "url": "https://www.instagram.com/windycitybulls/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "thewindycitybulls",
+        "url": "https://www.facebook.com/thewindycitybulls/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nbagleague",
+        "url": "https://www.tiktok.com/@nbagleague"
+      },
+      {
+        "platform": "youtube",
+        "handle": "windycitybulls3017",
+        "url": "https://www.youtube.com/@windycitybulls3017"
+      }
+    ],
+    "followers_x": 23300,
+    "followers_instagram": 69000,
+    "followers_facebook": 37000,
+    "followers_tiktok": 360400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Now Arena",
+    "sponsors": [
+      {
+        "name": "Chicago Bulls",
+        "category": "Sports",
+        "asset_type": "Official Partner"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474095"
+  },
+  {
+    "name": "Wisconsin Herd",
+    "region": "Wisconsin",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Wisconsin.",
+    "official_url": "https://wisconsin.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709927/primary/L/logo.svg",
+    "geo_city": "Milwaukee",
+    "geo_country": "US",
+    "city_population": 563531,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WisconsinHerd",
+        "url": "https://x.com/WisconsinHerd"
+      },
+      {
+        "platform": "instagram",
+        "handle": "wisconsinherd",
+        "url": "https://www.instagram.com/wisconsinherd/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "WisconsinHerd",
+        "url": "https://www.facebook.com/WisconsinHerd/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "wisconsinherd",
+        "url": "https://www.tiktok.com/@wisconsinherd"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCvo9Q5RPXb-8LsjOLhgThIw",
+        "url": "https://www.youtube.com/channel/UCvo9Q5RPXb-8LsjOLhgThIw",
+        "unique_id": "UCvo9Q5RPXb-8LsjOLhgThIw"
+      }
+    ],
+    "followers_x": 19600,
+    "followers_instagram": 60000,
+    "followers_facebook": 35000,
+    "followers_tiktok": 23400,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Oshkosh Arena",
+    "sponsors": [
+      {
+        "name": "COUSINS SUBS",
+        "category": "Food & Beverage",
+        "asset_type": "Official Partner"
+      },
+      {
+        "name": "SCHEELS",
+        "category": "Retail",
+        "asset_type": "Presenting Sponsor"
+      }
+    ],
+    "avg_ticket_price": null,
+    "franchise_value_millions": null,
+    "annual_revenue_millions": null,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474096"
+  },
+  {
+    "name": "Atlanta Hawks",
+    "region": "Atlanta",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Atlanta, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/hawks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg",
+    "geo_city": "Atlanta",
+    "geo_country": "US",
+    "city_population": 520070,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "ATLHawks",
+        "url": "https://x.com/ATLHawks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "atlhawks",
+        "url": "https://www.instagram.com/atlhawks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "atlhawks",
+        "url": "https://www.facebook.com/atlhawks/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "atlhawks",
+        "url": "https://www.tiktok.com/@atlhawks"
+      }
+    ],
+    "followers_x": 1400000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 1700000,
+    "followers_tiktok": 1400000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "State Farm Arena",
+    "sponsors": null,
+    "avg_ticket_price": 77.0,
+    "franchise_value_millions": 5000.0,
+    "annual_revenue_millions": 477.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474097"
+  },
+  {
+    "name": "Boston Celtics",
+    "region": "Boston",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Boston, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/celtics/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg",
+    "geo_city": "Boston",
+    "geo_country": "US",
+    "city_population": 673458,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "celtics",
+        "url": "https://x.com/celtics"
+      },
+      {
+        "platform": "instagram",
+        "handle": "celtics",
+        "url": "https://www.instagram.com/celtics/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "bostonceltics",
+        "url": "https://www.facebook.com/bostonceltics/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "celtics",
+        "url": "https://www.tiktok.com/@celtics"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCMfT9dr6xC_RIWoA9hI0meQ",
+        "url": "https://www.youtube.com/channel/UCMfT9dr6xC_RIWoA9hI0meQ",
+        "unique_id": "UCMfT9dr6xC_RIWoA9hI0meQ"
+      }
+    ],
+    "followers_x": 3900000,
+    "followers_instagram": 8000000,
+    "followers_facebook": 8900000,
+    "followers_tiktok": 2100000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "TD Garden",
+    "sponsors": null,
+    "avg_ticket_price": 145.0,
+    "franchise_value_millions": 6700.0,
+    "annual_revenue_millions": 458.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474098"
+  },
+  {
+    "name": "Brooklyn Nets",
+    "region": "Brooklyn",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Brooklyn, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/nets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg",
+    "geo_city": "New York",
+    "geo_country": "US",
+    "city_population": 8478072,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "BrooklynNets",
+        "url": "https://x.com/BrooklynNets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "brooklynnets",
+        "url": "https://www.instagram.com/brooklynnets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "BrooklynNets",
+        "url": "https://www.facebook.com/BrooklynNets/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "brooklynnets",
+        "url": "https://www.tiktok.com/@brooklynnets"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCTenKHt0h3VjdMvRWP6Lbvw",
+        "url": "https://www.youtube.com/channel/UCTenKHt0h3VjdMvRWP6Lbvw",
+        "unique_id": "UCTenKHt0h3VjdMvRWP6Lbvw"
+      }
+    ],
+    "followers_x": 1900000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 3100000,
+    "followers_tiktok": 3200000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Barclays Center",
+    "sponsors": null,
+    "avg_ticket_price": 70.0,
+    "franchise_value_millions": 5600.0,
+    "annual_revenue_millions": 402.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474099"
+  },
+  {
+    "name": "Charlotte Hornets",
+    "region": "Charlotte",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Charlotte, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/hornets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg",
+    "geo_city": "Charlotte",
+    "geo_country": "US",
+    "city_population": 943476,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "hornets",
+        "url": "https://x.com/hornets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "hornets",
+        "url": "https://www.instagram.com/hornets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "hornets",
+        "url": "https://www.facebook.com/hornets/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "hornets",
+        "url": "https://www.tiktok.com/@hornets"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCPhFI5lIFnSggz7HgY9UuuQ",
+        "url": "https://www.youtube.com/channel/UCPhFI5lIFnSggz7HgY9UuuQ",
+        "unique_id": "UCPhFI5lIFnSggz7HgY9UuuQ"
+      }
+    ],
+    "followers_x": 1100000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 1800000,
+    "followers_tiktok": 1700000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Spectrum Center",
+    "sponsors": null,
+    "avg_ticket_price": 37.0,
+    "franchise_value_millions": 3800.0,
+    "annual_revenue_millions": 328.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474100"
+  },
+  {
+    "name": "Chicago Bulls",
+    "region": "Chicago",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Chicago, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/bulls/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg",
+    "geo_city": "Chicago",
+    "geo_country": "US",
+    "city_population": 2721308,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "chicagobulls",
+        "url": "https://x.com/chicagobulls"
+      },
+      {
+        "platform": "instagram",
+        "handle": "chicagobulls",
+        "url": "https://www.instagram.com/chicagobulls/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "chicagobulls",
+        "url": "https://www.facebook.com/chicagobulls/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCvZi1jVVZ2yq0k5kkjzmuGw",
+        "url": "https://www.youtube.com/channel/UCvZi1jVVZ2yq0k5kkjzmuGw",
+        "unique_id": "UCvZi1jVVZ2yq0k5kkjzmuGw"
+      }
+    ],
+    "followers_x": 4200000,
+    "followers_instagram": 10000000,
+    "followers_facebook": 16000000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "United Center",
+    "sponsors": null,
+    "avg_ticket_price": 110.0,
+    "franchise_value_millions": 6000.0,
+    "annual_revenue_millions": 434.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474101"
+  },
+  {
+    "name": "Cleveland Cavaliers",
+    "region": "Cleveland",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Cleveland, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/cavaliers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg",
+    "geo_city": "Cleveland",
+    "geo_country": "US",
+    "city_population": 365379,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "cavs",
+        "url": "https://x.com/cavs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nba",
+        "url": "https://www.instagram.com/nba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "cavs",
+        "url": "https://www.tiktok.com/@cavs"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 3000000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 913600,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Rocket Arena",
+    "sponsors": null,
+    "avg_ticket_price": 97.0,
+    "franchise_value_millions": 4800.0,
+    "annual_revenue_millions": 440.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474102"
+  },
+  {
+    "name": "Dallas Mavericks",
+    "region": "Dallas",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Dallas, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/mavericks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg",
+    "geo_city": "Dallas",
+    "geo_country": "US",
+    "city_population": 1326087,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "dallasmavs",
+        "url": "https://x.com/dallasmavs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "dallasmavs",
+        "url": "https://www.instagram.com/dallasmavs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "dallasmavs",
+        "url": "https://www.facebook.com/dallasmavs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "dallasmavs",
+        "url": "https://www.tiktok.com/@dallasmavs"
+      }
+    ],
+    "followers_x": 2200000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 5200000,
+    "followers_tiktok": 2900000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "American Airlines Center",
+    "sponsors": null,
+    "avg_ticket_price": 65.0,
+    "franchise_value_millions": 5100.0,
+    "annual_revenue_millions": 407.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474103"
+  },
+  {
+    "name": "Denver Nuggets",
+    "region": "Denver",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Denver, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/nuggets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg",
+    "geo_city": "Denver",
+    "geo_country": "US",
+    "city_population": 729019,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nuggets",
+        "url": "https://x.com/nuggets"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nuggets",
+        "url": "https://www.instagram.com/nuggets/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "DenverNuggets",
+        "url": "https://www.facebook.com/DenverNuggets/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "nuggets",
+        "url": "https://www.tiktok.com/@nuggets"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCl8hzdP5wVlhuzNG3WCJa1w",
+        "url": "https://www.youtube.com/channel/UCl8hzdP5wVlhuzNG3WCJa1w",
+        "unique_id": "UCl8hzdP5wVlhuzNG3WCJa1w"
+      }
+    ],
+    "followers_x": 1400000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 2500000,
+    "followers_tiktok": 1200000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Ball Arena",
+    "sponsors": null,
+    "avg_ticket_price": 78.0,
+    "franchise_value_millions": 4600.0,
+    "annual_revenue_millions": 364.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474104"
+  },
+  {
+    "name": "Detroit Pistons",
+    "region": "Detroit",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Detroit, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pistons/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg",
+    "geo_city": "Detroit",
+    "geo_country": "US",
+    "city_population": 645705,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "DetroitPistons",
+        "url": "https://x.com/DetroitPistons"
+      },
+      {
+        "platform": "instagram",
+        "handle": "detroitpistons",
+        "url": "https://www.instagram.com/detroitpistons/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "detroitpistons",
+        "url": "https://www.facebook.com/detroitpistons/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "detroitpistons",
+        "url": "https://www.tiktok.com/@detroitpistons"
+      }
+    ],
+    "followers_x": 1000000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 2000000,
+    "followers_tiktok": 634200,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Little Caesars Arena",
+    "sponsors": null,
+    "avg_ticket_price": 50.0,
+    "franchise_value_millions": 3650.0,
+    "annual_revenue_millions": 321.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:16.072027"
+  },
+  {
+    "name": "Golden State Warriors",
+    "region": "Golden State",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Golden State, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/warriors/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg",
+    "geo_city": "San Francisco",
+    "geo_country": "US",
+    "city_population": 827526,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "warriors",
+        "url": "https://x.com/warriors"
+      },
+      {
+        "platform": "instagram",
+        "handle": "warriors",
+        "url": "https://www.instagram.com/warriors/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "warriors",
+        "url": "https://www.facebook.com/warriors/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "warriors",
+        "url": "https://www.tiktok.com/@warriors"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCeYc_OjHs3QNxIjti2whKzg",
+        "url": "https://www.youtube.com/channel/UCeYc_OjHs3QNxIjti2whKzg",
+        "unique_id": "UCeYc_OjHs3QNxIjti2whKzg"
+      }
+    ],
+    "followers_x": 8199999,
+    "followers_instagram": 32000000,
+    "followers_facebook": 13000000,
+    "followers_tiktok": 6800000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Chase Center",
+    "sponsors": null,
+    "avg_ticket_price": 285.0,
+    "franchise_value_millions": 11000.0,
+    "annual_revenue_millions": 880.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:16.072058"
+  },
+  {
+    "name": "Houston Rockets",
+    "region": "Houston",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Houston, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/rockets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg",
+    "geo_city": "Houston",
+    "geo_country": "US",
+    "city_population": 2390125,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "HoustonRockets",
+        "url": "https://x.com/HoustonRockets"
+      }
+    ],
+    "followers_x": 3000000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Toyota Center",
+    "sponsors": null,
+    "avg_ticket_price": 110.0,
+    "franchise_value_millions": 5900.0,
+    "annual_revenue_millions": 467.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474107"
+  },
+  {
+    "name": "Indiana Pacers",
+    "region": "Indiana",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Indiana, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pacers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg",
+    "geo_city": "Indianapolis",
+    "geo_country": "US",
+    "city_population": 891484,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Pacers",
+        "url": "https://x.com/Pacers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nba",
+        "url": "https://www.instagram.com/nba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "pacers",
+        "url": "https://www.tiktok.com/@pacers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 1400000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 1100000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Gainbridge Fieldhouse",
+    "sponsors": null,
+    "avg_ticket_price": 50.0,
+    "franchise_value_millions": 4200.0,
+    "annual_revenue_millions": 342.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:16.072064"
+  },
+  {
+    "name": "LA Clippers",
+    "region": "Los Angeles",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Los Angeles, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/clippers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nba",
+        "url": "https://x.com/nba"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nba",
+        "url": "https://www.instagram.com/nba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "laclippers",
+        "url": "https://www.tiktok.com/@laclippers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 45700000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 3100000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": null,
+    "sponsors": null,
+    "avg_ticket_price": 165.0,
+    "franchise_value_millions": 7500.0,
+    "annual_revenue_millions": 569.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:16.072068"
+  },
+  {
+    "name": "Los Angeles Lakers",
+    "region": "Los Angeles",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Los Angeles, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/lakers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Lakers",
+        "url": "https://x.com/Lakers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "lakers",
+        "url": "https://www.instagram.com/lakers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "losangeleslakers",
+        "url": "https://www.facebook.com/losangeleslakers/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCbNWe0snu7U9H2qioNH2nvg",
+        "url": "https://www.youtube.com/channel/UCbNWe0snu7U9H2qioNH2nvg",
+        "unique_id": "UCbNWe0snu7U9H2qioNH2nvg"
+      }
+    ],
+    "followers_x": 11700000,
+    "followers_instagram": 25000000,
+    "followers_facebook": 23000000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Crypto.com Arena",
+    "sponsors": null,
+    "avg_ticket_price": 165.0,
+    "franchise_value_millions": 10000.0,
+    "annual_revenue_millions": 551.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:33.776839"
+  },
+  {
+    "name": "Memphis Grizzlies",
+    "region": "Memphis",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Memphis, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/grizzlies/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg",
+    "geo_city": "Memphis",
+    "geo_country": "US",
+    "city_population": 610919,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "memgrizz",
+        "url": "https://x.com/memgrizz"
+      },
+      {
+        "platform": "instagram",
+        "handle": "memgrizz",
+        "url": "https://www.instagram.com/memgrizz/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "MemphisGrizzlies",
+        "url": "https://www.facebook.com/MemphisGrizzlies/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "memgrizz",
+        "url": "https://www.tiktok.com/@memgrizz"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCCK5EpWKYrAmILfaZThCV-Q",
+        "url": "https://www.youtube.com/channel/UCCK5EpWKYrAmILfaZThCV-Q",
+        "unique_id": "UCCK5EpWKYrAmILfaZThCV-Q"
+      }
+    ],
+    "followers_x": 1500000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 2000000,
+    "followers_tiktok": 1600000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "FedExForum",
+    "sponsors": null,
+    "avg_ticket_price": 38.0,
+    "franchise_value_millions": 3500.0,
+    "annual_revenue_millions": 306.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:33.776861"
+  },
+  {
+    "name": "Miami Heat",
+    "region": "Miami",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Miami, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/heat/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg",
+    "geo_city": "Miami",
+    "geo_country": "US",
+    "city_population": 487014,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "MiamiHEAT",
+        "url": "https://x.com/MiamiHEAT"
+      },
+      {
+        "platform": "instagram",
+        "handle": "MiamiHeat",
+        "url": "https://www.instagram.com/MiamiHeat/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "miamiheat",
+        "url": "https://www.facebook.com/miamiheat/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "miamiheat",
+        "url": "https://www.tiktok.com/@miamiheat"
+      }
+    ],
+    "followers_x": 4400000,
+    "followers_instagram": 7000000,
+    "followers_facebook": 14000000,
+    "followers_tiktok": 1500000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Kaseya Center",
+    "sponsors": null,
+    "avg_ticket_price": 87.0,
+    "franchise_value_millions": 5700.0,
+    "annual_revenue_millions": 417.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:33.776864"
+  },
+  {
+    "name": "Milwaukee Bucks",
+    "region": "Milwaukee",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Milwaukee, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/bucks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg",
+    "geo_city": "Milwaukee",
+    "geo_country": "US",
+    "city_population": 563531,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Bucks",
+        "url": "https://x.com/Bucks"
+      }
+    ],
+    "followers_x": 1900000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": null,
+    "stadium_name": "Fiserv Forum",
+    "sponsors": null,
+    "avg_ticket_price": 85.0,
+    "franchise_value_millions": 4300.0,
+    "annual_revenue_millions": 355.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:30:59.474113"
+  },
+  {
+    "name": "Minnesota Timberwolves",
+    "region": "Minnesota",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Minnesota, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/timberwolves/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg",
+    "geo_city": "Minneapolis",
+    "geo_country": "US",
+    "city_population": 428579,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Timberwolves",
+        "url": "https://x.com/Timberwolves"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nba",
+        "url": "https://www.instagram.com/nba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "timberwolves",
+        "url": "https://www.tiktok.com/@timberwolves"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 1200000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 1300000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Target Center",
+    "sponsors": null,
+    "avg_ticket_price": 42.0,
+    "franchise_value_millions": 3600.0,
+    "annual_revenue_millions": 320.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:33.776866"
+  },
+  {
+    "name": "New Orleans Pelicans",
+    "region": "New Orleans",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around New Orleans, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pelicans/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg",
+    "geo_city": "New Orleans",
+    "geo_country": "US",
+    "city_population": 362701,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "PelicansNBA",
+        "url": "https://x.com/PelicansNBA"
+      },
+      {
+        "platform": "instagram",
+        "handle": "pelicansnba",
+        "url": "https://www.instagram.com/pelicansnba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "PelicansNBA",
+        "url": "https://www.facebook.com/PelicansNBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "pelicansnba",
+        "url": "https://www.tiktok.com/@pelicansnba"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCHvG7tf62PwI04ZRfoptRSw",
+        "url": "https://www.youtube.com/channel/UCHvG7tf62PwI04ZRfoptRSw",
+        "unique_id": "UCHvG7tf62PwI04ZRfoptRSw"
+      }
+    ],
+    "followers_x": 1300000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 1900000,
+    "followers_tiktok": 935700,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Smoothie King Center",
+    "sponsors": null,
+    "avg_ticket_price": 45.0,
+    "franchise_value_millions": 3550.0,
+    "annual_revenue_millions": 302.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:51.749303"
+  },
+  {
+    "name": "New York Knicks",
+    "region": "New York",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around New York, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/knicks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg",
+    "geo_city": "New York",
+    "geo_country": "US",
+    "city_population": 8478072,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "nyknicks",
+        "url": "https://x.com/nyknicks"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nyknicks",
+        "url": "https://www.instagram.com/nyknicks/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NYKnicks",
+        "url": "https://www.facebook.com/NYKnicks/"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC0hb8f0OXHEzDrJDUq-YVVw",
+        "url": "https://www.youtube.com/channel/UC0hb8f0OXHEzDrJDUq-YVVw",
+        "unique_id": "UC0hb8f0OXHEzDrJDUq-YVVw"
+      }
+    ],
+    "followers_x": 2200000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 5600000,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Madison Square Garden",
+    "sponsors": null,
+    "avg_ticket_price": 195.0,
+    "franchise_value_millions": 9750.0,
+    "annual_revenue_millions": 532.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:51.749336"
+  },
+  {
+    "name": "Oklahoma City Thunder",
+    "region": "Oklahoma City",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Oklahoma City, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/thunder/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg",
+    "geo_city": "Oklahoma City",
+    "geo_country": "US",
+    "city_population": 712919,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "okcthunder",
+        "url": "https://x.com/okcthunder"
+      },
+      {
+        "platform": "instagram",
+        "handle": "okcthunder",
+        "url": "https://www.instagram.com/okcthunder/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "okcthunder",
+        "url": "https://www.facebook.com/okcthunder/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "okcthunder",
+        "url": "https://www.tiktok.com/@okcthunder"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCpXdQhy6kb5CTD8hKlmOL3w",
+        "url": "https://www.youtube.com/channel/UCpXdQhy6kb5CTD8hKlmOL3w",
+        "unique_id": "UCpXdQhy6kb5CTD8hKlmOL3w"
+      }
+    ],
+    "followers_x": 2600000,
+    "followers_instagram": 6000000,
+    "followers_facebook": 6200000,
+    "followers_tiktok": 894200,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Paycom Center",
+    "sponsors": null,
+    "avg_ticket_price": 65.0,
+    "franchise_value_millions": 4350.0,
+    "annual_revenue_millions": 357.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:51.749346"
+  },
+  {
+    "name": "Orlando Magic",
+    "region": "Orlando",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Orlando, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/magic/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg",
+    "geo_city": "Orlando",
+    "geo_country": "US",
+    "city_population": 334854,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "OrlandoMagic",
+        "url": "https://x.com/OrlandoMagic"
+      },
+      {
+        "platform": "instagram",
+        "handle": "orlandomagic",
+        "url": "https://www.instagram.com/orlandomagic/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "orlandomagic",
+        "url": "https://www.tiktok.com/@orlandomagic"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 1500000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 1600000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Kia Center",
+    "sponsors": null,
+    "avg_ticket_price": 60.0,
+    "franchise_value_millions": 3900.0,
+    "annual_revenue_millions": 318.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:51.749355"
+  },
+  {
+    "name": "Philadelphia 76ers",
+    "region": "Philadelphia",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Philadelphia, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/sixers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg",
+    "geo_city": "Philadelphia",
+    "geo_country": "US",
+    "city_population": 1573916,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "sixers",
+        "url": "https://x.com/sixers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sixers",
+        "url": "https://www.instagram.com/sixers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Sixers",
+        "url": "https://www.facebook.com/Sixers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "sixers",
+        "url": "https://www.tiktok.com/@sixers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UC5qJUyng_ezl0TVjVJFqtfQ",
+        "url": "https://www.youtube.com/channel/UC5qJUyng_ezl0TVjVJFqtfQ",
+        "unique_id": "UC5qJUyng_ezl0TVjVJFqtfQ"
+      }
+    ],
+    "followers_x": 2200000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 2000000,
+    "followers_tiktok": 1300000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Xfinity Mobile Arena",
+    "sponsors": null,
+    "avg_ticket_price": 106.0,
+    "franchise_value_millions": 5450.0,
+    "annual_revenue_millions": 472.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:43:51.749365"
+  },
+  {
+    "name": "Phoenix Suns",
+    "region": "Phoenix",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Phoenix, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/suns/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612756/primary/L/logo.svg",
+    "geo_city": "Phoenix",
+    "geo_country": "US",
+    "city_population": 1673164,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "Suns",
+        "url": "https://x.com/Suns"
+      }
+    ],
+    "followers_x": 1600000,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Mortgage Matchup Center",
+    "sponsors": null,
+    "avg_ticket_price": 107.0,
+    "franchise_value_millions": 5425.0,
+    "annual_revenue_millions": 455.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:31:54.996578"
+  },
+  {
+    "name": "Portland Trail Blazers",
+    "region": "Portland",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Portland, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/blazers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg",
+    "geo_city": "Portland",
+    "geo_country": "US",
+    "city_population": 635749,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "trailblazers",
+        "url": "https://x.com/trailblazers"
+      },
+      {
+        "platform": "instagram",
+        "handle": "trailblazers",
+        "url": "https://www.instagram.com/trailblazers/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "trailblazers",
+        "url": "https://www.facebook.com/trailblazers/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "trailblazers",
+        "url": "https://www.tiktok.com/@trailblazers"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCXk66yyzXo7-2M1BMqLhltQ",
+        "url": "https://www.youtube.com/channel/UCXk66yyzXo7-2M1BMqLhltQ",
+        "unique_id": "UCXk66yyzXo7-2M1BMqLhltQ"
+      }
+    ],
+    "followers_x": 1400000,
+    "followers_instagram": 3000000,
+    "followers_facebook": 2500000,
+    "followers_tiktok": 1100000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Moda Center",
+    "sponsors": null,
+    "avg_ticket_price": 74.0,
+    "franchise_value_millions": 4250.0,
+    "annual_revenue_millions": 361.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:44:13.521464"
+  },
+  {
+    "name": "Sacramento Kings",
+    "region": "Sacramento",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Sacramento, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/kings/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg",
+    "geo_city": "Sacramento",
+    "geo_country": "US",
+    "city_population": 535798,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "SacramentoKings",
+        "url": "https://x.com/SacramentoKings"
+      },
+      {
+        "platform": "instagram",
+        "handle": "sacramentokings",
+        "url": "https://www.instagram.com/sacramentokings/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "sacramentokings",
+        "url": "https://www.facebook.com/sacramentokings/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "sacramentokings",
+        "url": "https://www.tiktok.com/@sacramentokings"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCSgFigczGdNMilV1K23JgUQ",
+        "url": "https://www.youtube.com/channel/UCSgFigczGdNMilV1K23JgUQ",
+        "unique_id": "UCSgFigczGdNMilV1K23JgUQ"
+      }
+    ],
+    "followers_x": 1100000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 7100000,
+    "followers_tiktok": 591600,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Golden 1 Center",
+    "sponsors": null,
+    "avg_ticket_price": 90.0,
+    "franchise_value_millions": 4450.0,
+    "annual_revenue_millions": 354.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:44:13.521478"
+  },
+  {
+    "name": "San Antonio Spurs",
+    "region": "San Antonio",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around San Antonio, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/spurs/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg",
+    "geo_city": "San Antonio",
+    "geo_country": "US",
+    "city_population": 1526656,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "spurs",
+        "url": "https://x.com/spurs"
+      },
+      {
+        "platform": "instagram",
+        "handle": "spurs",
+        "url": "https://www.instagram.com/spurs/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Spurs",
+        "url": "https://www.facebook.com/Spurs/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "spurs",
+        "url": "https://www.tiktok.com/@spurs"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UCEZHE-0CoHqeL1LGFa2EmQw",
+        "url": "https://www.youtube.com/channel/UCEZHE-0CoHqeL1LGFa2EmQw",
+        "unique_id": "UCEZHE-0CoHqeL1LGFa2EmQw"
+      }
+    ],
+    "followers_x": 3200000,
+    "followers_instagram": 5000000,
+    "followers_facebook": 6700000,
+    "followers_tiktok": 1100000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Frost Bank Center",
+    "sponsors": null,
+    "avg_ticket_price": 75.0,
+    "franchise_value_millions": 4400.0,
+    "annual_revenue_millions": 401.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:44:13.521481"
+  },
+  {
+    "name": "Toronto Raptors",
+    "region": "Toronto",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Toronto, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/raptors/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg",
+    "geo_city": "Toronto",
+    "geo_country": "CA",
+    "city_population": null,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "raptors",
+        "url": "https://x.com/raptors"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nba",
+        "url": "https://www.instagram.com/nba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "raptors",
+        "url": "https://www.tiktok.com/@raptors"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 2300000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 932000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Scotiabank Arena",
+    "sponsors": null,
+    "avg_ticket_price": 85.0,
+    "franchise_value_millions": 5400.0,
+    "annual_revenue_millions": 380.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:44:13.521483"
+  },
+  {
+    "name": "Utah Jazz",
+    "region": "Utah",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Utah, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/jazz/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg",
+    "geo_city": "Salt Lake City",
+    "geo_country": "US",
+    "city_population": 217783,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "utahjazz",
+        "url": "https://x.com/utahjazz"
+      },
+      {
+        "platform": "instagram",
+        "handle": "nba",
+        "url": "https://www.instagram.com/nba/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "NBA",
+        "url": "https://www.facebook.com/NBA/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "utahjazz",
+        "url": "https://www.tiktok.com/@utahjazz"
+      },
+      {
+        "platform": "youtube",
+        "handle": "NBA",
+        "url": "https://www.youtube.com/@NBA"
+      }
+    ],
+    "followers_x": 1200000,
+    "followers_instagram": 90000000,
+    "followers_facebook": 52000000,
+    "followers_tiktok": 3700000,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": false,
+    "stadium_name": "Delta Center",
+    "sponsors": null,
+    "avg_ticket_price": 160.0,
+    "franchise_value_millions": 4100.0,
+    "annual_revenue_millions": 340.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:44:31.287940"
+  },
+  {
+    "name": "Washington Wizards",
+    "region": "Washington",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Washington, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/wizards/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg",
+    "geo_city": "Washington",
+    "geo_country": "US",
+    "city_population": 702250,
+    "metro_gdp_millions": null,
+    "social_handles": [
+      {
+        "platform": "x",
+        "handle": "WashWizards",
+        "url": "https://x.com/WashWizards"
+      },
+      {
+        "platform": "instagram",
+        "handle": "washwizards",
+        "url": "https://www.instagram.com/washwizards/"
+      },
+      {
+        "platform": "facebook",
+        "handle": "Wizards",
+        "url": "https://www.facebook.com/Wizards/"
+      },
+      {
+        "platform": "tiktok",
+        "handle": "wash_wizards",
+        "url": "https://www.tiktok.com/@wash_wizards"
+      },
+      {
+        "platform": "youtube",
+        "handle": "UChvzoBPvORuNGtHTMzjUsIQ",
+        "url": "https://www.youtube.com/channel/UChvzoBPvORuNGtHTMzjUsIQ",
+        "unique_id": "UChvzoBPvORuNGtHTMzjUsIQ"
+      }
+    ],
+    "followers_x": 1100000,
+    "followers_instagram": 2000000,
+    "followers_facebook": 4700000,
+    "followers_tiktok": 835600,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": 0,
+    "family_program_types": [],
+    "owns_stadium": true,
+    "stadium_name": "Capital One Arena",
+    "sponsors": null,
+    "avg_ticket_price": 80.0,
+    "franchise_value_millions": 4700.0,
+    "annual_revenue_millions": 389.0,
+    "mission_tags": [],
+    "community_programs": [],
+    "cause_partnerships": [],
+    "enrichments_applied": [
+      "geo",
+      "sponsor",
+      "valuation",
+      "social"
+    ],
+    "last_enriched": "2026-01-16T10:44:31.287956"
+  }
+]
