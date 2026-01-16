@@ -2110,7 +2110,9 @@ async def export_all_to_convex(request: ConvexExportAllRequest):
             all_teams_data, overwrite=(request.mode == ConvexExportMode.OVERWRITE)
         )
 
-        scrapers_exported = sum(1 for r in scraper_results if r.success and r.teams_exported > 0)
+        scrapers_exported = sum(
+            1 for r in scraper_results if r.success and r.teams_exported > 0
+        )
 
         return ConvexExportAllResult(
             success=result["success"],
