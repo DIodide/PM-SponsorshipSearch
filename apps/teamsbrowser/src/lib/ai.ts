@@ -59,6 +59,10 @@ export async function generateTeamDetailAnalysis(
       const model = ai.getGenerativeModel({ model: 'gemini-2.0-flash' });
       
       // Build context from available data
+      const sponsorsList = fullTeam?.sponsors?.map(s => 
+        typeof s === 'string' ? s : `${s.name}${s.asset_type ? ` (${s.asset_type})` : ''}${s.category ? ` - ${s.category}` : ''}`
+      ).join(', ') || 'None listed';
+      
       const teamInfo = `
 Team: ${scoredTeam.name}
 League: ${scoredTeam.league || 'Unknown'}
@@ -70,10 +74,21 @@ Local Reach Score: ${scoredTeam.local_reach.toFixed(2)}
 Family-Friendly Score: ${scoredTeam.family_friendly?.toFixed(2) || 'Unknown'}
 ${fullTeam ? `
 Stadium: ${fullTeam.stadium_name || 'Unknown'}
-Average Attendance: ${fullTeam.avg_game_attendance || 'Unknown'}
+Venue Ownership: ${fullTeam.owns_stadium === true ? 'Team owns the venue' : fullTeam.owns_stadium === false ? 'Team leases/rents the venue' : 'Unknown'}
+Average Attendance: ${fullTeam.avg_game_attendance?.toLocaleString() || 'Unknown'}
 Franchise Value: ${fullTeam.franchise_value ? formatNumber(fullTeam.franchise_value) : 'Unknown'}
+City: ${fullTeam.geo_city || 'Unknown'}
+
+Current Sponsors/Partners: ${sponsorsList}
+
 Community Programs: ${(fullTeam.community_programs || []).join(', ') || 'None listed'}
-Current Sponsors: ${(fullTeam.sponsors || []).map(s => typeof s === 'string' ? s : s.name).join(', ') || 'Unknown'}
+
+Cause Partnerships: ${(fullTeam.cause_partnerships || []).join(', ') || 'None listed'}
+
+Family Programs: ${(fullTeam.family_program_types || []).join(', ') || 'None listed'}
+Family Program Count: ${fullTeam.family_program_count || 0}
+
+Mission/Values Tags: ${(fullTeam.mission_tags || []).join(', ') || 'None listed'}
 ` : ''}
 `;
 

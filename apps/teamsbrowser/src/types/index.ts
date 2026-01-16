@@ -8,22 +8,24 @@ export const REGIONS = [
 ];
 
 export const DEMOGRAPHICS = [
-  { value: "families", label: "Families" },
-  { value: "young-professionals", label: "Young Professionals" },
-  { value: "millennials", label: "Millennials" },
   { value: "gen-z", label: "Gen Z" },
-  { value: "affluent", label: "Affluent" },
-  { value: "sports-enthusiasts", label: "Sports Enthusiasts" },
+  { value: "millennials", label: "Millennials" },
+  { value: "gen-x", label: "Gen X" },
+  { value: "boomer", label: "Boomer" },
+  { value: "families", label: "Families" },
+  { value: "kids", label: "Kids" },
+  { value: "men", label: "Men" },
+  { value: "women", label: "Women" },
+  { value: "people-of-color", label: "People of Color" },
+  { value: "businesses", label: "Businesses" },
 ];
 
 export const BRAND_VALUES = [
   { value: "community", label: "Community" },
   { value: "performance", label: "Performance" },
   { value: "innovation", label: "Innovation" },
-  { value: "tradition", label: "Tradition" },
   { value: "wellness", label: "Wellness" },
   { value: "sustainability", label: "Sustainability" },
-  { value: "excellence", label: "Excellence" },
   { value: "family", label: "Family-Friendly" },
 ];
 
@@ -34,17 +36,19 @@ export const LEAGUES = [
   { value: "NHL", label: "NHL" },
   { value: "MLS", label: "MLS" },
   { value: "WNBA", label: "WNBA" },
-  { value: "USL", label: "USL" },
-  { value: "Minor League", label: "Minor League" },
+  { value: "NWSL", label: "NWSL" },
+  { value: "MiLB", label: "Minor League Baseball" },
+  { value: "NBA G League", label: "NBA G League" },
 ];
 
 export const GOALS = [
-  { value: "awareness", label: "Brand Awareness" },
-  { value: "trial", label: "Product Trial" },
-  { value: "loyalty", label: "Customer Loyalty" },
-  { value: "b2b", label: "B2B Relationships" },
-  { value: "employer-brand", label: "Employer Brand" },
   { value: "local-presence", label: "Local Presence" },
+  { value: "digital-presence", label: "Digital Presence" },
+  { value: "brand-awareness", label: "Brand Awareness" },
+  { value: "product-promotion", label: "Product Promotion" },
+  { value: "business-to-business", label: "B2B Relationships" },
+  { value: "fan-connection-activation-control", label: "Deep Fan Connection and Activation Control" },
+  { value: "prestige-credibility", label: "Prestige and Credibility" },
 ];
 
 // Search filters matching similarityScoring.ts requirements
