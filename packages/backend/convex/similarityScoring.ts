@@ -134,19 +134,19 @@ export const computeBrandSimilarity = action({
 
         // Set target value tier of team using goals
         let demSim = 0
-        if (brandAudience.includes("gen-z")) {
+        if (brandAudience.includes("gen-z") && team.gen_z_weight != null) {
             demSim += team.gen_z_weight
-        } else if (brandAudience.includes("millennials")) {
+        } else if (brandAudience.includes("millennials") && team.millenial_weight != null) {
             demSim += team.millenial_weight
-        } else if (brandAudience.includes("gen-x")) {
+        } else if (brandAudience.includes("gen-x") && team.gen_x_weight != null) {
             demSim += team.gen_x_weight
-        } else if (brandAudience.includes("boomer")) {
+        } else if (brandAudience.includes("boomer") && team.boomer_weight != null) {
             demSim += team.boomer_weight
-        } else if (brandAudience.includes("kids")) {
+        } else if (brandAudience.includes("kids") && team.kids_weight != null) {
             demSim += team.kids_weight
-        } else if (brandAudience.includes("women")) {
+        } else if (brandAudience.includes("women") && team.women_weight != null) {
             demSim += team.women_weight
-        } else if (brandAudience.includes("men")) {
+        } else if (brandAudience.includes("men") && team.men_weight != null) {
             demSim += team.men_weight
         }
 
