@@ -299,14 +299,14 @@ export default defineSchema({
       family_friendly: v.union(v.number(), v.null()),
       value_tier: v.number(),
 
-      women_weight: v.union(v.number(), v.null()),
-      men_weight: v.union(v.number(), v.null()),
-      gen_z_weight: v.union(v.number(), v.null()),
-      millenial_weight: v.union(v.number(), v.null()),
-      gen_x_weight: v.union(v.number(), v.null()),
-      boomer_weight: v.union(v.number(), v.null()),
-      kids_weight: v.union(v.number(), v.null()),
-      stadium_ownership: v.union(v.boolean(), v.null()),
+      women_weight: v.optional(v.union(v.number(), v.null())),
+      men_weight: v.optional(v.union(v.number(), v.null())),
+      gen_z_weight: v.optional(v.union(v.number(), v.null())),
+      millenial_weight: v.optional(v.union(v.number(), v.null())),
+      gen_x_weight: v.optional(v.union(v.number(), v.null())),
+      boomer_weight: v.optional(v.union(v.number(), v.null())),
+      kids_weight: v.optional(v.union(v.number(), v.null())),
+      stadium_ownership: v.optional(v.union(v.boolean(), v.null())),
     })
     // Optional: Add indexes for non-embedding fields if you plan to filter by them
     .index("by_name", ["name"])
