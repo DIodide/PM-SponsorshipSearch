@@ -1,4 +1,4 @@
-import type { Team, ScoredTeam, SearchFilters } from '../types';
+import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis } from '../types';
 
 const CONVEX_URL = 'https://harmless-corgi-891.convex.cloud';
 
@@ -87,6 +87,70 @@ export async function computeSimilarity(
 
   const data = await response.json();
   return data.value || [];
+}
+
+/**
+ * Generate AI-powered team analysis using Convex action
+ * Calls Gemini on the server side for security
+ */
+export async function generateTeamAnalysis(
+  scoredTeam: ScoredTeam,
+  fullTeam: Team | undefined,
+  filters: SearchFilters
+): Promise<TeamDetailAnalysis> {
+  // Prepare the fullTeam data for the Convex action
+  const fullTeamData = fullTeam ? {
+    name: fullTeam.name,
+    stadium_name: fullTeam.stadium_name,
+    owns_stadium: fullTeam.owns_stadium,
+    avg_game_attendance: fullTeam.avg_game_attendance,
+    franchise_value: fullTeam.franchise_value,
+    geo_city: fullTeam.geo_city,
+    sponsors: fullTeam.sponsors,
+    community_programs: fullTeam.community_programs,
+    cause_partnerships: fullTeam.cause_partnerships,
+    family_program_types: fullTeam.family_program_types,
+    family_program_count: fullTeam.family_program_count,
+    mission_tags: fullTeam.mission_tags,
+  } : undefined;
+
+  const response = await fetch(`${CONVEX_URL}/api/action`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      path: 'teamAnalysis:generateTeamAnalysis',
+      args: {
+        scoredTeam: {
+          _id: scoredTeam._id,
+          name: scoredTeam.name,
+          region: scoredTeam.region,
+          league: scoredTeam.league,
+          official_url: scoredTeam.official_url,
+          digital_reach: scoredTeam.digital_reach,
+          local_reach: scoredTeam.local_reach,
+          family_friendly: scoredTeam.family_friendly,
+          value_tier: scoredTeam.value_tier,
+        },
+        fullTeam: fullTeamData,
+        filters: {
+          regions: filters.regions,
+          demographics: filters.demographics,
+          brandValues: filters.brandValues,
+          leagues: filters.leagues,
+          goals: filters.goals,
+        },
+      },
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error('Team analysis generation failed:', errorText);
+    throw new Error('Failed to generate team analysis');
+  }
+
+  const data = await response.json();
+  return data.value;
 }
 
 /**

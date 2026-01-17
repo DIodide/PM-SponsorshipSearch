@@ -25,5 +25,14 @@ export type AllTeamsClean = {
     local_reach: number;
     family_friendly: number | null;
     value_tier: number;
+    // Optional demographic weight fields
+    women_weight?: number | null;
+    men_weight?: number | null;
+    gen_z_weight?: number | null;
+    millenial_weight?: number | null;
+    gen_x_weight?: number | null;
+    boomer_weight?: number | null;
+    kids_weight?: number | null;
+    stadium_ownership?: boolean | null;
   };
   
