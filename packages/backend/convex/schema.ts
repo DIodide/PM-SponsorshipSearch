@@ -294,8 +294,8 @@ export default defineSchema({
     partners_embedding: v.union(v.array(v.float64()), v.null()),
   
       // Numeric score fields
-      digital_reach: v.number(),
-      local_reach: v.number(),
+      digital_reach: v.union(v.number(), v.null()),
+      local_reach: v.union(v.number(), v.null()),
       family_friendly: v.union(v.number(), v.null()),
       value_tier: v.number(),
 

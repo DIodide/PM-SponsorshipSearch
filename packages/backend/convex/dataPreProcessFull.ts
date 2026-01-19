@@ -107,9 +107,6 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
       const valuation = computeStats(seed.map((r: Doc<"All_Teams">) => r.franchise_value ?? null));
       const revenue = computeStats(seed.map((r: Doc<"All_Teams">) => r.annual_revenue ?? null));
 
-      // weights for scoring of team tier
-      const weights = { val: 0.75, rev: 0.1, ticket: 0.1, gdp: 0.05 };
-
       for (const row of seed) {
         // Parallelize the 48embedding calls for THIS row
         // We use Promise.all to "await" all of them together
@@ -157,21 +154,6 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         const kidsWeight = ((youtube_norm != null) ? youtube_norm : null)
 
 
-        // 3. Compute Weighted Score
-        let totalWeightedScore = 0;
-        let totalWeightApplied = 0;
-
-        if (valuation_norm !== null) { totalWeightedScore += valuation_norm * weights.val; totalWeightApplied += weights.val; }
-        if (revenue_norm !== null) { totalWeightedScore += revenue_norm * weights.rev; totalWeightApplied += weights.rev; }
-        if (ticket_price_norm !== null) { totalWeightedScore += ticket_price_norm * weights.ticket; totalWeightApplied += weights.ticket; }
-        if (gdp_norm !== null) { totalWeightedScore += gdp_norm * weights.gdp; totalWeightApplied += weights.gdp; }
-
-        const finalScore = totalWeightApplied > 0 ? totalWeightedScore / totalWeightApplied : 0;
-        // 4. Assign the Tier
-        // YUBI: this could assign a tier of 0 to some teams, which is NOT what I want
-        // YUBI: check these cutoff values, they are very arbitrary
-        const valueTierScore = finalScore > 0.5 ? 3 : finalScore < -0.5 ? 1 : 2;
-
         let value_tier_score = 1
         // Another even more hard-coded option
         // YUBI: how can I check that this is not null?
@@ -185,7 +167,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
           if (row.avg_ticket_price > 120) {
             value_tier_score = 3
           } else if (row.avg_ticket_price > 100) {
-            value_tier_score = 45
+            value_tier_score = 2
           }
         }
 
