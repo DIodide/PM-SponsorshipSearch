@@ -121,6 +121,9 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             row.cause_partnerships ? embed(row.cause_partnerships.join(" "), apiKey) : Promise.resolve(null),
         ]);
 
+        // false if false or null
+        const stadium = row.owns_stadium === true;
+
         // normalize all of the numerical values
         const attendance_norm = (row.avg_game_attendance != null) ? (row.avg_game_attendance - attendance.mean) / attendance.sd : null
         const valuation_norm = (row.franchise_value != null) ? (row.franchise_value - valuation.mean) / valuation.sd : null
@@ -198,7 +201,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             gen_x_weight: genXWeight,
             boomer_weight: boomerWeight,
             kids_weight: kidsWeight,
-            stadium_ownership: owns_stadium
+            stadium_ownership: stadium
   
         };
   
