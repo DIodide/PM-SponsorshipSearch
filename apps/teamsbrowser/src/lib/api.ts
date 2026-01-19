@@ -1,6 +1,6 @@
 import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis } from '../types';
 
-const CONVEX_URL = 'https://harmless-corgi-891.convex.cloud';
+const CONVEX_URL = import.meta.env.VITE_CONVEX_URL || 'https://harmless-corgi-891.convex.cloud';
 
 /**
  * Fetch all teams from All_Teams table (for additional info)
