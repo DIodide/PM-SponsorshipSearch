@@ -125,8 +125,18 @@ export const computeBrandSimilarity = action({
         const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
         const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
         const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
+
+        // compute similarity between target audience and different programs
+        const simAudience1 = cosineSimilarity(brandVector.audience_embedding, team.community_programs_embedding);
+        const simAudience2 = cosineSimilarity(brandVector.audience_embedding, team.family_programs_embedding);
+        const simAudience = (simAudience1 + simAudience2) / 2;
+        // compute similarity between brand values and different programs
+        const simValueProg1 = cosineSimilarity(brandVector.values_embedding, team.community_programs_embedding);
+        const simValueProg2 = cosineSimilarity(brandVector.values_embedding, team.family_programs_embedding);
+        const simValueProg = (simValueProg1 + simValueProg2) / 2;
+
         
-        // YUBI: not relevant
+        // YUBI: is this useful? how can we use info about partners and sponsors?
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
 
         // YUBI: this has a range of 2, but we want it to span from -1 to 1
@@ -134,21 +144,48 @@ export const computeBrandSimilarity = action({
 
         // Set target value tier of team using goals
         let demSim = 0
+        let demCounter = 0
         if (brandAudience.includes("gen-z")) {
-            demSim += team.gen_z_weight
+          // YUBI: what happens if the weight value is null?
+            demSim += team.gen_z_weight ?? 0
+            demCounter += 1
         } else if (brandAudience.includes("millennials")) {
-            demSim += team.millenial_weight
+            demSim += team.millenial_weight ?? 0
+            demCounter += 1
         } else if (brandAudience.includes("gen-x")) {
-            demSim += team.gen_x_weight
+            demSim += team.gen_x_weight ?? 0
+            demCounter += 1
         } else if (brandAudience.includes("boomer")) {
-            demSim += team.boomer_weight
+            demSim += team.boomer_weight ?? 0
+            demCounter += 1
         } else if (brandAudience.includes("kids")) {
-            demSim += team.kids_weight
+            demSim += team.kids_weight ?? 0
+            demCounter += 1
         } else if (brandAudience.includes("women")) {
-            demSim += team.women_weight
+            demSim += team.women_weight ?? 0
+            demCounter += 1
         } else if (brandAudience.includes("men")) {
-            demSim += team.men_weight
+            demSim += team.men_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("families")) {
+            demSim += team.family_friendly ?? 0
+            demCounter += 1
         }
+
+        // YUBI: normalize demSim so it doesn't have as much influence
+        demSim = demSim / demCounter
+
+        // set reach score
+        let reachSim = 0
+        if (brandGoals.includes("digital-presence")) {
+          reachSim = team.digital_reach ?? 0
+        } else if (brandGoals.includes("local-presence")) {
+          reachSim = team.local_reach ?? 0
+        } else {
+          reachSim = ((team.digital_reach ?? 0) + (team.local_reach ?? 0)) / 2
+        }
+
+        // YUBI: reachSim seems like a great metric, so I want to try and use it
 
         const components = [
           simRegion,
@@ -156,7 +193,10 @@ export const computeBrandSimilarity = action({
           simValues,
           valuationSim,
           demSim
-          // YUBI: want to add more components here
+          // YUBI: test if these components are useful
+          // simAudience
+          // simValueProg
+          // reachSim
         ];
       
         const active = components.filter((v) => typeof v === "number") as number[];

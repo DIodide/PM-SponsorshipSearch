@@ -94,7 +94,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
   
       const attendance = computeStats(seed.map((r: Doc<"All_Teams">) => r.avg_game_attendance ?? null));
       const population = computeStats(seed.map((r: Doc<"All_Teams">) => r.city_population ?? null));
-      const gdp = computeStats(seed.map((r: Doc<"All_Teams">) => r.metro_gdp_millions ?? null));
+      const gdp = computeStats(seed.map((r: Doc<"All_Teams">) => r.metro_gdp ?? null));
 
     // put social media info on burner for now because Ibraheem hasn't been able to scrape it yet
       const x = computeStats(seed.map((r: Doc<"All_Teams">) => r.followers_x ?? null));
@@ -104,11 +104,11 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
       const youtube = computeStats(seed.map((r: Doc<"All_Teams">) => r.subscribers_youtube ?? null));
       const family_programs = computeStats(seed.map((r: Doc<"All_Teams">) => r.family_program_count ?? null));
       const ticketStats = computeStats(seed.map((r: Doc<"All_Teams">) => r.avg_ticket_price ?? null));
-      const valuation = computeStats(seed.map((r: Doc<"All_Teams">) => r.franchise_value_millions ?? null));
-      const revenue = computeStats(seed.map((r: Doc<"All_Teams">) => r.annual_revenue_millions ?? null));
+      const valuation = computeStats(seed.map((r: Doc<"All_Teams">) => r.franchise_value ?? null));
+      const revenue = computeStats(seed.map((r: Doc<"All_Teams">) => r.annual_revenue ?? null));
 
       // weights for scoring of team tier
-      const weights = { val: 0.4, rev: 0.3, ticket: 0.2, gdp: 0.1 };
+      const weights = { val: 0.75, rev: 0.1, ticket: 0.1, gdp: 0.05 };
 
       for (const row of seed) {
         // Parallelize the 48embedding calls for THIS row
@@ -127,10 +127,10 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         // normalize all of the numerical values
         const attendance_norm = (row.avg_game_attendance != null) ? (row.avg_game_attendance - attendance.mean) / attendance.sd : null
         const valuation_norm = (row.franchise_value != null) ? (row.franchise_value - valuation.mean) / valuation.sd : null
-        const gdp_norm = (row.metro_gdp_millions != null) ? (row.metro_gdp_millions - gdp.mean) / gdp.sd : null
+        const gdp_norm = (row.metro_gdp != null) ? (row.metro_gdp - gdp.mean) / gdp.sd : null
         const ticket_price_norm = (row.avg_ticket_price != null) ? (row.avg_ticket_price - ticketStats.mean) / ticketStats.sd : null
         const family_programs_norm = (row.family_program_count != null) ? (row.family_program_count - family_programs.mean) / family_programs.sd : null
-        const revenue_norm = (row.annual_revenue_millions != null) ? (row.annual_revenue_millions - revenue.mean) / revenue.sd : null
+        const revenue_norm = (row.annual_revenue != null) ? (row.annual_revenue - revenue.mean) / revenue.sd : null
         const population_norm = (row.city_population != null) ? (row.city_population - population.mean) / population.sd : null
         const x_norm =  (row.followers_x != null) ? (row.followers_x - x.mean) / x.sd : null
         const instagram_norm =  (row.followers_instagram != null) ? (row.followers_instagram - instagram.mean) / instagram.sd : null
@@ -138,8 +138,8 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         const tiktok_norm =  (row.followers_tiktok != null) ? (row.followers_tiktok - tiktok.mean) / tiktok.sd : null
         const youtube_norm =  (row.subscribers_youtube != null) ? (row.subscribers_youtube - youtube.mean) / youtube.sd : null      
         
-        const digital_reach_score = (instagram_norm ?? 0) + (x_norm ?? 0) + (facebook_norm ?? 0) + (tiktok_norm ?? 0) + (youtube_norm ?? 0)
-        const local_reach_score = (attendance_norm ?? 0) + (population_norm ?? 0)
+        const digital_reach_score = ((instagram_norm ?? 0) + (x_norm ?? 0) + (facebook_norm ?? 0) + (tiktok_norm ?? 0) + (youtube_norm ?? 0)) / 5
+        const local_reach_score = ((attendance_norm ?? 0) + (population_norm ?? 0)) / 2
 
         // Calculate demographic weights
         // YUBI: should I use womenWeight and menWeight?
@@ -172,6 +172,23 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         // YUBI: check these cutoff values, they are very arbitrary
         const valueTierScore = finalScore > 0.5 ? 3 : finalScore < -0.5 ? 1 : 2;
 
+        let value_tier_score = 1
+        // Another even more hard-coded option
+        // YUBI: how can I check that this is not null?
+        if (row.franchise_value != null) {
+          if (row.franchise_value > 2000000000) {
+            value_tier_score = 3
+          } else if (row.franchise_value > 200000000) {
+            value_tier_score = 2
+          }
+        } else if (row.avg_ticket_price != null) {
+          if (row.avg_ticket_price > 120) {
+            value_tier_score = 3
+          } else if (row.avg_ticket_price > 100) {
+            value_tier_score = 45
+          }
+        }
+
         const cleanRow = {
           name: row.name,
           region: row.region,
@@ -190,7 +207,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             local_reach: local_reach_score,
             family_friendly: family_programs_norm,
 
-            value_tier: valueTierScore,
+            value_tier: value_tier_score,
 
             women_weight: womenWeight,
             men_weight: menWeight,
