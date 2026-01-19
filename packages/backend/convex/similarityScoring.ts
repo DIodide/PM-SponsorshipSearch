@@ -4,12 +4,22 @@ import { api } from "./_generated/api";
 import { AllTeamsClean } from "./All_Teams_Clean";
 
 function cosineSimilarity(a: number[] | null, b: number[] | null): number {
+  // 1. Check if either vector is null, undefined, or empty
   if (!a || !b || a.length === 0 || b.length === 0) return 0;
+
+  // 2. Ensure vectors are the same length to avoid undefined multiplication
+  if (a.length !== b.length) {
+    console.warn("Vector length mismatch:", a.length, b.length);
+    return 0;
+  }
+  
   const dot = a.reduce((sum, val, i) => sum + val * b[i], 0);
   const normA = Math.sqrt(a.reduce((s, v) => s + v * v, 0));
   const normB = Math.sqrt(b.reduce((s, v) => s + v * v, 0));
   if (normA === 0 || normB === 0) return 0;
-  return dot / (normA * normB); // [-1,1]
+
+  const similarity = dot / (normA * normB);
+  return isNaN(similarity) ? 0 : similarity;
 }
 
 // ----------------------
@@ -140,7 +150,7 @@ export const computeBrandSimilarity = action({
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
 
         // YUBI: this has a range of 2, but we want it to span from -1 to 1
-        const valuationSim = (1-Math.abs(target_value_tier - team.value_tier))
+        const valuationSim = (1 - Math.abs(target_value_tier - (team.value_tier ?? 1)))
 
         // Set target value tier of team using goals
         let demSim = 0
@@ -173,7 +183,7 @@ export const computeBrandSimilarity = action({
         }
 
         // YUBI: normalize demSim so it doesn't have as much influence
-        demSim = demSim / demCounter
+        demSim = demCounter > 0 ? demSim / demCounter : 0;
 
         // set reach score
         let reachSim = 0
