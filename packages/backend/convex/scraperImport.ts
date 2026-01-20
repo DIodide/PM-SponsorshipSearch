@@ -31,6 +31,22 @@ const sponsorSchema = v.object({
   asset_type: v.optional(v.string()),
 });
 
+// Schema for source citation (data provenance)
+const sourceCitationSchema = v.object({
+  url: v.string(),
+  source_type: v.string(),                      // "api", "website", "database", "static", "cached"
+  source_name: v.string(),                       // Human-readable name
+  retrieved_at: v.string(),                      // ISO timestamp
+  title: v.optional(v.string()),                 // Page title if scraped from website
+  domain: v.optional(v.string()),                // Extracted domain
+  api_endpoint: v.optional(v.string()),          // API endpoint path
+  query_params: v.optional(v.any()),             // Query parameters used
+  fields_sourced: v.optional(v.array(v.string())), // Which fields came from this source
+  is_primary: v.optional(v.boolean()),           // Primary source vs fallback
+  confidence: v.optional(v.number()),            // 0.0-1.0 confidence score
+  cache_hit: v.optional(v.boolean()),            // Whether this was from cache
+});
+
 // Full scraped team schema (matches TeamRow from Python scraper)
 // Note: Values are in RAW format (not "in millions")
 const scrapedTeamSchema = v.object({
@@ -82,6 +98,12 @@ const scrapedTeamSchema = v.object({
   // Metadata
   enrichments_applied: v.optional(v.array(v.string())),
   last_enriched: v.optional(v.string()),
+  
+  // Source/Citation Tracking (Data Provenance)
+  sources: v.optional(v.array(sourceCitationSchema)),              // List of source citations
+  field_sources: v.optional(v.any()),                               // Map of field -> [source_urls]
+  scraped_at: v.optional(v.string()),                               // ISO timestamp of base scrape
+  scraper_version: v.optional(v.string()),                          // Version of scraper that collected data
 });
 
 // ============================================
@@ -214,6 +236,10 @@ export const importSingleTeam = mutation({
       cause_partnerships: team.cause_partnerships ?? null,
       enrichments_applied: team.enrichments_applied ?? null,
       last_enriched: team.last_enriched ?? null,
+      sources: team.sources ?? null,
+      field_sources: team.field_sources ?? null,
+      scraped_at: team.scraped_at ?? null,
+      scraper_version: team.scraper_version ?? null,
     };
     
     const id = await ctx.db.insert("All_Teams", teamData);
@@ -265,6 +291,10 @@ export const batchImportTeams = mutation({
         cause_partnerships: team.cause_partnerships ?? null,
         enrichments_applied: team.enrichments_applied ?? null,
         last_enriched: team.last_enriched ?? null,
+        sources: team.sources ?? null,
+        field_sources: team.field_sources ?? null,
+        scraped_at: team.scraped_at ?? null,
+        scraper_version: team.scraper_version ?? null,
       };
       
       const id = await ctx.db.insert("All_Teams", teamData);
@@ -332,6 +362,10 @@ export const fullImport = mutation({
         cause_partnerships: team.cause_partnerships ?? null,
         enrichments_applied: team.enrichments_applied ?? null,
         last_enriched: team.last_enriched ?? null,
+        sources: team.sources ?? null,
+        field_sources: team.field_sources ?? null,
+        scraped_at: team.scraped_at ?? null,
+        scraper_version: team.scraper_version ?? null,
       };
       
       const id = await ctx.db.insert("All_Teams", teamData);

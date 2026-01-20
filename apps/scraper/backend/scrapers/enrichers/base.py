@@ -5,12 +5,14 @@ Enrichers follow a pipeline pattern where each enricher:
 1. Receives a list of TeamRow objects
 2. Adds domain-specific data to each team
 3. Returns the enriched list with metadata
+4. Tracks sources/citations for data provenance
 
 Example usage:
     enricher = GeoEnricher()
     result = await enricher.enrich(teams)
     if result.success:
         enriched_teams = result.teams
+        # Each team now has sources tracking where data came from
 """
 
 from __future__ import annotations
@@ -22,6 +24,7 @@ from datetime import datetime
 from typing import Any, Callable, Dict, List, Optional, Type, Awaitable
 
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector
 
 
 # Type alias for progress callback
@@ -203,29 +206,59 @@ class BaseEnricher(ABC):
             )
     
     async def _enrich_team_with_retry(self, team: TeamRow) -> bool:
-        """Enrich a single team with retry logic."""
+        """Enrich a single team with retry logic and source tracking."""
         assert self._semaphore is not None
         
         async with self._semaphore:
+            # Create a SourceCollector for this team
+            sources = SourceCollector(team.name)
+            
             for attempt in range(self.config.max_retries):
                 try:
-                    return await self._enrich_team(team)
+                    result = await self._enrich_team(team, sources)
+                    
+                    # Merge collected sources into the team record
+                    if sources.has_sources():
+                        team.add_sources(sources.get_sources())
+                        team.merge_field_sources(sources.get_field_sources())
+                    
+                    return result
                 except Exception as e:
                     if attempt == self.config.max_retries - 1:
                         raise
+                    # Clear sources on retry to avoid duplicates
+                    sources.clear()
                     await asyncio.sleep(self.config.retry_delay_ms / 1000 * (attempt + 1))
             return False
     
     @abstractmethod
-    async def _enrich_team(self, team: TeamRow) -> bool:
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
         """
         Enrich a single team with data from this enricher.
         
         Args:
             team: TeamRow to enrich (modified in place)
+            sources: SourceCollector to track data sources/citations
             
         Returns:
             True if any data was added, False otherwise
+        
+        Example:
+            async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
+                # Fetch data from an API
+                api_url = f"https://api.example.com/teams/{team.name}"
+                data = await self._fetch_data(api_url)
+                
+                if data:
+                    team.some_field = data["value"]
+                    sources.add_api_source(
+                        url=api_url,
+                        source_name="Example API",
+                        endpoint="/teams/",
+                        fields=["some_field"]
+                    )
+                    return True
+                return False
         """
         pass
     

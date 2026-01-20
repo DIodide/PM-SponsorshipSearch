@@ -3,6 +3,7 @@ Geographic Enricher for team data.
 
 Adds city population data using the Data Commons API.
 Supports metro GDP as a future enhancement via BEA.gov API.
+Tracks data sources for provenance.
 """
 
 from __future__ import annotations
@@ -15,6 +16,7 @@ import httpx
 
 from .base import BaseEnricher, EnricherConfig, EnricherRegistry
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector, SourceNames
 
 
 # Data Commons API configuration
@@ -87,6 +89,7 @@ REGION_MAPPING: Dict[str, Tuple[str, str, Optional[str]]] = {
     # STATE NAMES -> MAJOR CITY MAPPINGS
     # =========================================================================
     "Colorado": ("Denver", "US", "geoId/0820000"),
+    "Connecticut": ("Hartford", "US", "geoId/0937000"),  # WNBA Connecticut Sun
     "Florida": ("Miami", "US", "geoId/1245000"),
     "Indiana": ("Indianapolis", "US", "geoId/1836003"),
     "Minnesota": ("Minneapolis", "US", "geoId/2743000"),
@@ -495,12 +498,13 @@ class GeoEnricher(BaseEnricher):
             self._population_cache[geo_id] = None
             return None
 
-    async def _enrich_team(self, team: TeamRow) -> bool:
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
         """
         Enrich a single team with geographic data.
 
         Args:
             team: TeamRow to enrich (modified in place)
+            sources: SourceCollector to track data sources/citations
 
         Returns:
             True if any data was added, False otherwise
@@ -521,10 +525,22 @@ class GeoEnricher(BaseEnricher):
         if team.geo_city is None:
             team.geo_city = city
             enriched = True
+            # Track static mapping source
+            sources.add_static_source(
+                identifier="region-mapping-table",
+                source_name=SourceNames.REGION_MAPPING,
+                fields=["geo_city"]
+            )
 
         if team.geo_country is None:
             team.geo_country = country
             enriched = True
+            # Track static mapping source (only if not already added)
+            sources.add_static_source(
+                identifier="region-mapping-table",
+                source_name=SourceNames.REGION_MAPPING,
+                fields=["geo_country"]
+            )
 
         # Fetch population for US cities
         if geo_id and country == "US":
@@ -533,6 +549,15 @@ class GeoEnricher(BaseEnricher):
                 if population is not None:
                     team.city_population = population
                     enriched = True
+                    # Track Data Commons API source
+                    api_url = f"{DATA_COMMONS_STAT_URL}?place={geo_id}&stat_var={POPULATION_VARIABLE}"
+                    sources.add_api_source(
+                        url=api_url,
+                        source_name=SourceNames.DATA_COMMONS_API,
+                        endpoint="/stat/value",
+                        query_params={"place": geo_id, "stat_var": POPULATION_VARIABLE},
+                        fields=["city_population"]
+                    )
         elif country and country != "US":
             # Track non-US regions
             self._non_us_regions[f"{city}, {country}"] = (

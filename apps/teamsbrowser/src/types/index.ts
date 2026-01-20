@@ -101,6 +101,22 @@ export interface SponsorInfo {
   asset_type?: string;
 }
 
+// Source citation from the scraper
+export interface SourceCitation {
+  url: string;
+  source_type: string; // "api", "website", "database", "cached", "static"
+  source_name: string; // Human-readable name: "MLB StatsAPI", "WikiData SPARQL", etc.
+  retrieved_at?: string;
+  title?: string;
+  domain?: string;
+  api_endpoint?: string;
+  query_params?: Record<string, string>;
+  fields_sourced?: string[];
+  is_primary?: boolean;
+  confidence?: number;
+  cache_hit?: boolean;
+}
+
 export interface Team {
   _id: string;
   _creationTime: number;
@@ -151,6 +167,12 @@ export interface Team {
   // Metadata
   enrichments_applied?: string[] | null;
   last_enriched?: string | null;
+
+  // Source/Citation Tracking
+  sources?: SourceCitation[] | null;
+  field_sources?: Record<string, string[]> | null;
+  scraped_at?: string | null;
+  scraper_version?: string | null;
 }
 
 // Combined result for display

@@ -54,6 +54,9 @@ ESPN_ENDPOINTS = {
     "mlb": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams",
     "nba": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams",
     "nhl": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams",
+    "wnba": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+    "mls": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+    "nwsl": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
 }
 
 
@@ -81,6 +84,44 @@ def fetch_espn_logos(league_key: str) -> Dict[str, str]:
     except Exception as e:
         print(f"ESPN API fetch failed for {league_key}: {e}")
         return {}
+
+
+def fetch_espn_teams(league_key: str) -> List[dict]:
+    """
+    Fetch full team data from ESPN API.
+    Returns: list of team dicts with fields like displayName, abbreviation, location, logos, etc.
+    """
+    url = ESPN_ENDPOINTS.get(league_key.lower())
+    if not url:
+        return []
+
+    try:
+        data = _get_json(url)
+        teams = data.get("sports", [{}])[0].get("leagues", [{}])[0].get("teams", [])
+        out: List[dict] = []
+        for t in teams:
+            team = t.get("team", {})
+            if team.get("displayName"):
+                logos = team.get("logos") or []
+                out.append({
+                    "id": team.get("id"),
+                    "displayName": team.get("displayName"),
+                    "shortDisplayName": team.get("shortDisplayName"),
+                    "abbreviation": team.get("abbreviation"),
+                    "location": team.get("location"),  # City/region
+                    "nickname": team.get("nickname"),  # Just the team name part
+                    "name": team.get("name"),
+                    "slug": team.get("slug"),
+                    "color": team.get("color"),
+                    "alternateColor": team.get("alternateColor"),
+                    "isActive": team.get("isActive", True),
+                    "logo_url": logos[0].get("href") if logos else None,
+                    "links": team.get("links", []),
+                })
+        return out
+    except Exception as e:
+        print(f"ESPN API fetch failed for {league_key}: {e}")
+        return []
 
 
 # ============================================================
