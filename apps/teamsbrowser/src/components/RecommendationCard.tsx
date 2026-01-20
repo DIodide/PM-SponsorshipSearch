@@ -63,10 +63,15 @@ export function RecommendationCard({ recommendation, onClick }: RecommendationCa
   } : {};
 
   const getSocialUrl = (platform: string): string | null => {
-    const handle = socialHandles.find(h => 
-      h.platform.toLowerCase() === platform.toLowerCase() ||
-      h.platform.toLowerCase().includes(platform.toLowerCase())
-    );
+    const handle = socialHandles.find(h => {
+      const p = h.platform.toLowerCase();
+      const search = platform.toLowerCase();
+      // Handle Twitter/X naming - data uses "x" but UI uses "twitter"
+      if (search === 'twitter' || search === 'x') {
+        return p === 'x' || p === 'twitter';
+      }
+      return p === search || p.includes(search);
+    });
     return handle?.url || null;
   };
 
