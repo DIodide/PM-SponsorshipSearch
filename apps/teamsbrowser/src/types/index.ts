@@ -33,7 +33,7 @@ export const BRAND_VALUES = [
 export const LEAGUES = [
  { value: "NFL", label: "Football" },
  { value: "NBA G League WNBA", label: "Basketball" },
- { value: "MLB MiLB Major League Baseball Triple-A Single-A High-A Double-A Rookie", label: "Baseball" },
+ { value: "MLB MiLB", label: "Baseball" },
  { value: "NHL ECHL AHL", label: "Hockey" },
  { value: "MLS NWSL", label: "Soccer" }
 ];
