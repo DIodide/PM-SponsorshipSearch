@@ -1,10 +1,10 @@
 // Filter options
 export const REGIONS = [
-  { value: "northeast", label: "Northeast" },
-  { value: "southeast", label: "Southeast" },
-  { value: "midwest", label: "Midwest" },
-  { value: "southwest", label: "Southwest" },
-  { value: "west", label: "West" },
+  { value: "united states northeast", label: "Northeast" },
+  { value: "united states southeast", label: "Southeast" },
+  { value: "united states midwest", label: "Midwest" },
+  { value: "united states southwest", label: "Southwest" },
+  { value: "united states west", label: "West" },
 ];
 
 export const DEMOGRAPHICS = [
@@ -29,16 +29,13 @@ export const BRAND_VALUES = [
   { value: "family", label: "Family-Friendly" },
 ];
 
+// YUBI: change from leagues to sports
 export const LEAGUES = [
-  { value: "NFL", label: "NFL" },
-  { value: "NBA", label: "NBA" },
-  { value: "MLB", label: "MLB" },
-  { value: "NHL", label: "NHL" },
-  { value: "MLS", label: "MLS" },
-  { value: "WNBA", label: "WNBA" },
-  { value: "NWSL", label: "NWSL" },
-  { value: "MiLB", label: "Minor League Baseball" },
-  { value: "NBA G League", label: "NBA G League" },
+ { value: "NFL", label: "Football" },
+ { value: "NBA G League", label: "Basketball" },
+ { value: "Major League Baseball Triple-A Single-A High-A Double-A Rookie", label: "Baseball" },
+ { value: "NHL ECHL AHL", label: "Hockey" },
+ { value: "MLS", label: "Soccer" }
 ];
 
 export const GOALS = [

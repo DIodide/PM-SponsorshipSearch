@@ -4,12 +4,22 @@ import { api } from "./_generated/api";
 import { AllTeamsClean } from "./All_Teams_Clean";
 
 function cosineSimilarity(a: number[] | null, b: number[] | null): number {
+  // 1. Check if either vector is null, undefined, or empty
   if (!a || !b || a.length === 0 || b.length === 0) return 0;
+
+  // 2. Ensure vectors are the same length to avoid undefined multiplication
+  if (a.length !== b.length) {
+    console.warn("Vector length mismatch:", a.length, b.length);
+    return 0;
+  }
+  
   const dot = a.reduce((sum, val, i) => sum + val * b[i], 0);
   const normA = Math.sqrt(a.reduce((s, v) => s + v * v, 0));
   const normB = Math.sqrt(b.reduce((s, v) => s + v * v, 0));
   if (normA === 0 || normB === 0) return 0;
-  return dot / (normA * normB); // [-1,1]
+
+  const similarity = dot / (normA * normB);
+  return isNaN(similarity) ? 0 : similarity;
 }
 
 // ----------------------
@@ -122,33 +132,74 @@ export const computeBrandSimilarity = action({
     // ------------------------------------------------------------
 
     const scored: (AllTeamsClean & { similarity_score: number })[] = teams.map((team: AllTeamsClean) => {
+        // scale is close to 0.7 to 0.9
         const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
         const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
         const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
+
+        // compute similarity between target audience and different programs
+        const simAudience1 = cosineSimilarity(brandVector.audience_embedding, team.community_programs_embedding);
+        const simAudience2 = cosineSimilarity(brandVector.audience_embedding, team.family_programs_embedding);
+        const simAudience = (simAudience1 + simAudience2) / 2;
+        // compute similarity between brand values and different programs
+        const simValueProg1 = cosineSimilarity(brandVector.values_embedding, team.community_programs_embedding);
+        const simValueProg2 = cosineSimilarity(brandVector.values_embedding, team.family_programs_embedding);
+        const simValueProg = (simValueProg1 + simValueProg2) / 2;
+
         
-        // YUBI: not relevant
+        // YUBI: is this useful? how can we use info about partners and sponsors?
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
 
-        // YUBI: this has a range of 2, but we want it to span from -1 to 1
-        const valuationSim = (1-Math.abs(target_value_tier - team.value_tier))
+        // YUBI: this has a range of 0 to 1
+        const tierDiff = Math.abs(target_value_tier - (team.value_tier ?? 1));
+        const valuationSim = 1 - (tierDiff / 2); // 0 diff = 1.0 score; 2 diff = 0.0 score
 
         // Set target value tier of team using goals
         let demSim = 0
-        if (brandAudience.includes("gen-z") && team.gen_z_weight != null) {
-            demSim += team.gen_z_weight
-        } else if (brandAudience.includes("millennials") && team.millenial_weight != null) {
-            demSim += team.millenial_weight
-        } else if (brandAudience.includes("gen-x") && team.gen_x_weight != null) {
-            demSim += team.gen_x_weight
-        } else if (brandAudience.includes("boomer") && team.boomer_weight != null) {
-            demSim += team.boomer_weight
-        } else if (brandAudience.includes("kids") && team.kids_weight != null) {
-            demSim += team.kids_weight
-        } else if (brandAudience.includes("women") && team.women_weight != null) {
-            demSim += team.women_weight
-        } else if (brandAudience.includes("men") && team.men_weight != null) {
-            demSim += team.men_weight
+        let demCounter = 0
+        if (brandAudience.includes("gen-z")) {
+          // YUBI: what happens if the weight value is null?
+            demSim += team.gen_z_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("millennials")) {
+            demSim += team.millenial_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("gen-x")) {
+            demSim += team.gen_x_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("boomer")) {
+            demSim += team.boomer_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("kids")) {
+            demSim += team.kids_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("women")) {
+            demSim += team.women_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("men")) {
+            demSim += team.men_weight ?? 0
+            demCounter += 1
+        } else if (brandAudience.includes("families")) {
+            demSim += team.family_friendly ?? 0
+            demCounter += 1
         }
+
+        // YUBI: normalize demSim so it doesn't have as much influence
+        // roughly a range of 0 to 1
+        // demSim = demCounter > 0 ? demSim / demCounter : 0;
+        demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0;
+
+        // set reach score
+        let reachSim = 0
+        if (brandGoals.includes("digital-presence")) {
+          reachSim = team.digital_reach ?? 0
+        } else if (brandGoals.includes("local-presence")) {
+          reachSim = team.local_reach ?? 0
+        } else {
+          reachSim = ((team.digital_reach ?? 0) + (team.local_reach ?? 0)) / 2
+        }
+
+        // YUBI: reachSim seems like a great metric, so I want to try and use it
 
         const components = [
           simRegion,
@@ -156,18 +207,39 @@ export const computeBrandSimilarity = action({
           simValues,
           valuationSim,
           demSim
-          // YUBI: want to add more components here
+          // YUBI: test if these components are useful
+          // simAudience
+          // simValueProg
+          // reachSim
         ];
+        
+        // YUBI: modify weights as desired
+        const WEIGHTS = {
+          region: 0.35,      // 35% - High Priority
+          league: 0.35,      // 35% - High Priority
+          values: 0.05,      // 10%
+          valuation: 0.20,   // 10%
+          demographics: 0.05 // 10%
+        };
+
+        // We multiply each score by its weight
+        const weightedScore = 
+          (simRegion * WEIGHTS.region) +
+          (simLeague * WEIGHTS.league) +
+          (simValues * WEIGHTS.values) +
+          (valuationSim * WEIGHTS.valuation) +
+          (demSim * WEIGHTS.demographics);
       
         const active = components.filter((v) => typeof v === "number") as number[];
 
         // YUBI: this is robust against unknown values in a team by only dividing by the number of known values per team
         const avgScore =
           active.length > 0 ? active.reduce((s, v) => s + v, 0) / active.length : 0;
-      
+        
+        // YUBI: not using avgScore for now 
         return {
           ...team,
-          similarity_score: avgScore,
+          similarity_score: weightedScore,
         };
       });
       
