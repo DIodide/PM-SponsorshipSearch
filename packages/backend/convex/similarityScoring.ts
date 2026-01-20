@@ -115,6 +115,7 @@ export const computeBrandSimilarity = action({
       values_embedding: await embedText(brandValues),
       audience_embedding: await embedText(brandAudience),
       goals_embedding: await embedText(brandGoals),
+      query_embedding: await embedText(query)
     };
 
     // ------------------------------------------------------------
@@ -146,6 +147,12 @@ export const computeBrandSimilarity = action({
         const simValueProg2 = cosineSimilarity(brandVector.values_embedding, team.family_programs_embedding);
         const simValueProg = (simValueProg1 + simValueProg2) / 2;
 
+        // aggregate value and audience and query together
+        let simQuery = cosineSimilarity(brandVector.query_embedding, team.league_embedding);
+        simQuery += cosineSimilarity(brandVector.query_embedding, team.values_embedding);
+        simQuery += cosineSimilarity(brandVector.query_embedding, team.community_programs_embedding);
+        simQuery /= 3;
+
         
         // YUBI: is this useful? how can we use info about partners and sponsors?
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
@@ -175,9 +182,15 @@ export const computeBrandSimilarity = action({
             demCounter += 1
         } else if (brandAudience.includes("women")) {
             demSim += team.women_weight ?? 0
+            if (team.category.includes("WNBA") || team.category.includes("NWSL")) {
+              demSim += 1
+            }
             demCounter += 1
         } else if (brandAudience.includes("men")) {
             demSim += team.men_weight ?? 0
+            if (team.category.includes("WNBA") || team.category.includes("NWSL")) {
+              demSim -= 0.5
+            }
             demCounter += 1
         } else if (brandAudience.includes("families")) {
             demSim += team.family_friendly ?? 0
@@ -203,32 +216,36 @@ export const computeBrandSimilarity = action({
 
         const components = [
           simRegion,
-          simLeague,
+          // YUBI: replace similar league with similar query because I already have filter step below
+          simQuery,
           simValues,
           valuationSim,
-          demSim
+          demSim,
+          reachSim
           // YUBI: test if these components are useful
           // simAudience
           // simValueProg
-          // reachSim
         ];
         
         // YUBI: modify weights as desired
         const WEIGHTS = {
-          region: 0.35,      // 35% - High Priority
-          league: 0.35,      // 35% - High Priority
-          values: 0.05,      // 10%
-          valuation: 0.20,   // 10%
-          demographics: 0.05 // 10%
+          region: 0.3,    
+          query: 0.1,      
+          values: 0.1,  
+          valuation: 0.3,  
+          demographics: 0.1, 
+          reach: 0.1
         };
 
         // We multiply each score by its weight
-        const weightedScore = 
+        let weightedScore = 
           (simRegion * WEIGHTS.region) +
-          (simLeague * WEIGHTS.league) +
+          (simQuery * WEIGHTS.query) +
           (simValues * WEIGHTS.values) +
           (valuationSim * WEIGHTS.valuation) +
-          (demSim * WEIGHTS.demographics);
+          (demSim * WEIGHTS.demographics +
+          (reachSim * WEIGHTS.reach)
+          );
       
         const active = components.filter((v) => typeof v === "number") as number[];
 
@@ -236,6 +253,14 @@ export const computeBrandSimilarity = action({
         const avgScore =
           active.length > 0 ? active.reduce((s, v) => s + v, 0) / active.length : 0;
         
+        // set score to 0 if the team's sport does not align with what sports the brand wants
+        // check if the length of the string brandLeague has more than 2 characters
+        if (brandLeague.length > 2) {
+          if (!brandLeague.includes(team.category)) {
+            weightedScore = 0
+          } 
+        }
+
         // YUBI: not using avgScore for now 
         return {
           ...team,

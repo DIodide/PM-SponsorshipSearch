@@ -32,10 +32,10 @@ export const BRAND_VALUES = [
 // YUBI: change from leagues to sports
 export const LEAGUES = [
  { value: "NFL", label: "Football" },
- { value: "NBA G League", label: "Basketball" },
- { value: "Major League Baseball Triple-A Single-A High-A Double-A Rookie", label: "Baseball" },
+ { value: "NBA G League WNBA", label: "Basketball" },
+ { value: "MLB MiLB Major League Baseball Triple-A Single-A High-A Double-A Rookie", label: "Baseball" },
  { value: "NHL ECHL AHL", label: "Hockey" },
- { value: "MLS", label: "Soccer" }
+ { value: "MLS NWSL", label: "Soccer" }
 ];
 
 export const GOALS = [
