@@ -230,11 +230,11 @@ export const computeBrandSimilarity = action({
         // YUBI: modify weights as desired
         const WEIGHTS = {
           region: 0.3,    
-          query: 0.01,      
-          values: 0.01,  
-          valuation: 0.6,  
-          demographics: 0.07, 
-          reach: 0.01
+          query: 0.04,      
+          values: 0.02,  
+          valuation: 0.3,  
+          demographics: 0.3, 
+          reach: 0.04
         };
 
         // We multiply each score by its weight
