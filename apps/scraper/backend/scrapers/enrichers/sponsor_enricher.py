@@ -101,6 +101,7 @@ LEAGUE_TO_SPORT = {
     "triple-a": "baseball",
     "double-a": "baseball",
     "single-a": "baseball",
+    "class a": "baseball",
     "high-a": "baseball",
     "low-a": "baseball",
     "rookie": "baseball",

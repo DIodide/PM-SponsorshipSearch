@@ -1692,6 +1692,11 @@ async def _export_to_convex(
             "cause_partnerships",
             "enrichments_applied",
             "last_enriched",
+            # Source/citation tracking (data provenance)
+            "sources",
+            "field_sources",
+            "scraped_at",
+            "scraper_version",
         ]
 
         for field_name in direct_fields:

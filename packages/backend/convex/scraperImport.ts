@@ -103,6 +103,7 @@ const scrapedTeamSchema = v.object({
   sources: v.optional(v.array(sourceCitationSchema)),              // List of source citations
   field_sources: v.optional(v.any()),                               // Map of field -> [source_urls]
   scraped_at: v.optional(v.string()),                               // ISO timestamp of base scrape
+  scraper_version: v.optional(v.string()),                          // Version of scraper that collected data
 });
 
 // ============================================
@@ -238,6 +239,7 @@ export const importSingleTeam = mutation({
       sources: team.sources ?? null,
       field_sources: team.field_sources ?? null,
       scraped_at: team.scraped_at ?? null,
+      scraper_version: team.scraper_version ?? null,
     };
     
     const id = await ctx.db.insert("All_Teams", teamData);
@@ -292,6 +294,7 @@ export const batchImportTeams = mutation({
         sources: team.sources ?? null,
         field_sources: team.field_sources ?? null,
         scraped_at: team.scraped_at ?? null,
+        scraper_version: team.scraper_version ?? null,
       };
       
       const id = await ctx.db.insert("All_Teams", teamData);
@@ -362,6 +365,7 @@ export const fullImport = mutation({
         sources: team.sources ?? null,
         field_sources: team.field_sources ?? null,
         scraped_at: team.scraped_at ?? null,
+        scraper_version: team.scraper_version ?? null,
       };
       
       const id = await ctx.db.insert("All_Teams", teamData);

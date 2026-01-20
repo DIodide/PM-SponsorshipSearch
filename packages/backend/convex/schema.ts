@@ -289,6 +289,7 @@ export default defineSchema({
       })), v.null())),
       field_sources: v.optional(v.union(v.any(), v.null())),  // Map of field -> [source_urls]
       scraped_at: v.optional(v.union(v.string(), v.null())),  // ISO timestamp of base scrape
+      scraper_version: v.optional(v.union(v.string(), v.null())),  // Version of scraper
     })
     .index("by_name", ["name"])
     .index("by_league", ["league"])
