@@ -132,9 +132,10 @@ export const computeBrandSimilarity = action({
     // ------------------------------------------------------------
 
     const scored: (AllTeamsClean & { similarity_score: number })[] = teams.map((team: AllTeamsClean) => {
-        const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
-        const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
-        const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
+        // change scale from -1 to 1 to 0 to 2
+        const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding) + 1;
+        const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding) + 1;
+        const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding) + 1;
 
         // compute similarity between target audience and different programs
         const simAudience1 = cosineSimilarity(brandVector.audience_embedding, team.community_programs_embedding);
@@ -149,8 +150,8 @@ export const computeBrandSimilarity = action({
         // YUBI: is this useful? how can we use info about partners and sponsors?
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
 
-        // YUBI: this has a range of 2, but we want it to span from -1 to 1
-        const valuationSim = (1 - Math.abs(target_value_tier - (team.value_tier ?? 1)))
+        // YUBI: this has a range of 2, from 0 to 2
+        const valuationSim = Math.abs(target_value_tier - (team.value_tier ?? 1))
 
         // Set target value tier of team using goals
         let demSim = 0
@@ -183,6 +184,7 @@ export const computeBrandSimilarity = action({
         }
 
         // YUBI: normalize demSim so it doesn't have as much influence
+        // roughly a range of 0 to 1
         demSim = demCounter > 0 ? demSim / demCounter : 0;
 
         // set reach score

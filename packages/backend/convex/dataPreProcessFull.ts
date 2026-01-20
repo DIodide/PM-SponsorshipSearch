@@ -10,17 +10,20 @@ import { Doc } from "./_generated/dataModel";
 function computeStats(nums: (number | null | undefined)[]): {
   mean: number;
   sd: number;
+  max: number;
 } {
   const filtered = nums.filter((n): n is number => typeof n === "number");
 
-  if (filtered.length === 0) return { mean: 0, sd: 1 };
+  if (filtered.length === 0) return { mean: 0, sd: 1, max: 0 };
 
   const mean = filtered.reduce((a, b) => a + b, 0) / filtered.length;
   const variance =
     filtered.reduce((a, b) => a + (b - mean) ** 2, 0) / filtered.length;
   const sd = Math.sqrt(variance) || 1;
 
-  return { mean, sd };
+  const max = Math.max(...filtered);
+
+  return { mean, sd, max };
 }
 
 /**
@@ -132,14 +135,80 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         const family_programs_norm = (row.family_program_count != null) ? (row.family_program_count - family_programs.mean) / family_programs.sd : null
         const revenue_norm = (row.annual_revenue != null) ? (row.annual_revenue - revenue.mean) / revenue.sd : null
         const population_norm = (row.city_population != null) ? (row.city_population - population.mean) / population.sd : null
-        const x_norm =  (row.followers_x != null) ? (row.followers_x - x.mean) / x.sd : null
-        const instagram_norm =  (row.followers_instagram != null) ? (row.followers_instagram - instagram.mean) / instagram.sd : null
-        const facebook_norm =  (row.followers_facebook != null) ? (row.followers_facebook - facebook.mean) / facebook.sd : null
-        const tiktok_norm =  (row.followers_tiktok != null) ? (row.followers_tiktok - tiktok.mean) / tiktok.sd : null
-        const youtube_norm =  (row.subscribers_youtube != null) ? (row.subscribers_youtube - youtube.mean) / youtube.sd : null      
+
+        let x_norm = -1;
+
+        if (row.followers_x != null) {
+          if (row.followers_x < x.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            x_norm = (row.followers_x / x.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate x.max beforehand
+            x_norm = (row.followers_x - x.mean) / (x.max - x.mean);
+          }
+        }
+
+        let instagram_norm = -1;
+        if (row.followers_instagram != null) {
+          if (row.followers_instagram < instagram.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            instagram_norm = (row.followers_instagram / instagram.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate instagram.max beforehand
+            instagram_norm = (row.followers_instagram - instagram.mean) / (instagram.max - instagram.mean);
+          }
+        }
+
+        let facebook_norm = -1;
+        if (row.followers_facebook != null) {
+          if (row.followers_facebook < facebook.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            facebook_norm = (row.followers_facebook / facebook.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate facebook.max beforehand
+            facebook_norm = (row.followers_facebook - facebook.mean) / (facebook.max - facebook.mean);
+          }
+        }
+
+        let tiktok_norm = -1;
+        if (row.followers_tiktok != null) {
+          if (row.followers_tiktok < tiktok.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            tiktok_norm = (row.followers_tiktok / tiktok.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate tiktok.max beforehand
+            tiktok_norm = (row.followers_tiktok - tiktok.mean) / (tiktok.max - tiktok.mean);
+          }
+        }
+
+        let youtube_norm = -1;
+        if (row.subscribers_youtube != null) {
+          if (row.subscribers_youtube < youtube.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            youtube_norm = (row.subscribers_youtube / youtube.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate youtube.max beforehand
+            youtube_norm = (row.subscribers_youtube - youtube.mean) / (youtube.max - youtube.mean);
+          }
+        }
         
-        const digital_reach_score = ((instagram_norm ?? 0) + (x_norm ?? 0) + (facebook_norm ?? 0) + (tiktok_norm ?? 0) + (youtube_norm ?? 0)) / 5
-        const local_reach_score = ((attendance_norm ?? 0) + (population_norm ?? 0)) / 2
+        const digital_reach_score = (instagram_norm + x_norm + facebook_norm + tiktok_norm + youtube_norm) / 5
+        const local_reach_score = ((attendance_norm ?? -1) + (population_norm ?? -1)) / 2
 
         // Calculate demographic weights
         // YUBI: should I use womenWeight and menWeight?
@@ -147,14 +216,11 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         const menWeight = (x_norm != null) ? 0.67*x_norm : null
 
 
-        const genZWeight = ((instagram_norm != null) ? 0.5*instagram_norm : 0) + ((tiktok_norm != null) ? 0.5*tiktok_norm : 0)
-        const millenialWeight = (((instagram_norm != null) ? 0.2*instagram_norm : 0) + ((tiktok_norm != null) ? 0.2*tiktok_norm : 0) 
-        + ((x_norm != null) ? 0.2*x_norm : 0) + ((facebook_norm != null) ? 0.2*facebook_norm : 0) 
-        + ((youtube_norm != null) ? 0.2*youtube_norm : 0))
-        const genXWeight = (((x_norm != null) ? 0.33*x_norm : 0) + ((facebook_norm != null) ? 0.33*facebook_norm : 0) 
-        + ((youtube_norm != null) ? 0.33*youtube_norm : 0))
-        const boomerWeight = ((facebook_norm != null) ? facebook_norm : null)
-        const kidsWeight = ((youtube_norm != null) ? youtube_norm : null)
+        const genZWeight = (0.5*instagram_norm + 0.5*tiktok_norm)
+        const millenialWeight = 0.2*instagram_norm + 0.2*tiktok_norm + 0.2*x_norm + 0.2*facebook_norm + 0.2*youtube_norm
+        const genXWeight = 0.33*x_norm + 0.33*facebook_norm + 0.33*youtube_norm
+        const boomerWeight = facebook_norm
+        const kidsWeight = youtube_norm
 
 
         let value_tier_score = 1
