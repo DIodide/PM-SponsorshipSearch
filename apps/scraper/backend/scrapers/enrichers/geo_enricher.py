@@ -89,6 +89,7 @@ REGION_MAPPING: Dict[str, Tuple[str, str, Optional[str]]] = {
     # STATE NAMES -> MAJOR CITY MAPPINGS
     # =========================================================================
     "Colorado": ("Denver", "US", "geoId/0820000"),
+    "Connecticut": ("Hartford", "US", "geoId/0937000"),  # WNBA Connecticut Sun
     "Florida": ("Miami", "US", "geoId/1245000"),
     "Indiana": ("Indianapolis", "US", "geoId/1836003"),
     "Minnesota": ("Minneapolis", "US", "geoId/2743000"),

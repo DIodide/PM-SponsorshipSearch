@@ -53,6 +53,10 @@ SPORT_CONFIG = {
         "team_class": "Q13393265",  # basketball team
         "keywords": ["basketball", "nba", "g league", "gleague"],
     },
+    "womens_basketball": {
+        "team_class": "Q1478437",  # women's basketball team
+        "keywords": ["wnba", "women's national basketball"],
+    },
     "football": {
         "team_class": "Q17156793",  # American football team
         "keywords": ["football", "nfl"],
@@ -61,10 +65,34 @@ SPORT_CONFIG = {
         "team_class": "Q4498974",  # ice hockey team
         "keywords": ["hockey", "nhl", "ahl", "echl"],
     },
+    "soccer": {
+        "team_class": "Q847017",  # association football (soccer) club
+        "keywords": ["soccer", "mls", "major league soccer"],
+    },
+    "womens_soccer": {
+        "team_class": "Q15944511",  # women's association football club
+        "keywords": ["nwsl", "women's soccer", "national women's soccer"],
+    },
 }
 
 # Map league strings to sports (for detecting which sport a team belongs to)
+# NOTE: More specific patterns must come first to avoid substring matching issues
 LEAGUE_TO_SPORT = {
+    # Basketball (Women's) - must come before men's basketball to match first
+    "wnba": "womens_basketball",
+    "women's national basketball association": "womens_basketball",
+    # Soccer (Women's) - must come before men's soccer to match first
+    "nwsl": "womens_soccer",
+    "national women's soccer league": "womens_soccer",
+    # Basketball (Men's)
+    "nba": "basketball",
+    "national basketball association": "basketball",
+    "g league": "basketball",
+    "nba g league": "basketball",
+    "gleague": "basketball",
+    # Soccer (Men's)
+    "mls": "soccer",
+    "major league soccer": "soccer",
     # Baseball
     "major league baseball": "baseball",
     "mlb": "baseball",
@@ -92,12 +120,6 @@ LEAGUE_TO_SPORT = {
     "dominican summer league": "baseball",
     "american league": "baseball",
     "national league": "baseball",
-    # Basketball
-    "nba": "basketball",
-    "national basketball association": "basketball",
-    "g league": "basketball",
-    "nba g league": "basketball",
-    "gleague": "basketball",
     # Football
     "nfl": "football",
     "national football league": "football",

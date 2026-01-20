@@ -55,6 +55,11 @@ FORBES_TRACKED_LEAGUES = {
     "national hockey league",
     "mls",
     "major league soccer",
+    # Women's leagues (Forbes may have limited data but worth trying)
+    "wnba",
+    "women's national basketball association",
+    "nwsl",
+    "national women's soccer league",
 }
 
 
