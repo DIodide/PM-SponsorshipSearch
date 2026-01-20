@@ -230,11 +230,11 @@ export const computeBrandSimilarity = action({
         // YUBI: modify weights as desired
         const WEIGHTS = {
           region: 0.3,    
-          query: 0.1,      
-          values: 0.1,  
-          valuation: 0.3,  
-          demographics: 0.1, 
-          reach: 0.1
+          query: 0.01,      
+          values: 0.01,  
+          valuation: 0.6,  
+          demographics: 0.07, 
+          reach: 0.01
         };
 
         // We multiply each score by its weight
@@ -245,7 +245,7 @@ export const computeBrandSimilarity = action({
           (valuationSim * WEIGHTS.valuation) +
           (demSim * WEIGHTS.demographics +
           (reachSim * WEIGHTS.reach)
-          );
+        );
       
         const active = components.filter((v) => typeof v === "number") as number[];
 
