@@ -301,16 +301,17 @@ export default defineSchema({
       name: v.string(),
       region: v.string(),
       league: v.string(),
+      category: v.string(),
       official_url: v.string(),
   
       // These allow the specific null value returned by your Promise.resolve(null)
-    region_embedding: v.union(v.array(v.float64()), v.null()),
-    league_embedding: v.union(v.array(v.float64()), v.null()),
-    values_embedding: v.union(v.array(v.float64()), v.null()),
-    sponsors_embedding: v.union(v.array(v.float64()), v.null()),
-    family_programs_embedding: v.union(v.array(v.float64()), v.null()),
-    community_programs_embedding: v.union(v.array(v.float64()), v.null()),
-    partners_embedding: v.union(v.array(v.float64()), v.null()),
+      region_embedding: v.union(v.array(v.float64()), v.null()),
+      league_embedding: v.union(v.array(v.float64()), v.null()),
+      values_embedding: v.union(v.array(v.float64()), v.null()),
+      sponsors_embedding: v.union(v.array(v.float64()), v.null()),
+      family_programs_embedding: v.union(v.array(v.float64()), v.null()),
+      community_programs_embedding: v.union(v.array(v.float64()), v.null()),
+      partners_embedding: v.union(v.array(v.float64()), v.null()),
   
       // Numeric score fields
       digital_reach: v.union(v.number(), v.null()),
