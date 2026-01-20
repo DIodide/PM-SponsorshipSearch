@@ -3,6 +3,7 @@ NHL + AHL + ECHL Teams Scraper
 - Scrapes team data from official hockey league directories
 - Outputs JSON and Excel files with team data
 - Enriches with logo URLs from NHL CDN, AHL directory, and ECHL directory
+- Tracks data sources for provenance
 """
 
 from __future__ import annotations
@@ -29,6 +30,7 @@ from .logo_utils import (
     NHL_ABBREVIATIONS,
     _norm_name,
 )
+from .source_collector import SourceCollector, SourceNames, SourceTypes
 
 
 NHL_TEAMS_URL = "https://www.nhl.com/info/teams/"
@@ -173,7 +175,8 @@ ECHL_TEAMS_STATIC = [
 
 
 @dataclass
-class TeamRow:
+class HockeyTeamRow:
+    """Internal team row for NHL/AHL/ECHL scraper."""
     name: str
     region: str
     league: str
@@ -181,6 +184,10 @@ class TeamRow:
     official_url: str
     category: str
     logo_url: Optional[str] = None
+    # Source tracking
+    sources: Optional[List[Dict[str, Any]]] = None
+    field_sources: Optional[Dict[str, List[str]]] = None
+    scraped_at: Optional[str] = None
 
 
 @dataclass
@@ -258,25 +265,73 @@ class NHLAHLECHLScraper:
 
         return " ".join(parts[:-1]) if len(parts) >= 2 else team_name
 
-    def _make_row(self, name: str, league: str, url: str, category: str) -> TeamRow:
-        """Create a TeamRow with inferred demographics."""
+    def _make_row(
+        self, 
+        name: str, 
+        league_acronym: str, 
+        url: str, 
+        source_url: Optional[str] = None,
+        source_name: Optional[str] = None,
+        is_static: bool = False,
+        scrape_timestamp: Optional[str] = None,
+    ) -> HockeyTeamRow:
+        """
+        Create a HockeyTeamRow with inferred demographics and source tracking.
+        
+        Naming convention:
+        - category: Always the league acronym (NHL, AHL, ECHL)
+        - league: Descriptive name (National Hockey League, American Hockey League, ECHL)
+        """
         region = self._infer_region(name)
-        if league == "NHL":
+        
+        # Map acronym to descriptive league name
+        league_names = {
+            "NHL": "National Hockey League",
+            "AHL": "American Hockey League", 
+            "ECHL": "ECHL",  # ECHL is the official name (formerly East Coast Hockey League)
+        }
+        league_descriptive = league_names.get(league_acronym, league_acronym)
+        
+        if league_acronym == "NHL":
             demo = f"Hockey fans in and around {region}, plus the broader NHL audience."
         else:
             demo = f"Local hockey fans and player-development followers in and around {region}."
-        return TeamRow(
+        
+        # Create source collector for this team
+        sources = SourceCollector(name)
+        
+        if is_static:
+            sources.add_static_source(
+                identifier=f"{league_acronym.lower()}-teams-static-data",
+                source_name=SourceNames.STATIC_TEAM_DATA,
+                fields=["name", "region", "league", "target_demographic", "official_url", "category"]
+            )
+        elif source_url and source_name:
+            sources.add_website_source(
+                url=source_url,
+                source_name=source_name,
+                fields=["name", "region", "league", "target_demographic", "official_url", "category"]
+            )
+        
+        return HockeyTeamRow(
             name=name,
             region=region,
-            league=league,
+            league=league_descriptive,  # Descriptive name
             target_demographic=demo,
             official_url=url,
-            category=category,
+            category=league_acronym,    # Acronym
+            sources=sources.get_sources(),
+            field_sources=sources.get_field_sources(),
+            scraped_at=scrape_timestamp,
         )
 
     # ---------- NHL ----------
-    def _parse_nhl_teams_live(self, soup: BeautifulSoup) -> List[TeamRow]:
-        """Parse NHL teams from live HTML."""
+    def _parse_nhl_teams_live(
+        self, 
+        soup: BeautifulSoup,
+        scrape_timestamp: Optional[str] = None,
+    ) -> List[HockeyTeamRow]:
+        """Parse NHL teams from live HTML with source tracking."""
         teams: Dict[str, str] = {}
         for a in soup.find_all("a", href=True):
             href = a["href"].strip()
@@ -296,15 +351,24 @@ class NHLAHLECHLScraper:
             teams[href] = text
 
         rows = [
-            self._make_row(name, "NHL", url, "Major")
+            self._make_row(
+                name, "NHL", url,
+                source_url=NHL_TEAMS_URL,
+                source_name=SourceNames.NHL_COM,
+                scrape_timestamp=scrape_timestamp,
+            )
             for url, name in sorted(teams.items(), key=lambda x: x[1])
         ]
         return rows
 
-    def _get_nhl_teams_static(self) -> List[TeamRow]:
-        """Get NHL teams from static data."""
+    def _get_nhl_teams_static(self, scrape_timestamp: Optional[str] = None) -> List[HockeyTeamRow]:
+        """Get NHL teams from static data with source tracking."""
         return [
-            self._make_row(name, "NHL", url, "Major")
+            self._make_row(
+                name, "NHL", url,
+                is_static=True,
+                scrape_timestamp=scrape_timestamp,
+            )
             for name, region, url in NHL_TEAMS_STATIC
         ]
 
@@ -329,10 +393,14 @@ class NHLAHLECHLScraper:
             return h
         return ""
 
-    def _parse_ahl_teams_live(self, soup: BeautifulSoup) -> List[TeamRow]:
-        """Parse AHL teams from live HTML."""
+    def _parse_ahl_teams_live(
+        self, 
+        soup: BeautifulSoup,
+        scrape_timestamp: Optional[str] = None,
+    ) -> List[HockeyTeamRow]:
+        """Parse AHL teams from live HTML with source tracking."""
         nodes = soup.find_all(string=re.compile(r"NHL Affiliation:", re.I))
-        rows: List[TeamRow] = []
+        rows: List[HockeyTeamRow] = []
 
         for node in nodes:
             container = node.parent.find_parent("div")
@@ -351,22 +419,35 @@ class NHLAHLECHLScraper:
             url = self._pick_primary_site(links)
 
             if team_name and url:
-                rows.append(self._make_row(team_name, "AHL", url, "Minor"))
+                rows.append(self._make_row(
+                    team_name, "AHL", url,
+                    source_url=AHL_DIR_URL,
+                    source_name=SourceNames.AHL_COM,
+                    scrape_timestamp=scrape_timestamp,
+                ))
 
         # Dedupe by name
         dedup = {r.name: r for r in rows}
         return [dedup[name] for name in sorted(dedup)]
 
-    def _get_ahl_teams_static(self) -> List[TeamRow]:
-        """Get AHL teams from static data."""
+    def _get_ahl_teams_static(self, scrape_timestamp: Optional[str] = None) -> List[HockeyTeamRow]:
+        """Get AHL teams from static data with source tracking."""
         return [
-            self._make_row(name, "AHL", url, "Minor")
+            self._make_row(
+                name, "AHL", url,
+                is_static=True,
+                scrape_timestamp=scrape_timestamp,
+            )
             for name, region, url in AHL_TEAMS_STATIC
         ]
 
     # ---------- ECHL ----------
-    def _parse_echl_teams_live(self, soup: BeautifulSoup) -> List[TeamRow]:
-        """Parse ECHL teams from live HTML."""
+    def _parse_echl_teams_live(
+        self, 
+        soup: BeautifulSoup,
+        scrape_timestamp: Optional[str] = None,
+    ) -> List[HockeyTeamRow]:
+        """Parse ECHL teams from live HTML with source tracking."""
         profile_pairs: List[Tuple[str, str]] = []
         for a in soup.find_all("a", href=True):
             href = a["href"].strip()
@@ -424,34 +505,44 @@ class NHLAHLECHLScraper:
         for name in sorted(team_names):
             url = pick_team_site(name)
             if url:
-                rows.append(self._make_row(name, "ECHL", url, "Minor"))
+                rows.append(self._make_row(
+                    name, "ECHL", url,
+                    source_url=ECHL_TEAMS_URL,
+                    source_name=SourceNames.ECHL_COM,
+                    scrape_timestamp=scrape_timestamp,
+                ))
         return rows
 
-    def _get_echl_teams_static(self) -> List[TeamRow]:
-        """Get ECHL teams from static data."""
+    def _get_echl_teams_static(self, scrape_timestamp: Optional[str] = None) -> List[HockeyTeamRow]:
+        """Get ECHL teams from static data with source tracking."""
         return [
-            self._make_row(name, "ECHL", url, "Minor")
+            self._make_row(
+                name, "ECHL", url,
+                is_static=True,
+                scrape_timestamp=scrape_timestamp,
+            )
             for name, region, url in ECHL_TEAMS_STATIC
         ]
 
     def _write_outputs(
-        self, rows: List[TeamRow], json_path: Path, xlsx_path: Path
+        self, rows: List[HockeyTeamRow], json_path: Path, xlsx_path: Path
     ) -> None:
         """Write team data to JSON and Excel files."""
         df = pd.DataFrame([asdict(r) for r in rows])
 
+        # Filter by category (acronym) for sheet organization
         df_nhl = (
-            df[df["league"] == "NHL"]
+            df[df["category"] == "NHL"]
             .sort_values(["region", "name"])
             .reset_index(drop=True)
         )
         df_ahl = (
-            df[df["league"] == "AHL"]
+            df[df["category"] == "AHL"]
             .sort_values(["region", "name"])
             .reset_index(drop=True)
         )
         df_echl = (
-            df[df["league"] == "ECHL"]
+            df[df["category"] == "ECHL"]
             .sort_values(["region", "name"])
             .reset_index(drop=True)
         )
@@ -472,11 +563,11 @@ class NHLAHLECHLScraper:
 
     def _enrich_with_logos(
         self,
-        nhl_rows: List[TeamRow],
-        ahl_rows: List[TeamRow],
-        echl_rows: List[TeamRow],
+        nhl_rows: List[HockeyTeamRow],
+        ahl_rows: List[HockeyTeamRow],
+        echl_rows: List[HockeyTeamRow],
     ) -> None:
-        """Add logo URLs to team rows."""
+        """Add logo URLs to team rows with source tracking."""
         # NHL logos from NHL CDN or ESPN
         espn_logos = fetch_espn_logos("nhl")
 
@@ -485,10 +576,31 @@ class NHLAHLECHLScraper:
             abbrev = NHL_ABBREVIATIONS.get(name_lower)
             if abbrev:
                 row.logo_url = nhl_assets_logo(abbrev)
+                # Add logo source
+                logo_source = SourceCollector(row.name)
+                logo_source.add_api_source(
+                    url=f"https://assets.nhle.com/logos/nhl/svg/{abbrev}_light.svg",
+                    source_name="NHL Assets CDN",
+                    fields=["logo_url"]
+                )
+                if row.sources:
+                    row.sources.extend(logo_source.get_sources())
+                else:
+                    row.sources = logo_source.get_sources()
             else:
                 norm = _norm_name(row.name)
                 if norm in espn_logos:
                     row.logo_url = espn_logos[norm]
+                    logo_source = SourceCollector(row.name)
+                    logo_source.add_api_source(
+                        url=espn_logos[norm],
+                        source_name=SourceNames.ESPN_API,
+                        fields=["logo_url"]
+                    )
+                    if row.sources:
+                        row.sources.extend(logo_source.get_sources())
+                    else:
+                        row.sources = logo_source.get_sources()
 
         # AHL logos from directory
         ahl_logos = fetch_ahl_logos()
@@ -496,6 +608,16 @@ class NHLAHLECHLScraper:
             norm = _norm_name(row.name)
             if norm in ahl_logos:
                 row.logo_url = ahl_logos[norm]
+                logo_source = SourceCollector(row.name)
+                logo_source.add_website_source(
+                    url=AHL_DIR_URL,
+                    source_name=SourceNames.AHL_COM,
+                    fields=["logo_url"]
+                )
+                if row.sources:
+                    row.sources.extend(logo_source.get_sources())
+                else:
+                    row.sources = logo_source.get_sources()
 
         # ECHL logos from directory
         echl_logos = fetch_echl_logos()
@@ -503,44 +625,55 @@ class NHLAHLECHLScraper:
             norm = _norm_name(row.name)
             if norm in echl_logos:
                 row.logo_url = echl_logos[norm]
+                logo_source = SourceCollector(row.name)
+                logo_source.add_website_source(
+                    url=ECHL_TEAMS_URL,
+                    source_name=SourceNames.ECHL_COM,
+                    fields=["logo_url"]
+                )
+                if row.sources:
+                    row.sources.extend(logo_source.get_sources())
+                else:
+                    row.sources = logo_source.get_sources()
 
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
+        scrape_timestamp = start_time.isoformat()
         used_fallback = False
 
         try:
             # NHL
             try:
                 nhl_soup = self._get_soup(NHL_TEAMS_URL)
-                nhl_rows = self._parse_nhl_teams_live(nhl_soup)
+                nhl_rows = self._parse_nhl_teams_live(nhl_soup, scrape_timestamp)
                 if len(nhl_rows) < 28:
-                    nhl_rows = self._get_nhl_teams_static()
+                    nhl_rows = self._get_nhl_teams_static(scrape_timestamp)
                     used_fallback = True
             except Exception:
-                nhl_rows = self._get_nhl_teams_static()
+                nhl_rows = self._get_nhl_teams_static(scrape_timestamp)
                 used_fallback = True
 
             # AHL
             try:
                 ahl_soup = self._get_soup(AHL_DIR_URL)
-                ahl_rows = self._parse_ahl_teams_live(ahl_soup)
+                ahl_rows = self._parse_ahl_teams_live(ahl_soup, scrape_timestamp)
                 if len(ahl_rows) < 20:
-                    ahl_rows = self._get_ahl_teams_static()
+                    ahl_rows = self._get_ahl_teams_static(scrape_timestamp)
                     used_fallback = True
             except Exception:
-                ahl_rows = self._get_ahl_teams_static()
+                ahl_rows = self._get_ahl_teams_static(scrape_timestamp)
                 used_fallback = True
 
             # ECHL
             try:
                 echl_soup = self._get_soup(ECHL_TEAMS_URL)
-                echl_rows = self._parse_echl_teams_live(echl_soup)
+                echl_rows = self._parse_echl_teams_live(echl_soup, scrape_timestamp)
                 if len(echl_rows) < 20:
-                    echl_rows = self._get_echl_teams_static()
+                    echl_rows = self._get_echl_teams_static(scrape_timestamp)
                     used_fallback = True
             except Exception:
-                echl_rows = self._get_echl_teams_static()
+                echl_rows = self._get_echl_teams_static(scrape_timestamp)
                 used_fallback = True
 
             # Enrich with logos

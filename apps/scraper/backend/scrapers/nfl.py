@@ -3,6 +3,7 @@ NFL Teams Scraper
 - Scrapes team data from NFL.com official directory
 - Outputs JSON and Excel files with team data
 - Enriches with logo URLs from ESPN API
+- Tracks data sources for provenance
 """
 
 from __future__ import annotations
@@ -19,6 +20,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from .logo_utils import fetch_espn_logos, _norm_name
+from .source_collector import SourceCollector, SourceNames, SourceTypes
 
 
 NFL_TEAMS_URL = "https://www.nfl.com/teams/"
@@ -67,7 +69,8 @@ NFL_TEAMS_STATIC = [
 
 
 @dataclass
-class TeamRow:
+class NFLTeamRow:
+    """Internal team row for NFL scraper."""
     name: str
     region: str
     league: str
@@ -75,6 +78,10 @@ class TeamRow:
     official_url: str
     category: str
     logo_url: Optional[str] = None
+    # Source tracking
+    sources: Optional[List[Dict[str, Any]]] = None
+    field_sources: Optional[Dict[str, List[str]]] = None
+    scraped_at: Optional[str] = None
 
 
 @dataclass
@@ -157,9 +164,13 @@ class NFLScraper:
 
         return None
 
-    def _parse_nfl_teams_live(self, soup: BeautifulSoup) -> List[TeamRow]:
-        """Parse NFL teams from live HTML."""
-        rows: List[TeamRow] = []
+    def _parse_nfl_teams_live(
+        self, 
+        soup: BeautifulSoup, 
+        scrape_timestamp: Optional[str] = None
+    ) -> List[NFLTeamRow]:
+        """Parse NFL teams from live HTML with source tracking."""
+        rows: List[NFLTeamRow] = []
         seen_urls = set()
 
         for a in soup.find_all("a", href=True):
@@ -181,36 +192,61 @@ class NFLScraper:
                 continue
 
             region = self._infer_region(name)
+            
+            # Create source collector for this team
+            sources = SourceCollector(name)
+            sources.add_website_source(
+                url=NFL_TEAMS_URL,
+                source_name=SourceNames.NFL_COM,
+                fields=["name", "region", "league", "target_demographic", "official_url", "category"]
+            )
+            
             rows.append(
-                TeamRow(
+                NFLTeamRow(
                     name=name,
                     region=region,
-                    league="NFL",
+                    league="National Football League",  # Descriptive name
                     target_demographic=f"American football fans in and around {region}, plus the broader national NFL audience.",
                     official_url=url,
-                    category="NFL",
+                    category="NFL",  # Acronym
+                    sources=sources.get_sources(),
+                    field_sources=sources.get_field_sources(),
+                    scraped_at=scrape_timestamp,
                 )
             )
 
         rows.sort(key=lambda r: (r.region, r.name))
         return rows
 
-    def _get_nfl_teams_static(self) -> List[TeamRow]:
-        """Get NFL teams from static data."""
-        return [
-            TeamRow(
-                name=name,
-                region=region,
-                league="NFL",
-                target_demographic=f"American football fans in and around {region}, plus the broader national NFL audience.",
-                official_url=url,
-                category="NFL",
+    def _get_nfl_teams_static(self, scrape_timestamp: Optional[str] = None) -> List[NFLTeamRow]:
+        """Get NFL teams from static data with source tracking."""
+        rows = []
+        for name, region, url in NFL_TEAMS_STATIC:
+            # Create source collector for static data
+            sources = SourceCollector(name)
+            sources.add_static_source(
+                identifier="nfl-teams-static-data",
+                source_name=SourceNames.STATIC_TEAM_DATA,
+                fields=["name", "region", "league", "target_demographic", "official_url", "category"]
             )
-            for name, region, url in NFL_TEAMS_STATIC
-        ]
+            
+            rows.append(
+                NFLTeamRow(
+                    name=name,
+                    region=region,
+                    league="National Football League",  # Descriptive name
+                    target_demographic=f"American football fans in and around {region}, plus the broader national NFL audience.",
+                    official_url=url,
+                    category="NFL",  # Acronym
+                    sources=sources.get_sources(),
+                    field_sources=sources.get_field_sources(),
+                    scraped_at=scrape_timestamp,
+                )
+            )
+        return rows
 
     def _write_outputs(
-        self, rows: List[TeamRow], json_path: Path, xlsx_path: Path
+        self, rows: List[NFLTeamRow], json_path: Path, xlsx_path: Path
     ) -> None:
         """Write team data to JSON and Excel files."""
         df = pd.DataFrame([asdict(r) for r in rows])
@@ -226,32 +262,44 @@ class NFLScraper:
         with pd.ExcelWriter(xlsx_path, engine="openpyxl") as writer:
             df_sorted.to_excel(writer, index=False, sheet_name="NFL Teams")
 
-    def _enrich_with_logos(self, rows: List[TeamRow]) -> None:
-        """Add logo URLs to team rows from ESPN API."""
+    def _enrich_with_logos(self, rows: List[NFLTeamRow]) -> None:
+        """Add logo URLs to team rows from ESPN API with source tracking."""
         espn_logos = fetch_espn_logos("nfl")
 
         for row in rows:
             norm = _norm_name(row.name)
             if norm in espn_logos:
                 row.logo_url = espn_logos[norm]
+                # Add logo source
+                logo_source = SourceCollector(row.name)
+                logo_source.add_api_source(
+                    url=espn_logos[norm],
+                    source_name=SourceNames.ESPN_API,
+                    fields=["logo_url"]
+                )
+                if row.sources:
+                    row.sources.extend(logo_source.get_sources())
+                else:
+                    row.sources = logo_source.get_sources()
 
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
+        scrape_timestamp = start_time.isoformat()
         used_fallback = False
 
         try:
             # Try live scraping first
             try:
                 soup = self._get_soup(NFL_TEAMS_URL)
-                rows = self._parse_nfl_teams_live(soup)
+                rows = self._parse_nfl_teams_live(soup, scrape_timestamp)
 
                 # If we got too few results, use fallback
                 if len(rows) < 28:
-                    rows = self._get_nfl_teams_static()
+                    rows = self._get_nfl_teams_static(scrape_timestamp)
                     used_fallback = True
             except Exception:
-                rows = self._get_nfl_teams_static()
+                rows = self._get_nfl_teams_static(scrape_timestamp)
                 used_fallback = True
 
             # Enrich with logos

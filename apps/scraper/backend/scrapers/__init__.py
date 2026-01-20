@@ -11,6 +11,12 @@ from .models import (
     METRIC_GROUPS,
     FIELD_METADATA,
 )
+from .source_collector import (
+    SourceCitation,
+    SourceCollector,
+    SourceNames,
+    SourceTypes,
+)
 
 __all__ = [
     "MLBMiLBScraper",
@@ -24,4 +30,8 @@ __all__ = [
     "SponsorInfo",
     "METRIC_GROUPS",
     "FIELD_METADATA",
+    "SourceCitation",
+    "SourceCollector",
+    "SourceNames",
+    "SourceTypes",
 ]
