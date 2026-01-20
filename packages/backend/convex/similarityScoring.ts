@@ -132,10 +132,10 @@ export const computeBrandSimilarity = action({
     // ------------------------------------------------------------
 
     const scored: (AllTeamsClean & { similarity_score: number })[] = teams.map((team: AllTeamsClean) => {
-        // change scale from -1 to 1 to 0 to 2
-        const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding) + 1;
-        const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding) + 1;
-        const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding) + 1;
+        // scale is close to 0.7 to 0.9
+        const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
+        const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
+        const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
 
         // compute similarity between target audience and different programs
         const simAudience1 = cosineSimilarity(brandVector.audience_embedding, team.community_programs_embedding);
@@ -150,8 +150,9 @@ export const computeBrandSimilarity = action({
         // YUBI: is this useful? how can we use info about partners and sponsors?
         const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
 
-        // YUBI: this has a range of 2, from 0 to 2
-        const valuationSim = Math.abs(target_value_tier - (team.value_tier ?? 1))
+        // YUBI: this has a range of 0 to 1
+        const tierDiff = Math.abs(target_value_tier - (team.value_tier ?? 1));
+        const valuationSim = 1 - (tierDiff / 2); // 0 diff = 1.0 score; 2 diff = 0.0 score
 
         // Set target value tier of team using goals
         let demSim = 0
@@ -185,7 +186,8 @@ export const computeBrandSimilarity = action({
 
         // YUBI: normalize demSim so it doesn't have as much influence
         // roughly a range of 0 to 1
-        demSim = demCounter > 0 ? demSim / demCounter : 0;
+        // demSim = demCounter > 0 ? demSim / demCounter : 0;
+        demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0;
 
         // set reach score
         let reachSim = 0
@@ -210,16 +212,34 @@ export const computeBrandSimilarity = action({
           // simValueProg
           // reachSim
         ];
+        
+        // YUBI: modify weights as desired
+        const WEIGHTS = {
+          region: 0.35,      // 35% - High Priority
+          league: 0.35,      // 35% - High Priority
+          values: 0.05,      // 10%
+          valuation: 0.20,   // 10%
+          demographics: 0.05 // 10%
+        };
+
+        // We multiply each score by its weight
+        const weightedScore = 
+          (simRegion * WEIGHTS.region) +
+          (simLeague * WEIGHTS.league) +
+          (simValues * WEIGHTS.values) +
+          (valuationSim * WEIGHTS.valuation) +
+          (demSim * WEIGHTS.demographics);
       
         const active = components.filter((v) => typeof v === "number") as number[];
 
         // YUBI: this is robust against unknown values in a team by only dividing by the number of known values per team
         const avgScore =
           active.length > 0 ? active.reduce((s, v) => s + v, 0) / active.length : 0;
-      
+        
+        // YUBI: not using avgScore for now 
         return {
           ...team,
-          similarity_score: avgScore,
+          similarity_score: weightedScore,
         };
       });
       

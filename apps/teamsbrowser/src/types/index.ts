@@ -1,10 +1,10 @@
 // Filter options
 export const REGIONS = [
-  { value: "northeast", label: "Northeast" },
-  { value: "southeast", label: "Southeast" },
-  { value: "midwest", label: "Midwest" },
-  { value: "southwest", label: "Southwest" },
-  { value: "west", label: "West" },
+  { value: "united states northeast", label: "Northeast" },
+  { value: "united states southeast", label: "Southeast" },
+  { value: "united states midwest", label: "Midwest" },
+  { value: "united states southwest", label: "Southwest" },
+  { value: "united states west", label: "West" },
 ];
 
 export const DEMOGRAPHICS = [
