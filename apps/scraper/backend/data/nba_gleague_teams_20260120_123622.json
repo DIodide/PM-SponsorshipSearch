@@ -1,0 +1,3802 @@
+[
+  {
+    "name": "Austin Spurs",
+    "region": "Austin",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Austin.",
+    "official_url": "https://austin.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709890/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997007",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://austin.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650147",
+        "domain": "austin.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Birmingham Squadron",
+    "region": "Birmingham",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Birmingham.",
+    "official_url": "https://birmingham.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709913/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997048",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://birmingham.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650208",
+        "domain": "birmingham.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Capital City Go-Go",
+    "region": "Capital City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Capital City.",
+    "official_url": "https://capitalcity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709928/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997062",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://capitalcity.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650223",
+        "domain": "capitalcity.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Cleveland Charge",
+    "region": "Cleveland",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Cleveland.",
+    "official_url": "https://cleveland.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709893/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997074",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cleveland.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650233",
+        "domain": "cleveland.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "College Park Skyhawks",
+    "region": "College Park",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around College Park.",
+    "official_url": "https://cpskyhawks.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709929/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997084",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cpskyhawks.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650245",
+        "domain": "cpskyhawks.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Delaware Blue Coats",
+    "region": "Delaware",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Delaware.",
+    "official_url": "https://bluecoats.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709909/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997093",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://bluecoats.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650257",
+        "domain": "bluecoats.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Grand Rapids Gold",
+    "region": "Grand Rapids",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Grand Rapids.",
+    "official_url": "https://grandrapids.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709917/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997103",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://grandrapids.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650265",
+        "domain": "grandrapids.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Greensboro Swarm",
+    "region": "Greensboro",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Greensboro.",
+    "official_url": "https://greensboro.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709922/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997113",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://greensboro.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650274",
+        "domain": "greensboro.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Iowa Wolves",
+    "region": "Iowa",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Iowa.",
+    "official_url": "https://iowa.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709911/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997122",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://iowa.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650281",
+        "domain": "iowa.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Long Island Nets",
+    "region": "Long Island",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Long Island.",
+    "official_url": "https://longisland.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709921/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997131",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://longisland.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650290",
+        "domain": "longisland.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Maine Celtics",
+    "region": "Maine",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Maine.",
+    "official_url": "https://maine.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709915/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997140",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://maine.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650298",
+        "domain": "maine.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Memphis Hustle",
+    "region": "Memphis",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Memphis.",
+    "official_url": "https://memphis.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709926/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997149",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://memphis.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650307",
+        "domain": "memphis.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Mexico City Capitanes",
+    "region": "Mexico City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Mexico City.",
+    "official_url": "https://capitanes.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709931/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997158",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://capitanes.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650314",
+        "domain": "capitanes.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Motor City Cruise",
+    "region": "Motor City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Motor City.",
+    "official_url": "https://detroit.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709932/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997167",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://detroit.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650324",
+        "domain": "detroit.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Noblesville Boom",
+    "region": "Noblesville",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Noblesville.",
+    "official_url": "https://noblesville.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709910/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997175",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://noblesville.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650332",
+        "domain": "noblesville.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Oklahoma City Blue",
+    "region": "Oklahoma City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Oklahoma City.",
+    "official_url": "https://oklahomacity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709889/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997183",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://oklahomacity.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650339",
+        "domain": "oklahomacity.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Osceola Magic",
+    "region": "Osceola",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Osceola.",
+    "official_url": "https://osceola.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709925/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997192",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://osceola.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650346",
+        "domain": "osceola.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Raptors 905",
+    "region": "Raptors",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Raptors.",
+    "official_url": "https://raptors905.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709920/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997202",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://raptors905.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650354",
+        "domain": "raptors905.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Rio Grande Valley Vipers",
+    "region": "Rio Grande Valley",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Rio Grande Valley.",
+    "official_url": "https://riograndevalley.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709908/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997211",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://riograndevalley.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650361",
+        "domain": "riograndevalley.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Rip City Remix",
+    "region": "Rip City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Rip City.",
+    "official_url": "https://ripcity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709933/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997219",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://ripcity.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650369",
+        "domain": "ripcity.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Salt Lake City Stars",
+    "region": "Salt Lake City",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Salt Lake City.",
+    "official_url": "https://saltlakecity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709903/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997228",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://saltlakecity.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650376",
+        "domain": "saltlakecity.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "San Diego Clippers",
+    "region": "San Diego",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around San Diego.",
+    "official_url": "https://sandiego.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709924/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997237",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://sandiego.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650384",
+        "domain": "sandiego.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Santa Cruz Warriors",
+    "region": "Santa Cruz",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Santa Cruz.",
+    "official_url": "https://santacruz.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709902/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997245",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://santacruz.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650391",
+        "domain": "santacruz.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Sioux Falls Skyforce",
+    "region": "Sioux Falls",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Sioux Falls.",
+    "official_url": "https://siouxfalls.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709904/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997257",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://siouxfalls.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650398",
+        "domain": "siouxfalls.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "South Bay Lakers",
+    "region": "South Bay",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around South Bay.",
+    "official_url": "https://southbay.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709905/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997266",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://southbay.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650405",
+        "domain": "southbay.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Stats",
+    "region": "Stats",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Stats.",
+    "official_url": "https://stats.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997277",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Stockton Kings",
+    "region": "Stockton",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Stockton.",
+    "official_url": "https://stockton.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709914/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997286",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://stockton.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650413",
+        "domain": "stockton.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Texas Legends",
+    "region": "Texas",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Texas.",
+    "official_url": "https://texas.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709918/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997296",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://texas.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650421",
+        "domain": "texas.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Valley Suns",
+    "region": "Valley",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Valley.",
+    "official_url": "https://valley.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709934/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997306",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://valley.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650433",
+        "domain": "valley.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Westchester Knicks",
+    "region": "Westchester",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Westchester.",
+    "official_url": "https://westchester.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709919/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997315",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://westchester.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650444",
+        "domain": "westchester.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Windy City Bulls",
+    "region": "Windy",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Windy.",
+    "official_url": "https://windycity.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709923/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997324",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://windycity.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650451",
+        "domain": "windycity.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Wisconsin Herd",
+    "region": "Wisconsin",
+    "league": "NBA G League",
+    "target_demographic": "Local basketball fans and player-development followers in and around Wisconsin.",
+    "official_url": "https://wisconsin.gleague.nba.com/",
+    "category": "G League",
+    "logo_url": "https://ak-static.cms.nba.com/wp-content/uploads/logos/nbagleague/1612709927/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://gleague.nba.com/teams",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:22.997335",
+        "domain": "gleague.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://wisconsin.gleague.nba.com/",
+        "source_type": "website",
+        "source_name": "G League Directory",
+        "retrieved_at": "2026-01-20T12:36:23.650458",
+        "domain": "wisconsin.gleague.nba.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://gleague.nba.com/teams"
+      ],
+      "region": [
+        "https://gleague.nba.com/teams"
+      ],
+      "league": [
+        "https://gleague.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://gleague.nba.com/teams"
+      ],
+      "official_url": [
+        "https://gleague.nba.com/teams"
+      ],
+      "category": [
+        "https://gleague.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Atlanta Hawks",
+    "region": "Atlanta",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Atlanta, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/hawks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346130",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353258",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Boston Celtics",
+    "region": "Boston",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Boston, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/celtics/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346172",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353301",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Brooklyn Nets",
+    "region": "Brooklyn",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Brooklyn, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/nets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346185",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353315",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Charlotte Hornets",
+    "region": "Charlotte",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Charlotte, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/hornets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346194",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612766/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353325",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Chicago Bulls",
+    "region": "Chicago",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Chicago, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/bulls/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346201",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353334",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Cleveland Cavaliers",
+    "region": "Cleveland",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Cleveland, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/cavaliers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346209",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353342",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Dallas Mavericks",
+    "region": "Dallas",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Dallas, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/mavericks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346216",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353351",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Denver Nuggets",
+    "region": "Denver",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Denver, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/nuggets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346223",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353358",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Detroit Pistons",
+    "region": "Detroit",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Detroit, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pistons/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346230",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353366",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Golden State Warriors",
+    "region": "Golden State",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Golden State, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/warriors/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346237",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353374",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Houston Rockets",
+    "region": "Houston",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Houston, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/rockets/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346243",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353382",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Indiana Pacers",
+    "region": "Indiana",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Indiana, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pacers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346345",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353390",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "LA Clippers",
+    "region": "Los Angeles",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Los Angeles, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/clippers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346352",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353398",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Los Angeles Lakers",
+    "region": "Los Angeles",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Los Angeles, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/lakers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346359",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353405",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Memphis Grizzlies",
+    "region": "Memphis",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Memphis, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/grizzlies/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346366",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353413",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Miami Heat",
+    "region": "Miami",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Miami, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/heat/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346373",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353421",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Milwaukee Bucks",
+    "region": "Milwaukee",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Milwaukee, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/bucks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346380",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353428",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Minnesota Timberwolves",
+    "region": "Minnesota",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Minnesota, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/timberwolves/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346386",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353436",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "New Orleans Pelicans",
+    "region": "New Orleans",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around New Orleans, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/pelicans/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346393",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353444",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "New York Knicks",
+    "region": "New York",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around New York, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/knicks/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346399",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353451",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Oklahoma City Thunder",
+    "region": "Oklahoma City",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Oklahoma City, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/thunder/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346405",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353459",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Orlando Magic",
+    "region": "Orlando",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Orlando, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/magic/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346412",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353467",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Philadelphia 76ers",
+    "region": "Philadelphia",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Philadelphia, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/sixers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346419",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353475",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Phoenix Suns",
+    "region": "Phoenix",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Phoenix, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/suns/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612756/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346425",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612756/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353482",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Portland Trail Blazers",
+    "region": "Portland",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Portland, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/blazers/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346432",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612757/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353490",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Sacramento Kings",
+    "region": "Sacramento",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Sacramento, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/kings/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346438",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353497",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "San Antonio Spurs",
+    "region": "San Antonio",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around San Antonio, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/spurs/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346445",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353505",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Toronto Raptors",
+    "region": "Toronto",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Toronto, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/raptors/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346451",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353513",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Utah Jazz",
+    "region": "Utah",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Utah, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/jazz/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346458",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353520",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  },
+  {
+    "name": "Washington Wizards",
+    "region": "Washington",
+    "league": "NBA",
+    "target_demographic": "Basketball fans in and around Washington, plus the broader NBA audience.",
+    "official_url": "https://www.nba.com/wizards/",
+    "category": "NBA",
+    "logo_url": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg",
+    "sources": [
+      {
+        "url": "https://www.nba.com/teams",
+        "source_type": "website",
+        "source_name": "NBA.com",
+        "retrieved_at": "2026-01-20T12:36:22.346464",
+        "domain": "www.nba.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg",
+        "source_type": "api",
+        "source_name": "NBA CDN",
+        "retrieved_at": "2026-01-20T12:36:23.353528",
+        "domain": "cdn.nba.com",
+        "api_endpoint": "/logos/nba/",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nba.com/teams"
+      ],
+      "region": [
+        "https://www.nba.com/teams"
+      ],
+      "league": [
+        "https://www.nba.com/teams"
+      ],
+      "target_demographic": [
+        "https://www.nba.com/teams"
+      ],
+      "official_url": [
+        "https://www.nba.com/teams"
+      ],
+      "category": [
+        "https://www.nba.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.048504"
+  }
+]

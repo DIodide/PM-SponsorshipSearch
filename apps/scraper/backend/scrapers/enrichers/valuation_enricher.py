@@ -26,6 +26,7 @@ from bs4 import BeautifulSoup
 
 from .base import BaseEnricher, EnricherConfig, EnricherRegistry
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector, SourceNames
 
 
 # =============================================================================
@@ -54,6 +55,11 @@ FORBES_TRACKED_LEAGUES = {
     "national hockey league",
     "mls",
     "major league soccer",
+    # Women's leagues (Forbes may have limited data but worth trying)
+    "wnba",
+    "women's national basketball association",
+    "nwsl",
+    "national women's soccer league",
 }
 
 
@@ -515,9 +521,13 @@ class ValuationEnricher(BaseEnricher):
         except (httpx.HTTPStatusError, httpx.TimeoutException, httpx.RequestError):
             return None
 
-    async def _enrich_team(self, team: TeamRow) -> bool:
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
         """
         Enrich a single team with Forbes valuation data.
+        
+        Args:
+            team: TeamRow to enrich (modified in place)
+            sources: SourceCollector to track data sources/citations
         """
         enriched = False
 
@@ -536,22 +546,39 @@ class ValuationEnricher(BaseEnricher):
 
         # Get Forbes data
         forbes_data = await self._try_alternate_names(team.name)
+        
+        # Track fields added from Forbes
+        fields_from_forbes = []
 
         # Apply data (values are now in raw dollars)
         if team.franchise_value is None and forbes_data.get("franchise_value"):
             team.franchise_value = forbes_data["franchise_value"]
             self._stats["valuations_found"] += 1
+            fields_from_forbes.append("franchise_value")
             enriched = True
 
         if team.annual_revenue is None and forbes_data.get("revenue"):
             team.annual_revenue = forbes_data["revenue"]
             self._stats["revenues_found"] += 1
+            fields_from_forbes.append("annual_revenue")
             enriched = True
 
         if team.avg_ticket_price is None and forbes_data.get("avg_ticket_price"):
             team.avg_ticket_price = forbes_data["avg_ticket_price"]
             self._stats["ticket_prices_found"] += 1
+            fields_from_forbes.append("avg_ticket_price")
             enriched = True
+        
+        # Track Forbes as source if we got any data
+        if fields_from_forbes:
+            # Try to construct the Forbes URL we would have used
+            team_slug = team.name.lower().replace(" ", "-").replace(".", "")
+            forbes_url = f"{FORBES_BASE_URL}/{team_slug}"
+            sources.add_website_source(
+                url=forbes_url,
+                source_name=SourceNames.FORBES_VALUATIONS,
+                fields=fields_from_forbes,
+            )
 
         # Respectful delay between requests
         await asyncio.sleep(0.5)

@@ -28,6 +28,7 @@ import type * as seedData from "../seedData.js";
 import type * as similarityScoring from "../similarityScoring.js";
 import type * as social from "../social.js";
 import type * as socialHelpers from "../socialHelpers.js";
+import type * as teamAnalysis from "../teamAnalysis.js";
 import type * as teams from "../teams.js";
 
 import type {
@@ -57,6 +58,7 @@ declare const fullApi: ApiFromModules<{
   similarityScoring: typeof similarityScoring;
   social: typeof social;
   socialHelpers: typeof socialHelpers;
+  teamAnalysis: typeof teamAnalysis;
   teams: typeof teams;
 }>;
 

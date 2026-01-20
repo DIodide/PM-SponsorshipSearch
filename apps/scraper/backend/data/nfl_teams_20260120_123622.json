@@ -1,0 +1,1954 @@
+[
+  {
+    "name": "Arizona Cardinals",
+    "region": "Arizona",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Arizona, plus the broader national NFL audience.",
+    "official_url": "https://www.azcardinals.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832592",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013087",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Atlanta Falcons",
+    "region": "Atlanta",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Atlanta, plus the broader national NFL audience.",
+    "official_url": "https://www.atlantafalcons.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832668",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013129",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Baltimore Ravens",
+    "region": "Baltimore",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Baltimore, plus the broader national NFL audience.",
+    "official_url": "https://www.baltimoreravens.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833234",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013143",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Buffalo Bills",
+    "region": "Buffalo",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Buffalo, plus the broader national NFL audience.",
+    "official_url": "https://www.buffalobills.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833269",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013152",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Carolina Panthers",
+    "region": "Carolina",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Carolina, plus the broader national NFL audience.",
+    "official_url": "https://www.panthers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832716",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013161",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Chicago Bears",
+    "region": "Chicago",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Chicago, plus the broader national NFL audience.",
+    "official_url": "https://www.chicagobears.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832757",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013169",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Cincinnati Bengals",
+    "region": "Cincinnati",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Cincinnati, plus the broader national NFL audience.",
+    "official_url": "https://www.bengals.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833305",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013176",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Cleveland Browns",
+    "region": "Cleveland",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Cleveland, plus the broader national NFL audience.",
+    "official_url": "https://www.clevelandbrowns.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833341",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013184",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Dallas Cowboys",
+    "region": "Dallas",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Dallas, plus the broader national NFL audience.",
+    "official_url": "https://www.dallascowboys.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832798",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013192",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Denver Broncos",
+    "region": "Denver",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Denver, plus the broader national NFL audience.",
+    "official_url": "https://www.denverbroncos.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833376",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013199",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Detroit Lions",
+    "region": "Detroit",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Detroit, plus the broader national NFL audience.",
+    "official_url": "https://www.detroitlions.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832837",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013206",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Green Bay Packers",
+    "region": "Green Bay",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Green Bay, plus the broader national NFL audience.",
+    "official_url": "https://www.packers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832873",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013214",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Houston Texans",
+    "region": "Houston",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Houston, plus the broader national NFL audience.",
+    "official_url": "https://www.houstontexans.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833412",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013221",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Indianapolis Colts",
+    "region": "Indianapolis",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Indianapolis, plus the broader national NFL audience.",
+    "official_url": "https://www.colts.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833450",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013229",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Jacksonville Jaguars",
+    "region": "Jacksonville",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Jacksonville, plus the broader national NFL audience.",
+    "official_url": "https://www.jaguars.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833486",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013236",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Kansas City Chiefs",
+    "region": "Kansas City",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Kansas City, plus the broader national NFL audience.",
+    "official_url": "https://www.chiefs.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833521",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013244",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Las Vegas Raiders",
+    "region": "Las Vegas",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Las Vegas, plus the broader national NFL audience.",
+    "official_url": "https://www.raiders.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833556",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013253",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Los Angeles Chargers",
+    "region": "Los Angeles",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Los Angeles, plus the broader national NFL audience.",
+    "official_url": "https://www.chargers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833592",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013261",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Los Angeles Rams",
+    "region": "Los Angeles",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Los Angeles, plus the broader national NFL audience.",
+    "official_url": "https://www.therams.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832910",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013270",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Miami Dolphins",
+    "region": "Miami",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Miami, plus the broader national NFL audience.",
+    "official_url": "https://www.miamidolphins.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833627",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013278",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Minnesota Vikings",
+    "region": "Minnesota",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Minnesota, plus the broader national NFL audience.",
+    "official_url": "https://www.vikings.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832946",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013285",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "New England Patriots",
+    "region": "New England",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New England, plus the broader national NFL audience.",
+    "official_url": "https://www.patriots.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833664",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013295",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "New Orleans Saints",
+    "region": "New Orleans",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New Orleans, plus the broader national NFL audience.",
+    "official_url": "https://www.neworleanssaints.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.832983",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013302",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "New York Giants",
+    "region": "New York",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New York, plus the broader national NFL audience.",
+    "official_url": "https://www.giants.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833020",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013310",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "New York Jets",
+    "region": "New York",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around New York, plus the broader national NFL audience.",
+    "official_url": "https://www.newyorkjets.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833700",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013317",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Philadelphia Eagles",
+    "region": "Philadelphia",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Philadelphia, plus the broader national NFL audience.",
+    "official_url": "https://www.philadelphiaeagles.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833056",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013325",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Pittsburgh Steelers",
+    "region": "Pittsburgh",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Pittsburgh, plus the broader national NFL audience.",
+    "official_url": "https://www.steelers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833736",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013332",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "San Francisco 49ers",
+    "region": "San Francisco",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around San Francisco, plus the broader national NFL audience.",
+    "official_url": "https://www.49ers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833092",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013340",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Seattle Seahawks",
+    "region": "Seattle",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Seattle, plus the broader national NFL audience.",
+    "official_url": "https://www.seahawks.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833128",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013348",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Tampa Bay Buccaneers",
+    "region": "Tampa Bay",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Tampa Bay, plus the broader national NFL audience.",
+    "official_url": "https://www.buccaneers.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833163",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013355",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Tennessee Titans",
+    "region": "Tennessee",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Tennessee, plus the broader national NFL audience.",
+    "official_url": "https://www.tennesseetitans.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833771",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013362",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  },
+  {
+    "name": "Washington Commanders",
+    "region": "Washington",
+    "league": "NFL",
+    "target_demographic": "American football fans in and around Washington, plus the broader national NFL audience.",
+    "official_url": "https://www.commanders.com/",
+    "category": "NFL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
+    "sources": [
+      {
+        "url": "https://www.nfl.com/teams/",
+        "source_type": "website",
+        "source_name": "NFL.com",
+        "retrieved_at": "2026-01-20T12:36:23.833199",
+        "domain": "www.nfl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.013375",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nfl.com/teams/"
+      ],
+      "region": [
+        "https://www.nfl.com/teams/"
+      ],
+      "league": [
+        "https://www.nfl.com/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nfl.com/teams/"
+      ],
+      "official_url": [
+        "https://www.nfl.com/teams/"
+      ],
+      "category": [
+        "https://www.nfl.com/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:22.888171"
+  }
+]

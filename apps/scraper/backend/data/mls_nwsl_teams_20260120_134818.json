@@ -1,0 +1,2486 @@
+[
+  {
+    "name": "Atlanta United FC",
+    "region": "Atlanta United",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Atlanta United, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/18418/atlanta-united-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249179",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Austin FC",
+    "region": "Austin",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Austin, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/20906/austin-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/20906.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249270",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "CF Montréal",
+    "region": "CF Montréal",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around CF Montréal, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/9720/cf-montreal",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249304",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Charlotte FC",
+    "region": "Charlotte",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Charlotte, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/21300/charlotte-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249341",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Chicago Fire FC",
+    "region": "Chicago Fire",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Chicago Fire, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/182/chicago-fire-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249367",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Colorado Rapids",
+    "region": "Colorado Rapids",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Colorado Rapids, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/184/colorado-rapids",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/184.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249391",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Columbus Crew",
+    "region": "Columbus Crew",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Columbus Crew, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/183/columbus-crew",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249437",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "D.C. United",
+    "region": "D.C. United",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around D.C. United, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/193/dc-united",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249461",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "FC Cincinnati",
+    "region": "FC Cincinnati",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around FC Cincinnati, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/18267/fc-cincinnati",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249484",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "FC Dallas",
+    "region": "FC Dallas",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around FC Dallas, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/185/fc-dallas",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249507",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Houston Dynamo FC",
+    "region": "Houston Dynamo",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Houston Dynamo, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/6077/houston-dynamo-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249530",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Inter Miami CF",
+    "region": "Inter Miami",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Inter Miami, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/20232/inter-miami-cf",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249553",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "LA Galaxy",
+    "region": "LA Galaxy",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around LA Galaxy, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/187/la-galaxy",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249575",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "LAFC",
+    "region": "LAFC",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around LAFC, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/18966/lafc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249598",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Minnesota United FC",
+    "region": "Minnesota United",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Minnesota United, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/17362/minnesota-united-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249621",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Nashville SC",
+    "region": "Nashville",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Nashville, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/18986/nashville-sc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249644",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "New England Revolution",
+    "region": "New England Revolution",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around New England Revolution, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/189/new-england-revolution",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249666",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "New York City FC",
+    "region": "New York City",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around New York City, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/17606/new-york-city-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249697",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "New York Red Bulls",
+    "region": "New York Red Bulls",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around New York Red Bulls, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/190/new-york-red-bulls",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249795",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Orlando City SC",
+    "region": "Orlando City",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Orlando City, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/12011/orlando-city-sc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249833",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Philadelphia Union",
+    "region": "Philadelphia Union",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Philadelphia Union, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/10739/philadelphia-union",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249859",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Portland Timbers",
+    "region": "Portland Timbers",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Portland Timbers, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/9723/portland-timbers",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249882",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Real Salt Lake",
+    "region": "Real Salt Lake",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Real Salt Lake, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/4771/real-salt-lake",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249905",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "San Diego FC",
+    "region": "San Diego",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around San Diego, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/22529/san-diego-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249927",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "San Jose Earthquakes",
+    "region": "San Jose Earthquakes",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around San Jose Earthquakes, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/191/san-jose-earthquakes",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249950",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Seattle Sounders FC",
+    "region": "Seattle Sounders",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Seattle Sounders, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/9726/seattle-sounders-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249972",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Sporting Kansas City",
+    "region": "Sporting Kansas City",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Sporting Kansas City, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/186/sporting-kansas-city",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/186.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.249994",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "St. Louis CITY SC",
+    "region": "St. Louis CITY",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around St. Louis CITY, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/21812/st-louis-city-sc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/21812.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.250016",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Toronto FC",
+    "region": "Toronto",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Toronto, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/7318/toronto-fc",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.250037",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Vancouver Whitecaps",
+    "region": "Vancouver Whitecaps",
+    "league": "Major League Soccer",
+    "target_demographic": "Soccer fans in and around Vancouver Whitecaps, plus the broader MLS audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/9727/vancouver-whitecaps",
+    "category": "MLS",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.250059",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.1/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Angel City FC",
+    "region": "Angel City",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Angel City, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/21422/angel-city-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/21422.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639863",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Bay FC",
+    "region": "Bay",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Bay, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/22187/bay-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/22187.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639917",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Boston Legacy FC",
+    "region": "Boston Legacy",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Boston Legacy, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/131562/boston-legacy-fc",
+    "category": "NWSL",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639930",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Chicago Stars FC",
+    "region": "Chicago Stars",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Chicago Stars, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/15360/chicago-stars-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/15360.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639940",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Denver Summit FC",
+    "region": "Denver Summit",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Denver Summit, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/131563/denver-summit-fc",
+    "category": "NWSL",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639950",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Gotham FC",
+    "region": "Gotham",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Gotham, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/15364/gotham-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/15364.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639960",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Houston Dash",
+    "region": "Houston Dash",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Houston Dash, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/17346/houston-dash",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/17346.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639969",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Kansas City Current",
+    "region": "Kansas City Current",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Kansas City Current, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/20907/kansas-city-current",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/20907.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639978",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "North Carolina Courage",
+    "region": "North Carolina Courage",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around North Carolina Courage, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/15366/north-carolina-courage",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/15366.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639988",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Orlando Pride",
+    "region": "Orlando Pride",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Orlando Pride, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/18206/orlando-pride",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18206.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.639997",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Portland Thorns FC",
+    "region": "Portland Thorns",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Portland Thorns, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/15362/portland-thorns-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/15362.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.640006",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Racing Louisville FC",
+    "region": "Racing Louisville",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Racing Louisville, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/20905/racing-louisville-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/20905.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.640015",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "San Diego Wave FC",
+    "region": "San Diego Wave",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around San Diego Wave, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/21423/san-diego-wave-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/21423.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.640023",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Seattle Reign FC",
+    "region": "Seattle Reign",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Seattle Reign, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/15363/seattle-reign-fc",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/15363.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.640031",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Utah Royals",
+    "region": "Utah Royals",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Utah Royals, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/19141/utah-royals",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/19141.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.640038",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  },
+  {
+    "name": "Washington Spirit",
+    "region": "Washington Spirit",
+    "league": "National Women's Soccer League",
+    "target_demographic": "Women's soccer fans in and around Washington Spirit, plus the broader NWSL audience.",
+    "official_url": "https://www.espn.com/soccer/club/_/id/15365/washington-spirit",
+    "category": "NWSL",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/15365.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:48:19.640046",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/soccer/usa.nwsl/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:48:18.770053"
+  }
+]

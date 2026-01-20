@@ -4,6 +4,7 @@ MLB + MiLB Teams Scraper
 - Outputs JSON and Excel files with team data
 - Enriches with logo URLs from MLB Static CDN
 - Generates proper website URLs for mlb.com and milb.com
+- Tracks data sources for provenance
 """
 
 from __future__ import annotations
@@ -13,12 +14,14 @@ import re
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
 import requests
 
 from .logo_utils import mlbstatic_logo, fetch_espn_logos, _norm_name
+from .models import TeamRow as SharedTeamRow
+from .source_collector import SourceCollector, SourceNames, SourceTypes
 
 
 MLB_STATSAPI_TEAMS_URL = "https://statsapi.mlb.com/api/v1/teams"
@@ -69,7 +72,8 @@ MLB_TEAM_SLUGS: Dict[int, str] = {
 
 
 @dataclass
-class TeamRow:
+class MLBTeamRow:
+    """Internal team row with MLB-specific fields (sport_id, team_id)."""
     name: str
     region: str
     league: str
@@ -79,6 +83,10 @@ class TeamRow:
     sport_id: int
     team_id: int
     logo_url: Optional[str] = None
+    # Source tracking
+    sources: Optional[List[Dict[str, Any]]] = None
+    field_sources: Optional[Dict[str, List[str]]] = None
+    scraped_at: Optional[str] = None
 
 
 @dataclass
@@ -106,9 +114,16 @@ class MLBMiLBScraper:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.sport_ids = DEFAULT_SPORT_IDS
 
-    def fetch_teams(self, timeout_s: int = 30) -> List[Dict[str, Any]]:
-        """Fetch raw team data from StatsAPI for each sport ID."""
+    def fetch_teams(self, timeout_s: int = 30) -> Tuple[List[Dict[str, Any]], Dict[int, str]]:
+        """
+        Fetch raw team data from StatsAPI for each sport ID.
+        
+        Returns:
+            Tuple of (teams list, sport_id -> api_url mapping for source tracking)
+        """
         all_teams = []
+        api_urls: Dict[int, str] = {}  # sport_id -> url used
+        
         for sport_id in self.sport_ids:
             try:
                 url = f"{MLB_STATSAPI_TEAMS_URL}?sportId={sport_id}"
@@ -117,10 +132,11 @@ class MLBMiLBScraper:
                 data = response.json()
                 teams = data.get("teams", [])
                 all_teams.extend(teams)
+                api_urls[sport_id] = url
             except Exception as e:
                 print(f"Warning: Failed to fetch teams for sportId={sport_id}: {e}")
                 continue
-        return all_teams
+        return all_teams, api_urls
 
     def _generate_website_url(self, team: Dict[str, Any], sport_id: int) -> str:
         """
@@ -155,14 +171,21 @@ class MLBMiLBScraper:
         link = team.get("link") or ""
         return f"https://statsapi.mlb.com{link}" if link else ""
 
-    def _team_to_row(self, team: Dict[str, Any], logo_url: Optional[str] = None) -> TeamRow:
-        """Convert raw API team data to structured TeamRow."""
+    def _team_to_row(
+        self, 
+        team: Dict[str, Any], 
+        logo_url: Optional[str] = None,
+        api_url: Optional[str] = None,
+        scrape_timestamp: Optional[str] = None,
+    ) -> MLBTeamRow:
+        """Convert raw API team data to structured MLBTeamRow with source tracking."""
         name = team.get("name", "")
         region = team.get("locationName") or ""
         sport_info = team.get("sport") or {}
         sport_name = sport_info.get("name", "")
         sport_id = sport_info.get("id", 0)
         league_name = (team.get("league") or {}).get("name", "")
+        team_id = team.get("id", 0)
 
         # Build readable league label
         league = f"{sport_name} — {league_name}" if league_name else sport_name
@@ -178,9 +201,31 @@ class MLBMiLBScraper:
         official_url = self._generate_website_url(team, sport_id)
 
         category = "MLB" if sport_id == 1 else "MiLB"
-        team_id = team.get("id", 0)
 
-        return TeamRow(
+        # Create source collector for this team
+        sources = SourceCollector(name)
+        
+        # Track the API source
+        if api_url:
+            sources.add_api_source(
+                url=api_url,
+                source_name=SourceNames.MLB_STATSAPI,
+                endpoint="/api/v1/teams",
+                query_params={"sportId": str(sport_id)},
+                fields=["name", "region", "league", "target_demographic", "official_url", "category"]
+            )
+        
+        # Track the logo source if present
+        if logo_url and team_id > 0:
+            logo_source_url = f"https://www.mlbstatic.com/team-logos/{team_id}.svg"
+            sources.add_api_source(
+                url=logo_source_url,
+                source_name=SourceNames.MLB_STATIC_CDN,
+                endpoint="/team-logos/",
+                fields=["logo_url"]
+            )
+
+        return MLBTeamRow(
             name=name,
             region=region,
             league=league,
@@ -190,10 +235,13 @@ class MLBMiLBScraper:
             sport_id=sport_id,
             team_id=team_id,
             logo_url=logo_url,
+            sources=sources.get_sources(),
+            field_sources=sources.get_field_sources(),
+            scraped_at=scrape_timestamp or datetime.now().isoformat(),
         )
 
     def _write_outputs(
-        self, rows: List[TeamRow], json_path: Path, xlsx_path: Path
+        self, rows: List[MLBTeamRow], json_path: Path, xlsx_path: Path
     ) -> None:
         """Write team data to JSON and Excel files."""
         df = pd.DataFrame([asdict(r) for r in rows])
@@ -242,20 +290,28 @@ class MLBMiLBScraper:
     def run(self) -> ScrapeResult:
         """Execute the scrape and return results."""
         start_time = datetime.now()
+        scrape_timestamp = start_time.isoformat()
 
         try:
-            # Fetch and filter active teams
-            teams = self.fetch_teams()
+            # Fetch and filter active teams (now returns api_urls mapping)
+            teams, api_urls = self.fetch_teams()
             active_teams = [t for t in teams if t.get("active") is True]
 
             # Fetch logo URLs
             logo_map = self._fetch_logos(active_teams)
 
-            # Convert to structured rows with logos
-            rows = [
-                self._team_to_row(t, logo_map.get(t.get("id", 0)))
-                for t in active_teams
-            ]
+            # Convert to structured rows with logos and source tracking
+            rows = []
+            for t in active_teams:
+                sport_id = (t.get("sport") or {}).get("id", 0)
+                api_url = api_urls.get(sport_id)
+                row = self._team_to_row(
+                    t, 
+                    logo_url=logo_map.get(t.get("id", 0)),
+                    api_url=api_url,
+                    scrape_timestamp=scrape_timestamp,
+                )
+                rows.append(row)
 
             # Count by category
             mlb_count = sum(1 for r in rows if r.category == "MLB")

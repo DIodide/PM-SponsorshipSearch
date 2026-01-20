@@ -20,6 +20,7 @@ from bs4 import BeautifulSoup
 
 from .base import BaseEnricher, EnricherConfig, EnricherRegistry
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector, SourceNames
 
 
 # =============================================================================
@@ -52,6 +53,10 @@ SPORT_CONFIG = {
         "team_class": "Q13393265",  # basketball team
         "keywords": ["basketball", "nba", "g league", "gleague"],
     },
+    "womens_basketball": {
+        "team_class": "Q1478437",  # women's basketball team
+        "keywords": ["wnba", "women's national basketball"],
+    },
     "football": {
         "team_class": "Q17156793",  # American football team
         "keywords": ["football", "nfl"],
@@ -60,10 +65,34 @@ SPORT_CONFIG = {
         "team_class": "Q4498974",  # ice hockey team
         "keywords": ["hockey", "nhl", "ahl", "echl"],
     },
+    "soccer": {
+        "team_class": "Q847017",  # association football (soccer) club
+        "keywords": ["soccer", "mls", "major league soccer"],
+    },
+    "womens_soccer": {
+        "team_class": "Q15944511",  # women's association football club
+        "keywords": ["nwsl", "women's soccer", "national women's soccer"],
+    },
 }
 
 # Map league strings to sports (for detecting which sport a team belongs to)
+# NOTE: More specific patterns must come first to avoid substring matching issues
 LEAGUE_TO_SPORT = {
+    # Basketball (Women's) - must come before men's basketball to match first
+    "wnba": "womens_basketball",
+    "women's national basketball association": "womens_basketball",
+    # Soccer (Women's) - must come before men's soccer to match first
+    "nwsl": "womens_soccer",
+    "national women's soccer league": "womens_soccer",
+    # Basketball (Men's)
+    "nba": "basketball",
+    "national basketball association": "basketball",
+    "g league": "basketball",
+    "nba g league": "basketball",
+    "gleague": "basketball",
+    # Soccer (Men's)
+    "mls": "soccer",
+    "major league soccer": "soccer",
     # Baseball
     "major league baseball": "baseball",
     "mlb": "baseball",
@@ -72,6 +101,7 @@ LEAGUE_TO_SPORT = {
     "triple-a": "baseball",
     "double-a": "baseball",
     "single-a": "baseball",
+    "class a": "baseball",
     "high-a": "baseball",
     "low-a": "baseball",
     "rookie": "baseball",
@@ -91,12 +121,6 @@ LEAGUE_TO_SPORT = {
     "dominican summer league": "baseball",
     "american league": "baseball",
     "national league": "baseball",
-    # Basketball
-    "nba": "basketball",
-    "national basketball association": "basketball",
-    "g league": "basketball",
-    "nba g league": "basketball",
-    "gleague": "basketball",
     # Football
     "nfl": "football",
     "national football league": "football",
@@ -667,8 +691,13 @@ Return ONLY the JSON array, no explanation or markdown."""
             self._stats["gemini_errors"] += 1
             return None
 
-    async def _enrich_team(self, team: TeamRow) -> bool:
-        """Enrich a single team with stadium and sponsor data."""
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
+        """Enrich a single team with stadium and sponsor data.
+        
+        Args:
+            team: TeamRow to enrich (modified in place)
+            sources: SourceCollector to track data sources/citations
+        """
         enriched = False
 
         # Step 1: Get stadium info from cache or search
@@ -681,8 +710,10 @@ Return ONLY the JSON array, no explanation or markdown."""
                 stadium_data = await self._search_team_by_name(team.name)
 
             if stadium_data:
+                stadium_fields_added = []
                 if team.stadium_name is None and stadium_data.get("stadium_name"):
                     team.stadium_name = stadium_data["stadium_name"]
+                    stadium_fields_added.append("stadium_name")
                     enriched = True
 
                 if (
@@ -690,7 +721,16 @@ Return ONLY the JSON array, no explanation or markdown."""
                     and stadium_data.get("owns_stadium") is not None
                 ):
                     team.owns_stadium = stadium_data["owns_stadium"]
+                    stadium_fields_added.append("owns_stadium")
                     enriched = True
+                
+                # Track WikiData as source for stadium data
+                if stadium_fields_added:
+                    sources.add_database_source(
+                        url=WIKIDATA_SPARQL_URL,
+                        source_name=SourceNames.WIKIDATA_SPARQL,
+                        fields=stadium_fields_added,
+                    )
 
         # Step 2: Get sponsors from team website (if we have Gemini API)
         if team.sponsors is None and self.gemini_api_key and team.official_url:
@@ -708,6 +748,13 @@ Return ONLY the JSON array, no explanation or markdown."""
                     if sponsors:
                         team.sponsors = sponsors
                         enriched = True
+                        
+                        # Track sponsor page as source
+                        sources.add_website_source(
+                            url=sponsor_url,
+                            source_name=SourceNames.TEAM_WEBSITE,
+                            fields=["sponsors"],
+                        )
             else:
                 self._stats["sponsor_pages_not_found"] += 1
 

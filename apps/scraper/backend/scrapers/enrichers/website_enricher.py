@@ -21,6 +21,7 @@ from bs4 import BeautifulSoup
 
 from .base import BaseEnricher, EnricherConfig, EnricherRegistry
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector, SourceNames
 
 
 # =============================================================================
@@ -376,12 +377,16 @@ class WebsiteEnricher(BaseEnricher):
 
         return list(found_urls)[:10]  # Limit to avoid too many requests
 
-    async def _enrich_team(self, team: TeamRow) -> bool:
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
         """
         Enrich a single team with family friendliness data.
 
         Scrapes the team's website and common subpages to detect
         family-oriented programs and content.
+        
+        Args:
+            team: TeamRow to enrich (modified in place)
+            sources: SourceCollector to track data sources/citations
         """
         # Skip if already has data
         if team.family_program_count is not None:
@@ -451,6 +456,13 @@ class WebsiteEnricher(BaseEnricher):
                 self._stats["program_type_counts"][prog_type] = (
                     self._stats["program_type_counts"].get(prog_type, 0) + 1
                 )
+            
+            # Track team website as source
+            sources.add_website_source(
+                url=team.official_url,
+                source_name=SourceNames.TEAM_WEBSITE,
+                fields=["family_program_count", "family_program_types"],
+            )
 
             return True
         else:
