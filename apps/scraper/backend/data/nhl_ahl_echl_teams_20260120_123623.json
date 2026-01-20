@@ -1,0 +1,5859 @@
+[
+  {
+    "name": "Anaheim Ducks",
+    "region": "Anaheim",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Anaheim, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/ducks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898553",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813002",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Boston Bruins",
+    "region": "Boston",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Boston, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/bruins",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898587",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813080",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Buffalo Sabres",
+    "region": "Buffalo",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Buffalo, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/sabres",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898602",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813107",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Calgary Flames",
+    "region": "Calgary",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Calgary, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/flames",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898616",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813128",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Carolina Hurricanes",
+    "region": "Carolina",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Carolina, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/hurricanes",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898628",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813147",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Chicago Blackhawks",
+    "region": "Chicago",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Chicago, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/blackhawks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898640",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813166",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Colorado Avalanche",
+    "region": "Colorado",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Colorado, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/avalanche",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898651",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813185",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Columbus Blue Jackets",
+    "region": "Columbus",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Columbus, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/bluejackets",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898662",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813203",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Dallas Stars",
+    "region": "Dallas",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Dallas, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/stars",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898672",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813221",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Detroit Red Wings",
+    "region": "Detroit",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Detroit, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/redwings",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898681",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813238",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Edmonton Oilers",
+    "region": "Edmonton",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Edmonton, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/oilers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898690",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813256",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Florida Panthers",
+    "region": "Florida",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Florida, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/panthers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898698",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813274",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Los Angeles Kings",
+    "region": "Los Angeles",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Los Angeles, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/kings",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898705",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813292",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Minnesota Wild",
+    "region": "Minnesota",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Minnesota, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/wild",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898714",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813311",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Montréal Canadiens",
+    "region": "Montréal",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Montréal, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/canadiens",
+    "category": "Major",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898723",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Nashville Predators",
+    "region": "Nashville",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Nashville, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/predators",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898731",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813335",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "New Jersey Devils",
+    "region": "New Jersey",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around New Jersey, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/devils",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898739",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813354",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "New York Islanders",
+    "region": "New York",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around New York, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/islanders",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898747",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813372",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "New York Rangers",
+    "region": "New York",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around New York, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/rangers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898754",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813394",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Ottawa Senators",
+    "region": "Ottawa",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Ottawa, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/senators",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898763",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813414",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Philadelphia Flyers",
+    "region": "Philadelphia",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Philadelphia, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/flyers",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898771",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813432",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Pittsburgh Penguins",
+    "region": "Pittsburgh",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Pittsburgh, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/penguins",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898779",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813452",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "San Jose Sharks",
+    "region": "San Jose",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around San Jose, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/sharks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898787",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813470",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Seattle Kraken",
+    "region": "Seattle",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Seattle, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/kraken",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898795",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813488",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "St. Louis Blues",
+    "region": "St. Louis",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around St. Louis, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/blues",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898803",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813505",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Tampa Bay Lightning",
+    "region": "Tampa Bay",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Tampa Bay, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/lightning",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898811",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813535",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Toronto Maple Leafs",
+    "region": "Toronto",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Toronto, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/mapleleafs",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898819",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813594",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Utah Mammoth",
+    "region": "Utah",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Utah, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/utah",
+    "category": "Major",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/utah.png",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898827",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://a.espncdn.com/i/teamlogos/nhl/500/utah.png",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T12:36:24.813640",
+        "domain": "a.espncdn.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Vancouver Canucks",
+    "region": "Vancouver",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Vancouver, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/canucks",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898835",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813652",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Vegas Golden Knights",
+    "region": "Vegas",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Vegas, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/goldenknights",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898843",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813661",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Washington Capitals",
+    "region": "Washington",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Washington, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/capitals",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/WSH_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898852",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/WSH_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813668",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Winnipeg Jets",
+    "region": "Winnipeg",
+    "league": "NHL",
+    "target_demographic": "Hockey fans in and around Winnipeg, plus the broader NHL audience.",
+    "official_url": "https://www.nhl.com/jets",
+    "category": "Major",
+    "logo_url": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+    "sources": [
+      {
+        "url": "https://www.nhl.com/info/teams/",
+        "source_type": "website",
+        "source_name": "NHL.com",
+        "retrieved_at": "2026-01-20T12:36:23.898860",
+        "domain": "www.nhl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+        "source_type": "api",
+        "source_name": "NHL Assets CDN",
+        "retrieved_at": "2026-01-20T12:36:24.813677",
+        "domain": "assets.nhle.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "region": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "league": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "target_demographic": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "official_url": [
+        "https://www.nhl.com/info/teams/"
+      ],
+      "category": [
+        "https://www.nhl.com/info/teams/"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Abbotsford Canucks",
+    "region": "Abbotsford",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Abbotsford.",
+    "official_url": "http://abbotsford.canucks.com",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/abb1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210415",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127677",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Bakersfield Condors",
+    "region": "Bakersfield",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Bakersfield.",
+    "official_url": "http://www.bakersfieldcondors.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/bak1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210487",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127709",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Belleville Senators",
+    "region": "Belleville",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Belleville.",
+    "official_url": "http://www.bellevillesens.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/bel1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210531",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127721",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Bridgeport Islanders",
+    "region": "Bridgeport",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Bridgeport.",
+    "official_url": "http://www.bridgeportislanders.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2024/07/bri1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210568",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127728",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Calgary Wranglers",
+    "region": "Calgary",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Calgary.",
+    "official_url": "https://calgarywranglers.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/cgy1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210601",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127734",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Charlotte Checkers",
+    "region": "Charlotte",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Charlotte.",
+    "official_url": "http://www.charlottecheckers.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/clt1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210635",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127740",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Chicago Wolves",
+    "region": "Chicago",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Chicago.",
+    "official_url": "http://www.chicagowolves.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/chi1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210667",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127746",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Cleveland Monsters",
+    "region": "Cleveland",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Cleveland.",
+    "official_url": "http://www.clevelandmonsters.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/cle1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210703",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127751",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Coachella Valley Firebirds",
+    "region": "Coachella Valley",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Coachella Valley.",
+    "official_url": "http://www.cvfirebirds.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/cv1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210735",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127757",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Colorado Eagles",
+    "region": "Colorado",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Colorado.",
+    "official_url": "http://www.coloradoeagles.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/col1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210766",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127763",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Grand Rapids Griffins",
+    "region": "Grand Rapids",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Grand Rapids.",
+    "official_url": "http://www.griffinshockey.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/gr1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210797",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127768",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Hartford Wolf Pack",
+    "region": "Hartford",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Hartford.",
+    "official_url": "http://www.hartfordwolfpack.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/hfd1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210828",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127774",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Henderson Silver Knights",
+    "region": "Henderson",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Henderson.",
+    "official_url": "https://hendersonsilverknights.com//",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/hsk1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210860",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127780",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Hershey Bears",
+    "region": "Hershey",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Hershey.",
+    "official_url": "http://www.hersheybears.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/her1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210890",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127785",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Iowa Wild",
+    "region": "Iowa",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Iowa.",
+    "official_url": "http://www.iowawild.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/ia1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210921",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127791",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Laval Rocket",
+    "region": "Laval",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Laval.",
+    "official_url": "http://www.rocketlaval.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/lav1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210952",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127796",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Lehigh Valley Phantoms",
+    "region": "Lehigh Valley",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Lehigh Valley.",
+    "official_url": "http://www.wbspenguins.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/lv1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.210983",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127802",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Manitoba Moose",
+    "region": "Manitoba",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Manitoba.",
+    "official_url": "http://www.moosehockey.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/mb1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211012",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127807",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Milwaukee Admirals",
+    "region": "Milwaukee",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Milwaukee.",
+    "official_url": "http://www.milwaukeeadmirals.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/mil1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211043",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127813",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Ontario Reign",
+    "region": "Ontario",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Ontario.",
+    "official_url": "http://www.ontarioreign.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/ont1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211071",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127819",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Providence Bruins",
+    "region": "Providence",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Providence.",
+    "official_url": "http://www.providencebruins.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/pro1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211100",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127824",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Rochester Americans",
+    "region": "Rochester",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Rochester.",
+    "official_url": "http://www.amerks.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/roc1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211129",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127832",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Rockford IceHogs",
+    "region": "Rockford",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Rockford.",
+    "official_url": "http://www.icehogs.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/rfd1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211157",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127838",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "San Diego Gulls",
+    "region": "San Diego",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around San Diego.",
+    "official_url": "http://www.sandiegogulls.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/sd1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211185",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127844",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "San Jose Barracuda",
+    "region": "San Jose",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around San Jose.",
+    "official_url": "http://www.sjbarracuda.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2024/09/sj_1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211216",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127849",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Springfield Thunderbirds",
+    "region": "Springfield",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Springfield.",
+    "official_url": "http://www.springfieldthunderbirds.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/spr1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211248",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127855",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Syracuse Crunch",
+    "region": "Syracuse",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Syracuse.",
+    "official_url": "http://www.syracusecrunch.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/syr1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211277",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127860",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Texas Stars",
+    "region": "Texas",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Texas.",
+    "official_url": "http://www.texasstars.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/tex1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211307",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127866",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Toronto Marlies",
+    "region": "Toronto",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Toronto.",
+    "official_url": "http://www.marlies.ca/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/tor1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211336",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127871",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Tucson Roadrunners",
+    "region": "Tucson",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Tucson.",
+    "official_url": "http://www.tucsonroadrunners.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2025/07/tuc1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211364",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127877",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Utica Comets",
+    "region": "Utica",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Utica.",
+    "official_url": "http://www.uticacomets.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/utc1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211393",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127882",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Wilkes-Barre/Scranton Penguins",
+    "region": "Wilkes-Barre/Scranton",
+    "league": "AHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Wilkes-Barre/Scranton.",
+    "official_url": "http://www.wbspenguins.com/",
+    "category": "Minor",
+    "logo_url": "https://theahl.com/wp-content/uploads/sites/3/2023/11/wbs1200.png",
+    "sources": [
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.211422",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://theahl.com/team-map-directory",
+        "source_type": "website",
+        "source_name": "TheAHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.127888",
+        "domain": "theahl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "region": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "league": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "target_demographic": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "official_url": [
+        "https://theahl.com/team-map-directory"
+      ],
+      "category": [
+        "https://theahl.com/team-map-directory"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Adirondack Thunder",
+    "region": "Adirondack",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Adirondack.",
+    "official_url": "https://echlthunder.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/74.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608769",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273222",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Allen Americans",
+    "region": "Allen",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Allen.",
+    "official_url": "https://allenamericans.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/66.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608799",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273280",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Atlanta Gladiators",
+    "region": "Atlanta",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Atlanta.",
+    "official_url": "https://atlantagladiators.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/10.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608811",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273291",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Bloomington Bison",
+    "region": "Bloomington",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Bloomington.",
+    "official_url": "https://bloomingtonbisonhockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/107.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608821",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273298",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Cincinnati Cyclones",
+    "region": "Cincinnati",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Cincinnati.",
+    "official_url": "https://cycloneshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/5.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608831",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273304",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Florida Everblades",
+    "region": "Florida",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Florida.",
+    "official_url": "https://floridaeverblades.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/8.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608840",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273310",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Fort Wayne Komets",
+    "region": "Fort Wayne",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Fort Wayne.",
+    "official_url": "https://komets.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/60.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608849",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273316",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Future Markets",
+    "region": "Future",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Future.",
+    "official_url": "https://echl.com/teams/future-markets",
+    "category": "Minor",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608858",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Greensboro Gargoyles",
+    "region": "Greensboro",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Greensboro.",
+    "official_url": "https://gargoyleshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/108.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608867",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273323",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Greenville Swamp Rabbits",
+    "region": "Greenville",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Greenville.",
+    "official_url": "https://swamprabbits.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/52.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608876",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273329",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Idaho Steelheads",
+    "region": "Idaho",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Idaho.",
+    "official_url": "https://idahosteelheads.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/11.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608888",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273335",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Indy Fuel",
+    "region": "Indy",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Indy.",
+    "official_url": "https://indyfuelhockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/65.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608899",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273340",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Iowa Heartlanders",
+    "region": "Iowa",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Iowa.",
+    "official_url": "https://iowaheartlanders.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/98.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608908",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273346",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Jacksonville Icemen",
+    "region": "Jacksonville",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Jacksonville.",
+    "official_url": "https://jacksonvilleicemen.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/79.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608918",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273352",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Kalamazoo Wings",
+    "region": "Kalamazoo",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Kalamazoo.",
+    "official_url": "https://kwings.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/50.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608927",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273357",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Kansas City Mavericks",
+    "region": "Kansas City",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Kansas City.",
+    "official_url": "https://kcmavericks.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/68.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608935",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273363",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Maine Mariners",
+    "region": "Maine",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Maine.",
+    "official_url": "https://marinersofmaine.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/82.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608944",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273369",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "NHL/AHL Affiliates",
+    "region": "NHL/AHL",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around NHL/AHL.",
+    "official_url": "https://echl.com/teams/nhl-ahl-affiliations",
+    "category": "Minor",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608953",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Norfolk Admirals",
+    "region": "Norfolk",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Norfolk.",
+    "official_url": "https://norfolkadmirals.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/76.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608963",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273375",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Orlando Solar Bears",
+    "region": "Orlando",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Orlando.",
+    "official_url": "https://orlandosolarbearshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/61.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608972",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273381",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Rapid City Rush",
+    "region": "Rapid City",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Rapid City.",
+    "official_url": "https://rapidcityrush.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/70.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608981",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273386",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Reading Royals",
+    "region": "Reading",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Reading.",
+    "official_url": "https://royalshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/17.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608990",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273392",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Savannah Ghost Pirates",
+    "region": "Savannah Ghost",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Savannah Ghost.",
+    "official_url": "https://ghostpirateshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/102.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.608999",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273398",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "South Carolina Stingrays",
+    "region": "South Carolina",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around South Carolina.",
+    "official_url": "https://stingrayshockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/18.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609008",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273403",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Tahoe Knight Monsters",
+    "region": "Tahoe",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Tahoe.",
+    "official_url": "https://knightmonstershockey.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/106.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609017",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273409",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Team Map",
+    "region": "Team",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Team.",
+    "official_url": "https://echl.com/teams/map",
+    "category": "Minor",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609026",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Toledo Walleye",
+    "region": "Toledo",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Toledo.",
+    "official_url": "https://toledowalleye.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/21.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609035",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273415",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Trois-Rivières Lions",
+    "region": "Trois-Rivières",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Trois-Rivières.",
+    "official_url": "https://lions3r.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/99.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609045",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273422",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Tulsa Oilers",
+    "region": "Tulsa",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Tulsa.",
+    "official_url": "https://tulsaoilers.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/71.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609053",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273428",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Utah Grizzlies",
+    "region": "Utah",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Utah.",
+    "official_url": "https://utahgrizzlies.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/23.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609062",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273434",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Wheeling Nailers",
+    "region": "Wheeling",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Wheeling.",
+    "official_url": "https://wheelingnailers.com",
+    "category": "Minor",
+    "logo_url": null,
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609071",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Wichita Thunder",
+    "region": "Wichita",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Wichita.",
+    "official_url": "https://wichitathunder.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/72.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609080",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273440",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  },
+  {
+    "name": "Worcester Railers",
+    "region": "Worcester",
+    "league": "ECHL",
+    "target_demographic": "Local hockey fans and player-development followers in and around Worcester.",
+    "official_url": "https://railershc.com",
+    "category": "Minor",
+    "logo_url": "https://assets.leaguestat.com/echl/logos/77.png",
+    "sources": [
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:24.609090",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://echl.com/teams",
+        "source_type": "website",
+        "source_name": "ECHL.com",
+        "retrieved_at": "2026-01-20T12:36:25.273446",
+        "domain": "echl.com",
+        "fields_sourced": [
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://echl.com/teams"
+      ],
+      "region": [
+        "https://echl.com/teams"
+      ],
+      "league": [
+        "https://echl.com/teams"
+      ],
+      "target_demographic": [
+        "https://echl.com/teams"
+      ],
+      "official_url": [
+        "https://echl.com/teams"
+      ],
+      "category": [
+        "https://echl.com/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T12:36:23.654748"
+  }
+]

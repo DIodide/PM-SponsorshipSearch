@@ -46,6 +46,7 @@ except ImportError:
 
 from .base import BaseEnricher, EnricherConfig, EnricherRegistry
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector, SourceNames
 
 
 # =============================================================================
@@ -68,12 +69,30 @@ WIKIDATA_SOCIAL_PROPERTIES = {
 SPORT_TEAM_CLASSES = {
     "baseball": "Q13027888",  # baseball team
     "basketball": "Q13393265",  # basketball team
+    "womens_basketball": "Q1478437",  # women's basketball team
     "football": "Q17156793",  # American football team
     "hockey": "Q4498974",  # ice hockey team
+    "soccer": "Q847017",  # association football (soccer) club
+    "womens_soccer": "Q15944511",  # women's association football club
 }
 
 # League to sport mapping
+# NOTE: More specific patterns must come first to avoid substring matching issues
 LEAGUE_TO_SPORT = {
+    # Basketball (Women's) - must come before men's basketball to match first
+    "wnba": "womens_basketball",
+    "women's national basketball association": "womens_basketball",
+    # Soccer (Women's) - must come before men's soccer to match first
+    "nwsl": "womens_soccer",
+    "national women's soccer league": "womens_soccer",
+    # Basketball (Men's)
+    "nba": "basketball",
+    "national basketball association": "basketball",
+    "g league": "basketball",
+    "nba g league": "basketball",
+    # Soccer (Men's)
+    "mls": "soccer",
+    "major league soccer": "soccer",
     # Baseball
     "major league baseball": "baseball",
     "mlb": "baseball",
@@ -84,13 +103,22 @@ LEAGUE_TO_SPORT = {
     "single-a": "baseball",
     "high-a": "baseball",
     "low-a": "baseball",
+    "class a": "baseball",
+    "rookie": "baseball",
     "international league": "baseball",
     "pacific coast league": "baseball",
-    # Basketball
-    "nba": "basketball",
-    "national basketball association": "basketball",
-    "g league": "basketball",
-    "nba g league": "basketball",
+    "eastern league": "baseball",
+    "southern league": "baseball",
+    "texas league": "baseball",
+    "midwest league": "baseball",
+    "south atlantic league": "baseball",
+    "carolina league": "baseball",
+    "florida state league": "baseball",
+    "california league": "baseball",
+    "northwest league": "baseball",
+    "florida complex league": "baseball",
+    "arizona complex league": "baseball",
+    "dominican summer league": "baseball",
     # Football
     "nfl": "football",
     "national football league": "football",
@@ -1024,7 +1052,7 @@ SELECT ?team ?teamLabel ?twitter ?instagram ?facebook ?tiktok ?youtube WHERE {{
     # MAIN ENRICHMENT
     # =========================================================================
 
-    async def _enrich_team(self, team: TeamRow) -> bool:
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
         """Enrich a single team with social media handles and follower counts."""
         self._stats["teams_processed"] += 1
         enriched = False
@@ -1050,6 +1078,22 @@ SELECT ?team ?teamLabel ?twitter ?instagram ?facebook ?tiktok ?youtube WHERE {{
 
         if not handles:
             return False
+
+        # Track the source of handle discovery
+        # WikiData is the primary source when available
+        if self._wikidata_handles_cache:
+            sources.add_database_source(
+                url="https://query.wikidata.org/sparql",
+                source_name=SourceNames.WIKIDATA_SPARQL,
+                fields=["social_handles"],
+            )
+        elif team.official_url:
+            # Handles came from website scraping
+            sources.add_website_source(
+                url=team.official_url,
+                source_name=SourceNames.TEAM_WEBSITE,
+                fields=["social_handles"],
+            )
 
         # Step 2: Store handles in structured format
         if team.social_handles is None:
@@ -1105,6 +1149,15 @@ SELECT ?team ?teamLabel ?twitter ?instagram ?facebook ?tiktok ?youtube WHERE {{
             "youtube": "subscribers_youtube",
         }
 
+        # Platform source name mapping
+        platform_source_names = {
+            "x": SourceNames.X_PROFILE,
+            "instagram": SourceNames.INSTAGRAM_PROFILE,
+            "facebook": SourceNames.FACEBOOK_PROFILE,
+            "tiktok": SourceNames.TIKTOK_PROFILE,
+            "youtube": SourceNames.YOUTUBE_CHANNEL,
+        }
+
         for platform, handle in handles.items():
             field_name = field_map.get(platform)
             if not field_name:
@@ -1127,6 +1180,22 @@ SELECT ?team ?teamLabel ?twitter ?instagram ?facebook ?tiktok ?youtube WHERE {{
                 self._stats["platform_counts"][platform] = (
                     self._stats["platform_counts"].get(platform, 0) + 1
                 )
+
+                # Track the profile as a source for follower count
+                profile_url = url_templates.get(platform, "").format(handle=handle)
+                if platform == "youtube" and handle.startswith("UC"):
+                    profile_url = url_templates["youtube"].format(handle=handle)
+                elif platform == "youtube":
+                    profile_url = url_templates["youtube_handle"].format(handle=handle)
+
+                if profile_url:
+                    sources.add_website_source(
+                        url=profile_url,
+                        source_name=platform_source_names.get(
+                            platform, f"{platform.title()} Profile"
+                        ),
+                        fields=[field_name],
+                    )
 
             await asyncio.sleep(0.5)
 

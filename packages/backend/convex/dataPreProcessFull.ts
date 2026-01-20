@@ -10,17 +10,20 @@ import { Doc } from "./_generated/dataModel";
 function computeStats(nums: (number | null | undefined)[]): {
   mean: number;
   sd: number;
+  max: number;
 } {
   const filtered = nums.filter((n): n is number => typeof n === "number");
 
-  if (filtered.length === 0) return { mean: 0, sd: 1 };
+  if (filtered.length === 0) return { mean: 0, sd: 1, max: 0 };
 
   const mean = filtered.reduce((a, b) => a + b, 0) / filtered.length;
   const variance =
     filtered.reduce((a, b) => a + (b - mean) ** 2, 0) / filtered.length;
   const sd = Math.sqrt(variance) || 1;
 
-  return { mean, sd };
+  const max = Math.max(...filtered);
+
+  return { mean, sd, max };
 }
 
 /**
@@ -94,7 +97,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
   
       const attendance = computeStats(seed.map((r: Doc<"All_Teams">) => r.avg_game_attendance ?? null));
       const population = computeStats(seed.map((r: Doc<"All_Teams">) => r.city_population ?? null));
-      const gdp = computeStats(seed.map((r: Doc<"All_Teams">) => r.metro_gdp_millions ?? null));
+      const gdp = computeStats(seed.map((r: Doc<"All_Teams">) => r.metro_gdp ?? null));
 
     // put social media info on burner for now because Ibraheem hasn't been able to scrape it yet
       const x = computeStats(seed.map((r: Doc<"All_Teams">) => r.followers_x ?? null));
@@ -104,11 +107,8 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
       const youtube = computeStats(seed.map((r: Doc<"All_Teams">) => r.subscribers_youtube ?? null));
       const family_programs = computeStats(seed.map((r: Doc<"All_Teams">) => r.family_program_count ?? null));
       const ticketStats = computeStats(seed.map((r: Doc<"All_Teams">) => r.avg_ticket_price ?? null));
-      const valuation = computeStats(seed.map((r: Doc<"All_Teams">) => r.franchise_value_millions ?? null));
-      const revenue = computeStats(seed.map((r: Doc<"All_Teams">) => r.annual_revenue_millions ?? null));
-
-      // weights for scoring of team tier
-      const weights = { val: 0.4, rev: 0.3, ticket: 0.2, gdp: 0.1 };
+      const valuation = computeStats(seed.map((r: Doc<"All_Teams">) => r.franchise_value ?? null));
+      const revenue = computeStats(seed.map((r: Doc<"All_Teams">) => r.annual_revenue ?? null));
 
       for (const row of seed) {
         // Parallelize the 48embedding calls for THIS row
@@ -124,22 +124,91 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             row.cause_partnerships ? embed(row.cause_partnerships.join(" "), apiKey) : Promise.resolve(null),
         ]);
 
+        // false if false or null
+        const stadium = row.owns_stadium === true;
+
         // normalize all of the numerical values
         const attendance_norm = (row.avg_game_attendance != null) ? (row.avg_game_attendance - attendance.mean) / attendance.sd : null
         const valuation_norm = (row.franchise_value != null) ? (row.franchise_value - valuation.mean) / valuation.sd : null
-        const gdp_norm = (row.metro_gdp_millions != null) ? (row.metro_gdp_millions - gdp.mean) / gdp.sd : null
+        const gdp_norm = (row.metro_gdp != null) ? (row.metro_gdp - gdp.mean) / gdp.sd : null
         const ticket_price_norm = (row.avg_ticket_price != null) ? (row.avg_ticket_price - ticketStats.mean) / ticketStats.sd : null
         const family_programs_norm = (row.family_program_count != null) ? (row.family_program_count - family_programs.mean) / family_programs.sd : null
-        const revenue_norm = (row.annual_revenue_millions != null) ? (row.annual_revenue_millions - revenue.mean) / revenue.sd : null
+        const revenue_norm = (row.annual_revenue != null) ? (row.annual_revenue - revenue.mean) / revenue.sd : null
         const population_norm = (row.city_population != null) ? (row.city_population - population.mean) / population.sd : null
-        const x_norm =  (row.followers_x != null) ? (row.followers_x - x.mean) / x.sd : null
-        const instagram_norm =  (row.followers_instagram != null) ? (row.followers_instagram - instagram.mean) / instagram.sd : null
-        const facebook_norm =  (row.followers_facebook != null) ? (row.followers_facebook - facebook.mean) / facebook.sd : null
-        const tiktok_norm =  (row.followers_tiktok != null) ? (row.followers_tiktok - tiktok.mean) / tiktok.sd : null
-        const youtube_norm =  (row.subscribers_youtube != null) ? (row.subscribers_youtube - youtube.mean) / youtube.sd : null      
+
+        let x_norm = -1;
+
+        if (row.followers_x != null) {
+          if (row.followers_x < x.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            x_norm = (row.followers_x / x.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate x.max beforehand
+            x_norm = (row.followers_x - x.mean) / (x.max - x.mean);
+          }
+        }
+
+        let instagram_norm = -1;
+        if (row.followers_instagram != null) {
+          if (row.followers_instagram < instagram.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            instagram_norm = (row.followers_instagram / instagram.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate instagram.max beforehand
+            instagram_norm = (row.followers_instagram - instagram.mean) / (instagram.max - instagram.mean);
+          }
+        }
+
+        let facebook_norm = -1;
+        if (row.followers_facebook != null) {
+          if (row.followers_facebook < facebook.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            facebook_norm = (row.followers_facebook / facebook.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate facebook.max beforehand
+            facebook_norm = (row.followers_facebook - facebook.mean) / (facebook.max - facebook.mean);
+          }
+        }
+
+        let tiktok_norm = -1;
+        if (row.followers_tiktok != null) {
+          if (row.followers_tiktok < tiktok.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            tiktok_norm = (row.followers_tiktok / tiktok.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate tiktok.max beforehand
+            tiktok_norm = (row.followers_tiktok - tiktok.mean) / (tiktok.max - tiktok.mean);
+          }
+        }
+
+        let youtube_norm = -1;
+        if (row.subscribers_youtube != null) {
+          if (row.subscribers_youtube < youtube.mean) {
+            // Range: [0 to mean] maps to [-1 to 0]
+            // Result is -1 if followers are 0, and 0 if followers equal the mean
+            youtube_norm = (row.subscribers_youtube / youtube.mean) - 1;
+          } else {
+            // Range: [mean to max] maps to [0 to 1]
+            // Result is 0 if followers equal the mean, and 1 if followers equal max
+            // Note: You will need to calculate youtube.max beforehand
+            youtube_norm = (row.subscribers_youtube - youtube.mean) / (youtube.max - youtube.mean);
+          }
+        }
         
-        const digital_reach_score = (instagram_norm ?? 0) + (x_norm ?? 0) + (facebook_norm ?? 0) + (tiktok_norm ?? 0) + (youtube_norm ?? 0)
-        const local_reach_score = (attendance_norm ?? 0) + (population_norm ?? 0)
+        const digital_reach_score = (instagram_norm + x_norm + facebook_norm + tiktok_norm + youtube_norm) / 5
+        const local_reach_score = ((attendance_norm ?? -1) + (population_norm ?? -1)) / 2
 
         // Calculate demographic weights
         // YUBI: should I use womenWeight and menWeight?
@@ -147,30 +216,29 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
         const menWeight = (x_norm != null) ? 0.67*x_norm : null
 
 
-        const genZWeight = ((instagram_norm != null) ? 0.5*instagram_norm : 0) + ((tiktok_norm != null) ? 0.5*tiktok_norm : 0)
-        const millenialWeight = (((instagram_norm != null) ? 0.2*instagram_norm : 0) + ((tiktok_norm != null) ? 0.2*tiktok_norm : 0) 
-        + ((x_norm != null) ? 0.2*x_norm : 0) + ((facebook_norm != null) ? 0.2*facebook_norm : 0) 
-        + ((youtube_norm != null) ? 0.2*youtube_norm : 0))
-        const genXWeight = (((x_norm != null) ? 0.33*x_norm : 0) + ((facebook_norm != null) ? 0.33*facebook_norm : 0) 
-        + ((youtube_norm != null) ? 0.33*youtube_norm : 0))
-        const boomerWeight = ((facebook_norm != null) ? facebook_norm : null)
-        const kidsWeight = ((youtube_norm != null) ? youtube_norm : null)
+        const genZWeight = (0.5*instagram_norm + 0.5*tiktok_norm)
+        const millenialWeight = 0.2*instagram_norm + 0.2*tiktok_norm + 0.2*x_norm + 0.2*facebook_norm + 0.2*youtube_norm
+        const genXWeight = 0.33*x_norm + 0.33*facebook_norm + 0.33*youtube_norm
+        const boomerWeight = facebook_norm
+        const kidsWeight = youtube_norm
 
 
-        // 3. Compute Weighted Score
-        let totalWeightedScore = 0;
-        let totalWeightApplied = 0;
-
-        if (valuation_norm !== null) { totalWeightedScore += valuation_norm * weights.val; totalWeightApplied += weights.val; }
-        if (revenue_norm !== null) { totalWeightedScore += revenue_norm * weights.rev; totalWeightApplied += weights.rev; }
-        if (ticket_price_norm !== null) { totalWeightedScore += ticket_price_norm * weights.ticket; totalWeightApplied += weights.ticket; }
-        if (gdp_norm !== null) { totalWeightedScore += gdp_norm * weights.gdp; totalWeightApplied += weights.gdp; }
-
-        const finalScore = totalWeightApplied > 0 ? totalWeightedScore / totalWeightApplied : 0;
-        // 4. Assign the Tier
-        // YUBI: this could assign a tier of 0 to some teams, which is NOT what I want
-        // YUBI: check these cutoff values, they are very arbitrary
-        const valueTierScore = finalScore > 0.5 ? 3 : finalScore < -0.5 ? 1 : 2;
+        let value_tier_score = 1
+        // Another even more hard-coded option
+        // YUBI: how can I check that this is not null?
+        if (row.franchise_value != null) {
+          if (row.franchise_value > 2000000000) {
+            value_tier_score = 3
+          } else if (row.franchise_value > 200000000) {
+            value_tier_score = 2
+          }
+        } else if (row.avg_ticket_price != null) {
+          if (row.avg_ticket_price > 120) {
+            value_tier_score = 3
+          } else if (row.avg_ticket_price > 100) {
+            value_tier_score = 2
+          }
+        }
 
         const cleanRow = {
           name: row.name,
@@ -190,7 +258,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             local_reach: local_reach_score,
             family_friendly: family_programs_norm,
 
-            value_tier: valueTierScore,
+            value_tier: value_tier_score,
 
             women_weight: womenWeight,
             men_weight: menWeight,
@@ -199,7 +267,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
             gen_x_weight: genXWeight,
             boomer_weight: boomerWeight,
             kids_weight: kidsWeight,
-            stadium_ownership: owns_stadium
+            stadium_ownership: stadium
   
         };
   

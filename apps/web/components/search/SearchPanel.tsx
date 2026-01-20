@@ -18,43 +18,44 @@ const REGIONS = [
 ];
 
 const DEMOGRAPHICS = [
-  { value: "families", label: "Families" },
-  { value: "young-professionals", label: "Young Professionals" },
-  { value: "millennials", label: "Millennials" },
-  { value: "gen-z", label: "Gen Z" },
-  { value: "affluent", label: "Affluent" },
-  { value: "sports-enthusiasts", label: "Sports Enthusiasts" },
+ { value: "gen-z", label: "Gen Z" },
+ { value: "millennials", label: "Millennials" },
+ { value: "gen-x", label: "Gen X" },
+ { value: "boomer", label: "Boomer" },
+ { value: "families", label: "Families" },
+ { value: "kids", label: "Kids" },
+ { value: "men", label: "Men" },
+ { value: "women", label: "Women" },
+ { value: "men", label: "Men" },
+ { value: "people-of-color", label: "People of Color" },
+ { value: "businesses", label: "Businesses" },
 ];
 
 const BRAND_VALUES = [
-  { value: "community", label: "Community" },
-  { value: "performance", label: "Performance" },
-  { value: "innovation", label: "Innovation" },
-  { value: "tradition", label: "Tradition" },
-  { value: "wellness", label: "Wellness" },
-  { value: "sustainability", label: "Sustainability" },
-  { value: "excellence", label: "Excellence" },
-  { value: "family", label: "Family-Friendly" },
+ { value: "community", label: "Community" },
+ { value: "performance", label: "Performance" },
+ { value: "innovation", label: "Innovation" },
+ { value: "wellness", label: "Wellness" },
+ { value: "sustainability", label: "Sustainability" },
+ { value: "family", label: "Family-Friendly" },
 ];
 
 const LEAGUES = [
-  { value: "NFL", label: "NFL" },
-  { value: "NBA", label: "NBA" },
-  { value: "MLB", label: "MLB" },
-  { value: "NHL", label: "NHL" },
-  { value: "MLS", label: "MLS" },
-  { value: "WNBA", label: "WNBA" },
-  { value: "USL", label: "USL" },
-  { value: "Minor League", label: "Minor League" },
+  { value: "NFL", label: "Football" },
+ { value: "NBA G League", label: "Basketball" },
+ { value: "Major League Baseball Triple-A Single-A High-A Double-A Rookie", label: "Baseball" },
+ { value: "NHL ECHL AHL", label: "Hockey" },
+ { value: "MLS", label: "Soccer" },
 ];
 
 const GOALS = [
-  { value: "awareness", label: "Brand Awareness" },
-  { value: "trial", label: "Product Trial" },
-  { value: "loyalty", label: "Customer Loyalty" },
-  { value: "b2b", label: "B2B Relationships" },
-  { value: "employer-brand", label: "Employer Brand" },
-  { value: "local-presence", label: "Local Presence" },
+ { value: "local-presence", label: "Local Presence" },
+ { value: "digital-presence", label: "Digital Presence" },
+ { value: "brand-awareness", label: "Brand Awareness" },
+ { value: "product-promotion", label: "Product Promotion" },
+ { value: "business-to-business", label: "B2B Relationships" },
+ { value: "fan-connection-activation-control", label: "Deep Fan Connection and Activation Control" },
+ { value: "prestige-credibility", label: "Prestige and Credibility" },
 ];
 
 interface SearchPanelProps {
@@ -186,9 +187,10 @@ export function SearchPanel({ onSearch }: SearchPanelProps) {
               onToggle={(value) => toggleFilter("regions", value)}
             />
 
-            {/* Leagues */}
+            {/* Sports */}
             <FilterSection
-              label="Leagues"
+              /* YUBI: change name but keep the same key */
+              label="Sports"
               options={LEAGUES}
               selected={filters.leagues}
               onToggle={(value) => toggleFilter("leagues", value)}

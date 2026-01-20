@@ -1,0 +1,704 @@
+[
+  {
+    "name": "Atlanta Dream",
+    "region": "Atlanta",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Atlanta, plus the broader WNBA audience.",
+    "official_url": "https://atlantadream.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796198",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Chicago Sky",
+    "region": "Chicago",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Chicago, plus the broader WNBA audience.",
+    "official_url": "https://chicagosky.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796251",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Connecticut Sun",
+    "region": "Connecticut",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Connecticut, plus the broader WNBA audience.",
+    "official_url": "https://connecticutsun.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796279",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Dallas Wings",
+    "region": "Dallas",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Dallas, plus the broader WNBA audience.",
+    "official_url": "https://dallaswings.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796296",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Golden State Valkyries",
+    "region": "Golden State",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Golden State, plus the broader WNBA audience.",
+    "official_url": "https://goldenstatevalkyries.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/gs.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796307",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Indiana Fever",
+    "region": "Indiana",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Indiana, plus the broader WNBA audience.",
+    "official_url": "https://indianafever.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796319",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Las Vegas Aces",
+    "region": "Las Vegas",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Las Vegas, plus the broader WNBA audience.",
+    "official_url": "https://lasvegasaces.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796330",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Los Angeles Sparks",
+    "region": "Los Angeles",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Los Angeles, plus the broader WNBA audience.",
+    "official_url": "https://losangelessparks.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796341",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Minnesota Lynx",
+    "region": "Minnesota",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Minnesota, plus the broader WNBA audience.",
+    "official_url": "https://minnesotalynx.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796351",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "New York Liberty",
+    "region": "New York",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around New York, plus the broader WNBA audience.",
+    "official_url": "https://newyorkliberty.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796362",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Phoenix Mercury",
+    "region": "Phoenix",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Phoenix, plus the broader WNBA audience.",
+    "official_url": "https://phoenixmercury.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/phx.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796373",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Seattle Storm",
+    "region": "Seattle",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Seattle, plus the broader WNBA audience.",
+    "official_url": "https://seattlestorm.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/sea.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796385",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  },
+  {
+    "name": "Washington Mystics",
+    "region": "Washington",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Washington, plus the broader WNBA audience.",
+    "official_url": "https://washingtonmystics.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/wsh.png",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T14:02:48.796397",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ]
+    },
+    "scraped_at": "2026-01-20T14:02:48.555157"
+  }
+]

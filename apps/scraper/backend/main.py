@@ -22,7 +22,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from pydantic import BaseModel
 
-from scrapers import MLBMiLBScraper, NBAGLeagueScraper, NFLScraper, NHLAHLECHLScraper
+from scrapers import (
+    MLBMiLBScraper,
+    NBAGLeagueScraper,
+    NFLScraper,
+    NHLAHLECHLScraper,
+    WNBAScraper,
+    MLSNWSLScraper,
+)
 from scrapers.models import TeamRow
 from scrapers.enrichers.base import EnricherRegistry, BaseEnricher
 
@@ -42,6 +49,8 @@ class ScraperType(str, Enum):
     NBA_GLEAGUE = "nba_gleague"
     NFL = "nfl"
     NHL_AHL_ECHL = "nhl_ahl_echl"
+    WNBA = "wnba"
+    MLS_NWSL = "mls_nwsl"
 
 
 class TaskStatus(str, Enum):
@@ -524,6 +533,8 @@ SCRAPERS = {
     ScraperType.NBA_GLEAGUE.value: NBAGLeagueScraper(output_dir=DATA_DIR),
     ScraperType.NFL.value: NFLScraper(output_dir=DATA_DIR),
     ScraperType.NHL_AHL_ECHL.value: NHLAHLECHLScraper(output_dir=DATA_DIR),
+    ScraperType.WNBA.value: WNBAScraper(output_dir=DATA_DIR),
+    ScraperType.MLS_NWSL.value: MLSNWSLScraper(output_dir=DATA_DIR),
 }
 
 SCRAPER_INFO = {
@@ -546,6 +557,16 @@ SCRAPER_INFO = {
         "name": "NHL, AHL & ECHL Teams",
         "description": "Scrapes team data from NHL.com, TheAHL.com, and ECHL.com official directories.",
         "source_url": "https://www.nhl.com/info/teams/",
+    },
+    ScraperType.WNBA.value: {
+        "name": "WNBA Teams",
+        "description": "Fetches team data from ESPN API for all WNBA teams.",
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+    },
+    ScraperType.MLS_NWSL.value: {
+        "name": "MLS & NWSL Teams",
+        "description": "Fetches team data from ESPN API for MLS and NWSL soccer teams.",
+        "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams",
     },
 }
 
@@ -1671,6 +1692,11 @@ async def _export_to_convex(
             "cause_partnerships",
             "enrichments_applied",
             "last_enriched",
+            # Source/citation tracking (data provenance)
+            "sources",
+            "field_sources",
+            "scraped_at",
+            "scraper_version",
         ]
 
         for field_name in direct_fields:

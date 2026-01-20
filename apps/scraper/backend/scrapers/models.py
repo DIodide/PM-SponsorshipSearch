@@ -122,6 +122,11 @@ class TeamRow:
     enrichments_applied: Optional[List[str]] = None  # Track which enrichers have run
     last_enriched: Optional[str] = None  # ISO timestamp of last enrichment
 
+    # ========== Source/Citation Tracking ==========
+    sources: Optional[List[Dict[str, Any]]] = None  # List of SourceCitation dicts
+    field_sources: Optional[Dict[str, List[str]]] = None  # field_name -> [source_urls]
+    scraped_at: Optional[str] = None  # ISO timestamp of when base scrape occurred
+
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary, handling nested dataclasses."""
         return asdict(self)
@@ -148,6 +153,38 @@ class TeamRow:
             self.enrichments_applied is not None
             and enricher_name in self.enrichments_applied
         )
+
+    def add_sources(self, new_sources: List[Dict[str, Any]]) -> None:
+        """Add source citations to this team record."""
+        if self.sources is None:
+            self.sources = []
+        self.sources.extend(new_sources)
+
+    def merge_field_sources(self, new_field_sources: Dict[str, List[str]]) -> None:
+        """Merge field-to-source mappings into this team record."""
+        if self.field_sources is None:
+            self.field_sources = {}
+        for field_name, urls in new_field_sources.items():
+            if field_name not in self.field_sources:
+                self.field_sources[field_name] = []
+            # Add unique URLs only
+            for url in urls:
+                if url not in self.field_sources[field_name]:
+                    self.field_sources[field_name].append(url)
+
+    def set_scraped_at(self, timestamp: Optional[str] = None) -> None:
+        """Set the scrape timestamp. Defaults to current time if not provided."""
+        self.scraped_at = timestamp or datetime.now().isoformat()
+
+    def get_sources_for_field(self, field_name: str) -> List[str]:
+        """Get source URLs for a specific field."""
+        if self.field_sources is None:
+            return []
+        return self.field_sources.get(field_name, [])
+
+    def has_sources(self) -> bool:
+        """Check if this team has any source citations."""
+        return self.sources is not None and len(self.sources) > 0
 
 
 @dataclass
@@ -237,6 +274,11 @@ METRIC_GROUPS = {
         "fields": ["mission_tags", "community_programs", "cause_partnerships"],
         "icon": "tag",
     },
+    "provenance": {
+        "label": "Data Provenance",
+        "fields": ["sources", "field_sources", "scraped_at", "enrichments_applied", "last_enriched"],
+        "icon": "link",
+    },
 }
 
 
@@ -264,4 +306,10 @@ FIELD_METADATA = {
     "mission_tags": {"label": "Mission Tags", "format": "tags"},
     "community_programs": {"label": "Community Programs", "format": "list"},
     "cause_partnerships": {"label": "Cause Partnerships", "format": "list"},
+    # Provenance fields
+    "sources": {"label": "Data Sources", "format": "sources"},
+    "field_sources": {"label": "Field Sources", "format": "field_sources"},
+    "scraped_at": {"label": "Scraped At", "format": "datetime"},
+    "enrichments_applied": {"label": "Enrichments Applied", "format": "list"},
+    "last_enriched": {"label": "Last Enriched", "format": "datetime"},
 }

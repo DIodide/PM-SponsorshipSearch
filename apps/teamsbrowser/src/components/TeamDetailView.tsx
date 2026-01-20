@@ -4,10 +4,185 @@ import {
   ArrowLeft02Icon,
   Link01Icon,
 } from '@hugeicons/core-free-icons';
-import type { ScoredTeam, Team, TeamDetailAnalysis, SearchFilters } from '../types';
+import type { ScoredTeam, Team, TeamDetailAnalysis, SearchFilters, SourceCitation } from '../types';
 import { generateTeamDetailAnalysis, formatCurrency } from '../lib/ai';
 import { inferSport, scoreToPercent, estimatePriceFromTier, formatFollowers, formatNumber } from '../lib/api';
 import { buildSearchSummary } from './PromptEditor';
+
+// Source type icons and colors
+const sourceTypeConfig: Record<string, { color: string; bgColor: string; label: string }> = {
+  api: { color: 'text-blue-700', bgColor: 'bg-blue-50', label: 'API' },
+  website: { color: 'text-emerald-700', bgColor: 'bg-emerald-50', label: 'Website' },
+  database: { color: 'text-purple-700', bgColor: 'bg-purple-50', label: 'Database' },
+  static: { color: 'text-gray-600', bgColor: 'bg-gray-100', label: 'Static' },
+  cached: { color: 'text-amber-700', bgColor: 'bg-amber-50', label: 'Cached' },
+};
+
+// Helper to group sources by source name
+function groupSourcesByName(sources: SourceCitation[]): Map<string, SourceCitation[]> {
+  const grouped = new Map<string, SourceCitation[]>();
+  for (const source of sources) {
+    const existing = grouped.get(source.source_name) || [];
+    existing.push(source);
+    grouped.set(source.source_name, existing);
+  }
+  return grouped;
+}
+
+// Helper to format date
+function formatSourceDate(dateStr: string | undefined): string {
+  if (!dateStr) return '';
+  try {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  } catch {
+    return '';
+  }
+}
+
+// Data Sources component
+function DataSourcesSection({ sources, scrapedAt }: { sources: SourceCitation[]; scrapedAt?: string | null }) {
+  const [expanded, setExpanded] = useState(false);
+  
+  if (!sources || sources.length === 0) return null;
+  
+  // Deduplicate sources by URL
+  const uniqueSources = Array.from(
+    new Map(sources.map(s => [s.url, s])).values()
+  );
+  
+  const grouped = groupSourcesByName(uniqueSources);
+  const sourceNames = Array.from(grouped.keys()).sort();
+  
+  // Count by type
+  const typeCounts = uniqueSources.reduce((acc, s) => {
+    acc[s.source_type] = (acc[s.source_type] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  return (
+    <div className="pt-6 border-t border-gray-100">
+      <div 
+        className="flex items-center justify-between cursor-pointer group"
+        onClick={() => setExpanded(!expanded)}
+      >
+        <div className="flex items-center gap-3">
+          <h3 className="font-semibold text-gray-900">Data Sources</h3>
+          <span className="text-xs text-gray-500">
+            {uniqueSources.length} source{uniqueSources.length !== 1 ? 's' : ''}
+          </span>
+          {scrapedAt && (
+            <span className="text-xs text-gray-400">
+              • Last scraped {formatSourceDate(scrapedAt)}
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          {/* Type badges summary */}
+          <div className="flex items-center gap-1.5">
+            {Object.entries(typeCounts).map(([type, count]) => {
+              const config = sourceTypeConfig[type] || sourceTypeConfig.static;
+              return (
+                <span 
+                  key={type}
+                  className={`px-1.5 py-0.5 text-xs font-medium rounded ${config.bgColor} ${config.color}`}
+                >
+                  {count} {config.label}
+                </span>
+              );
+            })}
+          </div>
+          <svg 
+            className={`w-4 h-4 text-gray-400 transition-transform ${expanded ? 'rotate-180' : ''}`}
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+      
+      {expanded && (
+        <div className="mt-4 space-y-4">
+          {sourceNames.map(sourceName => {
+            const sourcesForName = grouped.get(sourceName) || [];
+            const firstSource = sourcesForName[0];
+            const config = sourceTypeConfig[firstSource.source_type] || sourceTypeConfig.static;
+            
+            // Collect all unique fields sourced
+            const allFields = new Set<string>();
+            sourcesForName.forEach(s => {
+              s.fields_sourced?.forEach(f => allFields.add(f));
+            });
+            
+            return (
+              <div key={sourceName} className="bg-gray-50 rounded-lg p-3">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className={`px-2 py-0.5 text-xs font-medium rounded ${config.bgColor} ${config.color}`}>
+                      {config.label}
+                    </span>
+                    <span className="font-medium text-sm text-gray-900">{sourceName}</span>
+                  </div>
+                  {firstSource.is_primary === false && (
+                    <span className="text-xs text-gray-400">Fallback</span>
+                  )}
+                </div>
+                
+                {/* URLs */}
+                <div className="space-y-1">
+                  {sourcesForName.slice(0, 3).map((source, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      {source.url.startsWith('http') ? (
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-blue-600 hover:text-blue-800 hover:underline truncate max-w-md"
+                          title={source.url}
+                        >
+                          {source.url.length > 60 ? source.url.slice(0, 60) + '...' : source.url}
+                        </a>
+                      ) : (
+                        <span className="text-xs text-gray-500 italic">
+                          {source.url.replace('internal://', '')}
+                        </span>
+                      )}
+                      {source.cache_hit && (
+                        <span className="text-xs px-1 py-0.5 bg-amber-100 text-amber-700 rounded">cached</span>
+                      )}
+                    </div>
+                  ))}
+                  {sourcesForName.length > 3 && (
+                    <span className="text-xs text-gray-400">
+                      +{sourcesForName.length - 3} more URL{sourcesForName.length - 3 !== 1 ? 's' : ''}
+                    </span>
+                  )}
+                </div>
+                
+                {/* Fields sourced */}
+                {allFields.size > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-1">
+                    <span className="text-xs text-gray-500">Fields:</span>
+                    {Array.from(allFields).slice(0, 8).map(field => (
+                      <span key={field} className="text-xs px-1.5 py-0.5 bg-white border border-gray-200 rounded text-gray-600">
+                        {field.replace(/_/g, ' ')}
+                      </span>
+                    ))}
+                    {allFields.size > 8 && (
+                      <span className="text-xs text-gray-400">+{allFields.size - 8} more</span>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
 
 // Social media icons as SVGs
 const SocialIcons: Record<string, React.FC<{ className?: string }>> = {
@@ -96,10 +271,15 @@ export function TeamDetailView({
 
   // Find social handle by platform
   const getSocialUrl = (platform: string): string | null => {
-    const handle = socialHandles.find(h => 
-      h.platform.toLowerCase() === platform.toLowerCase() ||
-      h.platform.toLowerCase().includes(platform.toLowerCase())
-    );
+    const handle = socialHandles.find(h => {
+      const p = h.platform.toLowerCase();
+      const search = platform.toLowerCase();
+      // Handle Twitter/X naming - data uses "x" but UI uses "twitter"
+      if (search === 'twitter' || search === 'x') {
+        return p === 'x' || p === 'twitter';
+      }
+      return p === search || p.includes(search);
+    });
     return handle?.url || null;
   };
 
@@ -509,10 +689,10 @@ export function TeamDetailView({
               </div>
             </div>
 
-            {/* Sources */}
-            {!loading && analysis && (
+            {/* AI Analysis Sources */}
+            {!loading && analysis && analysis.sources.length > 0 && (
               <div className="pt-6 border-t border-gray-100">
-                <h3 className="font-semibold text-gray-900 mb-3">Sources</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">Analysis Sources</h3>
                 <ul className="space-y-1.5">
                   {analysis.sources.map((source, i) => (
                     <li key={i} className="flex items-start gap-2 text-xs text-gray-500 italic">
@@ -522,6 +702,14 @@ export function TeamDetailView({
                   ))}
                 </ul>
               </div>
+            )}
+            
+            {/* Actual Data Sources from Scraper */}
+            {fullTeam?.sources && fullTeam.sources.length > 0 && (
+              <DataSourcesSection 
+                sources={fullTeam.sources} 
+                scrapedAt={fullTeam.scraped_at}
+              />
             )}
           </div>
 

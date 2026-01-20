@@ -1,10 +1,10 @@
 // Filter options
 export const REGIONS = [
-  { value: "northeast", label: "Northeast" },
-  { value: "southeast", label: "Southeast" },
-  { value: "midwest", label: "Midwest" },
-  { value: "southwest", label: "Southwest" },
-  { value: "west", label: "West" },
+  { value: "united states northeast", label: "Northeast" },
+  { value: "united states southeast", label: "Southeast" },
+  { value: "united states midwest", label: "Midwest" },
+  { value: "united states southwest", label: "Southwest" },
+  { value: "united states west", label: "West" },
 ];
 
 export const DEMOGRAPHICS = [
@@ -29,16 +29,13 @@ export const BRAND_VALUES = [
   { value: "family", label: "Family-Friendly" },
 ];
 
+// YUBI: change from leagues to sports
 export const LEAGUES = [
-  { value: "NFL", label: "NFL" },
-  { value: "NBA", label: "NBA" },
-  { value: "MLB", label: "MLB" },
-  { value: "NHL", label: "NHL" },
-  { value: "MLS", label: "MLS" },
-  { value: "WNBA", label: "WNBA" },
-  { value: "NWSL", label: "NWSL" },
-  { value: "MiLB", label: "Minor League Baseball" },
-  { value: "NBA G League", label: "NBA G League" },
+ { value: "NFL", label: "Football" },
+ { value: "NBA G League", label: "Basketball" },
+ { value: "Major League Baseball Triple-A Single-A High-A Double-A Rookie", label: "Baseball" },
+ { value: "NHL ECHL AHL", label: "Hockey" },
+ { value: "MLS", label: "Soccer" }
 ];
 
 export const GOALS = [
@@ -101,6 +98,22 @@ export interface SponsorInfo {
   asset_type?: string;
 }
 
+// Source citation from the scraper
+export interface SourceCitation {
+  url: string;
+  source_type: string; // "api", "website", "database", "cached", "static"
+  source_name: string; // Human-readable name: "MLB StatsAPI", "WikiData SPARQL", etc.
+  retrieved_at?: string;
+  title?: string;
+  domain?: string;
+  api_endpoint?: string;
+  query_params?: Record<string, string>;
+  fields_sourced?: string[];
+  is_primary?: boolean;
+  confidence?: number;
+  cache_hit?: boolean;
+}
+
 export interface Team {
   _id: string;
   _creationTime: number;
@@ -151,6 +164,12 @@ export interface Team {
   // Metadata
   enrichments_applied?: string[] | null;
   last_enriched?: string | null;
+
+  // Source/Citation Tracking
+  sources?: SourceCitation[] | null;
+  field_sources?: Record<string, string[]> | null;
+  scraped_at?: string | null;
+  scraper_version?: string | null;
 }
 
 // Combined result for display

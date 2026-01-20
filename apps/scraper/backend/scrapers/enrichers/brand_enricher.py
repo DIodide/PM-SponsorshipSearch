@@ -23,6 +23,7 @@ from bs4 import BeautifulSoup
 
 from .base import BaseEnricher, EnricherConfig, EnricherRegistry
 from ..models import TeamRow, EnrichmentResult
+from ..source_collector import SourceCollector, SourceNames
 
 
 # =============================================================================
@@ -442,12 +443,16 @@ Important:
             self._stats["gemini_errors"] += 1
             return None
 
-    async def _enrich_team(self, team: TeamRow) -> bool:
+    async def _enrich_team(self, team: TeamRow, sources: SourceCollector) -> bool:
         """
         Enrich a single team with brand alignment data.
 
         Scrapes community/CSR pages and uses Gemini to extract
         structured information about mission, programs, and partnerships.
+        
+        Args:
+            team: TeamRow to enrich (modified in place)
+            sources: SourceCollector to track data sources/citations
         """
         # Skip if already has data
         if team.mission_tags is not None:
@@ -524,6 +529,13 @@ Important:
                         self._stats["mission_tag_counts"][tag] = (
                             self._stats["mission_tag_counts"].get(tag, 0) + 1
                         )
+                    
+                    # Track team website as source
+                    sources.add_website_source(
+                        url=team.official_url,
+                        source_name=SourceNames.TEAM_WEBSITE,
+                        fields=["mission_tags", "community_programs", "cause_partnerships"],
+                    )
 
                 return True
 

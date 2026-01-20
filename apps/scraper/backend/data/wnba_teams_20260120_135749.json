@@ -1,0 +1,1877 @@
+[
+  {
+    "name": "Atlanta Dream",
+    "region": "Atlanta",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Atlanta, plus the broader WNBA audience.",
+    "official_url": "https://atlantadream.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+    "geo_city": "Atlanta",
+    "geo_country": "US",
+    "city_population": 520070,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Gateway Center Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:42.870765",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939348",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252234",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252252",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/1304000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.556085",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/1304000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.646996",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/1304000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Chicago Sky",
+    "region": "Chicago",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Chicago, plus the broader WNBA audience.",
+    "official_url": "https://chicagosky.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+    "geo_city": "Chicago",
+    "geo_country": "US",
+    "city_population": 2721308,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Wintrust Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:42.870778",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939442",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252593",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252597",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/1714000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.566987",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/1714000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.647624",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/1714000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Connecticut Sun",
+    "region": "Connecticut",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Connecticut, plus the broader WNBA audience.",
+    "official_url": "https://connecticutsun.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+    "geo_city": null,
+    "geo_country": null,
+    "city_population": null,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Mohegan Sun Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:42.870781",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939488",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.648099",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Dallas Wings",
+    "region": "Dallas",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Dallas, plus the broader WNBA audience.",
+    "official_url": "https://dallaswings.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+    "geo_city": "Dallas",
+    "geo_country": "US",
+    "city_population": 1326087,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "College Park Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:42.870782",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939518",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252773",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252776",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/4819000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.571304",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/4819000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.648370",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/4819000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Golden State Valkyries",
+    "region": "Golden State",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Golden State, plus the broader WNBA audience.",
+    "official_url": "https://goldenstatevalkyries.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/gs.png",
+    "geo_city": "San Francisco",
+    "geo_country": "US",
+    "city_population": 827526,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": true,
+    "stadium_name": "Chase Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:42.870784",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939547",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252879",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.252883",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/0667000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.557434",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/0667000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.648551",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/0667000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Indiana Fever",
+    "region": "Indiana",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Indiana, plus the broader WNBA audience.",
+    "official_url": "https://indianafever.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+    "geo_city": "Indianapolis",
+    "geo_country": "US",
+    "city_population": 891484,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Gainbridge Fieldhouse",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.153631",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939574",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.672749",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.672779",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/1836003&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.756837",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/1836003",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.971886",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/1836003&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Las Vegas Aces",
+    "region": "Las Vegas",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Las Vegas, plus the broader WNBA audience.",
+    "official_url": "https://lasvegasaces.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+    "geo_city": "Las Vegas",
+    "geo_country": "US",
+    "city_population": 678922,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Michelob Ultra Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.153657",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939600",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.673851",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.673875",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/3240000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.770501",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/3240000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.972101",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/3240000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Los Angeles Sparks",
+    "region": "Los Angeles",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Los Angeles, plus the broader WNBA audience.",
+    "official_url": "https://losangelessparks.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+    "geo_city": "Los Angeles",
+    "geo_country": "US",
+    "city_population": 3878704,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Crypto.com Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.153659",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939627",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.674646",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.674662",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/0644000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.771985",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/0644000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.972186",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/0644000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Minnesota Lynx",
+    "region": "Minnesota",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Minnesota, plus the broader WNBA audience.",
+    "official_url": "https://minnesotalynx.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+    "geo_city": "Minneapolis",
+    "geo_country": "US",
+    "city_population": 428579,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Target Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.153661",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939653",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.675302",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.675317",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/2743000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.862468",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/2743000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.972257",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/2743000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "New York Liberty",
+    "region": "New York",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around New York, plus the broader WNBA audience.",
+    "official_url": "https://newyorkliberty.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+    "geo_city": "New York",
+    "geo_country": "US",
+    "city_population": 8478072,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Barclays Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.153662",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939680",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.675882",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.675893",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/3651000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:18.769477",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/3651000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:42.972332",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/3651000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Phoenix Mercury",
+    "region": "Phoenix",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Phoenix, plus the broader WNBA audience.",
+    "official_url": "https://phoenixmercury.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/phx.png",
+    "geo_city": "Phoenix",
+    "geo_country": "US",
+    "city_population": 1673164,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": true,
+    "stadium_name": "Mortgage Matchup Center",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.411023",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939705",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.962972",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.962997",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/0455000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:19.035988",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/0455000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:43.254950",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/0455000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Seattle Storm",
+    "region": "Seattle",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Seattle, plus the broader WNBA audience.",
+    "official_url": "https://seattlestorm.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/sea.png",
+    "geo_city": "Seattle",
+    "geo_country": "US",
+    "city_population": 780995,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": true,
+    "stadium_name": "Climate Pledge Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.411036",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939731",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.963697",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.963710",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/5363000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:19.047839",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/5363000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:43.255223",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/5363000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  },
+  {
+    "name": "Washington Mystics",
+    "region": "Washington",
+    "league": "Women's National Basketball Association",
+    "target_demographic": "Women's basketball fans in and around Washington, plus the broader WNBA audience.",
+    "official_url": "https://washingtonmystics.wnba.com/",
+    "category": "WNBA",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/wnba/500/wsh.png",
+    "geo_city": "Washington",
+    "geo_country": "US",
+    "city_population": 702250,
+    "metro_gdp": null,
+    "social_handles": null,
+    "followers_x": null,
+    "followers_instagram": null,
+    "followers_facebook": null,
+    "followers_tiktok": null,
+    "subscribers_youtube": null,
+    "avg_game_attendance": null,
+    "family_program_count": null,
+    "family_program_types": null,
+    "owns_stadium": false,
+    "stadium_name": "Entertainment and Sports Arena",
+    "sponsors": null,
+    "avg_ticket_price": null,
+    "franchise_value": null,
+    "annual_revenue": null,
+    "mission_tags": null,
+    "community_programs": null,
+    "cause_partnerships": null,
+    "enrichments_applied": [
+      "geo",
+      "sponsor"
+    ],
+    "last_enriched": "2026-01-20T13:59:43.411040",
+    "sources": [
+      {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams",
+        "source_type": "api",
+        "source_name": "ESPN API",
+        "retrieved_at": "2026-01-20T13:57:49.939757",
+        "domain": "site.api.espn.com",
+        "api_endpoint": "/apis/site/v2/sports/basketball/wnba/teams",
+        "fields_sourced": [
+          "name",
+          "region",
+          "league",
+          "target_demographic",
+          "official_url",
+          "category",
+          "logo_url"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.964209",
+        "fields_sourced": [
+          "geo_city"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "internal://region-mapping-table",
+        "source_type": "static",
+        "source_name": "Region Mapping Table",
+        "retrieved_at": "2026-01-20T13:58:18.964220",
+        "fields_sourced": [
+          "geo_country"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://api.datacommons.org/stat/value?place=geoId/1150000&stat_var=Count_Person",
+        "source_type": "api",
+        "source_name": "Data Commons API",
+        "retrieved_at": "2026-01-20T13:58:19.042632",
+        "domain": "api.datacommons.org",
+        "api_endpoint": "/stat/value",
+        "query_params": {
+          "place": "geoId/1150000",
+          "stat_var": "Count_Person"
+        },
+        "fields_sourced": [
+          "city_population"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      },
+      {
+        "url": "https://query.wikidata.org/sparql",
+        "source_type": "database",
+        "source_name": "WikiData SPARQL",
+        "retrieved_at": "2026-01-20T13:59:43.255310",
+        "domain": "query.wikidata.org",
+        "fields_sourced": [
+          "stadium_name",
+          "owns_stadium"
+        ],
+        "is_primary": true,
+        "cache_hit": false
+      }
+    ],
+    "field_sources": {
+      "name": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "region": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "league": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "target_demographic": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "official_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "category": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "logo_url": [
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams"
+      ],
+      "geo_city": [
+        "internal://region-mapping-table"
+      ],
+      "geo_country": [
+        "internal://region-mapping-table"
+      ],
+      "city_population": [
+        "https://api.datacommons.org/stat/value?place=geoId/1150000&stat_var=Count_Person"
+      ],
+      "stadium_name": [
+        "https://query.wikidata.org/sparql"
+      ],
+      "owns_stadium": [
+        "https://query.wikidata.org/sparql"
+      ]
+    },
+    "scraped_at": "2026-01-20T13:57:49.536479"
+  }
+]

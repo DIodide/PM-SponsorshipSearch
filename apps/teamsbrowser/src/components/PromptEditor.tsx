@@ -223,7 +223,7 @@ export function PromptEditor({
 
           {/* Leagues */}
           <FilterSection
-            label="Preferred Leagues"
+            label="Preferred Sports"
             options={LEAGUES}
             selected={filters.leagues}
             onToggle={(value) => toggleFilter('leagues', value)}

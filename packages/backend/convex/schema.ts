@@ -271,6 +271,25 @@ export default defineSchema({
       cause_partnerships: v.optional(v.union(v.array(v.string()), v.null())),
       enrichments_applied: v.optional(v.union(v.array(v.string()), v.null())),
       last_enriched: v.optional(v.union(v.string(), v.null())),
+      
+      // Source/Citation Tracking (Data Provenance)
+      sources: v.optional(v.union(v.array(v.object({
+        url: v.string(),
+        source_type: v.string(),                       // "api", "website", "database", "static", "cached"
+        source_name: v.string(),                        // Human-readable name
+        retrieved_at: v.string(),                       // ISO timestamp
+        title: v.optional(v.union(v.string(), v.null())),
+        domain: v.optional(v.union(v.string(), v.null())),
+        api_endpoint: v.optional(v.union(v.string(), v.null())),
+        query_params: v.optional(v.any()),
+        fields_sourced: v.optional(v.union(v.array(v.string()), v.null())),
+        is_primary: v.optional(v.union(v.boolean(), v.null())),
+        confidence: v.optional(v.union(v.number(), v.null())),
+        cache_hit: v.optional(v.union(v.boolean(), v.null())),
+      })), v.null())),
+      field_sources: v.optional(v.union(v.any(), v.null())),  // Map of field -> [source_urls]
+      scraped_at: v.optional(v.union(v.string(), v.null())),  // ISO timestamp of base scrape
+      scraper_version: v.optional(v.union(v.string(), v.null())),  // Version of scraper
     })
     .index("by_name", ["name"])
     .index("by_league", ["league"])
@@ -294,8 +313,8 @@ export default defineSchema({
     partners_embedding: v.union(v.array(v.float64()), v.null()),
   
       // Numeric score fields
-      digital_reach: v.number(),
-      local_reach: v.number(),
+      digital_reach: v.union(v.number(), v.null()),
+      local_reach: v.union(v.number(), v.null()),
       family_friendly: v.union(v.number(), v.null()),
       value_tier: v.number(),
 
