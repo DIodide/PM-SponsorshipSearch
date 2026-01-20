@@ -133,6 +133,12 @@ export const computeBrandSimilarity = action({
     // ------------------------------------------------------------
 
     const scored: (AllTeamsClean & { similarity_score: number })[] = teams.map((team: AllTeamsClean) => {
+        
+      // YUBI: immediately exclude if not part of the intended league/sport
+        if (brandLeague.length > 1 && !brandLeague.includes(team.category)) {
+          return { ...team, similarity_score: 0 };
+        }
+
         // scale is close to 0.7 to 0.9
         const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
         const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
@@ -243,9 +249,8 @@ export const computeBrandSimilarity = action({
           (simQuery * WEIGHTS.query) +
           (simValues * WEIGHTS.values) +
           (valuationSim * WEIGHTS.valuation) +
-          (demSim * WEIGHTS.demographics +
-          (reachSim * WEIGHTS.reach)
-        );
+          (demSim * WEIGHTS.demographics) +
+          (reachSim * WEIGHTS.reach);
       
         const active = components.filter((v) => typeof v === "number") as number[];
 
