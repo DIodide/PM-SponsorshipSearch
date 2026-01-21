@@ -163,11 +163,11 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   // YUBI: modify weights as desired
   const WEIGHTS = {
     region: 0.3,
-    query: 0.1,
-    values: 0.1,
+    query: 0.04,
+    values: 0.02,
     valuation: 0.3,
-    demographics: 0.1,
-    reach: 0.1
+    demographics: 0.3,
+    reach: 0.04
   };
 
   // We multiply each score by its weight
@@ -180,10 +180,8 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
     (reachSim * WEIGHTS.reach);
 
   // set score to 0 if the team's sport does not align with what sports the brand wants
-  if (brandLeague.length > 2 && team.category) {
-    if (!brandLeague.includes(team.category)) {
-      weightedScore = 0;
-    }
+  if (brandLeague.length > 1 && team.category && !brandLeague.includes(team.category)) {
+    weightedScore = 0;
   }
 
   return weightedScore;
