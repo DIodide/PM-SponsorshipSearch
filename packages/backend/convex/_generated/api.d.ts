@@ -14,6 +14,7 @@ import type * as NFL_seed from "../NFL_seed.js";
 import type * as NFL_seed_clean from "../NFL_seed_clean.js";
 import type * as brandSimilarity from "../brandSimilarity.js";
 import type * as cache from "../cache.js";
+import type * as campaignGeneration from "../campaignGeneration.js";
 import type * as crons from "../crons.js";
 import type * as dataPreProcess from "../dataPreProcess.js";
 import type * as dataPreProcessFull from "../dataPreProcessFull.js";
@@ -28,6 +29,7 @@ import type * as seedData from "../seedData.js";
 import type * as similarityScoring from "../similarityScoring.js";
 import type * as social from "../social.js";
 import type * as socialHelpers from "../socialHelpers.js";
+import type * as storage from "../storage.js";
 import type * as teamAnalysis from "../teamAnalysis.js";
 import type * as teams from "../teams.js";
 
@@ -44,6 +46,7 @@ declare const fullApi: ApiFromModules<{
   NFL_seed_clean: typeof NFL_seed_clean;
   brandSimilarity: typeof brandSimilarity;
   cache: typeof cache;
+  campaignGeneration: typeof campaignGeneration;
   crons: typeof crons;
   dataPreProcess: typeof dataPreProcess;
   dataPreProcessFull: typeof dataPreProcessFull;
@@ -58,6 +61,7 @@ declare const fullApi: ApiFromModules<{
   similarityScoring: typeof similarityScoring;
   social: typeof social;
   socialHelpers: typeof socialHelpers;
+  storage: typeof storage;
   teamAnalysis: typeof teamAnalysis;
   teams: typeof teams;
 }>;

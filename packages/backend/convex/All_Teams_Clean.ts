@@ -193,3 +193,4 @@ export type AllTeamsCleanWithoutEmbeddings = Omit<AllTeamsClean,
   | 'community_programs_embedding' 
   | 'partners_embedding'
 >;
+  
