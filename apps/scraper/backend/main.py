@@ -1546,7 +1546,7 @@ async def stream_task_updates(task_id: str):
 # ============================================
 
 # Convex configuration
-CONVEX_URL = os.environ.get("CONVEX_URL", "https://harmless-corgi-891.convex.cloud")
+CONVEX_URL = os.environ.get("CONVEX_URL", "https://secret-stoat-813.convex.cloud")
 CONVEX_DEPLOY_KEY = os.environ.get("CONVEX_DEPLOY_KEY", "")
 
 

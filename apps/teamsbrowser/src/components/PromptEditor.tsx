@@ -11,6 +11,7 @@ import {
   BRAND_VALUES, 
   LEAGUES, 
   GOALS,
+  TOUCHPOINTS,
   type SearchFilters,
 } from '../types';
 
@@ -88,7 +89,7 @@ export function PromptEditor({
   const [showAdvanced, setShowAdvanced] = useState(true);
 
   const toggleFilter = (
-    category: keyof Pick<SearchFilters, 'regions' | 'demographics' | 'brandValues' | 'leagues' | 'goals'>,
+    category: keyof Pick<SearchFilters, 'regions' | 'demographics' | 'brandValues' | 'leagues' | 'goals' | 'touchpoints'>,
     value: string
   ) => {
     setFilters((prev) => ({
@@ -108,6 +109,7 @@ export function PromptEditor({
       filters.brandValues.length > 0 || 
       filters.leagues.length > 0 || 
       filters.goals.length > 0 ||
+      filters.touchpoints.length > 0 ||
       filters.budgetMin !== undefined ||
       filters.budgetMax !== undefined;
     
@@ -124,6 +126,7 @@ export function PromptEditor({
     filters.brandValues.length +
     filters.leagues.length +
     filters.goals.length +
+    filters.touchpoints.length +
     (filters.budgetMin ? 1 : 0) +
     (filters.budgetMax ? 1 : 0);
 
@@ -134,30 +137,15 @@ export function PromptEditor({
       brandValues: [],
       leagues: [],
       goals: [],
+      touchpoints: [],
     });
     setQuery('');
   };
 
   const content = (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Search Query Input */}
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          Describe your sponsorship objective
-        </label>
-        <textarea
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="e.g., 'Looking for community-focused teams to build local brand awareness with families'"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 resize-none bg-white"
-          rows={2}
-        />
-        <p className="mt-1.5 text-xs text-gray-500">
-          This text will be embedded and matched against team values
-        </p>
-      </div>
 
-      {/* Toggle Advanced Filters */}
+      {/* Toggle Filters */}
       <button
         type="button"
         onClick={() => setShowAdvanced(!showAdvanced)}
@@ -175,43 +163,6 @@ export function PromptEditor({
       {/* Advanced Filters */}
       {showAdvanced && (
         <div className="space-y-5 pt-2 border-t border-gray-100">
-          {/* Budget Range */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Budget Range
-            </label>
-            <div className="flex items-center gap-3">
-              <div className="flex-1">
-                <input
-                  type="number"
-                  placeholder="Min ($)"
-                  value={filters.budgetMin || ''}
-                  onChange={(e) =>
-                    setFilters((prev) => ({
-                      ...prev,
-                      budgetMin: e.target.value ? Number(e.target.value) : undefined,
-                    }))
-                  }
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
-                />
-              </div>
-              <span className="text-gray-400 text-sm">to</span>
-              <div className="flex-1">
-                <input
-                  type="number"
-                  placeholder="Max ($)"
-                  value={filters.budgetMax || ''}
-                  onChange={(e) =>
-                    setFilters((prev) => ({
-                      ...prev,
-                      budgetMax: e.target.value ? Number(e.target.value) : undefined,
-                    }))
-                  }
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* Regions */}
           <FilterSection
@@ -253,6 +204,52 @@ export function PromptEditor({
             onToggle={(value) => toggleFilter('goals', value)}
           />
 
+          {/* Touchpoints */}
+          <FilterSection
+            label="Touchpoints"
+            options={TOUCHPOINTS}
+            selected={filters.touchpoints}
+            onToggle={(value) => toggleFilter('touchpoints', value)}
+          />
+
+          {/* Budget Range */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Budget Range
+            </label>
+            <div className="flex items-center gap-3">
+              <div className="flex-1">
+                <input
+                  type="number"
+                  placeholder="Min ($)"
+                  value={filters.budgetMin || ''}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      budgetMin: e.target.value ? Number(e.target.value) : undefined,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
+                />
+              </div>
+              <span className="text-gray-400 text-sm">to</span>
+              <div className="flex-1">
+                <input
+                  type="number"
+                  placeholder="Max ($)"
+                  value={filters.budgetMax || ''}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      budgetMax: e.target.value ? Number(e.target.value) : undefined,
+                    }))
+                  }
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 bg-white"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Clear Filters */}
           {activeFilterCount > 0 && (
             <button
@@ -264,8 +261,27 @@ export function PromptEditor({
               Clear all filters
             </button>
           )}
+
+
         </div>
       )}
+
+      {/* Search Query Input */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Describe your sponsorship objective
+        </label>
+        <textarea
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="e.g., 'Looking for community-focused teams to build local brand awareness with families'"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 resize-none bg-white"
+          rows={2}
+        />
+        <p className="mt-1.5 text-xs text-gray-500">
+          This text will be embedded and matched against team values
+        </p>
+      </div>
 
       {/* Submit Button */}
       <div className="flex justify-end gap-3 pt-2">
@@ -353,6 +369,10 @@ export function buildSearchSummary(query: string, filters: SearchFilters): strin
   
   if (filters.goals.length > 0) {
     parts.push(`Goals: ${filters.goals.join(', ')}`);
+  }
+  
+  if (filters.touchpoints.length > 0) {
+    parts.push(`Touchpoints: ${filters.touchpoints.join(', ')}`);
   }
   
   return parts.join('. ') || 'No criteria specified';

@@ -41,6 +41,18 @@ export const insertCleanRow = mutation({
     },
     handler: async (ctx, { row }) => {
       await ctx.db.insert("All_Teams_Clean", row);
+      
+      // Update the count in tableCounts
+      const countDoc = await ctx.db
+        .query("tableCounts")
+        .withIndex("by_table", (q) => q.eq("tableName", "All_Teams_Clean"))
+        .unique();
+      
+      if (countDoc) {
+        await ctx.db.patch(countDoc._id, { count: countDoc.count + 1 });
+      } else {
+        await ctx.db.insert("tableCounts", { tableName: "All_Teams_Clean", count: 1 });
+      }
     }
 });  
 
@@ -126,7 +138,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
 
         // false if false or null
         const stadium = row.owns_stadium === true;
-
+        
         // normalize all of the numerical values
         const attendance_norm = (row.avg_game_attendance != null) ? (row.avg_game_attendance - attendance.mean) / attendance.sd : null
         const valuation_norm = (row.franchise_value != null) ? (row.franchise_value - valuation.mean) / valuation.sd : null
@@ -244,6 +256,7 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
           name: row.name,
           region: row.region,
           league: row.league,
+          category: row.category,
           official_url: row.official_url,
   
           region_embedding: regionEmb,

@@ -301,16 +301,17 @@ export default defineSchema({
       name: v.string(),
       region: v.string(),
       league: v.string(),
+      category: v.optional(v.string()),
       official_url: v.string(),
   
       // These allow the specific null value returned by your Promise.resolve(null)
-    region_embedding: v.union(v.array(v.float64()), v.null()),
-    league_embedding: v.union(v.array(v.float64()), v.null()),
-    values_embedding: v.union(v.array(v.float64()), v.null()),
-    sponsors_embedding: v.union(v.array(v.float64()), v.null()),
-    family_programs_embedding: v.union(v.array(v.float64()), v.null()),
-    community_programs_embedding: v.union(v.array(v.float64()), v.null()),
-    partners_embedding: v.union(v.array(v.float64()), v.null()),
+      region_embedding: v.union(v.array(v.float64()), v.null()),
+      league_embedding: v.union(v.array(v.float64()), v.null()),
+      values_embedding: v.union(v.array(v.float64()), v.null()),
+      sponsors_embedding: v.union(v.array(v.float64()), v.null()),
+      family_programs_embedding: v.union(v.array(v.float64()), v.null()),
+      community_programs_embedding: v.union(v.array(v.float64()), v.null()),
+      partners_embedding: v.union(v.array(v.float64()), v.null()),
   
       // Numeric score fields
       digital_reach: v.union(v.number(), v.null()),
@@ -330,4 +331,11 @@ export default defineSchema({
     // Optional: Add indexes for non-embedding fields if you plan to filter by them
     .index("by_name", ["name"])
     .index("by_league", ["league"]),
+
+    // Table for storing document counts efficiently
+    // This avoids scanning all documents just to count them
+    tableCounts: defineTable({
+      tableName: v.string(),
+      count: v.number(),
+    }).index("by_table", ["tableName"]),
 });
