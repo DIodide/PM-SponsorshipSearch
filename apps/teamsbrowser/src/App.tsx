@@ -34,6 +34,7 @@ function App() {
     brandValues: [],
     leagues: [],
     goals: [],
+    touchpoints: [],
   });
 
   // Load full team data on mount (for additional info display)

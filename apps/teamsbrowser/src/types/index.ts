@@ -48,6 +48,22 @@ export const GOALS = [
   { value: "prestige-credibility", label: "Prestige and Credibility" },
 ];
 
+export const TOUCHPOINTS = [
+  { value: "media", label: "Media" },
+  { value: "influencer", label: "Influencer" },
+  { value: "retail", label: "Retail" },
+  { value: "sampling", label: "Sampling" },
+  { value: "partnerships", label: "Partnerships" },
+  { value: "pr", label: "PR" },
+  { value: "social", label: "Social" },
+];
+
+export const MEDIA_STRATEGIES = [
+  { value: "organic", label: "Organic" },
+  { value: "earned", label: "Earned" },
+  { value: "paid", label: "Paid" },
+];
+
 // Search filters matching similarityScoring.ts requirements
 export interface SearchFilters {
   regions: string[];
@@ -55,6 +71,7 @@ export interface SearchFilters {
   brandValues: string[];
   leagues: string[];
   goals: string[];
+  touchpoints: string[];
   budgetMin?: number;
   budgetMax?: number;
 }
@@ -191,6 +208,28 @@ export interface TeamDetailAnalysis {
   currentPartners: string[];
   sources: string[];
   priceEstimate: number;
+}
+
+// Generated campaign from AI
+export interface GeneratedCampaign {
+  title: string;
+  description: string;
+  tactics: string[];
+  whyItWorks: string;
+  goals: string[];
+  channels: {
+    primary: string;
+    secondary: string;
+  };
+  estimatedCost: number;
+  suggestedDates: {
+    start: string;
+    end: string;
+  };
+  imageUrls: string[];
+  teamId: string;
+  teamName: string;
+  status: 'draft' | 'active' | 'completed';
 }
 
 // Navigation items

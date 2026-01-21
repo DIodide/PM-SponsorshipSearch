@@ -182,13 +182,13 @@ export const computeBrandSimilarity = action({
             demCounter += 1
         } else if (brandAudience.includes("women")) {
             demSim += team.women_weight ?? 0
-            if (team.category.includes("WNBA") || team.category.includes("NWSL")) {
+            if (team.category?.includes("WNBA") || team.category?.includes("NWSL")) {
               demSim += 1
             }
             demCounter += 1
         } else if (brandAudience.includes("men")) {
             demSim += team.men_weight ?? 0
-            if (team.category.includes("WNBA") || team.category.includes("NWSL")) {
+            if (team.category?.includes("WNBA") || team.category?.includes("NWSL")) {
               demSim -= 0.5
             }
             demCounter += 1
@@ -255,7 +255,7 @@ export const computeBrandSimilarity = action({
         
         // set score to 0 if the team's sport does not align with what sports the brand wants
         // check if the length of the string brandLeague has more than 2 characters
-        if (brandLeague.length > 2) {
+        if (brandLeague.length > 2 && team.category) {
           if (!brandLeague.includes(team.category)) {
             weightedScore = 0
           } 

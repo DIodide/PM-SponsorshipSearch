@@ -301,7 +301,7 @@ export default defineSchema({
       name: v.string(),
       region: v.string(),
       league: v.string(),
-      category: v.string(),
+      category: v.optional(v.string()),
       official_url: v.string(),
   
       // These allow the specific null value returned by your Promise.resolve(null)

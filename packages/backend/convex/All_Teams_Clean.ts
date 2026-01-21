@@ -13,6 +13,7 @@ export type AllTeamsClean = {
     name: string;
     region: string,
     league: string;
+    category?: string;
     official_url: string;
     region_embedding: number[] | null;
     league_embedding: number[] | null;

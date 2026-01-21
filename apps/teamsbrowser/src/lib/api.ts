@@ -1,4 +1,4 @@
-import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis } from '../types';
+import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis, GeneratedCampaign } from '../types';
 
 const CONVEX_URL = import.meta.env.VITE_CONVEX_URL || 'https://harmless-corgi-891.convex.cloud';
 
@@ -253,4 +253,138 @@ export function scoreToPercent(score: number): number {
   // Convert to 0-100 range
   const normalized = ((score + 1) / 2) * 100;
   return Math.round(Math.min(100, Math.max(0, normalized)));
+}
+
+// ----------------------
+// File Upload Functions
+// ----------------------
+
+/**
+ * Get an upload URL from Convex storage
+ */
+export async function getUploadUrl(): Promise<string> {
+  const response = await fetch(`${CONVEX_URL}/api/mutation`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      path: 'storage:generateUploadUrl',
+      args: {},
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to get upload URL');
+  }
+
+  const data = await response.json();
+  return data.value;
+}
+
+/**
+ * Upload a file to Convex storage and return the storage ID
+ */
+export async function uploadCreativeFile(file: File): Promise<string> {
+  // Get upload URL
+  const uploadUrl = await getUploadUrl();
+
+  // Upload the file
+  const uploadResponse = await fetch(uploadUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': file.type },
+    body: file,
+  });
+
+  if (!uploadResponse.ok) {
+    throw new Error('Failed to upload file');
+  }
+
+  const { storageId } = await uploadResponse.json();
+  
+  // Get the file URL
+  const urlResponse = await fetch(`${CONVEX_URL}/api/query`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      path: 'storage:getFileUrl',
+      args: { storageId },
+    }),
+  });
+
+  if (!urlResponse.ok) {
+    throw new Error('Failed to get file URL');
+  }
+
+  const urlData = await urlResponse.json();
+  return urlData.value;
+}
+
+// ----------------------
+// Campaign Generation Functions
+// ----------------------
+
+export interface GenerateCampaignParams {
+  teamId: string;
+  teamName: string;
+  teamLeague: string;
+  teamRegion: string;
+  mediaStrategy: string;
+  touchpoints: string[];
+  notes?: string;
+  uploadedImageUrls?: string[];
+  generateVisuals?: boolean;
+}
+
+/**
+ * Generate a campaign using AI
+ */
+export async function generateCampaign(params: GenerateCampaignParams): Promise<GeneratedCampaign> {
+  const response = await fetch(`${CONVEX_URL}/api/action`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      path: 'campaignGeneration:generateCampaign',
+      args: params,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error('Campaign generation failed:', errorText);
+    throw new Error('Failed to generate campaign');
+  }
+
+  const data = await response.json();
+  return data.value;
+}
+
+export interface GenerateVisualsParams {
+  teamName: string;
+  teamLeague: string;
+  campaignTitle: string;
+  touchpoints: string[];
+  customPrompts?: string[];
+  count?: number;
+}
+
+/**
+ * Generate campaign visuals using AI
+ */
+export async function generateCampaignVisuals(params: GenerateVisualsParams): Promise<string[]> {
+  const response = await fetch(`${CONVEX_URL}/api/action`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      path: 'campaignGeneration:regenerateVisuals',
+      args: params,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error('Visual generation failed:', errorText);
+    throw new Error('Failed to generate visuals');
+  }
+
+  const data = await response.json();
+  return data.value || [];
 }
