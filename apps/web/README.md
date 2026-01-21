@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# ⚠️ DEPRECATED — apps/web
 
-## Getting Started
+> **This application has been deprecated in favor of `apps/teamsbrowser`.**
 
-First, run the development server:
+---
+
+## Migration Notice
+
+The Next.js-based search frontend has been replaced with a Vite + React application that offers:
+
+- ✅ Faster development builds
+- ✅ Simplified architecture
+- ✅ Better integration with Convex
+- ✅ Semantic similarity scoring
+- ✅ Campaign generation features
+
+## New Application
+
+Please use **`apps/teamsbrowser`** for all UI development:
 
 ```bash
+cd apps/teamsbrowser
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The new app is available at: http://localhost:5173
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What Happened to This Code?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+The original Next.js app used:
+- Server-Sent Events (SSE) for streaming search
+- AI-based team discovery via Tavily
+- Traditional keyword-based search
 
-## Learn More
+The new `teamsbrowser` app uses:
+- Embedding-based semantic similarity
+- Precomputed team vectors
+- Paginated results with prefetching
+- AI campaign generation
 
-To learn more about Next.js, take a look at the following resources:
+## Legacy Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The original README is preserved below for reference.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# Legacy: Next.js Search Frontend (Deprecated)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Original Next.js 15 + React 19 frontend with SSE streaming search.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This code is no longer maintained. See `apps/teamsbrowser` for the current UI.
