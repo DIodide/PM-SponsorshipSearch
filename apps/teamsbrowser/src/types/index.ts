@@ -76,29 +76,44 @@ export interface SearchFilters {
   budgetMax?: number;
 }
 
-// AllTeamsClean type from Convex
+// AllTeamsClean type from Convex (without embeddings - they're stripped server-side)
 export interface AllTeamsClean {
   _id: string;
+  _creationTime?: number;
   name: string;
   region: string;
   league: string;
+  category?: string;
   official_url: string;
-  region_embedding: number[] | null;
-  league_embedding: number[] | null;
-  values_embedding: number[] | null;
-  sponsors_embedding: number[] | null;
-  family_programs_embedding: number[] | null;
-  community_programs_embedding: number[] | null;
-  partners_embedding: number[] | null;
   digital_reach: number;
   local_reach: number;
   family_friendly: number | null;
   value_tier: number; // 1 = budget-friendly, 2 = mid-tier, 3 = premium
+  // Demographic weights
+  women_weight?: number | null;
+  men_weight?: number | null;
+  gen_z_weight?: number | null;
+  millenial_weight?: number | null;
+  gen_x_weight?: number | null;
+  boomer_weight?: number | null;
+  kids_weight?: number | null;
+  stadium_ownership?: boolean | null;
 }
 
 // Team with similarity score
 export interface ScoredTeam extends AllTeamsClean {
   similarity_score: number;
+}
+
+// Paginated response from similarity search
+export interface PaginatedSimilarityResponse {
+  teams: ScoredTeam[];
+  totalCount: number;
+  totalPages: number;
+  currentPage: number;
+  pageSize: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
 }
 
 // Team data from All_Teams (for additional info display)

@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   ArrowLeft02Icon,
+  ArrowRight02Icon,
   Edit02Icon,
   RefreshIcon,
   SparklesIcon,
@@ -10,11 +11,13 @@ import { Sidebar } from './components/Sidebar';
 import { RecommendationCard } from './components/RecommendationCard';
 import { TeamDetailView } from './components/TeamDetailView';
 import { PromptEditor, buildSearchSummary } from './components/PromptEditor';
-import { fetchAllTeams, computeSimilarity, fetchAllTeamsClean } from './lib/api';
+import { fetchAllTeams, computeSimilarity, fetchAllTeamsClean, fetchTeamCount } from './lib/api';
 import { scoredTeamsToRecommendations } from './lib/ai';
-import type { Team, TeamRecommendation, SearchFilters } from './types';
+import type { Team, TeamRecommendation, SearchFilters, PaginatedSimilarityResponse } from './types';
 
 type ViewMode = 'initial' | 'recommendations' | 'detail';
+
+const PAGE_SIZE = 20;
 
 function App() {
   const [fullTeams, setFullTeams] = useState<Team[]>([]);
@@ -26,6 +29,14 @@ function App() {
   const [selectedRecommendation, setSelectedRecommendation] = useState<TeamRecommendation | null>(null);
   const [showPromptEditor, setShowPromptEditor] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const [hasNextPage, setHasNextPage] = useState(false);
+  const [hasPreviousPage, setHasPreviousPage] = useState(false);
+  const [totalTeamsInDb, setTotalTeamsInDb] = useState<number | null>(null);
   
   const [query, setQuery] = useState('');
   const [filters, setFilters] = useState<SearchFilters>({
@@ -41,8 +52,12 @@ function App() {
   useEffect(() => {
     async function loadTeams() {
       try {
-        const data = await fetchAllTeams();
+        const [data, count] = await Promise.all([
+          fetchAllTeams(),
+          fetchTeamCount(),
+        ]);
         setFullTeams(data);
+        setTotalTeamsInDb(count);
       } catch (err) {
         console.error('Failed to load teams:', err);
       } finally {
@@ -52,8 +67,8 @@ function App() {
     loadTeams();
   }, []);
 
-  // Handle search submission
-  const handleSearch = useCallback(async (newQuery: string, newFilters: SearchFilters) => {
+  // Handle search submission (resets to page 1)
+  const handleSearch = useCallback(async (newQuery: string, newFilters: SearchFilters, page: number = 1) => {
     setQuery(newQuery);
     setFilters(newFilters);
     setShowPromptEditor(false);
@@ -62,11 +77,18 @@ function App() {
     setViewMode('recommendations');
     
     try {
-      // Call the Convex similarity scoring action
-      const scoredTeams = await computeSimilarity(newQuery, newFilters);
+      // Call the Convex similarity scoring action with pagination
+      const result: PaginatedSimilarityResponse = await computeSimilarity(newQuery, newFilters, page, PAGE_SIZE);
+      
+      // Update pagination state
+      setCurrentPage(result.currentPage);
+      setTotalCount(result.totalCount);
+      setTotalPages(result.totalPages);
+      setHasNextPage(result.hasNextPage);
+      setHasPreviousPage(result.hasPreviousPage);
       
       // Convert to recommendations format
-      const recs = scoredTeamsToRecommendations(scoredTeams, fullTeams);
+      const recs = scoredTeamsToRecommendations(result.teams, fullTeams);
       setRecommendations(recs);
     } catch (err) {
       console.error('Search failed:', err);
@@ -77,6 +99,11 @@ function App() {
         const cleanTeams = await fetchAllTeamsClean();
         const recs = scoredTeamsToRecommendations(cleanTeams, fullTeams);
         setRecommendations(recs);
+        setTotalCount(cleanTeams.length);
+        setTotalPages(1);
+        setCurrentPage(1);
+        setHasNextPage(false);
+        setHasPreviousPage(false);
         setError('Showing all teams (similarity scoring unavailable)');
       } catch (fallbackErr) {
         console.error('Fallback also failed:', fallbackErr);
@@ -86,12 +113,18 @@ function App() {
     }
   }, [fullTeams]);
 
-  // Refresh recommendations
+  // Handle page change
+  const handlePageChange = useCallback((newPage: number) => {
+    if (newPage < 1 || newPage > totalPages) return;
+    handleSearch(query, filters, newPage);
+  }, [query, filters, totalPages, handleSearch]);
+
+  // Refresh recommendations (stays on current page)
   const handleRefresh = useCallback(() => {
     if (query || Object.values(filters).some(v => Array.isArray(v) ? v.length > 0 : v !== undefined)) {
-      handleSearch(query, filters);
+      handleSearch(query, filters, currentPage);
     }
-  }, [query, filters, handleSearch]);
+  }, [query, filters, currentPage, handleSearch]);
 
   // Handle team selection
   const handleSelectTeam = (rec: TeamRecommendation) => {
@@ -236,12 +269,20 @@ function App() {
                 <>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-500">
-                      {recommendations.length} teams found, sorted by similarity
+                      Showing {((currentPage - 1) * PAGE_SIZE) + 1}–{Math.min(currentPage * PAGE_SIZE, totalCount)} of {totalCount} teams
+                      {totalTeamsInDb !== null && (
+                        <span className="ml-2 text-gray-400">
+                          ({totalTeamsInDb} total in database)
+                        </span>
+                      )}
+                    </span>
+                    <span className="text-sm text-gray-500">
+                      Page {currentPage} of {totalPages}
                     </span>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    {recommendations.slice(0, 4).map((rec) => (
+                    {recommendations.map((rec) => (
                       <RecommendationCard
                         key={rec.scoredTeam._id}
                         recommendation={rec}
@@ -250,22 +291,57 @@ function App() {
                     ))}
                   </div>
 
-                  {/* More Results */}
-                  {recommendations.length > 4 && (
-                    <details className="mb-8">
-                      <summary className="cursor-pointer text-sm text-teal-600 hover:text-teal-700 font-medium mb-4">
-                        Show {recommendations.length - 4} more teams
-                      </summary>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        {recommendations.slice(4).map((rec) => (
-                          <RecommendationCard
-                            key={rec.scoredTeam._id}
-                            recommendation={rec}
-                            onClick={() => handleSelectTeam(rec)}
-                          />
-                        ))}
-      </div>
-                    </details>
+                  {/* Pagination Controls */}
+                  {totalPages > 1 && (
+                    <div className="flex items-center justify-center gap-2 mb-8">
+                      <button
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        disabled={!hasPreviousPage || searching}
+                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <HugeiconsIcon icon={ArrowLeft02Icon} size={16} />
+                        Previous
+                      </button>
+                      
+                      {/* Page Numbers */}
+                      <div className="flex items-center gap-1">
+                        {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                          let pageNum: number;
+                          if (totalPages <= 5) {
+                            pageNum = i + 1;
+                          } else if (currentPage <= 3) {
+                            pageNum = i + 1;
+                          } else if (currentPage >= totalPages - 2) {
+                            pageNum = totalPages - 4 + i;
+                          } else {
+                            pageNum = currentPage - 2 + i;
+                          }
+                          return (
+                            <button
+                              key={pageNum}
+                              onClick={() => handlePageChange(pageNum)}
+                              disabled={searching}
+                              className={`w-10 h-10 text-sm font-medium rounded-lg transition-colors ${
+                                pageNum === currentPage
+                                  ? 'bg-teal-600 text-white'
+                                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50'
+                              } disabled:opacity-50`}
+                            >
+                              {pageNum}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      
+                      <button
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        disabled={!hasNextPage || searching}
+                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        Next
+                        <HugeiconsIcon icon={ArrowRight02Icon} size={16} />
+                      </button>
+                    </div>
                   )}
 
                   {/* Action Buttons */}
@@ -283,7 +359,7 @@ function App() {
                     >
                       <HugeiconsIcon icon={RefreshIcon} size={16} />
                       Refresh Results
-        </button>
+                    </button>
                   </div>
                 </>
               )}
