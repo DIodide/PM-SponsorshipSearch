@@ -1,7 +1,20 @@
 import { v } from "convex/values";
-import { query, action } from "./_generated/server";
+import { action } from "./_generated/server";
 import { api } from "./_generated/api";
-import { AllTeamsClean } from "./All_Teams_Clean";
+import { AllTeamsClean, AllTeamsCleanWithoutEmbeddings, stripEmbeddings } from "./All_Teams_Clean";
+
+// ----------------------
+// Configuration
+// ----------------------
+
+// Page size for batch processing (~100 teams = ~4MB per batch, well under 16MB limit)
+const BATCH_SIZE = 100;
+// Default number of results to return to frontend
+const DEFAULT_RESULT_LIMIT = 50;
+
+// ----------------------
+// Similarity Computation
+// ----------------------
 
 function cosineSimilarity(a: number[] | null, b: number[] | null): number {
   // 1. Check if either vector is null, undefined, or empty
@@ -54,7 +67,179 @@ async function embedText(txt: string | undefined | null): Promise<number[] | nul
 }
 
 // ----------------------
-// Convex Action: Compute Similarity
+// Types
+// ----------------------
+
+type BrandVector = {
+  region_embedding: number[] | null;
+  league_embedding: number[] | null;
+  values_embedding: number[] | null;
+  audience_embedding: number[] | null;
+  goals_embedding: number[] | null;
+  query_embedding: number[] | null;
+};
+
+type ScoringContext = {
+  brandVector: BrandVector;
+  brandLeague: string;
+  brandAudience: string;
+  brandGoals: string;
+  target_value_tier: number;
+};
+
+export type ScoredTeamWithoutEmbeddings = AllTeamsCleanWithoutEmbeddings & { 
+  similarity_score: number;
+};
+
+// ----------------------
+// Scoring Logic (extracted for reuse)
+// ----------------------
+
+function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
+  const { brandVector, brandLeague, brandAudience, brandGoals, target_value_tier } = ctx;
+
+  // scale is close to 0.7 to 0.9
+  const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
+  const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
+
+  // aggregate value and audience and query together
+  let simQuery = cosineSimilarity(brandVector.query_embedding, team.league_embedding);
+  simQuery += cosineSimilarity(brandVector.query_embedding, team.values_embedding);
+  simQuery += cosineSimilarity(brandVector.query_embedding, team.community_programs_embedding);
+  simQuery /= 3;
+
+  // YUBI: this has a range of 0 to 1
+  const tierDiff = Math.abs(target_value_tier - (team.value_tier ?? 1));
+  const valuationSim = 1 - (tierDiff / 2); // 0 diff = 1.0 score; 2 diff = 0.0 score
+
+  // Set target value tier of team using goals
+  let demSim = 0;
+  let demCounter = 0;
+  if (brandAudience.includes("gen-z")) {
+    demSim += team.gen_z_weight ?? 0;
+    demCounter += 1;
+  } else if (brandAudience.includes("millennials")) {
+    demSim += team.millenial_weight ?? 0;
+    demCounter += 1;
+  } else if (brandAudience.includes("gen-x")) {
+    demSim += team.gen_x_weight ?? 0;
+    demCounter += 1;
+  } else if (brandAudience.includes("boomer")) {
+    demSim += team.boomer_weight ?? 0;
+    demCounter += 1;
+  } else if (brandAudience.includes("kids")) {
+    demSim += team.kids_weight ?? 0;
+    demCounter += 1;
+  } else if (brandAudience.includes("women")) {
+    demSim += team.women_weight ?? 0;
+    if (team.category?.includes("WNBA") || team.category?.includes("NWSL")) {
+      demSim += 1;
+    }
+    demCounter += 1;
+  } else if (brandAudience.includes("men")) {
+    demSim += team.men_weight ?? 0;
+    if (team.category?.includes("WNBA") || team.category?.includes("NWSL")) {
+      demSim -= 0.5;
+    }
+    demCounter += 1;
+  } else if (brandAudience.includes("families")) {
+    demSim += team.family_friendly ?? 0;
+    demCounter += 1;
+  }
+
+  // Normalize demSim
+  demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0;
+
+  // set reach score
+  let reachSim = 0;
+  if (brandGoals.includes("digital-presence")) {
+    reachSim = team.digital_reach ?? 0;
+  } else if (brandGoals.includes("local-presence")) {
+    reachSim = team.local_reach ?? 0;
+  } else {
+    reachSim = ((team.digital_reach ?? 0) + (team.local_reach ?? 0)) / 2;
+  }
+
+  // YUBI: modify weights as desired
+  const WEIGHTS = {
+    region: 0.3,
+    query: 0.04,
+    values: 0.02,
+    valuation: 0.3,
+    demographics: 0.3,
+    reach: 0.04
+  };
+
+  // We multiply each score by its weight
+  let weightedScore =
+    (simRegion * WEIGHTS.region) +
+    (simQuery * WEIGHTS.query) +
+    (simValues * WEIGHTS.values) +
+    (valuationSim * WEIGHTS.valuation) +
+    (demSim * WEIGHTS.demographics) +
+    (reachSim * WEIGHTS.reach);
+
+  // set score to 0 if the team's sport does not align with what sports the brand wants
+  if (brandLeague.length > 1 && team.category && !brandLeague.includes(team.category)) {
+    weightedScore = 0;
+  }
+
+  return weightedScore;
+}
+
+/**
+ * Insert a scored team into a sorted array, maintaining only top N results
+ * Uses binary search for efficient insertion
+ */
+function insertIntoTopN(
+  topResults: ScoredTeamWithoutEmbeddings[],
+  newTeam: ScoredTeamWithoutEmbeddings,
+  maxSize: number
+): void {
+  const score = newTeam.similarity_score;
+  
+  // Skip if we're full and this score is worse than the worst in our list
+  if (topResults.length >= maxSize && score <= topResults[topResults.length - 1].similarity_score) {
+    return;
+  }
+
+  // Binary search for insertion position (descending order)
+  let left = 0;
+  let right = topResults.length;
+  while (left < right) {
+    const mid = Math.floor((left + right) / 2);
+    if (topResults[mid].similarity_score > score) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+
+  // Insert at the found position
+  topResults.splice(left, 0, newTeam);
+
+  // Remove the last element if we exceed maxSize
+  if (topResults.length > maxSize) {
+    topResults.pop();
+  }
+}
+
+// ----------------------
+// Response Types
+// ----------------------
+
+export type PaginatedSimilarityResponse = {
+  teams: ScoredTeamWithoutEmbeddings[];
+  totalCount: number;
+  totalPages: number;
+  currentPage: number;
+  pageSize: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+};
+
+// ----------------------
+// Convex Action: Compute Similarity (with pagination)
 // ----------------------
 
 export const computeBrandSimilarity = action({
@@ -69,10 +254,12 @@ export const computeBrandSimilarity = action({
       budgetMin: v.optional(v.number()),
       budgetMax: v.optional(v.number()),
     }),
+    page: v.optional(v.number()),     // Page number (1-indexed, default: 1)
+    pageSize: v.optional(v.number()), // Results per page (default: 20)
   },
 
-  handler: async (ctx, args): Promise<(AllTeamsClean & { similarity_score: number })[]> => {
-    const { query, filters } = args;
+  handler: async (ctx, args): Promise<PaginatedSimilarityResponse> => {
+    const { query, filters, page = 1, pageSize = 20 } = args;
 
     // ------------------------------------------------------------
     // 1. Build Brand Vector (Embeddings + Normalized Numeric Inputs)
@@ -81,35 +268,25 @@ export const computeBrandSimilarity = action({
     const brandRegion = filters.regions.join(" ");
     const brandLeague = filters.leagues.join(" ");
     const brandValues = filters.brandValues.join(" ");
-    // const brandPartners = filters.demographics.join(" "); // interpret "demographics" as partner-related inputs if needed
     const brandAudience = filters.demographics.join(" ");
     const brandGoals = filters.goals.join(" ");
 
-    // YUBI: use direct inputs
-
     // Set target value tier of team using goals
-    let target_value_tier = 2
+    let target_value_tier = 2;
     if (brandGoals.includes("prestige-credibility")) {
-        target_value_tier += 1
+      target_value_tier += 1;
     } else if (brandGoals.includes("brand-awareness")) {
-        target_value_tier += 1
+      target_value_tier += 1;
     } else if (brandGoals.includes("business-to-business")) {
-        target_value_tier += 1
+      target_value_tier += 1;
     } else if (brandGoals.includes("fan-connection-activation-control")) {
-        target_value_tier -= 2
+      target_value_tier -= 2;
     }
 
     // constrain the target value tier to be within 1 and 3
-    if (target_value_tier < 1) {
-        target_value_tier = 1
-    } else if (target_value_tier > 3) {
-        target_value_tier = 3
-    }
+    target_value_tier = Math.max(1, Math.min(3, target_value_tier));
 
-    // YUBI: use direct inputs to compute demographic similarity
-    // YUBI: use budget inputs to compute target value tier
-
-    const brandVector = {
+    const brandVector: BrandVector = {
       region_embedding: await embedText(brandRegion),
       league_embedding: await embedText(brandLeague),
       values_embedding: await embedText(brandValues),
@@ -118,173 +295,75 @@ export const computeBrandSimilarity = action({
       query_embedding: await embedText(query)
     };
 
+    const scoringContext: ScoringContext = {
+      brandVector,
+      brandLeague,
+      brandAudience,
+      brandGoals,
+      target_value_tier,
+    };
+
     // ------------------------------------------------------------
-    // 2. Fetch All Team Objects
+    // 2. Process Teams in Batches (to stay within Convex limits)
     // ------------------------------------------------------------
 
-    const teams: AllTeamsClean[] = await ctx.runQuery(api.All_Teams_Clean.getAll, {});
+    const allScoredTeams: ScoredTeamWithoutEmbeddings[] = [];
+    let cursor: string | undefined = undefined;
+    let hasMore = true;
 
-    if (!teams || teams.length === 0) {
-      return [];
+    while (hasMore) {
+      // Fetch a page of teams with embeddings
+      const dbPage: { teams: AllTeamsClean[]; nextCursor: string | null; isDone: boolean } = 
+        await ctx.runQuery(api.All_Teams_Clean.getPage, {
+          cursor,
+          limit: BATCH_SIZE,
+        });
+
+      // Process each team in the batch
+      for (const team of dbPage.teams) {
+        const score = computeTeamScore(team, scoringContext);
+        
+        // Strip embeddings and add score
+        const scoredTeam: ScoredTeamWithoutEmbeddings = {
+          ...stripEmbeddings(team),
+          similarity_score: score,
+        };
+
+        allScoredTeams.push(scoredTeam);
+      }
+
+      // Check if there are more pages
+      hasMore = !dbPage.isDone;
+      cursor = dbPage.nextCursor ?? undefined;
     }
 
     // ------------------------------------------------------------
-    // 3. Compute Similarities Per Team
+    // 3. Sort all teams by similarity score (descending)
     // ------------------------------------------------------------
 
-    const scored: (AllTeamsClean & { similarity_score: number })[] = teams.map((team: AllTeamsClean) => {
-        
-      // YUBI: immediately exclude if not part of the intended league/sport
-        if (brandLeague.length > 1 && !brandLeague.includes(team.category)) {
-          return { ...team, similarity_score: 0 };
-        }
-
-        // scale is close to 0.7 to 0.9
-        const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
-        const simLeague = cosineSimilarity(brandVector.league_embedding, team.league_embedding);
-        const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
-
-        // compute similarity between target audience and different programs
-        const simAudience1 = cosineSimilarity(brandVector.audience_embedding, team.community_programs_embedding);
-        const simAudience2 = cosineSimilarity(brandVector.audience_embedding, team.family_programs_embedding);
-        const simAudience = (simAudience1 + simAudience2) / 2;
-        // compute similarity between brand values and different programs
-        const simValueProg1 = cosineSimilarity(brandVector.values_embedding, team.community_programs_embedding);
-        const simValueProg2 = cosineSimilarity(brandVector.values_embedding, team.family_programs_embedding);
-        const simValueProg = (simValueProg1 + simValueProg2) / 2;
-
-        // aggregate value and audience and query together
-        let simQuery = cosineSimilarity(brandVector.query_embedding, team.league_embedding);
-        simQuery += cosineSimilarity(brandVector.query_embedding, team.values_embedding);
-        simQuery += cosineSimilarity(brandVector.query_embedding, team.community_programs_embedding);
-        simQuery /= 3;
-
-        
-        // YUBI: is this useful? how can we use info about partners and sponsors?
-        const simGoals = cosineSimilarity(brandVector.goals_embedding, team.partners_embedding);
-
-        // YUBI: this has a range of 0 to 1
-        const tierDiff = Math.abs(target_value_tier - (team.value_tier ?? 1));
-        const valuationSim = 1 - (tierDiff / 2); // 0 diff = 1.0 score; 2 diff = 0.0 score
-
-        // Set target value tier of team using goals
-        let demSim = 0
-        let demCounter = 0
-        if (brandAudience.includes("gen-z")) {
-          // YUBI: what happens if the weight value is null?
-            demSim += team.gen_z_weight ?? 0
-            demCounter += 1
-        } else if (brandAudience.includes("millennials")) {
-            demSim += team.millenial_weight ?? 0
-            demCounter += 1
-        } else if (brandAudience.includes("gen-x")) {
-            demSim += team.gen_x_weight ?? 0
-            demCounter += 1
-        } else if (brandAudience.includes("boomer")) {
-            demSim += team.boomer_weight ?? 0
-            demCounter += 1
-        } else if (brandAudience.includes("kids")) {
-            demSim += team.kids_weight ?? 0
-            demCounter += 1
-        } else if (brandAudience.includes("women")) {
-            demSim += team.women_weight ?? 0
-            if (team.category.includes("WNBA") || team.category.includes("NWSL")) {
-              demSim += 1
-            }
-            demCounter += 1
-        } else if (brandAudience.includes("men")) {
-            demSim += team.men_weight ?? 0
-            if (team.category.includes("WNBA") || team.category.includes("NWSL")) {
-              demSim -= 0.5
-            }
-            demCounter += 1
-        } else if (brandAudience.includes("families")) {
-            demSim += team.family_friendly ?? 0
-            demCounter += 1
-        }
-
-        // YUBI: normalize demSim so it doesn't have as much influence
-        // roughly a range of 0 to 1
-        // demSim = demCounter > 0 ? demSim / demCounter : 0;
-        demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0;
-
-        // set reach score
-        let reachSim = 0
-        if (brandGoals.includes("digital-presence")) {
-          reachSim = team.digital_reach ?? 0
-        } else if (brandGoals.includes("local-presence")) {
-          reachSim = team.local_reach ?? 0
-        } else {
-          reachSim = ((team.digital_reach ?? 0) + (team.local_reach ?? 0)) / 2
-        }
-
-        // YUBI: reachSim seems like a great metric, so I want to try and use it
-
-        const components = [
-          simRegion,
-          // YUBI: replace similar league with similar query because I already have filter step below
-          simQuery,
-          simValues,
-          valuationSim,
-          demSim,
-          reachSim
-          // YUBI: test if these components are useful
-          // simAudience
-          // simValueProg
-        ];
-        
-        // YUBI: modify weights as desired
-        const WEIGHTS = {
-          region: 0.3,    
-          query: 0.04,      
-          values: 0.02,  
-          valuation: 0.3,  
-          demographics: 0.3, 
-          reach: 0.04
-        };
-
-        // We multiply each score by its weight
-        let weightedScore = 
-          (simRegion * WEIGHTS.region) +
-          (simQuery * WEIGHTS.query) +
-          (simValues * WEIGHTS.values) +
-          (valuationSim * WEIGHTS.valuation) +
-          (demSim * WEIGHTS.demographics) +
-          (reachSim * WEIGHTS.reach);
-      
-        const active = components.filter((v) => typeof v === "number") as number[];
-
-        // YUBI: this is robust against unknown values in a team by only dividing by the number of known values per team
-        const avgScore =
-          active.length > 0 ? active.reduce((s, v) => s + v, 0) / active.length : 0;
-        
-        // set score to 0 if the team's sport does not align with what sports the brand wants
-        // check if the length of the string brandLeague has more than 2 characters
-        if (brandLeague.length > 2) {
-          if (!brandLeague.includes(team.category)) {
-            weightedScore = 0
-          } 
-        }
-
-        // YUBI: not using avgScore for now 
-        return {
-          ...team,
-          similarity_score: weightedScore,
-        };
-      });
-      
-
+    allScoredTeams.sort((a, b) => b.similarity_score - a.similarity_score);
 
     // ------------------------------------------------------------
-    // 4. Sort by similarity descending
+    // 4. Calculate pagination and return requested page
     // ------------------------------------------------------------
 
-    scored.sort(
-        (a: { similarity_score: number }, b: { similarity_score: number }) =>
-          b.similarity_score - a.similarity_score
-      );
-      
+    const totalCount = allScoredTeams.length;
+    const totalPages = Math.ceil(totalCount / pageSize);
+    const currentPage = Math.max(1, Math.min(page, totalPages || 1));
+    
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, totalCount);
+    
+    const paginatedTeams = allScoredTeams.slice(startIndex, endIndex);
 
-    return scored;
+    return {
+      teams: paginatedTeams,
+      totalCount,
+      totalPages,
+      currentPage,
+      pageSize,
+      hasNextPage: currentPage < totalPages,
+      hasPreviousPage: currentPage > 1,
+    };
   },
 });
