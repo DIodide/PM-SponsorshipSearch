@@ -1,6 +1,8 @@
-import { query } from "./_generated/server";
+import { query, mutation, internalMutation } from "./_generated/server";
 import { v } from "convex/values";
 import { Id } from "./_generated/dataModel";
+
+const TABLE_NAME = "All_Teams_Clean";
 
 export const getAll = query({
     args: {},
@@ -11,13 +13,79 @@ export const getAll = query({
 
 /**
  * Get the total count of teams in the database
- * Lightweight query that doesn't return the full team data
+ * Uses the tableCounts table for O(1) lookup instead of scanning all documents
  */
 export const getCount = query({
     args: {},
     handler: async (ctx): Promise<number> => {
+      const countDoc = await ctx.db
+        .query("tableCounts")
+        .withIndex("by_table", (q) => q.eq("tableName", TABLE_NAME))
+        .unique();
+      return countDoc?.count ?? 0;
+    },
+});
+
+/**
+ * Increment the team count (call when inserting a team)
+ */
+export const incrementCount = mutation({
+    args: {},
+    handler: async (ctx): Promise<void> => {
+      const countDoc = await ctx.db
+        .query("tableCounts")
+        .withIndex("by_table", (q) => q.eq("tableName", TABLE_NAME))
+        .unique();
+      
+      if (countDoc) {
+        await ctx.db.patch(countDoc._id, { count: countDoc.count + 1 });
+      } else {
+        await ctx.db.insert("tableCounts", { tableName: TABLE_NAME, count: 1 });
+      }
+    },
+});
+
+/**
+ * Decrement the team count (call when deleting a team)
+ */
+export const decrementCount = mutation({
+    args: {},
+    handler: async (ctx): Promise<void> => {
+      const countDoc = await ctx.db
+        .query("tableCounts")
+        .withIndex("by_table", (q) => q.eq("tableName", TABLE_NAME))
+        .unique();
+      
+      if (countDoc && countDoc.count > 0) {
+        await ctx.db.patch(countDoc._id, { count: countDoc.count - 1 });
+      }
+    },
+});
+
+/**
+ * Backfill the count from existing data
+ * Run this once to initialize the count, or to recalculate if it gets out of sync
+ */
+export const backfillCount = internalMutation({
+    args: {},
+    handler: async (ctx): Promise<number> => {
+      // Count all teams by scanning (only done once during backfill)
       const teams = await ctx.db.query("All_Teams_Clean").collect();
-      return teams.length;
+      const count = teams.length;
+      
+      // Find or create the count document
+      const existingCountDoc = await ctx.db
+        .query("tableCounts")
+        .withIndex("by_table", (q) => q.eq("tableName", TABLE_NAME))
+        .unique();
+      
+      if (existingCountDoc) {
+        await ctx.db.patch(existingCountDoc._id, { count });
+      } else {
+        await ctx.db.insert("tableCounts", { tableName: TABLE_NAME, count });
+      }
+      
+      return count;
     },
 });
 
@@ -84,6 +152,7 @@ export function stripEmbeddings(team: AllTeamsClean): AllTeamsCleanWithoutEmbedd
  */
 export type AllTeamsClean = {
     _id: Id<"All_Teams_Clean">;
+    _creationTime?: number;
     name: string;
     region: string,
     league: string;
@@ -96,8 +165,8 @@ export type AllTeamsClean = {
     family_programs_embedding: number[] | null;
     community_programs_embedding: number[] | null;
     partners_embedding: number[] | null;
-    digital_reach: number;
-    local_reach: number;
+    digital_reach: number | null;
+    local_reach: number | null;
     family_friendly: number | null;
     value_tier: number;
     // Optional demographic weight fields

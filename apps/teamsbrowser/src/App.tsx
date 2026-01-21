@@ -17,7 +17,7 @@ import type { Team, TeamRecommendation, SearchFilters, PaginatedSimilarityRespon
 
 type ViewMode = 'initial' | 'recommendations' | 'detail';
 
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 50;
 
 function App() {
   const [fullTeams, setFullTeams] = useState<Team[]>([]);
@@ -270,11 +270,7 @@ function App() {
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-500">
                       Showing {((currentPage - 1) * PAGE_SIZE) + 1}–{Math.min(currentPage * PAGE_SIZE, totalCount)} of {totalCount} teams
-                      {totalTeamsInDb !== null && (
-                        <span className="ml-2 text-gray-400">
-                          ({totalTeamsInDb} total in database)
-                        </span>
-                      )}
+    
                     </span>
                     <span className="text-sm text-gray-500">
                       Page {currentPage} of {totalPages}
