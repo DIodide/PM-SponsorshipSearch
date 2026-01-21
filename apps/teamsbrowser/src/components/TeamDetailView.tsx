@@ -526,23 +526,92 @@ export function TeamDetailView({
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-sm text-gray-500 mb-1">Digital Reach</div>
                 <div className="text-lg font-semibold text-gray-900">
-                  {scoredTeam.digital_reach > 0 ? '+' : ''}{scoredTeam.digital_reach.toFixed(2)}
+                {(() => {
+                  // 1. Define 'val' inside this specific block
+                  const val = scoredTeam.digital_reach + 1; 
+    
+                  // 2. Determine the label and color
+                  let label = "Low";
+                  let color = "text-red-600";
+
+                  if (val >= 0.6) {
+                    label = "High";
+                    color = "text-green-600";
+                  } else if (val >= 0.15) {
+                    label = "Medium";
+                    color = "text-yellow-600";
+                  }
+
+                  // 3. Return everything together so 'val' is always in scope
+                  return (
+                    <>
+                    <span className={color}>{label}</span>
+                    </>
+                  );
+                  })()}
                 </div>
                 <div className="text-xs text-gray-400">Normalized score</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-sm text-gray-500 mb-1">Local Reach</div>
                 <div className="text-lg font-semibold text-gray-900">
-                  {scoredTeam.local_reach > 0 ? '+' : ''}{scoredTeam.local_reach.toFixed(2)}
+                {(() => {
+                  // 1. Define 'val' inside this specific block
+                  const val = scoredTeam.local_reach; 
+    
+                  // 2. Determine the label and color
+                  let label = "Low";
+                  let color = "text-red-600";
+
+                  if (val >= -0.3) {
+                    label = "High";
+                    color = "text-green-600";
+                  } else if (val >= -0.7) {
+                    label = "Medium";
+                    color = "text-yellow-600";
+                  }
+
+                  // 3. Return everything together so 'val' is always in scope
+                  return (
+                    <>
+                    <span className={color}>{label}</span>
+                    </>
+                  );
+                  })()}
                 </div>
                 <div className="text-xs text-gray-400">Attendance + population</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="text-sm text-gray-500 mb-1">Family-Friendly</div>
+                <div className="text-sm text-gray-500 mb-1">Family-Friendliness</div>
                 <div className="text-lg font-semibold text-gray-900">
                   {scoredTeam.family_friendly !== null 
                     ? `${scoredTeam.family_friendly > 0 ? '+' : ''}${scoredTeam.family_friendly.toFixed(2)}`
                     : '—'}
+                </div>
+                <div className="text-lg font-semibold text-gray-900">
+                {(() => {
+                  // 1. Define 'val' inside this specific block
+                  const val = scoredTeam.family_friendly ?? -1;
+    
+                  // 2. Determine the label and color
+                  let label = "Low";
+                  let color = "text-red-600";
+
+                  if (val >= 0) {
+                    label = "High";
+                    color = "text-green-600";
+                  } else if (val >= -0.5) {
+                    label = "Medium";
+                    color = "text-yellow-600";
+                  }
+
+                  // 3. Return everything together so 'val' is always in scope
+                  return (
+                    <>
+                    <span className={color}>{label}</span>
+                    </>
+                  );
+                  })()}
                 </div>
                 <div className="text-xs text-gray-400">Program score</div>
               </div>
