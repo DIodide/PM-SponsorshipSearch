@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   Cancel01Icon,
@@ -7,9 +7,48 @@ import {
   ArrowRight01Icon,
   ArrowLeft02Icon,
   Image01Icon,
+  CheckmarkCircle02Icon,
+  Loading03Icon,
 } from '@hugeicons/core-free-icons';
 import { TOUCHPOINTS, MEDIA_STRATEGIES, type GeneratedCampaign } from '../types';
 import { uploadCreativeFile, generateCampaign, type GenerateCampaignParams } from '../lib/api';
+
+// Generation step configuration
+interface GenerationStep {
+  id: string;
+  label: string;
+  description: string;
+  duration: number; // estimated duration in ms
+}
+
+const GENERATION_STEPS_WITH_VISUALS: GenerationStep[] = [
+  { id: 'prepare', label: 'Preparing', description: 'Setting up campaign parameters', duration: 1000 },
+  { id: 'knowledge', label: 'Searching Knowledge', description: 'Querying scraped sponsorship database', duration: 2000 },
+  { id: 'strategy', label: 'Crafting Strategy', description: 'Building campaign framework', duration: 4000 },
+  { id: 'content', label: 'Writing Content', description: 'Generating tactics & messaging', duration: 5000 },
+  { id: 'visuals', label: 'Creating Visuals', description: 'Generating campaign imagery', duration: 20000 },
+  { id: 'finalize', label: 'Finalizing', description: 'Polishing your campaign', duration: 2000 },
+];
+
+const GENERATION_STEPS_NO_VISUALS: GenerationStep[] = [
+  { id: 'prepare', label: 'Preparing', description: 'Setting up campaign parameters', duration: 1000 },
+  { id: 'knowledge', label: 'Searching Knowledge', description: 'Querying scraped sponsorship database', duration: 2000 },
+  { id: 'strategy', label: 'Crafting Strategy', description: 'Building campaign framework', duration: 3000 },
+  { id: 'content', label: 'Writing Content', description: 'Generating tactics & messaging', duration: 4000 },
+  { id: 'finalize', label: 'Finalizing', description: 'Polishing your campaign', duration: 1000 },
+];
+
+// Tips that rotate during generation
+const GENERATION_TIPS = [
+  "AI campaigns work best when you add specific notes about your brand goals",
+  "Include your target demographic in the notes for more tailored tactics",
+  "Mention seasonal events or holidays to time your campaign perfectly",
+  "The more touchpoints you select, the more diverse your activation ideas",
+  "Try different media strategies to see how campaigns adapt",
+  "Previous sponsorships help AI understand what works for this team",
+  "Local teams often have stronger community engagement opportunities",
+  "Consider the team's fanbase demographics when reviewing tactics",
+];
 
 interface CampaignGeneratorModalProps {
   teamId: string;
@@ -38,8 +77,91 @@ export function CampaignGeneratorModal({
   const [notes, setNotes] = useState('');
   const [generateVisuals, setGenerateVisuals] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
-  const [generationProgress, setGenerationProgress] = useState('');
   const [error, setError] = useState<string | null>(null);
+  
+  // Progress tracking
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [stepProgress, setStepProgress] = useState(0);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const startTimeRef = useRef<number>(0);
+  const progressIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  
+  const generationSteps = generateVisuals && uploadedUrls.length === 0 
+    ? GENERATION_STEPS_WITH_VISUALS 
+    : GENERATION_STEPS_NO_VISUALS;
+  
+  const totalDuration = generationSteps.reduce((sum, s) => sum + s.duration, 0);
+  
+  // Calculate overall progress percentage
+  const calculateOverallProgress = (stepIdx: number, stepProg: number) => {
+    let completedDuration = 0;
+    for (let i = 0; i < stepIdx; i++) {
+      completedDuration += generationSteps[i].duration;
+    }
+    const currentStepDuration = generationSteps[stepIdx]?.duration || 0;
+    const currentStepProgress = (stepProg / 100) * currentStepDuration;
+    return Math.min(95, ((completedDuration + currentStepProgress) / totalDuration) * 100);
+  };
+  
+  // Tip rotation
+  const [currentTipIndex, setCurrentTipIndex] = useState(0);
+  
+  // Progress simulation effect
+  useEffect(() => {
+    if (step !== 'generating') {
+      if (progressIntervalRef.current) {
+        clearInterval(progressIntervalRef.current);
+      }
+      return;
+    }
+    
+    startTimeRef.current = Date.now();
+    // Start with a random tip
+    setCurrentTipIndex(Math.floor(Math.random() * GENERATION_TIPS.length));
+    
+    progressIntervalRef.current = setInterval(() => {
+      const elapsed = Date.now() - startTimeRef.current;
+      setElapsedTime(elapsed);
+      
+      // Find which step we should be on based on elapsed time
+      let accumulatedTime = 0;
+      let targetStepIndex = 0;
+      
+      for (let i = 0; i < generationSteps.length; i++) {
+        if (elapsed < accumulatedTime + generationSteps[i].duration) {
+          targetStepIndex = i;
+          const stepElapsed = elapsed - accumulatedTime;
+          const stepProgress = Math.min(95, (stepElapsed / generationSteps[i].duration) * 100);
+          setStepProgress(stepProgress);
+          break;
+        }
+        accumulatedTime += generationSteps[i].duration;
+        if (i === generationSteps.length - 1) {
+          targetStepIndex = i;
+          setStepProgress(95); // Cap at 95% until actually complete
+        }
+      }
+      
+      setCurrentStepIndex(targetStepIndex);
+    }, 100);
+    
+    return () => {
+      if (progressIntervalRef.current) {
+        clearInterval(progressIntervalRef.current);
+      }
+    };
+  }, [step, generationSteps]);
+  
+  // Rotate tips every 5 seconds
+  useEffect(() => {
+    if (step !== 'generating') return;
+    
+    const tipInterval = setInterval(() => {
+      setCurrentTipIndex(prev => (prev + 1) % GENERATION_TIPS.length);
+    }, 5000);
+    
+    return () => clearInterval(tipInterval);
+  }, [step]);
 
   const toggleTouchpoint = (value: string) => {
     setSelectedTouchpoints((prev) =>
@@ -96,7 +218,9 @@ export function CampaignGeneratorModal({
   const handleGenerate = async () => {
     setStep('generating');
     setError(null);
-    setGenerationProgress('Preparing campaign parameters...');
+    setCurrentStepIndex(0);
+    setStepProgress(0);
+    setElapsedTime(0);
 
     try {
       const params: GenerateCampaignParams = {
@@ -111,15 +235,15 @@ export function CampaignGeneratorModal({
         generateVisuals: generateVisuals && uploadedUrls.length === 0,
       };
 
-      setGenerationProgress('Generating campaign with AI...');
-      
-      if (params.generateVisuals) {
-        setGenerationProgress('Generating campaign details and visuals (this may take 30-60 seconds)...');
-      }
-
       const campaign = await generateCampaign(params);
 
-      setGenerationProgress('Campaign generated successfully!');
+      // Complete all steps
+      setCurrentStepIndex(generationSteps.length - 1);
+      setStepProgress(100);
+      
+      // Brief pause to show completion
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
       setStep('complete');
       onCampaignGenerated(campaign);
     } catch (err) {
@@ -329,17 +453,113 @@ export function CampaignGeneratorModal({
 
           {/* Step 3: Generating */}
           {step === 'generating' && (
-            <div className="flex flex-col items-center justify-center py-12">
-              <div className="w-16 h-16 border-4 border-teal-200 border-t-teal-600 rounded-full animate-spin mb-6" />
-              <p className="text-gray-700 font-medium mb-2">Generating Your Campaign</p>
-              <p className="text-sm text-gray-500 text-center max-w-md">
-                {generationProgress}
-              </p>
-              {generateVisuals && uploadedUrls.length === 0 && (
-                <p className="text-xs text-gray-400 mt-4">
-                  AI image generation may take 30-60 seconds
+            <div className="py-4">
+              {/* Header */}
+              <div className="mb-6">
+                <h3 className="text-base font-semibold text-gray-900">Creating Your Campaign</h3>
+                <p className="text-xs text-gray-400 mt-0.5">
+                  {Math.floor(elapsedTime / 1000)}s elapsed
                 </p>
-              )}
+              </div>
+              
+              {/* Overall Progress Bar */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-xs text-gray-500">Progress</span>
+                  <span className="text-xs font-medium text-gray-700">
+                    {Math.round(calculateOverallProgress(currentStepIndex, stepProgress))}%
+                  </span>
+                </div>
+                <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-teal-600 rounded-full transition-all duration-300 ease-out"
+                    style={{ width: `${calculateOverallProgress(currentStepIndex, stepProgress)}%` }}
+                  />
+                </div>
+              </div>
+              
+              {/* Steps List */}
+              <div className="space-y-2">
+                {generationSteps.map((genStep, index) => {
+                  const isComplete = index < currentStepIndex;
+                  const isCurrent = index === currentStepIndex;
+                  
+                  return (
+                    <div 
+                      key={genStep.id}
+                      className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-300 ${
+                        isCurrent 
+                          ? 'bg-slate-50 border border-slate-200' 
+                          : isComplete 
+                            ? 'bg-gray-50/50' 
+                            : ''
+                      }`}
+                    >
+                      {/* Status Icon */}
+                      <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
+                        isComplete 
+                          ? 'bg-teal-600' 
+                          : isCurrent 
+                            ? 'bg-slate-700' 
+                            : 'bg-gray-200'
+                      }`}>
+                        {isComplete ? (
+                          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} className="text-white" />
+                        ) : isCurrent ? (
+                          <HugeiconsIcon icon={Loading03Icon} size={14} className="text-white animate-spin" />
+                        ) : (
+                          <span className="text-[10px] font-medium text-gray-500">{index + 1}</span>
+                        )}
+                      </div>
+                      
+                      {/* Step Info */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between">
+                          <span className={`text-sm ${
+                            isComplete 
+                              ? 'text-gray-500' 
+                              : isCurrent 
+                                ? 'text-gray-900 font-medium' 
+                                : 'text-gray-400'
+                          }`}>
+                            {genStep.label}
+                          </span>
+                          {isCurrent && (
+                            <span className="text-xs text-gray-500">
+                              {Math.round(stepProgress)}%
+                            </span>
+                          )}
+                          {isComplete && (
+                            <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} className="text-teal-600" />
+                          )}
+                        </div>
+                        {isCurrent && (
+                          <p className="text-xs text-gray-500 mt-0.5">
+                            {genStep.description}
+                          </p>
+                        )}
+                        
+                        {/* Step Progress Bar */}
+                        {isCurrent && (
+                          <div className="mt-2 h-1 bg-gray-200 rounded-full overflow-hidden">
+                            <div 
+                              className="h-full bg-slate-600 rounded-full transition-all duration-200"
+                              style={{ width: `${stepProgress}%` }}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Rotating Tip */}
+              <div className="mt-6 p-3 bg-gray-50 border border-gray-100 rounded-lg">
+                <p className="text-xs text-gray-500 text-center transition-opacity duration-300">
+                  <span className="text-gray-400">Tip:</span> {GENERATION_TIPS[currentTipIndex]}
+                </p>
+              </div>
             </div>
           )}
 
