@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   ArrowLeft02Icon,
@@ -11,13 +11,21 @@ import { Sidebar } from './components/Sidebar';
 import { RecommendationCard } from './components/RecommendationCard';
 import { TeamDetailView } from './components/TeamDetailView';
 import { PromptEditor, buildSearchSummary } from './components/PromptEditor';
-import { fetchAllTeams, computeSimilarity, fetchAllTeamsClean, fetchTeamCount } from './lib/api';
+import { fetchAllTeams, computeSimilarity, fetchAllTeamsClean } from './lib/api';
 import { scoredTeamsToRecommendations } from './lib/ai';
 import type { Team, TeamRecommendation, SearchFilters, PaginatedSimilarityResponse } from './types';
 
 type ViewMode = 'initial' | 'recommendations' | 'detail';
 
 const PAGE_SIZE = 50;
+
+// Cache for prefetched pages
+type PageCache = {
+  [page: number]: {
+    recommendations: TeamRecommendation[];
+    response: PaginatedSimilarityResponse;
+  };
+};
 
 function App() {
   const [fullTeams, setFullTeams] = useState<Team[]>([]);
@@ -36,7 +44,11 @@ function App() {
   const [totalPages, setTotalPages] = useState(0);
   const [hasNextPage, setHasNextPage] = useState(false);
   const [hasPreviousPage, setHasPreviousPage] = useState(false);
-  const [totalTeamsInDb, setTotalTeamsInDb] = useState<number | null>(null);
+  
+  // Prefetch cache - stores prefetched next page data
+  const pageCacheRef = useRef<PageCache>({});
+  const prefetchingRef = useRef<Set<number>>(new Set()); // Track which pages are being prefetched
+  const [nextPageReady, setNextPageReady] = useState(false); // Visual indicator when next page is cached
   
   const [query, setQuery] = useState('');
   const [filters, setFilters] = useState<SearchFilters>({
@@ -52,12 +64,8 @@ function App() {
   useEffect(() => {
     async function loadTeams() {
       try {
-        const [data, count] = await Promise.all([
-          fetchAllTeams(),
-          fetchTeamCount(),
-        ]);
+        const data = await fetchAllTeams();
         setFullTeams(data);
-        setTotalTeamsInDb(count);
       } catch (err) {
         console.error('Failed to load teams:', err);
       } finally {
@@ -67,14 +75,79 @@ function App() {
     loadTeams();
   }, []);
 
+  // Clear cache when search criteria changes
+  const clearCache = useCallback(() => {
+    pageCacheRef.current = {};
+  }, []);
+
+  // Prefetch a specific page in the background
+  const prefetchPage = useCallback(async (pageNum: number, searchQuery: string, searchFilters: SearchFilters, isNextPage: boolean = false) => {
+    // Don't prefetch if already cached or already prefetching this specific page
+    if (pageCacheRef.current[pageNum] || prefetchingRef.current.has(pageNum)) {
+      // If already cached and it's the next page, mark as ready
+      if (pageCacheRef.current[pageNum] && isNextPage) {
+        setNextPageReady(true);
+      }
+      return;
+    }
+    
+    // Mark this page as being prefetched
+    prefetchingRef.current.add(pageNum);
+    console.log(`Starting prefetch for page ${pageNum}...`);
+    
+    try {
+      const result = await computeSimilarity(searchQuery, searchFilters, pageNum, PAGE_SIZE);
+      const recs = scoredTeamsToRecommendations(result.teams, fullTeams);
+      
+      // Store in cache
+      pageCacheRef.current[pageNum] = {
+        recommendations: recs,
+        response: result,
+      };
+      console.log(`✓ Prefetched page ${pageNum} successfully`);
+      
+      // If this was the next page, mark it as ready
+      if (isNextPage) {
+        setNextPageReady(true);
+      }
+    } catch (err) {
+      console.error(`✗ Failed to prefetch page ${pageNum}:`, err);
+    } finally {
+      prefetchingRef.current.delete(pageNum);
+    }
+  }, [fullTeams]);
+
   // Handle search submission (resets to page 1)
   const handleSearch = useCallback(async (newQuery: string, newFilters: SearchFilters, page: number = 1) => {
+    // Check if this is a new search (different query/filters) - if so, clear cache
+    const isNewSearch = newQuery !== query || JSON.stringify(newFilters) !== JSON.stringify(filters);
+    if (isNewSearch) {
+      clearCache();
+    }
+    
     setQuery(newQuery);
     setFilters(newFilters);
     setShowPromptEditor(false);
-    setSearching(true);
     setError(null);
     setViewMode('recommendations');
+    
+    // Check if we have this page cached
+    const cached = pageCacheRef.current[page];
+    if (cached && !isNewSearch) {
+      console.log(`✓ Cache hit for page ${page} - showing instantly`);
+      setCurrentPage(cached.response.currentPage);
+      setTotalCount(cached.response.totalCount);
+      setTotalPages(cached.response.totalPages);
+      setHasNextPage(cached.response.hasNextPage);
+      setHasPreviousPage(cached.response.hasPreviousPage);
+      setRecommendations(cached.recommendations);
+      // Don't show spinner, don't fetch - return immediately
+      return;
+    }
+    
+    console.log(`Cache miss for page ${page} - fetching...`);
+    
+    setSearching(true);
     
     try {
       // Call the Convex similarity scoring action with pagination
@@ -90,6 +163,12 @@ function App() {
       // Convert to recommendations format
       const recs = scoredTeamsToRecommendations(result.teams, fullTeams);
       setRecommendations(recs);
+      
+      // Cache the current page
+      pageCacheRef.current[page] = {
+        recommendations: recs,
+        response: result,
+      };
     } catch (err) {
       console.error('Search failed:', err);
       setError('Failed to compute similarity. The All_Teams_Clean table may be empty. Please ensure the preprocessing has been run.');
@@ -111,7 +190,18 @@ function App() {
     } finally {
       setSearching(false);
     }
-  }, [fullTeams]);
+  }, [fullTeams, query, filters, clearCache]);
+
+  // Prefetch next page when current page changes
+  useEffect(() => {
+    // Reset next page ready status when page changes
+    setNextPageReady(false);
+    
+    if (hasNextPage && currentPage > 0 && query) {
+      // Start prefetching immediately (no delay)
+      prefetchPage(currentPage + 1, query, filters, true);
+    }
+  }, [currentPage, hasNextPage, query, filters, prefetchPage]);
 
   // Handle page change
   const handlePageChange = useCallback((newPage: number) => {
@@ -332,10 +422,18 @@ function App() {
                       <button
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={!hasNextPage || searching}
-                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                          nextPageReady && hasNextPage
+                            ? 'text-teal-700 bg-teal-50 border border-teal-300 hover:bg-teal-100'
+                            : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50'
+                        }`}
+                        title={nextPageReady ? 'Next page ready - instant load' : 'Loading next page...'}
                       >
                         Next
                         <HugeiconsIcon icon={ArrowRight02Icon} size={16} />
+                        {hasNextPage && !nextPageReady && (
+                          <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" title="Prefetching..." />
+                        )}
                       </button>
                     </div>
                   )}
