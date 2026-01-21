@@ -10,11 +10,15 @@ import {
   ArrowLeft01Icon,
   ArrowRight01Icon,
 } from '@hugeicons/core-free-icons';
-import type { GeneratedCampaign } from '../types';
+import type { GeneratedCampaign, SponsorInfo } from '../types';
 
 interface CampaignViewProps {
   campaign: GeneratedCampaign;
   onBack: () => void;
+  // Team data for display
+  logoUrl?: string | null;
+  sponsors?: SponsorInfo[] | null;
+  category?: string | null;
 }
 
 // Circular progress ring component
@@ -196,7 +200,7 @@ function ImageLightbox({
   );
 }
 
-export function CampaignView({ campaign, onBack }: CampaignViewProps) {
+export function CampaignView({ campaign, onBack, logoUrl, sponsors, category }: CampaignViewProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
@@ -248,7 +252,31 @@ export function CampaignView({ campaign, onBack }: CampaignViewProps) {
               >
                 <HugeiconsIcon icon={ArrowLeft02Icon} size={18} />
               </button>
+              {/* Team Logo */}
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
+                {logoUrl ? (
+                  <img 
+                    src={logoUrl} 
+                    alt={`${campaign.teamName} logo`}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                      (e.target as HTMLImageElement).parentElement!.innerHTML = `<span class="text-lg font-bold text-gray-500">${campaign.teamName.charAt(0)}</span>`;
+                    }}
+                  />
+                ) : (
+                  <span className="text-lg font-bold text-gray-500">
+                    {campaign.teamName.charAt(0)}
+                  </span>
+                )}
+              </div>
               <h1 className="text-lg font-semibold text-gray-900">{campaign.teamName}</h1>
+              {/* Category Badge */}
+              {category && (
+                <span className="px-2.5 py-1 text-xs font-medium text-violet-700 bg-violet-50 border border-violet-200 rounded-full">
+                  {category}
+                </span>
+              )}
               <span className="px-2.5 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full">
                 Campaigns <span className="ml-1 text-gray-400">6</span>
               </span>
@@ -434,6 +462,40 @@ export function CampaignView({ campaign, onBack }: CampaignViewProps) {
                     ))}
                   </div>
                 </div>
+              </div>
+
+              {/* Previous Sponsorships Section */}
+              <div className="border-t border-gray-100 my-6" />
+              <div>
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">Previous Sponsorships</h4>
+                {sponsors && sponsors.length > 0 ? (
+                  <ul className="space-y-2">
+                    {sponsors.slice(0, 5).map((sponsor, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <span className="text-gray-400 mt-0.5">•</span>
+                        <div>
+                          <span className="text-gray-900 font-medium">
+                            {typeof sponsor === 'string' ? sponsor : sponsor.name}
+                          </span>
+                          {typeof sponsor !== 'string' && (sponsor.category || sponsor.asset_type) && (
+                            <span className="text-gray-500 text-xs ml-1">
+                              – {sponsor.asset_type || sponsor.category}
+                            </span>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                    {sponsors.length > 5 && (
+                      <li className="text-xs text-gray-500 italic pl-4">
+                        +{sponsors.length - 5} more partners
+                      </li>
+                    )}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-gray-500 italic">
+                    No sponsorship data available
+                  </p>
+                )}
               </div>
 
               {/* Action Buttons */}
