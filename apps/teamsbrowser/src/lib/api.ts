@@ -1,4 +1,4 @@
-import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis, GeneratedCampaign } from '../types';
+import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis, GeneratedCampaign, PaginatedSimilarityResponse } from '../types';
 
 const CONVEX_URL = import.meta.env.VITE_CONVEX_URL || 'https://harmless-corgi-891.convex.cloud';
 
@@ -21,6 +21,27 @@ export async function fetchAllTeams(): Promise<Team[]> {
 
   const data = await response.json();
   return data.value || [];
+}
+
+/**
+ * Fetch the total count of teams in the All_Teams_Clean table
+ */
+export async function fetchTeamCount(): Promise<number> {
+  const response = await fetch(`${CONVEX_URL}/api/query`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      path: 'All_Teams_Clean:getCount',
+      args: {},
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch team count');
+  }
+
+  const data = await response.json();
+  return data.value || 0;
 }
 
 /**
@@ -49,16 +70,18 @@ export async function fetchAllTeamsClean(): Promise<ScoredTeam[]> {
 }
 
 /**
- * Compute brand similarity using Convex action
+ * Compute brand similarity using Convex action with pagination support
  * This calls the computeBrandSimilarity action which:
  * 1. Embeds the brand inputs using Gemini
  * 2. Computes cosine similarity against each team's embeddings
- * 3. Returns teams sorted by similarity score
+ * 3. Returns paginated teams sorted by similarity score
  */
 export async function computeSimilarity(
   query: string,
-  filters: SearchFilters
-): Promise<ScoredTeam[]> {
+  filters: SearchFilters,
+  page: number = 1,
+  pageSize: number = 20
+): Promise<PaginatedSimilarityResponse> {
   const response = await fetch(`${CONVEX_URL}/api/action`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -75,6 +98,8 @@ export async function computeSimilarity(
           budgetMin: filters.budgetMin,
           budgetMax: filters.budgetMax,
         },
+        page,
+        pageSize,
       },
     }),
   });
@@ -86,7 +111,15 @@ export async function computeSimilarity(
   }
 
   const data = await response.json();
-  return data.value || [];
+  return data.value || {
+    teams: [],
+    totalCount: 0,
+    totalPages: 0,
+    currentPage: 1,
+    pageSize,
+    hasNextPage: false,
+    hasPreviousPage: false,
+  };
 }
 
 /**

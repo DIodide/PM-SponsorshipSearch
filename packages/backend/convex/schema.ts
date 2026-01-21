@@ -331,4 +331,11 @@ export default defineSchema({
     // Optional: Add indexes for non-embedding fields if you plan to filter by them
     .index("by_name", ["name"])
     .index("by_league", ["league"]),
+
+    // Table for storing document counts efficiently
+    // This avoids scanning all documents just to count them
+    tableCounts: defineTable({
+      tableName: v.string(),
+      count: v.number(),
+    }).index("by_table", ["tableName"]),
 });

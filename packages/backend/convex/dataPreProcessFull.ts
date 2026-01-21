@@ -41,6 +41,18 @@ export const insertCleanRow = mutation({
     },
     handler: async (ctx, { row }) => {
       await ctx.db.insert("All_Teams_Clean", row);
+      
+      // Update the count in tableCounts
+      const countDoc = await ctx.db
+        .query("tableCounts")
+        .withIndex("by_table", (q) => q.eq("tableName", "All_Teams_Clean"))
+        .unique();
+      
+      if (countDoc) {
+        await ctx.db.patch(countDoc._id, { count: countDoc.count + 1 });
+      } else {
+        await ctx.db.insert("tableCounts", { tableName: "All_Teams_Clean", count: 1 });
+      }
     }
 });  
 
