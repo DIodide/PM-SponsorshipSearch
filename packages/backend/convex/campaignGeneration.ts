@@ -245,12 +245,16 @@ Respond in this exact JSON format (no markdown, no code blocks, just raw JSON):
 
     try {
       const textResponse = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             contents: [{ parts: [{ text: textPrompt }] }],
+            generationConfig: {
+              maxOutputTokens: 4096,
+              temperature: 0.7,
+            },
           }),
         }
       );
@@ -263,6 +267,13 @@ Respond in this exact JSON format (no markdown, no code blocks, just raw JSON):
 
       const data = await textResponse.json();
       const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+      const finishReason = data.candidates?.[0]?.finishReason;
+      
+      // Check if response was truncated
+      if (finishReason === "MAX_TOKENS" || finishReason === "LENGTH") {
+        console.error("Gemini response was truncated due to token limit");
+        return fallbackCampaign;
+      }
 
       // Parse JSON from response
       const jsonMatch = text.match(/\{[\s\S]*\}/);
@@ -270,8 +281,68 @@ Respond in this exact JSON format (no markdown, no code blocks, just raw JSON):
         console.error("Could not parse JSON from Gemini response");
         return fallbackCampaign;
       }
+      
+      // Quick validation: check if JSON appears complete (ends with proper closing brace)
+      const extractedJson = jsonMatch[0];
+      if (!extractedJson.trim().endsWith('}')) {
+        console.error("JSON appears to be truncated (doesn't end with })");
+        return fallbackCampaign;
+      }
 
-      const campaignData = JSON.parse(jsonMatch[0]);
+      // Sanitize JSON string - remove/escape control characters that break JSON.parse
+      // This handles cases where AI includes literal newlines/tabs in string values
+      let sanitizedJson = extractedJson;
+      
+      // Process the string to properly escape control characters within JSON string values
+      // We do this by finding string values and escaping their contents
+      let result = '';
+      let inString = false;
+      let escaped = false;
+      
+      for (let i = 0; i < sanitizedJson.length; i++) {
+        const char = sanitizedJson[i];
+        const code = char.charCodeAt(0);
+        
+        if (escaped) {
+          result += char;
+          escaped = false;
+          continue;
+        }
+        
+        if (char === '\\' && inString) {
+          escaped = true;
+          result += char;
+          continue;
+        }
+        
+        if (char === '"') {
+          inString = !inString;
+          result += char;
+          continue;
+        }
+        
+        // Handle control characters inside strings
+        if (inString && code < 32) {
+          if (code === 10) result += '\\n';      // newline
+          else if (code === 13) result += '\\r'; // carriage return
+          else if (code === 9) result += '\\t';  // tab
+          else result += '';                      // remove other control chars
+          continue;
+        }
+        
+        result += char;
+      }
+      
+      sanitizedJson = result;
+
+      let campaignData;
+      try {
+        campaignData = JSON.parse(sanitizedJson);
+      } catch (parseError) {
+        console.error("JSON parse error after sanitization:", parseError);
+        console.error("Raw text from Gemini:", text.substring(0, 500));
+        return fallbackCampaign;
+      }
 
       // 2. Generate visuals if requested
       let imageUrls = args.uploadedImageUrls || [];
