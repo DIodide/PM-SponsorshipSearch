@@ -11,6 +11,7 @@ import {
   BRAND_VALUES, 
   LEAGUES, 
   GOALS,
+  TOUCHPOINTS,
   type SearchFilters,
 } from '../types';
 
@@ -88,7 +89,7 @@ export function PromptEditor({
   const [showAdvanced, setShowAdvanced] = useState(true);
 
   const toggleFilter = (
-    category: keyof Pick<SearchFilters, 'regions' | 'demographics' | 'brandValues' | 'leagues' | 'goals'>,
+    category: keyof Pick<SearchFilters, 'regions' | 'demographics' | 'brandValues' | 'leagues' | 'goals' | 'touchpoints'>,
     value: string
   ) => {
     setFilters((prev) => ({
@@ -108,6 +109,7 @@ export function PromptEditor({
       filters.brandValues.length > 0 || 
       filters.leagues.length > 0 || 
       filters.goals.length > 0 ||
+      filters.touchpoints.length > 0 ||
       filters.budgetMin !== undefined ||
       filters.budgetMax !== undefined;
     
@@ -124,6 +126,7 @@ export function PromptEditor({
     filters.brandValues.length +
     filters.leagues.length +
     filters.goals.length +
+    filters.touchpoints.length +
     (filters.budgetMin ? 1 : 0) +
     (filters.budgetMax ? 1 : 0);
 
@@ -134,6 +137,7 @@ export function PromptEditor({
       brandValues: [],
       leagues: [],
       goals: [],
+      touchpoints: [],
     });
     setQuery('');
   };
@@ -198,6 +202,14 @@ export function PromptEditor({
             options={GOALS}
             selected={filters.goals}
             onToggle={(value) => toggleFilter('goals', value)}
+          />
+
+          {/* Touchpoints */}
+          <FilterSection
+            label="Touchpoints"
+            options={TOUCHPOINTS}
+            selected={filters.touchpoints}
+            onToggle={(value) => toggleFilter('touchpoints', value)}
           />
 
           {/* Budget Range */}
@@ -357,6 +369,10 @@ export function buildSearchSummary(query: string, filters: SearchFilters): strin
   
   if (filters.goals.length > 0) {
     parts.push(`Goals: ${filters.goals.join(', ')}`);
+  }
+  
+  if (filters.touchpoints.length > 0) {
+    parts.push(`Touchpoints: ${filters.touchpoints.join(', ')}`);
   }
   
   return parts.join('. ') || 'No criteria specified';

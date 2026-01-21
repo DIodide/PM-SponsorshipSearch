@@ -3,11 +3,14 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import {
   ArrowLeft02Icon,
   Link01Icon,
+  SparklesIcon,
 } from '@hugeicons/core-free-icons';
-import type { ScoredTeam, Team, TeamDetailAnalysis, SearchFilters, SourceCitation } from '../types';
+import type { ScoredTeam, Team, TeamDetailAnalysis, SearchFilters, SourceCitation, GeneratedCampaign } from '../types';
 import { generateTeamDetailAnalysis, formatCurrency } from '../lib/ai';
 import { inferSport, scoreToPercent, estimatePriceFromTier, formatFollowers, formatNumber } from '../lib/api';
 import { buildSearchSummary } from './PromptEditor';
+import { CampaignGeneratorModal } from './CampaignGeneratorModal';
+import { CampaignView } from './CampaignView';
 
 // Source type icons and colors
 const sourceTypeConfig: Record<string, { color: string; bgColor: string; label: string }> = {
@@ -234,7 +237,11 @@ export function TeamDetailView({
 }: TeamDetailViewProps) {
   const [analysis, setAnalysis] = useState<TeamDetailAnalysis | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showCampaignModal, setShowCampaignModal] = useState(false);
+  const [generatedCampaign, setGeneratedCampaign] = useState<GeneratedCampaign | null>(null);
+  const [showCampaignView, setShowCampaignView] = useState(false);
 
+  // All hooks must be called before any conditional returns
   useEffect(() => {
     async function loadAnalysis() {
       setLoading(true);
@@ -244,6 +251,26 @@ export function TeamDetailView({
     }
     loadAnalysis();
   }, [scoredTeam, fullTeam, filters]);
+
+  const handleCampaignGenerated = (campaign: GeneratedCampaign) => {
+    setGeneratedCampaign(campaign);
+    setShowCampaignModal(false);
+    setShowCampaignView(true);
+  };
+
+  const handleBackFromCampaign = () => {
+    setShowCampaignView(false);
+  };
+
+  // If showing campaign view, render it as a full page
+  if (showCampaignView && generatedCampaign) {
+    return (
+      <CampaignView
+        campaign={generatedCampaign}
+        onBack={handleBackFromCampaign}
+      />
+    );
+  }
 
   const sport = inferSport(scoredTeam.league);
   const matchPercent = scoreToPercent(scoredTeam.similarity_score);
@@ -284,10 +311,12 @@ export function TeamDetailView({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 py-4">
+    <div className="min-h-screen bg-gray-50 flex">
+      {/* Main Content - shrinks when modal is open */}
+      <div className={`flex-1 min-w-0 transition-all duration-300 ${showCampaignModal ? 'mr-0' : ''}`}>
+        {/* Header */}
+        <header className="bg-white border-b sticky top-0 z-10">
+          <div className="max-w-5xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <button
               onClick={onBack}
@@ -302,6 +331,13 @@ export function TeamDetailView({
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 Edit Criteria
+              </button>
+              <button
+                onClick={() => setShowCampaignModal(true)}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-violet-600 rounded-lg hover:bg-violet-700 transition-colors"
+              >
+                <HugeiconsIcon icon={SparklesIcon} size={16} />
+                Generate Campaign
               </button>
               <button
                 onClick={onConvertToNegotiation}
@@ -722,6 +758,13 @@ export function TeamDetailView({
               Edit Criteria
             </button>
             <button
+              onClick={() => setShowCampaignModal(true)}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-violet-600 rounded-lg hover:bg-violet-700 transition-colors"
+            >
+              <HugeiconsIcon icon={SparklesIcon} size={16} />
+              Generate Campaign
+            </button>
+            <button
               onClick={onConvertToNegotiation}
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors"
             >
@@ -729,7 +772,20 @@ export function TeamDetailView({
             </button>
           </div>
         </div>
-      </main>
+        </main>
+      </div>
+
+      {/* Campaign Generator Panel - slides in from right */}
+      {showCampaignModal && (
+        <CampaignGeneratorModal
+          teamId={scoredTeam._id}
+          teamName={scoredTeam.name}
+          teamLeague={scoredTeam.league}
+          teamRegion={scoredTeam.region}
+          onClose={() => setShowCampaignModal(false)}
+          onCampaignGenerated={handleCampaignGenerated}
+        />
+      )}
     </div>
   );
 }
