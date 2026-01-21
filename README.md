@@ -2,7 +2,7 @@
 
 **Project Leads:** Yubi Mamiya, Ibraheem Amin
 
-An AI-powered sports sponsorship discovery platform that helps brands find optimal team partnership opportunities through intelligent search, real-time recommendations, and dynamic data enrichment.
+An AI-powered sports sponsorship discovery platform that helps brands find optimal team partnership opportunities through semantic similarity matching, real-time recommendations, and comprehensive data enrichment.
 
 ---
 
@@ -12,11 +12,10 @@ An AI-powered sports sponsorship discovery platform that helps brands find optim
 - [Architecture](#architecture)
 - [Project Structure](#project-structure)
 - [System Components](#system-components)
-- [Data Flow](#data-flow)
 - [Technology Stack](#technology-stack)
 - [Setup & Installation](#setup--installation)
 - [Environment Variables](#environment-variables)
-- [API Reference](#api-reference)
+- [Development Workflow](#development-workflow)
 - [Future Roadmap](#future-roadmap)
 
 ---
@@ -33,21 +32,37 @@ Brands seeking sports sponsorship opportunities face significant challenges:
 
 ### Solution
 
-PlayMaker Sponsorship Search provides a **Perplexity-style search experience** for sports sponsorship discovery:
+PlayMaker Sponsorship Search provides an **AI-powered semantic search experience** for sports sponsorship discovery:
 
-1. **Intelligent Search**: Brands input preferences (budget, region, demographics, values)
-2. **Real-time Discovery**: System searches database + AI-powered web research
-3. **Streamed Recommendations**: Results stream to UI with reasoning, pros/cons, and deal structures
-4. **Transparent Sourcing**: AI-discovered teams include source citations for credibility
+1. **Semantic Similarity Matching**: Brands input preferences (budget, region, demographics, values)
+2. **Vector-Based Scoring**: System embeds brand criteria and computes cosine similarity against 500+ team embeddings
+3. **Ranked Recommendations**: Results are sorted by match score with detailed team data
+4. **AI Campaign Generation**: Generate sponsorship campaigns with creative assets and activation ideas
 
 ### Key Features
 
-- **Hybrid Data Architecture**: Combines curated database with real-time AI discovery
-- **Server-Sent Events (SSE)**: Progressive streaming of search results
-- **Multi-tier Team Coverage**: NFL, NBA, MLB, NHL, MLS, NWSL, MiLB, USL, AHL, ECHL
-- **Automated Scraping**: Python-based scrapers for team data with logo enrichment
-- **Research Caching**: 24-hour TTL cache to optimize API costs
-- **Search History**: Persistent session tracking for analytics and user convenience
+- **Semantic Embedding Search**: Uses Google Gemini embeddings for intelligent brand-to-team matching
+- **Comprehensive Team Database**: 500+ teams across 10+ leagues with enriched data
+- **Multi-Source Data Enrichment**: Automated enrichers for social media, valuations, sponsors, and more
+- **Campaign Generator**: AI-powered campaign creation with visual generation
+- **Paginated Results**: Fast, responsive UI with prefetching for smooth pagination
+- **Export to Convex**: One-click sync from scrapers to production database
+
+### Supported Leagues
+
+| League | Teams | Data Sources |
+|--------|-------|--------------|
+| **NFL** | 32 | NFL.com, ESPN API, Forbes |
+| **NBA** | 30 | NBA.com, WikiData, Forbes |
+| **G League** | 30+ | G League directory |
+| **WNBA** | 13 | ESPN API, WNBA.com |
+| **MLB** | 30 | MLB StatsAPI, Forbes |
+| **MiLB** | 120+ | MLB StatsAPI (AAA, AA, A+, A, Rookie) |
+| **NHL** | 32 | NHL.com, Forbes |
+| **AHL** | 32 | TheAHL.com |
+| **ECHL** | 28 | ECHL.com |
+| **MLS** | 29 | ESPN API |
+| **NWSL** | 14 | ESPN API |
 
 ---
 
@@ -55,349 +70,165 @@ PlayMaker Sponsorship Search provides a **Perplexity-style search experience** f
 
 ### High-Level System Overview
 
-The platform consists of two main workflows: **Data Collection** (scraping team data from league APIs) and **Intelligent Search** (AI-powered brand-to-team matching). These converge on a shared Convex database.
-
 ```mermaid
 flowchart TB
     subgraph UserFacing["🎯 Brand Discovery Experience"]
         Brand["Brand User"]
-        SearchUI["Search Interface<br/>(apps/web)"]
-        Results["Streamed Recommendations<br/>with Scores & Reasoning"]
+        TeamsBrowser["Teams Browser UI<br/>(apps/teamsbrowser)"]
+        Results["Ranked Recommendations<br/>with Similarity Scores"]
     end
 
     subgraph DataOps["📊 Data Operations"]
         Admin["Data Admin"]
         ScraperUI["Scraper Dashboard<br/>(apps/scraper/frontend)"]
         Scrapers["League Scrapers<br/>(FastAPI)"]
+        Enrichers["Data Enrichers"]
     end
 
     subgraph Intelligence["🧠 AI Layer"]
-        Gemini["Google Gemini 2.0"]
-        Tavily["Tavily Web Search"]
+        Gemini["Google Gemini<br/>Embeddings + Generation"]
+        Scoring["Similarity Scoring"]
+        Campaign["Campaign Generation"]
     end
 
-    subgraph DataLayer["💾 Unified Data Platform"]
-        ConvexDB[("Convex Database<br/>• teams<br/>• searchSessions<br/>• researchCache")]
+    subgraph DataLayer["💾 Convex Database"]
+        AllTeams[("All_Teams<br/>Raw team data")]
+        AllTeamsClean[("All_Teams_Clean<br/>Preprocessed + Embeddings")]
     end
 
     subgraph Sources["🏟️ Data Sources"]
         MLB["MLB StatsAPI"]
-        NBA["NBA API"]
-        NFL["NFL API"]
-        NHL["NHL API"]
+        NBA["NBA.com"]
+        NFL["NFL.com"]
+        NHL["NHL.com"]
+        ESPN["ESPN API"]
+        WikiData["WikiData"]
+        Forbes["Forbes"]
     end
 
-    Brand -->|"Query + Filters"| SearchUI
-    SearchUI -->|"SSE Stream"| Results
-    SearchUI -->|"Search Request"| ConvexDB
+    Brand --> TeamsBrowser
+    TeamsBrowser --> Scoring
+    Scoring --> AllTeamsClean
+    Scoring --> Results
+    TeamsBrowser --> Campaign
+    Campaign --> Gemini
 
     Admin --> ScraperUI
-    ScraperUI -->|"Run/Monitor"| Scrapers
-    Scrapers -->|"Fetch Teams"| Sources
-    Scrapers -->|"🔜 Export to Convex"| ConvexDB
-
-    ConvexDB -->|"If < 3 results"| Gemini
-    Gemini -->|"Research"| Tavily
-    Gemini -->|"Discovered Teams"| ConvexDB
-
-    ConvexDB -->|"🔜 AI Enrichment"| Gemini
+    ScraperUI --> Scrapers
+    Scrapers --> Sources
+    Scrapers --> Enrichers
+    Enrichers --> WikiData
+    Enrichers --> Forbes
+    ScraperUI -->|"Export to Convex"| AllTeams
+    AllTeams -->|"Preprocessing"| AllTeamsClean
+    AllTeamsClean --> Gemini
 ```
 
 ### Data Pipeline Architecture
-
-This diagram shows how data flows from league APIs through scraping, enrichment, and ultimately powers the search experience.
 
 ```mermaid
 flowchart LR
     subgraph Collection["1️⃣ Data Collection"]
         direction TB
-        APIs["League APIs<br/>MLB • NBA • NFL • NHL"]
-        Scrapers["Python Scrapers"]
-        LocalData[("Local Storage<br/>JSON + XLSX")]
+        APIs["League APIs/Websites"]
+        Scrapers["6 Python Scrapers<br/>MLB • NBA • NFL<br/>NHL • MLS • WNBA"]
+        LocalData[("JSON + XLSX")]
         
         APIs --> Scrapers
         Scrapers --> LocalData
     end
 
-    subgraph Curation["2️⃣ Data Curation"]
+    subgraph Enrichment["2️⃣ Data Enrichment"]
         direction TB
-        Dashboard["Scraper Dashboard"]
-        Edit["Inline Editing"]
-        Clean["AI Region Cleaning"]
-        Logos["Logo Enrichment"]
+        GeoEnrich["Geo Enricher<br/>City, Population, GDP"]
+        SocialEnrich["Social Enricher<br/>Handles + Followers"]
+        ValuationEnrich["Valuation Enricher<br/>Forbes Data"]
+        SponsorEnrich["Sponsor Enricher<br/>Stadium + Partners"]
+        BrandEnrich["Brand Enricher<br/>Mission + CSR"]
+        WebsiteEnrich["Website Enricher<br/>Family Programs"]
         
-        Dashboard --> Edit
-        Dashboard --> Clean
-        Dashboard --> Logos
+        GeoEnrich --> SocialEnrich
+        SocialEnrich --> ValuationEnrich
+        ValuationEnrich --> SponsorEnrich
+        SponsorEnrich --> BrandEnrich
+        BrandEnrich --> WebsiteEnrich
     end
 
     subgraph Sync["3️⃣ Convex Sync"]
         direction TB
-        Export["Export to Convex<br/>(Planned)"]
-        ConvexDB[("Convex DB<br/>teams table")]
+        Export["Export to Convex"]
+        AllTeams[("All_Teams")]
+        Preprocess["Preprocessing<br/>+ Embedding"]
+        AllTeamsClean[("All_Teams_Clean")]
         
-        Export --> ConvexDB
+        Export --> AllTeams
+        AllTeams --> Preprocess
+        Preprocess --> AllTeamsClean
     end
 
-    subgraph Inference["4️⃣ AI Inference"]
+    subgraph Search["4️⃣ Similarity Search"]
         direction TB
-        Search["Brand Search Query"]
-        Scoring["Multi-factor Scoring"]
-        Discovery["AI Team Discovery"]
-        Enrichment["Data Enrichment<br/>(Planned)"]
+        BrandInput["Brand Criteria"]
+        Embed["Embed Query<br/>Gemini API"]
+        Score["Cosine Similarity<br/>Multi-factor Scoring"]
+        Rank["Ranked Results"]
         
-        Search --> Scoring
-        Scoring --> Discovery
-        Discovery --> Enrichment
+        BrandInput --> Embed
+        Embed --> Score
+        Score --> Rank
     end
 
-    subgraph Output["5️⃣ Recommendations"]
-        direction TB
-        Stream["SSE Stream"]
-        Cards["Team Cards<br/>Score • Reasoning<br/>Pros/Cons • Deal Structure"]
-        
-        Stream --> Cards
-    end
-
-    Collection --> Curation
-    Curation --> Sync
-    Sync --> Inference
-    Inference --> Output
-
-    LocalData -.->|"Current"| Dashboard
-    ConvexDB -.->|"Provides Data"| Scoring
+    Collection --> Enrichment
+    Enrichment --> Sync
+    Sync --> Search
 ```
 
-### Search Flow Sequence
+### Similarity Scoring Algorithm
 
-Detailed view of what happens when a brand searches for sponsorship opportunities.
-
-```mermaid
-sequenceDiagram
-    autonumber
-    participant B as Brand User
-    participant UI as Next.js Frontend
-    participant HTTP as Convex HTTP Endpoint
-    participant DB as Convex Database
-    participant AI as Gemini AI
-    participant Web as Tavily Search
-
-    B->>UI: Enter "affordable Texas sponsorship"
-    B->>UI: Set filters (budget, region, values)
-    
-    UI->>HTTP: POST /search (SSE connection)
-    
-    HTTP->>DB: Create searchSession
-    HTTP-->>UI: 📡 event: session {id}
-    
-    HTTP-->>UI: 📡 event: step {analyze: active}
-    
-    HTTP->>DB: Query teams table
-    DB-->>HTTP: teams[] (matching filters)
-    
-    HTTP-->>UI: 📡 event: step {search: completed}
-    
-    alt Less than 3 teams found
-        HTTP-->>UI: 📡 event: info "Searching for more teams..."
-        
-        HTTP->>AI: discoverTeams(query, filters)
-        AI->>Web: Search sports sponsorship data
-        Web-->>AI: Search results + sources
-        AI->>AI: Extract structured team data
-        AI-->>HTTP: discovered teams + sourceUrls
-        
-        HTTP->>DB: Save discovered teams
-        HTTP-->>UI: 📡 event: sources [{url, title}]
-    end
-    
-    HTTP->>HTTP: Score & rank all teams
-    HTTP-->>UI: 📡 event: step {rank: completed}
-    
-    loop For each top 10 team
-        HTTP-->>UI: 📡 event: team {name, score, reasoning, pros, cons}
-    end
-    
-    HTTP->>DB: Save searchResults
-    HTTP-->>UI: 📡 event: complete {totalResults, usedAI}
-    
-    UI->>B: Display recommendation cards
-```
-
-### Component Architecture
-
-How the frontend components are organized and interact.
+The scoring system combines multiple factors:
 
 ```mermaid
 flowchart TB
-    subgraph WebApp["apps/web (Next.js)"]
-        Page["page.tsx"]
-        
-        subgraph SearchFlow["Search Flow"]
-            Panel["SearchPanel<br/>• Budget inputs<br/>• Region selector<br/>• Value checkboxes"]
-            Stream["StreamingResults<br/>• SSE consumer<br/>• Progress display"]
-        end
-        
-        subgraph Display["Result Display"]
-            Timeline["TimelineFlow<br/>• Step indicators<br/>• Source links"]
-            Cards["TeamCard[]<br/>• Score badge<br/>• Reasoning<br/>• Pros/Cons<br/>• Deal structure"]
-        end
-        
-        subgraph Navigation["Navigation"]
-            Sidebar["Sidebar<br/>• Search history<br/>• Quick re-run"]
-        end
-        
-        Page --> Panel
-        Page --> Stream
-        Page --> Sidebar
-        Stream --> Timeline
-        Stream --> Cards
+    subgraph BrandVector["Brand Vector (Embeddings)"]
+        R["Region Embedding"]
+        L["League Embedding"]
+        V["Values Embedding"]
+        A["Audience Embedding"]
+        G["Goals Embedding"]
+        Q["Query Embedding"]
     end
 
-    subgraph ScraperApp["apps/scraper/frontend (Vite)"]
-        App["App.tsx"]
-        
-        subgraph ScraperFlow["Scraper Management"]
-            ScraperCards["ScraperCard[]<br/>• Status badge<br/>• Run button<br/>• Last run info"]
-            DataView["DataViewer<br/>• Team table<br/>• Inline editing<br/>• AI clean button"]
-        end
-        
-        App --> ScraperCards
-        App --> DataView
+    subgraph TeamVector["Team Vector (Precomputed)"]
+        TR["region_embedding"]
+        TL["league_embedding"]
+        TV["values_embedding"]
+        TC["community_programs_embedding"]
+        TF["family_programs_embedding"]
+        TS["sponsors_embedding"]
     end
 
-    subgraph Backend["packages/backend (Convex)"]
-        HTTPEndpoint["http.ts<br/>SSE /search"]
-        SearchLogic["search.ts<br/>Scoring algorithm"]
-        Research["research.ts<br/>AI discovery"]
-        TeamsDB["teams.ts<br/>CRUD ops"]
-        Cache["cache.ts<br/>24hr TTL"]
+    subgraph Scoring["Weighted Scoring"]
+        CS["Cosine Similarity"]
+        VT["Value Tier Match"]
+        DM["Demographics Match"]
+        RC["Reach Score"]
     end
 
-    Panel -->|"POST"| HTTPEndpoint
-    HTTPEndpoint --> SearchLogic
-    HTTPEndpoint --> Research
-    Research --> Cache
-    SearchLogic --> TeamsDB
-
-    style Page fill:#3b82f6,color:#fff
-    style App fill:#8b5cf6,color:#fff
-    style HTTPEndpoint fill:#f97316,color:#fff
-```
-
-### Database Schema
-
-Entity relationships in the Convex database.
-
-```mermaid
-erDiagram
-    teams {
-        id _id PK
-        string name
-        string league
-        string sport
-        string city
-        string state
-        string region "northeast|southeast|midwest|southwest|west"
-        string marketSize "small|medium|large"
-        object demographics "avgAge, genderSplit, incomeLevel"
-        array brandValues "community, innovation, etc"
-        object estimatedSponsorshipRange "min, max"
-        object socialMedia "twitter, instagram, tiktok, facebook"
-        string source "manual|ai_discovery|scraper_import"
-        array sourceUrls "AI citation URLs"
-        string logoUrl
-    }
-    
-    searchSessions {
-        id _id PK
-        string query
-        object filters "budget, regions, values, etc"
-        string status "pending|processing|completed|failed"
-        number resultsCount
-        timestamp createdAt
-        timestamp completedAt
-    }
-    
-    searchResults {
-        id _id PK
-        id sessionId FK
-        id teamId FK
-        number score "0-100"
-        number rank
-        string reasoning
-        array pros
-        array cons
-        object dealStructure "estimatedCost, assets, activations"
-    }
-    
-    researchCache {
-        id _id PK
-        string queryHash UK
-        string query
-        object filters
-        array results "cached team discoveries"
-        timestamp createdAt
-        timestamp expiresAt "24hr TTL"
-        number hitCount
-    }
-
-    searchSessions ||--o{ searchResults : "produces"
-    teams ||--o{ searchResults : "appears in"
-    researchCache ||--o{ teams : "may create"
-```
-
-### Planned: Unified Data Flow
-
-Future architecture with scraper → Convex export and enhanced AI inference.
-
-```mermaid
-flowchart TB
-    subgraph Scraping["Data Collection Layer"]
-        S1["MLB/MiLB Scraper"]
-        S2["NBA/G League Scraper"]
-        S3["NFL Scraper"]
-        S4["NHL/AHL/ECHL Scraper"]
+    subgraph Weights["Score Weights"]
+        W1["Region: 30%"]
+        W2["Valuation: 30%"]
+        W3["Demographics: 30%"]
+        W4["Query: 4%"]
+        W5["Values: 2%"]
+        W6["Reach: 4%"]
     end
 
-    subgraph Processing["Data Processing"]
-        Local[("Local JSON/XLSX")]
-        Dashboard["Scraper Dashboard<br/>Edit • Clean • Review"]
-        Export["📤 Export to Convex"]
-    end
-
-    subgraph Convex["Convex Platform"]
-        TeamsDB[("teams table<br/>~500+ teams")]
-        
-        subgraph AIActions["AI Actions"]
-            Enrich["enrichTeamData()<br/>• Demographics inference<br/>• Social media lookup<br/>• Sponsorship estimation"]
-            Discover["discoverTeams()<br/>• Web research<br/>• New team finding"]
-            Score["calculateMatchScore()<br/>• Multi-factor ranking"]
-        end
-    end
-
-    subgraph Search["Search Experience"]
-        Query["Brand Query"]
-        Stream["SSE Stream"]
-        Results["Ranked Recommendations"]
-    end
-
-    S1 & S2 & S3 & S4 --> Local
-    Local --> Dashboard
-    Dashboard -->|"🔜 One-click sync"| Export
-    Export --> TeamsDB
-    
-    TeamsDB --> Enrich
-    TeamsDB --> Score
-    Score --> Discover
-    Discover --> TeamsDB
-    
-    Query --> Score
-    Score --> Stream
-    Enrich --> Stream
-    Stream --> Results
-
-    style Export fill:#22c55e,color:#fff
-    style Enrich fill:#f59e0b,color:#fff
+    BrandVector --> CS
+    TeamVector --> CS
+    CS --> Weights
+    VT --> Weights
+    DM --> Weights
+    RC --> Weights
 ```
 
 ---
@@ -407,199 +238,169 @@ flowchart TB
 ```
 PM-SponsorshipSearch/
 ├── apps/
-│   ├── web/                          # Main search frontend (Next.js)
-│   │   ├── app/
-│   │   │   ├── page.tsx              # Landing page + search orchestration
-│   │   │   ├── layout.tsx            # Root layout with providers
-│   │   │   ├── providers.tsx         # Convex client provider
-│   │   │   └── globals.css           # Tailwind + custom animations
-│   │   ├── components/
-│   │   │   ├── search/
-│   │   │   │   ├── SearchPanel.tsx   # Brand input form
-│   │   │   │   ├── StreamingResults.tsx  # SSE result handler
-│   │   │   │   ├── TeamCard.tsx      # Team recommendation card
-│   │   │   │   ├── TimelineFlow.tsx  # Progress visualization
-│   │   │   │   ├── Sidebar.tsx       # Search history panel
-│   │   │   │   └── ProgressSteps.tsx # Step indicators
-│   │   │   └── ui/                   # ShadCN UI components
-│   │   └── hooks/
-│   │       └── useStreamingSearch.ts # SSE connection hook
+│   ├── teamsbrowser/              # 🎯 MAIN UI - Teams Browser (Vite + React)
+│   │   ├── src/
+│   │   │   ├── App.tsx            # Main application with search flow
+│   │   │   ├── components/
+│   │   │   │   ├── PromptEditor.tsx      # Brand criteria input form
+│   │   │   │   ├── RecommendationCard.tsx # Team result card
+│   │   │   │   ├── TeamDetailView.tsx    # Full team details + analysis
+│   │   │   │   ├── CampaignGeneratorModal.tsx # AI campaign creation
+│   │   │   │   ├── CampaignView.tsx      # Campaign display
+│   │   │   │   └── Sidebar.tsx           # Navigation
+│   │   │   ├── lib/
+│   │   │   │   ├── api.ts         # Convex API client
+│   │   │   │   └── ai.ts          # AI utilities
+│   │   │   └── types/
+│   │   │       └── index.ts       # TypeScript types
+│   │   └── README.md
 │   │
-│   └── scraper/                      # Data scraping system
-│       ├── backend/                  # FastAPI Python server
-│       │   ├── main.py               # API routes + orchestration
-│       │   ├── scrapers/
-│       │   │   ├── mlb_milb.py       # MLB + Minor League scraper
-│       │   │   ├── nba_gleague.py    # NBA + G League scraper
-│       │   │   ├── nfl.py            # NFL scraper
-│       │   │   ├── nhl_ahl_echl.py   # NHL + AHL + ECHL scraper
-│       │   │   └── logo_utils.py     # Centralized logo fetching
-│       │   ├── data/                 # Scraped output (JSON/XLSX)
-│       │   ├── requirements.txt      # Python dependencies
-│       │   └── dev.sh                # Startup script
-│       │
-│       └── frontend/                 # Scraper dashboard (Vite + React)
-│           ├── src/
-│           │   ├── App.tsx           # Dashboard layout
-│           │   ├── components/
-│           │   │   ├── ScraperCard.tsx   # Scraper status card
-│           │   │   ├── DataViewer.tsx    # Data table + inline editing
-│           │   │   └── StatusBadge.tsx   # Status indicators
-│           │   ├── hooks/
-│           │   │   └── useScrapers.ts    # Polling + data hooks
-│           │   └── lib/
-│           │       └── api.ts        # FastAPI client
-│           └── package.json
+│   ├── scraper/                   # 📊 Data Scraping System
+│   │   ├── backend/               # FastAPI Python server
+│   │   │   ├── main.py            # API routes + task management
+│   │   │   ├── scrapers/
+│   │   │   │   ├── mlb_milb.py    # MLB + Minor Leagues
+│   │   │   │   ├── nba_gleague.py # NBA + G League
+│   │   │   │   ├── nfl.py         # NFL
+│   │   │   │   ├── nhl_ahl_echl.py # NHL + AHL + ECHL
+│   │   │   │   ├── wnba.py        # WNBA
+│   │   │   │   ├── mls_nwsl.py    # MLS + NWSL
+│   │   │   │   └── enrichers/     # Data enrichment modules
+│   │   │   │       ├── geo_enricher.py
+│   │   │   │       ├── social_enricher.py
+│   │   │   │       ├── valuation_enricher.py
+│   │   │   │       ├── sponsor_enricher.py
+│   │   │   │       ├── brand_enricher.py
+│   │   │   │       └── website_enricher.py
+│   │   │   └── data/              # Scraped output files
+│   │   │
+│   │   ├── frontend/              # Scraper dashboard (Vite)
+│   │   ├── README.md              # Scraper documentation
+│   │   └── SCRAPER_ENRICHER_GUIDE.md # Detailed enricher guide
+│   │
+│   └── web/                       # ⚠️ DEPRECATED - Old Next.js frontend
+│       └── README.md              # Deprecation notice
 │
 ├── packages/
-│   ├── backend/                      # Convex serverless backend
-│   │   └── convex/
-│   │       ├── schema.ts             # Database schema definitions
-│   │       ├── http.ts               # SSE streaming endpoint
-│   │       ├── search.ts             # Search algorithm + scoring
-│   │       ├── research.ts           # AI discovery action (Gemini)
-│   │       ├── teams.ts              # Team CRUD operations
-│   │       ├── cache.ts              # Research cache management
-│   │       ├── social.ts             # Social media API integrations
-│   │       ├── jobs.ts               # Background job handlers
-│   │       └── crons.ts              # Scheduled task definitions
-│   │
-│   └── typescript-config/            # Shared TS configs
+│   └── backend/                   # Convex Serverless Backend
+│       └── convex/
+│           ├── schema.ts          # Database schema
+│           ├── similarityScoring.ts # Embedding-based search
+│           ├── teamAnalysis.ts    # AI team analysis
+│           ├── campaignGeneration.ts # AI campaign creation
+│           ├── scraperImport.ts   # Data import mutations
+│           ├── All_Teams_Clean.ts # Preprocessed data queries
+│           ├── dataPreProcess.ts  # Embedding preprocessing
+│           └── README.md
 │
-├── turbo.json                        # Turborepo task configuration
-├── package.json                      # Monorepo workspace config
-└── README.md                         # This file
+├── turbo.json                     # Turborepo configuration
+├── package.json                   # Monorepo workspace
+└── README.md                      # This file
 ```
 
 ---
 
 ## System Components
 
-### 1. Search Frontend (`apps/web`)
+### 1. Teams Browser (`apps/teamsbrowser`) — **Primary UI**
 
-The main user-facing application built with **Next.js 15** and **React 19**.
+The main user-facing application for brand users to discover sponsorship opportunities.
 
-**Key Components:**
+**Key Features:**
+- Semantic search with multi-criteria input (regions, demographics, values, goals)
+- Paginated results with prefetching for instant page transitions
+- Team detail views with AI-generated analysis
+- Campaign generator with visual creation
+- Score-based ranking with transparent weighting
+
+**Components:**
 
 | Component | Purpose |
 |-----------|---------|
-| `SearchPanel` | Multi-field form for brand requirements (budget, region, demographics, values, goals) |
-| `StreamingResults` | SSE consumer that renders progressive search results |
-| `TeamCard` | Rich recommendation card with score, reasoning, pros/cons, deal structure |
-| `TimelineFlow` | Visual progress indicator showing search stages |
-| `Sidebar` | Collapsible search history panel with localStorage persistence |
-
-**Search Flow:**
-1. User enters query + filters
-2. Component connects to `/search` SSE endpoint
-3. Events stream in: `step`, `info`, `team`, `sources`, `complete`
-4. UI updates reactively as events arrive
+| `PromptEditor` | Multi-field form for brand criteria input |
+| `RecommendationCard` | Team preview card with score and key stats |
+| `TeamDetailView` | Full team profile with AI analysis |
+| `CampaignGeneratorModal` | AI campaign creation workflow |
 
 ### 2. Convex Backend (`packages/backend`)
 
-Serverless backend using **Convex** for database, actions, and HTTP endpoints.
-
-**Database Schema:**
-
-| Table | Purpose |
-|-------|---------|
-| `teams` | Core team data (demographics, brand values, sponsorship ranges, social media) |
-| `searchSessions` | User query tracking for analytics |
-| `searchResults` | Links sessions to teams with scores and reasoning |
-| `researchCache` | 24-hour TTL cache for AI discovery results |
-| `socialUpdateQueue` | Job queue for social media data updates |
+Serverless backend handling data storage, similarity computation, and AI operations.
 
 **Key Modules:**
 
 | Module | Responsibility |
 |--------|----------------|
-| `http.ts` | SSE streaming endpoint with AI fallback logic |
-| `search.ts` | Multi-factor scoring algorithm (region, league, values, budget, demographics) |
-| `research.ts` | Gemini AI integration for team discovery + web search via Tavily |
-| `teams.ts` | CRUD operations + internal team creation from AI discovery |
-| `cache.ts` | Research cache management with hit tracking |
+| `similarityScoring.ts` | Embedding-based similarity computation with pagination |
+| `teamAnalysis.ts` | AI-powered team analysis generation |
+| `campaignGeneration.ts` | Campaign and visual generation |
+| `scraperImport.ts` | Batch import of scraped data |
+| `dataPreProcess.ts` | Team data preprocessing and embedding |
+| `All_Teams_Clean.ts` | Queries for preprocessed team data |
+
+**Database Tables:**
+
+| Table | Purpose |
+|-------|---------|
+| `All_Teams` | Raw team data imported from scrapers |
+| `All_Teams_Clean` | Preprocessed data with embeddings for search |
+| `teams` | Legacy team data (deprecated) |
+| `searchSessions` | User query tracking |
+| `researchCache` | AI discovery cache |
 
 ### 3. Scraper System (`apps/scraper`)
 
-Two-part system for data collection and management.
-
-#### Backend (FastAPI)
+Comprehensive data collection and enrichment pipeline.
 
 **Scrapers:**
 
-| Scraper | Leagues Covered | Data Source |
-|---------|-----------------|-------------|
-| `mlb_milb.py` | MLB, AAA, AA, A+, A, Rookie | MLB StatsAPI |
-| `nba_gleague.py` | NBA, G League | NBA API + G League directory |
-| `nfl.py` | NFL | NFL API |
-| `nhl_ahl_echl.py` | NHL, AHL, ECHL | NHL API + league directories |
+| Scraper | Leagues | Teams | Data Source |
+|---------|---------|-------|-------------|
+| `mlb_milb.py` | MLB, AAA, AA, A+, A, Rookie | ~190 | MLB StatsAPI |
+| `nba_gleague.py` | NBA, G League | ~60 | NBA.com |
+| `nfl.py` | NFL | 32 | NFL.com |
+| `nhl_ahl_echl.py` | NHL, AHL, ECHL | ~90 | NHL.com, TheAHL, ECHL |
+| `wnba.py` | WNBA | 13 | ESPN API |
+| `mls_nwsl.py` | MLS, NWSL | ~43 | ESPN API |
 
-**API Endpoints:**
+**Enrichers:**
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/scrapers` | GET | List all scrapers with status |
-| `/api/scrapers/{id}/run` | POST | Trigger scraper execution |
-| `/api/scrapers/{id}/data` | GET | Fetch scraped data as JSON |
-| `/api/scrapers/{id}/team` | PUT | Update individual team field |
-| `/api/scrapers/{id}/clean-regions` | POST | AI-powered region correction |
-| `/api/scrapers/{id}/download/{format}` | GET | Download JSON or XLSX |
-
-**Logo Enrichment (`logo_utils.py`):**
-
-```
-Strategy Priority:
-1. League CDN (MLB, NBA, NFL, NHL) - Direct URL pattern
-2. ESPN API fallback - Consistent across leagues
-3. Directory scraping (G League, AHL, ECHL) - HTML parsing
-```
-
-#### Frontend (Vite + React)
-
-Dashboard for scraper management:
-- Status monitoring with polling
-- Inline cell editing with real-time persistence
-- AI region cleaning integration
-- Data export (JSON/XLSX download)
+| Enricher | Fields Added |
+|----------|--------------|
+| `GeoEnricher` | geo_city, geo_country, city_population, metro_gdp |
+| `SocialEnricher` | social_handles, followers_x/instagram/facebook/tiktok, subscribers_youtube |
+| `ValuationEnricher` | avg_ticket_price, franchise_value, annual_revenue |
+| `SponsorEnricher` | owns_stadium, stadium_name, sponsors |
+| `BrandEnricher` | mission_tags, community_programs, cause_partnerships |
+| `WebsiteEnricher` | family_program_count, family_program_types |
 
 ---
 
 ## Technology Stack
 
 ### Frontend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Next.js | 15.x | React framework with App Router |
-| React | 19.x | UI library |
-| Tailwind CSS | 3.x | Utility-first styling |
-| ShadCN/UI | Latest | Component library |
-| Hugeicons | Latest | Icon library |
-| Vite | 5.x | Scraper dashboard build tool |
+| Technology | Purpose |
+|------------|---------|
+| React 18 | UI library |
+| Vite | Build tool |
+| TypeScript | Type safety |
+| Tailwind CSS | Styling |
+| Hugeicons | Icon library |
 
 ### Backend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Convex | Latest | Serverless backend + database |
-| FastAPI | 0.109+ | Python REST API |
-| Uvicorn | 0.27+ | ASGI server |
-| APScheduler | 3.10+ | Background job scheduling |
+| Technology | Purpose |
+|------------|---------|
+| Convex | Serverless database + functions |
+| FastAPI | Python scraper API |
+| Uvicorn | ASGI server |
 
 ### AI & Data
 | Technology | Purpose |
 |------------|---------|
-| Google Gemini 2.0 Flash | Structured team discovery |
-| Tavily API | Web search for real-time data |
-| AI SDK | Unified AI model interface |
-| Zod | Schema validation for AI output |
-| BeautifulSoup | HTML parsing for scraping |
-| Pandas | Data manipulation + Excel export |
-
-### Infrastructure
-| Technology | Purpose |
-|------------|---------|
-| Turborepo | Monorepo orchestration |
-| pnpm/npm | Package management |
-| Python venv | Scraper dependency isolation |
+| Google Gemini | Embeddings + text generation |
+| Gemini Imagen 3 | Image generation |
+| WikiData SPARQL | Social handles, stadium data |
+| Forbes | Team valuations |
+| Data Commons | Population data |
 
 ---
 
@@ -609,7 +410,7 @@ Dashboard for scraper management:
 
 - Node.js 18+
 - Python 3.11+
-- pnpm or npm
+- npm or pnpm
 - Convex account
 
 ### 1. Clone and Install
@@ -621,7 +422,7 @@ cd PM-SponsorshipSearch
 # Install Node dependencies
 npm install
 
-# Install Turborepo globally (if not already)
+# Install Turborepo globally
 npm install turbo --global
 ```
 
@@ -630,7 +431,7 @@ npm install turbo --global
 ```bash
 cd packages/backend
 npx convex login
-# Select the playmaker-sponsorship-search team
+npx convex dev  # Start local dev server
 ```
 
 ### 3. Setup Scraper Backend
@@ -638,12 +439,14 @@ npx convex login
 ```bash
 cd apps/scraper/backend
 
-# Make dev script executable
-chmod +x dev.sh
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
 
-# Create .env file
-cp .env.example .env
-# Edit .env and add your API keys
+# Install dependencies
+pip install -r requirements.txt
+
+# Create .env file with API keys (see Environment Variables)
 ```
 
 ### 4. Start Development
@@ -655,7 +458,7 @@ turbo dev
 ```
 
 This starts:
-- **apps/web** on `http://localhost:3000`
+- **apps/teamsbrowser** on `http://localhost:5173`
 - **apps/scraper/frontend** on `http://localhost:5174`
 - **apps/scraper/backend** on `http://localhost:8000`
 - **packages/backend** (Convex dev server)
@@ -666,95 +469,107 @@ This starts:
 
 ### Convex Dashboard
 
-Set these in the Convex dashboard under Environment Variables:
+Set in Convex Dashboard → Settings → Environment Variables:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `GOOGLE_GENERATIVE_AI_API_KEY` | Yes | Gemini API key for AI discovery |
-| `TAVILY_API_KEY` | Yes | Tavily API key for web search |
+| `GEMINI_API_KEY` | Yes | Google AI API key for embeddings |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | Yes | Gemini API key for generation |
 
 ### Scraper Backend (`.env` file)
 
 Create `apps/scraper/backend/.env`:
 
 ```env
-GOOGLE_GENERATIVE_AI_API_KEY=your-key-here  # Optional, for region cleaning
+GOOGLE_GENERATIVE_AI_API_KEY=your-key-here
+YOUTUBE_API_KEY=your-key-here           # Optional: for follower counts
+DATA_COMMONS_API_KEY=your-key-here      # Optional: for population data
+```
+
+### Teams Browser
+
+Create `apps/teamsbrowser/.env`:
+
+```env
+VITE_CONVEX_URL=https://your-deployment.convex.cloud
 ```
 
 ---
 
-## API Reference
+## Development Workflow
 
-### Search Streaming Endpoint
+### 1. Scrape New Team Data
 
-```
-POST /search
-Content-Type: application/json
+```bash
+# Navigate to scraper backend
+cd apps/scraper/backend
+source venv/bin/activate
 
-{
-  "query": "affordable sponsorship in Texas",
-  "filters": {
-    "budgetMin": 50000,
-    "budgetMax": 500000,
-    "regions": ["southwest"],
-    "demographics": ["families", "millennials"],
-    "brandValues": ["community", "innovation"],
-    "leagues": ["MiLB", "USL"],
-    "goals": ["brand awareness", "community engagement"]
-  }
-}
+# Run via API (start server first)
+uvicorn main:app --reload --port 8000
+
+# Or use the frontend dashboard at http://localhost:5174
 ```
 
-**Event Types:**
+### 2. Enrich Team Data
 
-| Event | Payload | Description |
-|-------|---------|-------------|
-| `session` | `{ sessionId }` | Search session created |
-| `step` | `{ step, status }` | Progress update (analyze, search, evaluate, rank, generate) |
-| `info` | `{ message }` | Informational message |
-| `warning` | `{ message }` | Warning (e.g., AI unavailable) |
-| `sources` | `{ sources[] }` | AI research source URLs |
-| `team` | `{ TeamRecommendation }` | Individual team result |
-| `complete` | `{ totalResults, usedAIDiscovery, sessionId }` | Search finished |
-| `error` | `{ message }` | Error occurred |
+Using the scraper dashboard:
+1. Select a scraper with data
+2. Click "Run Enrichment"
+3. Select enrichers to apply
+4. Monitor progress in real-time
+
+### 3. Export to Convex
+
+```bash
+# From scraper dashboard, click "Export to Convex"
+# Or use the API:
+curl -X POST http://localhost:8000/api/convex/export-all \
+  -H "Content-Type: application/json" \
+  -d '{"mode": "overwrite"}'
+```
+
+### 4. Preprocess for Search
+
+Run the preprocessing script in Convex to generate embeddings:
+
+```typescript
+// In Convex Dashboard → Functions → Run
+await ctx.runAction(api.dataPreProcess.preprocessAllTeams, {});
+```
 
 ---
 
 ## Future Roadmap
 
-### Phase 1: Scraper → Convex Integration (In Progress)
-- [ ] **Export to Convex button** in scraper dashboard
-- [ ] Batch import of scraped teams to Convex `teams` table
-- [ ] Deduplication logic (match by name + league)
-- [ ] Field mapping (scraper schema → Convex schema)
-- [ ] Import status tracking and rollback
+### Phase 1: Data Quality ✅
+- [x] 6 league scrapers with fallback data
+- [x] 6 enrichers for comprehensive team data
+- [x] Source tracking and citations
+- [x] Export to Convex pipeline
 
-### Phase 2: AI Inference on Scraped Data
-- [ ] **Automatic AI enrichment** on imported teams
-  - Demographics inference from team location + league tier
-  - Sponsorship range estimation based on market size
-  - Brand values extraction from team website/social media
-- [ ] Social media handle discovery and follower count lookup
-- [ ] Confidence scoring for AI-inferred fields
-- [ ] Manual override UI for correcting AI inferences
+### Phase 2: Semantic Search ✅
+- [x] Gemini embedding integration
+- [x] Multi-factor similarity scoring
+- [x] Paginated results with prefetching
+- [x] Sport/league filtering
 
-### Phase 3: Enhanced Search Experience
-- [ ] Semantic/embedding-based search using team descriptions
-- [ ] Portfolio optimization (multi-team bundle recommendations)
-- [ ] Competitive analysis (see who sponsors similar teams)
-- [ ] "Similar teams" recommendations
+### Phase 3: AI Features ✅
+- [x] AI team analysis generation
+- [x] Campaign generation with touchpoints
+- [x] Visual generation with Imagen 3
 
-### Phase 4: Data Enrichment Pipelines
-- [ ] Real-time social media follower counts (Twitter API, Instagram Graph API)
-- [ ] Historical attendance data integration
-- [ ] Sponsorship deal history (where publicly available)
-- [ ] Scheduled refresh jobs for keeping data current
+### Phase 4: Enhanced UX (In Progress)
+- [ ] Search history persistence
+- [ ] Saved teams / favorites
+- [ ] Campaign export (PDF/PPTX)
+- [ ] User accounts and preferences
 
-### Phase 5: Platform Integration
+### Phase 5: Platform Integration (Planned)
 - [ ] Connect to PlayMaker sales portal
-- [ ] Deal proposal generation (PDF export)
-- [ ] CRM integration for lead tracking
-- [ ] Search analytics dashboard
+- [ ] CRM integration
+- [ ] Deal proposal workflows
+- [ ] Analytics dashboard
 
 ---
 
