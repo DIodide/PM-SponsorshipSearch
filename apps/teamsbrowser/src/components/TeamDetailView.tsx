@@ -268,6 +268,9 @@ export function TeamDetailView({
       <CampaignView
         campaign={generatedCampaign}
         onBack={handleBackFromCampaign}
+        logoUrl={fullTeam?.logo_url}
+        sponsors={fullTeam?.sponsors}
+        category={fullTeam?.category}
       />
     );
   }

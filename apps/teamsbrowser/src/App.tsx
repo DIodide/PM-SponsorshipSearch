@@ -59,6 +59,16 @@ function App() {
     goals: [],
     touchpoints: [],
   });
+  
+  // Refs to track current search params (avoids stale closure issues)
+  const queryRef = useRef(query);
+  const filtersRef = useRef(filters);
+  
+  // Keep refs in sync with state
+  useEffect(() => {
+    queryRef.current = query;
+    filtersRef.current = filters;
+  }, [query, filters]);
 
   // Load full team data on mount (for additional info display)
   useEffect(() => {
@@ -119,11 +129,20 @@ function App() {
 
   // Handle search submission (resets to page 1)
   const handleSearch = useCallback(async (newQuery: string, newFilters: SearchFilters, page: number = 1) => {
-    // Check if this is a new search (different query/filters) - if so, clear cache
-    const isNewSearch = newQuery !== query || JSON.stringify(newFilters) !== JSON.stringify(filters);
+    // Check if this is a new search (different query/filters) - use refs for accurate comparison
+    const isNewSearch = newQuery !== queryRef.current || JSON.stringify(newFilters) !== JSON.stringify(filtersRef.current);
+    
+    console.log(`handleSearch called: page=${page}, isNewSearch=${isNewSearch}, cacheKeys=${Object.keys(pageCacheRef.current).join(',')}`);
+    
     if (isNewSearch) {
+      console.log('New search detected - clearing cache');
       clearCache();
     }
+    
+    // Update refs IMMEDIATELY so prefetch effect can use them
+    // (Don't wait for the useEffect sync which happens after render)
+    queryRef.current = newQuery;
+    filtersRef.current = newFilters;
     
     setQuery(newQuery);
     setFilters(newFilters);
@@ -141,11 +160,18 @@ function App() {
       setHasNextPage(cached.response.hasNextPage);
       setHasPreviousPage(cached.response.hasPreviousPage);
       setRecommendations(cached.recommendations);
+      
+      // Trigger prefetch for the NEXT page (even on cache hit)
+      if (cached.response.hasNextPage) {
+        console.log(`Triggering prefetch for page ${page + 1} after cache hit`);
+        prefetchPage(page + 1, newQuery, newFilters, true);
+      }
+      
       // Don't show spinner, don't fetch - return immediately
       return;
     }
     
-    console.log(`Cache miss for page ${page} - fetching...`);
+    console.log(`Cache miss for page ${page} - fetching... (cached pages: ${Object.keys(pageCacheRef.current).join(',') || 'none'})`);
     
     setSearching(true);
     
@@ -169,6 +195,12 @@ function App() {
         recommendations: recs,
         response: result,
       };
+      
+      // Trigger prefetch for next page directly (don't rely on useEffect)
+      if (result.hasNextPage) {
+        console.log(`Triggering prefetch for page ${page + 1} directly from handleSearch`);
+        prefetchPage(page + 1, newQuery, newFilters, true);
+      }
     } catch (err) {
       console.error('Search failed:', err);
       setError('Failed to compute similarity. The All_Teams_Clean table may be empty. Please ensure the preprocessing has been run.');
@@ -190,31 +222,28 @@ function App() {
     } finally {
       setSearching(false);
     }
-  }, [fullTeams, query, filters, clearCache]);
+  }, [fullTeams, clearCache, prefetchPage]); // Using refs for query/filters comparison
 
-  // Prefetch next page when current page changes
+  // Reset nextPageReady when page changes (prefetch is now triggered directly from handleSearch)
   useEffect(() => {
-    // Reset next page ready status when page changes
     setNextPageReady(false);
-    
-    if (hasNextPage && currentPage > 0 && query) {
-      // Start prefetching immediately (no delay)
-      prefetchPage(currentPage + 1, query, filters, true);
-    }
-  }, [currentPage, hasNextPage, query, filters, prefetchPage]);
+  }, [currentPage]);
 
   // Handle page change
   const handlePageChange = useCallback((newPage: number) => {
     if (newPage < 1 || newPage > totalPages) return;
-    handleSearch(query, filters, newPage);
-  }, [query, filters, totalPages, handleSearch]);
+    // Use refs to get current query/filters
+    handleSearch(queryRef.current, filtersRef.current, newPage);
+  }, [totalPages, handleSearch]);
 
   // Refresh recommendations (stays on current page)
   const handleRefresh = useCallback(() => {
-    if (query || Object.values(filters).some(v => Array.isArray(v) ? v.length > 0 : v !== undefined)) {
-      handleSearch(query, filters, currentPage);
+    const currentQuery = queryRef.current;
+    const currentFilters = filtersRef.current;
+    if (currentQuery || Object.values(currentFilters).some(v => Array.isArray(v) ? v.length > 0 : v !== undefined)) {
+      handleSearch(currentQuery, currentFilters, currentPage);
     }
-  }, [query, filters, currentPage, handleSearch]);
+  }, [currentPage, handleSearch]);
 
   // Handle team selection
   const handleSelectTeam = (rec: TeamRecommendation) => {
