@@ -243,145 +243,165 @@ Respond in this exact JSON format (no markdown, no code blocks, just raw JSON):
 }
     `.trim();
 
-    try {
-      const textResponse = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: textPrompt }] }],
-            generationConfig: {
-              maxOutputTokens: 4096,
-              temperature: 0.7,
-            },
-          }),
-        }
-      );
-
-      if (!textResponse.ok) {
-        const errorText = await textResponse.text();
-        console.error("Gemini Text API error:", textResponse.status, errorText);
-        return fallbackCampaign;
-      }
-
-      const data = await textResponse.json();
-      const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
-      const finishReason = data.candidates?.[0]?.finishReason;
-      
-      // Check if response was truncated
-      if (finishReason === "MAX_TOKENS" || finishReason === "LENGTH") {
-        console.error("Gemini response was truncated due to token limit");
-        return fallbackCampaign;
-      }
-
-      // Parse JSON from response
-      const jsonMatch = text.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) {
-        console.error("Could not parse JSON from Gemini response");
-        return fallbackCampaign;
-      }
-      
-      // Quick validation: check if JSON appears complete (ends with proper closing brace)
-      const extractedJson = jsonMatch[0];
-      if (!extractedJson.trim().endsWith('}')) {
-        console.error("JSON appears to be truncated (doesn't end with })");
-        return fallbackCampaign;
-      }
-
-      // Sanitize JSON string - remove/escape control characters that break JSON.parse
-      // This handles cases where AI includes literal newlines/tabs in string values
-      let sanitizedJson = extractedJson;
-      
-      // Process the string to properly escape control characters within JSON string values
-      // We do this by finding string values and escaping their contents
-      let result = '';
-      let inString = false;
-      let escaped = false;
-      
-      for (let i = 0; i < sanitizedJson.length; i++) {
-        const char = sanitizedJson[i];
-        const code = char.charCodeAt(0);
-        
-        if (escaped) {
-          result += char;
-          escaped = false;
-          continue;
-        }
-        
-        if (char === '\\' && inString) {
-          escaped = true;
-          result += char;
-          continue;
-        }
-        
-        if (char === '"') {
-          inString = !inString;
-          result += char;
-          continue;
-        }
-        
-        // Handle control characters inside strings
-        if (inString && code < 32) {
-          if (code === 10) result += '\\n';      // newline
-          else if (code === 13) result += '\\r'; // carriage return
-          else if (code === 9) result += '\\t';  // tab
-          else result += '';                      // remove other control chars
-          continue;
-        }
-        
-        result += char;
-      }
-      
-      sanitizedJson = result;
-
-      let campaignData;
+    // Retry logic for API calls
+    const MAX_RETRIES = 3;
+    let campaignData = null;
+    let lastError: Error | null = null;
+    
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
-        campaignData = JSON.parse(sanitizedJson);
-      } catch (parseError) {
-        console.error("JSON parse error after sanitization:", parseError);
-        console.error("Raw text from Gemini:", text.substring(0, 500));
-        return fallbackCampaign;
-      }
-
-      // 2. Generate visuals if requested
-      let imageUrls = args.uploadedImageUrls || [];
-
-      if (args.generateVisuals && campaignData.visualPrompts?.length > 0) {
-        console.log("Generating campaign visuals...");
-        const generatedUrls = await ctx.runAction(
-          api.campaignGeneration.generateCampaignVisuals,
+        console.log(`Campaign generation attempt ${attempt}/${MAX_RETRIES}`);
+        
+        const textResponse = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`,
           {
-            teamName: args.teamName,
-            teamLeague: args.teamLeague,
-            campaignTitle: campaignData.title || "Campaign",
-            touchpoints: args.touchpoints,
-            visualPrompts: campaignData.visualPrompts,
-            count: 4,
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: textPrompt }] }],
+              generationConfig: {
+                maxOutputTokens: 6144, // 1.5x increase for longer responses
+                temperature: 0.7,
+              },
+            }),
           }
         );
-        imageUrls = [...imageUrls, ...generatedUrls];
-      }
 
-      return {
-        title: campaignData.title || fallbackCampaign.title,
-        description: campaignData.description || fallbackCampaign.description,
-        tactics: campaignData.tactics || fallbackCampaign.tactics,
-        whyItWorks: campaignData.whyItWorks || fallbackCampaign.whyItWorks,
-        goals: campaignData.goals || fallbackCampaign.goals,
-        channels: campaignData.channels || fallbackCampaign.channels,
-        estimatedCost: campaignData.estimatedCost || fallbackCampaign.estimatedCost,
-        suggestedDates: campaignData.suggestedDates || fallbackCampaign.suggestedDates,
-        visualPrompts: campaignData.visualPrompts,
-        imageUrls,
-        teamId: args.teamId,
-        teamName: args.teamName,
-        status: "draft",
-      };
-    } catch (error) {
-      console.error("Error generating campaign:", error);
+        if (!textResponse.ok) {
+          const errorText = await textResponse.text();
+          console.error(`Gemini Text API error (attempt ${attempt}):`, textResponse.status, errorText);
+          lastError = new Error(`API error: ${textResponse.status}`);
+          continue; // Retry
+        }
+
+        const data = await textResponse.json();
+        const text = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+        const finishReason = data.candidates?.[0]?.finishReason;
+        
+        // Check if response was truncated
+        if (finishReason === "MAX_TOKENS" || finishReason === "LENGTH") {
+          console.error(`Gemini response truncated (attempt ${attempt}), retrying...`);
+          lastError = new Error("Response truncated");
+          continue; // Retry
+        }
+
+        // Parse JSON from response
+        const jsonMatch = text.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) {
+          console.error(`Could not parse JSON from Gemini response (attempt ${attempt})`);
+          lastError = new Error("No JSON found in response");
+          continue; // Retry
+        }
+        
+        // Quick validation: check if JSON appears complete (ends with proper closing brace)
+        const extractedJson = jsonMatch[0];
+        if (!extractedJson.trim().endsWith('}')) {
+          console.error(`JSON appears truncated (attempt ${attempt}), retrying...`);
+          lastError = new Error("JSON truncated");
+          continue; // Retry
+        }
+
+        // Sanitize JSON string - remove/escape control characters that break JSON.parse
+        let sanitizedJson = extractedJson;
+        
+        // Process the string to properly escape control characters within JSON string values
+        let result = '';
+        let inString = false;
+        let escaped = false;
+        
+        for (let i = 0; i < sanitizedJson.length; i++) {
+          const char = sanitizedJson[i];
+          const code = char.charCodeAt(0);
+          
+          if (escaped) {
+            result += char;
+            escaped = false;
+            continue;
+          }
+          
+          if (char === '\\' && inString) {
+            escaped = true;
+            result += char;
+            continue;
+          }
+          
+          if (char === '"') {
+            inString = !inString;
+            result += char;
+            continue;
+          }
+          
+          // Handle control characters inside strings
+          if (inString && code < 32) {
+            if (code === 10) result += '\\n';      // newline
+            else if (code === 13) result += '\\r'; // carriage return
+            else if (code === 9) result += '\\t';  // tab
+            else result += '';                      // remove other control chars
+            continue;
+          }
+          
+          result += char;
+        }
+        
+        sanitizedJson = result;
+
+        try {
+          campaignData = JSON.parse(sanitizedJson);
+          console.log(`Campaign generation successful on attempt ${attempt}`);
+          break; // Success! Exit retry loop
+        } catch (parseError) {
+          console.error(`JSON parse error (attempt ${attempt}):`, parseError);
+          console.error("Raw text from Gemini:", text.substring(0, 500));
+          lastError = parseError as Error;
+          continue; // Retry
+        }
+      } catch (fetchError) {
+        console.error(`Fetch error (attempt ${attempt}):`, fetchError);
+        lastError = fetchError as Error;
+        continue; // Retry
+      }
+    }
+    
+    // If all retries failed, return fallback
+    if (!campaignData) {
+      console.error(`All ${MAX_RETRIES} attempts failed. Last error:`, lastError);
       return fallbackCampaign;
     }
+
+    // 2. Generate visuals if requested
+    let imageUrls = args.uploadedImageUrls || [];
+
+    if (args.generateVisuals && campaignData.visualPrompts?.length > 0) {
+      console.log("Generating campaign visuals...");
+      const generatedUrls = await ctx.runAction(
+        api.campaignGeneration.generateCampaignVisuals,
+        {
+          teamName: args.teamName,
+          teamLeague: args.teamLeague,
+          campaignTitle: campaignData.title || "Campaign",
+          touchpoints: args.touchpoints,
+          visualPrompts: campaignData.visualPrompts,
+          count: 4,
+        }
+      );
+      imageUrls = [...imageUrls, ...generatedUrls];
+    }
+
+    return {
+      title: campaignData.title || fallbackCampaign.title,
+      description: campaignData.description || fallbackCampaign.description,
+      tactics: campaignData.tactics || fallbackCampaign.tactics,
+      whyItWorks: campaignData.whyItWorks || fallbackCampaign.whyItWorks,
+      goals: campaignData.goals || fallbackCampaign.goals,
+      channels: campaignData.channels || fallbackCampaign.channels,
+      estimatedCost: campaignData.estimatedCost || fallbackCampaign.estimatedCost,
+      suggestedDates: campaignData.suggestedDates || fallbackCampaign.suggestedDates,
+      visualPrompts: campaignData.visualPrompts,
+      imageUrls,
+      teamId: args.teamId,
+      teamName: args.teamName,
+      status: "draft",
+    };
   },
 });
 
