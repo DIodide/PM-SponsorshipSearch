@@ -81,11 +81,83 @@ type BrandVector = {
 
 type ScoringContext = {
   brandVector: BrandVector;
-  brandLeague: string;
+  brandLeagues: string[]; // Array of selected league filter values
   brandAudience: string;
   brandGoals: string;
   target_value_tier: number;
 };
+
+// ----------------------
+// Sport/League Matching
+// ----------------------
+
+/**
+ * Maps filter values to patterns that match actual league names in the database
+ * Filter values: "NFL", "NBA G League WNBA", "MLB MiLB", "NHL ECHL AHL", "MLS NWSL"
+ * Actual leagues: "National Football League", "Major League Baseball — American League", etc.
+ */
+function teamMatchesSportFilter(teamLeague: string, filterValues: string[]): boolean {
+  if (filterValues.length === 0) return true; // No filter = match all
+  
+  const leagueLower = teamLeague.toLowerCase();
+  
+  for (const filter of filterValues) {
+    // NFL / Football
+    if (filter.includes("NFL") && (
+      leagueLower.includes("national football league") ||
+      leagueLower.includes("nfl")
+    )) {
+      return true;
+    }
+    
+    // Basketball: NBA, G League, WNBA
+    if (filter.includes("NBA") && (
+      leagueLower.includes("national basketball association") ||
+      leagueLower.includes("nba") ||
+      leagueLower.includes("g league") ||
+      leagueLower.includes("women's national basketball")
+    )) {
+      return true;
+    }
+    
+    // Baseball: MLB, MiLB (minor leagues)
+    if (filter.includes("MLB") && (
+      leagueLower.includes("major league baseball") ||
+      leagueLower.includes("triple-a") ||
+      leagueLower.includes("double-a") ||
+      leagueLower.includes("single-a") ||
+      leagueLower.includes("high-a") ||
+      leagueLower.includes("class a") ||
+      leagueLower.includes("rookie") ||
+      leagueLower.includes("milb")
+    )) {
+      return true;
+    }
+    
+    // Hockey: NHL, AHL, ECHL
+    if (filter.includes("NHL") && (
+      leagueLower.includes("national hockey league") ||
+      leagueLower.includes("nhl") ||
+      leagueLower.includes("american hockey league") ||
+      leagueLower.includes("ahl") ||
+      leagueLower.includes("echl")
+    )) {
+      return true;
+    }
+    
+    // Soccer: MLS, NWSL
+    if (filter.includes("MLS") && (
+      leagueLower.includes("major league soccer") ||
+      leagueLower.includes("mls") ||
+      leagueLower.includes("national women's soccer") ||
+      leagueLower.includes("nwsl")
+    )) {
+      return true;
+    }
+  }
+  
+  return false;
+}
 
 export type ScoredTeamWithoutEmbeddings = AllTeamsCleanWithoutEmbeddings & { 
   similarity_score: number;
@@ -96,7 +168,13 @@ export type ScoredTeamWithoutEmbeddings = AllTeamsCleanWithoutEmbeddings & {
 // ----------------------
 
 function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
-  const { brandVector, brandLeague, brandAudience, brandGoals, target_value_tier } = ctx;
+  const { brandVector, brandLeagues, brandAudience, brandGoals, target_value_tier } = ctx;
+
+  // FIRST: Check if team matches the sport filter - if not, return 0 immediately
+  // This ensures teams from non-selected sports are excluded from results
+  if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
+    return 0;
+  }
 
   // scale is close to 0.7 to 0.9
   const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
@@ -115,6 +193,8 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   // Set target value tier of team using goals
   let demSim = 0;
   let demCounter = 0;
+  const leagueLower = team.league.toLowerCase();
+  
   if (brandAudience.includes("gen-z")) {
     demSim += team.gen_z_weight ?? 0;
     demCounter += 1;
@@ -132,13 +212,15 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
     demCounter += 1;
   } else if (brandAudience.includes("women")) {
     demSim += team.women_weight ?? 0;
-    if (team.category?.includes("WNBA") || team.category?.includes("NWSL")) {
+    // Boost for women's leagues
+    if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
       demSim += 1;
     }
     demCounter += 1;
   } else if (brandAudience.includes("men")) {
     demSim += team.men_weight ?? 0;
-    if (team.category?.includes("WNBA") || team.category?.includes("NWSL")) {
+    // Slight penalty for women's leagues when targeting men
+    if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
       demSim -= 0.5;
     }
     demCounter += 1;
@@ -171,18 +253,13 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   };
 
   // We multiply each score by its weight
-  let weightedScore =
+  const weightedScore =
     (simRegion * WEIGHTS.region) +
     (simQuery * WEIGHTS.query) +
     (simValues * WEIGHTS.values) +
     (valuationSim * WEIGHTS.valuation) +
     (demSim * WEIGHTS.demographics) +
     (reachSim * WEIGHTS.reach);
-
-  // set score to 0 if the team's sport does not align with what sports the brand wants
-  if (brandLeague.length > 1 && team.category && !brandLeague.includes(team.category)) {
-    weightedScore = 0;
-  }
 
   return weightedScore;
 }
@@ -266,7 +343,8 @@ export const computeBrandSimilarity = action({
     // ------------------------------------------------------------
 
     const brandRegion = filters.regions.join(" ");
-    const brandLeague = filters.leagues.join(" ");
+    const brandLeagueText = filters.leagues.join(" "); // For embedding
+    const brandLeagues = filters.leagues; // Array for filtering
     const brandValues = filters.brandValues.join(" ");
     const brandAudience = filters.demographics.join(" ");
     const brandGoals = filters.goals.join(" ");
@@ -288,7 +366,7 @@ export const computeBrandSimilarity = action({
 
     const brandVector: BrandVector = {
       region_embedding: await embedText(brandRegion),
-      league_embedding: await embedText(brandLeague),
+      league_embedding: await embedText(brandLeagueText),
       values_embedding: await embedText(brandValues),
       audience_embedding: await embedText(brandAudience),
       goals_embedding: await embedText(brandGoals),
@@ -297,7 +375,7 @@ export const computeBrandSimilarity = action({
 
     const scoringContext: ScoringContext = {
       brandVector,
-      brandLeague,
+      brandLeagues, // Now an array for proper filtering
       brandAudience,
       brandGoals,
       target_value_tier,
@@ -338,23 +416,25 @@ export const computeBrandSimilarity = action({
     }
 
     // ------------------------------------------------------------
-    // 3. Sort all teams by similarity score (descending)
+    // 3. Filter out teams with score 0 (filtered out by sport)
+    //    and sort by similarity score (descending)
     // ------------------------------------------------------------
 
-    allScoredTeams.sort((a, b) => b.similarity_score - a.similarity_score);
+    const filteredTeams = allScoredTeams.filter(t => t.similarity_score > 0);
+    filteredTeams.sort((a, b) => b.similarity_score - a.similarity_score);
 
     // ------------------------------------------------------------
     // 4. Calculate pagination and return requested page
     // ------------------------------------------------------------
 
-    const totalCount = allScoredTeams.length;
+    const totalCount = filteredTeams.length;
     const totalPages = Math.ceil(totalCount / pageSize);
     const currentPage = Math.max(1, Math.min(page, totalPages || 1));
     
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = Math.min(startIndex + pageSize, totalCount);
     
-    const paginatedTeams = allScoredTeams.slice(startIndex, endIndex);
+    const paginatedTeams = filteredTeams.slice(startIndex, endIndex);
 
     return {
       teams: paginatedTeams,
