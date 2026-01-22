@@ -278,6 +278,19 @@ function generateSources(team: ScoredTeam): string[] {
 // Convex Action: Generate Team Analysis
 // ----------------------
 
+// helpers for labels
+const getDigitalReachLabel = (score: number) => {
+  if (score >= -0.4) return 'High';
+  if (score >= -0.85) return 'Medium';
+  return 'Low';
+};
+
+const getLocalReachLabel = (score: number) => {
+  if (score >= -0.3) return 'High';
+  if (score >= -0.7) return 'Medium';
+  return 'Low';
+};
+
 export const generateTeamAnalysis = action({
   args: {
     scoredTeam: scoredTeamSchema,
@@ -291,6 +304,9 @@ export const generateTeamAnalysis = action({
     const apiKey = process.env.GEMINI_API_KEY;
     const sport = inferSport(scoredTeam.league);
     const priceEstimate = estimatePriceFromTier(scoredTeam.value_tier, scoredTeam.league);
+
+    const digitalReachLabel = getDigitalReachLabel(scoredTeam.digital_reach);
+    const localReachLabel = getLocalReachLabel(scoredTeam.local_reach);
     
     if (apiKey) {
       try {
@@ -305,9 +321,9 @@ League: ${scoredTeam.league || 'Unknown'}
 Region: ${scoredTeam.region || 'Unknown'}
 Sport: ${sport}
 Value Tier: ${scoredTeam.value_tier} (1=budget, 2=mid, 3=premium)
-Digital Reach Score: ${scoredTeam.digital_reach.toFixed(2)}
-Local Reach Score: ${scoredTeam.local_reach.toFixed(2)}
-Family-Friendly Score: ${scoredTeam.family_friendly?.toFixed(2) || 'Unknown'}
+Digital Reach Score: ${scoredTeam.digital_reach.toFixed(2)} (${digitalReachLabel})
+Local Reach Score: ${scoredTeam.local_reach.toFixed(2)} (${localReachLabel})
+Family-Friendly Score: ${scoredTeam.family_friendly ? (scoredTeam.family_friendly + 1).toFixed(2) : 'Unknown'}
 ${fullTeam ? `
 Stadium: ${fullTeam.stadium_name || 'Unknown'}
 Venue Ownership: ${fullTeam.owns_stadium === true ? 'Team owns the venue' : fullTeam.owns_stadium === false ? 'Team leases/rents the venue' : 'Unknown'}

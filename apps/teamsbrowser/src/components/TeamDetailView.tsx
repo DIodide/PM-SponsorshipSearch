@@ -478,14 +478,14 @@ export function TeamDetailView({
                 <div className="text-sm text-gray-400 mb-1">Sport</div>
                 <div className="font-medium text-gray-900">{sport}</div>
               </div>
-              /*
+              
               <div>
                 <div className="text-sm text-gray-400 mb-1">Price Estimate</div>
                 <div className="font-medium text-gray-900">
                   {formatCurrency(priceEstimate)}
                 </div>
               </div>
-              */
+              
               {fullTeam?.geo_city && (
                 <div>
                   <div className="text-sm text-gray-400 mb-1">City</div>
@@ -552,7 +552,7 @@ export function TeamDetailView({
                   );
                   })()}
                 </div>
-                <div className="text-xs text-gray-400">Normalized score</div>
+                <div className="text-xs text-gray-400">Social media following</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-sm text-gray-500 mb-1">Local Reach</div>
@@ -610,7 +610,7 @@ export function TeamDetailView({
                   );
                   })()}
                 </div>
-                <div className="text-xs text-gray-400">Program score</div>
+                <div className="text-xs text-gray-400">Family-centered programs</div>
               </div>
             </div>
 

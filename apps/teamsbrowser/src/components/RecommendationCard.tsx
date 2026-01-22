@@ -150,7 +150,7 @@ export function RecommendationCard({ recommendation, onClick }: RecommendationCa
         <div className="flex items-center gap-4 mb-4 py-3 px-4 bg-gray-50/80 rounded-xl">
           <div className="flex-1 text-center border-r border-gray-200">
             <div className="text-xs text-gray-500 mb-0.5">Digital</div>
-            <div className="text-lg font-semibold text-gray-900">
+            <div className="text-sm font-semibold text-gray-900">
                 {(() => {
                   // 1. Define 'val' inside this specific block
                   const val = scoredTeam.digital_reach + 1; 
@@ -178,7 +178,7 @@ export function RecommendationCard({ recommendation, onClick }: RecommendationCa
           </div>
           <div className="flex-1 text-center border-r border-gray-200">
             <div className="text-xs text-gray-500 mb-0.5">Local</div>
-            <div className="text-lg font-semibold text-gray-900">
+            <div className="text-sm font-semibold text-gray-900">
                 {(() => {
                   // 1. Define 'val' inside this specific block
                   const val = scoredTeam.local_reach; 
