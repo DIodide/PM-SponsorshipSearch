@@ -65,20 +65,21 @@ function formatNumber(num: number | null | undefined): string {
 
 function estimatePriceFromTier(valueTier: number, league: string | null): number {
   const tierPrices: Record<number, number> = {
-    1: 250000,
-    2: 750000,
-    3: 2500000,
+    1: 100000,
+    2: 1000000,
+    3: 15000000,
   };
   
   let basePrice = tierPrices[valueTier] || 500000;
   
+  // Adjust by league
   const leagueLower = (league || '').toLowerCase();
   if (leagueLower.includes('nfl') || leagueLower.includes('nba') || leagueLower.includes('mlb') || leagueLower.includes('nhl')) {
-    basePrice *= 2;
+    basePrice *= 1.5;
   } else if (leagueLower.includes('mls') || leagueLower.includes('nwsl')) {
-    basePrice *= 0.8;
+    basePrice *= 0.9;
   } else if (leagueLower.includes('minor') || leagueLower.includes('usl')) {
-    basePrice *= 0.5;
+    basePrice *= 0.6;
   }
   
   return Math.round(basePrice / 100000) * 100000;
@@ -142,9 +143,9 @@ function generateFallbackDescription(team: ScoredTeam, filters: Filters): string
       ? 'budget-friendly' 
       : 'mid-tier';
   
-  const reachDesc = team.digital_reach > 0 
+  const reachDesc = team.digital_reach > -0.4 
     ? 'strong digital presence' 
-    : team.local_reach > 0 
+    : team.local_reach > -0.3 
       ? 'strong local engagement' 
       : 'growing fanbase';
   
@@ -165,13 +166,13 @@ function generateFallbackDescription(team: ScoredTeam, filters: Filters): string
 function generateFallbackPros(team: ScoredTeam): string[] {
   const pros: string[] = [];
   
-  if (team.digital_reach > 0) {
+  if (team.digital_reach > -0.4) {
     pros.push('Strong digital presence across social platforms');
   }
-  if (team.local_reach > 0) {
+  if (team.local_reach > -0.3) {
     pros.push('High local engagement and game attendance');
   }
-  if (team.family_friendly && team.family_friendly > 0) {
+  if (team.family_friendly && team.family_friendly > 2) {
     pros.push('Extensive family-friendly programming');
   }
   if (team.value_tier === 1) {
@@ -204,7 +205,7 @@ function generateFallbackCons(team: ScoredTeam): string[] {
   if (league.includes('minor') || league.includes('usl')) {
     cons.push('Smaller broadcast reach compared to major leagues');
   }
-  if (team.digital_reach < 0) {
+  if (team.digital_reach < -0.85) {
     cons.push('Limited social media reach');
   }
   if (team.value_tier === 3) {

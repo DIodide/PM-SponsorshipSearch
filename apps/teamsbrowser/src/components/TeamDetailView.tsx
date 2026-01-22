@@ -478,12 +478,14 @@ export function TeamDetailView({
                 <div className="text-sm text-gray-400 mb-1">Sport</div>
                 <div className="font-medium text-gray-900">{sport}</div>
               </div>
+              /*
               <div>
                 <div className="text-sm text-gray-400 mb-1">Price Estimate</div>
                 <div className="font-medium text-gray-900">
                   {formatCurrency(priceEstimate)}
                 </div>
               </div>
+              */
               {fullTeam?.geo_city && (
                 <div>
                   <div className="text-sm text-gray-400 mb-1">City</div>
@@ -583,11 +585,6 @@ export function TeamDetailView({
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-sm text-gray-500 mb-1">Family-Friendliness</div>
-                <div className="text-lg font-semibold text-gray-900">
-                  {scoredTeam.family_friendly !== null 
-                    ? `${scoredTeam.family_friendly > 0 ? '+' : ''}${scoredTeam.family_friendly.toFixed(2)}`
-                    : '—'}
-                </div>
                 <div className="text-lg font-semibold text-gray-900">
                 {(() => {
                   // 1. Define 'val' inside this specific block
