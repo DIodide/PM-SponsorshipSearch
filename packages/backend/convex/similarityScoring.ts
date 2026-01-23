@@ -82,6 +82,7 @@ type BrandVector = {
 type ScoringContext = {
   brandVector: BrandVector;
   brandLeagues: string[]; // Array of selected league filter values
+  brandRegion: string;
   brandAudience: string;
   brandGoals: string;
   target_value_tier: number;
@@ -168,7 +169,7 @@ export type ScoredTeamWithoutEmbeddings = AllTeamsCleanWithoutEmbeddings & {
 // ----------------------
 
 function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
-  const { brandVector, brandLeagues, brandAudience, brandGoals, target_value_tier } = ctx;
+  const { brandVector, brandLeagues, brandRegion, brandAudience, brandGoals, target_value_tier } = ctx;
 
   // FIRST: Check if team matches the sport filter - if not, return 0 immediately
   // This ensures teams from non-selected sports are excluded from results
@@ -178,6 +179,14 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // scale is close to 0.7 to 0.9
   const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
+
+  // filter out teams that don't match region specified by brand
+  // hopefully robust to multiple regions being selected, but skips logic if brand selects many regions
+  if (brandRegion.length > 1 && brandRegion.length < 60) {
+    if (simRegion < 0.75) return 0;
+  }
+
+  // scale is close to 0.7 to 0.9
   const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
 
   // aggregate value and audience and query together
@@ -195,30 +204,31 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   let demCounter = 0;
   const leagueLower = team.league.toLowerCase();
   
+  // adjust so floor is 0
   if (brandAudience.includes("gen-z")) {
-    demSim += team.gen_z_weight ?? 0;
+    demSim += (team.gen_z_weight ?? -1) + 1;
     demCounter += 1;
   } else if (brandAudience.includes("millennials")) {
-    demSim += team.millenial_weight ?? 0;
+    demSim += (team.millenial_weight ?? -1) + 1;
     demCounter += 1;
   } else if (brandAudience.includes("gen-x")) {
-    demSim += team.gen_x_weight ?? 0;
+    demSim += (team.gen_x_weight ?? -1) + 1;
     demCounter += 1;
   } else if (brandAudience.includes("boomer")) {
-    demSim += team.boomer_weight ?? 0;
+    demSim += (team.boomer_weight ?? -1) + 1;
     demCounter += 1;
   } else if (brandAudience.includes("kids")) {
-    demSim += team.kids_weight ?? 0;
+    demSim += (team.kids_weight ?? -1) + 1;
     demCounter += 1;
   } else if (brandAudience.includes("women")) {
-    demSim += team.women_weight ?? 0;
+    demSim += (team.women_weight ?? 0) + 1;
     // Boost for women's leagues
     if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
       demSim += 1;
     }
     demCounter += 1;
   } else if (brandAudience.includes("men")) {
-    demSim += team.men_weight ?? 0;
+    demSim += (team.men_weight ?? -1) + 1;
     // Slight penalty for women's leagues when targeting men
     if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
       demSim -= 0.5;
@@ -233,13 +243,14 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0;
 
   // set reach score
+  // adjust so floor is 0
   let reachSim = 0;
   if (brandGoals.includes("digital-presence")) {
-    reachSim = team.digital_reach ?? 0;
+    reachSim = (team.digital_reach ?? -1) + 1;
   } else if (brandGoals.includes("local-presence")) {
-    reachSim = team.local_reach ?? 0;
+    reachSim = (team.local_reach ?? -0.5) + 0.5;
   } else {
-    reachSim = ((team.digital_reach ?? 0) + (team.local_reach ?? 0)) / 2;
+    reachSim = (((team.digital_reach ?? -1) + 1) + ((team.local_reach ?? -0.5) + 0.5)) / 2;
   }
 
   // YUBI: modify weights as desired
@@ -253,13 +264,19 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   };
 
   // We multiply each score by its weight
-  const weightedScore =
+  let weightedScore =
     (simRegion * WEIGHTS.region) +
     (simQuery * WEIGHTS.query) +
     (simValues * WEIGHTS.values) +
     (valuationSim * WEIGHTS.valuation) +
     (demSim * WEIGHTS.demographics) +
     (reachSim * WEIGHTS.reach);
+
+  if (weightedScore > 1) {
+    weightedScore = 1;
+  } else if (weightedScore < -1) {
+    weightedScore = -1;
+  }
 
   return weightedScore;
 }
@@ -376,6 +393,7 @@ export const computeBrandSimilarity = action({
     const scoringContext: ScoringContext = {
       brandVector,
       brandLeagues, // Now an array for proper filtering
+      brandRegion, // still a string
       brandAudience,
       brandGoals,
       target_value_tier,

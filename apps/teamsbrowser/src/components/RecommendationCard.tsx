@@ -151,14 +151,58 @@ export function RecommendationCard({ recommendation, onClick }: RecommendationCa
           <div className="flex-1 text-center border-r border-gray-200">
             <div className="text-xs text-gray-500 mb-0.5">Digital</div>
             <div className="text-sm font-semibold text-gray-900">
-              {scoredTeam.digital_reach > 0 ? '+' : ''}{scoredTeam.digital_reach.toFixed(1)}
-            </div>
+                {(() => {
+                  // 1. Define 'val' inside this specific block
+                  const val = scoredTeam.digital_reach + 1; 
+    
+                  // 2. Determine the label and color
+                  let label = "Low";
+                  let color = "text-red-600";
+
+                  if (val >= 0.6) {
+                    label = "High";
+                    color = "text-green-600";
+                  } else if (val >= 0.15) {
+                    label = "Medium";
+                    color = "text-yellow-600";
+                  }
+
+                  // 3. Return everything together so 'val' is always in scope
+                  return (
+                    <>
+                    <span className={color}>{label}</span>
+                    </>
+                  );
+                  })()}
+              </div>
           </div>
           <div className="flex-1 text-center border-r border-gray-200">
             <div className="text-xs text-gray-500 mb-0.5">Local</div>
             <div className="text-sm font-semibold text-gray-900">
-              {scoredTeam.local_reach > 0 ? '+' : ''}{scoredTeam.local_reach.toFixed(1)}
-            </div>
+                {(() => {
+                  // 1. Define 'val' inside this specific block
+                  const val = scoredTeam.local_reach; 
+    
+                  // 2. Determine the label and color
+                  let label = "Low";
+                  let color = "text-red-600";
+
+                  if (val >= -0.3) {
+                    label = "High";
+                    color = "text-green-600";
+                  } else if (val >= -0.7) {
+                    label = "Medium";
+                    color = "text-yellow-600";
+                  }
+
+                  // 3. Return everything together so 'val' is always in scope
+                  return (
+                    <>
+                    <span className={color}>{label}</span>
+                    </>
+                  );
+                  })()}
+                </div>
           </div>
           <div className="flex-1 text-center">
             <div className="text-xs text-gray-500 mb-0.5">Est. Price</div>

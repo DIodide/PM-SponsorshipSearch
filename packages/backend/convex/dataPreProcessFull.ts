@@ -236,18 +236,18 @@ async function embed(txt: string | undefined | null, apiKey: string): Promise<nu
 
 
         let value_tier_score = 1
-        // Another even more hard-coded option
-        // YUBI: how can I check that this is not null?
+
+        // NOTE: cost tier, 5M = 3, 1M = 2, less = 1
         if (row.franchise_value != null) {
-          if (row.franchise_value > 2000000000) {
+          if (row.franchise_value > 5000) { // in thousands
             value_tier_score = 3
-          } else if (row.franchise_value > 200000000) {
+          } else if (row.franchise_value > 1000) { // in thousands
             value_tier_score = 2
           }
         } else if (row.avg_ticket_price != null) {
-          if (row.avg_ticket_price > 120) {
+          if (row.avg_ticket_price > 70) {
             value_tier_score = 3
-          } else if (row.avg_ticket_price > 100) {
+          } else if (row.avg_ticket_price > 30) {
             value_tier_score = 2
           }
         }
