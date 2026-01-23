@@ -318,7 +318,7 @@ function App() {
                   Find Your Perfect Partner
                 </h1>
                 <p className="text-gray-600">
-                  Use semantic similarity matching to find sports teams that align with your brand values and objectives.
+                  Personalized partnership recommendations of sports teams that align with your brand values and objectives.
                 </p>
               </div>
 
