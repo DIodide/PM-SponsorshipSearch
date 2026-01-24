@@ -257,11 +257,11 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // YUBI: modify weights as desired
   const WEIGHTS = {
-    region: 0.3,
+    region: 0.5,
     query: 0.03,
     values: 0.04,
-    valuation: 0.3,
-    demographics: 0.3,
+    valuation: 0.2,
+    demographics: 0.2,
     reach: 0.03
   };
 
