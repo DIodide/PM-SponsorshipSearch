@@ -173,18 +173,18 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // FIRST: Check if team matches the sport filter - if not, return 0 immediately
   // This ensures teams from non-selected sports are excluded from results
-  // if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
-    // return 0;
-  // }
+  if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
+    return 0;
+  }
 
   // scale is close to 0.7 to 0.9
   const simRegion = Math.max(0, cosineSimilarity(brandVector.region_embedding, team.region_embedding));
 
   // filter out teams that don't match region specified by brand
   // hopefully robust to multiple regions being selected, but skips logic if brand selects many regions
-  // if (brandRegion.length > 1 && brandRegion.length < 60) {
-    // if (simRegion < 0.75) return 0;
-  // }
+  if (brandRegion.length > 1 && brandRegion.length < 60) {
+    if (simRegion < 0.75) return 0;
+  }
 
   // scale is close to 0.7 to 0.9
   const simValues = Math.max(0, cosineSimilarity(brandVector.values_embedding, team.values_embedding));
@@ -257,12 +257,12 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // YUBI: modify weights as desired
   const WEIGHTS = {
-    region: 0.5,
-    query: 0.01,
-    values: 0.02,
-    valuation: 0.01,
-    demographics: 0.01,
-    reach: 0.01
+    region: 0.3,
+    query: 0.03,
+    values: 0.04,
+    valuation: 0.3,
+    demographics: 0.3,
+    reach: 0.03
   };
 
   // We multiply each score by its weight
