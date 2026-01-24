@@ -249,9 +249,9 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   if (brandGoals.includes("digital-presence")) {
     reachSim = (team.digital_reach ?? -1) + 1;
   } else if (brandGoals.includes("local-presence")) {
-    reachSim = (team.local_reach ?? -0.5) + 0.5;
+    reachSim = (team.local_reach ?? -1) + 1;
   } else {
-    reachSim = (((team.digital_reach ?? -1) + 1) + ((team.local_reach ?? -0.5) + 0.5)) / 2;
+    reachSim = (((team.digital_reach ?? -1) + 1) + ((team.local_reach ?? -1) + 1)) / 2;
   }
   reachSim = Math.max(0, reachSim);
 
