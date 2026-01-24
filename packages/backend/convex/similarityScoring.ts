@@ -182,9 +182,9 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // filter out teams that don't match region specified by brand
   // hopefully robust to multiple regions being selected, but skips logic if brand selects many regions
-  if (brandRegion.length > 1 && brandRegion.length < 60) {
-    if (simRegion < 0.75) return 0;
-  }
+  // if (brandRegion.length > 1 && brandRegion.length < 60) {
+    // if (simRegion < 0.75) return 0;
+  // }
 
   // scale is close to 0.7 to 0.9
   const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
