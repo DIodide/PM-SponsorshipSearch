@@ -173,18 +173,18 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // FIRST: Check if team matches the sport filter - if not, return 0 immediately
   // This ensures teams from non-selected sports are excluded from results
-  if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
-    return 0;
-  }
+  // if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
+    // return 0;
+  // }
 
   // scale is close to 0.7 to 0.9
   const simRegion = Math.max(0, cosineSimilarity(brandVector.region_embedding, team.region_embedding));
 
   // filter out teams that don't match region specified by brand
   // hopefully robust to multiple regions being selected, but skips logic if brand selects many regions
-  if (brandRegion.length > 1 && brandRegion.length < 60) {
-    if (simRegion < 0.75) return 0;
-  }
+  // if (brandRegion.length > 1 && brandRegion.length < 60) {
+    // if (simRegion < 0.75) return 0;
+  // }
 
   // scale is close to 0.7 to 0.9
   const simValues = Math.max(0, cosineSimilarity(brandVector.values_embedding, team.values_embedding));
