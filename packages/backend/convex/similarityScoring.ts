@@ -173,9 +173,9 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // FIRST: Check if team matches the sport filter - if not, return 0 immediately
   // This ensures teams from non-selected sports are excluded from results
-  // if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
-    // return 0;
-  // }
+  if (brandLeagues.length > 0 && !teamMatchesSportFilter(team.league, brandLeagues)) {
+    return 0;
+  }
 
   // scale is close to 0.7 to 0.9
   const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
@@ -208,39 +208,47 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   if (brandAudience.includes("gen-z")) {
     demSim += (team.gen_z_weight ?? -1) + 1;
     demCounter += 1;
-  } else if (brandAudience.includes("millennials")) {
+  }
+  if (brandAudience.includes("millennials")) {
     demSim += (team.millenial_weight ?? -1) + 1;
     demCounter += 1;
-  } else if (brandAudience.includes("gen-x")) {
+  } 
+  if (brandAudience.includes("gen-x")) {
     demSim += (team.gen_x_weight ?? -1) + 1;
     demCounter += 1;
-  } else if (brandAudience.includes("boomer")) {
+  } 
+  if (brandAudience.includes("boomer")) {
     demSim += (team.boomer_weight ?? -1) + 1;
     demCounter += 1;
-  } else if (brandAudience.includes("kids")) {
+  } 
+  if (brandAudience.includes("kids")) {
     demSim += (team.kids_weight ?? -1) + 1;
     demCounter += 1;
-  } else if (brandAudience.includes("women")) {
+  } 
+  if (brandAudience.includes("women")) {
     demSim += (team.women_weight ?? 0) + 1;
     // Boost for women's leagues
     if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
       demSim += 1;
     }
     demCounter += 1;
-  } else if (brandAudience.includes("men")) {
+  } 
+  if (brandAudience.includes("men")) {
     demSim += (team.men_weight ?? -1) + 1;
     // Slight penalty for women's leagues when targeting men
     if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
       demSim -= 0.5;
     }
     demCounter += 1;
-  } else if (brandAudience.includes("families")) {
+  } 
+  if (brandAudience.includes("families")) {
     demSim += team.family_friendly ?? 0;
     demCounter += 1;
   }
 
   // Normalize demSim
-  demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0;
+  // YUBI: set to 0.2 so that demSim is never 0
+  demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0.2;
 
   // set reach score
   // adjust so floor is 0
