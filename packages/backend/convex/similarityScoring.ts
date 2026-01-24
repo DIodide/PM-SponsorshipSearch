@@ -257,12 +257,12 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   // YUBI: modify weights as desired
   const WEIGHTS = {
-    region: 0.3,
-    query: 0.04,
+    region: 0.5,
+    query: 0.01,
     values: 0.02,
-    valuation: 0.3,
-    demographics: 0.3,
-    reach: 0.04
+    valuation: 0.01,
+    demographics: 0.01,
+    reach: 0.01
   };
 
   // We multiply each score by its weight
@@ -278,7 +278,7 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
     weightedScore = 1;
   } else if (weightedScore <= 0) {
     // YUBI: prevent score from being less than 0
-    weightedScore = 0.01;
+    weightedScore = 0.1;
   }
 
   return weightedScore;
