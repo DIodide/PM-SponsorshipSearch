@@ -178,7 +178,7 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   }
 
   // scale is close to 0.7 to 0.9
-  const simRegion = cosineSimilarity(brandVector.region_embedding, team.region_embedding);
+  const simRegion = Math.max(0, cosineSimilarity(brandVector.region_embedding, team.region_embedding));
 
   // filter out teams that don't match region specified by brand
   // hopefully robust to multiple regions being selected, but skips logic if brand selects many regions
@@ -187,17 +187,17 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   }
 
   // scale is close to 0.7 to 0.9
-  const simValues = cosineSimilarity(brandVector.values_embedding, team.values_embedding);
+  const simValues = Math.max(0, cosineSimilarity(brandVector.values_embedding, team.values_embedding));
 
   // aggregate value and audience and query together
-  let simQuery = cosineSimilarity(brandVector.query_embedding, team.league_embedding);
-  simQuery += cosineSimilarity(brandVector.query_embedding, team.values_embedding);
-  simQuery += cosineSimilarity(brandVector.query_embedding, team.community_programs_embedding);
+  let simQuery = Math.max(0, cosineSimilarity(brandVector.query_embedding, team.league_embedding));
+  simQuery += Math.max(0, cosineSimilarity(brandVector.query_embedding, team.values_embedding));
+  simQuery += Math.max(0, cosineSimilarity(brandVector.query_embedding, team.community_programs_embedding));
   simQuery /= 3;
 
   // YUBI: this has a range of 0 to 1
   const tierDiff = Math.abs(target_value_tier - (team.value_tier ?? 1));
-  const valuationSim = 1 - (tierDiff / 2); // 0 diff = 1.0 score; 2 diff = 0.0 score
+  const valuationSim = Math.max(0, 1 - (tierDiff / 2)); // 0 diff = 1.0 score; 2 diff = 0.0 score
 
   // Set target value tier of team using goals
   let demSim = 0;
@@ -233,14 +233,6 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
     }
     demCounter += 1;
   } 
-  if (brandAudience.includes("men")) {
-    demSim += (team.men_weight ?? -1) + 1;
-    // Slight penalty for women's leagues when targeting men
-    if (leagueLower.includes("women's national basketball") || leagueLower.includes("national women's soccer")) {
-      demSim -= 0.5;
-    }
-    demCounter += 1;
-  } 
   if (brandAudience.includes("families")) {
     demSim += team.family_friendly ?? 0;
     demCounter += 1;
@@ -249,6 +241,7 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   // Normalize demSim
   // YUBI: set to 0.2 so that demSim is never 0
   demSim = demCounter > 0 ? Math.min(demSim / demCounter, 1) : 0.2;
+  demSim = Math.max(0.2, demSim);
 
   // set reach score
   // adjust so floor is 0
@@ -260,6 +253,7 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
   } else {
     reachSim = (((team.digital_reach ?? -1) + 1) + ((team.local_reach ?? -0.5) + 0.5)) / 2;
   }
+  reachSim = Math.max(0, reachSim);
 
   // YUBI: modify weights as desired
   const WEIGHTS = {
@@ -282,16 +276,10 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
 
   if (weightedScore > 1) {
     weightedScore = 1;
-  } else if (weightedScore < -1) {
-    weightedScore = -1;
+  } else if (weightedScore <= 0) {
+    // YUBI: prevent score from being less than 0
+    weightedScore = 0.01;
   }
-
-  // YUBI: debugging statements, REMOVE
-  console.log({
-    team: team.name,
-    scores: { simRegion, simQuery, simValues, valuationSim, demSim, reachSim },
-    weightedScore
-  });
 
   return weightedScore;
 }
