@@ -286,6 +286,13 @@ function computeTeamScore(team: AllTeamsClean, ctx: ScoringContext): number {
     weightedScore = -1;
   }
 
+  // YUBI: debugging statements, REMOVE
+  console.log({
+    team: team.name,
+    scores: { simRegion, simQuery, simValues, valuationSim, demSim, reachSim },
+    weightedScore
+  });
+
   return weightedScore;
 }
 
