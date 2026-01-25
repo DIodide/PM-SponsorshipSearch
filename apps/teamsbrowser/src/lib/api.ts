@@ -1,6 +1,8 @@
 import type { Team, ScoredTeam, SearchFilters, TeamDetailAnalysis, GeneratedCampaign, PaginatedSimilarityResponse } from '../types';
 
-const CONVEX_URL = import.meta.env.VITE_CONVEX_URL || 'https://harmless-corgi-891.convex.cloud';
+// YUBI: Edit Convex_URL to point to secret-stoat-813
+// RETURN back to harmless-corgi-891 for functional deployment
+const CONVEX_URL = import.meta.env.VITE_CONVEX_URL || 'https://secret-stoat-813.convex.cloud';
 
 /**
  * Fetch all teams from All_Teams table (for additional info)
